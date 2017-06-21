@@ -209,5 +209,8 @@ WIFI_DRIVER_STATE_ON := "ON"
 WIFI_HIDL_FEATURE_DUAL_INTERFACE := true
 WPA_SUPPLICANT_VERSION := VER_0_8_X
 
+# Pre-opt SystemUI
+PRODUCT_DEXPREOPT_SPEED_APPS += SystemUI
+
 # Inherit from the proprietary version
 -include vendor/xiaomi/violet/BoardConfigVendor.mk
