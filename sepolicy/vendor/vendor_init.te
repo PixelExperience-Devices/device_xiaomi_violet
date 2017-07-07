@@ -6,5 +6,5 @@ set_prop(vendor_init, vendor_persist_dpm_prop)
 allow vendor_init {
   debugfs_clk
   proc_dirty
-  proc_sched_energy_aware
+  proc
 }:file w_file_perms;
