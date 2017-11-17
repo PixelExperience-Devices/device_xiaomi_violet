@@ -337,6 +337,7 @@ PRODUCT_COPY_FILES += \
 # Ramdisk
 PRODUCT_PACKAGES += \
     init.msm.usb.configfs.rc \
+    init.power.rc \
     init.qcom.rc \
     init.qcom.usb.rc \
     init.qcom.usb.sh \
