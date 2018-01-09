@@ -33,6 +33,12 @@ ro.surface_flinger.vsync_event_phase_offset_ns=2000000
 ro.surface_flinger.vsync_sf_event_phase_offset_ns=6000000
 ro.surface_flinger.wcg_composition_dataspace=143261696
 
+# LMKD
+ro.config.low_ram=false
+ro.lmk.kill_heaviest_task=true
+ro.lmk.kill_timeout_ms=100
+ro.lmk.use_minfree_levels=true
+
 # Memory
 ro.vendor.qti.sys.fw.bservice_enable=true
 
