@@ -222,9 +222,9 @@ PRODUCT_PROPERTY_OVERRIDES += \
     persist.vendor.radio.redir_party_num=1 \
     persist.vendor.radio.rat_on=combine \
     persist.vendor.radio.sib16_support=1 \
-    rild.libpath=/vendor/lib64/libril-qc-hal-qmi.so \
     ro.telephony.default_network=22,22 \
-    telephony.lteOnCdmaDevice=1
+    telephony.lteOnCdmaDevice=1 \
+    vendor.rild.libpath=/vendor/lib64/libril-qc-hal-qmi.so
 
 # VoLTE
 PRODUCT_PROPERTY_OVERRIDES += \
