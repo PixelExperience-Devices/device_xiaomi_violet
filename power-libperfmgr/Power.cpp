@@ -25,7 +25,7 @@
 
 #include <mutex>
 
-#include <utils/Log.h>
+#include <log/log.h>
 #include <utils/Trace.h>
 
 #include "Power.h"
