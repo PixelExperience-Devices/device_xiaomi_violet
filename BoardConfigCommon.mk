@@ -88,6 +88,11 @@ ifeq ($(HOST_OS),linux)
   endif
 endif
 
+# Display
+TARGET_HAS_WIDE_COLOR_DISPLAY := true
+TARGET_HAS_HDR_DISPLAY := true
+TARGET_USES_DISPLAY_RENDER_INTENTS := true
+
 # DPM
 BOARD_USES_DPM := true
 
