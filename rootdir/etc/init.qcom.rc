@@ -204,6 +204,9 @@ on late-fs
     exec_start wait_for_keymaster
     mount_all /vendor/etc/fstab.qcom --late
 
+    # turn off vblank irq immediately after turning off
+    write /sys/module/drm/parameters/vblankoffdelay -1
+
 on early-boot
     # Wait for devices
     wait_for_prop vendor.all.devices.ready 1
