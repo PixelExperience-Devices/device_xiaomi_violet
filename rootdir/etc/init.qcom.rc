@@ -33,6 +33,7 @@ import /vendor/etc/init/hw/init.target.rc
 on early-init
     # Disable EAS
     write /sys/kernel/debug/sched_features NO_ENERGY_AWARE
+    mount_all /vendor/etc/fstab.persist --early
     mkdir /dsp 0771 media media
     mkdir /firmware 0771 system system
     mkdir /bt_firmware 0771 system system
