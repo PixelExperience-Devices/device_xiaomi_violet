@@ -1,0 +1,19 @@
+//
+// Copyright (C) 2021 WaveOS
+//
+// SPDX-License-Identifier: Apache-2.0
+//
+
+android_app {
+    name: "KeyHandler",
+
+    srcs: ["src/**/*.java"],
+
+    certificate: "platform",
+    platform_apis: true,
+    privileged: true,
+
+    optimize: {
+        proguard_flags_files: ["proguard.flags"],
+    },
+}
