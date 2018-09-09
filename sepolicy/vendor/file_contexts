@@ -3,3 +3,6 @@
 
 # Light HAL
 /(vendor|system/vendor)/bin/hw/android\.hardware\.light@2\.0-service\.xiaomi_sm6150 u:object_r:hal_light_default_exec:s0
+
+# Power HAL
+/(vendor|system/vendor)/bin/hw/android\.hardware\.power@1\.2-service\.violet u:object_r:hal_power_default_exec:s0
