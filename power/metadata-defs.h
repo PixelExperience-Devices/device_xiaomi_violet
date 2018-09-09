@@ -1,10 +1,9 @@
-/*
- * Copyright (c) 2012-2013,2015-2017, The Linux Foundation. All rights reserved.
+/* Copyright (c) 2012, The Linux Foundation. All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without
  * modification, are permitted provided that the following conditions are
  * met:
- * *    * Redistributions of source code must retain the above copyright
+ *     * Redistributions of source code must retain the above copyright
  *       notice, this list of conditions and the following disclaimer.
  *     * Redistributions in binary form must reproduce the above
  *       copyright notice, this list of conditions and the following
@@ -25,25 +24,31 @@
  * WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE
  * OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN
  * IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+ *
  */
 
-#include <cutils/properties.h>
+#define ATTRIBUTE_VALUE_DELIM ('=')
+#define ATTRIBUTE_STRING_DELIM (";")
 
-int sysfs_read(char* path, char* s, int num_bytes);
-int sysfs_write(char* path, char* s);
-int get_scaling_governor(char governor[], int size);
-int get_scaling_governor_check_cores(char governor[], int size, int core_num);
-int is_interactive_governor(char*);
+#define METADATA_PARSING_ERR (-1)
+#define METADATA_PARSING_CONTINUE (0)
+#define METADATA_PARSING_DONE (1)
 
-void vote_ondemand_io_busy_off();
-void unvote_ondemand_io_busy_off();
-void vote_ondemand_sdf_low();
-void unvote_ondemand_sdf_low();
-void perform_hint_action(int hint_id, int resource_values[], int num_resources);
-void undo_hint_action(int hint_id);
-void release_request(int lock_handle);
-int interaction_with_handle(int lock_handle, int duration, int num_args, int opt_list[]);
-int perf_hint_enable(int hint_id, int duration);
-int perf_hint_enable_with_type(int hint_id, int duration, int type);
+#define MIN(x, y) (((x) > (y)) ? (y) : (x))
 
-long long calc_timespan_us(struct timespec start, struct timespec end);
+struct video_encode_metadata_t {
+    int hint_id;
+    int state;
+};
+
+struct video_decode_metadata_t {
+    int hint_id;
+    int state;
+};
+
+int parse_metadata(char* metadata, char** metadata_saveptr, char* attribute,
+                   unsigned int attribute_size, char* value, unsigned int value_size);
+int parse_video_encode_metadata(char* metadata,
+                                struct video_encode_metadata_t* video_encode_metadata);
+int parse_video_decode_metadata(char* metadata,
+                                struct video_decode_metadata_t* video_decode_metadata);

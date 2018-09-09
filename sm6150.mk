@@ -274,9 +274,7 @@ PRODUCT_COPY_FILES += \
 
 # Power
 PRODUCT_PACKAGES += \
-    android.hardware.power@1.0-impl \
-    android.hardware.power@1.0-service \
-    power.qcom:64
+    android.hardware.power@1.2-service.xiaomi_sm6150
 
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/powerhint.xml:$(TARGET_COPY_OUT_VENDOR)/etc/powerhint.xml

@@ -1,10 +1,10 @@
 /*
- * Copyright (c) 2012-2013,2015-2017, The Linux Foundation. All rights reserved.
+ * Copyright (c) 2019, The Linux Foundation. All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without
  * modification, are permitted provided that the following conditions are
  * met:
- * *    * Redistributions of source code must retain the above copyright
+ *     * Redistributions of source code must retain the above copyright
  *       notice, this list of conditions and the following disclaimer.
  *     * Redistributions in binary form must reproduce the above
  *       copyright notice, this list of conditions and the following
@@ -27,23 +27,55 @@
  * IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
 
-#include <cutils/properties.h>
+#define LOG_TAG "android.hardware.power@1.2-service.xiaomi_sm6150"
 
-int sysfs_read(char* path, char* s, int num_bytes);
-int sysfs_write(char* path, char* s);
-int get_scaling_governor(char governor[], int size);
-int get_scaling_governor_check_cores(char governor[], int size, int core_num);
-int is_interactive_governor(char*);
+#include <android/log.h>
+#include <hidl/HidlTransportSupport.h>
+#include <hardware/power.h>
+#include "Power.h"
 
-void vote_ondemand_io_busy_off();
-void unvote_ondemand_io_busy_off();
-void vote_ondemand_sdf_low();
-void unvote_ondemand_sdf_low();
-void perform_hint_action(int hint_id, int resource_values[], int num_resources);
-void undo_hint_action(int hint_id);
-void release_request(int lock_handle);
-int interaction_with_handle(int lock_handle, int duration, int num_args, int opt_list[]);
-int perf_hint_enable(int hint_id, int duration);
-int perf_hint_enable_with_type(int hint_id, int duration, int type);
+using android::sp;
+using android::status_t;
+using android::OK;
 
-long long calc_timespan_us(struct timespec start, struct timespec end);
+// libhwbinder:
+using android::hardware::configureRpcThreadpool;
+using android::hardware::joinRpcThreadpool;
+
+// Generated HIDL files
+using android::hardware::power::V1_2::IPower;
+using android::hardware::power::V1_2::implementation::Power;
+
+int main() {
+
+    status_t status;
+    android::sp<IPower> service = nullptr;
+
+    ALOGI("Power HAL Service 1.2 is starting.");
+
+    service = new Power();
+    if (service == nullptr) {
+        ALOGE("Can not create an instance of Power HAL interface.");
+
+        goto shutdown;
+    }
+
+    configureRpcThreadpool(1, true /*callerWillJoin*/);
+
+    status = service->registerAsService();
+    if (status != OK) {
+        ALOGE("Could not register service for Power HAL(%d).", status);
+        goto shutdown;
+    }
+
+    ALOGI("Power Service is ready");
+    joinRpcThreadpool();
+    //Should not pass this line
+
+shutdown:
+    // In normal operation, we don't expect the thread pool to exit
+
+    ALOGE("Power Service is shutting down");
+    return 1;
+}
+

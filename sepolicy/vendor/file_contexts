@@ -71,6 +71,9 @@
 /vendor/lib(64)?/hw/gralloc\.sm6150\.so   u:object_r:same_process_hal_file:s0
 /vendor/lib(64)?/hw/vulkan\.sm6150\.so    u:object_r:same_process_hal_file:s0
 
+# Power
+/vendor/bin/hw/android\.hardware\.power@1\.2-service\.xiaomi_sm6150                                     u:object_r:hal_power_default_exec:s0
+
 # SSR
 /sys/devices(/platform)?/soc/[a-z0-9\.:]+,[a-z0-9\-\_]+/subsys[0-9]+/name         u:object_r:sysfs_ssr:s0
 
