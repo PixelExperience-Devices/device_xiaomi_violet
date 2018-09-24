@@ -169,24 +169,6 @@ if [ "$target" == "msm8937" ]; then
 	fi
 fi
 
-# set device mode notification to USB driver for SA8150 Auto ADP
-product=`getprop ro.build.product`
-
-case "$product" in
-	"msmnile_au")
-	echo peripheral > /sys/bus/platform/devices/a600000.ssusb/mode
-         ;;
-	*)
-	;;
-esac
-case "$product" in
-	"msmnile_gvmq")
-	echo peripheral > /sys/bus/platform/devices/a600000.ssusb/mode
-         ;;
-	*)
-	;;
-esac
-
 # check configfs is mounted or not
 if [ -d /config/usb_gadget ]; then
 	# Chip-serial is used for unique MSM identification in Product string
