@@ -382,6 +382,8 @@ firmware_directories /vendor/firmware_mnt/image/ /vendor/firmware/
 #Memory Offline
 /sys/devices/system/memory/memory* state    0660 system system
 
+/sys/devices/virtual/hdcp/msm_hdcp  min_level_change 0664    system  graphics
+
 # sys-fs display
 /sys/class/graphics/fb*     hpd                      0664    system  graphics
 /sys/class/graphics/fb*     res_info                 0664    system  graphics
@@ -412,5 +414,3 @@ firmware_directories /vendor/firmware_mnt/image/ /vendor/firmware/
 /sys/class/graphics/fb0     mode                     0664    system  graphics
 /sys/class/graphics/fb0     msm_cmd_autorefresh_en   0664    system  graphics
 /sys/class/graphics/fb0     dynamic_bitclk           0664    system  graphics
-
-/sys/devices/virtual/hdcp/msm_hdcp  min_level_change 0664    system  graphics
