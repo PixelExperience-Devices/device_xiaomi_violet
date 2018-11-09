@@ -124,6 +124,7 @@ on post-fs-data
 # Silver Only configuration cannot work with 0-7
 on boot
     chown system system /sys/kernel/hbtp/display_pwr
+    chown system system /sys/kernel/qvr_external_sensor/fd
     start rmt_storage
     start rfs_access
     write /dev/cpuset/audio-app/cpus 1-2
