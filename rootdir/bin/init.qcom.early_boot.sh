@@ -387,7 +387,7 @@ case "$product" in
         ;;
 esac
 case "$product" in
-        "talos_au")
+        "sm6150_au")
          setprop vendor.display.lcd_density 160
          ;;
         *)
