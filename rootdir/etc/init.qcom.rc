@@ -31,6 +31,8 @@ import /vendor/etc/init/hw/init.msm.usb.configfs.rc
 import /vendor/etc/init/hw/init.target.rc
 
 on early-init
+    # Disable EAS
+    write /sys/kernel/debug/sched_features NO_ENERGY_AWARE
     mkdir /dsp 0771 media media
     mkdir /firmware 0771 system system
     mkdir /bt_firmware 0771 system system
@@ -560,6 +562,10 @@ on post-fs-data
 on charger
     setprop sys.usb.controller a600000.dwc3
     setprop sys.usb.configfs 1
+    # Enable EAS
+    write /sys/kernel/debug/sched_features ENERGY_AWARE
+
+    # Enable powersaving
     write /sys/module/lpm_levels/parameters/sleep_disabled 0
 
 on property:ro.vendor.iocgrp.config=1
@@ -600,6 +606,9 @@ on property:persist.vendor.sys.rawdump_copy=0
     write /sys/kernel/dload/emmc_dload 0
 
 on property:sys.boot_completed=1
+    # Enable EAS
+    write /sys/kernel/debug/sched_features ENERGY_AWARE
+
     write /dev/kmsg "Boot completed "
     # WDSP FW boot sysfs node used by STHAL
     chown media audio /sys/kernel/wdsp0/boot

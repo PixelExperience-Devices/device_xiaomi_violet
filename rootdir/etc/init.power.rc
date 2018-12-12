@@ -16,9 +16,6 @@
 #
 
 on property:sys.boot_completed=1
-    # Turn off scheduler boost at the end
-    write /proc/sys/kernel/sched_boost 0
-
     # Enable bus-dcvs
     write /sys/devices/platform/soc/soc:qcom,cpu-cpu-llcc-bw/devfreq/soc:qcom,cpu-cpu-llcc-bw/governor bw_hwmon
     write /sys/devices/platform/soc/soc:qcom,cpu-cpu-llcc-bw/devfreq/soc:qcom,cpu-cpu-llcc-bw/polling_interval 40
