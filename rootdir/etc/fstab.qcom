@@ -43,7 +43,6 @@
 /devices/platform/soc/1da4000.ufshc_card/host*          /storage/sdcard1         auto    nosuid,nodev                                         wait,voldmanaged=sdcard1:auto,encryptable=footer
 /dev/block/bootdevice/by-name/modem                     /vendor/firmware_mnt     vfat    ro,shortname=lower,uid=1000,gid=1000,dmask=227,fmask=337,context=u:object_r:firmware_file:s0 wait
 /dev/block/bootdevice/by-name/dsp                       /vendor/dsp              ext4    ro,nosuid,nodev,barrier=1                            wait
-/dev/block/bootdevice/by-name/persist                   /mnt/vendor/persist      ext4    noatime,nosuid,nodev,barrier=1                       wait
 /dev/block/bootdevice/by-name/bluetooth                 /vendor/bt_firmware      vfat    ro,shortname=lower,uid=1002,gid=3002,dmask=227,fmask=337,context=u:object_r:bt_firmware_file:s0 wait
 /devices/platform/soc/a600000.ssusb/a600000.dwc3/xhci-hcd.0.auto*     /storage/usbotg    auto    nosuid,nodev         wait,voldmanaged=usbotg:auto
 # Need to have this entry in here even though the mount point itself is no longer needed.
