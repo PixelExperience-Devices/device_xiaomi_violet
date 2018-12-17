@@ -123,6 +123,10 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.hardware.egl=adreno \
     ro.opengles.version=196610
 
+PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
+    ro.surface_flinger.vsync_event_phase_offset_ns=2000000 \
+    ro.surface_flinger.vsync_sf_event_phase_offset_ns=6000000
+
 # IO CGroup
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.vendor.iocgrp.config=1
