@@ -340,6 +340,8 @@ on post-fs-data
     chmod 2770 /data/vendor/perfd
     rm /data/vendor/perfd/default_values
 
+    mkdir /data/vendor/secure_element 0777 system system
+
     #Create IOP  deamon related dirs
     mkdir /data/vendor/iop 0700 root system
 
