@@ -60,6 +60,9 @@ on early-init
     chmod 0620 /dev/kmsg
 
 on init
+    # Loading kernel modules in background
+    start insmod_sh
+
     # Disable powersaving
     write /sys/module/lpm_levels/parameters/sleep_disabled 1
 
@@ -213,16 +216,17 @@ on late-fs
     exec_start wait_for_keymaster
     mount_all /vendor/etc/fstab.qcom --late
 
-on early-boot
-    # Set RLIMIT_MEMLOCK to 64MB
-    setrlimit 8 67108864 67108864
+    # Start services for bootanim
+    start surfaceflinger
+    start bootanim
+    start vendor.hwcomposer-2-3
+    start vendor.configstore-hal
+    start vendor.qti.hardware.display.allocator
 
-    # Allow subsystem (modem etc) debugging
-    write /sys/kernel/boot_adsp/boot 1
-    write /sys/kernel/boot_cdsp/boot 1
-    write /sys/devices/virtual/npu/msm_npu/boot 1
-    write /sys/kernel/boot_slpi/boot 1
-    write /sys/devices/virtual/cvp/cvp/boot 1
+on early-boot
+    # Wait for devices
+    wait_for_prop vendor.all.devices.ready 1
+
     setprop ro.vendor.alarm_boot false
 
     # SSR Setup
@@ -625,6 +629,41 @@ on property:sys.boot_completed=1
     chown media audio /sys/kernel/wdsp0/boot
     chown media audio /sys/kernel/wcd_cpe0/fw_name
 
+    # Runtime fs tuning
+    write /sys/block/sda/queue/read_ahead_kb 128
+    write /sys/block/sda/queue/nr_requests 128
+    write /sys/block/sda/queue/iostats 1
+    write /sys/block/sde/queue/read_ahead_kb 128
+    write /sys/block/sde/queue/nr_requests 128
+    write /sys/block/sde/queue/iostats 1
+
+    # Back to default VM settings
+    write /proc/sys/vm/dirty_expire_centisecs 3000
+    write /proc/sys/vm/dirty_background_ratio 10
+
+    # Block layer tuning: discard chunk size up to 128MB
+    # Otherwise, contiguous discards can be merged
+    write /sys/block/sda/queue/discard_max_bytes 134217728
+
+    # Enable ZRAM on boot_complete
+    rm /data/unencrypted/zram_swap
+    swapon_all /vendor/etc/fstab.qcom
+    write /proc/sys/vm/swappiness 100
+
+    # Setup runtime cpusets
+    write /dev/cpuset/top-app/cpus 0-7
+    write /dev/cpuset/foreground/cpus 0-3,5-6
+    write /dev/cpuset/background/cpus 0-1
+    write /dev/cpuset/system-background/cpus 0-3
+    write /dev/cpuset/restricted/cpus 0-3
+
+    # Setup runtime blkio
+    # value for group_idle is us
+    write /dev/blkio/blkio.weight 1000
+    write /dev/blkio/background/blkio.weight 10
+    write /dev/blkio/blkio.group_idle 2000
+    write /dev/blkio/background/blkio.group_idle 0
+
 on property:persist.vendor.radio.atfwd.start=false
     stop vendor.atfwd
 
@@ -826,6 +865,13 @@ service vendor.msm_irqbalance /vendor/bin/msm_irqbalance -f /vendor/etc/msm_irqb
     user root
     group root
     disabled
+
+service insmod_sh /vendor/bin/init.insmod.sh /vendor/etc/init.insmod.cfg
+    class main
+    user root
+    group root system
+    disabled
+    oneshot
 
 service time_daemon /vendor/bin/time_daemon
     class main
