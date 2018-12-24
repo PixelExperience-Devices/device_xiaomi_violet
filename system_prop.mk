@@ -37,6 +37,10 @@ PRODUCT_PROPERTY_OVERRIDES += \
    persist.audio.fluence.voicerec=false \
    persist.audio.fluence.speaker=true
 
+# Graphics
+PRODUCT_PROPERTY_OVERRIDES += \
+    debug.sf.enable_hwc_vds=1
+
 # Media
 PRODUCT_PROPERTY_OVERRIDES += \
     audio.offload.video=true
@@ -76,3 +80,9 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.vendor.ssr.enable_ramdumps=0 \
     persist.vendor.ssr.restart_level=ALL_ENABLE
+
+# WFD
+PRODUCT_PROPERTY_OVERRIDES += \
+    persist.debug.wfd.enable=1 \
+    persist.sys.wfd.virtual=0  \
+    debug.sf.enable_hwc_vds=1
