@@ -31,6 +31,7 @@
 # Set platform variables
 soc_hwplatform=`cat /sys/devices/soc0/hw_platform 2> /dev/null`
 soc_machine=`cat /sys/devices/soc0/machine 2> /dev/null`
+soc_machine=${soc_machine:0:2}
 soc_id=`cat /sys/devices/soc0/soc_id 2> /dev/null`
 
 #
@@ -65,9 +66,8 @@ if [ "$(getprop persist.vendor.usb.config)" == "" -a \
 	              setprop persist.vendor.usb.config diag,adb
 	          ;;
                   *)
-		  soc_machine=${soc_machine:0:3}
 		  case "$soc_machine" in
-		    "SDA")
+		    "SA")
 	              setprop persist.vendor.usb.config diag,adb
 		    ;;
 		    *)
@@ -124,6 +124,20 @@ if [ "$(getprop persist.vendor.usb.config)" == "" -a \
 	  esac
       fi
 fi
+
+# Start peripheral mode on primary USB controllers for Automotive platforms
+case "$soc_machine" in
+    "SA")
+	if [ -f /sys/bus/platform/devices/a600000.ssusb/mode ]; then
+	    default_mode=`cat /sys/bus/platform/devices/a600000.ssusb/mode`
+	    case "$default_mode" in
+		"none")
+		    echo peripheral > /sys/bus/platform/devices/a600000.ssusb/mode
+		;;
+	    esac
+	fi
+    ;;
+esac
 
 # set rndis transport to BAM2BAM_IPA for 8920 and 8940
 if [ "$target" == "msm8937" ]; then
