@@ -1,7 +1,6 @@
 # Camera
 camera. u:object_r:vendor_camera_prop:s0
 persist.camera. u:object_r:vendor_camera_prop:s0
-ro.boot.hwc u:object_r:public_vendor_default_prop:s0
 vendor.camera.  u:object_r:vendor_camera_prop:s0
 
 # Fingerprint
@@ -11,6 +10,15 @@ persist.sys.fp.            u:object_r:vendor_fp_prop:s0
 ro.boot.fpsensor           u:object_r:vendor_fp_prop:s0
 ro.hardware.fp             u:object_r:vendor_fp_prop:s0
 vendor.fps_hal.            u:object_r:vendor_fp_prop:s0
+
+# Global
+ro.boot.factorybuild                u:object_r:public_vendor_default_prop:s0
+ro.boot.hwc                         u:object_r:public_vendor_default_prop:s0
+ro.boot.hwversion                   u:object_r:public_vendor_default_prop:s0
+ro.carrier.name                     u:object_r:public_vendor_default_prop:s0
+ro.cust.test                        u:object_r:public_vendor_default_prop:s0
+ro.miui.cust_variant                u:object_r:public_vendor_default_prop:s0
+ro.product.mod_device               u:object_r:public_vendor_default_prop:s0
 
 # Google camera hal read only props
 ro.vendor.camera.                               u:object_r:camera_ro_prop:s0
