@@ -99,11 +99,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 # Perf
 PRODUCT_PROPERTY_OVERRIDES += \
-    ro.vendor.extension_library=libqti-perfd-client.so \
-    vendor.iop.enable_uxe=0 \
-    vendor.perf.iop_v3.enable=true \
-    vendor.perf.gestureflingboost.enable=true \
-    vendor.perf.workloadclassifier.enable=true
+    ro.vendor.extension_library=libqti-perfd-client.so
 
 # CNE and DPM
 PRODUCT_PROPERTY_OVERRIDES += \
