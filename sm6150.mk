@@ -237,6 +237,13 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     vendor.lineage.livedisplay@2.0-service-sdm
 
+ifeq ($(strip $(TARGET_USES_FOD)),true)
+PRODUCT_PACKAGES += \
+    vendor.lineage.livedisplay@2.0-service.xiaomi_sm6150
+else ifeq ($(strip $(TARGET_PRODUCT_HARDWARE)),violet)
+    DEVICE_MANIFEST_FILE += $(LOCAL_PATH)/livedisplay/vendor.lineage.livedisplay@2.0-service-sdm.xml
+endif
+
 # Media
 PRODUCT_PACKAGES += \
     libc2dcolorconvert \
