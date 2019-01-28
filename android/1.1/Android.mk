@@ -49,14 +49,6 @@ LOCAL_SHARED_LIBRARIES += \
 LOCAL_CFLAGS += $(GNSS_CFLAGS)
 include $(BUILD_SHARED_LIBRARY)
 
-BUILD_GNSS_HIDL_SERVICE := true
-ifneq ($(BOARD_VENDOR_QCOM_LOC_PDK_FEATURE_SET), true)
-ifneq ($(LW_FEATURE_SET),true)
-BUILD_GNSS_HIDL_SERVICE := false
-endif # LW_FEATURE_SET
-endif # BOARD_VENDOR_QCOM_LOC_PDK_FEATURE_SET
-
-ifeq ($(BUILD_GNSS_HIDL_SERVICE), true)
 include $(CLEAR_VARS)
 LOCAL_MODULE := android.hardware.gnss@1.1-service-qti
 LOCAL_VENDOR_MODULE := true
@@ -80,6 +72,8 @@ LOCAL_SHARED_LIBRARIES := \
     libdl \
     libbase \
     libutils \
+    libgps.utils \
+    libqti_vndfwk_detect \
 
 LOCAL_SHARED_LIBRARIES += \
     libhwbinder \
@@ -90,4 +84,3 @@ LOCAL_SHARED_LIBRARIES += \
 
 LOCAL_CFLAGS += $(GNSS_CFLAGS)
 include $(BUILD_EXECUTABLE)
-endif # BUILD_GNSS_HIDL_SERVICE

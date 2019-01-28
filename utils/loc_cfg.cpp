@@ -57,12 +57,15 @@
 /* Parameter data */
 static uint32_t DEBUG_LEVEL = 0xff;
 static uint32_t TIMESTAMP = 0;
+static uint32_t DATUM_TYPE = 0;
+static bool sVendorEnhanced = true;
 
 /* Parameter spec table */
 static const loc_param_s_type loc_param_table[] =
 {
     {"DEBUG_LEVEL",        &DEBUG_LEVEL,        NULL,    'n'},
     {"TIMESTAMP",          &TIMESTAMP,          NULL,    'n'},
+    {"DATUM_TYPE",         &DATUM_TYPE,         NULL,    'n'},
 };
 static const int loc_param_num = sizeof(loc_param_table) / sizeof(loc_param_s_type);
 
@@ -84,6 +87,36 @@ const char LOC_PATH_SAP_CONF[] = LOC_PATH_SAP_CONF_STR;
 const char LOC_PATH_APDR_CONF[] = LOC_PATH_APDR_CONF_STR;
 const char LOC_PATH_XTWIFI_CONF[] = LOC_PATH_XTWIFI_CONF_STR;
 const char LOC_PATH_QUIPC_CONF[] = LOC_PATH_QUIPC_CONF_STR;
+
+bool isVendorEnhanced() {
+    return sVendorEnhanced;
+}
+void setVendorEnhanced(bool vendorEnhanced) {
+    sVendorEnhanced = vendorEnhanced;
+}
+
+/*===========================================================================
+FUNCTION loc_get_datum_type
+
+DESCRIPTION
+   get datum type
+
+PARAMETERS:
+   N/A
+
+DEPENDENCIES
+   N/A
+
+RETURN VALUE
+   DATUM TYPE
+
+SIDE EFFECTS
+   N/A
+===========================================================================*/
+int loc_get_datum_type()
+{
+    return DATUM_TYPE;
+}
 
 /*===========================================================================
 FUNCTION loc_set_config_entry
@@ -462,6 +495,7 @@ typedef struct {
     char feature_supl_wifi[LOC_MAX_PARAM_STRING];
     char feature_wifi_supplicant_info[LOC_MAX_PARAM_STRING];
     char auto_platform[LOC_MAX_PARAM_STRING];
+    unsigned int vendor_enhanced_process;
 } loc_launcher_conf;
 
 /* process configuration parameters */
@@ -484,15 +518,16 @@ static const loc_param_s_type loc_feature_conf_table[] = {
 
 /* location process conf, e.g.: izat.conf Parameter spec table */
 static const loc_param_s_type loc_process_conf_parameter_table[] = {
-    {"PROCESS_NAME",        &conf.proc_name,           NULL, 's'},
-    {"PROCESS_ARGUMENT",    &conf.proc_argument,       NULL, 's'},
-    {"PROCESS_STATE",       &conf.proc_status,         NULL, 's'},
-    {"PROCESS_GROUPS",      &conf.group_list,          NULL, 's'},
-    {"PREMIUM_FEATURE",     &conf.premium_feature,     NULL, 'n'},
-    {"IZAT_FEATURE_MASK",   &conf.loc_feature_mask,    NULL, 'n'},
-    {"PLATFORMS",           &conf.platform_list,       NULL, 's'},
-    {"BASEBAND",            &conf.baseband,            NULL, 's'},
-    {"HARDWARE_TYPE",       &conf.auto_platform,       NULL, 's'},
+    {"PROCESS_NAME",               &conf.proc_name,                NULL, 's'},
+    {"PROCESS_ARGUMENT",           &conf.proc_argument,            NULL, 's'},
+    {"PROCESS_STATE",              &conf.proc_status,              NULL, 's'},
+    {"PROCESS_GROUPS",             &conf.group_list,               NULL, 's'},
+    {"PREMIUM_FEATURE",            &conf.premium_feature,          NULL, 'n'},
+    {"IZAT_FEATURE_MASK",          &conf.loc_feature_mask,         NULL, 'n'},
+    {"PLATFORMS",                  &conf.platform_list,            NULL, 's'},
+    {"BASEBAND",                   &conf.baseband,                 NULL, 's'},
+    {"HARDWARE_TYPE",              &conf.auto_platform,            NULL, 's'},
+    {"VENDOR_ENHANCED_PROCESS",    &conf.vendor_enhanced_process,  NULL, 'n'},
 };
 
 /*===========================================================================
@@ -733,6 +768,13 @@ int loc_read_process_conf(const char* conf_file_name, uint32_t * process_count_p
             continue;
         }
 
+        if (isVendorEnhanced() != conf.vendor_enhanced_process != 0) {
+            LOC_LOGD("%s:%d]: Process %s is disabled via vendor enhanced process check",
+                     __func__, __LINE__, conf.proc_name);
+            child_proc[j].proc_status = DISABLED_VIA_VENDOR_ENHANCED_CHECK;
+            continue;
+        }
+
         if(strcmp(conf.proc_status, "DISABLED") == 0) {
             LOC_LOGD("%s:%d]: Process %s is disabled in conf file",
                      __func__, __LINE__, conf.proc_name);
@@ -846,7 +888,8 @@ int loc_read_process_conf(const char* conf_file_name, uint32_t * process_count_p
         if((config_mask & CONFIG_MASK_TARGET_CHECK) &&
            (config_mask & CONFIG_MASK_BASEBAND_CHECK) &&
            (config_mask & CONFIG_MASK_AUTOPLATFORM_CHECK) &&
-           (child_proc[j].proc_status != DISABLED_FROM_CONF)) {
+           (child_proc[j].proc_status != DISABLED_FROM_CONF) &&
+           (child_proc[j].proc_status != DISABLED_VIA_VENDOR_ENHANCED_CHECK)) {
 
             //Set args
             //The first argument passed through argv is usually the name of the

@@ -84,7 +84,8 @@ typedef enum {
     ENABLED,
     RUNNING,
     DISABLED,
-    DISABLED_FROM_CONF
+    DISABLED_FROM_CONF,
+    DISABLED_VIA_VENDOR_ENHANCED_CHECK
 } loc_process_e_status;
 
 typedef struct {
@@ -112,6 +113,8 @@ extern "C" {
  *                       MODULE EXPORTED FUNCTIONS
  *
  *============================================================================*/
+bool isVendorEnhanced();
+void setVendorEnhanced(bool vendorEnhanced);
 void loc_read_conf(const char* conf_file_name,
                    const loc_param_s_type* config_table,
                    uint32_t table_length);
@@ -132,7 +135,7 @@ extern const char LOC_PATH_QUIPC_CONF[];
 
 int loc_read_process_conf(const char* conf_file_name, uint32_t * process_count_ptr,
                           loc_process_info_s_type** process_info_table_ptr);
-
+int loc_get_datum_type();
 #ifdef __cplusplus
 }
 #endif

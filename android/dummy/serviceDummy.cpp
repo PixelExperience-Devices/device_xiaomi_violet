@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2017-2018, The Linux Foundation. All rights reserved.
+ * Copyright (c) 2017-2019, The Linux Foundation. All rights reserved.
  * Not a Contribution
  */
 /*
@@ -18,26 +18,15 @@
  * limitations under the License.
  */
 
-#define LOG_TAG "android.hardware.gnss@1.1-service-qti"
+#define LOG_TAG "android.hardware.gnss@1.0-service-qti"
 
-#include <android/hardware/gnss/1.1/IGnss.h>
+#include <android/hardware/gnss/1.0/IGnss.h>
 #include <hidl/LegacySupport.h>
 
-#include "loc_cfg.h"
-extern "C" {
-#include "vndfwk-detect.h"
-}
-
-using android::hardware::gnss::V1_1::IGnss;
+using android::hardware::gnss::V1_0::IGnss;
 using android::hardware::defaultPassthroughServiceImplementation;
 
 int main() {
-    bool vendorEnhanced = isRunningWithVendorEnhancedFramework();
-    setVendorEnhanced(vendorEnhanced);
-
-    if (!vendorEnhanced) {
-        return defaultPassthroughServiceImplementation<IGnss>();
-    } else {
-        return -1;
-    }
+    ALOGI("%s", __FUNCTION__);
+    return defaultPassthroughServiceImplementation<IGnss>();
 }
