@@ -51,6 +51,9 @@ extern "C" {
 
 #include <hardware/power.h>
 
+#define INPUT_EVENT_WAKUP_MODE_OFF 4
+#define INPUT_EVENT_WAKUP_MODE_ON 5
+
 enum CPU_GOV_CHECK { CPU0 = 0, CPU1 = 1, CPU2 = 2, CPU3 = 3 };
 
 void power_init(void);

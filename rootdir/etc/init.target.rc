@@ -132,9 +132,6 @@ on boot
     enable vendor.qti-charger-sh
     start vendor.qti-charger-sh
 
-    chown system system /proc/tp_gesture
-    chmod 0660 /proc/tp_gesture
-
 # access permissions for FPC service
    chown system system /sys/bus/platform/devices/soc/soc:fpc1020/irq
    chown system system /sys/bus/platform/devices/soc/soc:fpc1020/wakeup_enable
