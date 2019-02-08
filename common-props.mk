@@ -89,6 +89,11 @@ PRODUCT_PROPERTY_OVERRIDES += \
     vendor.audio.feature.audiozoom.enable=false \
     vendor.audio.feature.snd_mon.enable=true
 
+# Speaker protection v3 switch and ADSP AFE API version
+PRODUCT_PROPERTY_OVERRIDES += \
+    persist.vendor.audio.spv3.enable=true\
+    persist.vendor.audio.avs.afe_api_version=2
+
 # Enable AAC frame ctl for A2DP sinks
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.vendor.bt.aac_frm_ctl.enabled=true
