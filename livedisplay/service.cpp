@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-#define LOG_TAG "lineage.livedisplay@2.0-service.xiaomi_sdm845"
+#define LOG_TAG "mokee.livedisplay@2.0-service.xiaomi_sdm845"
 
 #include <android-base/logging.h>
 #include <binder/ProcessState.h>
@@ -28,8 +28,8 @@ using android::status_t;
 using android::hardware::configureRpcThreadpool;
 using android::hardware::joinRpcThreadpool;
 
-using ::vendor::lineage::livedisplay::V2_0::ISunlightEnhancement;
-using ::vendor::lineage::livedisplay::V2_0::implementation::SunlightEnhancement;
+using ::vendor::mokee::livedisplay::V2_0::ISunlightEnhancement;
+using ::vendor::mokee::livedisplay::V2_0::implementation::SunlightEnhancement;
 
 int main() {
     sp<SunlightEnhancement> sunlightEnhancement;

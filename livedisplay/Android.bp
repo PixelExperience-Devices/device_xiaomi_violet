@@ -14,8 +14,8 @@
 // limitations under the License.
 
 cc_binary {
-    name: "lineage.livedisplay@2.0-service.xiaomi_sdm845",
-    init_rc: ["lineage.livedisplay@2.0-service.xiaomi_sdm845.rc"],
+    name: "mokee.livedisplay@2.0-service.xiaomi_sdm845",
+    init_rc: ["mokee.livedisplay@2.0-service.xiaomi_sdm845.rc"],
     defaults: ["hidl_defaults"],
     relative_install_path: "hw",
     srcs: [
@@ -28,6 +28,6 @@ cc_binary {
         "libhidlbase",
         "libhidltransport",
         "libutils",
-        "vendor.lineage.livedisplay@2.0",
+        "vendor.mokee.livedisplay@2.0",
     ],
 }

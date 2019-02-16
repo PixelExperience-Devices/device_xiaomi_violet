@@ -14,7 +14,7 @@ $(call inherit-product-if-exists, vendor/xiaomi/sdm845-common/sdm845-common-vend
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += \
     $(LOCAL_PATH)/overlay \
-    $(LOCAL_PATH)/overlay-lineage
+    $(LOCAL_PATH)/overlay-mokee
 
 # Properties
 -include $(LOCAL_PATH)/common-props.mk
@@ -73,8 +73,8 @@ PRODUCT_PACKAGES += \
 
 # LiveDisplay
 PRODUCT_PACKAGES += \
-    lineage.livedisplay@2.0-service-sdm \
-    lineage.livedisplay@2.0-service.xiaomi_sdm845
+    mokee.livedisplay@2.0-service-sdm \
+    mokee.livedisplay@2.0-service.xiaomi_sdm845
 
 # Media
 PRODUCT_COPY_FILES += \
@@ -117,7 +117,7 @@ PRODUCT_PACKAGES += \
 
 # Trust HAL
 PRODUCT_PACKAGES += \
-    lineage.trust@1.0-service
+    mokee.trust@1.0-service
 
 # VNDK-SP
 PRODUCT_PACKAGES += \
