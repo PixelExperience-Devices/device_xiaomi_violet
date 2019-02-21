@@ -501,6 +501,9 @@ service vendor.sensors.qti /vendor/bin/sensors.qti
     group system
     disabled
 
+on property:vendor.media.target.version=*
+    setprop vendor.sys.media.target.version ${vendor.media.target.version}
+
 on property:ro.vendor.use_data_netmgrd=false
     # netmgr not supported on specific target
     stop vendor.netmgrd
