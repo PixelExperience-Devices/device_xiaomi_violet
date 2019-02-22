@@ -55,6 +55,9 @@ TARGET_KERNEL_CONFIG := vendor/violet-perf_defconfig
 TARGET_BOARD_PLATFORM := sm6150
 TARGET_BOARD_PLATFORM_GPU := qcom-adreno612
 
+# APEX image
+DEXPREOPT_GENERATE_APEX_IMAGE := true
+
 # ANT+
 BOARD_ANT_WIRELESS_DEVICE := "qualcomm-hidl"
 
