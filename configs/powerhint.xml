@@ -138,7 +138,7 @@
             0x40C68130, 0xFFFFFFFA, 0x40C68140, 0xFFFFFFFA, 0x40C68150, 0xFFFFFFFA,
             0x41820000, 0x14, 0x4300C000, 0x14"/>
 
-        <!-- Dual camera -->
+        <!-- HFR 480fps -->
         <!--L CPU CORE 0 SCHED LOAD BOOST -->
         <!--L CPU CORE 1 SCHED LOAD BOOST -->
         <!--L CPU CORE 2 SCHED LOAD BOOST -->
@@ -147,11 +147,12 @@
         <!--L CPU CORE 5 SCHED LOAD BOOST -->
         <!--CPU-LLCC BWMON - Set sample_ms 20 -->
         <!--LLCC-DDR BWMON - Set sample ms 20 -->
+        <!--CPU CORE 0 Min freq to 1.2Ghz -->
         <Config
             Id="0x00001334" Enable="true" Timeout="0" Target="sdmmagpie"
             Resources="0x40C68100, 0xFFFFFFFA, 0x40C68110, 0xFFFFFFFA, 0x40C68120, 0xFFFFFFFA,
             0x40C68130, 0xFFFFFFFA, 0x40C68140, 0xFFFFFFFA, 0x40C68150, 0xFFFFFFFA,
-            0x41820000, 0x14, 0x4300C000, 0x14"/>
+            0x41820000, 0x14, 0x4300C000, 0x14, 0x40800100, 0x4B9"/>
 
         <!-- same settings for all the qvr power levels intentionally -->
         <!-- qvr level cpu1 gpu1 -->
