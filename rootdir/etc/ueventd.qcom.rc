@@ -325,7 +325,7 @@ firmware_directories /vendor/firmware_mnt/image/ /vendor/firmware/
 /dev/ramdump*             0640   system     system
 
 # Fingerprint device
-/dev/qbt1000              0660   system     system
+/dev/qbt*                 0660   system     system
 
 #ImproveTouch device
 /dev/hbtp_input           0660   system     system
