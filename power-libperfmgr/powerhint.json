@@ -58,7 +58,7 @@
         "1401600"
       ],
       "DefaultIndex": 0,
-      "ReswqetOnInit": true
+      "ResetOnInit": true
     },
     {
       "Name": "CPUBigPlusClusterMinFreq",
