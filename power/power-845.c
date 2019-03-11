@@ -53,9 +53,9 @@
 #define CHECK_HANDLE(x) ((x) > 0)
 #define NUM_PERF_MODES 3
 
+const int kMaxLaunchDuration = 5000; /* ms */
 const int kMaxInteractiveDuration = 5000; /* ms */
 const int kMinInteractiveDuration = 100; /* ms */
-const int kMinFlingDuration = 1500; /* ms */
 
 typedef enum {
     NORMAL_MODE = 0,
@@ -194,10 +194,29 @@ static int process_video_encode_hint(void* metadata) {
 }
 
 static int process_activity_launch_hint(void* data) {
+    static int launch_handle = -1;
+    static int launch_mode = 0;
+
+    // release lock early if launch has finished
+    if (!data) {
+        if (CHECK_HANDLE(launch_handle)) {
+            release_request(launch_handle);
+            launch_handle = -1;
+        }
+        launch_mode = 0;
+        return HINT_HANDLED;
+    }
+
     if (current_mode != NORMAL_MODE) {
         ALOGV("%s: ignoring due to other active perf hints", __func__);
-    } else {
-        perf_hint_enable_with_type(VENDOR_HINT_FIRST_LAUNCH_BOOST, -1, LAUNCH_BOOST_V1);
+    } else if (!launch_mode) {
+        launch_handle = perf_hint_enable_with_type(VENDOR_HINT_FIRST_LAUNCH_BOOST,
+                kMaxLaunchDuration, LAUNCH_BOOST_V1);
+        if (!CHECK_HANDLE(launch_handle)) {
+            ALOGE("Failed to perform launch boost");
+            return HINT_NONE;
+        }
+        launch_mode = 1;
     }
     return HINT_HANDLED;
 }
@@ -233,11 +252,8 @@ static int process_interaction_hint(void* data) {
     s_previous_boost_timespec = cur_boost_timespec;
     s_previous_duration = duration;
 
-    if (duration >= kMinFlingDuration) {
-        perf_hint_enable_with_type(VENDOR_HINT_SCROLL_BOOST, -1, SCROLL_PREFILING);
-    } else {
-        perf_hint_enable_with_type(VENDOR_HINT_SCROLL_BOOST, duration, SCROLL_VERTICAL);
-    }
+    perf_hint_enable_with_type(VENDOR_HINT_SCROLL_BOOST, duration, SCROLL_VERTICAL);
+
     return HINT_HANDLED;
 }
 
