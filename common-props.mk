@@ -146,6 +146,19 @@ PRODUCT_PROPERTY_OVERRIDES += \
     vendor.display.enable_null_display=0 \
     vendor.display.enable_optimize_refresh=1
 
+ifneq (,$(filter userdebug eng, $(TARGET_BUILD_VARIANT)))
+# Recovery is enabled, logging is enabled
+PRODUCT_PROPERTY_OVERRIDES += \
+    vendor.display.disable_hw_recovery_dump=0
+else
+# Recovery is enabled, logging is disabled
+PRODUCT_PROPERTY_OVERRIDES += \
+    vendor.display.disable_hw_recovery_dump=1
+endif
+
+# Properties using default value:
+#    vendor.display.disable_hw_recovery=0
+
 # DRM
 PRODUCT_PROPERTY_OVERRIDES += \
     drm.service.enabled=true
