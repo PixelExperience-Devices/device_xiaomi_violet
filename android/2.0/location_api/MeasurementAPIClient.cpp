@@ -1,4 +1,4 @@
-/* Copyright (c) 2017-2018, The Linux Foundation. All rights reserved.
+/* Copyright (c) 2017-2019, The Linux Foundation. All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without
  * modification, are permitted provided that the following conditions are
@@ -39,16 +39,18 @@
 namespace android {
 namespace hardware {
 namespace gnss {
-namespace V1_1 {
+namespace V2_0 {
 namespace implementation {
 
 using ::android::hardware::gnss::V1_0::IGnssMeasurement;
-using ::android::hardware::gnss::V1_1::IGnssMeasurementCallback;
+using ::android::hardware::gnss::V2_0::IGnssMeasurementCallback;
 
 static void convertGnssData(GnssMeasurementsNotification& in,
         V1_0::IGnssMeasurementCallback::GnssData& out);
 static void convertGnssData_1_1(GnssMeasurementsNotification& in,
-        IGnssMeasurementCallback::GnssData& out);
+        V1_1::IGnssMeasurementCallback::GnssData& out);
+static void convertGnssData_2_0(GnssMeasurementsNotification& in,
+        V2_0::IGnssMeasurementCallback::GnssData& out);
 static void convertGnssMeasurement(GnssMeasurementsData& in,
         V1_0::IGnssMeasurementCallback::GnssMeasurement& out);
 static void convertGnssClock(GnssMeasurementsClock& in, IGnssMeasurementCallback::GnssClock& out);
@@ -56,6 +58,7 @@ static void convertGnssClock(GnssMeasurementsClock& in, IGnssMeasurementCallback
 MeasurementAPIClient::MeasurementAPIClient() :
     mGnssMeasurementCbIface(nullptr),
     mGnssMeasurementCbIface_1_1(nullptr),
+    mGnssMeasurementCbIface_2_0(nullptr),
     mTracking(false)
 {
     LOC_LOGD("%s]: ()", __FUNCTION__);
@@ -81,7 +84,7 @@ MeasurementAPIClient::measurementSetCallback(const sp<V1_0::IGnssMeasurementCall
 
 Return<IGnssMeasurement::GnssMeasurementStatus>
 MeasurementAPIClient::measurementSetCallback_1_1(
-        const sp<IGnssMeasurementCallback>& callback,
+        const sp<V1_1::IGnssMeasurementCallback>& callback,
         GnssPowerMode powerMode, uint32_t timeBetweenMeasurement)
 {
     LOC_LOGD("%s]: (%p) (powermode: %d) (tbm: %d)",
@@ -89,6 +92,21 @@ MeasurementAPIClient::measurementSetCallback_1_1(
 
     mMutex.lock();
     mGnssMeasurementCbIface_1_1 = callback;
+    mMutex.unlock();
+
+    return startTracking(powerMode, timeBetweenMeasurement);
+}
+
+Return<IGnssMeasurement::GnssMeasurementStatus>
+MeasurementAPIClient::measurementSetCallback_2_0(
+    const sp<V2_0::IGnssMeasurementCallback>& callback,
+    GnssPowerMode powerMode, uint32_t timeBetweenMeasurement)
+{
+    LOC_LOGD("%s]: (%p) (powermode: %d) (tbm: %d)",
+        __FUNCTION__, &callback, (int)powerMode, timeBetweenMeasurement);
+
+    mMutex.lock();
+    mGnssMeasurementCbIface_2_0 = callback;
     mMutex.unlock();
 
     return startTracking(powerMode, timeBetweenMeasurement);
@@ -112,7 +130,9 @@ MeasurementAPIClient::startTracking(
     locationCallbacks.gnssNmeaCb = nullptr;
 
     locationCallbacks.gnssMeasurementsCb = nullptr;
-    if (mGnssMeasurementCbIface_1_1 != nullptr || mGnssMeasurementCbIface != nullptr) {
+    if (mGnssMeasurementCbIface_2_0 != nullptr ||
+        mGnssMeasurementCbIface_1_1 != nullptr ||
+        mGnssMeasurementCbIface != nullptr) {
         locationCallbacks.gnssMeasurementsCb =
             [this](GnssMeasurementsNotification gnssMeasurementsNotification) {
                 onGnssMeasurementsCb(gnssMeasurementsNotification);
@@ -153,16 +173,27 @@ void MeasurementAPIClient::onGnssMeasurementsCb(
     if (mTracking) {
         mMutex.lock();
         sp<V1_0::IGnssMeasurementCallback> gnssMeasurementCbIface = nullptr;
-        sp<IGnssMeasurementCallback> gnssMeasurementCbIface_1_1 = nullptr;
-        if (mGnssMeasurementCbIface_1_1 != nullptr) {
+        sp<V1_1::IGnssMeasurementCallback> gnssMeasurementCbIface_1_1 = nullptr;
+        sp<V2_0::IGnssMeasurementCallback> gnssMeasurementCbIface_2_0 = nullptr;
+        if (mGnssMeasurementCbIface_2_0 != nullptr) {
+            gnssMeasurementCbIface_2_0 = mGnssMeasurementCbIface_2_0;
+        } else if (mGnssMeasurementCbIface_1_1 != nullptr) {
             gnssMeasurementCbIface_1_1 = mGnssMeasurementCbIface_1_1;
         } else if (mGnssMeasurementCbIface != nullptr) {
             gnssMeasurementCbIface = mGnssMeasurementCbIface;
         }
         mMutex.unlock();
 
-        if (gnssMeasurementCbIface_1_1 != nullptr) {
-            IGnssMeasurementCallback::GnssData gnssData;
+        if (gnssMeasurementCbIface_2_0 != nullptr) {
+            V2_0::IGnssMeasurementCallback::GnssData gnssData;
+            convertGnssData_2_0(gnssMeasurementsNotification, gnssData);
+            auto r = gnssMeasurementCbIface_2_0->gnssMeasurementCb_2_0(gnssData);
+            if (!r.isOk()) {
+                LOC_LOGE("%s] Error from gnssMeasurementCb description=%s",
+                    __func__, r.description().c_str());
+            }
+        } else if (gnssMeasurementCbIface_1_1 != nullptr) {
+            V1_1::IGnssMeasurementCallback::GnssData gnssData;
             convertGnssData_1_1(gnssMeasurementsNotification, gnssData);
             auto r = gnssMeasurementCbIface_1_1->gnssMeasurementCb(gnssData);
             if (!r.isOk()) {
@@ -304,7 +335,7 @@ static void convertGnssData(GnssMeasurementsNotification& in,
 }
 
 static void convertGnssData_1_1(GnssMeasurementsNotification& in,
-        IGnssMeasurementCallback::GnssData& out)
+        V1_1::IGnssMeasurementCallback::GnssData& out)
 {
     out.measurements.resize(in.count);
     for (size_t i = 0; i < in.count; i++) {
@@ -325,8 +356,67 @@ static void convertGnssData_1_1(GnssMeasurementsNotification& in,
     convertGnssClock(in.clock, out.clock);
 }
 
+static void convertGnssData_2_0(GnssMeasurementsNotification& in,
+        V2_0::IGnssMeasurementCallback::GnssData& out)
+{
+    out.measurements.resize(in.count);
+    for (size_t i = 0; i < in.count; i++) {
+        convertGnssMeasurement(in.measurements[i], out.measurements[i].v1_1.v1_0);
+        if (in.measurements[i].adrStateMask & GNSS_MEASUREMENTS_ACCUMULATED_DELTA_RANGE_STATE_VALID_BIT)
+            out.measurements[i].v1_1.accumulatedDeltaRangeState |=
+            IGnssMeasurementCallback::GnssAccumulatedDeltaRangeState::ADR_STATE_VALID;
+        if (in.measurements[i].adrStateMask & GNSS_MEASUREMENTS_ACCUMULATED_DELTA_RANGE_STATE_RESET_BIT)
+            out.measurements[i].v1_1.accumulatedDeltaRangeState |=
+            IGnssMeasurementCallback::GnssAccumulatedDeltaRangeState::ADR_STATE_RESET;
+        if (in.measurements[i].adrStateMask & GNSS_MEASUREMENTS_ACCUMULATED_DELTA_RANGE_STATE_CYCLE_SLIP_BIT)
+            out.measurements[i].v1_1.accumulatedDeltaRangeState |=
+            IGnssMeasurementCallback::GnssAccumulatedDeltaRangeState::ADR_STATE_CYCLE_SLIP;
+        if (in.measurements[i].adrStateMask & GNSS_MEASUREMENTS_ACCUMULATED_DELTA_RANGE_STATE_HALF_CYCLE_RESOLVED_BIT)
+            out.measurements[i].v1_1.accumulatedDeltaRangeState |=
+            IGnssMeasurementCallback::GnssAccumulatedDeltaRangeState::ADR_STATE_HALF_CYCLE_RESOLVED;
+        out.measurements[i].codeType =
+            static_cast<IGnssMeasurementCallback::GnssMeasurementCodeType>(in.measurements[i].codeType);
+        out.measurements[i].otherCodeTypeName = in.measurements[i].otherCodeTypeName;
+        if (in.measurements[i].stateMask & GNSS_MEASUREMENTS_STATE_CODE_LOCK_BIT)
+            out.measurements[i].state |= IGnssMeasurementCallback::GnssMeasurementState::STATE_CODE_LOCK;
+        if (in.measurements[i].stateMask & GNSS_MEASUREMENTS_STATE_BIT_SYNC_BIT)
+            out.measurements[i].state |= IGnssMeasurementCallback::GnssMeasurementState::STATE_BIT_SYNC;
+        if (in.measurements[i].stateMask & GNSS_MEASUREMENTS_STATE_SUBFRAME_SYNC_BIT)
+            out.measurements[i].state |= IGnssMeasurementCallback::GnssMeasurementState::STATE_SUBFRAME_SYNC;
+        if (in.measurements[i].stateMask & GNSS_MEASUREMENTS_STATE_TOW_DECODED_BIT)
+            out.measurements[i].state |= IGnssMeasurementCallback::GnssMeasurementState::STATE_TOW_DECODED;
+        if (in.measurements[i].stateMask & GNSS_MEASUREMENTS_STATE_MSEC_AMBIGUOUS_BIT)
+            out.measurements[i].state |= IGnssMeasurementCallback::GnssMeasurementState::STATE_MSEC_AMBIGUOUS;
+        if (in.measurements[i].stateMask & GNSS_MEASUREMENTS_STATE_SYMBOL_SYNC_BIT)
+            out.measurements[i].state |= IGnssMeasurementCallback::GnssMeasurementState::STATE_SYMBOL_SYNC;
+        if (in.measurements[i].stateMask & GNSS_MEASUREMENTS_STATE_GLO_STRING_SYNC_BIT)
+            out.measurements[i].state |= IGnssMeasurementCallback::GnssMeasurementState::STATE_GLO_STRING_SYNC;
+        if (in.measurements[i].stateMask & GNSS_MEASUREMENTS_STATE_GLO_TOD_DECODED_BIT)
+            out.measurements[i].state |= IGnssMeasurementCallback::GnssMeasurementState::STATE_GLO_TOD_DECODED;
+        if (in.measurements[i].stateMask & GNSS_MEASUREMENTS_STATE_BDS_D2_BIT_SYNC_BIT)
+            out.measurements[i].state |= IGnssMeasurementCallback::GnssMeasurementState::STATE_BDS_D2_BIT_SYNC;
+        if (in.measurements[i].stateMask & GNSS_MEASUREMENTS_STATE_BDS_D2_SUBFRAME_SYNC_BIT)
+            out.measurements[i].state |= IGnssMeasurementCallback::GnssMeasurementState::STATE_BDS_D2_SUBFRAME_SYNC;
+        if (in.measurements[i].stateMask & GNSS_MEASUREMENTS_STATE_GAL_E1BC_CODE_LOCK_BIT)
+            out.measurements[i].state |= IGnssMeasurementCallback::GnssMeasurementState::STATE_GAL_E1BC_CODE_LOCK;
+        if (in.measurements[i].stateMask & GNSS_MEASUREMENTS_STATE_GAL_E1C_2ND_CODE_LOCK_BIT)
+            out.measurements[i].state |= IGnssMeasurementCallback::GnssMeasurementState::STATE_GAL_E1C_2ND_CODE_LOCK;
+        if (in.measurements[i].stateMask & GNSS_MEASUREMENTS_STATE_GAL_E1B_PAGE_SYNC_BIT)
+            out.measurements[i].state |= IGnssMeasurementCallback::GnssMeasurementState::STATE_GAL_E1B_PAGE_SYNC;
+        if (in.measurements[i].stateMask &  GNSS_MEASUREMENTS_STATE_SBAS_SYNC_BIT)
+            out.measurements[i].state |= IGnssMeasurementCallback::GnssMeasurementState::STATE_SBAS_SYNC;
+        if (in.measurements[i].stateMask &  GNSS_MEASUREMENTS_STATE_TOW_KNOWN_BIT)
+            out.measurements[i].state |= IGnssMeasurementCallback::GnssMeasurementState::STATE_TOW_KNOWN;
+        if (in.measurements[i].stateMask &  GNSS_MEASUREMENTS_STATE_GLO_TOD_KNOWN_BIT)
+            out.measurements[i].state |= IGnssMeasurementCallback::GnssMeasurementState::STATE_GLO_TOD_KNOWN;
+        if (in.measurements[i].stateMask &  GNSS_MEASUREMENTS_STATE_2ND_CODE_LOCK_BIT)
+            out.measurements[i].state |= IGnssMeasurementCallback::GnssMeasurementState::STATE_2ND_CODE_LOCK;
+    }
+    convertGnssClock(in.clock, out.clock);
+}
+
 }  // namespace implementation
-}  // namespace V1_1
+}  // namespace V2_0
 }  // namespace gnss
 }  // namespace hardware
 }  // namespace android
