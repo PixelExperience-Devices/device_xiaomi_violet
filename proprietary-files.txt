@@ -1299,6 +1299,7 @@ vendor/lib64/libthermalfeature.so
 # Time services - from raphael-user 10 QKQ1.190716.003 V10.4.6.0.QFKCNXM release-keys
 -vendor/app/TimeService/TimeService.apk|27f9b81621c446baa8c37581d9bfbca2fd67b496
 vendor/bin/time_daemon|2652ed04ebe55219b5da38db021d43b38e9227d3
+vendor/etc/init/init.time_daemon.rc|b253ca2a498757e14e1d7a051bf504ae09218f51
 vendor/lib/libtime_genoff.so|cd8a5cc7ccc598e3c3308980c45acb804baa5986
 vendor/lib64/libtime_genoff.so|746db5267fde236de820fa7d887386f65aea7a8a
 
