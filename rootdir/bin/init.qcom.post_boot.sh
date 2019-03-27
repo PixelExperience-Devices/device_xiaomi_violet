@@ -2735,7 +2735,7 @@ case "$target" in
             echo 0 > /sys/devices/system/cpu/cpu0/cpufreq/schedutil/up_rate_limit_us
             echo 0 > /sys/devices/system/cpu/cpu0/cpufreq/schedutil/down_rate_limit_us
             echo 1401600 > /sys/devices/system/cpu/cpu4/cpufreq/schedutil/hispeed_freq
-            echo 652800 > /sys/devices/system/cpu/cpu4/cpufreq/scaling_min_freq
+            echo 1056000 > /sys/devices/system/cpu/cpu4/cpufreq/scaling_min_freq
 
 	    echo 1 > /proc/sys/kernel/sched_walt_rotate_big_tasks
 
