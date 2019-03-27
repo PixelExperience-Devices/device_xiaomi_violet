@@ -15,7 +15,7 @@
  * limitations under the License.
  */
 
-package org.lineageos.pocketmode;
+package org.mokee.pocketmode;
 
 import android.content.BroadcastReceiver;
 import android.content.Context;
