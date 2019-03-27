@@ -26,6 +26,8 @@ on boot
     chmod 0660 /sys/bus/platform/devices/soc:fingerprint_fpc/screen_status
     chmod 0660 /sys/bus/platform/devices/soc:fingerprint_fpc/vreg_op_cnt
 
+    chown system system /sys/devices/platform/soc/soc:fingerprint_goodix/proximity_state
+
     chown system system /sys/class/drm/card0-DSI-1/disp_param
     chmod 0700 /sys/class/drm/card0-DSI-1/disp_param
 
@@ -48,6 +50,7 @@ service vendor.fps_hal /vendor/bin/hw/android.hardware.biometrics.fingerprint@2.
     class late_start
     user system
     group system input
+    writepid /dev/cpuset/system-background/tasks
 
 on property:vendor.fps_hal.restartimes=max
     stop vendor.fps_hal
