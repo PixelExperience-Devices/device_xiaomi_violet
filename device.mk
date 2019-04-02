@@ -120,7 +120,7 @@ PRODUCT_PACKAGES += \
 
 # VNDK-SP
 PRODUCT_PACKAGES += \
-    vndk-sp
+    vndk_package
 
 # WiFi Display
 PRODUCT_PACKAGES += \
