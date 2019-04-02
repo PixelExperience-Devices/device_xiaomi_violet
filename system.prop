@@ -1,0 +1,213 @@
+rild.libpath=/vendor/lib64/libril-qc-hal-qmi.so
+#rild.libargs=-d /dev/smd0
+persist.rild.nitz_plmn=
+persist.rild.nitz_long_ons_0=
+persist.rild.nitz_long_ons_1=
+persist.rild.nitz_long_ons_2=
+persist.rild.nitz_long_ons_3=
+persist.rild.nitz_short_ons_0=
+persist.rild.nitz_short_ons_1=
+persist.rild.nitz_short_ons_2=
+persist.rild.nitz_short_ons_3=
+ril.subscription.types=NV,RUIM
+DEVICE_PROVISIONED=1
+# Set network mode to (T/L/G/W/1X/EVDO, T/L/G/W/1X/EVDO) for 7+7 mode device on DSDS mode
+ro.telephony.default_network=22,22
+
+dev.pm.dyn_samplingrate=1
+ro.colorpick_adjust=true
+#Property to enable display default color mode
+vendor.display.enable_default_color_mode=0
+
+qcom.hw.aac.encoder=true
+
+#
+# system props for the cne module
+#
+persist.vendor.cne.feature=1
+persist.cne.feature=1
+
+#
+## system props for the dpm module
+##
+persist.dpm.feature=1
+
+#system props for the MM modules
+media.stagefright.enable-player=true
+media.stagefright.enable-http=true
+media.stagefright.enable-aac=true
+media.stagefright.enable-qcp=true
+media.stagefright.enable-fma2dp=true
+media.stagefright.enable-scan=true
+mmp.enable.3g2=true
+media.aac_51_output_enabled=true
+mm.enable.smoothstreaming=true
+media.settings.xml=/system/etc/media_profiles_vendor.xml
+#13631487 is decimal sum of supported codecs in AAL
+#codecs:(PARSER_)AAC AC3 AMR_NB AMR_WB ASF AVI DTS FLV 3GP 3G2 MKV MP2PS MP2TS MP3 OGG QCP WAV FLAC AIFF APE DSD MOV XVID
+vendor.mm.enable.qcom_parser=63963135
+persist.mm.enable.prefetch=true
+
+#
+# system props for the data modules
+#
+ro.vendor.use_data_netmgrd=true
+persist.vendor.data.mode=concurrent
+
+#system props for time-services
+persist.timed.enable=true
+
+# system property for maximum number of HFP client connections
+bt.max.hfpclient.connections=1
+
+# System property for cabl
+ro.qualcomm.cabl=0
+ro.vendor.display.cabl=0
+
+ro.vendor.display.svi=1
+ro.vendor.display.sensortype=2
+vendor.display.svi.config=1
+vendor.display.svi.config_path=/system/etc/display/SVIConfig.xml
+
+#
+# System props for telephony
+# System prop to turn on CdmaLTEPhone always
+telephony.lteOnCdmaDevice=1
+
+#Simulate sdcard on /data/media
+#
+persist.fuse_sdcard=true
+
+#system prop for Bluetooth SOC type
+vendor.bluetooth.soc=cherokee
+persist.vendor.btstack.a2dp_offload_cap=sbc-aptx-aptxtws-aptxhd-aac-ldac
+
+#
+#snapdragon value add features
+#
+ro.qc.sdk.audio.ssr=false
+
+ro.config.media_vol_steps=25
+ro.config.vc_call_vol_steps=7
+
+##fluencetype can be "fluence" or "fluencepro" or "none"
+ro.qc.sdk.audio.fluencetype=none
+persist.audio.fluence.voicecall=true
+persist.audio.fluence.voicerec=false
+persist.audio.fluence.speaker=true
+
+#system prop for RmNet Data
+persist.data.df.dev_name=rmnet_usb0
+
+#property to enable user to access Google WFD settings
+persist.debug.wfd.enable=1
+##property to choose between virtual/external wfd display
+persist.sys.wfd.virtual=0
+
+# enable tunnel encoding for amrwb
+tunnel.audio.encode = true
+
+#Buffer size in kbytes for compress offload playback
+audio.offload.buffer.size.kb=32
+
+#Enable offload audio video playback by default
+av.offload.enable=true
+
+#enable voice path for PCM VoIP by default
+use.voice.path.for.pcm.voip=true
+
+#enable dsp gapless mode by default
+audio.offload.gapless.enabled=true
+
+#initialize QCA1530 detection
+sys.qca1530=detect
+
+#Enable stm events
+persist.debug.coresight.config=stm-events
+
+#Enable virtual display.
+debug.sf.enable_hwc_vds=1
+
+config.disable_rtt=true
+
+#Bringup properties
+persist.radio.atfwd.start=false
+ro.kernel.qemu.gles=0
+
+#Enable ZRAM
+ro.vendor.qti.config.zram=true
+
+#Property to enable perf boosts from System Server
+vendor.perf.gestureflingboost.enable=true
+vendor.display.disable_hw_recovery=1
+
+#Property to enable WorkloadClassifier
+vendor.perf.workloadclassifier.enable=true
+
+#Expose aux camera for below packages
+camera.aux.packagelist=org.codeaurora.snapcam,com.android.camera,com.lctautotest.camera,com.android.lightboxtest
+vendor.camera.aux.packagelist=org.codeaurora.snapcam,com.android.camera,com.longcheertel.AutoTest,com.longcheertel.cit
+
+# ro.location properties below are used in conjunction
+# with NLP_MODE setting in /vendor/etc/izat.conf
+# either as the main network provider or as a fallback
+# provider depending on NLP_MODE that is set
+# These properties are optional and will not cause
+# issues if not set to existing packages.
+# ro.location.osnlp.package sets the name of default
+# OS sepecific network location provider package to use
+# ro.location.osnlp.region.package is set to the name
+# of the alternative network location provider package
+# to be used for a particular region where the default
+# network location provider is not functional
+ro.location.osnlp.package=com.google.android.gms
+ro.location.osnlp.region.package=
+vendor.perf.dolphin.enable=true
+
+#lct.ydt 20180911 add for voWIFI
+#iwaln vowifi corresponding
+persist.vendor.data.iwlan.enable=true
+
+#HTH-30190 connect wifi, set 3G pre,observe Mobile network type should display UMTS but IWLAN.
+persist.vendor.radio.data_con_rprt=1
+
+#lct.ydt 20180911 add for ignore OOS 5 seconds
+persist.vendor.radio.snapshot_enabled=1
+persist.vendor.radio.snapshot_timer=5
+
+#Begin dzy add for dirac algo
+persist.dirac.acs.controller=gef
+persist.dirac.acs.storeSettings=1
+persist.dirac.acs.ignore_error=1
+ro.audio.soundfx.dirac=true
+persist.dirac.gef.int.did=0xF
+persist.dirac.gef.ext.did=0xA,0x2D
+persist.dirac.gef.ext.mid=0x10012DE1
+persist.dirac.gef.int.mid=0x10012DE0
+#End dzy  20180920
+
+#add for color invert
+ro.vendor.df.effect.conflict=1
+persist.sys.df.extcolor.proc=0
+
+# enable b-services aging propagation
+ro.vendor.qti.sys.fw.bservice_enable=true
+
+#limit QC2.0 high voltage at 9v follow HW OVP setting
+persist.vendor.chg.max_volt_mv=9000
+#add by zhanandong for QR
+vendor.audio.chk.cal.spk=0
+vendor.audio.chk.cal.us=0
+
+#thermal configs path
+sys.thermal.data.path=/data/vendor/thermal/
+
+#enable all system restart_level to relative
+persist.vendor.ssr.restart_level=ALL_ENABLE
+
+persist.vendor.qg.log_level=1
+
+#HTH-48746, lct.ydt enable the XLAT
+persist.vendor.net.doxlat=true
+
+ro.sf.lcd_density=440
