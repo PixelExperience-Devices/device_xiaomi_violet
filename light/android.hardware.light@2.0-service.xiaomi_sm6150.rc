@@ -1,0 +1,19 @@
+on boot
+    # White light
+    chown system system /sys/class/leds/red/brightness
+
+    chown system system /sys/class/leds/red/breath
+    chown system system /sys/class/leds/red/delay_off
+    chown system system /sys/class/leds/red/delay_on
+
+    chmod 660 /sys/class/leds/red/breath
+    chmod 660 /sys/class/leds/red/delay_off
+    chmod 660 /sys/class/leds/red/delay_on
+
+service vendor.light-hal-2-0 /system/bin/hw/android.hardware.light@2.0-service.xiaomi_sm6150
+    interface android.hardware.light@2.0::ILight default
+    class hal
+    user system
+    group system
+    # shutting off lights while powering-off
+    shutdown critical
