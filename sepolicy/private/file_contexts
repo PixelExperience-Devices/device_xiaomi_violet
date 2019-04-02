@@ -18,9 +18,6 @@
 # Graphics nodes
 /sys/devices/platform/soc/ae00000\.qcom,mdss_mdp/drm/card0/card0-DSI-1/hbm_status     u:object_r:sysfs_graphics:s0
 
-# Lights HAL
-/system/bin/hw/android\.hardware\.light@2\.0-service\.xiaomi_sdm845    u:object_r:hal_light_sdm845_exec:s0
-
 # LiveDisplay HAL
 /system/bin/hw/mokee\.livedisplay@2\.0-service-sdm                   u:object_r:shal_livedisplay_default_exec:s0
 
