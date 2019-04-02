@@ -1,14 +1,14 @@
 [
   {
-    "repository": "android_kernel_xiaomi_sdm845",
-    "target_path": "kernel/xiaomi/sdm845"
+    "repository": "android_kernel_xiaomi_sm6150",
+    "target_path": "kernel/xiaomi/sm6150"
   },
   {
     "repository": "android_packages_resources_devicesettings",
     "target_path": "packages/resources/devicesettings"
   },
   {
-    "repository": "android_vendor_xiaomi_sdm845-common",
-    "target_path": "vendor/xiaomi/sdm845-common"
+    "repository": "android_vendor_xiaomi_violet",
+    "target_path": "vendor/xiaomi/violet"
   }
 ]
