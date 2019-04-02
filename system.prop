@@ -211,3 +211,6 @@ persist.vendor.qg.log_level=1
 persist.vendor.net.doxlat=true
 
 ro.sf.lcd_density=440
+
+# Maintainer
+ro.mk.maintainer=guaiyihu
