@@ -39,7 +39,7 @@
         "9999999",
         "1324800",
         "1132800",
-        "825600"
+        "652800"
       ],
       "ResetOnInit": true
     },
@@ -163,7 +163,7 @@
       "Path": "/sys/class/devfreq/soc:qcom,cpu-cpu-llcc-bw/bw_hwmon/io_percent",
       "Values": [
         "80",
-        "50"
+        "68"
       ],
       "ResetOnInit": true
     },
@@ -330,7 +330,7 @@
       "PowerHint": "INTERACTION",
       "Node": "CPUBigClusterMinFreq",
       "Duration": 0,
-      "Value": "1132800"
+      "Value": "652800"
     },
     {
       "PowerHint": "INTERACTION",
