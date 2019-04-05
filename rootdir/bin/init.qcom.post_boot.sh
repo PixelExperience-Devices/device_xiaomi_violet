@@ -4600,6 +4600,51 @@ case "$target" in
      ;;
 esac
 
+#Setting the min and max supported frequencies
+reg_val=`cat /sys/devices/platform/soc/780130.qfprom/qfprom0/nvmem | od -An -t d4`
+feature_id=$(((reg_val >> 20) & 0xFF))
+
+if [ $feature_id == 0 ]; then
+	 echo "feature_id is 0 for SA8155"
+         echo 1036800 > /sys/devices/system/cpu/cpu0/cpufreq/scaling_min_freq
+         echo 1036800 > /sys/devices/system/cpu/cpu1/cpufreq/scaling_min_freq
+         echo 1036800 > /sys/devices/system/cpu/cpu2/cpufreq/scaling_min_freq
+         echo 1036800 > /sys/devices/system/cpu/cpu3/cpufreq/scaling_min_freq
+         echo 1056000 > /sys/devices/system/cpu/cpu4/cpufreq/scaling_min_freq
+         echo 1056000 > /sys/devices/system/cpu/cpu5/cpufreq/scaling_min_freq
+         echo 1056000 > /sys/devices/system/cpu/cpu6/cpufreq/scaling_min_freq
+         echo 1171200 > /sys/devices/system/cpu/cpu7/cpufreq/scaling_min_freq
+         echo 1785600 > /sys/devices/system/cpu/cpu0/cpufreq/scaling_max_freq
+         echo 1785600 > /sys/devices/system/cpu/cpu1/cpufreq/scaling_max_freq
+         echo 1785600 > /sys/devices/system/cpu/cpu2/cpufreq/scaling_max_freq
+         echo 1785600 > /sys/devices/system/cpu/cpu3/cpufreq/scaling_max_freq
+         echo 2131200 > /sys/devices/system/cpu/cpu4/cpufreq/scaling_max_freq
+         echo 2131200 > /sys/devices/system/cpu/cpu5/cpufreq/scaling_max_freq
+         echo 2131200 > /sys/devices/system/cpu/cpu6/cpufreq/scaling_max_freq
+         echo 2419200 > /sys/devices/system/cpu/cpu7/cpufreq/scaling_max_freq
+elif [ $feature_id == 1 ]; then
+	 echo "feature_id is 1 for SA8150"
+         echo 1036000 > /sys/devices/system/cpu/cpu0/cpufreq/scaling_min_freq
+         echo 1036000 > /sys/devices/system/cpu/cpu1/cpufreq/scaling_min_freq
+         echo 1036000 > /sys/devices/system/cpu/cpu2/cpufreq/scaling_min_freq
+         echo 1036000 > /sys/devices/system/cpu/cpu3/cpufreq/scaling_min_freq
+         echo 1056000 > /sys/devices/system/cpu/cpu4/cpufreq/scaling_min_freq
+         echo 1056000 > /sys/devices/system/cpu/cpu5/cpufreq/scaling_min_freq
+         echo 1056000 > /sys/devices/system/cpu/cpu6/cpufreq/scaling_min_freq
+         echo 1171200 > /sys/devices/system/cpu/cpu7/cpufreq/scaling_min_freq
+         echo 1785600 > /sys/devices/system/cpu/cpu0/cpufreq/scaling_max_freq
+         echo 1785600 > /sys/devices/system/cpu/cpu1/cpufreq/scaling_max_freq
+         echo 1785600 > /sys/devices/system/cpu/cpu2/cpufreq/scaling_max_freq
+         echo 1785600 > /sys/devices/system/cpu/cpu3/cpufreq/scaling_max_freq
+         echo 2131200 > /sys/devices/system/cpu/cpu4/cpufreq/scaling_max_freq
+         echo 2131200 > /sys/devices/system/cpu/cpu5/cpufreq/scaling_max_freq
+         echo 2131200 > /sys/devices/system/cpu/cpu6/cpufreq/scaling_max_freq
+         echo 2227200 > /sys/devices/system/cpu/cpu7/cpufreq/scaling_max_freq
+
+else
+    echo "unknown feature_id value" $feature_id
+fi
+
 # Let kernel know our image version/variant/crm_version
 if [ -f /sys/devices/soc0/select_image ]; then
     image_version="10:"
