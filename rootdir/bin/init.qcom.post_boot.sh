@@ -2755,6 +2755,10 @@ case "$target" in
             configure_memory_parameters
 
             # Enable bus-dcvs
+            ddr_type=`od -An -tx /proc/device-tree/memory/ddr_device_type`
+            ddr_type4="07"
+            ddr_type3="05"
+
             for device in /sys/devices/platform/soc
             do
                 for cpubw in $device/*cpu-cpu-ddr-bw/devfreq/*cpu-cpu-ddr-bw
@@ -2762,7 +2766,14 @@ case "$target" in
                     echo "bw_hwmon" > $cpubw/governor
                     echo 50 > $cpubw/polling_interval
                     echo 762 > $cpubw/min_freq
-                    echo "2288 3440 4173 5195 5859 7759 10322 11863 13763" > $cpubw/bw_hwmon/mbps_zones
+                    if [ ${ddr_type:4:2} == $ddr_type4 ]; then
+                        # LPDDR4
+                        echo "2288 3440 4173 5195 5859 7759 10322 11863 13763" > $cpubw/bw_hwmon/mbps_zones
+                    fi
+                    if [ ${ddr_type:4:2} == $ddr_type3 ]; then
+                        # LPDDR3
+                        echo "1525 2288 3440 4173 5195 5859 7102" > $cpubw/bw_hwmon/mbps_zones
+                    fi
                     echo 4 > $cpubw/bw_hwmon/sample_ms
                     echo 85 > $cpubw/bw_hwmon/io_percent
                     echo 90 > $cpubw/bw_hwmon/decay_rate
