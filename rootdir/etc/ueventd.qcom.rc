@@ -326,6 +326,8 @@ firmware_directories /vendor/firmware_mnt/image/ /vendor/firmware/
 
 # Fingerprint device
 /dev/qbt*                 0660   system     system
+/sys/class/fts/touch_aoi aoi_set 0660 root system
+/sys/class/fts/touch_aoi power_set 0660 root system
 
 #ImproveTouch device
 /dev/hbtp_input           0660   system     system
