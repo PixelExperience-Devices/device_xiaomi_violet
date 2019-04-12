@@ -238,15 +238,6 @@
       "HoldFd": true
     },
     {
-      "Name": "VRKernelCpuSet",
-      "Path": "/dev/cpuset/kernel/cpus",
-      "Values": [
-        "2,3",
-        "0-7"
-      ],
-      "ResetOnInit": true
-    },
-    {
       "Name": "SchedFeatures",
       "Path": "/sys/kernel/debug/sched_features",
       "Values": [
