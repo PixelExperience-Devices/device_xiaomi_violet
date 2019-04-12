@@ -674,6 +674,9 @@ static void loc_nmea_generate_GSV(const GnssSvNotification &svNotify,
                     case GNSS_SV_TYPE_BEIDOU:
                         signalType = GNSS_SIGNAL_BEIDOU_B1I;
                         break;
+                    case GNSS_SV_TYPE_SBAS:
+                        signalType = GNSS_SIGNAL_SBAS_L1;
+                        break;
                     default:
                         LOC_LOGE("NMEA Error unknow constellation type: %d",
                                 svNotify.gnssSvs[svNumber - 1].type);
@@ -1488,15 +1491,15 @@ void loc_nmea_generate_pos(const UlpLocation &location,
     }
     //Send blank NMEA reports for non-final fixes
     else {
-        strlcpy(sentence, "$GPGSA,A,1,,,,,,,,,,,,,,,", sizeof(sentence));
+        strlcpy(sentence, "$GPGSA,A,1,,,,,,,,,,,,,,,,", sizeof(sentence));
         length = loc_nmea_put_checksum(sentence, sizeof(sentence));
         nmeaArraystr.push_back(sentence);
 
-        strlcpy(sentence, "$GNGSA,A,1,,,,,,,,,,,,,,,", sizeof(sentence));
+        strlcpy(sentence, "$GNGSA,A,1,,,,,,,,,,,,,,,,", sizeof(sentence));
         length = loc_nmea_put_checksum(sentence, sizeof(sentence));
         nmeaArraystr.push_back(sentence);
 
-        strlcpy(sentence, "$PQGSA,A,1,,,,,,,,,,,,,,,", sizeof(sentence));
+        strlcpy(sentence, "$PQGSA,A,1,,,,,,,,,,,,,,,,", sizeof(sentence));
         length = loc_nmea_put_checksum(sentence, sizeof(sentence));
         nmeaArraystr.push_back(sentence);
 

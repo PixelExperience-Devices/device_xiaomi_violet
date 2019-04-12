@@ -1,4 +1,4 @@
-/* Copyright (c) 2011-2014, 2016-2018 The Linux Foundation. All rights reserved.
+/* Copyright (c) 2011-2014, 2016-2019 The Linux Foundation. All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without
  * modification, are permitted provided that the following conditions are
@@ -35,7 +35,7 @@
 #include <LocApiBase.h>
 #include <LocAdapterBase.h>
 #include <log_util.h>
-#include <LocDualContext.h>
+#include <LocContext.h>
 
 namespace loc_core {
 
@@ -197,8 +197,8 @@ bool LocApiBase::isInSession()
 }
 
 bool LocApiBase::needReport(const UlpLocation& ulpLocation,
-                                   enum loc_sess_status status,
-                                   LocPosTechMask techMask)
+                            enum loc_sess_status status,
+                            LocPosTechMask techMask)
 {
     bool reported = false;
 
@@ -380,6 +380,23 @@ void LocApiBase::reportDeleteAidingDataEvent(GnssAidingData& aidingData) {
     TO_1ST_HANDLING_LOCADAPTERS(mLocAdapters[i]->reportDeleteAidingDataEvent(aidingData));
 }
 
+void LocApiBase::reportKlobucharIonoModel(GnssKlobucharIonoModel & ionoModel) {
+    // loop through adapters, and deliver to the first handling adapter.
+    TO_1ST_HANDLING_LOCADAPTERS(mLocAdapters[i]->reportKlobucharIonoModelEvent(ionoModel));
+}
+
+void LocApiBase::reportGnssAdditionalSystemInfo(GnssAdditionalSystemInfo& additionalSystemInfo) {
+    // loop through adapters, and deliver to the first handling adapter.
+    TO_1ST_HANDLING_LOCADAPTERS(mLocAdapters[i]->reportGnssAdditionalSystemInfoEvent(
+            additionalSystemInfo));
+}
+
+void LocApiBase::sendNfwNotification(GnssNfwNotification& notification)
+{
+    // loop through adapters, and deliver to the first handling adapter.
+    TO_ALL_LOCADAPTERS(mLocAdapters[i]->reportNfwNotificationEvent(notification));
+
+}
 
 void LocApiBase::reportSv(GnssSvNotification& svNotify)
 {
@@ -546,6 +563,41 @@ void LocApiBase::reportGnssSvTypeConfig(const GnssSvTypeConfig& config)
     TO_ALL_LOCADAPTERS(mLocAdapters[i]->reportGnssSvTypeConfigEvent(config));
 }
 
+void LocApiBase::geofenceBreach(size_t count, uint32_t* hwIds, Location& location,
+                                GeofenceBreachType breachType, uint64_t timestamp)
+{
+    TO_ALL_LOCADAPTERS(mLocAdapters[i]->geofenceBreachEvent(count, hwIds, location, breachType,
+                                                            timestamp));
+}
+
+void LocApiBase::geofenceStatus(GeofenceStatusAvailable available)
+{
+    TO_ALL_LOCADAPTERS(mLocAdapters[i]->geofenceStatusEvent(available));
+}
+
+void LocApiBase::reportDBTPosition(UlpLocation &location, GpsLocationExtended &locationExtended,
+                                   enum loc_sess_status status, LocPosTechMask loc_technology_mask)
+{
+    TO_ALL_LOCADAPTERS(mLocAdapters[i]->reportPositionEvent(location, locationExtended, status,
+                                                            loc_technology_mask));
+}
+
+void LocApiBase::reportLocations(Location* locations, size_t count, BatchingMode batchingMode)
+{
+    TO_ALL_LOCADAPTERS(mLocAdapters[i]->reportLocationsEvent(locations, count, batchingMode));
+}
+
+void LocApiBase::reportCompletedTrips(uint32_t accumulated_distance)
+{
+    TO_ALL_LOCADAPTERS(mLocAdapters[i]->reportCompletedTripsEvent(accumulated_distance));
+}
+
+void LocApiBase::handleBatchStatusEvent(BatchingStatus batchStatus)
+{
+    TO_ALL_LOCADAPTERS(mLocAdapters[i]->reportBatchStatusChangeEvent(batchStatus));
+}
+
+
 enum loc_api_adapter_err LocApiBase::
    open(LOC_API_ADAPTER_EVENT_MASK_T /*mask*/)
 DEFAULT_IMPL(LOC_API_ADAPTER_ERR_SUCCESS)
@@ -592,10 +644,6 @@ DEFAULT_IMPL()
 
 void LocApiBase::
     atlCloseStatus(int /*handle*/, int /*is_succ*/)
-DEFAULT_IMPL()
-
-void LocApiBase::
-    setPositionMode(const LocPosMode& /*posMode*/)
 DEFAULT_IMPL()
 
 LocationError LocApiBase::
@@ -673,6 +721,10 @@ DEFAULT_IMPL(0)
 GnssConfigLppeUserPlaneMask LocApiBase::convertLppeUp(const uint32_t /*lppeUserPlaneMask*/)
 DEFAULT_IMPL(0)
 
+LocationError LocApiBase::setEmergencyExtensionWindowSync(
+        const uint32_t /*emergencyExtensionSeconds*/)
+DEFAULT_IMPL(LOCATION_ERROR_SUCCESS)
+
 void LocApiBase::
    getWwanZppFix()
 DEFAULT_IMPL()
@@ -727,7 +779,103 @@ LocationError LocApiBase::
     setPositionAssistedClockEstimatorMode(bool /*enabled*/)
 DEFAULT_IMPL(LOCATION_ERROR_SUCCESS)
 
-LocationError LocApiBase::
-    getGnssEnergyConsumed()
+LocationError LocApiBase::getGnssEnergyConsumed()
 DEFAULT_IMPL(LOCATION_ERROR_SUCCESS)
+
+
+void LocApiBase::addGeofence(uint32_t /*clientId*/, const GeofenceOption& /*options*/,
+        const GeofenceInfo& /*info*/,
+        LocApiResponseData<LocApiGeofenceData>* /*adapterResponseData*/)
+DEFAULT_IMPL()
+
+void LocApiBase::removeGeofence(uint32_t /*hwId*/, uint32_t /*clientId*/,
+        LocApiResponse* /*adapterResponse*/)
+DEFAULT_IMPL()
+
+void LocApiBase::pauseGeofence(uint32_t /*hwId*/, uint32_t /*clientId*/,
+        LocApiResponse* /*adapterResponse*/)
+DEFAULT_IMPL()
+
+void LocApiBase::resumeGeofence(uint32_t /*hwId*/, uint32_t /*clientId*/,
+        LocApiResponse* /*adapterResponse*/)
+DEFAULT_IMPL()
+
+void LocApiBase::modifyGeofence(uint32_t /*hwId*/, uint32_t /*clientId*/,
+         const GeofenceOption& /*options*/, LocApiResponse* /*adapterResponse*/)
+DEFAULT_IMPL()
+
+void LocApiBase::startTimeBasedTracking(const TrackingOptions& /*options*/,
+        LocApiResponse* /*adapterResponse*/)
+DEFAULT_IMPL()
+
+void LocApiBase::stopTimeBasedTracking(LocApiResponse* /*adapterResponse*/)
+DEFAULT_IMPL()
+
+void LocApiBase::startDistanceBasedTracking(uint32_t /*sessionId*/,
+        const LocationOptions& /*options*/, LocApiResponse* /*adapterResponse*/)
+DEFAULT_IMPL()
+
+void LocApiBase::stopDistanceBasedTracking(uint32_t /*sessionId*/,
+        LocApiResponse* /*adapterResponse*/)
+DEFAULT_IMPL()
+
+void LocApiBase::startBatching(uint32_t /*sessionId*/, const LocationOptions& /*options*/,
+        uint32_t /*accuracy*/, uint32_t /*timeout*/, LocApiResponse* /*adapterResponse*/)
+DEFAULT_IMPL()
+
+void LocApiBase::stopBatching(uint32_t /*sessionId*/, LocApiResponse* /*adapterResponse*/)
+DEFAULT_IMPL()
+
+LocationError LocApiBase::startOutdoorTripBatchingSync(uint32_t /*tripDistance*/,
+        uint32_t /*tripTbf*/, uint32_t /*timeout*/)
+DEFAULT_IMPL(LOCATION_ERROR_SUCCESS)
+
+void LocApiBase::startOutdoorTripBatching(uint32_t /*tripDistance*/, uint32_t /*tripTbf*/,
+        uint32_t /*timeout*/, LocApiResponse* /*adapterResponse*/)
+DEFAULT_IMPL()
+
+void LocApiBase::reStartOutdoorTripBatching(uint32_t /*ongoingTripDistance*/,
+        uint32_t /*ongoingTripInterval*/, uint32_t /*batchingTimeout,*/,
+        LocApiResponse* /*adapterResponse*/)
+DEFAULT_IMPL()
+
+LocationError LocApiBase::stopOutdoorTripBatchingSync(bool /*deallocBatchBuffer*/)
+DEFAULT_IMPL(LOCATION_ERROR_SUCCESS)
+
+void LocApiBase::stopOutdoorTripBatching(bool /*deallocBatchBuffer*/,
+        LocApiResponse* /*adapterResponse*/)
+DEFAULT_IMPL()
+
+LocationError LocApiBase::getBatchedLocationsSync(size_t /*count*/)
+DEFAULT_IMPL(LOCATION_ERROR_SUCCESS)
+
+void LocApiBase::getBatchedLocations(size_t /*count*/, LocApiResponse* /*adapterResponse*/)
+DEFAULT_IMPL()
+
+LocationError LocApiBase::getBatchedTripLocationsSync(size_t /*count*/,
+        uint32_t /*accumulatedDistance*/)
+DEFAULT_IMPL(LOCATION_ERROR_SUCCESS)
+
+void LocApiBase::getBatchedTripLocations(size_t /*count*/, uint32_t /*accumulatedDistance*/,
+        LocApiResponse* /*adapterResponse*/)
+DEFAULT_IMPL()
+
+LocationError LocApiBase::queryAccumulatedTripDistanceSync(uint32_t& /*accumulated_trip_distance*/,
+        uint32_t& /*numOfBatchedPositions*/)
+DEFAULT_IMPL(LOCATION_ERROR_SUCCESS)
+
+void LocApiBase::queryAccumulatedTripDistance(
+        LocApiResponseData<LocApiBatchData>* /*adapterResponseData*/)
+DEFAULT_IMPL()
+
+void LocApiBase::setBatchSize(size_t /*size*/)
+DEFAULT_IMPL()
+
+void LocApiBase::setTripBatchSize(size_t /*size*/)
+DEFAULT_IMPL()
+
+void LocApiBase::addToCallQueue(LocApiResponse* /*adapterResponse*/)
+DEFAULT_IMPL()
+
+
 } // namespace loc_core

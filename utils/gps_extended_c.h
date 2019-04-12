@@ -1,4 +1,4 @@
-/* Copyright (c) 2013-2018 The Linux Foundation. All rights reserved.
+/* Copyright (c) 2013-2019 The Linux Foundation. All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without
  * modification, are permitted provided that the following conditions are
@@ -198,6 +198,11 @@ typedef struct {
     void* statusV4Cb;
     AgpsCbPriority cbPriority;
 } AgpsCbInfo;
+
+typedef struct {
+    void* visibilityControlCb;
+    void* isInEmergencySession;
+} NfwCbInfo;
 
 /** GPS extended callback structure. */
 typedef struct {
@@ -407,9 +412,18 @@ typedef uint32_t LocPosDataMask;
 /* Bitmask to specify whether Navigation data has Body pitch Unc*/
 #define LOC_NAV_DATA_HAS_PITCH_UNC ((LocPosDataMask)0x0200)
 
+typedef uint32_t GnssAdditionalSystemInfoMask;
+/* Bitmask to specify whether Tauc is valid */
+#define GNSS_ADDITIONAL_SYSTEMINFO_HAS_TAUC ((GnssAdditionalSystemInfoMask)0x0001)
+/* Bitmask to specify whether leapSec is valid */
+#define GNSS_ADDITIONAL_SYSTEMINFO_HAS_LEAP_SEC ((GnssAdditionalSystemInfoMask)0x0002)
+
+
 /** GPS PRN Range */
 #define GPS_SV_PRN_MIN      1
 #define GPS_SV_PRN_MAX      32
+#define SBAS_SV_PRN_MIN     33
+#define SBAS_SV_PRN_MAX     64
 #define GLO_SV_PRN_MIN      65
 #define GLO_SV_PRN_MAX      96
 #define QZSS_SV_PRN_MIN     193
@@ -838,8 +852,8 @@ enum loc_api_adapter_event_index {
     LOC_API_ADAPTER_BATCH_FULL,                        // Batching on full
     LOC_API_ADAPTER_BATCHED_POSITION_REPORT,           // Batching on fix
     LOC_API_ADAPTER_BATCHED_GENFENCE_BREACH_REPORT,    //
-    LOC_API_ADAPTER_GNSS_MEASUREMENT_REPORT,          //GNSS Measurement Report
-    LOC_API_ADAPTER_GNSS_SV_POLYNOMIAL_REPORT,        //GNSS SV Polynomial Report
+    LOC_API_ADAPTER_GNSS_MEASUREMENT_REPORT,           // GNSS Measurement Report
+    LOC_API_ADAPTER_GNSS_SV_POLYNOMIAL_REPORT,         // GNSS SV Polynomial Report
     LOC_API_ADAPTER_GDT_UPLOAD_BEGIN_REQ,              // GDT upload start request
     LOC_API_ADAPTER_GDT_UPLOAD_END_REQ,                // GDT upload end request
     LOC_API_ADAPTER_GNSS_MEASUREMENT,                  // GNSS Measurement report
@@ -853,6 +867,8 @@ enum loc_api_adapter_event_index {
     LOC_API_ADAPTER_BS_OBS_DATA_SERVICE_REQ,           // BS observation data request
     LOC_API_ADAPTER_GNSS_SV_EPHEMERIS_REPORT,          // GNSS SV Ephemeris Report
     LOC_API_ADAPTER_LOC_SYSTEM_INFO,                   // Location system info event
+    LOC_API_ADAPTER_GNSS_NHZ_MEASUREMENT_REPORT,       // GNSS SV nHz measurement report
+    LOC_API_ADAPTER_EVENT_REPORT_INFO,                 // Event report info
     LOC_API_ADAPTER_EVENT_MAX
 };
 
@@ -893,6 +909,8 @@ enum loc_api_adapter_event_index {
 #define LOC_API_ADAPTER_BIT_BS_OBS_DATA_SERVICE_REQ          (1ULL<<LOC_API_ADAPTER_BS_OBS_DATA_SERVICE_REQ)
 #define LOC_API_ADAPTER_BIT_GNSS_SV_EPHEMERIS_REPORT         (1ULL<<LOC_API_ADAPTER_GNSS_SV_EPHEMERIS_REPORT)
 #define LOC_API_ADAPTER_BIT_LOC_SYSTEM_INFO                  (1ULL<<LOC_API_ADAPTER_LOC_SYSTEM_INFO)
+#define LOC_API_ADAPTER_BIT_GNSS_NHZ_MEASUREMENT             (1ULL<<LOC_API_ADAPTER_GNSS_NHZ_MEASUREMENT_REPORT)
+#define LOC_API_ADAPTER_BIT_EVENT_REPORT_INFO                (1ULL<<LOC_API_ADAPTER_EVENT_REPORT_INFO)
 
 typedef uint64_t LOC_API_ADAPTER_EVENT_MASK_T;
 
@@ -925,7 +943,8 @@ typedef uint32_t LOC_GPS_LOCK_MASK;
 #define GNSS_SV_POLY_XYZ_0_TH_ORDER_COEFF_MAX_SIZE  3
 #define GNSS_SV_POLY_XYZ_N_TH_ORDER_COEFF_MAX_SIZE  9
 #define GNSS_SV_POLY_SV_CLKBIAS_COEFF_MAX_SIZE      4
-#define GNSS_LOC_SV_MEAS_LIST_MAX_SIZE              16
+/** Max number of GNSS SV measurement */
+#define GNSS_LOC_SV_MEAS_LIST_MAX_SIZE              128
 
 enum ulp_gnss_sv_measurement_valid_flags{
 
@@ -1055,71 +1074,12 @@ typedef struct
     /**< System-1 to System-2 Time Bias uncertainty  \n
         - Units: msec \n
     */
-}Gnss_InterSystemBiasStructType;
+} Gnss_InterSystemBiasStructType;
 
-
-typedef struct
-{
-    size_t          size;
-    uint16_t        systemWeek;
-    /**< System week number for GPS, BDS and GAL satellite systems. \n
-         Set to 65535 when invalid or not available. \n
-         Not valid for GLONASS system. \n
-       */
-
-    uint32_t        systemMsec;
-    /**< System time msec. Time of Week for GPS, BDS, GAL and
-         Time of Day for GLONASS.
-         - Units: msec \n
-      */
-    float           systemClkTimeBias;
-    /**< System clock time bias \n
-         - Units: msec \n
-         System time = systemMsec - systemClkTimeBias \n
-      */
-    float           systemClkTimeUncMs;
-    /**< Single sided maximum time bias uncertainty \n
-                                                    - Units: msec \n
-      */
-}Gnss_LocSystemTimeStructType;
-
-typedef struct {
-
-  size_t        size;
-  uint8_t       gloFourYear;
-  /**<   GLONASS four year number from 1996. Refer to GLONASS ICD.\n
-        Applicable only for GLONASS and shall be ignored for other constellations. \n
-        If unknown shall be set to 255
-        */
-
-  uint16_t      gloDays;
-  /**<   GLONASS day number in four years. Refer to GLONASS ICD.
-        Applicable only for GLONASS and shall be ignored for other constellations. \n
-        If unknown shall be set to 65535
-        */
-
-  uint32_t      gloMsec;
-  /**<   GLONASS time of day in msec. Refer to GLONASS ICD.
-            - Units: msec \n
-        */
-
-  float         gloClkTimeBias;
-  /**<   System clock time bias (sub-millisecond) \n
-            - Units: msec \n
-        System time = systemMsec - systemClkTimeBias \n
-    */
-
-  float         gloClkTimeUncMs;
-  /**<   Single sided maximum time bias uncertainty \n
-                - Units: msec \n
-        */
-}Gnss_LocGloTimeStructType;  /* Type */
 
 typedef struct {
 
   size_t    size;
-  uint32_t  refFCount;
-  /**<   Receiver frame counter value at reference tick */
 
   uint8_t   systemRtc_valid;
   /**<   Validity indicator for System RTC */
@@ -1129,12 +1089,7 @@ typedef struct {
         - Units: msec \n
         */
 
-  uint32_t  sourceOfTime;
-  /**<   Source of time information */
-
 }Gnss_LocGnssTimeExtStructType;
-
-
 
 typedef enum
 {
@@ -1231,6 +1186,9 @@ typedef enum
 typedef struct
 {
     size_t                          size;
+    Gnss_LocSvSystemEnumType        gnssSystem;
+    // 0 signal type mask indicates invalid value
+    GnssSignalTypeMask              gnssSignalTypeMask;
     uint16_t                        gnssSvId;
     /**< GNSS SV ID.
          \begin{itemize1}
@@ -1367,70 +1325,75 @@ typedef struct
 
 } Gnss_SVMeasurementStructType;
 
-/**< Maximum number of satellites in measurement block for given system. */
 
-typedef struct
-{
-    size_t                          size;
-    Gnss_LocSvSystemEnumType        system;
-    /**< Specifies the Satellite System Type
-    */
-    bool                            isSystemTimeValid;
-    /**< Indicates whether System Time is Valid:\n
-         - 0x01 (TRUE) --  System Time is valid \n
-         - 0x00 (FALSE) -- System Time is not valid
-    */
-    Gnss_LocSystemTimeStructType    systemTime;
-    /**< System Time Information \n
-    */
-    bool                            isGloTime_valid;
-    Gnss_LocGloTimeStructType       gloTime;
+typedef uint64_t GpsSvMeasHeaderFlags;
+#define GNSS_SV_MEAS_HEADER_HAS_LEAP_SECOND                0x00000001
+#define GNSS_SV_MEAS_HEADER_HAS_CLOCK_FREQ                 0x00000002
+#define GNSS_SV_MEAS_HEADER_HAS_AP_TIMESTAMP               0x00000004
+#define GNSS_SV_MEAS_HEADER_HAS_GPS_GLO_INTER_SYSTEM_BIAS  0x00000008
+#define GNSS_SV_MEAS_HEADER_HAS_GPS_BDS_INTER_SYSTEM_BIAS  0x00000010
+#define GNSS_SV_MEAS_HEADER_HAS_GPS_GAL_INTER_SYSTEM_BIAS  0x00000020
+#define GNSS_SV_MEAS_HEADER_HAS_BDS_GLO_INTER_SYSTEM_BIAS  0x00000040
+#define GNSS_SV_MEAS_HEADER_HAS_GAL_GLO_INTER_SYSTEM_BIAS  0x00000080
+#define GNSS_SV_MEAS_HEADER_HAS_GAL_BDS_INTER_SYSTEM_BIAS  0x00000100
+#define GNSS_SV_MEAS_HEADER_HAS_GPS_SYSTEM_TIME            0x00000200
+#define GNSS_SV_MEAS_HEADER_HAS_GAL_SYSTEM_TIME            0x00000400
+#define GNSS_SV_MEAS_HEADER_HAS_BDS_SYSTEM_TIME            0x00000800
+#define GNSS_SV_MEAS_HEADER_HAS_QZSS_SYSTEM_TIME           0x00001000
+#define GNSS_SV_MEAS_HEADER_HAS_GLO_SYSTEM_TIME            0x00002000
+#define GNSS_SV_MEAS_HEADER_HAS_GPS_SYSTEM_TIME_EXT        0x00004000
+#define GNSS_SV_MEAS_HEADER_HAS_GAL_SYSTEM_TIME_EXT        0x00008000
+#define GNSS_SV_MEAS_HEADER_HAS_BDS_SYSTEM_TIME_EXT        0x00010000
+#define GNSS_SV_MEAS_HEADER_HAS_QZSS_SYSTEM_TIME_EXT       0x00020000
+#define GNSS_SV_MEAS_HEADER_HAS_GPSL1L5_TIME_BIAS          0x00040000
+#define GNSS_SV_MEAS_HEADER_HAS_GALE1E5A_TIME_BIAS         0x00080000
 
-    bool                            isSystemTimeExt_valid;
-    Gnss_LocGnssTimeExtStructType   systemTimeExt;
-
-    uint8_t                         numSvs;
-    /* Number of SVs in this report block */
-
-    Gnss_SVMeasurementStructType    svMeasurement[GNSS_LOC_SV_MEAS_LIST_MAX_SIZE];
-    /**< Satellite measurement Information \n
-    */
-} Gnss_ClockMeasurementStructType;
 
 
 typedef struct
 {
     size_t                                      size;
-    uint8_t                                     seqNum;
-    /**< Current message Number */
-    uint8_t                                     maxMessageNum;
-    /**< Maximum number of message that will be sent for present time epoch. */
+    // see defines in GNSS_SV_MEAS_HEADER_HAS_XXX_XXX
+    uint64_t                                    flags;
 
-    bool                                     leapSecValid;
     Gnss_LeapSecondInfoStructType               leapSec;
 
-    Gnss_InterSystemBiasStructType              gpsGloInterSystemBias;
-
-    Gnss_InterSystemBiasStructType              gpsBdsInterSystemBias;
-
-    Gnss_InterSystemBiasStructType              gpsGalInterSystemBias;
-
-    Gnss_InterSystemBiasStructType              bdsGloInterSystemBias;
-
-    Gnss_InterSystemBiasStructType              galGloInterSystemBias;
-
-    Gnss_InterSystemBiasStructType              galBdsInterSystemBias;
-
-    bool                                     clockFreqValid;
     Gnss_LocRcvrClockFrequencyInfoStructType    clockFreq;   /* Freq */
-    bool                                     gnssMeasValid;
-    Gnss_ClockMeasurementStructType             gnssMeas;
-    Gnss_ApTimeStampStructType               timeStamp;
-    /*  Extended Time Information - Cumulative Number of Clock Resets */
-    uint8_t numClockResets_valid;  /**< Must be set to true if numClockResets is being passed */
-    uint32_t numClockResets;
-    bool                                     gnssSignalTypeMaskValid;
-    GnssSignalTypeMask                       gnssSignalTypeMask;
+
+    Gnss_ApTimeStampStructType                  apBootTimeStamp;
+
+    Gnss_InterSystemBiasStructType              gpsGloInterSystemBias;
+    Gnss_InterSystemBiasStructType              gpsBdsInterSystemBias;
+    Gnss_InterSystemBiasStructType              gpsGalInterSystemBias;
+    Gnss_InterSystemBiasStructType              bdsGloInterSystemBias;
+    Gnss_InterSystemBiasStructType              galGloInterSystemBias;
+    Gnss_InterSystemBiasStructType              galBdsInterSystemBias;
+    Gnss_InterSystemBiasStructType              gpsL1L5TimeBias;
+    Gnss_InterSystemBiasStructType              galE1E5aTimeBias;
+
+    GnssSystemTimeStructType                    gpsSystemTime;
+    GnssSystemTimeStructType                    galSystemTime;
+    GnssSystemTimeStructType                    bdsSystemTime;
+    GnssSystemTimeStructType                    qzssSystemTime;
+    GnssGloTimeStructType                       gloSystemTime;
+
+    /** GPS system RTC time information. */
+    Gnss_LocGnssTimeExtStructType               gpsSystemTimeExt;
+    /** GAL system RTC time information. */
+    Gnss_LocGnssTimeExtStructType               galSystemTimeExt;
+    /** BDS system RTC time information. */
+    Gnss_LocGnssTimeExtStructType               bdsSystemTimeExt;
+    /** QZSS system RTC time information. */
+    Gnss_LocGnssTimeExtStructType               qzssSystemTimeExt;
+
+} GnssSvMeasurementHeader;
+
+typedef struct {
+    size_t                        size;
+    bool                          isNhz;
+    GnssSvMeasurementHeader       svMeasSetHeader;
+    uint32_t                      svMeasCount;
+    Gnss_SVMeasurementStructType  svMeas[GNSS_LOC_SV_MEAS_LIST_MAX_SIZE];
 
 } GnssSvMeasurementSet;
 
@@ -1916,6 +1879,10 @@ typedef struct {
         Mandatory field */
     Gnss_LocSvSystemEnumType gnssConstellation;
 
+    /** GPS System Time of the ephemeris report */
+    bool isSystemTimeValid;
+    GnssSystemTimeStructType systemTime;
+
     union {
        /** GPS Ephemeris */
        GpsEphemerisResponse gpsEphemeris;
@@ -1929,6 +1896,73 @@ typedef struct {
        QzssEphemerisResponse qzssEphemeris;
     } ephInfo;
 } GnssSvEphemerisReport;
+
+typedef struct {
+    /** GPS System Time of the iono model report */
+    bool isSystemTimeValid;
+    GnssSystemTimeStructType systemTime;
+
+    /** Indicates GNSS Constellation Type */
+    Gnss_LocSvSystemEnumType gnssConstellation;
+
+    float alpha0;
+    /**<   Klobuchar Model Parameter Alpha 0.
+         - Type: float
+         - Unit: Seconds
+    */
+
+    float alpha1;
+    /**<   Klobuchar Model Parameter Alpha 1.
+         - Type: float
+         - Unit: Seconds / Semi-Circle
+    */
+
+    float alpha2;
+    /**<   Klobuchar Model Parameter Alpha 2.
+         - Type: float
+         - Unit: Seconds / Semi-Circle^2
+    */
+
+    float alpha3;
+    /**<   Klobuchar Model Parameter Alpha 3.
+         - Type: float
+         - Unit: Seconds / Semi-Circle^3
+    */
+
+    float beta0;
+    /**<   Klobuchar Model Parameter Beta 0.
+         - Type: float
+         - Unit: Seconds
+    */
+
+    float beta1;
+    /**<   Klobuchar Model Parameter Beta 1.
+         - Type: float
+         - Unit: Seconds / Semi-Circle
+    */
+
+    float beta2;
+    /**<   Klobuchar Model Parameter Beta 2.
+         - Type: float
+         - Unit: Seconds / Semi-Circle^2
+    */
+
+    float beta3;
+    /**<   Klobuchar Model Parameter Beta 3.
+         - Type: float
+         - Unit: Seconds / Semi-Circle^3
+    */
+} GnssKlobucharIonoModel;
+
+typedef struct {
+        /** GPS System Time of the report */
+    bool isSystemTimeValid;
+    GnssSystemTimeStructType systemTime;
+
+    GnssAdditionalSystemInfoMask validityMask;
+    double tauC;
+    int8_t leapSec;
+} GnssAdditionalSystemInfo;
 
 /* Various Short Range Node Technology type*/
 typedef enum {
@@ -2009,6 +2043,46 @@ struct AGnssExtStatusIpV6 {
     uint8_t             ipV6Addr[16];
 };
 
+/*
+* Represents the the Nfw Notification structure
+*/
+#define GNSS_MAX_NFW_STRING_LEN  20
+
+typedef enum {
+    GNSS_NFW_CTRL_PLANE = 0,
+    GNSS_NFW_SUPL = 1,
+    GNSS_NFW_IMS = 10,
+    GNSS_NFW_SIM = 11,
+    GNSS_NFW_OTHER_PROTOCOL_STACK = 100
+} GnssNfwProtocolStack;
+
+typedef enum {
+    GNSS_NFW_CARRIER = 0,
+    GNSS_NFW_OEM = 10,
+    GNSS_NFW_MODEM_CHIPSET_VENDOR = 11,
+    GNSS_NFW_GNSS_CHIPSET_VENDOR = 12,
+    GNSS_NFW_OTHER_CHIPSET_VENDOR = 13,
+    GNSS_NFW_AUTOMOBILE_CLIENT = 20,
+    GNSS_NFW_OTHER_REQUESTOR = 100
+} GnssNfwRequestor;
+
+typedef enum {
+    GNSS_NFW_REJECTED = 0,
+    GNSS_NFW_ACCEPTED_NO_LOCATION_PROVIDED = 1,
+    GNSS_NFW_ACCEPTED_LOCATION_PROVIDED = 2,
+} GnssNfwResponseType;
+
+typedef struct {
+    char                    proxyAppPackageName[GNSS_MAX_NFW_STRING_LEN];
+    GnssNfwProtocolStack    protocolStack;
+    char                    otherProtocolStackName[GNSS_MAX_NFW_STRING_LEN];
+    GnssNfwRequestor        requestor;
+    char                    requestorId[GNSS_MAX_NFW_STRING_LEN];
+    GnssNfwResponseType     responseType;
+    bool                    inEmergencyMode;
+    bool                    isCachedLocation;
+} GnssNfwNotification;
+
 /* ODCPI Request Info */
 enum OdcpiRequestType {
     ODCPI_REQUEST_TYPE_START,
@@ -2029,6 +2103,11 @@ typedef std::function<void(const OdcpiRequestInfo& request)> OdcpiRequestCallbac
  * @param status Will be of type AGnssExtStatusIpV4.
  */
 typedef void (*AgnssStatusIpV4Cb)(AGnssExtStatusIpV4 status);
+
+/*
+* Callback with NFW information.
+*/
+typedef void(*NfwStatusCb)(GnssNfwNotification notification);
 
 /*
  * Callback with AGNSS(IpV6) status information.
@@ -2053,6 +2132,10 @@ typedef void (*LocAgpsCloseResultCb)(bool isSuccess, AGpsExtType agpsType, void*
 
 #define SOCKET_DIR_TO_CLIENT           "/dev/socket/loc_client/"
 #define SOCKET_TO_LOCATION_CLIENT_BASE "/dev/socket/loc_client/toclient"
+#define SOCKET_TO_EXTERANL_AP_LOCATION_CLIENT_BASE "/dev/socket/loc_client/extap.toclient"
+
+typedef uint64_t NetworkHandle;
+#define NETWORK_HANDLE_UNKNOWN  ~0
 
 #ifdef __cplusplus
 }

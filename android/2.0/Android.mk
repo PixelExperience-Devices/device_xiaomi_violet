@@ -24,6 +24,11 @@ LOCAL_SRC_FILES += \
     location_api/BatchingAPIClient.cpp \
     location_api/LocationUtil.cpp \
 
+ifeq ($(GNSS_HIDL_LEGACY_MEASURMENTS),true)
+LOCAL_CFLAGS += \
+     -DGNSS_HIDL_LEGACY_MEASURMENTS
+endif
+
 LOCAL_C_INCLUDES:= \
     $(LOCAL_PATH)/location_api \
     $(LOCAL_PATH)/../measurement_corrections/1.0 \
@@ -89,4 +94,9 @@ LOCAL_SHARED_LIBRARIES += \
     android.hardware.gnss@2.0 \
 
 LOCAL_CFLAGS += $(GNSS_CFLAGS)
+
+ifneq ($(LOC_HIDL_VERSION),)
+LOCAL_CFLAGS += -DLOC_HIDL_VERSION='"$(LOC_HIDL_VERSION)"'
+endif
+
 include $(BUILD_EXECUTABLE)

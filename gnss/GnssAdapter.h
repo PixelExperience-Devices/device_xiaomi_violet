@@ -1,4 +1,4 @@
-/* Copyright (c) 2017-2018, The Linux Foundation. All rights reserved.
+/* Copyright (c) 2017-2019, The Linux Foundation. All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without
  * modification, are permitted provided that the following conditions are
@@ -30,13 +30,14 @@
 #define GNSS_ADAPTER_H
 
 #include <LocAdapterBase.h>
-#include <LocDualContext.h>
+#include <LocContext.h>
 #include <IOsObserver.h>
 #include <EngineHubProxyBase.h>
 #include <LocationAPI.h>
 #include <Agps.h>
 #include <SystemStatus.h>
 #include <XtraSystemStatusObserver.h>
+#include <map>
 
 #define MAX_URL_LEN 256
 #define NMEA_SENTENCE_MAX_LENGTH 200
@@ -47,6 +48,9 @@
 #define ODCPI_EXPECTED_INJECTION_TIME_MS 10000
 
 class GnssAdapter;
+
+typedef std::map<LocationSessionKey, LocationOptions> LocationSessionMap;
+typedef std::map<LocationSessionKey, TrackingOptions> TrackingOptionsMap;
 
 class OdcpiTimer : public LocTimer {
 public:
@@ -128,19 +132,16 @@ typedef std::function<void(
     uint64_t gnssEnergyConsumedFromFirstBoot
 )> GnssEnergyConsumedCallback;
 
-typedef void (*removeClientCompleteCallback)(LocationAPI* client);
+typedef void (*powerStateCallback)(bool on);
 
 class GnssAdapter : public LocAdapterBase {
 
     /* ==== Engine Hub ===================================================================== */
     EngineHubProxyBase* mEngHubProxy;
 
-    /* ==== CLIENT ========================================================================= */
-    typedef std::map<LocationAPI*, LocationCallbacks> ClientDataMap;
-    ClientDataMap mClientData;
-
     /* ==== TRACKING ======================================================================= */
-    TrackingOptionsMap mTrackingSessions;
+    TrackingOptionsMap mTimeBasedTrackingSessions;
+    LocationSessionMap mDistanceBasedTrackingSessions;
     LocPosMode mLocPositionMode;
     GnssSvUsedInPosition mGnssSvIdUsedInPosition;
     bool mGnssSvIdUsedInPosAvail;
@@ -162,6 +163,12 @@ class GnssAdapter : public LocAdapterBase {
     AgpsCbInfo mAgpsCbInfo;
     void initAgps(const AgpsCbInfo& cbInfo);
 
+    /* ==== NFW =========================================================================== */
+    NfwStatusCb mNfwCb;
+    inline void initNfw(const NfwCbInfo& cbInfo) {
+        mNfwCb = (NfwStatusCb)cbInfo.visibilityControlCb;
+    }
+
     /* ==== ODCPI ========================================================================== */
     OdcpiRequestCallback mOdcpiRequestCb;
     bool mOdcpiRequestActive;
@@ -175,12 +182,16 @@ class GnssAdapter : public LocAdapterBase {
     std::string mMoServerUrl;
     XtraSystemStatusObserver mXtraObserver;
     LocationSystemInfo mLocSystemInfo;
+    std::vector<GnssSvIdSource> mBlacklistedSvIds;
 
     /* === Misc ===================================================================== */
     BlockCPIInfo mBlockCPIInfo;
+    bool mPowerOn;
+    uint32_t mAllowFlpNetworkFixes;
 
     /* === Misc callback from QMI LOC API ============================================== */
     GnssEnergyConsumedCallback mGnssEnergyConsumedCb;
+    powerStateCallback mPowerStateCb;
 
     /*==== CONVERSION ===================================================================*/
     static void convertOptions(LocPosMode& out, const TrackingOptions& trackingOptions);
@@ -193,6 +204,13 @@ class GnssAdapter : public LocAdapterBase {
     /* ======== UTILITIES ================================================================== */
     inline void initOdcpi(const OdcpiRequestCallback& callback);
     inline void injectOdcpi(const Location& location);
+    static bool isFlpClient(LocationCallbacks& locationCallbacks);
+
+protected:
+
+    /* ==== CLIENT ========================================================================= */
+    virtual void updateClientsEventMask();
+    virtual void stopClientSessions(LocationAPI* client);
 
 public:
 
@@ -207,21 +225,7 @@ public:
 
     /* ==== CLIENT ========================================================================= */
     /* ======== COMMANDS ====(Called from Client Thread)==================================== */
-    void addClientCommand(LocationAPI* client, const LocationCallbacks& callbacks);
-    void removeClientCommand(LocationAPI* client,
-                             removeClientCompleteCallback rmClientCb);
-    void requestCapabilitiesCommand(LocationAPI* client);
-    /* ======== UTILITIES ================================================================== */
-    void saveClient(LocationAPI* client, const LocationCallbacks& callbacks);
-    void eraseClient(LocationAPI* client);
-    void notifyClientOfCachedLocationSystemInfo(LocationAPI* client,
-                                                const LocationCallbacks& callbacks);
-    void updateClientsEventMask();
-    void stopClientSessions(LocationAPI* client);
-    LocationCallbacks getClientCallbacks(LocationAPI* client);
-    LocationCapabilitiesMask getCapabilities();
-    void broadcastCapabilities(LocationCapabilitiesMask);
-    void setSuplHostServer(const char* server, int port, LocServerType type);
+    virtual void addClientCommand(LocationAPI* client, const LocationCallbacks& callbacks);
 
     /* ==== TRACKING ======================================================================= */
     /* ======== COMMANDS ====(Called from Client Thread)==================================== */
@@ -230,11 +234,12 @@ public:
     void updateTrackingOptionsCommand(
             LocationAPI* client, uint32_t id, TrackingOptions& trackingOptions);
     void stopTrackingCommand(LocationAPI* client, uint32_t id);
-    virtual void setPositionModeCommand(LocPosMode& locPosMode);
     /* ======== RESPONSES ================================================================== */
     void reportResponse(LocationAPI* client, LocationError err, uint32_t sessionId);
     /* ======== UTILITIES ================================================================== */
     bool hasTrackingCallback(LocationAPI* client);
+    bool isTimeBasedTrackingSession(LocationAPI* client, uint32_t sessionId);
+    bool isDistanceBasedTrackingSession(LocationAPI* client, uint32_t sessionId);
     bool hasMeasurementsCallback(LocationAPI* client);
     bool isTrackingSession(LocationAPI* client, uint32_t sessionId);
     void saveTrackingSession(LocationAPI* client, uint32_t sessionId,
@@ -244,16 +249,16 @@ public:
     bool setLocPositionMode(const LocPosMode& mode);
     LocPosMode& getLocPositionMode() { return mLocPositionMode; }
 
-    bool startTrackingMultiplex(LocationAPI* client, uint32_t sessionId,
-                                const TrackingOptions& trackingOptions);
-    void startTracking(LocationAPI* client, uint32_t sessionId,
-                       const TrackingOptions& trackingOptions);
-    bool stopTrackingMultiplex(LocationAPI* client, uint32_t id);
+    bool startTimeBasedTrackingMultiplex(LocationAPI* client, uint32_t sessionId,
+                                         const TrackingOptions& trackingOptions);
+    void startTimeBasedTracking(LocationAPI* client, uint32_t sessionId,
+            const TrackingOptions& trackingOptions);
+    bool stopTimeBasedTrackingMultiplex(LocationAPI* client, uint32_t id);
     void stopTracking(LocationAPI* client, uint32_t id);
     bool updateTrackingMultiplex(LocationAPI* client, uint32_t id,
-                                 const TrackingOptions& trackingOptions);
+            const TrackingOptions& trackingOptions);
     void updateTracking(LocationAPI* client, uint32_t sessionId,
-        const TrackingOptions& updatedOptions, const TrackingOptions& oldOptions);
+            const TrackingOptions& updatedOptions, const TrackingOptions& oldOptions);
 
     /* ==== NI ============================================================================= */
     /* ======== COMMANDS ====(Called from Client Thread)==================================== */
@@ -278,6 +283,9 @@ public:
     uint32_t gnssDeleteAidingDataCommand(GnssAidingData& data);
     void deleteAidingData(const GnssAidingData &data, uint32_t sessionId);
     void gnssUpdateXtraThrottleCommand(const bool enabled);
+    std::vector<LocationError> gnssUpdateConfig(const std::string& oldServerUrl,
+            const std::string& oldMoServerUrl, const GnssConfig& gnssConfigRequested,
+            const GnssConfig& gnssConfigNeedEngineUpdate, size_t count = 0);
 
     /* ==== GNSS SV TYPE CONFIG ============================================================ */
     /* ==== COMMANDS ====(Called from Client Thread)======================================== */
@@ -304,11 +312,13 @@ public:
     /* ======== COMMANDS ====(Called from Client Thread)==================================== */
     void initDefaultAgpsCommand();
     void initAgpsCommand(const AgpsCbInfo& cbInfo);
+    void initNfwCommand(const NfwCbInfo& cbInfo);
     void dataConnOpenCommand(AGpsExtType agpsType,
             const char* apnName, int apnLen, AGpsBearerType bearerType);
     void dataConnClosedCommand(AGpsExtType agpsType);
     void dataConnFailedCommand(AGpsExtType agpsType);
     void getGnssEnergyConsumedCommand(GnssEnergyConsumedCallback energyConsumedCb);
+    void nfwControlCommand(bool enable);
 
     /* ========= ODCPI ===================================================================== */
     /* ======== COMMANDS ====(Called from Client Thread)==================================== */
@@ -321,9 +331,11 @@ public:
     LocationControlCallbacks& getControlCallbacks() { return mControlCallbacks; }
     void setControlCallbacks(const LocationControlCallbacks& controlCallbacks)
     { mControlCallbacks = controlCallbacks; }
+    void setAfwControlId(uint32_t id) { mPowerVoteId = id; }
+    uint32_t getAfwControlId() { return mPowerVoteId; }
     void setPowerVoteId(uint32_t id) { mPowerVoteId = id; }
     uint32_t getPowerVoteId() { return mPowerVoteId; }
-    virtual bool isInSession() { return !mTrackingSessions.empty(); }
+    virtual bool isInSession() { return !mTimeBasedTrackingSessions.empty(); }
     void initDefaultAgps();
     bool initEngHubProxy();
     void odcpiTimerExpireEvent();
@@ -356,10 +368,15 @@ public:
     virtual bool releaseATL(int connHandle);
     virtual bool requestOdcpiEvent(OdcpiRequestInfo& request);
     virtual bool reportDeleteAidingDataEvent(GnssAidingData& aidingData);
+    virtual bool reportKlobucharIonoModelEvent(GnssKlobucharIonoModel& ionoModel);
+    virtual bool reportGnssAdditionalSystemInfoEvent(
+            GnssAdditionalSystemInfo& additionalSystemInfo);
+    virtual void reportNfwNotificationEvent(GnssNfwNotification& notification);
 
     /* ======== UTILITIES ================================================================= */
-    bool needReport(const UlpLocation& ulpLocation,
+    bool needReportForGnssClient(const UlpLocation& ulpLocation,
             enum loc_sess_status status, LocPosTechMask techMask);
+    bool needReportForFlpClient(enum loc_sess_status status, LocPosTechMask techMask);
     void reportPosition(const UlpLocation &ulpLocation,
                         const GpsLocationExtended &locationExtended,
                         enum loc_sess_status status,
@@ -375,6 +392,11 @@ public:
     void invokeGnssEnergyConsumedCallback(uint64_t energyConsumedSinceFirstBoot);
     void saveGnssEnergyConsumedCallback(GnssEnergyConsumedCallback energyConsumedCb);
     void reportLocationSystemInfo(const LocationSystemInfo & locationSystemInfo);
+    inline void reportNfwNotification(const GnssNfwNotification& notification) {
+        if (NULL != mNfwCb) {
+            mNfwCb(notification);
+        }
+    }
 
     /*======== GNSSDEBUG ================================================================*/
     bool getDebugReport(GnssDebugReport& report);
@@ -389,8 +411,6 @@ public:
     std::string& getMoServerUrl(void) { return mMoServerUrl; }
 
     /*==== CONVERSION ===================================================================*/
-    static uint32_t convertGpsLock(const GnssConfigGpsLock gpsLock);
-    static GnssConfigGpsLock convertGpsLock(const uint32_t gpsLock);
     static uint32_t convertSuplVersion(const GnssConfigSuplVersion suplVersion);
     static uint32_t convertLppProfile(const GnssConfigLppProfile lppProfile);
     static uint32_t convertEP4ES(const GnssConfigEmergencyPdnForEmergencySupl);
@@ -414,6 +434,19 @@ public:
     void injectTimeCommand(int64_t time, int64_t timeReference, int32_t uncertainty);
     void blockCPICommand(double latitude, double longitude, float accuracy,
                          int blockDurationMsec, double latLonDiffThreshold);
+
+    /* ==== MISCELLANEOUS ================================================================== */
+    /* ======== COMMANDS ====(Called from Client Thread)==================================== */
+    void getPowerStateChangesCommand(void* powerStateCb);
+    /* ======== UTILITIES ================================================================== */
+    void reportPowerStateIfChanged();
+    void savePowerStateCallback(powerStateCallback powerStateCb){ mPowerStateCb = powerStateCb; }
+    bool getPowerState() { return mPowerOn; }
+    void setAllowFlpNetworkFixes(uint32_t allow) { mAllowFlpNetworkFixes = allow; }
+    uint32_t getAllowFlpNetworkFixes() { return mAllowFlpNetworkFixes; }
+    void setSuplHostServer(const char* server, int port, LocServerType type);
+    void notifyClientOfCachedLocationSystemInfo(LocationAPI* client,
+                                                const LocationCallbacks& callbacks);
 };
 
 #endif //GNSS_ADAPTER_H

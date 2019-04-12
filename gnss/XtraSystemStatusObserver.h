@@ -1,4 +1,4 @@
-/* Copyright (c) 2017, The Linux Foundation. All rights reserved.
+/* Copyright (c) 2017-2019, The Linux Foundation. All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without
  * modification, are permitted provided that the following conditions are
@@ -46,7 +46,7 @@ public :
     inline XtraSystemStatusObserver(IOsObserver* sysStatObs, const MsgTask* msgTask):
             mSystemStatusObsrvr(sysStatObs), mMsgTask(msgTask),
             mGpsLock(-1), mConnections(~0), mXtraThrottle(true), mReqStatusReceived(false),
-            mDelayLocTimer(*this), mIsConnectivityStatusKnown (false) {
+            mIsConnectivityStatusKnown (false), mDelayLocTimer(*this) {
         subscribe(true);
         startListeningNonBlocking(LOC_IPC_HAL);
         mDelayLocTimer.start(100 /*.1 sec*/,  false);
@@ -60,8 +60,9 @@ public :
     inline virtual void getName(string& name);
     virtual void notify(const list<IDataItemCore*>& dlist);
 
-    bool updateLockStatus(uint32_t lock);
-    bool updateConnections(uint64_t allConnections);
+    bool updateLockStatus(GnssConfigGpsLock lock);
+    bool updateConnections(uint64_t allConnections,
+            uint64_t wifiNetworkHandle, uint64_t mobileNetworkHandle);
     bool updateTac(const string& tac);
     bool updateMccMnc(const string& mccmnc);
     bool updateXtraThrottle(const bool enabled);
@@ -74,8 +75,10 @@ protected:
 private:
     IOsObserver*    mSystemStatusObsrvr;
     const MsgTask* mMsgTask;
-    int32_t mGpsLock;
+    GnssConfigGpsLock mGpsLock;
     uint64_t mConnections;
+    uint64_t mWifiNetworkHandle;
+    uint64_t mMobileNetworkHandle;
     string mTac;
     string mMccmnc;
     bool mXtraThrottle;

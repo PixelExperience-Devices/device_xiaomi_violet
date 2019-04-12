@@ -38,6 +38,8 @@ namespace gnss {
 namespace V2_0 {
 namespace implementation {
 
+using ::android::hardware::gnss::visibility_control::V1_0::implementation::GnssVisibilityControl;
+
 static std::string getVersionString() {
     static std::string version;
     if (!version.empty())
@@ -239,6 +241,10 @@ Return<bool> Gnss::updateConfiguration(GnssConfig& gnssConfig) {
             mPendingConfig.flags |= GNSS_CONFIG_FLAGS_BLACKLISTED_SV_IDS_BIT;
             mPendingConfig.blacklistedSvIds = gnssConfig.blacklistedSvIds;
         }
+        if (gnssConfig.flags & GNSS_CONFIG_FLAGS_EMERGENCY_EXTENSION_SECONDS_BIT) {
+            mPendingConfig.flags |= GNSS_CONFIG_FLAGS_EMERGENCY_EXTENSION_SECONDS_BIT;
+            mPendingConfig.emergencyExtensionSeconds = gnssConfig.emergencyExtensionSeconds;
+        }
     }
     return true;
 }
@@ -407,9 +413,13 @@ Return<bool> Gnss::setPositionMode_1_1(V1_0::IGnss::GnssPositionMode mode,
 
 Return<sp<V1_1::IGnssMeasurement>> Gnss::getExtensionGnssMeasurement_1_1() {
     ENTRY_LOG_CALLFLOW();
+#ifdef GNSS_HIDL_LEGACY_MEASURMENTS
+    return nullptr;
+#else
     if (mGnssMeasurement == nullptr)
         mGnssMeasurement = new GnssMeasurement();
     return mGnssMeasurement;
+#endif
 }
 
 Return<sp<V1_1::IGnssConfiguration>> Gnss::getExtensionGnssConfiguration_1_1() {
@@ -470,9 +480,13 @@ Return<sp<V2_0::IGnssConfiguration>> Gnss::getExtensionGnssConfiguration_2_0() {
 }
 Return<sp<V2_0::IGnssMeasurement>> Gnss::getExtensionGnssMeasurement_2_0() {
     ENTRY_LOG_CALLFLOW();
+#ifdef GNSS_HIDL_LEGACY_MEASURMENTS
+    return nullptr;
+#else
     if (mGnssMeasurement == nullptr)
         mGnssMeasurement = new GnssMeasurement();
     return mGnssMeasurement;
+#endif
 }
 Return<sp<::android::hardware::gnss::measurement_corrections::V1_0::IMeasurementCorrections>>
         Gnss::getExtensionMeasurementCorrections() {
@@ -483,8 +497,9 @@ Return<sp<::android::hardware::gnss::measurement_corrections::V1_0::IMeasurement
 }
 Return<sp<::android::hardware::gnss::visibility_control::V1_0::IGnssVisibilityControl>>
         Gnss::getExtensionVisibilityControl() {
+    ENTRY_LOG_CALLFLOW();
     if (mVisibCtrl == nullptr) {
-        mVisibCtrl = new GnssVisibilityControl();
+        mVisibCtrl = new GnssVisibilityControl(this);
     }
     return mVisibCtrl;
 }
@@ -494,6 +509,16 @@ Return<bool> Gnss::injectBestLocation_2_0(
     ENTRY_LOG_CALLFLOW();
     /* TBD */
     return false;
+}
+
+Return<sp<V2_0::IGnssBatching>> Gnss::getExtensionGnssBatching_2_0()  {
+    ENTRY_LOG_CALLFLOW();
+    return nullptr;
+}
+
+Return<sp<V2_0::IGnssDebug>> Gnss::getExtensionGnssDebug_2_0() {
+    ENTRY_LOG_CALLFLOW();
+    return nullptr;
 }
 
 IGnss* HIDL_FETCH_IGnss(const char* hal) {
