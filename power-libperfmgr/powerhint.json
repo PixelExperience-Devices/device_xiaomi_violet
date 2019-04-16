@@ -176,7 +176,7 @@
       "Path": "/sys/class/devfreq/soc:qcom,cpu-cpu-llcc-bw/bw_hwmon/io_percent",
       "Values": [
         "80",
-        "34"
+        "50"
       ],
       "ResetOnInit": true
     },
