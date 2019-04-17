@@ -107,6 +107,9 @@ PRODUCT_PACKAGES += \
     libvulkan \
     vendor.display.config@1.0
 
+PRODUCT_PACKAGES += \
+    android.hardware.configstore@1.1-service
+
 # Fingerprint feature
 PRODUCT_PACKAGES += \
     android.hardware.biometrics.fingerprint@2.1-service.xiaomi_sm6150
