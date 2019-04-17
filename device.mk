@@ -287,7 +287,7 @@ PRODUCT_PACKAGES += \
 
 # Trust HAL
 PRODUCT_PACKAGES += \
-    mokee.trust@1.0-service
+    vendor.mokee.trust@1.0-service
 
 # VNDK-SP
 PRODUCT_PACKAGES += \
