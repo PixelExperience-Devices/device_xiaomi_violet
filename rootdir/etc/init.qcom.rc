@@ -1,4 +1,3 @@
 on init
     mount none /sbin/chargeonlymode /sbin/charger bind
-    mount none /system/etc/audio_policy_configuration.xml /vendor/etc/audio/audio_policy_configuration.xml bind
     mount none /system/overlay/BluetoothResCommon.apk /vendor/overlay/BluetoothResCommon.apk bind
