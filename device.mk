@@ -108,7 +108,8 @@ PRODUCT_PACKAGES += \
     vendor.display.config@1.0
 
 PRODUCT_PACKAGES += \
-    android.hardware.configstore@1.1-service
+    android.hardware.configstore@1.1-service \
+    android.hardware.broadcastradio@1.0-impl
 
 # Fingerprint feature
 PRODUCT_PACKAGES += \
