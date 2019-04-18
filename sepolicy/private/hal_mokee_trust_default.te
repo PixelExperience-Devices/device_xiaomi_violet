@@ -1,8 +1,0 @@
-type shal_mokee_trust_default, coredomain, domain;
-hal_server_domain(shal_mokee_trust_default, hal_mokee_trust)
-
-type shal_mokee_trust_default_exec, exec_type, file_type;
-init_daemon_domain(shal_mokee_trust_default)
-
-# Talk to the binder device node
-allow shal_mokee_trust_default binder_device:chr_file rw_file_perms;
