@@ -952,6 +952,41 @@ vendor/lib64/libmlipay.so
 vendor/lib64/vendor.xiaomi.hardware.mlipay@1.0.so
 vendor/lib64/vendor.xiaomi.hardware.mlipay@1.1.so
 
+# Modules
+vendor/lib/modules/audio_adsp_loader.ko:vendor/lib/modulesp/audio_adsp_loader.ko
+vendor/lib/modules/audio_apr.ko:vendor/lib/modulesp/audio_apr.ko
+vendor/lib/modules/audio_bolero_cdc.ko:vendor/lib/modulesp/audio_bolero_cdc.ko
+vendor/lib/modules/audio_hdmi.ko:vendor/lib/modulesp/audio_hdmi.ko
+vendor/lib/modules/audio_machine_talos.ko:vendor/lib/modulesp/audio_machine_talos.ko
+vendor/lib/modules/audio_mbhc.ko:vendor/lib/modulesp/audio_mbhc.ko
+vendor/lib/modules/audio_native.ko:vendor/lib/modulesp/audio_native.ko
+vendor/lib/modules/audio_pinctrl_lpi.ko:vendor/lib/modulesp/audio_pinctrl_lpi.ko
+vendor/lib/modules/audio_pinctrl_wcd.ko:vendor/lib/modulesp/audio_pinctrl_wcd.ko
+vendor/lib/modules/audio_platform.ko:vendor/lib/modulesp/audio_platform.ko
+vendor/lib/modules/audio_q6.ko:vendor/lib/modulesp/audio_q6.ko
+vendor/lib/modules/audio_q6_notifier.ko:vendor/lib/modulesp/audio_q6_notifier.ko
+vendor/lib/modules/audio_q6_pdr.ko:vendor/lib/modulesp/audio_q6_pdr.ko
+vendor/lib/modules/audio_rx_macro.ko:vendor/lib/modulesp/audio_rx_macro.ko
+vendor/lib/modules/audio_snd_event.ko:vendor/lib/modulesp/audio_snd_event.ko
+vendor/lib/modules/audio_stub.ko:vendor/lib/modulesp/audio_stub.ko
+vendor/lib/modules/audio_swr.ko:vendor/lib/modulesp/audio_swr.ko
+vendor/lib/modules/audio_swr_ctrl.ko:vendor/lib/modulesp/audio_swr_ctrl.ko
+vendor/lib/modules/audio_tx_macro.ko:vendor/lib/modulesp/audio_tx_macro.ko
+vendor/lib/modules/audio_usf.ko:vendor/lib/modulesp/audio_usf.ko
+vendor/lib/modules/audio_va_macro.ko:vendor/lib/modulesp/audio_va_macro.ko
+vendor/lib/modules/audio_wcd_core.ko:vendor/lib/modulesp/audio_wcd_core.ko
+vendor/lib/modules/audio_wcd_spi.ko:vendor/lib/modulesp/audio_wcd_spi.ko
+vendor/lib/modules/audio_wcd934x.ko:vendor/lib/modulesp/audio_wcd934x.ko
+vendor/lib/modules/audio_wcd937x.ko:vendor/lib/modulesp/audio_wcd937x.ko
+vendor/lib/modules/audio_wcd937x_slave.ko:vendor/lib/modulesp/audio_wcd937x_slave.ko
+vendor/lib/modules/audio_wcd9xxx.ko:vendor/lib/modulesp/audio_wcd9xxx.ko
+vendor/lib/modules/audio_wglink.ko:vendor/lib/modulesp/audio_wglink.ko
+vendor/lib/modules/audio_wsa_macro.ko:vendor/lib/modulesp/audio_wsa_macro.ko
+vendor/lib/modules/audio_wsa881x.ko:vendor/lib/modulesp/audio_wsa881x.ko
+vendor/lib/modules/modules.alias:vendor/lib/modulesp/modules.alias
+vendor/lib/modules/modules.dep:vendor/lib/modulesp/modules.dep
+vendor/lib/modules/qca_cld3_wlan.ko:vendor/lib/modulesp/qca_cld3_wlan.ko
+
 # Neural-networks
 vendor/bin/hw/android.hardware.neuralnetworks@1.1-service-qti
 vendor/etc/init/android.hardware.neuralnetworks@1.1-service-qti.rc

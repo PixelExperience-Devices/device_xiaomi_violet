@@ -55,4 +55,6 @@ patchelf --remove-needed vendor.xiaomi.hardware.mtdservice@1.0.so "$BLOB_ROOT"/v
 patchelf --remove-needed vendor.xiaomi.hardware.mtdservice@1.0.so "$BLOB_ROOT"/vendor/lib64/libmlipay.so
 patchelf --remove-needed vendor.xiaomi.hardware.mtdservice@1.0.so "$BLOB_ROOT"/vendor/lib64/libmlipay@1.1.so
 
+sed -i "s|/vendor/lib/modules|/vendor/lib/modulesp|g" "$BLOB_ROOT"/vendor/lib/modulesp/modules.dep 
+
 "$MY_DIR"/setup-makefiles.sh
