@@ -170,6 +170,8 @@ vendor/lib/camera/com.qti.sensormodule.ofilm_s5k5e8.bin
 vendor/lib/camera/com.qti.sensormodule.pmd_irs1645.bin
 vendor/lib/camera/com.qti.sensormodule.semco_imx258.bin
 vendor/lib/camera/com.qti.sensormodule.semco_imx386.bin
+vendor/lib/camera/com.qti.sensormodule.semco_imx586.bin
+vendor/lib/camera/com.qti.sensormodule.semco_s5k5e8.bin
 vendor/lib/camera/com.qti.sensormodule.sony_imx334.bin
 vendor/lib/camera/com.qti.sensormodule.sunny_imx519.bin
 vendor/lib/camera/com.qti.sensormodule.sunny_imx576.bin
@@ -203,6 +205,8 @@ vendor/lib/camera/com.qti.tuned.semco_imx258.bin
 vendor/lib/camera/com.qti.tuned.semco_imx258_mono.bin
 vendor/lib/camera/com.qti.tuned.semco_imx386.bin
 vendor/lib/camera/com.qti.tuned.semco_imx481.bin
+vendor/lib/camera/com.qti.tuned.semco_imx586.bin
+vendor/lib/camera/com.qti.tuned.semco_s5k5e8.bin
 vendor/lib/camera/com.qti.tuned.sunny_imx519.bin
 vendor/lib/camera/com.qti.tuned.sunny_imx586.bin
 vendor/lib/camera/com.qti.tuned.sunny_imx586_cn.bin
@@ -224,6 +228,7 @@ vendor/lib/libcamxfdengine.so
 vendor/lib/libcamxstatscore.so
 vendor/lib/libcamxswprocessalgo.so
 vendor/lib/libcamxtintlessalgo.so
+vendor/lib/libmialgo_fs.so
 vendor/lib/libmmcamera_faceproc.so
 vendor/lib/libmmcamera_faceproc2.so
 vendor/lib/libscveBlobDescriptor.so
@@ -307,6 +312,8 @@ vendor/lib64/camera/com.qti.sensor.imx576.so
 vendor/lib64/camera/com.qti.sensor.imx577.so
 vendor/lib64/camera/com.qti.sensor.imx586.so
 vendor/lib64/camera/com.qti.sensor.imx586_factory.so
+vendor/lib64/camera/com.qti.sensor.imx586_semco.so
+vendor/lib64/camera/com.qti.sensor.imx586_semco_factory.so
 vendor/lib64/camera/com.qti.sensor.imx586_sunny.so
 vendor/lib64/camera/com.qti.sensor.imx586_sunny_factory.so
 vendor/lib64/camera/com.qti.sensor.max7366_6dof.so
@@ -333,6 +340,8 @@ vendor/lib64/camera/com.qti.sensormodule.ofilm_s5k5e8.bin
 vendor/lib64/camera/com.qti.sensormodule.pmd_irs1645.bin
 vendor/lib64/camera/com.qti.sensormodule.semco_imx258.bin
 vendor/lib64/camera/com.qti.sensormodule.semco_imx386.bin
+vendor/lib64/camera/com.qti.sensormodule.semco_imx586.bin
+vendor/lib64/camera/com.qti.sensormodule.semco_s5k5e8.bin
 vendor/lib64/camera/com.qti.sensormodule.sony_imx334.bin
 vendor/lib64/camera/com.qti.sensormodule.sunny_imx519.bin
 vendor/lib64/camera/com.qti.sensormodule.sunny_imx576.bin
@@ -355,6 +364,7 @@ vendor/lib64/camera/com.qti.sensor.ov8856.so
 vendor/lib64/camera/com.qti.sensor.s5k2l7.so
 vendor/lib64/camera/com.qti.sensor.s5k2x5sp.so
 vendor/lib64/camera/com.qti.sensor.s5k5e8.so
+vendor/lib64/camera/com.qti.sensor.s5k5e8_semco.so
 vendor/lib64/camera/com.qti.sensor.s5k5e8_sunny.so
 vendor/lib64/camera/com.qti.sensor.s5k5e9yu05.so
 vendor/lib64/camera/com.qti.tuned.altek_imx577.bin
@@ -378,6 +388,8 @@ vendor/lib64/camera/com.qti.tuned.semco_imx258.bin
 vendor/lib64/camera/com.qti.tuned.semco_imx258_mono.bin
 vendor/lib64/camera/com.qti.tuned.semco_imx386.bin
 vendor/lib64/camera/com.qti.tuned.semco_imx481.bin
+vendor/lib64/camera/com.qti.tuned.semco_imx586.bin
+vendor/lib64/camera/com.qti.tuned.semco_s5k5e8.bin
 vendor/lib64/camera/com.qti.tuned.sunny_imx519.bin
 vendor/lib64/camera/com.qti.tuned.sunny_imx586.bin
 vendor/lib64/camera/com.qti.tuned.sunny_imx586_cn.bin
@@ -410,6 +422,7 @@ vendor/lib64/libc++_shared.so
 vendor/lib64/libFaceGrade.so
 vendor/lib64/libMegviiFacepp-0.5.2.so
 vendor/lib64/libmegface.so
+vendor/lib64/libmialgo_fs.so
 vendor/lib64/libmibokeh_660.so
 vendor/lib64/libmmcamera_faceproc.so
 vendor/lib64/libmmcamera_faceproc2.so
@@ -1276,6 +1289,7 @@ vendor/etc/thermal-engine-map.conf
 vendor/etc/thermal-engine-normal.conf
 vendor/etc/thermal-engine-pubgmhd.conf
 vendor/etc/thermal-engine-sgame.conf
+vendor/etc/thermal-engine-studio.conf
 vendor/bin/thermal-engine
 vendor/lib/libthermalfeature.so
 -vendor/lib/libthermalclient.so
