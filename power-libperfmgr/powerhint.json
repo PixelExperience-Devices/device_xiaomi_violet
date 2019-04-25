@@ -211,15 +211,6 @@
       "ResetOnInit": true
     },
     {
-      "Name": "L3LittleClusterMinFreq",
-      "Path": "/sys/class/devfreq/soc:qcom,cpu0-cpu-l3-lat/min_freq",
-      "Values": [
-        "1440000000",
-        "300000000"
-      ],
-      "ResetOnInit": true
-    },
-    {
       "Name": "L3BigClusterMinFreq",
       "Path": "/sys/class/devfreq/soc:qcom,cpu4-cpu-l3-lat/min_freq",
       "Values": [
@@ -449,12 +440,6 @@
       "Node": "LLCCBWMinFreq",
       "Duration": 5000,
       "Value": "6881"
-    },
-    {
-      "PowerHint": "LAUNCH",
-      "Node": "L3LittleClusterMinFreq",
-      "Duration": 5000,
-      "Value": "1440000000"
     },
     {
       "PowerHint": "LAUNCH",
