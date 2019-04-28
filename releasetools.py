@@ -46,7 +46,11 @@ def AddBasebandAssertion(info, input_zip):
 
 def AddImage(info, basename, dest):
   name = basename
-  data = info.input_zip.read("IMAGES/" + basename)
+  path = "IMAGES/" + name
+  if path not in info.input_zip.namelist():
+    return
+
+  data = info.input_zip.read(path)
   common.ZipWriteStr(info.output_zip, name, data)
   info.script.Print("Patching {} image unconditionally...".format(dest.split('/')[-1]))
   info.script.AppendExtra('package_extract_file("%s", "%s");' % (name, dest))
