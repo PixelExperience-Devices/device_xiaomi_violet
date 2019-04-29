@@ -1,3 +1,6 @@
+# Camera read only property
+type camera_ro_prop, property_type;
+
 # Fingerprint
 type vendor_fp_prop, property_type;
 
