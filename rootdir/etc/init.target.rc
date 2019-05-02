@@ -122,6 +122,8 @@ on boot
     write /dev/cpuset/background/cpus 0-1
     write /dev/cpuset/system-background/cpus 0-2
 
+    chown system system /proc/tp_gesture
+    chmod 0660 /proc/tp_gesture
 
 # access permissions for FPC service
    chown system system /sys/bus/platform/devices/soc/soc:fpc1020/irq
