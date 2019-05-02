@@ -2769,13 +2769,14 @@ case "$target" in
                     if [ ${ddr_type:4:2} == $ddr_type4 ]; then
                         # LPDDR4
                         echo "2288 3440 4173 5195 5859 7759 10322 11863 13763" > $cpubw/bw_hwmon/mbps_zones
+                        echo 85 > $cpubw/bw_hwmon/io_percent
                     fi
                     if [ ${ddr_type:4:2} == $ddr_type3 ]; then
                         # LPDDR3
-                        echo "1525 2288 3440 4173 5195 5859 7102" > $cpubw/bw_hwmon/mbps_zones
+                        echo "1525 3440 5195 5859 7102" > $cpubw/bw_hwmon/mbps_zones
+                        echo 34 > $cpubw/bw_hwmon/io_percent
                     fi
                     echo 4 > $cpubw/bw_hwmon/sample_ms
-                    echo 85 > $cpubw/bw_hwmon/io_percent
                     echo 90 > $cpubw/bw_hwmon/decay_rate
                     echo 190 > $cpubw/bw_hwmon/bw_step
                     echo 20 > $cpubw/bw_hwmon/hist_memory
