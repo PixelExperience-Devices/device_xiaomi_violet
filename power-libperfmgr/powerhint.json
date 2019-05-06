@@ -184,9 +184,8 @@
       "Name": "CPUBWMinFreq",
       "Path": "/sys/class/devfreq/soc:qcom,cpu-cpu-llcc-bw/min_freq",
       "Values": [
-        "11856",
-        "8132",
-        "6149",
+        "14236",
+        "9155",
         "2288"
       ],
       "ResetOnInit": true
@@ -343,7 +342,7 @@
       "PowerHint": "INTERACTION",
       "Node": "CPUBWMinFreq",
       "Duration": 0,
-      "Value": "8132"
+      "Value": "9155"
     },
     {
       "PowerHint": "INTERACTION",
@@ -415,7 +414,7 @@
       "PowerHint": "LAUNCH",
       "Node": "CPUBWMinFreq",
       "Duration": 5000,
-      "Value": "11856"
+      "Value": "14236"
     },
     {
       "PowerHint": "LAUNCH",
