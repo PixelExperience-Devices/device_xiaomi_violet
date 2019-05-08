@@ -41,6 +41,9 @@ ro.lmk.kill_heaviest_task=true
 ro.lmk.kill_timeout_ms=100
 ro.lmk.use_minfree_levels=true
 
+# Media
+media.stagefright.thumbnail.prefer_hw_codecs=true
+
 # Netflix
 ro.netflix.bsp_rev=Q6150-17263-1
 
