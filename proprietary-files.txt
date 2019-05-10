@@ -400,6 +400,10 @@ vendor/lib64/camera/com.qti.tuned.sunny_s5k5e8.bin
 vendor/lib64/camera/com.qti.tuned.sunny_s5k2x5sp.bin
 vendor/lib64/camera/com.qti.tuned.sunny_s5k5e9yu05.bin
 vendor/lib64/camera/com.qti.tuned.truly_ov8856.bin
+vendor/lib64/camera/fdconfigpreview.bin
+vendor/lib64/camera/fdconfigpreviewlite.bin
+vendor/lib64/camera/fdconfigvideo.bin
+vendor/lib64/camera/fdconfigvideolite.bin
 vendor/lib64/hw/camera.qcom.so
 vendor/lib64/hw/com.qti.chi.override.so
 vendor/lib64/hw/com.qti.chi.override_moorea.so
