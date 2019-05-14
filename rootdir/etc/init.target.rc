@@ -65,6 +65,7 @@ on fs
     chmod 0771 /mnt/vendor/persist
     restorecon_recursive /mnt/vendor/persist
     mkdir /mnt/vendor/persist/data 0700 system system
+    mkdir /mnt/vendor/persist/stability 0755 system system
 
     chmod 0664 /sys/class/thermal/thermal_message/sconfig
     chown system system /sys/class/thermal/thermal_message/sconfig
@@ -109,6 +110,15 @@ on post-fs-data
 
     mkdir /data/vendor/thermal 0771 root system
     mkdir /data/vendor/thermal/config 0771 root system
+
+    chmod 0666 /dev/migt
+    restorecon /dev/migt
+    chmod 0777 /sys/module/migt/parameters/migt_freq
+    restorecon /sys/module/migt/parameters/migt_freq
+    chmod 0777 /sys/module/migt/parameters/migt_ms
+    restorecon /sys/module/migt/parameters/migt_ms
+    chmod 0777 /sys/module/migt/parameters/migt_thresh
+    restorecon /sys/module/migt/parameters/migt_thresh
 
 # For cpusets initialize for Silver Only first and then Silver + Gold
 # Silver Only configuration cannot work with 0-7
@@ -576,17 +586,24 @@ on property:persist.sys.display_cabc=1
 on property:persist.sys.display_cabc=2
     write /sys/devices/platform/soc/soc:qcom,dsi-display/dsi_display_cabc 2
 
-on property:persist.sys.display_cabc_movie=1
-    write /sys/devices/platform/soc/soc:qcom,dsi-display/dsi_display_cabc_movie 1
+on property:persist.sys.display_cabc=3
+    write /sys/devices/platform/soc/soc:qcom,dsi-display/dsi_display_cabc 3
 
-on property:persist.sys.display_cabc_movie=2
-    write /sys/devices/platform/soc/soc:qcom,dsi-display/dsi_display_cabc_movie 2
+on property:persist.sys.display_cabc=0
+    write /sys/devices/platform/soc/soc:qcom,dsi-display/dsi_display_cabc 0
 
-on property:persist.sys.display_cabc_still=1
-    write /sys/devices/platform/soc/soc:qcom,dsi-display/dsi_display_cabc_still 1
+on property:sys.display_hbm=1
+    write /sys/devices/platform/soc/soc:qcom,dsi-display/dsi_display_hbm 1
 
-on property:persist.sys.display_cabc_still=2
-    write /sys/devices/platform/soc/soc:qcom,dsi-display/dsi_display_cabc_still 2
+on property:sys.display_hbm=2
+    write /sys/devices/platform/soc/soc:qcom,dsi-display/dsi_display_hbm 2
+
+on property:sys.display_hbm=3
+    write /sys/devices/platform/soc/soc:qcom,dsi-display/dsi_display_hbm 3
+
+on property:sys.display_hbm=0
+    write /sys/devices/platform/soc/soc:qcom,dsi-display/dsi_display_hbm 0
+
 #lcd feature nodes test end
 
 #add thermal tactics
@@ -596,6 +613,14 @@ on  property:vendor.camera.boost.en=0
     write /sys/class/thermal/thermal_message/sconfig 12
 on  property:vendor.camera.boost.en=2
     write /sys/class/thermal/thermal_message/sconfig 33
+
+#add 1080p@120fps video
+on  property:vendor.camera.hfr.en=1
+    write /dev/stune/foreground/schedtune.prefer_idle 1
+	write /sys/devices/system/cpu/cpu0/core_ctl/min_cpus 6
+on  property:vendor.camera.hfr.en=0
+    write /dev/stune/foreground/schedtune.prefer_idle 0
+	write /sys/devices/system/cpu/cpu0/core_ctl/min_cpus 4
 
 #service sviswitch add begin
 service sviswitch /vendor/bin/sviswitch

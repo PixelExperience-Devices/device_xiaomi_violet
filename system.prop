@@ -156,7 +156,7 @@ vendor.camera.aux.packagelist=org.codeaurora.snapcam,com.android.camera,com.long
 # network location provider is not functional
 ro.location.osnlp.package=com.google.android.gms
 ro.location.osnlp.region.package=
-vendor.perf.dolphin.enable=true
+vendor.perf.dolphin.enable=false
 
 #lct.ydt 20180911 add for voWIFI
 #iwaln vowifi corresponding
