@@ -109,7 +109,3 @@ on boot
 # If UART is on, enable console_suspend on boot_complete to save power
 on property:sys.boot_completed=1 && property:init.svc.console=running
     write /sys/module/printk/parameters/console_suspend Y
-
-# STOPSHIP hack TODO(117878479) Disable kgsl ifpc, to idle active.
-on boot
-    write /sys/class/kgsl/kgsl-3d0/ifpc 0
