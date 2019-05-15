@@ -78,6 +78,8 @@ const loc_param_s_type ContextBase::mGps_conf_table[] =
   {"CONSTRAINED_TIME_UNCERTAINTY_THRESHOLD",     &mGps_conf.CONSTRAINED_TIME_UNCERTAINTY_THRESHOLD,    NULL, 'f'},
   {"CONSTRAINED_TIME_UNCERTAINTY_ENERGY_BUDGET", &mGps_conf.CONSTRAINED_TIME_UNCERTAINTY_ENERGY_BUDGET, NULL, 'n'},
   {"POSITION_ASSISTED_CLOCK_ESTIMATOR_ENABLED",  &mGps_conf.POSITION_ASSISTED_CLOCK_ESTIMATOR_ENABLED, NULL, 'n'},
+  {"PROXY_APP_PACKAGE_NAME",         &mGps_conf.PROXY_APP_PACKAGE_NAME,         NULL, 's' },
+  {"CP_MTLR_ES",                     &mGps_conf.CP_MTLR_ES,                     NULL, 'n' },
 };
 
 const loc_param_s_type ContextBase::mSap_conf_table[] =
@@ -112,6 +114,7 @@ void ContextBase::readConfig()
         mGps_conf.SUPL_VER = 0x10000;
         mGps_conf.SUPL_MODE = 0x1;
         mGps_conf.SUPL_ES = 0;
+        mGps_conf.CP_MTLR_ES = 0;
         mGps_conf.SUPL_HOST[0] = 0;
         mGps_conf.SUPL_PORT = 0;
         mGps_conf.CAPABILITIES = 0x7;

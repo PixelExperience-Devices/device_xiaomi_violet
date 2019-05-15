@@ -41,12 +41,13 @@
 #define GNSS_MEASUREMENTS_MAX  (128)
 #define GNSS_UTC_TIME_OFFSET   (3657)
 
-#define GNSS_BUGREPORT_GPS_MIN  (1)
-#define GNSS_BUGREPORT_SBAS_MIN (120)
-#define GNSS_BUGREPORT_GLO_MIN  (1)
-#define GNSS_BUGREPORT_QZSS_MIN (193)
-#define GNSS_BUGREPORT_BDS_MIN  (1)
-#define GNSS_BUGREPORT_GAL_MIN  (1)
+#define GNSS_BUGREPORT_GPS_MIN    (1)
+#define GNSS_BUGREPORT_SBAS_MIN   (120)
+#define GNSS_BUGREPORT_GLO_MIN    (1)
+#define GNSS_BUGREPORT_QZSS_MIN   (193)
+#define GNSS_BUGREPORT_BDS_MIN    (1)
+#define GNSS_BUGREPORT_GAL_MIN    (1)
+#define GNSS_BUGREPORT_NAVIC_MIN  (1)
 
 #define GNSS_MAX_NAME_LENGTH    (8)
 
@@ -153,7 +154,9 @@ typedef enum {
     GNSS_LOCATION_INFO_HOR_ACCURACY_ELIP_SEMI_MAJOR_BIT = (1<<5), // valid elipsode semi major
     GNSS_LOCATION_INFO_HOR_ACCURACY_ELIP_SEMI_MINOR_BIT = (1<<6), // valid elipsode semi minor
     GNSS_LOCATION_INFO_HOR_ACCURACY_ELIP_AZIMUTH_BIT    = (1<<7), // valid accuracy elipsode azimuth
-    GNSS_LOCATION_INFO_GNSS_SV_USED_DATA_BIT            = (1<<8), // valid gnss sv used in pos data
+    GNSS_LOCATION_INFO_GNSS_SV_USED_DATA_BIT            = (1<<8), // valid svUsedInPosition,
+                                                                  //       numOfMeasReceived
+                                                                  //       and measUsageInfo
     GNSS_LOCATION_INFO_NAV_SOLUTION_MASK_BIT            = (1<<9), // valid navSolutionMask
     GNSS_LOCATION_INFO_POS_TECH_MASK_BIT                = (1<<10),// valid LocPosTechMask
     GNSS_LOCATION_INFO_SV_SOURCE_INFO_BIT               = (1<<11),// valid LocSvInfoSource
@@ -168,7 +171,9 @@ typedef enum {
     GNSS_LOCATION_INFO_EAST_VEL_UNC_BIT                 = (1<<20),// valid East Velocity Uncertainty
     GNSS_LOCATION_INFO_UP_VEL_UNC_BIT                   = (1<<21),// valid Up Velocity Uncertainty
     GNSS_LOCATION_INFO_LEAP_SECONDS_BIT                 = (1<<22),// valid leap seconds
-    GNSS_LOCATION_INFO_TIME_UNC_BIT                     = (1<<23) // valid time uncertainty
+    GNSS_LOCATION_INFO_TIME_UNC_BIT                     = (1<<23),// valid time uncertainty
+    GNSS_LOCATION_INFO_NUM_SV_USED_IN_POSITION_BIT      = (1<<24) // number of SV used in position
+
 } GnssLocationInfoFlagBits;
 
 typedef enum {
@@ -218,6 +223,8 @@ typedef enum {
     LOCATION_CAPABILITIES_CONSTELLATION_ENABLEMENT_BIT      = (1<<10),
     // support agpm
     LOCATION_CAPABILITIES_AGPM_BIT                          = (1<<11),
+    // support location privacy
+    LOCATION_CAPABILITIES_PRIVACY_BIT                       = (1<<12),
 } LocationCapabilitiesBits;
 
 typedef enum {
@@ -345,6 +352,7 @@ typedef enum {
     GNSS_SV_TYPE_QZSS,
     GNSS_SV_TYPE_BEIDOU,
     GNSS_SV_TYPE_GALILEO,
+    GNSS_SV_TYPE_NAVIC,
 } GnssSvType;
 
 typedef enum {
@@ -514,6 +522,7 @@ typedef enum {
     GNSS_AIDING_DATA_SV_TYPE_QZSS_BIT     = (1<<2),
     GNSS_AIDING_DATA_SV_TYPE_BEIDOU_BIT   = (1<<3),
     GNSS_AIDING_DATA_SV_TYPE_GALILEO_BIT  = (1<<4),
+    GNSS_AIDING_DATA_SV_TYPE_NAVIC_BIT    = (1<<5),
 } GnssAidingDataSvTypeBits;
 
 /* Gnss constellation type mask */
@@ -524,13 +533,15 @@ typedef enum {
     GNSS_CONSTELLATION_TYPE_QZSS_BIT     = (1<<2),
     GNSS_CONSTELLATION_TYPE_BEIDOU_BIT   = (1<<3),
     GNSS_CONSTELLATION_TYPE_GALILEO_BIT  = (1<<4),
-    GNSS_CONSTELLATION_TYPE_SBAS_BIT     = (1<<5)
+    GNSS_CONSTELLATION_TYPE_SBAS_BIT     = (1<<5),
+    GNSS_CONSTELLATION_TYPE_NAVIC_BIT    = (1<<6)
 } GnssConstellationTypeBits;
 
 #define GNSS_CONSTELLATION_TYPE_MASK_ALL\
         (GNSS_CONSTELLATION_TYPE_GPS_BIT     | GNSS_CONSTELLATION_TYPE_GLONASS_BIT |\
          GNSS_CONSTELLATION_TYPE_QZSS_BIT    | GNSS_CONSTELLATION_TYPE_BEIDOU_BIT  |\
-         GNSS_CONSTELLATION_TYPE_GALILEO_BIT | GNSS_CONSTELLATION_TYPE_SBAS_BIT)
+         GNSS_CONSTELLATION_TYPE_GALILEO_BIT | GNSS_CONSTELLATION_TYPE_SBAS_BIT    |\
+         GNSS_CONSTELLATION_TYPE_NAVIC_BIT)
 
 /** GNSS Signal Type and RF Band */
 typedef uint32_t GnssSignalTypeMask;
@@ -570,7 +581,9 @@ typedef enum {
     /** QZSS L5 RF Band */
     GNSS_SIGNAL_QZSS_L5             = (1<<16),
     /** SBAS L1 RF Band */
-    GNSS_SIGNAL_SBAS_L1             = (1<<17)
+    GNSS_SIGNAL_SBAS_L1             = (1<<17),
+    /** NAVIC L5 RF Band */
+    GNSS_SIGNAL_NAVIC_L5            = (1<<18)
 } GnssSignalTypeBits;
 
 #define GNSS_SIGNAL_TYPE_MASK_ALL\
@@ -579,7 +592,8 @@ typedef enum {
      GNSS_SIGNAL_GALILEO_E1 | GNSS_SIGNAL_GALILEO_E5A | GNSS_SIGNAL_GALILEO_E5B |\
      GNSS_SIGNAL_BEIDOU_B1I | GNSS_SIGNAL_BEIDOU_B1C | GNSS_SIGNAL_BEIDOU_B2I|\
      GNSS_SIGNAL_BEIDOU_B2AI | GNSS_SIGNAL_QZSS_L1CA | GNSS_SIGNAL_QZSS_L1S |\
-     GNSS_SIGNAL_QZSS_L2| GNSS_SIGNAL_QZSS_L5 | GNSS_SIGNAL_SBAS_L1)
+     GNSS_SIGNAL_QZSS_L2| GNSS_SIGNAL_QZSS_L5 | GNSS_SIGNAL_SBAS_L1 |\
+     GNSS_SIGNAL_NAVIC_L5)
 
 typedef enum
 {
@@ -595,7 +609,9 @@ typedef enum
     /**< GLONASS satellite. */
     GNSS_LOC_SV_SYSTEM_BDS                    = 5,
     /**< BDS satellite. */
-    GNSS_LOC_SV_SYSTEM_QZSS                   = 6
+    GNSS_LOC_SV_SYSTEM_QZSS                   = 6,
+    /**< QZSS satellite. */
+    GNSS_LOC_SV_SYSTEM_NAVIC                  = 7
     /**< QZSS satellite. */
 } Gnss_LocSvSystemEnumType;
 
@@ -618,7 +634,8 @@ typedef enum {
     GNSS_LOC_SIGNAL_TYPE_QZSS_L2C_L = 15,       /**<  QZSS L2C_L RF Band  */
     GNSS_LOC_SIGNAL_TYPE_QZSS_L5_Q = 16,        /**<  QZSS L5_Q RF Band  */
     GNSS_LOC_SIGNAL_TYPE_SBAS_L1_CA = 17,       /**<  SBAS L1_CA RF Band  */
-    GNSS_LOC_MAX_NUMBER_OF_SIGNAL_TYPES = 18    /**<  Maximum number of signal types */
+    GNSS_LOC_SIGNAL_TYPE_NAVIC_L5 = 18,         /**<  NAVIC L5 RF Band */
+    GNSS_LOC_MAX_NUMBER_OF_SIGNAL_TYPES = 19    /**<  Maximum number of signal types */
 } Gnss_LocSignalEnumType;
 
 typedef uint64_t GnssDataMask;
@@ -795,6 +812,7 @@ typedef struct {
     uint64_t galSvUsedIdsMask;
     uint64_t bdsSvUsedIdsMask;
     uint64_t qzssSvUsedIdsMask;
+    uint64_t navicSvUsedIdsMask;
 } GnssLocationSvUsedInPosition;
 
 typedef struct {
@@ -808,7 +826,8 @@ typedef struct {
      For SBAS:     120 to 151
      For QZSS-L1CA:193 to 197
      For BDS:      201 to 237
-     For GAL:      301 to 336 */
+     For GAL:      301 to 336
+     For NAVIC:    401 to 414  */
     uint16_t gnssSvId;
 } GnssMeasUsageInfo;
 
@@ -903,7 +922,8 @@ typedef union {
     GnssSystemTimeStructType galSystemTime;
     GnssSystemTimeStructType bdsSystemTime;
     GnssSystemTimeStructType qzssSystemTime;
-    GnssGloTimeStructType gloSystemTime;
+    GnssGloTimeStructType    gloSystemTime;
+    GnssSystemTimeStructType navicSystemTime;
 } SystemTimeStructUnion;
     /** Time applicability of PVT report */
 typedef struct {
@@ -940,6 +960,7 @@ typedef struct {
     float northVelocityStdDeviation;
     float eastVelocityStdDeviation;
     float upVelocityStdDeviation;
+    uint16_t numSvUsedInPosition;
     GnssLocationSvUsedInPosition svUsedInPosition;// Gnss sv used in position data
     GnssLocationNavSolutionMask navSolutionMask;  // Nav solution mask to indicate sbas corrections
     GnssLocationPosTechMask posTechMask;          // Position technology used in computing this fix
