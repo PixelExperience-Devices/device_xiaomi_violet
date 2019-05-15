@@ -633,6 +633,7 @@ vendor/lib64/com.qualcomm.qti.dpm.api@1.0.so
 
 # DRM
 vendor/bin/qseecomd
+vendor/lib/libdrmfs.so
 vendor/lib/libQSEEComAPI.so
 vendor/lib/libsdedrm.so
 vendor/lib64/libdrmfs.so
@@ -656,10 +657,14 @@ vendor/etc/init/android.hardware.drm@1.1-service.widevine.rc
 vendor/lib/libbase64.so
 vendor/lib/libcpion.so
 vendor/lib/libcppf.so
+vendor/lib/libhdcpsrm.so|310c4575a088f97a7394a2215db08b3aae42c258
+vendor/lib/liboemcrypto.so|4ab12d80aa9526d9ef34e515cdf3cd1ab14a927a
 vendor/lib/libwvhidl.so
 vendor/lib64/libbase64.so
 vendor/lib64/libcpion.so
 vendor/lib64/libcppf.so
+vendor/lib64/libhdcpsrm.so|d4f8219b15bb15d3e5837f6d7bdc92cf3c11f8cf
+vendor/lib64/liboemcrypto.so|5b77983a5c9163258006a6ed0f2c83d993e029a4
 
 # Display postprocessing
 lib64/vendor.display.color@1.0.so
