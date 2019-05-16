@@ -1,3 +1,7 @@
 # Files in rootfs
 /bt_firmware(/.*)?       u:object_r:bt_firmware_file:s0
 /firmware(/.*)?          u:object_r:firmware_file:s0
+
+# Fingerprint related nodes
+/sys/devices/platform/soc/soc:fpc1020/proximity_state       u:object_r:sysfs_fp_proximity:s0
+/sys/devices/platform/soc/soc:goodix_fp/proximity_state       u:object_r:sysfs_fp_proximity:s0

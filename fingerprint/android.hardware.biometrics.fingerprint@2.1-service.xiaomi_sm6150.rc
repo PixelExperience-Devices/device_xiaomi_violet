@@ -7,6 +7,10 @@ service vendor.fps_hal /vendor/bin/hw/android.hardware.biometrics.fingerprint@2.
     group system input
     writepid /dev/cpuset/system-background/tasks
 
+on boot
+    chown system system /sys/devices/platform/soc/soc:fpc1020/proximity_state
+    chown system system /sys/devices/platform/soc/soc:goodix_fp/proximity_state
+
 on post-fs-data
 	mkdir /data/vendor/goodix 0770 system system
 	mkdir /data/vendor/fpc 0770 system system
