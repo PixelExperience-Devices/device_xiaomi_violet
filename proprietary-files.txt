@@ -734,7 +734,6 @@ vendor/bin/xtra-daemon
 vendor/etc/cacert_location.pem
 vendor/etc/xtra_root_cert.pem
 vendor/etc/init/vendor.qti.gnss@2.1-service.rc
-vendor/lib64/hw/android.hardware.gnss@1.1-impl-qti.so
 vendor/lib64/hw/vendor.qti.gnss@2.1-impl.so
 vendor/lib64/libaoa.so
 vendor/lib64/libdataitems.so
@@ -743,17 +742,12 @@ vendor/lib64/libgarden.so
 vendor/lib64/libgarden_haltests_e2e.so
 vendor/lib64/libgdtap.so
 vendor/lib64/libgeofence.so
-vendor/lib64/libgnss.so
-vendor/lib64/libgnsspps.so
-vendor/lib64/libgps.utils.so
 vendor/lib64/libizat_client_api.so
 vendor/lib64/libizat_core.so
 vendor/lib64/liblbs_core.so
 vendor/lib64/libloc_api_v02.so
-vendor/lib64/liblocation_api.so
 vendor/lib64/liblocationservice_glue.so
 vendor/lib64/liblocationservice.so
-vendor/lib64/libloc_core.so
 vendor/lib64/liblowi_client.so
 vendor/lib64/liblowi_wifihal.so
 vendor/lib64/libqdma.so
