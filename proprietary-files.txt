@@ -1295,10 +1295,6 @@ vendor/lib64/libthermalfeature.so
 -vendor/lib64/libthermalclient.so
 vendor/lib64/libcdsprpc.so
 
-# Thermal - hardware
-vendor/lib/hw/thermal.sm6150.so
-vendor/lib64/hw/thermal.sm6150.so
-
 # Time services
 -vendor/app/TimeService/TimeService.apk
 vendor/bin/time_daemon
