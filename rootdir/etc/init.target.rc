@@ -141,7 +141,7 @@ on boot
    chmod 0666 /dev/qseecom
 
 #Load WLAN driver
-    insmod /vendor/lib/modulesp/qca_cld3_wlan.ko
+    insmod /vendor/lib/modules/wlan.ko
 
     chown wifi wifi /sys/module/wlan/parameters/fwpath
 
