@@ -27,10 +27,9 @@ public class ThermalProfiles {
     public static final int MODE_PUBG = 13;
     public static final int MODE_HIGH = 1;
     public static final int MODE_CAMERA = 12;
-    public static final int MODE_STUDIO = 33;
 
     public static final int supportedProfiles[] = {MODE_DEFAULT, MODE_GAME,
-        MODE_PUBG, MODE_HIGH, MODE_CAMERA, MODE_STUDIO};
+        MODE_PUBG, MODE_HIGH, MODE_CAMERA};
 
     private static final String TAG = "ThermalController:ThermalProfiles";
 
@@ -41,14 +40,6 @@ public class ThermalProfiles {
             case "com.futuremark.dmandroid.application":
             case "com.primatelabs.geekbench":
                 return MODE_HIGH;
-            case "com.google.android.youtube":
-            case "com.netflix.mediaclient":
-            case "com.google.android.videos":
-            case "com.amazon.avod.thirdpartyclient":
-            case "com.google.android.apps.youtube.kids":
-            case "org.lineageos.jelly":
-            case "com.android.chrome":
-                return MODE_STUDIO;
             case "com.tencent.ig":
             case "com.dts.freefireth":
             case "com.epicgames.fortnite":
