@@ -396,8 +396,6 @@ Return<void> Power::powerHintAsync_1_2(PowerHint_1_2 hint, int32_t data) {
         case PowerHint_1_2::CAMERA_LAUNCH:
             if (data > 0) {
                 mHintManager->DoHint("CAMERA_LAUNCH");
-                // boosts 2.5s for launching
-                mHintManager->DoHint("LAUNCH", std::chrono::milliseconds(2500));
             } else if (data == 0) {
                 mHintManager->EndHint("CAMERA_LAUNCH");
             } else {
