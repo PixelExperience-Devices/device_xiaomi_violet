@@ -102,9 +102,12 @@ on property:sys.boot_completed=1
     # Enable PowerHAL hint processing
     setprop vendor.powerhal.init 1
 
-# Disable console_suspend to get better logging for kernel crashes
 on boot
+    # Disable console_suspend to get better logging for kernel crashes
     write /sys/module/printk/parameters/console_suspend N
+
+    # Enable suspend to idle mode to reduce latency during suspend/resume
+    write /sys/power/mem_sleep "s2idle"
 
 # If UART is on, enable console_suspend on boot_complete to save power
 on property:sys.boot_completed=1 && property:init.svc.console=running
