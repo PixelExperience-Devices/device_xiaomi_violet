@@ -517,7 +517,7 @@ service smcinvoked /system/bin/smcinvoked
 #    group drmrpc gps net_raw
 
 # smart pa cal  add by dzy 
-service smart-pa-cal /system/vendor/bin/FactoryApp -t 25 -c /vendor/etc/tas2563_aacspk.ftcfg -v
+service smart-pa-cal /system/vendor/bin/FactoryApp -r -t 25
     user root
     group root audio
     disabled
@@ -529,7 +529,7 @@ on property:odm.pa-cal=0
 on property:odm.pa-cal=1
     start smart-pa-cal
 
-service smart-pa-test /system/vendor/bin/FactoryApp -t 25 -c /vendor/etc/tas2563_aacspk.ftcfg -v -m
+service smart-pa-test /system/vendor/bin/FactoryApp -f
     user root
     group root audio
     disabled
