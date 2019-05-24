@@ -65,9 +65,6 @@ vendor/lib/libhdmipassthru.so|9791b492788d3f678e1dfe63b53d091ef7f6459b
 vendor/lib/libqtigef.so|23f654b3be361b422d7d36375460d1dac232b350
 vendor/lib/libsurround_3mic_proc.so|9020976e90c2b78bcff5cbd6a913b1de8a436000
 vendor/lib/soundfx/libasphere.so|b16636ad3a2d5b4bf575012ed212b8e51269c7d5
-vendor/lib/soundfx/libqcbassboost.so|b4d85132b8657c8df2baec4cdce856284fdfb4dc
-vendor/lib/soundfx/libqcreverb.so|40161cbfb46c28d485c9a1dffb4806834e66bb16
-vendor/lib/soundfx/libqcvirt.so|2c19f79ea730dbb6c1e5b3ad299a40fafadabd3e
 vendor/lib64/libacdb-fts.so|7ab3d376308ff949358819a4b65cd0bf095f2da1
 vendor/lib64/libacdbloader.so|a423320848031e21091bc9e163b2ce9dc27f2d90
 vendor/lib64/libacdbrtac.so|381ea26c98ce1bd00d0d3f0e30b8ced802703a1e
@@ -78,9 +75,6 @@ vendor/lib64/libaudioparsers.so|ab849844b97f005231b1b3150e61cd4b67cbdb11
 vendor/lib64/libhdmipassthru.so|882fe62187d282a4c0fe257cd54a7090fe809824
 vendor/lib64/libqtigef.so|886285c40cd45a4f17d3b2e5e909da5a4fd9bf6c
 vendor/lib64/soundfx/libasphere.so|bd48aa3d7cf27bf3b12ce29f429b719383e104fc
-vendor/lib64/soundfx/libqcbassboost.so|6df111d89e7604127381224cd48802fa7adc4c9d
-vendor/lib64/soundfx/libqcreverb.so|13f05971cbc124fc93087b64b9c1f59798e8af4a
-vendor/lib64/soundfx/libqcvirt.so|64b8d53a43ed154a065e9ebc2299d71cede7e2a9
 
 # Audio - hardware
 vendor/lib/hw/audio.primary.sm6150.so
