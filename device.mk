@@ -254,10 +254,6 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     netutils-wrapper-1.0
 
-# PocketMode
-PRODUCT_PACKAGES += \
-    XiaomiPocketMode
-
 # Power
 PRODUCT_PACKAGES += \
     android.hardware.power@1.1-service-qti
