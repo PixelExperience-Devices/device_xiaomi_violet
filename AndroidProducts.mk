@@ -5,4 +5,4 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/mk_violet.mk
+    $(LOCAL_DIR)/lineage_violet.mk

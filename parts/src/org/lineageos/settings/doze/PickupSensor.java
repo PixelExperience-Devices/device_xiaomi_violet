@@ -15,7 +15,7 @@
  * limitations under the License.
  */
 
-package org.mokee.settings.doze;
+package org.lineageos.settings.doze;
 
 import android.content.Context;
 import android.hardware.Sensor;
@@ -78,9 +78,9 @@ public class PickupSensor implements SensorEventListener {
     protected void enable() {
         if (DEBUG) Log.d(TAG, "Enabling");
         submit(() -> {
+            mEntryTimestamp = SystemClock.elapsedRealtime();
             mSensorManager.registerListener(this, mSensor,
                     SensorManager.SENSOR_DELAY_NORMAL);
-            mEntryTimestamp = SystemClock.elapsedRealtime();
         });
     }
 

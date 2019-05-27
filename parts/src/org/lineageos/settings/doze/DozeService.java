@@ -1,6 +1,6 @@
 /*
- * Copyright (C) 2016 The CyanogenMod Project
- *               2017 The LineageOS Project
+ * Copyright (C) 2015 The CyanogenMod Project
+ *               2017-2018 The LineageOS Project
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -15,7 +15,7 @@
  * limitations under the License.
  */
 
-package org.mokee.pocketmode;
+package org.lineageos.settings.doze;
 
 import android.app.Service;
 import android.content.BroadcastReceiver;
@@ -25,20 +25,22 @@ import android.content.IntentFilter;
 import android.os.IBinder;
 import android.util.Log;
 
-public class PocketModeService extends Service {
-    private static final String TAG = "PocketModeService";
+public class DozeService extends Service {
+    private static final String TAG = "DozeService";
     private static final boolean DEBUG = false;
 
     private ProximitySensor mProximitySensor;
+    private PickupSensor mPickupSensor;
 
     @Override
     public void onCreate() {
         if (DEBUG) Log.d(TAG, "Creating service");
         mProximitySensor = new ProximitySensor(this);
+        mPickupSensor = new PickupSensor(this);
 
         IntentFilter screenStateFilter = new IntentFilter();
+        screenStateFilter.addAction(Intent.ACTION_SCREEN_ON);
         screenStateFilter.addAction(Intent.ACTION_SCREEN_OFF);
-        screenStateFilter.addAction(Intent.ACTION_USER_PRESENT);
         registerReceiver(mScreenStateReceiver, screenStateFilter);
     }
 
@@ -51,9 +53,10 @@ public class PocketModeService extends Service {
     @Override
     public void onDestroy() {
         if (DEBUG) Log.d(TAG, "Destroying service");
+        super.onDestroy();
         this.unregisterReceiver(mScreenStateReceiver);
         mProximitySensor.disable();
-        super.onDestroy();
+        mPickupSensor.disable();
     }
 
     @Override
@@ -61,21 +64,33 @@ public class PocketModeService extends Service {
         return null;
     }
 
-    private void onDeviceUnlocked() {
-        if (DEBUG) Log.d(TAG, "Device unlocked");
-        mProximitySensor.disable();
+    private void onDisplayOn() {
+        if (DEBUG) Log.d(TAG, "Display on");
+        if (DozeUtils.isPickUpEnabled(this)) {
+            mPickupSensor.disable();
+        }
+        if (DozeUtils.isHandwaveGestureEnabled(this) ||
+                DozeUtils.isPocketGestureEnabled(this)) {
+            mProximitySensor.disable();
+        }
     }
 
     private void onDisplayOff() {
         if (DEBUG) Log.d(TAG, "Display off");
-        mProximitySensor.enable();
+        if (DozeUtils.isPickUpEnabled(this)) {
+            mPickupSensor.enable();
+        }
+        if (DozeUtils.isHandwaveGestureEnabled(this) ||
+                DozeUtils.isPocketGestureEnabled(this)) {
+            mProximitySensor.enable();
+        }
     }
 
     private BroadcastReceiver mScreenStateReceiver = new BroadcastReceiver() {
         @Override
         public void onReceive(Context context, Intent intent) {
-            if (intent.getAction().equals(Intent.ACTION_USER_PRESENT)) {
-                onDeviceUnlocked();
+            if (intent.getAction().equals(Intent.ACTION_SCREEN_ON)) {
+                onDisplayOn();
             } else if (intent.getAction().equals(Intent.ACTION_SCREEN_OFF)) {
                 onDisplayOff();
             }

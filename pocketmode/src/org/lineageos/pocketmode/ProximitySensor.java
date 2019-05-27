@@ -15,7 +15,7 @@
  * limitations under the License.
  */
 
-package org.mokee.pocketmode;
+package org.lineageos.pocketmode;
 
 import android.content.Context;
 import android.hardware.Sensor;
@@ -24,7 +24,7 @@ import android.hardware.SensorEventListener;
 import android.hardware.SensorManager;
 import android.util.Log;
 
-import org.mokee.internal.util.FileUtils;
+import org.lineageos.internal.util.FileUtils;
 
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;

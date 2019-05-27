@@ -1,6 +1,6 @@
 /*
- * Copyright (C) 2015 The CyanogenMod Project
- *               2017-2018 The LineageOS Project
+ * Copyright (C) 2016 The CyanogenMod Project
+ *               2017 The LineageOS Project
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -15,26 +15,22 @@
  * limitations under the License.
  */
 
-package org.mokee.settings;
+package org.lineageos.pocketmode;
 
 import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
+import android.os.UserHandle;
 import android.util.Log;
-
-import org.mokee.settings.doze.DozeUtils;
 
 public class BootCompletedReceiver extends BroadcastReceiver {
 
-    private static final boolean DEBUG = false;
-    private static final String TAG = "XiaomiParts";
+    private static final String TAG = "XiaomiPocketMode";
 
     @Override
-    public void onReceive(final Context context, Intent intent) {
-        if (DozeUtils.isDozeEnabled(context) && DozeUtils.sensorsEnabled(context)) {
-            if (DEBUG) Log.d(TAG, "Starting Doze service");
-            DozeUtils.startService(context);
-        }
+    public void onReceive(Context context, Intent intent) {
+        Log.d(TAG, "Starting");
+        context.startServiceAsUser(new Intent(context, PocketModeService.class),
+                UserHandle.CURRENT);
     }
-
 }

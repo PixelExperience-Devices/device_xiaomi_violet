@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2016 The CyanogenMod Project
+ * Copyright (C) 2015-2016 The CyanogenMod Project
  *               2017 The LineageOS Project
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
@@ -15,22 +15,20 @@
  * limitations under the License.
  */
 
-package org.mokee.pocketmode;
+package org.lineageos.settings.doze;
 
-import android.content.BroadcastReceiver;
-import android.content.Context;
-import android.content.Intent;
-import android.os.UserHandle;
-import android.util.Log;
+import android.os.Bundle;
+import android.preference.PreferenceActivity;
 
-public class BootCompletedReceiver extends BroadcastReceiver {
+public class DozeSettingsActivity extends PreferenceActivity {
 
-    private static final String TAG = "XiaomiPocketMode";
+    private static final String TAG_DOZE = "doze";
 
     @Override
-    public void onReceive(Context context, Intent intent) {
-        Log.d(TAG, "Starting");
-        context.startServiceAsUser(new Intent(context, PocketModeService.class),
-                UserHandle.CURRENT);
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+
+        getFragmentManager().beginTransaction().replace(android.R.id.content,
+                new DozeSettingsFragment(), TAG_DOZE).commit();
     }
 }
