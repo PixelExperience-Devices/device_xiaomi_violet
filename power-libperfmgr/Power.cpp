@@ -60,10 +60,11 @@ constexpr char kPowerHalRenderingProp[] = "vendor.powerhal.rendering";
 constexpr char kPowerHalConfigPath[] = "/vendor/etc/powerhint.json";
 
 static const std::map<enum CameraStreamingMode, std::string> kCamStreamingHint = {
-    {CAMERA_STREAMING_OFF, "CAMERA_STREAMING_OFF"},
-    {CAMERA_STREAMING, "CAMERA_STREAMING"},
-    {CAMERA_STREAMING_1080P, "CAMERA_STREAMING_1080P"},
-    {CAMERA_STREAMING_4K, "CAMERA_STREAMING_4K"}};
+        {CAMERA_STREAMING_OFF, "CAMERA_STREAMING_OFF"},
+        {CAMERA_STREAMING, "CAMERA_STREAMING"},
+        {CAMERA_STREAMING_1080P, "CAMERA_STREAMING_1080P"},
+        {CAMERA_STREAMING_4K, "CAMERA_STREAMING_4K"},
+        {CAMERA_STREAMING_SECURE, "CAMERA_STREAMING_SECURE"}};
 
 Power::Power() :
         mHintManager(nullptr),
@@ -95,6 +96,10 @@ Power::Power() :
                                 ALOGI("Initialize with CAMERA_STREAMING_4K on");
                                 mHintManager->DoHint("CAMERA_STREAMING_4K");
                                 mCameraStreamingMode = CAMERA_STREAMING_4K;
+                            } else if (state == "CAMERA_STREAMING_SECURE") {
+                                ALOGI("Initialize with CAMERA_STREAMING_SECURE on");
+                                mHintManager->DoHint("CAMERA_STREAMING_SECURE");
+                                mCameraStreamingMode = CAMERA_STREAMING_SECURE;
                             } else if (state ==  "SUSTAINED_PERFORMANCE") {
                                 ALOGI("Initialize with SUSTAINED_PERFORMANCE on");
                                 mHintManager->DoHint("SUSTAINED_PERFORMANCE");
@@ -408,8 +413,10 @@ Return<void> Power::powerHintAsync_1_2(PowerHint_1_2 hint, int32_t data) {
             if ((mCameraStreamingMode != CAMERA_STREAMING_OFF)) {
                 const auto modeValue = kCamStreamingHint.at(mCameraStreamingMode);
                 mHintManager->EndHint(modeValue);
-                // Boost 1s for tear down
-                mHintManager->DoHint("CAMERA_LAUNCH", std::chrono::seconds(1));
+                if ((mCameraStreamingMode != CAMERA_STREAMING_SECURE)) {
+                    // Boost 1s for tear down if not secure streaming use case
+                    mHintManager->DoHint("CAMERA_LAUNCH", std::chrono::seconds(1));
+                }
             }
 
             if (mode != CAMERA_STREAMING_OFF) {
