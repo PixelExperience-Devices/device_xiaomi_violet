@@ -242,6 +242,7 @@
       "Path": "vendor.powerhal.state",
       "Values": [
         "CAMERA_STREAMING",
+        "CAMERA_STREAMING_SECURE",
         "SUSTAINED_PERFORMANCE",
         ""
       ],
@@ -527,6 +528,42 @@
     },
     {
       "PowerHint": "CAMERA_STREAMING",
+      "Node": "LLCCBWSampleMs",
+      "Duration": 0,
+      "Value": "10"
+    },
+    {
+      "PowerHint": "CAMERA_STREAMING_SECURE",
+      "Node": "PowerHALMainState",
+      "Duration": 0,
+      "Value": "CAMERA_STREAMING_SECURE"
+    },
+    {
+      "PowerHint": "CAMERA_STREAMING_SECURE",
+      "Node": "CPUBigClusterMaxFreq",
+      "Duration": 0,
+      "Value": "2016000"
+    },
+    {
+      "PowerHint": "CAMERA_STREAMING_SECURE",
+      "Node": "CPUBigPlusClusterMaxFreq",
+      "Duration": 0,
+      "Value": "2016000"
+    },
+    {
+      "PowerHint": "CAMERA_STREAMING_SECURE",
+      "Node": "CPUBWSampleMs",
+      "Duration": 0,
+      "Value": "10"
+    },
+    {
+      "PowerHint": "CAMERA_STREAMING_SECURE",
+      "Node": "CPUBWIOPercent",
+      "Duration": 0,
+      "Value": "80"
+    },
+    {
+      "PowerHint": "CAMERA_STREAMING_SECURE",
       "Node": "LLCCBWSampleMs",
       "Duration": 0,
       "Value": "10"
