@@ -2000,10 +2000,8 @@ GnssAdapter::restartSessions()
     }
 
     // get the LocationOptions that has the smallest interval, which should be the active one
-    TrackingOptions smallestIntervalOptions; // size is zero until set for the first time
-    TrackingOptions highestPowerTrackingOptions;
-    memset(&smallestIntervalOptions, 0, sizeof(smallestIntervalOptions));
-    memset(&highestPowerTrackingOptions, 0, sizeof(highestPowerTrackingOptions));
+    TrackingOptions smallestIntervalOptions = {}; // size is zero until set for the first time
+    TrackingOptions highestPowerTrackingOptions = {};
     for (auto it = mTrackingSessions.begin(); it != mTrackingSessions.end(); ++it) {
         // size of zero means we havent set it yet
         if (0 == smallestIntervalOptions.size ||
@@ -3025,8 +3023,8 @@ GnssAdapter::reportPosition(const UlpLocation& ulpLocation,
         loc_nmea_generate_pos(ulpLocation, locationExtended, mLocSystemInfo,
                               generate_nmea, nmeaArraystr);
         stringstream ss;
-        for (auto itor = nmeaArraystr.begin(); itor != nmeaArraystr.end(); ++itor) {
-            ss << *itor;
+        for (auto sentence : nmeaArraystr) {
+            ss << sentence;
         }
         string s = ss.str();
         reportNmea(s.c_str(), s.length());
@@ -3121,8 +3119,8 @@ GnssAdapter::reportSv(GnssSvNotification& svNotify)
         std::vector<std::string> nmeaArraystr;
         loc_nmea_generate_sv(svNotify, nmeaArraystr);
         stringstream ss;
-        for (auto itor = nmeaArraystr.begin(); itor != nmeaArraystr.end(); ++itor) {
-            ss << *itor;
+        for (auto sentence : nmeaArraystr) {
+            ss << sentence;
         }
         string s = ss.str();
         reportNmea(s.c_str(), s.length());
@@ -3898,6 +3896,8 @@ void GnssAdapter::dataConnOpenCommand(
             LOC_LOGV("AgpsMsgAtlOpenSuccess");
             if (mApnName == nullptr) {
                 LOC_LOGE("%s] new allocation failed, fatal error.", __func__);
+                // Reporting the failure here
+                mAgpsManager->reportAtlClosed(mAgpsType);
                 return;
             }
             memcpy(mApnName, apnName, apnLen);
@@ -3914,9 +3914,16 @@ void GnssAdapter::dataConnOpenCommand(
             mAgpsManager->reportAtlOpenSuccess(mAgpsType, mApnName, mApnLen, mBearerType);
         }
     };
-
-    sendMsg( new AgpsMsgAtlOpenSuccess(
-            &mAgpsManager, agpsType, apnName, apnLen, bearerType));
+    // Added inital length checks for apnlen check to avoid security issues
+    // In case of failure reporting the same
+    if (NULL == apnName || apnLen <= 0 || apnLen > MAX_APN_LEN ||
+            (strlen(apnName) != (unsigned)apnLen)) {
+        LOC_LOGe("%s]: incorrect apnlen length or incorrect apnName", __func__);
+        mAgpsManager.reportAtlClosed(agpsType);
+    } else {
+        sendMsg( new AgpsMsgAtlOpenSuccess(
+                    &mAgpsManager, agpsType, apnName, apnLen, bearerType));
+    }
 }
 
 void GnssAdapter::dataConnClosedCommand(AGpsExtType agpsType){

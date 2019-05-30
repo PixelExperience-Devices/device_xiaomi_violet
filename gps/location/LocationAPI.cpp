@@ -34,8 +34,12 @@
 #include <log_util.h>
 #include <pthread.h>
 #include <map>
+#include <loc_misc_utils.h>
 
-typedef void* (getLocationInterface)();
+typedef const GnssInterface* (getGnssInterface)();
+typedef const FlpInterface* (getFlpInterface)();
+typedef const GeofenceInterface* (getGeofenceInterface)();
+
 
 typedef uint16_t LocationAdapterTypeMask;
 typedef enum {
@@ -73,6 +77,17 @@ static bool gGnssLoadFailed = false;
 static bool gFlpLoadFailed = false;
 static bool gGeofenceLoadFailed = false;
 
+template <typename T1, typename T2>
+static const T1* loadLocationInterface(const char* library, const char* name) {
+    void* libhandle = nullptr;
+    T2* getter = (T2*)dlGetSymFromLib(libhandle, library, name);
+    if (nullptr == getter) {
+        return (const T1*) getter;
+    }else {
+        return (*getter)();
+    }
+}
+
 static bool needsGnssTrackingInfo(LocationCallbacks& locationCallbacks)
 {
     return (locationCallbacks.gnssLocationInfoCb != nullptr ||
@@ -102,32 +117,6 @@ static bool isGeofenceClient(LocationCallbacks& locationCallbacks)
             locationCallbacks.geofenceStatusCb != nullptr);
 }
 
-static void* loadLocationInterface(const char* library, const char* name)
-{
-    LOC_LOGD("%s]: loading %s::%s ...", __func__, library, name);
-    if (NULL == library || NULL == name) {
-        return NULL;
-    }
-    getLocationInterface* getter = NULL;
-    const char *error = NULL;
-    dlerror();
-    void *handle = dlopen(library, RTLD_NOW);
-    if (NULL == handle || (error = dlerror()) != NULL)  {
-        LOC_LOGW("dlopen for %s failed, error = %s", library, error);
-    } else {
-        getter = (getLocationInterface*)dlsym(handle, name);
-        if ((error = dlerror()) != NULL)  {
-            LOC_LOGW("dlsym for %s::%s failed, error = %s", library, name, error);
-            getter = NULL;
-        }
-    }
-
-    if (NULL == getter) {
-        return (void*)getter;
-    } else {
-        return (*getter)();
-    }
-}
 
 void onRemoveClientCompleteCb (
     LocationAPI* client, LocationAdapterTypeMask adapterType)
@@ -186,7 +175,8 @@ LocationAPI::createInstance(LocationCallbacks& locationCallbacks)
     if (isGnssClient(locationCallbacks)) {
         if (NULL == gData.gnssInterface && !gGnssLoadFailed) {
             gData.gnssInterface =
-                (GnssInterface*)loadLocationInterface("libgnss.so", "getGnssInterface");
+                (GnssInterface*)loadLocationInterface<GnssInterface,
+                    getGnssInterface>("libgnss.so", "getGnssInterface");
             if (NULL == gData.gnssInterface) {
                 gGnssLoadFailed = true;
                 LOC_LOGW("%s:%d]: No gnss interface available", __func__, __LINE__);
@@ -206,7 +196,8 @@ LocationAPI::createInstance(LocationCallbacks& locationCallbacks)
     if (isFlpClient(locationCallbacks)) {
         if (NULL == gData.flpInterface && !gFlpLoadFailed) {
             gData.flpInterface =
-                (FlpInterface*)loadLocationInterface("libflp.so", "getFlpInterface");
+                (FlpInterface*)loadLocationInterface<FlpInterface,
+                   getFlpInterface>("libflp.so", "getFlpInterface");
             if (NULL == gData.flpInterface) {
                 gFlpLoadFailed = true;
                 LOC_LOGW("%s:%d]: No flp interface available", __func__, __LINE__);
@@ -226,7 +217,8 @@ LocationAPI::createInstance(LocationCallbacks& locationCallbacks)
     if (isGeofenceClient(locationCallbacks)) {
         if (NULL == gData.geofenceInterface && !gGeofenceLoadFailed) {
             gData.geofenceInterface =
-                (GeofenceInterface*)loadLocationInterface("libgeofence.so", "getGeofenceInterface");
+               (GeofenceInterface*)loadLocationInterface<GeofenceInterface,
+                getGeofenceInterface>("libgeofence.so", "getGeofenceInterface");
             if (NULL == gData.geofenceInterface) {
                 gGeofenceLoadFailed = true;
                 LOC_LOGW("%s:%d]: No geofence interface available", __func__, __LINE__);
@@ -337,7 +329,8 @@ LocationAPI::updateCallbacks(LocationCallbacks& locationCallbacks)
     if (isGnssClient(locationCallbacks)) {
         if (NULL == gData.gnssInterface && !gGnssLoadFailed) {
             gData.gnssInterface =
-                (GnssInterface*)loadLocationInterface("libgnss.so", "getGnssInterface");
+                (GnssInterface*)loadLocationInterface<GnssInterface,
+                    getGnssInterface>("libgnss.so", "getGnssInterface");
             if (NULL == gData.gnssInterface) {
                 gGnssLoadFailed = true;
                 LOC_LOGW("%s:%d]: No gnss interface available", __func__, __LINE__);
@@ -354,7 +347,8 @@ LocationAPI::updateCallbacks(LocationCallbacks& locationCallbacks)
     if (isFlpClient(locationCallbacks)) {
         if (NULL == gData.flpInterface && !gFlpLoadFailed) {
             gData.flpInterface =
-                (FlpInterface*)loadLocationInterface("libflp.so", "getFlpInterface");
+                (FlpInterface*)loadLocationInterface<FlpInterface,
+                    getFlpInterface>("libflp.so", "getFlpInterface");
             if (NULL == gData.flpInterface) {
                 gFlpLoadFailed = true;
                 LOC_LOGW("%s:%d]: No flp interface available", __func__, __LINE__);
@@ -371,7 +365,8 @@ LocationAPI::updateCallbacks(LocationCallbacks& locationCallbacks)
     if (isGeofenceClient(locationCallbacks)) {
         if (NULL == gData.geofenceInterface && !gGeofenceLoadFailed) {
             gData.geofenceInterface =
-                (GeofenceInterface*)loadLocationInterface("libgeofence.so", "getGeofenceInterface");
+                (GeofenceInterface*)loadLocationInterface<GeofenceInterface,
+                getGeofenceInterface>("libgeofence.so", "getGeofenceInterface");
             if (NULL == gData.geofenceInterface) {
                 gGeofenceLoadFailed = true;
                 LOC_LOGW("%s:%d]: No geofence interface available", __func__, __LINE__);
@@ -637,7 +632,8 @@ LocationControlAPI::createInstance(LocationControlCallbacks& locationControlCall
     if (nullptr != locationControlCallbacks.responseCb && NULL == gData.controlAPI) {
         if (NULL == gData.gnssInterface && !gGnssLoadFailed) {
             gData.gnssInterface =
-                (GnssInterface*)loadLocationInterface("libgnss.so", "getGnssInterface");
+                (GnssInterface*)loadLocationInterface<GnssInterface,
+                    getGnssInterface>("libgnss.so", "getGnssInterface");
             if (NULL == gData.gnssInterface) {
                 gGnssLoadFailed = true;
                 LOC_LOGW("%s:%d]: No gnss interface available", __func__, __LINE__);

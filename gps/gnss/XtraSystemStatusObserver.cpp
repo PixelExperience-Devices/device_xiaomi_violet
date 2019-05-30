@@ -219,11 +219,8 @@ void XtraSystemStatusObserver::notify(const list<IDataItemCore*>& dlist)
         }
 
         inline ~HandleOsObserverUpdateMsg() {
-            for (auto itor = mDataItemList.begin(); itor != mDataItemList.end(); ++itor) {
-                if (*itor != nullptr) {
-                    delete *itor;
-                    *itor = nullptr;
-                }
+            for (auto each : mDataItemList) {
+                delete each;
             }
         }
 

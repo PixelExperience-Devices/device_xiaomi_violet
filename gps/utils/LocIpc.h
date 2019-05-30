@@ -44,7 +44,7 @@ class LocIpcSender;
 class LocIpc {
 friend LocIpcSender;
 public:
-    inline LocIpc() : mIpcFd(-1), mStopRequested(false), mRunnable(nullptr) {}
+    inline LocIpc() : mIpcFd(-1), mRunnable(nullptr) {}
     inline virtual ~LocIpc() { stopListening(); }
 
     // Listen for new messages in current thread. Calling this funciton will
@@ -93,7 +93,6 @@ private:
             const uint8_t data[], uint32_t length);
 
     int mIpcFd;
-    bool mStopRequested;
     LocThread mThread;
     LocRunnable *mRunnable;
 };
@@ -106,7 +105,7 @@ public:
     // This class hides generated fd and destination address object from user.
     inline LocIpcSender(const char* destSocket):
             LocIpcSender(std::make_shared<int>(::socket(AF_UNIX, SOCK_DGRAM, 0)), destSocket) {
-        if (mSocket != nullptr && -1 == *mSocket) {
+        if (-1 == *mSocket) {
             mSocket = nullptr;
         }
     }
