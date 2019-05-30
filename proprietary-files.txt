@@ -36,25 +36,25 @@ vendor/lib/rfsa/adsp/libVC1DecDsp_skel.so
 vendor/lib/rfsa/adsp/libVC1Dec.so
 vendor/lib/rfsa/adsp/tas25xx_TI_0.bin
 
-# Alarm
-framework/vendor.qti.hardware.alarm-V1.0-java.jar
--vendor/app/PowerOffAlarm/PowerOffAlarm.apk
-vendor/bin/hw/vendor.qti.hardware.alarm@1.0-service
-vendor/etc/init/vendor.qti.hardware.alarm@1.0-service.rc
-vendor/lib64/hw/vendor.qti.hardware.alarm@1.0-impl.so
-vendor/lib64/vendor.qti.hardware.alarm@1.0.so
+# Alarm - from Redmi K20 davinci-user 9 PKQ1.190302.001 V10.3.6.0.PFJCNXM release-keys
+framework/vendor.qti.hardware.alarm-V1.0-java.jar|a777aeac865a44b6057c3a990ae2814650a38b6f
+-vendor/app/PowerOffAlarm/PowerOffAlarm.apk|bef295639460c833b3a2ddaf11f9031404b39f15
+vendor/bin/hw/vendor.qti.hardware.alarm@1.0-service|f0ae20fb4a3763955a19ec0c6be836bfaa84135a
+vendor/etc/init/vendor.qti.hardware.alarm@1.0-service.rc|c9877b6cae0353d5fdea5bc23dba77101b3d6980
+vendor/lib64/hw/vendor.qti.hardware.alarm@1.0-impl.so|aa3b5a0472b9059676c5f6f49b5c6b6a839ccd6e
+vendor/lib64/vendor.qti.hardware.alarm@1.0.so|6e403d7271a67cf27200ce1f9d0f4850beef2b49
 
-# ANT+ (system)
-lib/com.qualcomm.qti.ant@1.0.so
--lib/libantradio.so
-lib64/com.qualcomm.qti.ant@1.0.so
--lib64/libantradio.so
+# ANT+ (system) - from Redmi K20 davinci-user 9 PKQ1.190302.001 V10.3.6.0.PFJCNXM release-keys
+lib/com.qualcomm.qti.ant@1.0.so|648235acb34d76efd4a8f45a7378751efc1b3565
+-lib/libantradio.so|93c18c48272317f0a498401f25466f96cf63f08e
+lib64/com.qualcomm.qti.ant@1.0.so|63e439c6b8058aaa7e2fc07ea0f2aaac55876822
+-lib64/libantradio.so|aa9a4719ce2b121743cce20f51c1e36cd6078f9a
 
-# ANT+ (vendor)
-vendor/lib/com.qualcomm.qti.ant@1.0.so
-vendor/lib/hw/com.qualcomm.qti.ant@1.0-impl.so
-vendor/lib64/com.qualcomm.qti.ant@1.0.so
-vendor/lib64/hw/com.qualcomm.qti.ant@1.0-impl.so
+# ANT+ (vendor) - from Redmi K20 davinci-user 9 PKQ1.190302.001 V10.3.6.0.PFJCNXM release-keys
+vendor/lib/com.qualcomm.qti.ant@1.0.so|4a8a1f4c18801bfff5d4c3f44536d9f8f182061d
+vendor/lib/hw/com.qualcomm.qti.ant@1.0-impl.so|1f2a8a0ed450304b6836e5396cfad59a871c573e
+vendor/lib64/com.qualcomm.qti.ant@1.0.so|c215be8bb4d2bbf0953f45b30187371988e32117
+vendor/lib64/hw/com.qualcomm.qti.ant@1.0-impl.so|2527c25a83cc58cb68d494679e98f22ca624ea70
 
 # Audio
 etc/permissions/audiosphere.xml
@@ -121,14 +121,14 @@ vendor/etc/acdbdata/adsp_avs_config.acdb
 lib64/libaptX_encoder.so|0cebad28afcf29f931bdc2d24fce2730dc882ecf
 lib64/libaptXHD_encoder.so|90f47f10af28b3ead143200cb4370b847c513127
 
-# Bluetooth
-vendor/bin/hw/android.hardware.bluetooth@1.0-service-qti
-vendor/bin/wcnss_filter
-vendor/etc/init/android.hardware.bluetooth@1.0-service-qti.rc
-vendor/lib/hw/android.hardware.bluetooth@1.0-impl-qti.so
-vendor/lib/libbtnv.so
-vendor/lib64/hw/android.hardware.bluetooth@1.0-impl-qti.so
-vendor/lib64/libbtnv.so
+# Bluetooth - from Redmi K20 davinci-user 9 PKQ1.190302.001 V10.3.6.0.PFJCNXM release-keys
+vendor/bin/hw/android.hardware.bluetooth@1.0-service-qti|a735071da85d405f79c6228a27782900d8934893
+vendor/bin/wcnss_filter|044a3ae452ef7145c90cb6951499afe5ec25a98f
+vendor/etc/init/android.hardware.bluetooth@1.0-service-qti.rc|a979981c55f3dcaf6cf2212e71b901ca4d58b959
+vendor/lib/hw/android.hardware.bluetooth@1.0-impl-qti.so|0c6bab98f95fd24e2eae2d287e9358825955250d
+vendor/lib/libbtnv.so|7ba9bf7b99841403a3f30f3dfb03a47510bda5c9
+vendor/lib64/hw/android.hardware.bluetooth@1.0-impl-qti.so|8abc3e09b55f0ed662c89b4a0bd228aa8acc8e3b
+vendor/lib64/libbtnv.so|9d5b86dd6583c30c4a3dea424ac6f403a9237994
 
 # Camera
 vendor/etc/camera/beauty_ui9_intelligent_params.config
@@ -471,74 +471,76 @@ vendor/lib/libcdsp_default_listener.so
 vendor/lib/libcdsprpc.so
 vendor/lib/libsdsprpc.so
 
-# Charger
-vendor/bin/hvdcp_opti
+# Charger - from Redmi K20 davinci-user 9 PKQ1.190302.001 V10.3.6.0.PFJCNXM release-keys
+vendor/bin/hvdcp_opti|08a43d64ef8b1f07d68d89ff9745f24b31464fda
 
-# CNE - from
-etc/permissions/cneapiclient.xml
-etc/permissions/com.quicinc.cne.xml
-framework/cneapiclient.jar
-framework/com.quicinc.cne.api-V1.0-java.jar
-framework/com.quicinc.cne.api-V1.1-java.jar
-framework/com.quicinc.cne.constants-V1.0-java.jar
-framework/com.quicinc.cne.constants-V2.0-java.jar
-framework/com.quicinc.cne.constants-V2.1-java.jar
-framework/com.quicinc.cne.jar
-framework/com.quicinc.cne.server-V1.0-java.jar
-framework/com.quicinc.cne.server-V2.0-java.jar
-framework/com.quicinc.cne.server-V2.1-java.jar
-framework/com.quicinc.cne.server-V2.2-java.jar
-framework/vendor.qti.data.factory-V1.0-java.jar
-framework/vendor.qti.hardware.data.qmi-V1.0-java.jar
--priv-app/CNEService/CNEService.apk
-vendor/bin/cnd
-vendor/etc/cne/wqeclient/ATT/ATT_profile1.xml
-vendor/etc/cne/wqeclient/ATT/ATT_profile2.xml
-vendor/etc/cne/wqeclient/ATT/ATT_profile3.xml
-vendor/etc/cne/wqeclient/ATT/ATT_profile4.xml
-vendor/etc/cne/wqeclient/ATT/ATT_profile5.xml
-vendor/etc/cne/wqeclient/ATT/ATT_profile6.xml
-vendor/etc/cne/wqeclient/ROW/ROW_profile1.xml
-vendor/etc/cne/wqeclient/ROW/ROW_profile2.xml
-vendor/etc/cne/wqeclient/ROW/ROW_profile3.xml
-vendor/etc/cne/wqeclient/ROW/ROW_profile4.xml
-vendor/etc/cne/wqeclient/ROW/ROW_profile5.xml
-vendor/etc/cne/wqeclient/ROW/ROW_profile6.xml
-vendor/etc/cne/wqeclient/ROW/ROW_profile7.xml
-vendor/etc/cne/wqeclient/ROW/ROW_profile15.xml
-vendor/etc/cne/wqeclient/ROW/ROW_profile16.xml
-vendor/etc/cne/wqeclient/ROW/ROW_profile17.xml
-vendor/etc/cne/wqeclient/ROW/ROW_profile18.xml
-vendor/etc/cne/wqeclient/ROW/ROW_profile19.xml
-vendor/etc/cne/wqeclient/ROW/ROW_profile20.xml
-vendor/etc/cne/wqeclient/ROW/ROW_profile21.xml
-vendor/etc/cne/wqeclient/ROW/ROW_profile32.xml
-vendor/etc/cne/wqeclient/VZW/VZW_profile1.xml
-vendor/etc/cne/wqeclient/VZW/VZW_profile2.xml
-vendor/etc/cne/wqeclient/VZW/VZW_profile3.xml
-vendor/etc/cne/wqeclient/VZW/VZW_profile4.xml
-vendor/etc/cne/wqeclient/VZW/VZW_profile5.xml
-vendor/etc/cne/wqeclient/VZW/VZW_profile6.xml
--vendor/lib64/com.quicinc.cne.api@1.0.so
--vendor/lib64/com.quicinc.cne.api@1.1.so
--vendor/lib64/com.quicinc.cne.constants@1.0.so
--vendor/lib64/com.quicinc.cne.constants@2.0.so
--vendor/lib64/com.quicinc.cne.constants@2.1.so
--vendor/lib64/com.quicinc.cne.server@2.0.so
--vendor/lib64/com.quicinc.cne.server@2.1.so
--vendor/lib64/com.quicinc.cne.server@2.2.so
-vendor/lib64/libcne.so
-vendor/lib64/libcneapiclient.so
-vendor/lib64/libcneoplookup.so
-vendor/lib64/libcneqmiutils.so
-vendor/lib64/libwms.so
-vendor/lib64/libwqe.so
-vendor/lib64/libxml.so
-vendor/lib64/vendor.qti.hardware.data.latency@1.0.so
-vendor/lib64/vendor.qti.hardware.data.dynamicdds@1.0.so
-vendor/lib64/vendor.qti.hardware.data.qmi@1.0.so
-vendor/lib64/vendor.qti.data.factory@1.0.so
-vendor/lib64/vendor.qti.latency@2.0.so
+# CNE - from Redmi K20 davinci-user 9 PKQ1.190302.001 V10.3.6.0.PFJCNXM release-keys
+etc/permissions/cneapiclient.xml|15831adf0e80243042b90c734eea0a68eb8ae9c9
+etc/permissions/com.quicinc.cne.xml|e99e631d8b06ba4680529e9e4004d8d05baf6904
+framework/cneapiclient.jar|af7db889362e562a4c5073bb6aae32947218abf0
+framework/com.quicinc.cne.api-V1.0-java.jar|9cf7b7f1784c3594e3329954f64b1b129c433e8d
+framework/com.quicinc.cne.api-V1.1-java.jar|6c8815af55cb424fe3936f37a72e2d5bdbfb3b53
+framework/com.quicinc.cne.constants-V1.0-java.jar|eb2f74d281079971d6cddffba67da0f1fae1ee06
+framework/com.quicinc.cne.constants-V2.0-java.jar|6af0a0cd6246ec202d39ec2add03189cd3fa8029
+framework/com.quicinc.cne.constants-V2.1-java.jar|f4b7ec116cd4edca3423f455fca2569ed0919b4b
+framework/com.quicinc.cne.jar|56cb2e1ecb464f29c715a0a5e0a7393560ea1c8c
+framework/com.quicinc.cne.server-V1.0-java.jar|a2d2f2826716e8a8000887fc3a0b0ae6d13f9263
+framework/com.quicinc.cne.server-V2.0-java.jar|6bba42f810057b8b52a73f55dbf7bf4de4dac249
+framework/com.quicinc.cne.server-V2.1-java.jar|a95528efeb0c14a0077c8b0b375e95ac433edc33
+framework/com.quicinc.cne.server-V2.2-java.jar|e1041e559afecd0d9371ba78ddb36ea1873f9f15
+framework/vendor.qti.data.factory-V1.0-java.jar|23a060c1197f21f4f3b0f77485d8ee387d740e5d
+framework/vendor.qti.hardware.data.qmi-V1.0-java.jar|94c3e0efe3bc51358fe9145ed1ff0708c262380d
+-priv-app/CNEService/CNEService.apk|8e52b0f6e0aef5ea6f28590e78864b7476301c11
+vendor/bin/cnd|5d15b06bdcf961ec48f828d831cce3326ce2d1d0
+vendor/etc/cne/wqeclient/ATT/ATT_profile1.xml|578f3f8f56059bfdbef926bcc68d01c15e06951f
+vendor/etc/cne/wqeclient/ATT/ATT_profile2.xml|1fb42c672a12b6660bdce3ea94e0c43719dd9de8
+vendor/etc/cne/wqeclient/ATT/ATT_profile3.xml|f88e13f1dd7b82388c90358f71813026370c9ed8
+vendor/etc/cne/wqeclient/ATT/ATT_profile4.xml|fb08e04f57797c5684bf734f7ce4bb4968859b18
+vendor/etc/cne/wqeclient/ATT/ATT_profile5.xml|eb726ad1a42b9b78b9ee3b821fc108611bc9eeac
+vendor/etc/cne/wqeclient/ATT/ATT_profile6.xml|be97b46b0d07ee2f6ebcc677d8099ed2140d5d85
+vendor/etc/cne/wqeclient/ROW/ROW_profile1.xml|e7ca213d0998cb3a6a603ad3eca7bda69830ff55
+vendor/etc/cne/wqeclient/ROW/ROW_profile2.xml|169a5209000e357a1a3183e8e5bfdf6fd07c2787
+vendor/etc/cne/wqeclient/ROW/ROW_profile3.xml|4be4060e8ac2d9fcea490feec7938cadcff46e1f
+vendor/etc/cne/wqeclient/ROW/ROW_profile4.xml|f88e13f1dd7b82388c90358f71813026370c9ed8
+vendor/etc/cne/wqeclient/ROW/ROW_profile5.xml|96101f6b01436a02572c67a469ff67ccfb738874
+vendor/etc/cne/wqeclient/ROW/ROW_profile6.xml|cef14ff8a160c7ad719b85d024a4b3301c3638d0
+vendor/etc/cne/wqeclient/ROW/ROW_profile7.xml|8d6773a4c418d0dcc4dc9096017d2681c7a1defe
+vendor/etc/cne/wqeclient/ROW/ROW_profile15.xml|0130dfd8326ee710bf4e15718ede87c49a85b763
+vendor/etc/cne/wqeclient/ROW/ROW_profile16.xml|e05b935d7ccf48d306b71c719b2e4df83187d9c0
+vendor/etc/cne/wqeclient/ROW/ROW_profile17.xml|f1b33204799268eda78dd8314f26abf2e37431e2
+vendor/etc/cne/wqeclient/ROW/ROW_profile18.xml|19db16f62dabb806a62f192858a9d52b5bc2a064
+vendor/etc/cne/wqeclient/ROW/ROW_profile19.xml|1fcc57b1fa4dbbc7d250e8dd92acf1527d447eb3
+vendor/etc/cne/wqeclient/ROW/ROW_profile20.xml|7be0614cf0116c39b736c58fe5eca36838aeb3db
+vendor/etc/cne/wqeclient/ROW/ROW_profile21.xml|cc62517e6c37e12ee1ebebbb27f9c22878749be3
+vendor/etc/cne/wqeclient/ROW/ROW_profile32.xml|b87542b9284efe4c2bd0ae868bb9a765c2c3dbc5
+vendor/etc/cne/wqeclient/VZW/VZW_profile1.xml|c89d3c062790b442cbe941cafc641a4e322f2d59
+vendor/etc/cne/wqeclient/VZW/VZW_profile2.xml|ba14a9df975cf872ed0cbe28bee8fac63cd848d4
+vendor/etc/cne/wqeclient/VZW/VZW_profile3.xml|9b123d81c9b8991499cda33b0706810e0c8fb974
+vendor/etc/cne/wqeclient/VZW/VZW_profile4.xml|ff91feb5060a6df07e3e4d9bc99ae58bccad7649
+vendor/etc/cne/wqeclient/VZW/VZW_profile5.xml|f76c894f3c6d5b6ed35113a088dc3174c900501b
+vendor/etc/cne/wqeclient/VZW/VZW_profile6.xml|14d136e7fcc682311757d3edc0b9d3eaeba11815
+-vendor/lib64/com.quicinc.cne.api@1.0.so|f5c0c521b79b821fa7ac73fa3f31bcdbb8ae5a9e
+-vendor/lib64/com.quicinc.cne.api@1.1.so|6bff7ddba7702a3fec119e055a832bdc269c593c
+-vendor/lib64/com.quicinc.cne.constants@1.0.so|25e137064d7c93121e0a8bc6122ddac72e3d3ba4
+-vendor/lib64/com.quicinc.cne.constants@2.0.so|d356ed77d3cef94b330595bdecc0670a04c220fa
+-vendor/lib64/com.quicinc.cne.constants@2.1.so|7257610eeedc538fbc4522d5d8bcfd9695e5a885
+-vendor/lib64/com.quicinc.cne.server@2.0.so|7a18a653ee9c2f889a7b83d8c3544076cb1d8f4a
+-vendor/lib64/com.quicinc.cne.server@2.1.so|f47d48cef73727d44f20646e7757a8a9fa015658
+-vendor/lib64/com.quicinc.cne.server@2.2.so|30728c1d6c47277940f0aeb8583b30eaf37f4105
+-vendor/lib64/com.quicinc.cne.server@2.3.so|e9af15800bf4a78f785de09c09298bb85bb7e9d8
+vendor/lib64/libcne.so|cf16933204434e9614c10d7f9416da47149c468c
+vendor/lib64/libcneapiclient.so|6a2689eef8225f7b98477828c81b0dd778d1a55f
+vendor/lib64/libcneoplookup.so|f5c7f2ec84c2db51960be469bc5d6af487f19d91
+vendor/lib64/libcneqmiutils.so|10c65c966612f29850ac654360a7ebcd038bbc27
+vendor/lib64/libwms.so|14fe81a1fbb26251e4cf79547816a6842b864543
+vendor/lib64/libwqe.so|6529de113fb6b9f9a323e8ce9c3cb4ac34f402e5
+vendor/lib64/libxml.so|562cc459393349600d6acb56ac5fe772f24a8fdd
+vendor/lib64/vendor.qti.hardware.data.latency@1.0.so|603c92c326822f3c38a9f8cbbbd778dac8b81f32
+vendor/lib64/vendor.qti.hardware.data.dynamicdds@1.0.so|3d765ff4894e4596f6e7c2d14831ce6fe5d12103
+vendor/lib64/vendor.qti.hardware.data.qmi@1.0.so|c4f01336afbd4d48d7fd2a73bf6489a765065908
+vendor/lib64/vendor.qti.data.factory@1.0.so|b287c5f87699926e1efcc7731886165e737243c6
+vendor/lib64/vendor.qti.data.factory@1.1.so|5de838081a727b61a0d925a91ab1699c96fd4309
+vendor/lib64/vendor.qti.latency@2.0.so|ab778429766e5b54368e1230d5e7b00ccd668334
 
 # Consumerir
 vendor/lib/hw/consumerir.default.so
@@ -602,30 +604,30 @@ vendor/lib64/vendor.display.config@1.3.so
 vendor/lib64/vendor.display.config@1.4.so
 vendor/lib64/vendor.display.config@1.5.so
 
-# DPM
-bin/dpmd
-etc/dpm/dpm.conf
-etc/init/dpmd.rc
-etc/permissions/com.qti.dpmframework.xml
-etc/permissions/dpmapi.xml
-framework/com.qti.dpmframework.jar
-framework/dpmapi.jar
-framework/tcmclient.jar
-lib64/libdiag_system.so
-lib64/com.qualcomm.qti.dpm.api@1.0.so
-lib64/libdpmctmgr.so
-lib64/libdpmfdmgr.so
-lib64/libdpmframework.so
-lib64/libdpmtcm.so
-lib/com.qualcomm.qti.dpm.api@1.0.so
-lib/libdpmctmgr.so
-lib/libdpmfdmgr.so
-lib/libdpmframework.so
-lib/libdpmtcm.so
--priv-app/dpmserviceapp/dpmserviceapp.apk
-vendor/bin/dpmQmiMgr
-vendor/lib64/libdpmqmihal.so
-vendor/lib64/com.qualcomm.qti.dpm.api@1.0.so
+# DPM - from Redmi K20 davinci-user 9 PKQ1.190302.001 V10.3.6.0.PFJCNXM release-keys
+bin/dpmd|b4ab23a880c43a5e32c1b74c3743445d64c3cf25
+etc/dpm/dpm.conf|fec89edb6cff81424a6c3a730fed92efa3613f72
+etc/init/dpmd.rc|52ca6ad920a1804e4ff608113cece063730f5e0c
+etc/permissions/com.qti.dpmframework.xml|36b94c9338069e434b83359a92cdc7ff62b822df
+etc/permissions/dpmapi.xml|ded29f9befaef20a7ccee0c75427fda1d1d04890
+framework/com.qti.dpmframework.jar|2a6ff555ebff148a508fc7ea2fbeaee4b9a2dff6
+framework/dpmapi.jar|89ddc5bf0c4c88a3f341169edc4d89f9e834337b
+framework/tcmclient.jar|91b415288494fa208b5f5ec9fafa33c47e569c96
+lib64/libdiag_system.so|9e6e39892961871e42e3b33c850f968b51c61d09
+lib64/com.qualcomm.qti.dpm.api@1.0.so|99df73ba93fe95e98cb64069592675e1751aaee2
+lib64/libdpmctmgr.so|20101d5929ba97f16083ad9c71933111cb9ae8ff
+lib64/libdpmfdmgr.so|45061fee7721b8f94aef431f589e4024d4eae374
+lib64/libdpmframework.so|623095565a453e10498a5a28ef689f52c85e8784
+lib64/libdpmtcm.so|1b43a23871a0a247e4adbe1e63c5e0864740938b
+lib/com.qualcomm.qti.dpm.api@1.0.so|5611079765fce66c5997eb61ae64ec2e7d7eadda
+lib/libdpmctmgr.so|39a22fed0691797322ad3361ab064cce944a1621
+lib/libdpmfdmgr.so|cbba45c4b84d0eea7b014fb7b9b861fc62607d9f
+lib/libdpmframework.so|b2af27bc930e61d06cbbb9c90d5f150354708630
+lib/libdpmtcm.so|326cc53ac27ef6598a61ca257ac080eaee6090a5
+-priv-app/dpmserviceapp/dpmserviceapp.apk|a642336052f3e5d70580700e2aebba230a5f663f
+vendor/bin/dpmQmiMgr|5c8868fa54fe77e5bdef995950843ab35bf4e686
+vendor/lib64/libdpmqmihal.so|e7dbf5ed0bd789da89faf35027dfd2b8f303b192
+vendor/lib64/com.qualcomm.qti.dpm.api@1.0.so|ecf91d0902c45d133425f69903844d26871c60c8
 
 # DRM
 vendor/bin/qseecomd
@@ -647,33 +649,35 @@ vendor/lib64/libssd.so
 vendor/lib64/libStDrvInt.so
 vendor/lib64/libtzdrmgenprov.so
 
-# DRM - Widevine
-vendor/bin/hw/android.hardware.drm@1.1-service.widevine
-vendor/etc/init/android.hardware.drm@1.1-service.widevine.rc
-vendor/lib/libbase64.so
-vendor/lib/libcpion.so
-vendor/lib/libcppf.so
+# DRM - Widevine - from Redmi K20 davinci-user 9 PKQ1.190302.001 V10.3.6.0.PFJCNXM release-keys
+vendor/bin/hw/android.hardware.drm@1.1-service.widevine|35fdfb67ad964f586334f52942ed9c8a50633d42
+vendor/etc/init/android.hardware.drm@1.1-service.widevine.rc|458dd241f5f8536eccb57f012b3eba0061736e8e
+vendor/lib/mediadrm/libwvdrmengine.so|6a3cee7692cfeded4a3055154cc2b70fc264454a
+vendor/lib/libbase64.so|d37d1d68a262460cbcd3b0b2abecd87649867564
+vendor/lib/libcpion.so|fb629ca39677fd948110494363aba7b20f8f8a31
+vendor/lib/libcppf.so|b226d62fe6173c522c23605a56825ec0e94ae5e3
 vendor/lib/libhdcpsrm.so|310c4575a088f97a7394a2215db08b3aae42c258
 vendor/lib/liboemcrypto.so|4ab12d80aa9526d9ef34e515cdf3cd1ab14a927a
-vendor/lib/libwvhidl.so
-vendor/lib64/libbase64.so
-vendor/lib64/libcpion.so
-vendor/lib64/libcppf.so
+vendor/lib/libwvhidl.so|88d0e308d902d22654084c3eafaaebf145c1156e
+vendor/lib64/mediadrm/libwvdrmengine.so|e0b80c1771c1e04169280b6cf81e801dd72274b8
+vendor/lib64/libbase64.so|9d347f47477f39f467d985cfa8c8077a6f4366db
+vendor/lib64/libcpion.so|33556c7a8276847c2a88b15c7d7c4ec1a7c98c70
+vendor/lib64/libcppf.so|ad9f651c12218454ead5c4c7a44d7b8e887731ec
 vendor/lib64/libhdcpsrm.so|d4f8219b15bb15d3e5837f6d7bdc92cf3c11f8cf
 vendor/lib64/liboemcrypto.so|5b77983a5c9163258006a6ed0f2c83d993e029a4
 
 # Display postprocessing
 lib64/vendor.display.color@1.0.so
 
-# ESE-Powermanager
-vendor/bin/hw/vendor.qti.esepowermanager@1.0-service
-vendor/etc/init/vendor.qti.esepowermanager@1.0-service.rc
-lib/vendor.qti.esepowermanager@1.0.so
-lib64/vendor.qti.esepowermanager@1.0.so
-vendor/lib/hw/vendor.qti.esepowermanager@1.0-impl.so
-vendor/lib/vendor.qti.esepowermanager@1.0.so
-vendor/lib64/hw/vendor.qti.esepowermanager@1.0-impl.so
-vendor/lib64/vendor.qti.esepowermanager@1.0.so
+# ESE-Powermanager - from Redmi K20 davinci-user 9 PKQ1.190302.001 V10.3.6.0.PFJCNXM release-keys
+vendor/bin/hw/vendor.qti.esepowermanager@1.0-service|bbadc53672501ea25029b7902bd3b38c712263ba
+vendor/etc/init/vendor.qti.esepowermanager@1.0-service.rc|58a3866ad5a7613d9392c9adb671eaa7825578a2
+lib/vendor.qti.esepowermanager@1.0.so|8fd21b9c28cf126fee0d4f229aeefedcfbe77cc4
+lib64/vendor.qti.esepowermanager@1.0.so|8d2ae6c2e1e2e8bc804f1bc7e2647dfa7157c7fc
+vendor/lib/hw/vendor.qti.esepowermanager@1.0-impl.so|9d583ec1483527321bef90eed4af55219b35513a
+vendor/lib/vendor.qti.esepowermanager@1.0.so|374d232eac92146853afa3af085890306dcf10da
+vendor/lib64/hw/vendor.qti.esepowermanager@1.0-impl.so|07174e9a690e52486eaaae13615a050f145a46fc
+vendor/lib64/vendor.qti.esepowermanager@1.0.so|dd37770694dae62295b9f891e349dd1e48af9fdd
 
 # Fingerprint firmware
 etc/firmware/goodixfp.b00
@@ -700,60 +704,60 @@ vendor/lib64/libgoodixhwfingerprint.so
 vendor/lib64/libvendor.goodix.hardware.interfaces.biometrics.fingerprint@2.1.so
 vendor/lib64/vendor.qti.hardware.fingerprint@1.0.so
 
-# FM
-lib/libfm-hci.so
-lib/fm_helium.so
-lib64/libfm-hci.so
-lib64/fm_helium.so
-vendor/bin/fm_qsoc_patches
--lib/vendor.qti.hardware.fm@1.0.so
--lib64/vendor.qti.hardware.fm@1.0.so
-vendor/lib/hw/vendor.qti.hardware.fm@1.0-impl.so
-vendor/lib/vendor.qti.hardware.fm@1.0.so
-vendor/lib64/hw/vendor.qti.hardware.fm@1.0-impl.so
-vendor/lib64/vendor.qti.hardware.fm@1.0.so
+# FM - from Redmi K20 davinci-user 9 PKQ1.190302.001 V10.3.6.0.PFJCNXM release-keys
+lib/libfm-hci.so|20dfb219797c97052d5569cf4a974088414b706f
+lib/fm_helium.so|49497bf81a4595e7c6ceba9c3177126617219498
+lib64/libfm-hci.so|3a41ed64eeee37b7355d1c9dc69ac260e28cb404
+lib64/fm_helium.so|6736f3d10dbf2dc95fbf51f191aa703c03e2ad61
+vendor/bin/fm_qsoc_patches|767ae2133414c4aa27dc9cf48be1e9006bc8f16e
+-lib/vendor.qti.hardware.fm@1.0.so|9f5373d5d8d35a56cda7d19bf4311ed367105224
+-lib64/vendor.qti.hardware.fm@1.0.so|39be68388450b946720ef7b553bb09e96a4276fa
+vendor/lib/hw/vendor.qti.hardware.fm@1.0-impl.so|407ee02fc3217f11ec29e1bc2b9e2648a4602388
+vendor/lib/vendor.qti.hardware.fm@1.0.so|3b17dae44ef5d28ecf033a699d8e984f3eba3f07
+vendor/lib64/hw/vendor.qti.hardware.fm@1.0-impl.so|62aacd836a9bae604cad64203c929e5a9d0b5534
+vendor/lib64/vendor.qti.hardware.fm@1.0.so|7d6555fcfdbe14aca5a2609cd2d868c4f885859f
 
-# Gatekeeper
-vendor/bin/hw/android.hardware.gatekeeper@1.0-service-qti
-vendor/etc/init/android.hardware.gatekeeper@1.0-service-qti.rc
-vendor/lib/hw/android.hardware.gatekeeper@1.0-impl-qti.so
-vendor/lib64/hw/android.hardware.gatekeeper@1.0-impl-qti.so
+# Gatekeeper - from Redmi K20 davinci-user 9 PKQ1.190302.001 V10.3.6.0.PFJCNXM release-keys
+vendor/bin/hw/android.hardware.gatekeeper@1.0-service-qti|eadae88382bc4ee64c5c6c5a6e77d23f204ed540
+vendor/etc/init/android.hardware.gatekeeper@1.0-service-qti.rc|1b8d5f58fe0a57906acf72b862c16a2521daa97b
+vendor/lib/hw/android.hardware.gatekeeper@1.0-impl-qti.so|17d6b0a8cbe2b71ab6bd3c43a3a42ec17e8b6044
+vendor/lib64/hw/android.hardware.gatekeeper@1.0-impl-qti.so|6a3c30c6e9e774ae9f36bf4619faecb164baa516
 
-# GPS
-vendor/bin/hw/vendor.qti.gnss@2.1-service
-vendor/bin/garden_app
-vendor/bin/loc_launcher
-vendor/bin/lowi-server
-vendor/bin/slim_daemon
-vendor/bin/xtra-daemon
-vendor/etc/cacert_location.pem
-vendor/etc/xtra_root_cert.pem
-vendor/etc/init/vendor.qti.gnss@2.1-service.rc
-vendor/lib64/hw/vendor.qti.gnss@2.1-impl.so
-vendor/lib64/libaoa.so
-vendor/lib64/libdataitems.so
-vendor/lib64/libflp.so
-vendor/lib64/libgarden.so
-vendor/lib64/libgarden_haltests_e2e.so
-vendor/lib64/libgdtap.so
-vendor/lib64/libgeofence.so
-vendor/lib64/libizat_client_api.so
-vendor/lib64/libizat_core.so
-vendor/lib64/liblbs_core.so
-vendor/lib64/libloc_api_v02.so
-vendor/lib64/liblocationservice_glue.so
-vendor/lib64/liblocationservice.so
-vendor/lib64/liblowi_client.so
-vendor/lib64/liblowi_wifihal.so
-vendor/lib64/libqdma.so
-vendor/lib64/libqdma_file_agent.so
-vendor/lib64/libslimclient.so
-vendor/lib64/libxtadapter.so
-vendor/lib64/vendor.qti.gnss@1.0.so
-vendor/lib64/vendor.qti.gnss@1.1.so
-vendor/lib64/vendor.qti.gnss@1.2.so
-vendor/lib64/vendor.qti.gnss@2.0.so
-vendor/lib64/vendor.qti.gnss@2.1.so
+# GPS - from Redmi K20 davinci-user 9 PKQ1.190302.001 V10.3.6.0.PFJCNXM release-keys
+vendor/bin/hw/vendor.qti.gnss@2.1-service|cb325959b495f3649749da0ad2e844edbf106ebc
+vendor/bin/garden_app|c41b3127b4a319b7bd697cf494c2ccdeae8bb063
+vendor/bin/loc_launcher|eb334b0ed844b2ade9b038da57413fcee67e568d
+vendor/bin/lowi-server|97063f3214e771a738a6c4d7b9b31445f19bce10
+vendor/bin/slim_daemon|44e3a8ac8114190ce24fff9005304b774f41b35b
+vendor/bin/xtra-daemon|bd0d386431b50069b8656813bc88d788a5dd0435
+vendor/etc/cacert_location.pem|0789bf799c7e45d352a83e2f79ddb0cea86db85b
+vendor/etc/xtra_root_cert.pem|f55a31ec4d9cf8ce2724acadecf00c779f8767db
+vendor/etc/init/vendor.qti.gnss@2.1-service.rc|5a8311fca0f4dd511b7cfcda955193844f412872
+vendor/lib64/hw/vendor.qti.gnss@2.1-impl.so|5309f2687e993fe5c683c12efa514d02fb25a48d
+vendor/lib64/libaoa.so|a775b4b42fc685c24f3dbdb3d97f537ef829e870
+vendor/lib64/libdataitems.so|5591a0b2372d1b91d9d662aa5763e846b11404c5
+vendor/lib64/libflp.so|8f981cc820f2604500fa0c32a2fb324ecedd6124
+vendor/lib64/libgarden.so|1c7e630869f27fbf6ee82066d2c8b4a0ee53f67f
+vendor/lib64/libgarden_haltests_e2e.so|4765d1d91c8ba4c9eb22089552c23cd83f67ef4c
+vendor/lib64/libgdtap.so|5e25ae3751464c410e1623c169779d2ea7846c34
+vendor/lib64/libgeofence.so|5e3119bb99fd4d0616cd390630537a0c12ed6452
+vendor/lib64/libizat_client_api.so|f2d5df4c37539ccddcb4f96088cbc7b86aced6cd
+vendor/lib64/libizat_core.so|cdf669290aa1405610dbd2d482b4ec86ef3a7d33
+vendor/lib64/liblbs_core.so|e2574ac52f7248292b74a9b380b33fd2dbda0add
+vendor/lib64/libloc_api_v02.so|1c08df0e67de546156d93491518f882fa545bef8
+vendor/lib64/liblocationservice_glue.so|fc351740dbb4a83184e6cb01c702f46142025fd2
+vendor/lib64/liblocationservice.so|470ba58943375dd27d2e81610aef53cfefed3b9b
+vendor/lib64/liblowi_client.so|6d2d1399d6103842333f2cba00770b45ebd2b2c4
+vendor/lib64/liblowi_wifihal.so|d543a9876c5c41265189b6552f3a51506e861361
+vendor/lib64/libqdma.so|2a2c373f96eebbd720319af33facdac9b55fe452
+vendor/lib64/libqdma_file_agent.so|a5c129a8391e53b5b3afba2764db1a3192542122
+vendor/lib64/libslimclient.so|e2d703b3b449fda9cc45993d24faa37c53f63c2e
+vendor/lib64/libxtadapter.so|cdba75a00f5b7466c5220521a1fa4c841d81d273
+vendor/lib64/vendor.qti.gnss@1.0.so|1ee4a2e05c0cd95b2dc1a587ddcafdf108e3c664
+vendor/lib64/vendor.qti.gnss@1.1.so|1f84bbb2ed475532c1b03a6f012468d3fe52730d
+vendor/lib64/vendor.qti.gnss@1.2.so|18cef79f664ed533825047012f033518b312fb2f
+vendor/lib64/vendor.qti.gnss@2.0.so|5aaaa5af218a233f2e2e526fc0ec0dfcc51450b0
+vendor/lib64/vendor.qti.gnss@2.1.so|8730385ceeb2f2a6933d468dd44234d54ea04314
 
 # GPU firmware
 vendor/firmware/a612_zap.b01
@@ -833,19 +837,19 @@ vendor/lib64/libtinyxml2_1.so
 vendor/lib/hw/vulkan.sm6150.so
 vendor/lib64/hw/vulkan.sm6150.so
 
-# IO prefetcher
-vendor/bin/hw/vendor.qti.hardware.iop@2.0-service
-vendor/etc/init/vendor.qti.hardware.iop@2.0-service.rc
-vendor/lib64/hw/vendor.qti.hardware.iop@2.0-impl.so
-vendor/lib64/libqti-iopd-client.so
-vendor/lib64/libqti-iopd.so
-vendor/lib64/vendor.qti.hardware.iop@1.0.so
-vendor/lib64/vendor.qti.hardware.iop@2.0.so
-vendor/lib/hw/vendor.qti.hardware.iop@2.0-impl.so
-vendor/lib/libqti-iopd-client.so
-vendor/lib/libqti-iopd.so
-vendor/lib/vendor.qti.hardware.iop@1.0.so
-vendor/lib/vendor.qti.hardware.iop@2.0.so
+# IO prefetcher - from Redmi K20 davinci-user 9 PKQ1.190302.001 V10.3.6.0.PFJCNXM release-keys
+vendor/bin/hw/vendor.qti.hardware.iop@2.0-service|9071dd92fae6b84a4673a408349a718edb7df853
+vendor/etc/init/vendor.qti.hardware.iop@2.0-service.rc|fd11367b2585702190ef2577ce2ce6fc68f3a2f8
+vendor/lib64/hw/vendor.qti.hardware.iop@2.0-impl.so|eb3820e3e180090a8d835c9f6ac1eb2222a0721c
+vendor/lib64/libqti-iopd-client.so|4832100346c4ba20af1cb1ff28e204b42947045f
+vendor/lib64/libqti-iopd.so|84861e8b392fc2108e4143f2212f46676919d005
+vendor/lib64/vendor.qti.hardware.iop@1.0.so|0c9c3f77119bb38155d26710a505a6e8b330c502
+vendor/lib64/vendor.qti.hardware.iop@2.0.so|80fcdf0fda39edb388e3101f05884d8ab7f2740e
+vendor/lib/hw/vendor.qti.hardware.iop@2.0-impl.so|b0059496c5fbb05afa6a746527685da01847433f
+vendor/lib/libqti-iopd-client.so|11ebdd9a146bf4cc0aba1f734ce74f63e42617ce
+vendor/lib/libqti-iopd.so|0d1d0fc6acc6708c1555e0d81d5253c7d462b3a0
+vendor/lib/vendor.qti.hardware.iop@1.0.so|d6a0df41b2353b8eef496df31c8d7ad64d020a06
+vendor/lib/vendor.qti.hardware.iop@2.0.so|8e2bb954eee38af56b122bb5aeaaabd10d125bb6
 
 # IPA
 vendor/firmware/ipa_fws.b00
@@ -856,339 +860,343 @@ vendor/firmware/ipa_fws.b04
 vendor/firmware/ipa_fws.mdt
 vendor/firmware/ipa_fws.elf
 
-# Keystore
-vendor/bin/hw/android.hardware.keymaster@4.0-service-qti
-vendor/etc/init/android.hardware.keymaster@4.0-service-qti.rc
-vendor/lib/libkeymasterdeviceutils.so
-vendor/lib/libkeymasterprovision.so
-vendor/lib/libkeymasterutils.so
-vendor/lib/libqtikeymaster4.so
-vendor/lib64/libkeymasterdeviceutils.so
-vendor/lib64/libkeymasterprovision.so
-vendor/lib64/libkeymasterutils.so
-vendor/lib64/libqtikeymaster4.so
+# Keystore - from Redmi K20 davinci-user 9 PKQ1.190302.001 V10.3.6.0.PFJCNXM release-keys
+vendor/bin/hw/android.hardware.keymaster@4.0-service-qti|c838dad0e95c5bd244e8b0a9668d6dea81e7fed6
+vendor/etc/init/android.hardware.keymaster@4.0-service-qti.rc|e502c7046fb6a1955e54936d6c8f4f8c2889b201
+vendor/lib/libkeymasterdeviceutils.so|7fe83544dad2e2d4ad22efe6c2286555adbfcfe6
+vendor/lib/libkeymasterprovision.so|4b9ac9064f052d3edf705da17b456cb48cad2ca6
+vendor/lib/libkeymasterutils.so|f5e11c65ceb90800d3cddfea8fa1c08df52499dc
+vendor/lib/libqtikeymaster4.so|e559538c973bcb0021075afceee563f3b44694ba
+vendor/lib64/libkeymasterdeviceutils.so|b8a6353df29142529c3d14ed95c194bb0e7b4c1a
+vendor/lib64/libkeymasterprovision.so|9f7c546db775662c131b9a06ceeeb28f461fac35
+vendor/lib64/libkeymasterutils.so|305de9e9fef458d50e503ecbe87070e66af2d26f
+vendor/lib64/libqtikeymaster4.so|4df52f4ff19e9f974af49a24ff8ee2634cc7d541
 
-# Listen
-vendor/lib/libadpcmdec.so
-vendor/lib/libcapiv2svacnn.so
-vendor/lib/libcapiv2vop.so
-vendor/lib/libgcs-calwrapper.so
-vendor/lib/libgcs-ipc.so
-vendor/lib/libgcs-osal.so
-vendor/lib/libgcs.so
-vendor/lib/liblistensoundmodel2.so
-vendor/lib64/libcapiv2svacnn.so
-vendor/lib64/libcapiv2vop.so
-vendor/lib64/libgcs-calwrapper.so
-vendor/lib64/libgcs-ipc.so
-vendor/lib64/libgcs-osal.so
-vendor/lib64/libgcs.so
-vendor/lib64/liblistensoundmodel2.so
+# Listen - from Redmi K20 davinci-user 9 PKQ1.190302.001 V10.3.6.0.PFJCNXM release-keys
+vendor/lib/libadpcmdec.so|709c018d5d949ba0dbd0895d946f842b0b96803f
+vendor/lib/libcapiv2svacnn.so|1d93c1abe9d34ba145cfd22b1f7d5f74c39819f7
+vendor/lib/libcapiv2vop.so|7358b14c2267fdcebd246897e7d688ffde224514
+vendor/lib/libgcs-calwrapper.so|7ee11f3120d0acd1f59df8b01167a8aae809de0f
+vendor/lib/libgcs-ipc.so|8fde4705d8b1f58987b6ec7dd663c99dec6346f7
+vendor/lib/libgcs-osal.so|4f0476a5eb9b3405268103a3f9789d35c12293d9
+vendor/lib/libgcs.so|e0f8d9ad34fef130abc8aee0e1cfc0dba0aa7815
+vendor/lib/liblistensoundmodel2.so|49bb9be518398889380e8cd09b1103bd81092acc
+vendor/lib64/libcapiv2svacnn.so|c5887659fa3cd3eb935aad7dd4348c283e1dc0fe
+vendor/lib64/libcapiv2vop.so|e6fc0a2e21d588a0302c84760f72cc97e71aed89
+vendor/lib64/libgcs-calwrapper.so|c40d04ea80710163f0915317c67185b95ce84471
+vendor/lib64/libgcs-ipc.so|f0902b62f54a63b3ab798739b29564d96c6e2493
+vendor/lib64/libgcs-osal.so|ff1962c9d46541164f7a22689a723670835f14d3
+vendor/lib64/libgcs.so|eaf70f7f1d87a81fa71ab3dc9f96b0d404e23e62
+vendor/lib64/liblistensoundmodel2.so|80135f45fdba5f954baff999b6b7a95e7c66d2bd
 
-# Media
-lib/libmmosal.so
-lib/vendor.qti.hardware.vpp@1.1.so
-lib64/libmmosal.so
-lib64/vendor.qti.hardware.vpp@1.1.so
-vendor/lib/libAlacSwDec.so
-vendor/lib/libApeSwDec.so
-vendor/lib/libdsd2pcm.so
-vendor/lib/libFlacSwDec.so
-vendor/lib/libvpplibrary.so
-vendor/lib/libI420colorconvert.so
-vendor/lib/libmm-color-convertor.so
-vendor/lib/libmmosal_proprietary.so
--vendor/lib/libMpeg4SwEncoder.so
-vendor/lib/libOmxAacDec.so
-vendor/lib/libOmxEvrcDec.so
-vendor/lib/libOmxQcelp13Dec.so
-vendor/lib/libOmxVpp.so
-vendor/lib/libOmxAlacDec.so
-vendor/lib/libOmxAlacDecSw.so
-vendor/lib/libOmxAmrDec.so
-vendor/lib/libOmxAmrwbplusDec.so
-vendor/lib/libOmxApeDec.so
-vendor/lib/libOmxApeDecSw.so
-vendor/lib/libOmxDsdDec.so
-vendor/lib/libOmxG711Dec.so
-vendor/lib/libOmxVideoDSMode.so
-vendor/lib/libvppclient.so
-vendor/lib/libvpphvx.so
-vendor/lib/libvqzip.so
-vendor/lib/libvpptestutils.so
-vendor/lib/vendor.qti.hardware.vpp@1.1.so
-vendor/lib64/libAlacSwDec.so
-vendor/lib64/libApeSwDec.so
-vendor/lib64/libFlacSwDec.so
-vendor/lib64/libI420colorconvert.so
-vendor/lib64/libmm-color-convertor.so
-vendor/lib64/libmmosal_proprietary.so
--vendor/lib64/libMpeg4SwEncoder.so
-vendor/lib64/libOmxAacDec.so
-vendor/lib64/libOmxAlacDec.so
-vendor/lib64/libOmxAlacDecSw.so
-vendor/lib64/libOmxAmrDec.so
-vendor/lib64/libOmxAmrwbplusDec.so
-vendor/lib64/libOmxApeDec.so
-vendor/lib64/libOmxApeDecSw.so
-vendor/lib64/libOmxEvrcDec.so
-vendor/lib64/libOmxG711Dec.so
-vendor/lib64/libOmxQcelp13Dec.so
-vendor/lib64/libOmxVpp.so
-vendor/lib64/libvppclient.so
-vendor/lib64/libvpplibrary.so
-vendor/lib64/libvpphvx.so
-vendor/lib64/libvpptestutils.so
-vendor/lib64/vendor.qti.hardware.vpp@1.1.so
+# Media - from Redmi K20 davinci-user 9 PKQ1.190302.001 V10.3.6.0.PFJCNXM release-keys
+lib/libmmosal.so|193bb0266f6f85433064f64d47ce9483a6df3f49
+lib/vendor.qti.hardware.vpp@1.1.so|0952d621fe84535508432576df1b23438142139e
+lib64/libmmosal.so|750ecf73672fb0f6a94797569d4997d0b85d20ef
+lib64/vendor.qti.hardware.vpp@1.1.so|43e65c73f7b14a985afa062eae88316aa2c2b770
+vendor/lib/libAlacSwDec.so|d1f0888e3dfd171db0c5aed508acb8e88fd59df3
+vendor/lib/libApeSwDec.so|2373d63766c1a868ef34d8294f93fa26b121e8ca
+vendor/lib/libdsd2pcm.so|a813b2c1d627997d896501e5cf0457fc9e4fde4b
+vendor/lib/libFlacSwDec.so|c127d58e2b10f9507d6a831e45f15b7a03b17285
+vendor/lib/libvpplibrary.so|f2c421e280e34ef61df23d5416b02e8da2bb5a3c
+vendor/lib/libI420colorconvert.so|ba9ede381cf35ca3768f9b70bfeedfea51e49e27
+vendor/lib/libmm-color-convertor.so|394ba878747c3c6794aaffcde77b263b371930bb
+vendor/lib/libmmosal_proprietary.so|535431339dd04e911c53c72883a1586666f5d547
+-vendor/lib/libMpeg4SwEncoder.so|36dec5d78214dc0318ef18e64ee44146e40dca97
+vendor/lib/libOmxAacDec.so|d2d009fb76d7bd5833ae9c2bc44d042e47d348f9
+vendor/lib/libOmxEvrcDec.so|7a06545ddb12e017d24a410d554cb72b3975d5e7
+vendor/lib/libOmxQcelp13Dec.so|5258ff4ee00def137c5ed0fb1864402dcfb6d7c3
+vendor/lib/libOmxVpp.so|e3b4f2425f017b2a56d997cbe7ce089af49b9603
+vendor/lib/libOmxAlacDec.so|6a56a484d7d5efec576745ba49b9e269787e9f5a
+vendor/lib/libOmxAlacDecSw.so|0dbd639fb1114fd85c031b2b4606006bf6236f7c
+vendor/lib/libOmxAmrDec.so|4033f15372d69d80ed19fa636a66f864476089e5
+vendor/lib/libOmxAmrwbplusDec.so|bbdd3cbc58d564fc6df01ed95c73db277cda0a45
+vendor/lib/libOmxApeDec.so|508f674365242d63e8fa5a578db7b014bbdeaec9
+vendor/lib/libOmxApeDecSw.so|baf0b05366422d8e6278a860b72f957414c588d0
+vendor/lib/libOmxDsdDec.so|992224b51061f88d1acb5b4e468b5ba70763bdd0
+vendor/lib/libOmxG711Dec.so|ff139cda712452b58878167d30134a786106943f
+vendor/lib/libOmxVideoDSMode.so|7626f73272ada85a99137efcf295816a04857de4
+vendor/lib/libvppclient.so|bc974275dd4fa091ccc223bf48ef50d40be329c4
+vendor/lib/libvpphvx.so|6d88442e021ff318d028f44625f7cf4051d85adf
+vendor/lib/libvqzip.so|0f3c9a2a4cf1fba251c15812bc62cfb048b577a4
+vendor/lib/libvpptestutils.so|86261b1f874bcc998aebc54e217ae23a5eb46425
+vendor/lib/vendor.qti.hardware.vpp@1.1.so|4a5ec90b0ae28dc2ed00b1d498ce422b664b34bb
+vendor/lib64/libAlacSwDec.so|075b504694c7f2961778cd9f7d2232b3df418954
+vendor/lib64/libApeSwDec.so|863cb1bde34ffb373a4a0edf83a31ee277a37756
+vendor/lib64/libFlacSwDec.so|b7f1f608db80ce3394a9d9371f9d4c3aa7f48fe5
+vendor/lib64/libI420colorconvert.so|015c00020ad73aa2745c0053f6b9688f787a2be2
+vendor/lib64/libmm-color-convertor.so|534c237999f179d4c610f0d6f0da70d0ceb39421
+vendor/lib64/libmmosal_proprietary.so|d0bcd6c2d4cfd133cf9ba1f6cba4b298ba3462c7
+-vendor/lib64/libMpeg4SwEncoder.so|a1c0f39350f443568ad85bbfe8674028e03a1341
+vendor/lib64/libOmxAacDec.so|959210cfc73bfd43d73ce253a8ff6c87ac27b615
+vendor/lib64/libOmxAlacDec.so|aa5dc497ed0f52efe55bacf4711cd990b6154509
+vendor/lib64/libOmxAlacDecSw.so|11c916431a4faa05b0544de3649680112b8c798e
+vendor/lib64/libOmxAmrDec.so|7df6db19b215e26b4f38ceee76226cccfa2a1fd8
+vendor/lib64/libOmxAmrwbplusDec.so|118fc2c5a483d3b5715ae01200035086c8b2ce61
+vendor/lib64/libOmxApeDec.so|08af8b14d5f88b443510c59bfb8e75503c64e998
+vendor/lib64/libOmxApeDecSw.so|8e211bd89c2574cd4fc689f58a878e18eea5bca0
+vendor/lib64/libOmxEvrcDec.so|d8175dca4436b2a8f99d8f190412049fc8496908
+vendor/lib64/libOmxG711Dec.so|a6b2ce15476bef4e9c5d5493db7908044ab8141e
+vendor/lib64/libOmxQcelp13Dec.so|7e5ea70996ce3d91f1829ce08dbd7f3bfa5706e2
+vendor/lib64/libOmxVpp.so|be94ad44613bd5163e4e4d9214191928c2f6de20
+vendor/lib64/libvppclient.so|67fcab77079c991eae6a88a30d062e0f677c62f3
+vendor/lib64/libvpplibrary.so|f15722c428bf4325c5518ac57c4f4a2d4e31362a
+vendor/lib64/libvpphvx.so|90a8c4d63e8af90f6930a51dd2edbf11f25f9ecd
+vendor/lib64/libvpptestutils.so|12d04186cfc72575a4e4c14a125ecd906ba3dbbe
+vendor/lib64/vendor.qti.hardware.vpp@1.1.so|9b09cc9ba87869b866868771a4e0fb2a68b99945
 
-# Media - hardware
-vendor/lib/libarbitrarybytes.so
-vendor/lib/libc2dcolorconvert.so
-vendor/lib/libmm-omxcore.so
-vendor/lib/libOmxAacEnc.so
-vendor/lib/libOmxAmrEnc.so
-vendor/lib/libOmxCore.so
-vendor/lib/libOmxEvrcEnc.so
-vendor/lib/libOmxG711Enc.so
-vendor/lib/libOmxQcelp13Enc.so
-vendor/lib/libOmxSwVdec.so
-vendor/lib/libOmxSwVencMpeg4.so
-vendor/lib/libOmxVdec.so
-vendor/lib/libOmxVenc.so
-vendor/lib/libplatformconfig.so
-vendor/lib/libstagefrighthw.so
-vendor/lib64/libarbitrarybytes.so
-vendor/lib64/libc2dcolorconvert.so
-vendor/lib64/libmm-omxcore.so
-vendor/lib64/libOmxAacEnc.so
-vendor/lib64/libOmxAmrEnc.so
-vendor/lib64/libOmxCore.so
-vendor/lib64/libOmxEvrcEnc.so
-vendor/lib64/libOmxG711Enc.so
-vendor/lib64/libOmxQcelp13Enc.so
-vendor/lib64/libOmxSwVdec.so
-vendor/lib64/libOmxSwVencMpeg4.so
-vendor/lib64/libOmxVdec.so
-vendor/lib64/libOmxVenc.so
-vendor/lib64/libstagefrighthw.so
-vendor/lib64/libplatformconfig.so
+# Media - hardware - from Redmi K20 davinci-user 9 PKQ1.190302.001 V10.3.6.0.PFJCNXM release-keys
+vendor/lib/libarbitrarybytes.so|5553cf2a5e8ff1e99cfc83fa03596b1dea1147e2
+vendor/lib/libc2dcolorconvert.so|bb97a871b8df273627064eae69fe96302d9ee6fa
+vendor/lib/libmm-omxcore.so|bc34f196ffdd0d699cbc4a75cc659f6bfa20c6ad
+vendor/lib/libOmxAacEnc.so|00824ca010654cff32b71184f0f1e38b1cc7c663
+vendor/lib/libOmxAmrEnc.so|b4f0e74eaf20e3ae4fdab9b204379d7d02ad9685
+vendor/lib/libOmxCore.so|707b910c303b42324426e147f7fe36834b10bf78
+vendor/lib/libOmxEvrcEnc.so|835e5a721771a2460f8f988b49256d1bc4681ee4
+vendor/lib/libOmxG711Enc.so|bae5eb054165bb87fd4166012798f75ec9dd691d
+vendor/lib/libOmxQcelp13Enc.so|ede14f0216f7d84b506f3f158930419cb81dff08
+vendor/lib/libOmxSwVdec.so|52e9409c80166cd326e907f9b1f35bf63a8c295e
+vendor/lib/libOmxSwVencMpeg4.so|8ab339a2febf4cf177da5b3778f82cc82cf0e93e
+vendor/lib/libOmxVdec.so|ce97984e9e75f967df9aaf07a8eec6e6a0d8c13b
+vendor/lib/libOmxVenc.so|7c07b94ea6a6f88f78a9af22a16754d757f141f9
+vendor/lib/libplatformconfig.so|65a27558adeaa74250e699342a382737b2a6a68b
+vendor/lib/libstagefrighthw.so|3d3cab8c0c5f9dadf398c93e48dce855538af6b0
+vendor/lib64/libarbitrarybytes.so|b87e943d865f00fe323e03e034284dda3ac50af0
+vendor/lib64/libc2dcolorconvert.so|89ddb6f10d9d12c4b92e4c203bb32f9e8bf881c8
+vendor/lib64/libmm-omxcore.so|895bf517a15053ffad93fa2db90ecb66d8c968b9
+vendor/lib64/libOmxAacEnc.so|c81b1c7671012c5535468c70aba9e0d2d3fbeb3e
+vendor/lib64/libOmxAmrEnc.so|95954ee9d3b85d357bc41324731297a3ff656588
+vendor/lib64/libOmxCore.so|90de15e035fee11d632a57d11cc5896cb7aa8fb4
+vendor/lib64/libOmxEvrcEnc.so|3bb18e70c1e7139e9aa79b469e5e00a0f316b31b
+vendor/lib64/libOmxG711Enc.so|b9640db5d456b5525dfcef851f16fd0ff004c517
+vendor/lib64/libOmxQcelp13Enc.so|485bebad1306c2a883c8cc0bdfaf2fe00ea9ed14
+vendor/lib64/libOmxSwVdec.so|e29f98af5648548a25c6d55598b9cdd89247ce4e
+vendor/lib64/libOmxSwVencMpeg4.so|df4c6fcf1f59ba7e1d941b82d59612fb918eccfa
+vendor/lib64/libOmxVdec.so|90ae32caa1571f03483c5c1721c1485c9cc99d92
+vendor/lib64/libOmxVenc.so|f1eebd1f861997be97ee18f6f0637fa3351ac7b0
+vendor/lib64/libOmxWmaDec.so|602603531b9462be29f68859730ece881ddf1769
+vendor/lib64/libstagefrighthw.so|f27df5ca7b886d5aa18eeb9704a0cbc1a86427c6
+vendor/lib64/libplatformconfig.so|7d3e94749da5fb6a12fe831b849c6b3c5ea4e73e
 
-# Mlipay
-vendor/bin/mlipayd@1.1
-vendor/etc/init/vendor.xiaomi.hardware.mlipay@1.1-service.rc
-vendor/lib64/libmlipay@1.1.so
-vendor/lib64/libmlipay.so
-vendor/lib64/vendor.xiaomi.hardware.mlipay@1.0.so
-vendor/lib64/vendor.xiaomi.hardware.mlipay@1.1.so
+# Mlipay - from Redmi K20 davinci-user 9 PKQ1.190302.001 V10.3.6.0.PFJCNXM release-keys
+vendor/bin/mlipayd@1.1|0167e5ee1eae0929ba6a1488fbfad4b655212496
+vendor/etc/init/vendor.xiaomi.hardware.mlipay@1.1-service.rc|b5ab5bcd031fe4d9781b5911c0595eaeac8b80ea
+vendor/lib64/libmlipay@1.1.so|9ed1a753a3ecbe603e37b056513239392776a8ed
+vendor/lib64/libmlipay.so|e2d3bc866ced01ca64b5cc01e26db1c2a857bfdc
+vendor/lib64/vendor.xiaomi.hardware.mlipay@1.0.so|bcd74afe1002827f017eda1ed3c5412874711a6e
+vendor/lib64/vendor.xiaomi.hardware.mlipay@1.1.so|8f25b37df26cab5c11b3b32faaee3903628aed88
 
-# Neural-networks
-vendor/bin/hw/android.hardware.neuralnetworks@1.1-service-qti
-vendor/etc/init/android.hardware.neuralnetworks@1.1-service-qti.rc
-vendor/lib64/libhexagon_nn_stub.so
+# Neural-networks - from Redmi K20 davinci-user 9 PKQ1.190302.001 V10.3.6.0.PFJCNXM release-keys
+vendor/bin/hw/android.hardware.neuralnetworks@1.1-service-qti|d9fe8d72c53e476538471dc1b79e25b3128fd463
+vendor/etc/init/android.hardware.neuralnetworks@1.1-service-qti.rc|f36a191ba1fdd82d8c05cf9abf3940f9af32e238
+vendor/lib64/libhexagon_nn_stub.so|2ff38e841830e0aa7ba1e074a6ce2f2d961d3352
 
-# Perf
-vendor/bin/msm_irqbalance
-vendor/bin/hw/vendor.qti.hardware.perf@1.0-service
-vendor/etc/init/vendor.qti.hardware.perf@1.0-service.rc
-vendor/etc/perf/commonresourceconfigs.xml
-vendor/etc/perf/perfboostsconfig.xml
-vendor/etc/perf/targetconfig.xml
-vendor/etc/perf/targetresourceconfigs.xml
-vendor/etc/powerhint.xml
-vendor/lib/libperfgluelayer.so
-vendor/lib/libqti-perfd-client.so
-vendor/lib/libqti-perfd.so
-vendor/lib/libqti-util.so
-vendor/lib/libqti-utils.so
-vendor/lib/vendor.qti.hardware.perf@1.0.so
-vendor/lib64/liblearningmodule.so
-vendor/lib64/libmeters.so
-vendor/lib64/libperfgluelayer.so
-vendor/lib64/libqti-perfd-client.so
-vendor/lib64/libqti-perfd.so
-vendor/lib64/libqti-util.so
-vendor/lib64/libqti-utils.so
-vendor/lib64/vendor.qti.hardware.perf@1.0.so
+# Perf - from Redmi K20 davinci-user 9 PKQ1.190302.001 V10.3.6.0.PFJCNXM release-keys
+vendor/bin/msm_irqbalance|0b9421b30566d7c42efd696443bd000975fed7d6
+vendor/bin/hw/vendor.qti.hardware.perf@1.0-service|ae806f654364c4d14f598d47448a72c7660e2e11
+vendor/etc/init/vendor.qti.hardware.perf@1.0-service.rc|b50182aadab2e31409df61c523d0fb914a394e43
+vendor/etc/perf/commonresourceconfigs.xml|7bf6b442875ec6244db05ffcc2ebb85a1c370863
+vendor/etc/perf/perfboostsconfig.xml|65946aefb3cf87cf0aef26617e89bcabf71fcaba
+vendor/etc/perf/targetconfig.xml|53d6e2936c1cdc67edf86a2ccf04084adbff4a68
+vendor/etc/perf/targetresourceconfigs.xml|0a614d97672c516aedc253aec525468fbdb270ec
+vendor/etc/perf/thermalboost.conf|3a70ac91160e48a64578f0b7775798f19040e87d
+vendor/etc/powerhint.xml|a6a552f11d0c8cdee91c21293118ca1e0881e00c
+vendor/lib/libperfgluelayer.so|6cee0719bb4189572ce77f05c01bf871358738fd
+vendor/lib/libqti-perfd-client.so|59ed27dae8d296d55247f945f32231a38984818d
+vendor/lib/libqti-perfd.so|001472d46c13adec08aad430d7b2dc8bdf308832
+vendor/lib/libqti-util.so|6512291deb0695b9387d8d5af3ed11f6dffd8fb7
+vendor/lib/libqti-utils.so|36422251c93c232ece8c25420670cf2d4637d0c1
+vendor/lib/vendor.qti.hardware.perf@1.0.so|7ec925a952d286b983d4c34a2335365b26f88cea
+vendor/lib64/liblearningmodule.so|3d92dcc8e4ba7fe0227e47a236eacda62babce9c
+vendor/lib64/libmeters.so|742ad0162bfa789a107473789106fd14d2bf41ca
+vendor/lib64/libperfgluelayer.so|eb137856d7180bac0bb33c463ac1851fa3904f39
+vendor/lib64/libqti-perfd-client.so|9f00e58ced9def91c6a6139a864cd468ccb2dcfc
+vendor/lib64/libqti-perfd.so|ff6d1ebd595282d852f5b9f52f47bc2a118b35d9
+vendor/lib64/libqti-util.so|7554e2f588fe05b4a767c5db1da818495160ce24
+vendor/lib64/libqti-utils.so|f2856a11ff9d0722ae2aa348006052d2d47196d7
+vendor/lib64/vendor.qti.hardware.perf@1.0.so|66a9ded3ff918b150614c7fd073cd3256f8eaed2
 
-# Peripheral manager
-vendor/bin/pm-proxy
-vendor/bin/pm-service
-vendor/lib/libperipheral_client.so
-vendor/lib64/libperipheral_client.so
+# Peripheral manager - from Redmi K20 davinci-user 9 PKQ1.190302.001 V10.3.6.0.PFJCNXM release-keys
+vendor/bin/pm-proxy|079048211eb740053bb0f5451ddfb0c15cbcf3aa
+vendor/bin/pm-service|17d4ff66869b9073bbe484eaf36e846887f8bc60
+vendor/lib/libperipheral_client.so|5f9d801c8f88c12f683a569ea95d96cec5131832
+vendor/lib64/libperipheral_client.so|0005c7b4507694e7bd4476e984e259e40890948d
 
 # Power-off charging daemon
 -sbin/charger:sbin/chargeonlymode;rootfs|f048d2cc20783ba1a608b73d440b3053af6ec9fd
 
-# Postprocessing
-vendor/bin/hw/vendor.display.color@1.0-service
-vendor/etc/init/vendor.display.color@1.0-service.rc
-vendor/lib64/libdisp-aba.so
-vendor/lib64/vendor.display.color@1.0.so
-vendor/lib64/vendor.display.color@1.1.so
-vendor/lib64/vendor.display.color@1.2.so
-vendor/lib64/vendor.display.postproc@1.0.so
+# Postprocessing - from Redmi K20 davinci-user 9 PKQ1.190302.001 V10.3.6.0.PFJCNXM release-keys
+vendor/bin/hw/vendor.display.color@1.0-service|298d8bc19c91c75e3d871363e1844741ed452e66
+vendor/etc/init/vendor.display.color@1.0-service.rc|5ad673f879b3685a0e79b5633437e5499cb94f48
+vendor/lib64/libdisp-aba.so|bef081a4a63fca47ffbb06c03c6a28eb29b38880
+vendor/lib64/vendor.display.color@1.0.so|e9ed224db77fadc0366decf928e2caba926a81f3
+vendor/lib64/vendor.display.color@1.1.so|374864f009a5e8ebb2469962b24862d0cccbae59
+vendor/lib64/vendor.display.color@1.2.so|e22a29b1ba27f0c93a7a03f34857fb6b91028532
+vendor/lib64/vendor.display.color@1.3.so|1e501f4fd40d71c61d9a0cb4b471db18f47c1fab
+vendor/lib64/vendor.display.postproc@1.0.so|8f9be9be9f944f437ec0882e3ef5d88ad6b1e1d4
 
-# QMI
+# QMI - from Redmi K20 davinci-user 9 PKQ1.190302.001 V10.3.6.0.PFJCNXM release-keys
 etc/permissions/qti_libpermissions.xml|ef3c88495f2f61a2d16e1445113a9d80f8db0e0a
-etc/permissions/qti_permissions.xml
-vendor/bin/irsc_util
-vendor/bin/pd-mapper
-vendor/lib/libdiag.so
-vendor/lib/libdsutils.so
-vendor/lib/libidl.so
-vendor/lib/libqcci_legacy.so
-vendor/lib/libqdi.so
-vendor/lib/libqdp.so
-vendor/lib/libqmi_cci.so
-vendor/lib/libqmi_client_helper.so
-vendor/lib/libqmi_client_qmux.so
-vendor/lib/libqmi_common_so.so
-vendor/lib/libqmi_csi.so
-vendor/lib/libqmi_encdec.so
-vendor/lib/libqmi.so
-vendor/lib/libqmiservices.so
-vendor/lib64/libdiag.so
-vendor/lib64/libdsutils.so
-vendor/lib64/libidl.so
-vendor/lib64/libqcci_legacy.so
-vendor/lib64/libqdi.so
-vendor/lib64/libqdp.so
-vendor/lib64/libqmi_cci.so
-vendor/lib64/libqmi_client_helper.so
-vendor/lib64/libqmi_client_qmux.so
-vendor/lib64/libqmi_common_so.so
-vendor/lib64/libqmi_csi.so
-vendor/lib64/libqmi_encdec.so
-vendor/lib64/libqmi.so
-vendor/lib64/libqmiservices.so
+etc/permissions/qti_permissions.xml|e6ff4572352b1a4f91b6b9d7cbb1cad9924410a0
+vendor/bin/irsc_util|99737b14358e4b7d5e6675a349b334791dfb06b9
+vendor/bin/pd-mapper|a15c06d0883a47a5d81a07b8d0fa59ef024035d4
+vendor/lib/libdiag.so|23dd635ca5756eedac5ffcf8a9ffc6dc2eb0c27b
+vendor/lib/libdsutils.so|76921c37279deedd03fa5376c798ef305d953c59
+vendor/lib/libidl.so|cd5b6ad1923540693b1544e6a5a419bc2669c447
+vendor/lib/libqcci_legacy.so|1907f4f1ccfa9a4cd7dac25f98affbeac27a9bad
+vendor/lib/libqdi.so|0433bf35a3c59f98ab0a1f6302718d1a9b4149bd
+vendor/lib/libqdp.so|20e70ba03917a33e5a9e5f17ba29ea466bfc3596
+vendor/lib/libqmi_cci.so|0aa0f47a536a48078c796fba4d44aeeb653f7c02
+vendor/lib/libqmi_client_helper.so|884dc8126bc09acce46b2026f7edc0265eb6f320
+vendor/lib/libqmi_client_qmux.so|5b313b3b3df535136b6588e8ff8a3f47c3b449ea
+vendor/lib/libqmi_common_so.so|55fac6d18d48f8e68d5a27857ad83b5e77d79a34
+vendor/lib/libqmi_csi.so|85fffe3786348bf98f0fe537c80077ca8784a586
+vendor/lib/libqmi_encdec.so|ec45cb97fdf8e15e930e5f6de81ac4c4b32799c2
+vendor/lib/libqmi.so|fc5598d62ca159ef59496b490343f76c2266b334
+vendor/lib/libqmiservices.so|42f92c3fd96e13d33169d17c716255f678634b52
+vendor/lib64/libdiag.so|e45678d13482aaabf0aeb063e2b98bdcad0a7890
+vendor/lib64/libdsutils.so|e27a4623d67cafa5d0e219434eff40bea7d4834c
+vendor/lib64/libidl.so|d9715524c0e98431d00e54a91044f1bec44c8aee
+vendor/lib64/libqcci_legacy.so|d64f4f1f9a5ffbc05aef4bfc5c4b00d5e8e89391
+vendor/lib64/libqdi.so|318a849c834bbe08eb7b2560830f659db9694017
+vendor/lib64/libqdp.so|9026cb81f06b2413d2323db168e36bb199767418
+vendor/lib64/libqmi_cci.so|eeb99f1457869e8ea5d0e571f99dc0a8c03f0903
+vendor/lib64/libqmi_client_helper.so|d13f5d4f0e9f492bf5cc56bee593e7b28cd7be37
+vendor/lib64/libqmi_client_qmux.so|f5f464d11a886d56a3cc7844b1218821e55edeee
+vendor/lib64/libqmi_common_so.so|27cb3474e10a4c372f0cc0bd79027d4abfea6b5f
+vendor/lib64/libqmi_csi.so|7610670c01ea16c457c234eaf246719cedbe5afe
+vendor/lib64/libqmi_encdec.so|bfbb1ba8b8a8d10b82c2eb7784e71657d88571b0
+vendor/lib64/libqmi.so|200c8b46f909b9bc8a3f516f8e928ca30d2304a4
+vendor/lib64/libqmiservices.so|2eadabe256667fb9e7d8fe87c93a6484efc1485d
 
-# QTEE connector
-vendor/bin/hw/vendor.qti.hardware.qteeconnector@1.0-service
-vendor/etc/init/vendor.qti.hardware.qteeconnector@1.0-service.rc
-vendor/lib64/hw/vendor.qti.hardware.qteeconnector@1.0-impl.so
-vendor/lib64/libGPQTEEC_vendor.so
-vendor/lib64/libGPTEE_vendor.so
-vendor/lib64/libQTEEConnector_vendor.so
-vendor/lib64/vendor.qti.hardware.qteeconnector@1.0.so
-vendor/lib/hw/vendor.qti.hardware.qteeconnector@1.0-impl.so
-vendor/lib/libGPQTEEC_vendor.so
-vendor/lib/libGPTEE_vendor.so
-vendor/lib/libQTEEConnector_vendor.so
-vendor/lib/vendor.qti.hardware.qteeconnector@1.0.so
+# QTEE connector - from Redmi K20 davinci-user 9 PKQ1.190302.001 V10.3.6.0.PFJCNXM release-keys
+vendor/bin/hw/vendor.qti.hardware.qteeconnector@1.0-service|b9b9c09605f3a3fe04ab7cbc3e6fbbd52b51e8c1
+vendor/etc/init/vendor.qti.hardware.qteeconnector@1.0-service.rc|c966350ee67d3a7c73ca7184e3725264025d16f5
+vendor/lib64/hw/vendor.qti.hardware.qteeconnector@1.0-impl.so|2ed0e2fad17c44019607dcf144bee5bfbda1fb0c
+vendor/lib64/libGPQTEEC_vendor.so|f7b7c963c843cc7b04d01e900ed3fc82b3519e4b
+vendor/lib64/libGPTEE_vendor.so|e3217e832f56f31ac2758ed67fc20b1036b483d7
+vendor/lib64/libQTEEConnector_vendor.so|5866a33390f61e907caf7c5a6c5af9311fbba4b4
+vendor/lib64/vendor.qti.hardware.qteeconnector@1.0.so|1c29100203a966de8902a4abc7b98575755d37f3
+vendor/lib/hw/vendor.qti.hardware.qteeconnector@1.0-impl.so|876088266cf34f0a9593d15e8d132f29dc1e9633
+vendor/lib/libGPQTEEC_vendor.so|dfab4320b0cb3ff8fee88b26fa2a650172e51ff8
+vendor/lib/libGPTEE_vendor.so|b7a6c64a93eee74e0ad5f1a982641c9d5465523d
+vendor/lib/libQTEEConnector_vendor.so|b9461275e5767ea41812355d14787b2cef1afdf4
+vendor/lib/vendor.qti.hardware.qteeconnector@1.0.so|ea51c0cda72aa076b7c9d4d4dd9c9a72c7906469
 
-# Radio
--app/datastatusnotification/datastatusnotification.apk
--app/embms/embms.apk
--app/QtiTelephonyService/QtiTelephonyService.apk
-vendor/bin/ATFWD-daemon
-vendor/bin/netmgrd
-vendor/bin/port-bridge
-vendor/bin/qrtr-cfg
-vendor/bin/qrtr-lookup
-vendor/bin/qrtr-ns
-vendor/bin/rmt_storage
-vendor/bin/tftp_server
-vendor/bin/hw/qcrild
-vendor/etc/data/dsi_config.xml
-vendor/etc/data/netmgr_config.xml
-vendor/etc/init/qcrild.rc
-etc/permissions/embms.xml
-etc/permissions/qcrilhook.xml
-etc/permissions/telephonyservice.xml
-framework/embmslibrary.jar
-framework/qcrilhook.jar
-framework/qti-telephony-common.jar
-framework/QtiTelephonyServicelibrary.jar
--priv-app/qcrilmsgtunnel/qcrilmsgtunnel.apk
-vendor/bin/qti
-vendor/lib/libmdmdetect.so
-vendor/lib64/libconfigdb.so
-vendor/lib64/libdsi_netctrl.so
-vendor/lib64/liblqe.so
-vendor/lib64/libmdmdetect.so
-vendor/lib64/libnetmgr.so
-vendor/lib64/libnetmgr_common.so
-vendor/lib64/libnetmgr_nr_fusion.so
-vendor/lib64/libnetmgr_rmnet_ext.so
-vendor/lib64/libnlnetmgr.so
-vendor/lib64/libpdmapper.so
-vendor/lib64/libpdnotifier.so
-vendor/lib64/libqcmaputils.so
-vendor/lib64/libqrtr.so
-vendor/lib64/libqsocket.so
-vendor/lib64/libqcrilFramework.so
-vendor/lib64/libril-qc-hal-qmi.so
-vendor/lib64/libril-qc-ltedirectdisc.so
-vendor/lib64/libril-qc-qmi-1.so
-vendor/lib64/libril-qc-radioconfig.so
-vendor/lib64/libril-qcril-hook-oem.so
-vendor/lib64/librilqmiservices.so
-vendor/lib64/libsettings.so
-vendor/lib64/libsystem_health_mon.so
-vendor/lib64/qcrild_librilutils.so
-vendor/lib64/vendor.qti.hardware.data.connection@1.0.so
-vendor/lib64/vendor.qti.hardware.radio.uim_remote_client@1.0.so
-vendor/lib64/vendor.qti.hardware.radio.qtiradio@1.0.so
-vendor/lib64/vendor.qti.hardware.radio.qtiradio@2.0.so
-vendor/lib64/vendor.qti.hardware.radio.qtiradio@2.1.so
-vendor/lib64/vendor.qti.hardware.radio.lpa@1.0.so
-vendor/lib64/vendor.qti.hardware.radio.atcmdfwd@1.0.so
-vendor/lib64/vendor.qti.hardware.radio.uim@1.0.so
-vendor/lib64/vendor.qti.hardware.radio.uim@1.1.so
-vendor/lib64/vendor.qti.hardware.radio.uim_remote_server@1.0.so
-vendor/lib64/vendor.qti.hardware.radio.qcrilhook@1.0.so
-vendor/lib64/vendor.qti.hardware.radio.am@1.0.so
-vendor/radio/qcril_database/qcril.db
+# Radio - from Redmi K20 davinci-user 9 PKQ1.190302.001 V10.3.6.0.PFJCNXM release-keys
+-app/datastatusnotification/datastatusnotification.apk|13c730382d65542bf001bf5920c42f39ffb8b6e6
+-app/embms/embms.apk|2959d855b55aad9deb4e47dfa74b6bd4e8393666
+-app/QtiTelephonyService/QtiTelephonyService.apk|f0badcba9c36089e001566616df1edec2c66ac68
+vendor/bin/ATFWD-daemon|2f4f7b7939933bf40ae47676a68fc5835b444c04
+vendor/bin/netmgrd|1d541f8fcb557dc25ad866ec5db94a6c7d9451f8
+vendor/bin/port-bridge|2841b030f731f14689cc7cbdf3a1773036ff1c6c
+vendor/bin/qrtr-cfg|5ac773286d85e3cf6cf1eed8934306f483f4ebe0
+vendor/bin/qrtr-lookup|c647e75b92cc332574a4962d0c775f47bd205bd0
+vendor/bin/qrtr-ns|19271529fa482c870d1450d07d105e00a0df75e5
+vendor/bin/rmt_storage|52cd73657fee2636f190208e8c553eb0ea19d33e
+vendor/bin/tftp_server|df4d555108d42c45c68209e3113d39ac862fa1ce
+vendor/bin/hw/qcrild|291955cdec2f266319542f9fb3209a60b694f265
+vendor/etc/data/dsi_config.xml|f4861831fcb21d43e2a9ca12519155ebb8ac1407
+vendor/etc/data/netmgr_config.xml|4f9a64a0a096b082f44c3db971bcc5c9a368f1e6
+vendor/etc/init/qcrild.rc|17cf4934bf443cf6469d8b3ff622eeb0e4a0aac6
+etc/permissions/embms.xml|5e1b492874c221a7e1188fc3a5369d32b3e67969
+etc/permissions/qcrilhook.xml|9fc58a3d54d20ac1d53bab14608815121aefbce5
+etc/permissions/telephonyservice.xml|b297c8a27443570377d78586b00198839ce326bb
+framework/embmslibrary.jar|980832af89ed59120b7362ddb56d3120bb6b2239
+framework/qcrilhook.jar|bf69111fccb5b4deaa008b67bc135763978dcc12
+framework/qti-telephony-common.jar|6cc6ab4ab2cbd333a113ffe3add8d8793aec3c1d
+framework/QtiTelephonyServicelibrary.jar|fbbf626b1c74732d4a23a3354c384e34f0fe91ed
+-priv-app/qcrilmsgtunnel/qcrilmsgtunnel.apk|4b97f3535677468e0af70ccaedd5056ee4cf29c2
+vendor/bin/qti|ede94854ec93d84f0887c492f107b8179c2d1f5a
+vendor/lib/libmdmdetect.so|0f4fe0196b0871fdbd4d8b0ae11b94e7c8ed79b9
+vendor/lib64/libconfigdb.so|54285c8a61fa0ed02be28385975854fb13cdcac6
+vendor/lib64/libdsi_netctrl.so|81d90b0c5f6a3948318317012afeb2bf43df9fc8
+vendor/lib64/liblqe.so|950dfda0d9b5b12c10545ba85cbaa3a0b5911986
+vendor/lib64/libmdmdetect.so|669eb134629a3d4352b7ed947a2d683966c5bce9
+vendor/lib64/libnetmgr.so|c91141453b628dfe69363070682808fc9ee6516f
+vendor/lib64/libnetmgr_common.so|23da55cb284a19bb316a265f0491eede2598f8a5
+vendor/lib64/libnetmgr_nr_fusion.so|67f6f20f9074a5d17ce846b026a00f9da8b9e012
+vendor/lib64/libnetmgr_rmnet_ext.so|ba1ba166c29dbffc211722fd6a01c922846de696
+vendor/lib64/libnlnetmgr.so|7e7b7e8ea563fd568992cd7749030859c06a7c88
+vendor/lib64/libpdmapper.so|b7a842445c78954db148436ca61ba9ebe186df37
+vendor/lib64/libpdnotifier.so|4e0b731b35c252e759af23cde54db808b23b4042
+vendor/lib64/libqcmaputils.so|5a6255f4192de66ec54dad042fdcfd697602e3bd
+vendor/lib64/libqrtr.so|7844de2894da2dad0271a6da8467e3044242348b
+vendor/lib64/libqsocket.so|3b4f7ef11416491d78a32de374d6f57201613dcc
+vendor/lib64/libqcrilFramework.so|b3d5af02319837799dc7fd73ba63a093bec1fc3b
+vendor/lib64/libril-qc-hal-qmi.so|8fac43f3491238cfc532a507ebab427a0d47fe42
+vendor/lib64/libril-qc-ltedirectdisc.so|9eb91bc825016ba0a9be827143c675d71d632fb3
+vendor/lib64/libril-qc-qmi-1.so|e509f3c085dd67970b9d5114b9d40de597f1ce57
+vendor/lib64/libril-qc-radioconfig.so|188cec4ef2e55d2030da025febb73d2194105aad
+vendor/lib64/libril-qcril-hook-oem.so|5679d61722b9b156a57867c31811de2a2bd09f59
+vendor/lib64/librilqmiservices.so|b6d777c457fe4a46ad0cedd943b051ec7944f7ac
+vendor/lib64/libsettings.so|2fbfa34777a0c14d1da01307e8908a2e2aead9ca
+vendor/lib64/libsystem_health_mon.so|13df42bc8cdad7ccb134b3a6a288b8480fd5dbf8
+vendor/lib64/qcrild_librilutils.so|e1fa513d69010dcf906a2a97de2bc90227298614
+vendor/lib64/vendor.qti.hardware.data.connection@1.0.so|8d503472a2131c1f9470dc7538ed1f570bf9737b
+vendor/lib64/vendor.qti.hardware.radio.uim_remote_client@1.0.so|d2f7734aad61cf7dbe5bb9f53557b3075039dcd2
+vendor/lib64/vendor.qti.hardware.radio.qtiradio@1.0.so|d8f8b10ce55e29be2ad463287f4e5d56e27f2727
+vendor/lib64/vendor.qti.hardware.radio.qtiradio@2.0.so|345798ebd9af32b0c4048f721736641a1bf99449
+vendor/lib64/vendor.qti.hardware.radio.qtiradio@2.1.so|7e2069eef15ffe31a6b709f8f524ad44fa88cccd
+vendor/lib64/vendor.qti.hardware.radio.qtiradio@2.2.so|d0cf672b3126662d7fa44813510fc02668712994
+vendor/lib64/vendor.qti.hardware.radio.lpa@1.0.so|f4fe498e78ed3372b6088170664b071e65386045
+vendor/lib64/vendor.qti.hardware.radio.atcmdfwd@1.0.so|a3ff3d9aa43bf8416939061c39d8c4db34ea342b
+vendor/lib64/vendor.qti.hardware.radio.uim@1.0.so|7307fd84803d38687aed7c7321f06ae5f1b3aac3
+vendor/lib64/vendor.qti.hardware.radio.uim@1.1.so|c2dd73f36cd24c5227436ec6dab71338a43fdabe
+vendor/lib64/vendor.qti.hardware.radio.uim_remote_server@1.0.so|42665336e4bcbef1fae69dfdc6dfe36f908d66c0
+vendor/lib64/vendor.qti.hardware.radio.qcrilhook@1.0.so|94c235a493b5a7844488c91ef4b51a38a47e27e7
+vendor/lib64/vendor.qti.hardware.radio.am@1.0.so|0dfa2ddec18020194fcbe10cb74dd04e5c2c7784
+vendor/radio/qcril_database/qcril.db|a2014a207329c130e2f30582bbbb5e72f9405fb4
 
-# Radio - IMS
--priv-app/ims/ims.apk
--app/imssettings/imssettings.apk
-etc/permissions/com.qualcomm.qti.imscmservice.xml
-etc/permissions/com.qualcomm.qti.imscmservice-V2.0-java.xml
-etc/permissions/com.qualcomm.qti.imscmservice-V2.1-java.xml
-framework/com.qualcomm.qti.imscmservice-V2.0-java.jar
-framework/com.qualcomm.qti.imscmservice-V2.1-java.jar
-framework/com.qualcomm.qti.uceservice-V2.0-java.jar
-framework/vendor.qti.ims.callinfo-V1.0-java.jar
-framework/vendor.qti.ims.rcsconfig-V1.0-java.jar
-lib64/lib-imsvideocodec.so
-lib64/lib-imsvt.so
-lib64/lib-imsvtextutils.so
-lib64/lib-imsvtutils.so
-lib64/libimscamera_jni.so
-lib64/libimsmedia_jni.so
-lib64/librcc.so
-lib64/vendor.qti.imsrtpservice@1.0.so
-vendor/bin/ims_rtp_daemon
-vendor/bin/imsdatadaemon
-vendor/bin/imsqmidaemon
-vendor/bin/imsrcsd
-vendor/lib64/com.qualcomm.qti.imscmservice@1.0.so
-vendor/lib64/com.qualcomm.qti.imscmservice@2.0.so
-vendor/lib64/com.qualcomm.qti.imscmservice@2.1.so
-vendor/lib64/com.qualcomm.qti.uceservice@2.0.so
-vendor/lib64/lib-dplmedia.so
-vendor/lib64/lib-imscmservice.so
-vendor/lib64/lib-imsdpl.so
-vendor/lib64/lib-imsqimf.so
-vendor/lib64/lib-imsrcs-v2.so
-vendor/lib64/lib-imsrcsbaseimpl.so
-vendor/lib64/lib-imsxml.so
-vendor/lib64/lib-rtpcommon.so
-vendor/lib64/lib-rtpcore.so
-vendor/lib64/lib-rtpdaemoninterface.so
-vendor/lib64/lib-rtpsl.so
-vendor/lib64/lib-uceservice.so
-vendor/lib64/lib-siputility.so
-vendor/lib64/vendor.qti.hardware.radio.ims@1.0.so
-vendor/lib64/vendor.qti.hardware.radio.ims@1.1.so
-vendor/lib64/vendor.qti.hardware.radio.ims@1.2.so
-vendor/lib64/vendor.qti.hardware.radio.ims@1.3.so
-vendor/lib64/vendor.qti.hardware.radio.ims@1.4.so
-vendor/lib64/vendor.qti.imsrtpservice@1.0-service-Impl.so
-vendor/lib64/vendor.qti.imsrtpservice@1.0.so
-vendor/lib64/vendor.qti.ims.callinfo@1.0.so
-vendor/lib64/vendor.qti.ims.rcsconfig@1.0.so
+# Radio - IMS - from Redmi K20 davinci-user 9 PKQ1.190302.001 V10.3.6.0.PFJCNXM release-keys
+-priv-app/ims/ims.apk|a4698e4f68e9f0340bc52ef3b256908023140078
+-app/imssettings/imssettings.apk|571b139b84443180ffcdc2dbf2b6e820a1df8e0b
+etc/permissions/com.qualcomm.qti.imscmservice.xml|db25ef24f1937366d58a53b4f4b8923bc9e98d2d
+etc/permissions/com.qualcomm.qti.imscmservice-V2.0-java.xml|8d25bd7b79baf266950eb484c1a28817f891aec2
+etc/permissions/com.qualcomm.qti.imscmservice-V2.1-java.xml|998076243537f61f3683a3c083f7b27510617368
+framework/com.qualcomm.qti.imscmservice-V2.0-java.jar|1af1b6f7cbffb1208375ae879d5b5921f3804c20
+framework/com.qualcomm.qti.imscmservice-V2.1-java.jar|388d53457eb9e615b288daab54c9bc8319e30e11
+framework/com.qualcomm.qti.uceservice-V2.0-java.jar|e930e07abadfbf165d0f0ce08d708ef02cd1b061
+framework/vendor.qti.ims.callinfo-V1.0-java.jar|33438d3651fc96e0c03c4520f6f0f49fd4d05b43
+framework/vendor.qti.ims.rcsconfig-V1.0-java.jar|1ab2f26840498b76b4eaa7b3c8eca66d330719e9
+lib64/lib-imsvideocodec.so|d54dbdbb1128d55445ac9a974a6edeb1d3b4be08
+lib64/lib-imsvt.so|9e04cabb24ed8d7f7262ff7762c0ebf6b975f908
+lib64/lib-imsvtextutils.so|41b1a05021e48f69aceabc3369c41df194a121ee
+lib64/lib-imsvtutils.so|1b9bff10cb9505596fa3310d047ee4599362c8cb
+lib64/libimscamera_jni.so|5e9c79e66ce1b4a69ba0415c629473bb8b9f5079
+lib64/libimsmedia_jni.so|7e2eae61574f870607255d30c000a05d24279618
+lib64/librcc.so|7e79a256e0dbb4156dd2306d4faa87d6abffb678
+lib64/vendor.qti.imsrtpservice@1.0.so|f46573535ab0dfe12b33de30414fa6b8846c7850
+vendor/bin/ims_rtp_daemon|7816224b1c9b689d172ea3000c14fb8f17c779c1
+vendor/bin/imsdatadaemon|331c989f2ce63302b125afe69751e0ebcd6333eb
+vendor/bin/imsqmidaemon|930e743e97fe7e2852813017eca6ee46b74d0af2
+vendor/bin/imsrcsd|35051ac1ab32d084dd44cd47f8073ba5f3d957bf
+vendor/lib64/com.qualcomm.qti.imscmservice@1.0.so|ac759479ed89b8c578aac0ad607e19b4fa8eb4cd
+vendor/lib64/com.qualcomm.qti.imscmservice@2.0.so|969407ba10ec466cd945871da7b5fcc073fec1ab
+vendor/lib64/com.qualcomm.qti.imscmservice@2.1.so|ca34a2ab125e5b8d95a4ba6aef79a3f0eaa408c1
+vendor/lib64/com.qualcomm.qti.uceservice@2.0.so|01f9f07cddb51dc605cb246120895c1f2a650d32
+vendor/lib64/lib-dplmedia.so|9aa3ef4fc79b9ee2072e2a69b5de2fd4fe7b0b3a
+vendor/lib64/lib-imscmservice.so|5544251f699d56712477c613f52f97a20222b204
+vendor/lib64/lib-imsdpl.so|25329aaa6a360a7be132e4be524e74a15b191ae1
+vendor/lib64/lib-imsqimf.so|7f3451019ad7348b88ebec07060b6f6ddf5f65dd
+vendor/lib64/lib-imsrcs-v2.so|d66364ba0a37cf0e70cec11a4e5722fcc7f3a180
+vendor/lib64/lib-imsrcsbaseimpl.so|866169e9d9e8dc270cc755f9008907d6ff04243f
+vendor/lib64/lib-imsxml.so|d8d6b396bd1ef48ccc6fd27d3e5f34469ac1b349
+vendor/lib64/lib-rtpcommon.so|afbdd66c9e40640a76fb73b00ea705cd1376c938
+vendor/lib64/lib-rtpcore.so|285c428c9ee7f38ad6ac32292a6e891b8121dc7c
+vendor/lib64/lib-rtpdaemoninterface.so|2218b5c0720149013c92cca58637946f7eee55d9
+vendor/lib64/lib-rtpsl.so|e147497843bd9c9be87b5f54a366323a05920db1
+vendor/lib64/lib-uceservice.so|5b08c115e1dcb5765e8a0cacace4d1b9bfcf6396
+vendor/lib64/lib-siputility.so|bbb2fa3c0e61a1d23f14ad42242a8507e85eff6d
+vendor/lib64/vendor.qti.hardware.radio.ims@1.0.so|8d577dd02daa3c19a6bca213504aa06b4ad5cc04
+vendor/lib64/vendor.qti.hardware.radio.ims@1.1.so|595275dda0a2eb07ac5a437ea137b063bd46d221
+vendor/lib64/vendor.qti.hardware.radio.ims@1.2.so|fc162956d829452ffc676442e7df5992192b0559
+vendor/lib64/vendor.qti.hardware.radio.ims@1.3.so|1737b91338d03528179b3b9d8e762d6c29d6a741
+vendor/lib64/vendor.qti.hardware.radio.ims@1.4.so|48e5afc6aaebe2f84827d1b1caeb32014fef8dcc
+vendor/lib64/vendor.qti.imsrtpservice@1.0-service-Impl.so|d86be14fc2104a1679f2b1ccde5c8875b35bee23
+vendor/lib64/vendor.qti.imsrtpservice@1.0.so|b0c7bf19c3ed94cccee5784ff3e0da59fa8c6b68
+vendor/lib64/vendor.qti.ims.callinfo@1.0.so|37791084b25f9ac1e9ec35c6e1183307cc614cba
+vendor/lib64/vendor.qti.ims.rcsconfig@1.0.so|6b9047dc3003a1f12a95b0884aeb2f36bc7616c4
 
 # Sensors
 vendor/bin/sensors.qti
@@ -1264,14 +1272,14 @@ vendor/lib64/libsensorslog.so
 vendor/lib64/sensors.ssc.so
 vendor/lib64/libssc.so
 
-# Soter
--app/SoterService/SoterService.apk
-framework/vendor.qti.hardware.soter-V1.0-java.jar
-lib64/vendor.qti.hardware.soter@1.0.so
-vendor/bin/hw/vendor.qti.hardware.soter@1.0-service
-vendor/etc/init/vendor.qti.hardware.soter@1.0-service.rc
-vendor/lib64/vendor.qti.hardware.soter@1.0.so
-vendor/lib64/hw/vendor.qti.hardware.soter@1.0-impl.so
+# Soter - from Redmi K20 davinci-user 9 PKQ1.190302.001 V10.3.6.0.PFJCNXM release-keys
+-app/SoterService/SoterService.apk|e1897a6b3204f6991daada37bcce0c2b76ee33ef
+framework/vendor.qti.hardware.soter-V1.0-java.jar|36da31dfb0ca292f7e3d3287f460ed3bef38f1c9
+lib64/vendor.qti.hardware.soter@1.0.so|306277aaa2974375cbed96b87e8c0457000823e4
+vendor/bin/hw/vendor.qti.hardware.soter@1.0-service|ec005f00d95514ac506b264732ea52c87f1cdc64
+vendor/etc/init/vendor.qti.hardware.soter@1.0-service.rc|76447a61ad5529949365eeb7e8ca000e48bd28ae
+vendor/lib64/vendor.qti.hardware.soter@1.0.so|6e5a8d8c6cc81bd71a4adc5245332561f9d6e5ef
+vendor/lib64/hw/vendor.qti.hardware.soter@1.0-impl.so|f0f2792e60e36d16203e1b17fa4905e2433b8dbf
 
 # Thermal
 vendor/etc/thermal-engine.conf
@@ -1291,16 +1299,16 @@ vendor/lib64/libthermalfeature.so
 -vendor/lib64/libthermalclient.so
 vendor/lib64/libcdsprpc.so
 
-# Time services
--vendor/app/TimeService/TimeService.apk
-vendor/bin/time_daemon
-vendor/lib64/libtime_genoff.so
+# Time services - from Redmi K20 davinci-user 9 PKQ1.190302.001 V10.3.6.0.PFJCNXM release-keys
+-vendor/app/TimeService/TimeService.apk|3c9e8763b1b81e71b378eb735eee8c6f657a26d4
+vendor/bin/time_daemon|45dd957e6f5922b0069ef691df3aef80d6f944f0
+vendor/lib64/libtime_genoff.so|c3d21c3b04cd7da6233685dac3fd5f0acdbf23be
 
-# TUI
-vendor/bin/hw/vendor.qti.hardware.tui_comm@1.0-service-qti
-vendor/etc/init/vendor.qti.hardware.tui_comm@1.0-service-qti.rc
-vendor/lib64/vendor.qti.hardware.tui_comm@1.0.so
-vendor/lib/vendor.qti.hardware.tui_comm@1.0.so
+# TUI - from Redmi K20 davinci-user 9 PKQ1.190302.001 V10.3.6.0.PFJCNXM release-keys
+vendor/bin/hw/vendor.qti.hardware.tui_comm@1.0-service-qti|4196393674f406412cacb52138c335d8c220675a
+vendor/etc/init/vendor.qti.hardware.tui_comm@1.0-service-qti.rc|2cfc563d7e1579374f001c94588fae7835a12ffc
+vendor/lib64/vendor.qti.hardware.tui_comm@1.0.so|592e157feabf2dcfbc430615605b699e4f276ee5
+vendor/lib/vendor.qti.hardware.tui_comm@1.0.so|65a41d3e18d0a969c56e6fb6982b01861709a2a0
 
 # Wifi
 vendor/bin/cnss-daemon
