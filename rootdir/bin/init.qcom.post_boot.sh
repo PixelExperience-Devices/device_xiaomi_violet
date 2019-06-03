@@ -4636,9 +4636,9 @@ elif [ $feature_id == 1 ]; then
          echo 1785600 > /sys/devices/system/cpu/cpu1/cpufreq/scaling_max_freq
          echo 1785600 > /sys/devices/system/cpu/cpu2/cpufreq/scaling_max_freq
          echo 1785600 > /sys/devices/system/cpu/cpu3/cpufreq/scaling_max_freq
-         echo 2131200 > /sys/devices/system/cpu/cpu4/cpufreq/scaling_max_freq
-         echo 2131200 > /sys/devices/system/cpu/cpu5/cpufreq/scaling_max_freq
-         echo 2131200 > /sys/devices/system/cpu/cpu6/cpufreq/scaling_max_freq
+         echo 1920000 > /sys/devices/system/cpu/cpu4/cpufreq/scaling_max_freq
+         echo 1920000 > /sys/devices/system/cpu/cpu5/cpufreq/scaling_max_freq
+         echo 1920000 > /sys/devices/system/cpu/cpu6/cpufreq/scaling_max_freq
          echo 2227200 > /sys/devices/system/cpu/cpu7/cpufreq/scaling_max_freq
 
 else
