@@ -1,2 +1,22 @@
 [
+  {
+    "repository": "kernel_xiaomi_sm6150",
+    "target_path": "kernel/xiaomi/sm6150"
+  },
+  {
+    "repository": "vendor_xiaomi_violet",
+    "target_path": "vendor/xiaomi/violet"
+  },
+  {
+    "repository": "android_packages_resources_devicesettings",
+    "target_path": "packages/resources/devicesettings",
+    "branch": "lineage-16.0",
+    "remote": "lineage"
+  },
+  {
+    "repository": "packages_apps_WallpapersBReel2018",
+    "target_path": "packages/apps/WallpapersBReel2018",
+    "branch": "pie",
+    "remote": "pixel-gitlab"
+  }
 ]
