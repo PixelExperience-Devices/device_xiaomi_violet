@@ -141,6 +141,7 @@ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.-->
         <boolean name="ignore_data_enabled_changed_for_video_calls" value="true"/>
         <boolean name="config_hide_vt_callforward_option" value="true" />
         <boolean name="config_auto_retry_cfu_bool" value="true" />
+        <boolean name="config_enable_video_crbt" value="true" />
         <string-array name="carrier_metered_apn_types_strings" num="3">
             <item value="default" />
             <item value="dun" />
@@ -1269,6 +1270,7 @@ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.-->
         <boolean name="config_hide_vt_callforward_option" value="true" />
         <boolean name="carrier_parse_number_on_forward_call_bool" value="true" />
         <string name="carrier_name_string">China Unicom</string>
+        <boolean name="config_enable_video_crbt" value="true" />
     </carrier_config>
 
     <carrier_config mcc="460" mnc="02">
@@ -1343,6 +1345,7 @@ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.-->
         <boolean name="ignore_reset_ut_capability_bool" value="true" />
         <boolean name="carrier_parse_number_on_forward_call_bool" value="true" />
         <boolean name="config_auto_retry_cfu_bool" value="true" />
+        <boolean name="config_enable_video_crbt" value="true" />
     </carrier_config>
 
     <carrier_config mcc="460" mnc="04">
@@ -1367,6 +1370,7 @@ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.-->
         <boolean name="config_hide_vt_callforward_option" value="true" />
         <boolean name="ignore_reset_ut_capability_bool" value="true" />
         <boolean name="carrier_parse_number_on_forward_call_bool" value="true" />
+        <boolean name="config_enable_video_crbt" value="true" />
     </carrier_config>
 
     <carrier_config mcc="460" mnc="06">
@@ -1385,6 +1389,7 @@ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.-->
         <boolean name="config_hide_vt_callforward_option" value="true" />
         <boolean name="carrier_parse_number_on_forward_call_bool" value="true" />
         <string name="carrier_name_string">China Unicom</string>
+        <boolean name="config_enable_video_crbt" value="true" />
     </carrier_config>
 
     <carrier_config mcc="460" mnc="07">
@@ -1489,6 +1494,7 @@ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.-->
         <boolean name="config_hide_vt_callforward_option" value="true" />
         <boolean name="carrier_parse_number_on_forward_call_bool" value="true" />
         <string name="carrier_name_string">China Unicom</string>
+        <boolean name="config_enable_video_crbt" value="true" />
     </carrier_config>
 
     <carrier_config mcc="460" mnc="10">
@@ -1527,6 +1533,7 @@ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.-->
         <boolean name="ignore_reset_ut_capability_bool" value="true" />
         <boolean name="carrier_parse_number_on_forward_call_bool" value="true" />
         <boolean name="config_auto_retry_cfu_bool" value="true" />
+        <boolean name="config_enable_video_crbt" value="true" />
     </carrier_config>
 
     <carrier_config mcc="460" mnc="12">
@@ -1550,6 +1557,7 @@ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.-->
         <boolean name="config_hide_vt_callforward_option" value="true" />
         <boolean name="ignore_reset_ut_capability_bool" value="true" />
         <boolean name="config_auto_retry_cfu_bool" value="true" />
+        <boolean name="config_enable_video_crbt" value="true" />
     </carrier_config>
 
     <carrier_config mcc="310" mnc="00">
