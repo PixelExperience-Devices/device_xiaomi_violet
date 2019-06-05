@@ -128,6 +128,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
     vendor.display.disable_excl_rect=0 \
     vendor.display.comp_mask=0 \
     vendor.display.disable_hw_recovery=0 \
-    vendor.display.enable_default_color_mode=0 \
+    vendor.display.enable_default_color_mode=1 \
     vendor.display.disable_hw_recovery_dump=1 \
     vendor.display.dataspace_saturation_matrix=1.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,1.0
