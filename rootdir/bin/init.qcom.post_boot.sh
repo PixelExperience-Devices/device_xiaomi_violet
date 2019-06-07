@@ -102,6 +102,8 @@ if [ $feature_id == 6 ]; then
 	echo 1017600000 > /sys/class/devfreq/soc\:qcom,cpu6-cpu-l3-lat/max_freq
 	echo 3 > /sys/class/kgsl/kgsl-3d0/max_pwrlevel
 	echo 3 > /sys/class/kgsl/kgsl-3d0/min_pwrlevel
+	echo {class:ddr, res:fixed, val: 1016} > /sys/kernel/debug/aop_send_message
+	setprop vendor.sku_identified 1
 elif [ $feature_id == 5 ]; then
 	echo "SKU Configured : SA6150"
 	echo 748800 > /sys/devices/system/cpu/cpu0/cpufreq/scaling_min_freq
@@ -126,6 +128,8 @@ elif [ $feature_id == 5 ]; then
 	echo 1363200000 > /sys/class/devfreq/soc\:qcom,cpu6-cpu-l3-lat/max_freq
 	echo 2 > /sys/class/kgsl/kgsl-3d0/max_pwrlevel
 	echo 2 > /sys/class/kgsl/kgsl-3d0/min_pwrlevel
+	echo {class:ddr, res:fixed, val: 1333} > /sys/kernel/debug/aop_send_message
+	setprop vendor.sku_identified 1
 elif [ $feature_id == 4 || $feature_id == 3 ]; then
 	echo "SKU Configured : SA6155"
 	echo 748800 > /sys/devices/system/cpu/cpu0/cpufreq/scaling_min_freq
@@ -150,6 +154,8 @@ elif [ $feature_id == 4 || $feature_id == 3 ]; then
 	echo 1363200000 > /sys/class/devfreq/soc\:qcom,cpu6-cpu-l3-lat/max_freq
 	echo 0 > /sys/class/kgsl/kgsl-3d0/max_pwrlevel
 	echo 0 > /sys/class/kgsl/kgsl-3d0/min_pwrlevel
+	echo {class:ddr, res:fixed, val: 1600} > /sys/kernel/debug/aop_send_message
+	setprop vendor.sku_identified 1
 else
 	echo "unknown feature_id value" $feature_id
 fi
@@ -3054,6 +3060,10 @@ case "$target" in
         case "$soc_id" in
             "355" | "369" | "377" | "380" | "384" )
 
+      # update frequencies
+      configure_sku_parameters
+      sku_identified=`getprop vendor.sku_identified`
+
       # Core control parameters on silver
       echo 0 0 0 0 1 1 > /sys/devices/system/cpu/cpu0/core_ctl/not_preferred
       echo 4 > /sys/devices/system/cpu/cpu0/core_ctl/min_cpus
@@ -3083,14 +3093,18 @@ case "$target" in
       echo 0 > /sys/devices/system/cpu/cpu0/cpufreq/schedutil/up_rate_limit_us
       echo 0 > /sys/devices/system/cpu/cpu0/cpufreq/schedutil/down_rate_limit_us
       echo 1209600 > /sys/devices/system/cpu/cpu0/cpufreq/schedutil/hispeed_freq
-      echo 576000 > /sys/devices/system/cpu/cpu0/cpufreq/scaling_min_freq
+      if [ $sku_identified != 1 ]; then
+        echo 576000 > /sys/devices/system/cpu/cpu0/cpufreq/scaling_min_freq
+      fi
 
       # configure governor settings for big cluster
       echo "schedutil" > /sys/devices/system/cpu/cpu6/cpufreq/scaling_governor
       echo 0 > /sys/devices/system/cpu/cpu6/cpufreq/schedutil/up_rate_limit_us
       echo 0 > /sys/devices/system/cpu/cpu6/cpufreq/schedutil/down_rate_limit_us
       echo 1209600 > /sys/devices/system/cpu/cpu6/cpufreq/schedutil/hispeed_freq
-      echo 768000 > /sys/devices/system/cpu/cpu6/cpufreq/scaling_min_freq
+      if [ $sku_identified != 1 ]; then
+        echo 768000 > /sys/devices/system/cpu/cpu6/cpufreq/scaling_min_freq
+      fi
 
       # sched_load_boost as -6 is equivalent to target load as 85. It is per cpu tunable.
       echo -6 >  /sys/devices/system/cpu/cpu6/sched_load_boost
@@ -3103,8 +3117,6 @@ case "$target" in
       # Set Memory parameters
       configure_memory_parameters
 
-      # update frequencies
-      configure_sku_parameters
 
       # Enable bus-dcvs
       for device in /sys/devices/platform/soc
