@@ -41,7 +41,7 @@ int main(int /* argc */, char** /* argv */) {
         ALOGE("Can not create an instance of Power HAL Iface, exiting.");
         return 1;
     }
-
+    android::hardware::setMinSchedulerPolicy(service, SCHED_NORMAL, -20);
     configureRpcThreadpool(1, true /*callerWillJoin*/);
 
     status_t status = service->registerAsService();
