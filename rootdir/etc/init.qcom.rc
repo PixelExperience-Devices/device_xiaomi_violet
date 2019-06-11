@@ -46,8 +46,6 @@ on early-init
 
     chown root system /dev/kmsg
     chmod 0620 /dev/kmsg
-    # Load WIGIG platform driver
-    exec u:r:vendor_modprobe:s0 -- /vendor/bin/modprobe -a -d /vendor/lib/modules msm_11ad_proxy
 
 on init
     # Create cgroup mount point for memory
@@ -532,27 +530,6 @@ on property:persist.debug.trace=1
 on property:init.svc.wpa_supplicant=stopped
     stop dhcpcd
 
-on property:vendor.bluetooth.dun.status=running
-    start vendor.bt-dun
-
-on property:vendor.bluetooth.dun.status=stopped
-    stop vendor.bt-dun
-
-on property:ro.bluetooth.ftm_enabled=true
-    start ftmd
-
-on property:vendor.bluetooth.startbtsnoop=true
-    start vendor.btsnoop
-
-on property:vendor.bluetooth.startbtsnoop=false
-    stop vendor.btsnoop
-
-on property:vendor.bluetooth.startbtlogger=true
-    start vendor.bt_logger
-
-on property:vendor.bluetooth.startbtlogger=false
-    stop vendor.bt_logger
-
 service qcom-c_core-sh  /vendor/bin/init.qcom.class_core.sh
     class core
     user root
@@ -619,34 +596,6 @@ service vendor.start_hci_filter /system/vendor/bin/wcnss_filter
     group bluetooth diag system wakelock
     seclabel u:r:bluetooth:s0
     disabled
-
-service vendor.bt-dun /system/bin/dun-server /dev/smd7 /dev/rfcomm0
-    class late_start
-    user bluetooth
-    group bluetooth net_bt_admin inet
-    disabled
-    oneshot
-
-service vendor.btsnoop /system/bin/btsnoop
-   user bluetooth
-   group bluetooth net_bt_admin sdcard_rw sdcard_r media_rw
-   class late_start
-   disabled
-   oneshot
-
-service vendor.bt_logger /system/bin/bt_logger
-   user bluetooth
-   group bluetooth net_bt_admin sdcard_rw sdcard_r media_rw
-   class late_start
-   disabled
-   oneshot
-
-service ftmd /system/bin/logwrapper /system/bin/ftmdaemon
-    class late_start
-    user root
-    group bluetooth net_bt_admin misc net_bt_stack diag net_bt
-    disabled
-    oneshot
 
 service vendor.port-bridge /system/vendor/bin/port-bridge
     class main
@@ -897,18 +846,6 @@ service stoppktlog /system/bin/iwpriv wlan0 pktlog 0
     disabled
     oneshot
 
-on property:persist.vendor.data.shs_ko_load=1
-    exec u:r:vendor_modprobe:s0 -- /vendor/bin/modprobe -a -d /vendor/lib/modules rmnet_shs
-
-on property:persist.vendor.data.shs_ko_load=0
-    exec u:r:vendor_modprobe:s0 -- /vendor/bin/modprobe -r -d /vendor/lib/modules rmnet_shs
-
-on property:persist.vendor.data.perf_ko_load=1
-    exec u:r:vendor_modprobe:s0 -- /vendor/bin/modprobe -a -d /vendor/lib/modules rmnet_perf
-
-on property:persist.vendor.data.perf_ko_load=0
-    exec u:r:vendor_modprobe:s0 -- /vendor/bin/modprobe -r -d /vendor/lib/modules rmnet_perf
-
 service cnss-daemon /system/vendor/bin/cnss-daemon -n -l
     class late_start
     user system
@@ -955,10 +892,6 @@ service loc_launcher /system/vendor/bin/loc_launcher
     class late_start
     user gps
     group gps
-
-on property:crypto.driver.load=1
-     insmod /system/lib/modules/qce.ko
-     insmod /system/lib/modules/qcedev.ko
 
 service drmdiag /system/vendor/bin/drmdiagapp
     class late_start
@@ -1127,7 +1060,6 @@ on property:sys.qbcharger.enable=false
 service diag_mdlog_start /system/bin/diag_mdlog_system  -n 40 
     class late_start
     user shell
-#    group system oem_2901 sdcard_rw sdcard_r media_rw
     group system diag oem_2901 sdcard_rw sdcard_r media_rw
     disabled
     oneshot
@@ -1136,7 +1068,6 @@ service diag_mdlog_start /system/bin/diag_mdlog_system  -n 40
 service diag_mdlog_stop /system/bin/diag_mdlog_system -k
     class late_start
     user shell
-#    group system oem_2901 sdcard_rw sdcard_r media_rw
     group system diag oem_2901 sdcard_rw sdcard_r media_rw
     disabled
     oneshot
@@ -1145,15 +1076,6 @@ on property:persist.vendor.mdlog.enable=true
     start diag_mdlog_start
 on property:persist.vendor.mdlog.enable=false
     start diag_mdlog_stop
-
-service qlogd /system/xbin/qlogd
-    socket qlogd stream 0662 system system
-    class main
-    disabled
-on property:persist.vendor.qlogd=1
-    start qlogd
-on property:persist.vendor.qlogd=0
-    stop qlogd
 
 service vm_bms /vendor/bin/vm_bms
     user root
@@ -1177,31 +1099,6 @@ service vendor.msm_irqbl_sdm630 /vendor/bin/msm_irqbalance -f /system/vendor/etc
     user root
     group root
     disabled
-
-# service for USERDEBUG
-service vendor.LKCore-dbg /vendor/bin/LKCore
-    class late_start
-    oneshot
-    disabled
-    user root
-    group root system log diag net_raw
-service sdlog /system/bin/sdlog
-    class late_start
-    user root
-    disabled
-    oneshot
-
-on property:sys.logd_t2.enable=1
-    start sdlog
-
-on property:sys.logd.enable=1
-    start sdlog
-
-on property:persist.vendor.logd.enable=1
-    start sdlog
-on property:persist.vendor.logd.enable=0
-   setprop vendor.sdlog.run 0
-   stop sdlog
 
 # service for USER
 service vendor.LKCore-rel /vendor/bin/LKCore
@@ -1233,7 +1130,6 @@ service poweroffhandler /system/vendor/bin/poweroffhandler
     group graphics audio
     disabled
     oneshot
-
 
 on property:vendor.display.lcd_density=*
     setprop ro.sf.lcd_density ${vendor.display.lcd_density}
@@ -1280,14 +1176,6 @@ service vendor.hbtp /vendor/bin/hbtp_daemon
      capabilities SYS_NICE
      disabled
 
-#service chre /vendor/bin/chre
-#    class late_start
-#    user system
-#    group system
-#    socket chre seqpacket 0660 root system
-#    shutdown critical
-
-
 on property:vendor.chre.enabled=0
    stop chre
 
@@ -1304,76 +1192,6 @@ on property:vendor.opengles.version=*
 #Set gpu available frequencies property
 on property:vendor.gpu.available_frequencies=*
     setprop ro.vendor.gpu.available_frequencies ${vendor.gpu.available_frequencies}
-
-#Add command for PA test begin
-service LctDiagSendData /vendor/bin/LctDiagSendData
-    class core
-    user root
-    oneshot
-    disabled
-#on property:persist.sys.lctdiagsenddata=1
-#    start LctDiagSendData
-#on property:persist.sys.lctdiagsenddata=0
-#    stop LctDiagSendData
-on property:ro.runtime.firstboot=*
-    start LctDiagSendData
-#Add command for PA test end
-
-#Add tools for wifi/BT RF test and start by dial *#*#2008#*#* on 20180918, wifi chip wcn3980
-service openwifi_L /vendor/bin/sh /vendor/bin/wifitest.sh
-    oneshot
-    disabled
-
-service closewifi_L /vendor/bin/sh /vendor/bin/wifitest_close.sh
-    oneshot
-    disabled
-
-on property:vendor.sys.openwifi_L=1
-    start openwifi_L
-on property:vendor.sys.closewifi_L=1
-    start closewifi_L
-
-service wifiFtmdaemon /vendor/bin/ftmdaemon -dd -n
-    oneshot
-    disabled
-
-on  property:vendor.sys.wifiFtmdaemon=1
-    start wifiFtmdaemon
-on  property:vendor.sys.wifiFtmdaemon=0
-    stop wifiFtmdaemon
-	
-service myftmftm /vendor/bin/sh /vendor/bin/myftm.agent.sh
-    oneshot
-    disabled
-on property:vendor.sys.myftm=1
-    start myftmftm
-
-service wdsdaemon /vendor/bin/wdsdaemon -su
-	user root
-	group root
-	oneshot
-	disabled
-
-on property:sys.start_wdsdaemon=1
-	start wdsdaemon
-on property:sys.start_wdsdaemon=0
-	stop wdsdaemon
-
-service blueduttest /vendor/bin/sh /vendor/bin/bluedut.sh
-    class late_start
-    user root
-    group root
-    disabled
-    oneshot
-
-service btclose /vendor/bin/sh /vendor/bin/bt_close.sh
-	user root
-	group root
-	oneshot
-	disabled
-on property:sys.closebt=1
-	start btclose
-#End on 20180918
 
 service vendor.wifilearner /system/vendor/bin/wifilearner
     class main
