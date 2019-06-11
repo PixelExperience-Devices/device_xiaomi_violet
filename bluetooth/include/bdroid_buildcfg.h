@@ -77,6 +77,7 @@ static inline const char *BtmGetDefaultName()
 #define MAX_ACL_CONNECTIONS   16
 #define MAX_L2CAP_CHANNELS    32
 #define BLE_VND_INCLUDED   TRUE
+#define GATT_MAX_PHY_CHANNEL  10
 // skips conn update at conn completion
 #define BT_CLEAN_TURN_ON_DISABLED 1
 
