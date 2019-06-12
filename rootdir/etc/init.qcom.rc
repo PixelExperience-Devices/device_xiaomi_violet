@@ -455,10 +455,9 @@ service vendor.tftp_server /vendor/bin/tftp_server
    user root
 
 service vendor.sensors /vendor/bin/sscrpcd sensorspd
-    class core
+    class early_hal
     user system
     group system
-    disabled
 
 service vendor.sensors.qti /vendor/bin/sensors.qti
     class core
