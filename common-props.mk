@@ -231,6 +231,10 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_PROPERTY_OVERRIDES += \
     debug.stagefright.ccodec=1
 
+# Property to enable Codec2 for audio and OMX for Video
+PRODUCT_PROPERTY_OVERRIDES += \
+    debug.stagefright.ccodec=1
+
 # Memory Optimisations
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.vendor.qti.sys.fw.bservice_enable=true
