@@ -927,39 +927,6 @@ vendor/lib64/libvpphvx.so|90a8c4d63e8af90f6930a51dd2edbf11f25f9ecd
 vendor/lib64/libvpptestutils.so|12d04186cfc72575a4e4c14a125ecd906ba3dbbe
 vendor/lib64/vendor.qti.hardware.vpp@1.1.so|9b09cc9ba87869b866868771a4e0fb2a68b99945
 
-# Media - hardware - from Redmi K20 davinci-user 9 PKQ1.190302.001 V10.3.6.0.PFJCNXM release-keys
-vendor/lib/libarbitrarybytes.so|5553cf2a5e8ff1e99cfc83fa03596b1dea1147e2
-vendor/lib/libc2dcolorconvert.so|bb97a871b8df273627064eae69fe96302d9ee6fa
-vendor/lib/libmm-omxcore.so|bc34f196ffdd0d699cbc4a75cc659f6bfa20c6ad
-vendor/lib/libOmxAacEnc.so|00824ca010654cff32b71184f0f1e38b1cc7c663
-vendor/lib/libOmxAmrEnc.so|b4f0e74eaf20e3ae4fdab9b204379d7d02ad9685
-vendor/lib/libOmxCore.so|707b910c303b42324426e147f7fe36834b10bf78
-vendor/lib/libOmxEvrcEnc.so|835e5a721771a2460f8f988b49256d1bc4681ee4
-vendor/lib/libOmxG711Enc.so|bae5eb054165bb87fd4166012798f75ec9dd691d
-vendor/lib/libOmxQcelp13Enc.so|ede14f0216f7d84b506f3f158930419cb81dff08
-vendor/lib/libOmxSwVdec.so|52e9409c80166cd326e907f9b1f35bf63a8c295e
-vendor/lib/libOmxSwVencMpeg4.so|8ab339a2febf4cf177da5b3778f82cc82cf0e93e
-vendor/lib/libOmxVdec.so|ce97984e9e75f967df9aaf07a8eec6e6a0d8c13b
-vendor/lib/libOmxVenc.so|7c07b94ea6a6f88f78a9af22a16754d757f141f9
-vendor/lib/libplatformconfig.so|65a27558adeaa74250e699342a382737b2a6a68b
-vendor/lib/libstagefrighthw.so|3d3cab8c0c5f9dadf398c93e48dce855538af6b0
-vendor/lib64/libarbitrarybytes.so|b87e943d865f00fe323e03e034284dda3ac50af0
-vendor/lib64/libc2dcolorconvert.so|89ddb6f10d9d12c4b92e4c203bb32f9e8bf881c8
-vendor/lib64/libmm-omxcore.so|895bf517a15053ffad93fa2db90ecb66d8c968b9
-vendor/lib64/libOmxAacEnc.so|c81b1c7671012c5535468c70aba9e0d2d3fbeb3e
-vendor/lib64/libOmxAmrEnc.so|95954ee9d3b85d357bc41324731297a3ff656588
-vendor/lib64/libOmxCore.so|90de15e035fee11d632a57d11cc5896cb7aa8fb4
-vendor/lib64/libOmxEvrcEnc.so|3bb18e70c1e7139e9aa79b469e5e00a0f316b31b
-vendor/lib64/libOmxG711Enc.so|b9640db5d456b5525dfcef851f16fd0ff004c517
-vendor/lib64/libOmxQcelp13Enc.so|485bebad1306c2a883c8cc0bdfaf2fe00ea9ed14
-vendor/lib64/libOmxSwVdec.so|e29f98af5648548a25c6d55598b9cdd89247ce4e
-vendor/lib64/libOmxSwVencMpeg4.so|df4c6fcf1f59ba7e1d941b82d59612fb918eccfa
-vendor/lib64/libOmxVdec.so|90ae32caa1571f03483c5c1721c1485c9cc99d92
-vendor/lib64/libOmxVenc.so|f1eebd1f861997be97ee18f6f0637fa3351ac7b0
-vendor/lib64/libOmxWmaDec.so|602603531b9462be29f68859730ece881ddf1769
-vendor/lib64/libstagefrighthw.so|f27df5ca7b886d5aa18eeb9704a0cbc1a86427c6
-vendor/lib64/libplatformconfig.so|7d3e94749da5fb6a12fe831b849c6b3c5ea4e73e
-
 # Mlipay - from Redmi K20 davinci-user 9 PKQ1.190302.001 V10.3.6.0.PFJCNXM release-keys
 vendor/bin/mlipayd@1.1|0167e5ee1eae0929ba6a1488fbfad4b655212496
 vendor/etc/init/vendor.xiaomi.hardware.mlipay@1.1-service.rc|b5ab5bcd031fe4d9781b5911c0595eaeac8b80ea
