@@ -131,7 +131,7 @@
     </hal>
     <hal format="hidl" optional="true">
         <name>vendor.display.color</name>
-        <version>1.0-2</version>
+        <version>1.0-3</version>
         <interface>
             <name>IDisplayColor</name>
             <instance>default</instance>
