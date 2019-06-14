@@ -1,6 +1,5 @@
 /*
- * Copyright (C) 2015 The CyanogenMod Project
- *               2017-2019 The LineageOS Project
+ * Copyright (C) 2019 The LineageOS Project
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -15,25 +14,22 @@
  * limitations under the License.
  */
 
-package org.lineageos.settings;
+package org.lineageos.settings.popupcamera;
 
-import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
+import android.os.SystemClock;
+import android.os.UserHandle;
 import android.util.Log;
 
-import org.lineageos.settings.doze.DozeUtils;
-import org.lineageos.settings.popupcamera.PopupCameraUtils;
+import java.util.List;
 
-public class BootCompletedReceiver extends BroadcastReceiver {
+public class PopupCameraUtils {
 
+    private static final String TAG = "PopupCameraUtils";
     private static final boolean DEBUG = false;
-    private static final String TAG = "XiaomiParts";
 
-    @Override
-    public void onReceive(final Context context, Intent intent) {
-        if (DEBUG) Log.d(TAG, "Received boot completed intent");
-        DozeUtils.checkDozeService(context);
-        PopupCameraUtils.startService(context);
+    public static void startService(Context context) {
+        context.startServiceAsUser(new Intent(context, PopupCameraService.class), UserHandle.CURRENT);
     }
 }
