@@ -26,7 +26,7 @@ public class ThermalProfiles {
     public static final int MODE_GAME = 9;
     public static final int MODE_PUBG = 13;
     public static final int MODE_HIGH = 1;
-    public static final int MODE_CAMERA = 12;
+    public static final int MODE_CAMERA = 33;
 
     public static final int supportedProfiles[] = {MODE_DEFAULT, MODE_GAME,
         MODE_PUBG, MODE_HIGH, MODE_CAMERA};
