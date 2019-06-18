@@ -211,6 +211,42 @@
       "ResetOnInit": true
     },
     {
+      "Name": "LLCCBWHistMemory",
+      "Path": "/sys/class/devfreq/soc:qcom,cpu-llcc-ddr-bw/bw_hwmon/hist_memory",
+      "Values": [
+        "0",
+        "20"
+      ],
+      "ResetOnInit": true
+    },
+    {
+      "Name": "LLCCBWHystLength",
+      "Path": "/sys/class/devfreq/soc:qcom,cpu-llcc-ddr-bw/bw_hwmon/hyst_length",
+      "Values": [
+        "0",
+        "10"
+      ],
+      "ResetOnInit": true
+    },
+    {
+      "Name": "CameraHalCpuset",
+      "Path": "/dev/cpuset/camera-daemon/cpus",
+      "Values": [
+        "0-5",
+        "0-7"
+      ],
+      "ResetOnInit": true
+    },
+    {
+      "Name": "LLCCBWHystTriggerCount",
+      "Path": "/sys/class/devfreq/soc:qcom,cpu-llcc-ddr-bw/bw_hwmon/hyst_trigger_count",
+      "Values": [
+        "0",
+        "3"
+      ],
+      "ResetOnInit": true
+    },
+    {
       "Name": "L3BigClusterMinFreq",
       "Path": "/sys/class/devfreq/soc:qcom,cpu4-cpu-l3-lat/min_freq",
       "Values": [
@@ -546,6 +582,30 @@
       "Node": "LLCCBWSampleMs",
       "Duration": 0,
       "Value": "10"
+    },
+    {
+      "PowerHint": "CAMERA_STREAMING_SECURE",
+      "Node": "LLCCBWHistMemory",
+      "Duration": 0,
+      "Value": "0"
+    },
+    {
+      "PowerHint": "CAMERA_STREAMING_SECURE",
+      "Node": "LLCCBWHystLength",
+      "Duration": 0,
+      "Value": "0"
+    },
+    {
+      "PowerHint": "CAMERA_STREAMING_SECURE",
+      "Node": "LLCCBWHystTriggerCount",
+      "Duration": 0,
+      "Value": "0"
+    },
+    {
+      "PowerHint": "CAMERA_STREAMING_SECURE",
+      "Node": "CameraHalCpuset",
+      "Duration": 0,
+      "Value": "0-5"
     },
     {
       "PowerHint": "CAMERA_SHOT",
