@@ -269,6 +269,7 @@
       "Path": "vendor.powerhal.state",
       "Values": [
         "CAMERA_STREAMING",
+        "CAMERA_STREAMING_4K",
         "CAMERA_STREAMING_SECURE",
         "SUSTAINED_PERFORMANCE",
         ""
@@ -546,6 +547,54 @@
       "Node": "LLCCBWSampleMs",
       "Duration": 0,
       "Value": "10"
+    },
+    {
+      "PowerHint": "CAMERA_STREAMING_4K",
+      "Node": "PowerHALMainState",
+      "Duration": 0,
+      "Value": "CAMERA_STREAMING_4K"
+    },
+    {
+      "PowerHint": "CAMERA_STREAMING_4K",
+      "Node": "CPUBigClusterMaxFreq",
+      "Duration": 0,
+      "Value": "2016000"
+    },
+    {
+      "PowerHint": "CAMERA_STREAMING_4K",
+      "Node": "CPUBigPlusClusterMaxFreq",
+      "Duration": 0,
+      "Value": "2016000"
+    },
+    {
+      "PowerHint": "CAMERA_STREAMING_4K",
+      "Node": "CPUBWSampleMs",
+      "Duration": 0,
+      "Value": "10"
+    },
+    {
+      "PowerHint": "CAMERA_STREAMING_4K",
+      "Node": "CPUBWIOPercent",
+      "Duration": 0,
+      "Value": "80"
+    },
+    {
+      "PowerHint": "CAMERA_STREAMING_4K",
+      "Node": "LLCCBWSampleMs",
+      "Duration": 0,
+      "Value": "10"
+    },
+    {
+      "PowerHint": "CAMERA_STREAMING_4K",
+      "Node": "LLCCBWHystTriggerCount",
+      "Duration": 0,
+      "Value": "0"
+    },
+    {
+      "PowerHint": "CAMERA_STREAMING_4K",
+      "Node": "LLCCBWHystLength",
+      "Duration": 0,
+      "Value": "0"
     },
     {
       "PowerHint": "CAMERA_STREAMING_SECURE",
