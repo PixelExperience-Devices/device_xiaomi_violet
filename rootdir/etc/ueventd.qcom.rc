@@ -279,6 +279,7 @@ firmware_directories /vendor/firmware_mnt/image/
 
 # GNSS PPS Device premissions
 /dev/pps*                  0660   gps     gps
+/dev/gnss_sirf             0660   gps     gps
 
 # fpc fingerprint
 /sys/devices/platform/soc/soc:fpc1020*  hw_reset          0660 system system
