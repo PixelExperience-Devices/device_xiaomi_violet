@@ -123,6 +123,11 @@ PRODUCT_PACKAGES += \
     libxml2 \
     Snap
 
+# Context Hub
+PRODUCT_PACKAGES += \
+    android.hardware.contexthub@1.0-impl.generic \
+    android.hardware.contexthub@1.0-service
+
 # CNE
 PRODUCT_PACKAGES += \
     cneapiclient \
