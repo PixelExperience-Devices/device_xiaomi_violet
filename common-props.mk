@@ -89,6 +89,10 @@ PRODUCT_PROPERTY_OVERRIDES += \
     vendor.audio.feature.audiozoom.enable=false \
     vendor.audio.feature.snd_mon.enable=true
 
+# Enable AAC frame ctl for A2DP sinks
+PRODUCT_PROPERTY_OVERRIDES += \
+    persist.vendor.bt.aac_frm_ctl.enabled=true
+
 # AudioFlinger client heap size
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.af.client_heap_size_kbyte=7168
