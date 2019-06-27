@@ -4730,6 +4730,14 @@ case "$target" in
 	    do
 		echo 20000 > $l3prime/mem_latency/ratio_ceil
 	    done
+
+	    #Enable mem_latency governor for qoslat
+	    for qoslat in $device/*qoslat/devfreq/*qoslat
+	    do
+		echo "mem_latency" > $qoslat/governor
+		echo 10 > $qoslat/polling_interval
+		echo 50 > $qoslat/mem_latency/ratio_ceil
+	    done
 	done
     echo N > /sys/module/lpm_levels/parameters/sleep_disabled
     configure_memory_parameters
