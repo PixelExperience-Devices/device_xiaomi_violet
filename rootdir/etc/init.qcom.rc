@@ -562,11 +562,14 @@ on post-fs-data
 on charger
     setprop sys.usb.controller a600000.dwc3
     setprop sys.usb.configfs 1
-    # Enable EAS
-    write /sys/kernel/debug/sched_features ENERGY_AWARE
+    setprop vendor.setup.power 1
 
-    # Enable powersaving
-    write /sys/module/lpm_levels/parameters/sleep_disabled 0
+    write /sys/devices/system/cpu/cpu1/online 0
+    write /sys/devices/system/cpu/cpu2/online 0
+    write /sys/devices/system/cpu/cpu3/online 0
+    write /sys/devices/system/cpu/cpu5/online 0
+    write /sys/devices/system/cpu/cpu6/online 0
+    write /sys/devices/system/cpu/cpu7/online 0
 
 on property:ro.vendor.iocgrp.config=1
     mkdir /dev/blkio
@@ -592,7 +595,7 @@ on property:persist.vendor.sys.modem_auth_timeout=*
 on property:persist.vendor.sys.pil_proxy_timeout=*
     write /sys/module/peripheral_loader/parameters/proxy_timeout_ms ${persist.vendor.sys.pil_proxy_timeout}
 
-on property:persist.vendor.ssr.enable_ramdumps=1
+on property:persist.vendor.ssr.enable_ramdumps=1 && property:ro.boot.mode!=charger
     write /sys/module/subsystem_restart/parameters/enable_ramdumps 1
     mkdir /data/vendor/ramdump_ssr 770 system system
 
@@ -606,8 +609,7 @@ on property:persist.vendor.sys.rawdump_copy=0
     write /sys/kernel/dload/emmc_dload 0
 
 on property:sys.boot_completed=1
-    # Enable EAS
-    write /sys/kernel/debug/sched_features ENERGY_AWARE
+    setprop vendor.setup.power 1
 
     write /dev/kmsg "Boot completed "
     # WDSP FW boot sysfs node used by STHAL
