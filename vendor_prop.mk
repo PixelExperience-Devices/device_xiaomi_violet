@@ -1,24 +1,15 @@
 # Audio
 PRODUCT_PROPERTY_OVERRIDES += \
     af.fast_track_multiplier=1 \
-    audio.deep_buffer.media=true \
-    audio.offload.min.duration.secs=30 \
-    audio.offload.video=true \
-    av.offload.enable=true \
     persist.vendor.audio.fluence.voicecall=true \
     persist.vendor.audio.fluence.voicerec=false \
     persist.vendor.audio.fluence.speaker=true \
     persist.vendor.audio.ras.enabled=false \
-    ro.qc.sdk.audio.ssr=false \
     ro.vendor.audio.sdk.fluencetype=none \
     ro.vendor.audio.sdk.ssr=false \
     ro.vendor.audio.sos=true \
-    ro.vendor.audio.voice.volume.boost=manual \
     ro.config.media_vol_steps=25 \
     ro.config.vc_call_vol_steps=7 \
-    ro.af.client_heap_size_kbyte=7168 \
-    tunnel.audio.encode=true \
-    qcom.hw.aac.encoder=true \
     vendor.audio.tunnel.encode=false \
     vendor.audio.offload.track.enable=false \
     vendor.audio.offload.multiaac.enable=true \
