@@ -372,15 +372,19 @@ typedef uint64_t GpsLocationExtendedFlags;
 /** GpsLocationExtended has Clock drift*/
 #define GPS_LOCATION_EXTENDED_HAS_CLOCK_DRIFT   0x20000000
 /** GpsLocationExtended has Clock drift std deviation**/
-#define GPS_LOCATION_EXTENDED_HAS_CLOCK_DRIFT_STD_DEV   0x40000000
+#define GPS_LOCATION_EXTENDED_HAS_CLOCK_DRIFT_STD_DEV    0x40000000
 /** GpsLocationExtended has leap seconds **/
-#define GPS_LOCATION_EXTENDED_HAS_LEAP_SECONDS   0x80000000
+#define GPS_LOCATION_EXTENDED_HAS_LEAP_SECONDS           0x80000000
 /** GpsLocationExtended has time uncertainty **/
-#define GPS_LOCATION_EXTENDED_HAS_TIME_UNC   0x100000000
+#define GPS_LOCATION_EXTENDED_HAS_TIME_UNC               0x100000000
 /** GpsLocationExtended has heading rate  **/
-#define GPS_LOCATION_EXTENDED_HAS_HEADING_RATE 0x200000000
+#define GPS_LOCATION_EXTENDED_HAS_HEADING_RATE           0x200000000
 /** GpsLocationExtended has multiband signals  **/
-#define GPS_LOCATION_EXTENDED_HAS_MULTIBAND 0x400000000
+#define GPS_LOCATION_EXTENDED_HAS_MULTIBAND              0x400000000
+/** GpsLocationExtended has sensor calibration confidence */
+#define GPS_LOCATION_EXTENDED_HAS_CALIBRATION_CONFIDENCE 0x800000000
+/** GpsLocationExtended has sensor calibration status */
+#define GPS_LOCATION_EXTENDED_HAS_CALIBRATION_STATUS     0x1000000000
 
 typedef uint32_t LocNavSolutionMask;
 /* Bitmask to specify whether SBAS ionospheric correction is used  */
@@ -397,6 +401,8 @@ typedef uint32_t LocNavSolutionMask;
 #define LOC_NAV_MASK_RTK_CORRECTION ((LocNavSolutionMask)0x0020)
 /**<  Bitmask to specify whether Position Report is PPP corrected   */
 #define LOC_NAV_MASK_PPP_CORRECTION ((LocNavSolutionMask)0x0040)
+/**<  Bitmask to specify whether Position Report is RTK fixed corrected   */
+#define LOC_NAV_MASK_RTK_FIXED_CORRECTION ((LocNavSolutionMask)0x0080)
 
 typedef uint32_t LocPosDataMask;
 /* Bitmask to specify whether Navigation data has Forward Acceleration  */
@@ -497,6 +503,7 @@ typedef struct {
     uint64_t qzss_l2_sv_used_ids_mask;      // QZSS L2
     uint64_t qzss_l5_sv_used_ids_mask;      // QZSS L5
     uint64_t sbas_l1_sv_used_ids_mask;      // SBAS L1
+    uint64_t bds_b2aq_sv_used_ids_mask;     // BDS B2AQ
 } GnssSvMbUsedInPosition;
 
 /* Body Frame parameters */
@@ -605,6 +612,8 @@ typedef uint32_t GnssSignalTypeMask;
 #define GNSS_SIGNAL_SBAS_L1      ((GnssSignalTypeMask)0x00020000ul)
 /** NAVIC L5 RF Band */
 #define GNSS_SIGNAL_NAVIC_L5     ((GnssSignalTypeMask)0x00040000ul)
+/** BEIDOU B2A_Q RF Band */
+#define GNSS_SIGNAL_BEIDOU_B2AQ   ((GnssSignalTypeMask)0x00080000ul)
 
 typedef uint16_t GnssMeasUsageStatusBitMask;
 /** Used in fix */
@@ -789,6 +798,9 @@ typedef struct {
         Range: 0 to 359.999. 946
         Unit: Degrees per Seconds */
     float headingRateDeg;
+    /** Sensor calibration confidence percent. Range: 0 - 100 */
+    uint8_t calibrationConfidence;
+    DrCalibrationStatusMask calibrationStatus;
 } GpsLocationExtended;
 
 enum loc_sess_status {
