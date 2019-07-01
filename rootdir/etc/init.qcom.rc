@@ -272,6 +272,9 @@ on post-fs-data
     chown system system /data/vendor/lct_diag
     rm /data/vendor/lct_diag/client_*
 
+    # Create the directories used by WiGig Sensing
+    mkdir /data/vendor/sensing 0770 system wifi
+
     # Create the directories used by CnE subsystem
     mkdir /data/vendor/connectivity 0771 radio radio
     chown radio radio /data/vendor/connectivity
