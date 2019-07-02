@@ -139,6 +139,7 @@ ro.hardware.keystore_desede=true
 
 # Media
 audio.offload.video=true
+debug.stagefright.omx_default_rank.sw-audio=1
 
 # Netflix
 ro.netflix.bsp_rev=Q6150-17263-1
