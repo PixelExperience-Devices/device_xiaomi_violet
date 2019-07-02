@@ -613,6 +613,18 @@
     },
     {
       "PowerHint": "CAMERA_STREAMING_4K",
+      "Node": "CPUBWHystTriggerCount",
+      "Duration": 0,
+      "Value": "0"
+    },
+    {
+      "PowerHint": "CAMERA_STREAMING_4K",
+      "Node": "CPUBWHystLength",
+      "Duration": 0,
+      "Value": "0"
+    },
+    {
+      "PowerHint": "CAMERA_STREAMING_4K",
       "Node": "LLCCBWHystTriggerCount",
       "Duration": 0,
       "Value": "0"
