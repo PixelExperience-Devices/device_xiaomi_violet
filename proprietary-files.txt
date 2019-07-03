@@ -36,7 +36,6 @@ vendor/lib/rfsa/adsp/libVC1DecDsp_skel.so
 vendor/lib/rfsa/adsp/libVC1Dec.so
 
 # Alarm - from Redmi K20 davinci-user 9 PKQ1.190302.001 V10.3.6.0.PFJCNXM release-keys
-framework/vendor.qti.hardware.alarm-V1.0-java.jar|a777aeac865a44b6057c3a990ae2814650a38b6f
 -vendor/app/PowerOffAlarm/PowerOffAlarm.apk|bef295639460c833b3a2ddaf11f9031404b39f15
 vendor/bin/hw/vendor.qti.hardware.alarm@1.0-service|f0ae20fb4a3763955a19ec0c6be836bfaa84135a
 vendor/etc/init/vendor.qti.hardware.alarm@1.0-service.rc|c9877b6cae0353d5fdea5bc23dba77101b3d6980
@@ -121,10 +120,7 @@ lib64/libaptXHD_encoder.so|90f47f10af28b3ead143200cb4370b847c513127
 
 # Bluetooth - from Redmi K20 davinci-user 9 PKQ1.190302.001 V10.3.6.0.PFJCNXM release-keys
 vendor/bin/hw/android.hardware.bluetooth@1.0-service-qti|a735071da85d405f79c6228a27782900d8934893
-vendor/bin/wcnss_filter|044a3ae452ef7145c90cb6951499afe5ec25a98f
 vendor/etc/init/android.hardware.bluetooth@1.0-service-qti.rc|a979981c55f3dcaf6cf2212e71b901ca4d58b959
-vendor/lib/hw/android.hardware.bluetooth@1.0-impl-qti.so|0c6bab98f95fd24e2eae2d287e9358825955250d
-vendor/lib/libbtnv.so|7ba9bf7b99841403a3f30f3dfb03a47510bda5c9
 vendor/lib64/hw/android.hardware.bluetooth@1.0-impl-qti.so|8abc3e09b55f0ed662c89b4a0bd228aa8acc8e3b
 vendor/lib64/libbtnv.so|9d5b86dd6583c30c4a3dea424ac6f403a9237994
 
@@ -136,119 +132,7 @@ vendor/etc/camera/megviifacepp_0_5_2_model
 vendor/etc/camera/sdm_ys_32p_120_21_5_perturb50.bin
 vendor/etc/camera/vidhance_calibration_F7B
 vendor/etc/scve/facereco/gModel.dat
-vendor/lib/camera/com.qti.tuned.liteon_ov7251.bin
-vendor/lib/camera/components/com.qti.eisv2.so
-vendor/lib/camera/components/com.qti.eisv3.so
-vendor/lib/camera/components/com.qti.stats.aec.so
-vendor/lib/camera/components/com.qti.stats.af.so
-vendor/lib/camera/components/com.qti.stats.afd.so
-vendor/lib/camera/components/com.qti.stats.asd.so
-vendor/lib/camera/components/com.qti.stats.awb.so
-vendor/lib/camera/components/com.qti.stats.haf.so
-vendor/lib/camera/components/com.qti.stats.pdlib.so
-vendor/lib/camera/components/com.qti.stats.pdlibsony.so
-vendor/lib/camera/components/com.qti.stats.pdlibwrapper.so
-vendor/lib/camera/components/libmmcamera_cac3.so
-vendor/lib/camera/com.qti.sensormodule.altek_imx577.bin
-vendor/lib/camera/com.qti.sensormodule.altek1_imx577.bin
-vendor/lib/camera/com.qti.sensormodule.altek2_imx577.bin
-vendor/lib/camera/com.qti.sensormodule.liteon_imx318.bin
-vendor/lib/camera/com.qti.sensormodule.liteon_imx362.bin
-vendor/lib/camera/com.qti.sensormodule.liteon_max7366_6dof.bin
-vendor/lib/camera/com.qti.sensormodule.liteon_max7366_eyetrack.bin
-vendor/lib/camera/com.qti.sensormodule.liteon_max7366_ov6211.bin
-vendor/lib/camera/com.qti.sensormodule.liteon_max7366_ov9282.bin
-vendor/lib/camera/com.qti.sensormodule.liteon_ov7251.bin
-vendor/lib/camera/com.qti.sensormodule.ofilm_imx376.bin
-vendor/lib/camera/com.qti.sensormodule.ofilm_imx586.bin
-vendor/lib/camera/com.qti.sensormodule.ofilm_ov12a10.bin
-vendor/lib/camera/com.qti.sensormodule.ofilm_ov12a10_front.bin
-vendor/lib/camera/com.qti.sensormodule.ofilm_ov13855.bin
-vendor/lib/camera/com.qti.sensormodule.ofilm_ov13880.bin
-vendor/lib/camera/com.qti.sensormodule.ofilm_s5k5e8.bin
-vendor/lib/camera/com.qti.sensormodule.pmd_irs1645.bin
-vendor/lib/camera/com.qti.sensormodule.semco_imx258.bin
-vendor/lib/camera/com.qti.sensormodule.semco_imx386.bin
-vendor/lib/camera/com.qti.sensormodule.semco_imx586.bin
-vendor/lib/camera/com.qti.sensormodule.semco_s5k5e8.bin
-vendor/lib/camera/com.qti.sensormodule.sony_imx334.bin
-vendor/lib/camera/com.qti.sensormodule.sunny_imx519.bin
-vendor/lib/camera/com.qti.sensormodule.sunny_imx576.bin
-vendor/lib/camera/com.qti.sensormodule.sunny_imx586.bin
-vendor/lib/camera/com.qti.sensormodule.sunny_ov13855.bin
-vendor/lib/camera/com.qti.sensormodule.sunny_ov2281.bin
-vendor/lib/camera/com.qti.sensormodule.sunny_s5k2l7.bin
-vendor/lib/camera/com.qti.sensormodule.sunny_s5k2x5sp.bin
-vendor/lib/camera/com.qti.sensormodule.sunny_s5k5e8.bin
-vendor/lib/camera/com.qti.sensormodule.sunny_s5k5e9yu05.bin
-vendor/lib/camera/com.qti.sensormodule.truly_imx476.bin
-vendor/lib/camera/com.qti.sensormodule.truly_ov8856.bin
-vendor/lib/camera/com.qti.tuned.altek_imx577.bin
-vendor/lib/camera/com.qti.tuned.altek1_imx577.bin
-vendor/lib/camera/com.qti.tuned.default.bin
-vendor/lib/camera/com.qti.tuned.liteon_imx318.bin
-vendor/lib/camera/com.qti.tuned.liteon_imx362.bin
-vendor/lib/camera/com.qti.tuned.liteon_max7366_6dof.bin
-vendor/lib/camera/com.qti.tuned.liteon_max7366_eyetrack.bin
-vendor/lib/camera/com.qti.tuned.liteon_max7366_ov9282.bin
-vendor/lib/camera/com.qti.tuned.ofilm_imx376.bin
-vendor/lib/camera/com.qti.tuned.ofilm_imx586.bin
-vendor/lib/camera/com.qti.tuned.ofilm_imx586_cn.bin
-vendor/lib/camera/com.qti.tuned.ofilm_ov12a10.bin
-vendor/lib/camera/com.qti.tuned.ofilm_ov12a10_front.bin
-vendor/lib/camera/com.qti.tuned.ofilm_ov13855.bin
-vendor/lib/camera/com.qti.tuned.ofilm_ov13855_cn.bin
-vendor/lib/camera/com.qti.tuned.ofilm_ov13880.bin
-vendor/lib/camera/com.qti.tuned.ofilm_s5k5e8.bin
-vendor/lib/camera/com.qti.tuned.semco_imx258.bin
-vendor/lib/camera/com.qti.tuned.semco_imx258_mono.bin
-vendor/lib/camera/com.qti.tuned.semco_imx386.bin
-vendor/lib/camera/com.qti.tuned.semco_imx481.bin
-vendor/lib/camera/com.qti.tuned.semco_imx586.bin
-vendor/lib/camera/com.qti.tuned.semco_s5k5e8.bin
-vendor/lib/camera/com.qti.tuned.sunny_imx519.bin
-vendor/lib/camera/com.qti.tuned.sunny_imx586.bin
-vendor/lib/camera/com.qti.tuned.sunny_imx586_cn.bin
-vendor/lib/camera/com.qti.tuned.sunny_ov13855.bin
-vendor/lib/camera/com.qti.tuned.sunny_ov13855_cn.bin
-vendor/lib/camera/com.qti.tuned.sunny_s5k2l7.bin
-vendor/lib/camera/com.qti.tuned.sunny_s5k5e8.bin
-vendor/lib/camera/com.qti.tuned.sunny_s5k2x5sp.bin
-vendor/lib/camera/com.qti.tuned.sunny_s5k5e9yu05.bin
-vendor/lib/camera/com.qti.tuned.truly_ov8856.bin
-vendor/lib/camera/fdconfigpreview.bin
-vendor/lib/camera/fdconfigpreviewlite.bin
-vendor/lib/camera/fdconfigvideo.bin
-vendor/lib/camera/fdconfigvideolite.bin
-vendor/lib/libcamera_nn_stub.so
-vendor/lib/libcamxfdalgov7.so
-vendor/lib/libcamxfdalgov8.so
-vendor/lib/libcamxfdengine.so
-vendor/lib/libcamxstatscore.so
-vendor/lib/libcamxswprocessalgo.so
-vendor/lib/libcamxtintlessalgo.so
-vendor/lib/libmialgo_fs.so
-vendor/lib/libmmcamera_faceproc.so
-vendor/lib/libmmcamera_faceproc2.so
-vendor/lib/libscveBlobDescriptor.so
-vendor/lib/libscveBlobDescriptor_stub.so
-vendor/lib/libscveCommon.so
-vendor/lib/libscveCommon_stub.so
-vendor/lib/libscveFaceLandmarks.so
-vendor/lib/libscveFaceRecognition.so
-vendor/lib/libscveObjectSegmentation.so
-vendor/lib/libscveObjectSegmentation_stub.so
-vendor/lib/libscveObjectTracker.so
-vendor/lib/libscveObjectTracker_stub.so
-vendor/lib/libscvePanorama.so
-vendor/lib/libscvePanorama_lite.so
-vendor/lib/libsnsapi.so
-vendor/lib/libsns_device_mode_stub.so
-vendor/lib/libsnsdiaglog.so
-vendor/lib/libsns_fastRPC_util.so
-vendor/lib/libsns_low_lat_stream_stub.so
-vendor/lib/libswregistrationalgo.so
-vendor/lib/libswvdec.so
+vendor/firmware/CAMERA_ICP.elf
 vendor/lib64/camera/com.qti.tuned.liteon_ov7251.bin
 vendor/lib64/camera/components/com.arcsoft.node.capturebokeh.so
 vendor/lib64/camera/components/com.arcsoft.node.hdrchecker.so
@@ -458,7 +342,6 @@ vendor/lib64/libsymphonypower.so
 vendor/lib64/libvidhance.so
 vendor/lib64/libXMFD_AgeGender.so
 vendor/lib64/mibokeh_660_opencl.bin
-vendor/firmware/CAMERA_ICP.elf
 
 # CDSP
 vendor/bin/cdsprpcd
@@ -541,7 +424,6 @@ vendor/lib64/vendor.qti.data.factory@1.1.so|5de838081a727b61a0d925a91ab1699c96fd
 vendor/lib64/vendor.qti.latency@2.0.so|ab778429766e5b54368e1230d5e7b00ccd668334
 
 # Consumerir
-vendor/lib/hw/consumerir.default.so
 vendor/lib64/hw/consumerir.default.so
 
 # Dirac - from Xiaomi
@@ -604,11 +486,6 @@ lib64/libdpmctmgr.so|20101d5929ba97f16083ad9c71933111cb9ae8ff
 lib64/libdpmfdmgr.so|45061fee7721b8f94aef431f589e4024d4eae374
 lib64/libdpmframework.so|623095565a453e10498a5a28ef689f52c85e8784
 lib64/libdpmtcm.so|1b43a23871a0a247e4adbe1e63c5e0864740938b
-lib/com.qualcomm.qti.dpm.api@1.0.so|5611079765fce66c5997eb61ae64ec2e7d7eadda
-lib/libdpmctmgr.so|39a22fed0691797322ad3361ab064cce944a1621
-lib/libdpmfdmgr.so|cbba45c4b84d0eea7b014fb7b9b861fc62607d9f
-lib/libdpmframework.so|b2af27bc930e61d06cbbb9c90d5f150354708630
-lib/libdpmtcm.so|326cc53ac27ef6598a61ca257ac080eaee6090a5
 -priv-app/dpmserviceapp/dpmserviceapp.apk|a642336052f3e5d70580700e2aebba230a5f663f
 vendor/bin/dpmQmiMgr|5c8868fa54fe77e5bdef995950843ab35bf4e686
 vendor/lib64/libdpmqmihal.so|e7dbf5ed0bd789da89faf35027dfd2b8f303b192
@@ -650,19 +527,6 @@ vendor/lib64/libcpion.so|33556c7a8276847c2a88b15c7d7c4ec1a7c98c70
 vendor/lib64/libcppf.so|ad9f651c12218454ead5c4c7a44d7b8e887731ec
 vendor/lib64/libhdcpsrm.so|d4f8219b15bb15d3e5837f6d7bdc92cf3c11f8cf
 vendor/lib64/liboemcrypto.so|5b77983a5c9163258006a6ed0f2c83d993e029a4
-
-# Display postprocessing
-lib64/vendor.display.color@1.0.so
-
-# ESE-Powermanager - from Redmi K20 davinci-user 9 PKQ1.190302.001 V10.3.6.0.PFJCNXM release-keys
-vendor/bin/hw/vendor.qti.esepowermanager@1.0-service|bbadc53672501ea25029b7902bd3b38c712263ba
-vendor/etc/init/vendor.qti.esepowermanager@1.0-service.rc|58a3866ad5a7613d9392c9adb671eaa7825578a2
-lib/vendor.qti.esepowermanager@1.0.so|8fd21b9c28cf126fee0d4f229aeefedcfbe77cc4
-lib64/vendor.qti.esepowermanager@1.0.so|8d2ae6c2e1e2e8bc804f1bc7e2647dfa7157c7fc
-vendor/lib/hw/vendor.qti.esepowermanager@1.0-impl.so|9d583ec1483527321bef90eed4af55219b35513a
-vendor/lib/vendor.qti.esepowermanager@1.0.so|374d232eac92146853afa3af085890306dcf10da
-vendor/lib64/hw/vendor.qti.esepowermanager@1.0-impl.so|07174e9a690e52486eaaae13615a050f145a46fc
-vendor/lib64/vendor.qti.esepowermanager@1.0.so|dd37770694dae62295b9f891e349dd1e48af9fdd
 
 # Fingerprint sensor
 -vendor/app/FingerprintExtensionService/FingerprintExtensionService.apk
@@ -811,20 +675,6 @@ vendor/lib64/libtinyxml2_1.so
 vendor/lib/hw/vulkan.sm6150.so
 vendor/lib64/hw/vulkan.sm6150.so
 
-# IO prefetcher - from Redmi K20 davinci-user 9 PKQ1.190302.001 V10.3.6.0.PFJCNXM release-keys
-vendor/bin/hw/vendor.qti.hardware.iop@2.0-service|9071dd92fae6b84a4673a408349a718edb7df853
-vendor/etc/init/vendor.qti.hardware.iop@2.0-service.rc|fd11367b2585702190ef2577ce2ce6fc68f3a2f8
-vendor/lib64/hw/vendor.qti.hardware.iop@2.0-impl.so|eb3820e3e180090a8d835c9f6ac1eb2222a0721c
-vendor/lib64/libqti-iopd-client.so|4832100346c4ba20af1cb1ff28e204b42947045f
-vendor/lib64/libqti-iopd.so|84861e8b392fc2108e4143f2212f46676919d005
-vendor/lib64/vendor.qti.hardware.iop@1.0.so|0c9c3f77119bb38155d26710a505a6e8b330c502
-vendor/lib64/vendor.qti.hardware.iop@2.0.so|80fcdf0fda39edb388e3101f05884d8ab7f2740e
-vendor/lib/hw/vendor.qti.hardware.iop@2.0-impl.so|b0059496c5fbb05afa6a746527685da01847433f
-vendor/lib/libqti-iopd-client.so|11ebdd9a146bf4cc0aba1f734ce74f63e42617ce
-vendor/lib/libqti-iopd.so|0d1d0fc6acc6708c1555e0d81d5253c7d462b3a0
-vendor/lib/vendor.qti.hardware.iop@1.0.so|d6a0df41b2353b8eef496df31c8d7ad64d020a06
-vendor/lib/vendor.qti.hardware.iop@2.0.so|8e2bb954eee38af56b122bb5aeaaabd10d125bb6
-
 # IPA
 vendor/firmware/ipa_fws.b00
 vendor/firmware/ipa_fws.b01
@@ -848,15 +698,11 @@ vendor/lib64/libqtikeymaster4.so|4df52f4ff19e9f974af49a24ff8ee2634cc7d541
 
 # Listen - from Redmi K20 davinci-user 9 PKQ1.190302.001 V10.3.6.0.PFJCNXM release-keys
 vendor/lib/libadpcmdec.so|709c018d5d949ba0dbd0895d946f842b0b96803f
-vendor/lib/libcapiv2svacnn.so|1d93c1abe9d34ba145cfd22b1f7d5f74c39819f7
-vendor/lib/libcapiv2vop.so|7358b14c2267fdcebd246897e7d688ffde224514
 vendor/lib/libgcs-calwrapper.so|7ee11f3120d0acd1f59df8b01167a8aae809de0f
 vendor/lib/libgcs-ipc.so|8fde4705d8b1f58987b6ec7dd663c99dec6346f7
 vendor/lib/libgcs-osal.so|4f0476a5eb9b3405268103a3f9789d35c12293d9
 vendor/lib/libgcs.so|e0f8d9ad34fef130abc8aee0e1cfc0dba0aa7815
 vendor/lib/liblistensoundmodel2.so|49bb9be518398889380e8cd09b1103bd81092acc
-vendor/lib64/libcapiv2svacnn.so|c5887659fa3cd3eb935aad7dd4348c283e1dc0fe
-vendor/lib64/libcapiv2vop.so|e6fc0a2e21d588a0302c84760f72cc97e71aed89
 vendor/lib64/libgcs-calwrapper.so|c40d04ea80710163f0915317c67185b95ce84471
 vendor/lib64/libgcs-ipc.so|f0902b62f54a63b3ab798739b29564d96c6e2493
 vendor/lib64/libgcs-osal.so|ff1962c9d46541164f7a22689a723670835f14d3
@@ -864,10 +710,6 @@ vendor/lib64/libgcs.so|eaf70f7f1d87a81fa71ab3dc9f96b0d404e23e62
 vendor/lib64/liblistensoundmodel2.so|80135f45fdba5f954baff999b6b7a95e7c66d2bd
 
 # Media - from Redmi K20 davinci-user 9 PKQ1.190302.001 V10.3.6.0.PFJCNXM release-keys
-lib/libmmosal.so|193bb0266f6f85433064f64d47ce9483a6df3f49
-lib/vendor.qti.hardware.vpp@1.1.so|0952d621fe84535508432576df1b23438142139e
-lib64/libmmosal.so|750ecf73672fb0f6a94797569d4997d0b85d20ef
-lib64/vendor.qti.hardware.vpp@1.1.so|43e65c73f7b14a985afa062eae88316aa2c2b770
 vendor/lib/libAlacSwDec.so|d1f0888e3dfd171db0c5aed508acb8e88fd59df3
 vendor/lib/libApeSwDec.so|2373d63766c1a868ef34d8294f93fa26b121e8ca
 vendor/lib/libdsd2pcm.so|a813b2c1d627997d896501e5cf0457fc9e4fde4b
@@ -927,11 +769,6 @@ vendor/lib64/libmlipay.so|e2d3bc866ced01ca64b5cc01e26db1c2a857bfdc
 vendor/lib64/vendor.xiaomi.hardware.mlipay@1.0.so|bcd74afe1002827f017eda1ed3c5412874711a6e
 vendor/lib64/vendor.xiaomi.hardware.mlipay@1.1.so|8f25b37df26cab5c11b3b32faaee3903628aed88
 
-# Neural-networks - from Redmi K20 davinci-user 9 PKQ1.190302.001 V10.3.6.0.PFJCNXM release-keys
-vendor/bin/hw/android.hardware.neuralnetworks@1.1-service-qti|d9fe8d72c53e476538471dc1b79e25b3128fd463
-vendor/etc/init/android.hardware.neuralnetworks@1.1-service-qti.rc|f36a191ba1fdd82d8c05cf9abf3940f9af32e238
-vendor/lib64/libhexagon_nn_stub.so|2ff38e841830e0aa7ba1e074a6ce2f2d961d3352
-
 # Perf - from Redmi K20 davinci-user 9 PKQ1.190302.001 V10.3.6.0.PFJCNXM release-keys
 vendor/bin/msm_irqbalance|0b9421b30566d7c42efd696443bd000975fed7d6
 vendor/bin/hw/vendor.qti.hardware.perf@1.0-service|ae806f654364c4d14f598d47448a72c7660e2e11
@@ -942,12 +779,6 @@ vendor/etc/perf/targetconfig.xml|53d6e2936c1cdc67edf86a2ccf04084adbff4a68
 vendor/etc/perf/targetresourceconfigs.xml|0a614d97672c516aedc253aec525468fbdb270ec
 vendor/etc/perf/thermalboost.conf|3a70ac91160e48a64578f0b7775798f19040e87d
 vendor/etc/powerhint.xml|a6a552f11d0c8cdee91c21293118ca1e0881e00c
-vendor/lib/libperfgluelayer.so|6cee0719bb4189572ce77f05c01bf871358738fd
-vendor/lib/libqti-perfd-client.so|59ed27dae8d296d55247f945f32231a38984818d
-vendor/lib/libqti-perfd.so|001472d46c13adec08aad430d7b2dc8bdf308832
-vendor/lib/libqti-util.so|6512291deb0695b9387d8d5af3ed11f6dffd8fb7
-vendor/lib/libqti-utils.so|36422251c93c232ece8c25420670cf2d4637d0c1
-vendor/lib/vendor.qti.hardware.perf@1.0.so|7ec925a952d286b983d4c34a2335365b26f88cea
 vendor/lib64/liblearningmodule.so|3d92dcc8e4ba7fe0227e47a236eacda62babce9c
 vendor/lib64/libmeters.so|742ad0162bfa789a107473789106fd14d2bf41ca
 vendor/lib64/libperfgluelayer.so|eb137856d7180bac0bb33c463ac1851fa3904f39
@@ -960,7 +791,6 @@ vendor/lib64/vendor.qti.hardware.perf@1.0.so|66a9ded3ff918b150614c7fd073cd3256f8
 # Peripheral manager - from Redmi K20 davinci-user 9 PKQ1.190302.001 V10.3.6.0.PFJCNXM release-keys
 vendor/bin/pm-proxy|079048211eb740053bb0f5451ddfb0c15cbcf3aa
 vendor/bin/pm-service|17d4ff66869b9073bbe484eaf36e846887f8bc60
-vendor/lib/libperipheral_client.so|5f9d801c8f88c12f683a569ea95d96cec5131832
 vendor/lib64/libperipheral_client.so|0005c7b4507694e7bd4476e984e259e40890948d
 
 # Power-off charging daemon
@@ -1009,20 +839,6 @@ vendor/lib64/libqmi_csi.so|7610670c01ea16c457c234eaf246719cedbe5afe
 vendor/lib64/libqmi_encdec.so|bfbb1ba8b8a8d10b82c2eb7784e71657d88571b0
 vendor/lib64/libqmi.so|200c8b46f909b9bc8a3f516f8e928ca30d2304a4
 vendor/lib64/libqmiservices.so|2eadabe256667fb9e7d8fe87c93a6484efc1485d
-
-# QTEE connector - from Redmi K20 davinci-user 9 PKQ1.190302.001 V10.3.6.0.PFJCNXM release-keys
-vendor/bin/hw/vendor.qti.hardware.qteeconnector@1.0-service|b9b9c09605f3a3fe04ab7cbc3e6fbbd52b51e8c1
-vendor/etc/init/vendor.qti.hardware.qteeconnector@1.0-service.rc|c966350ee67d3a7c73ca7184e3725264025d16f5
-vendor/lib64/hw/vendor.qti.hardware.qteeconnector@1.0-impl.so|2ed0e2fad17c44019607dcf144bee5bfbda1fb0c
-vendor/lib64/libGPQTEEC_vendor.so|f7b7c963c843cc7b04d01e900ed3fc82b3519e4b
-vendor/lib64/libGPTEE_vendor.so|e3217e832f56f31ac2758ed67fc20b1036b483d7
-vendor/lib64/libQTEEConnector_vendor.so|5866a33390f61e907caf7c5a6c5af9311fbba4b4
-vendor/lib64/vendor.qti.hardware.qteeconnector@1.0.so|1c29100203a966de8902a4abc7b98575755d37f3
-vendor/lib/hw/vendor.qti.hardware.qteeconnector@1.0-impl.so|876088266cf34f0a9593d15e8d132f29dc1e9633
-vendor/lib/libGPQTEEC_vendor.so|dfab4320b0cb3ff8fee88b26fa2a650172e51ff8
-vendor/lib/libGPTEE_vendor.so|b7a6c64a93eee74e0ad5f1a982641c9d5465523d
-vendor/lib/libQTEEConnector_vendor.so|b9461275e5767ea41812355d14787b2cef1afdf4
-vendor/lib/vendor.qti.hardware.qteeconnector@1.0.so|ea51c0cda72aa076b7c9d4d4dd9c9a72c7906469
 
 # Radio - from Redmi K20 davinci-user 9 PKQ1.190302.001 V10.3.6.0.PFJCNXM release-keys
 -app/datastatusnotification/datastatusnotification.apk|13c730382d65542bf001bf5920c42f39ffb8b6e6
@@ -1186,8 +1002,6 @@ vendor/lib64/libssc.so|e0e9630e7b8e14c7d5aad63d0525e159e96e25dd
 
 # Soter - from Redmi K20 davinci-user 9 PKQ1.190302.001 V10.3.6.0.PFJCNXM release-keys
 -app/SoterService/SoterService.apk|e1897a6b3204f6991daada37bcce0c2b76ee33ef
-framework/vendor.qti.hardware.soter-V1.0-java.jar|36da31dfb0ca292f7e3d3287f460ed3bef38f1c9
-lib64/vendor.qti.hardware.soter@1.0.so|306277aaa2974375cbed96b87e8c0457000823e4
 vendor/bin/hw/vendor.qti.hardware.soter@1.0-service|ec005f00d95514ac506b264732ea52c87f1cdc64
 vendor/etc/init/vendor.qti.hardware.soter@1.0-service.rc|76447a61ad5529949365eeb7e8ca000e48bd28ae
 vendor/lib64/vendor.qti.hardware.soter@1.0.so|6e5a8d8c6cc81bd71a4adc5245332561f9d6e5ef
@@ -1206,10 +1020,8 @@ vendor/etc/thermal-engine-tgame.conf
 vendor/bin/thermal-engine
 vendor/lib/libthermalfeature.so
 -vendor/lib/libthermalclient.so
-vendor/lib/libcdsprpc.so
 vendor/lib64/libthermalfeature.so
 -vendor/lib64/libthermalclient.so
-vendor/lib64/libcdsprpc.so
 
 # Time services - from Redmi K20 davinci-user 9 PKQ1.190302.001 V10.3.6.0.PFJCNXM release-keys
 -vendor/app/TimeService/TimeService.apk|3c9e8763b1b81e71b378eb735eee8c6f657a26d4
@@ -1220,7 +1032,6 @@ vendor/lib64/libtime_genoff.so|c3d21c3b04cd7da6233685dac3fd5f0acdbf23be
 vendor/bin/hw/vendor.qti.hardware.tui_comm@1.0-service-qti|4196393674f406412cacb52138c335d8c220675a
 vendor/etc/init/vendor.qti.hardware.tui_comm@1.0-service-qti.rc|2cfc563d7e1579374f001c94588fae7835a12ffc
 vendor/lib64/vendor.qti.hardware.tui_comm@1.0.so|592e157feabf2dcfbc430615605b699e4f276ee5
-vendor/lib/vendor.qti.hardware.tui_comm@1.0.so|65a41d3e18d0a969c56e6fb6982b01861709a2a0
 
 # Wifi
 vendor/bin/cnss-daemon
