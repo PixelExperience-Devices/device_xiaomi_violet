@@ -82,6 +82,7 @@ struct GnssInterface {
     void (*blockCPI)(double latitude, double longitude, float accuracy,
                      int blockDurationMsec, double latLonDiffThreshold);
     void (*getGnssEnergyConsumed)(GnssEnergyConsumedCallback energyConsumedCb);
+    void (*injectLocationExt)(const GnssLocationInfoNotification &locationInfo);
 };
 
 struct FlpInterface {

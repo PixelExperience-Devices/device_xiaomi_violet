@@ -175,6 +175,7 @@ class GnssAdapter : public LocAdapterBase {
     std::string mMoServerUrl;
     XtraSystemStatusObserver mXtraObserver;
     LocationSystemInfo mLocSystemInfo;
+    std::vector<GnssSvIdSource> mBlacklistedSvIds;
 
     /* === Misc ===================================================================== */
     BlockCPIInfo mBlockCPIInfo;
@@ -278,6 +279,9 @@ public:
     uint32_t gnssDeleteAidingDataCommand(GnssAidingData& data);
     void deleteAidingData(const GnssAidingData &data, uint32_t sessionId);
     void gnssUpdateXtraThrottleCommand(const bool enabled);
+    std::vector<LocationError> gnssUpdateConfig(const std::string& oldServerUrl,
+            const std::string& oldMoServerUrl, const GnssConfig& gnssConfigRequested,
+            const GnssConfig& gnssConfigNeedEngineUpdate, size_t count = 0);
 
     /* ==== GNSS SV TYPE CONFIG ============================================================ */
     /* ==== COMMANDS ====(Called from Client Thread)======================================== */
@@ -356,6 +360,9 @@ public:
     virtual bool releaseATL(int connHandle);
     virtual bool requestOdcpiEvent(OdcpiRequestInfo& request);
     virtual bool reportDeleteAidingDataEvent(GnssAidingData& aidingData);
+    virtual bool reportKlobucharIonoModelEvent(GnssKlobucharIonoModel& ionoModel);
+    virtual bool reportGnssAdditionalSystemInfoEvent(
+            GnssAdditionalSystemInfo& additionalSystemInfo);
 
     /* ======== UTILITIES ================================================================= */
     bool needReport(const UlpLocation& ulpLocation,
@@ -389,8 +396,6 @@ public:
     std::string& getMoServerUrl(void) { return mMoServerUrl; }
 
     /*==== CONVERSION ===================================================================*/
-    static uint32_t convertGpsLock(const GnssConfigGpsLock gpsLock);
-    static GnssConfigGpsLock convertGpsLock(const uint32_t gpsLock);
     static uint32_t convertSuplVersion(const GnssConfigSuplVersion suplVersion);
     static uint32_t convertLppProfile(const GnssConfigLppProfile lppProfile);
     static uint32_t convertEP4ES(const GnssConfigEmergencyPdnForEmergencySupl);
@@ -411,6 +416,8 @@ public:
             GnssSvId initialSvId, GnssSvType svType);
 
     void injectLocationCommand(double latitude, double longitude, float accuracy);
+    void injectLocationExtCommand(const GnssLocationInfoNotification &locationInfo);
+
     void injectTimeCommand(int64_t time, int64_t timeReference, int32_t uncertainty);
     void blockCPICommand(double latitude, double longitude, float accuracy,
                          int blockDurationMsec, double latLonDiffThreshold);
