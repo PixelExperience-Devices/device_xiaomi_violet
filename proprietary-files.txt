@@ -963,7 +963,7 @@ vendor/etc/sensors/config/icm4x6xx_0.json|cbbc3252cb3952cd1cebeafcbe210946b18a88
 vendor/etc/sensors/config/lsm6ds3c_0.json|6c4060b1bc24a8f74458a4d319fd0c6197d85c02
 vendor/etc/sensors/config/sm6150_adux1050_0.json|8ab988b61b473d7e49cc84baaf963fce664b478d
 vendor/etc/sensors/config/sm6150_ak991x_0.json|40037aab8f62683c5115d5c54ee66043167479a9
-vendor/etc/sensors/config/sm6150_icm4x6xx_0.json|5659cc3dbb32f8cec52b619528b7f76595e69a25
+vendor/etc/sensors/config/sm6150_icm4x6xx_0.json|1812f5c2c17190230c39fe526af42d2388afd355
 vendor/etc/sensors/config/sm6150_lsm6ds3c_0.json|fb359683c26da4d2573e1588f186a0c3d51a7a92
 vendor/etc/sensors/config/sm6150_power_0.json|cdb1ef2ad4a34cd5e4a1fb223ddd72a2b7de8018
 vendor/etc/sensors/config/sm6150_tcs3701.json|07d5d34a344fc9f07f088617adf394faccbbb547
