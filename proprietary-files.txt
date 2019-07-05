@@ -118,11 +118,11 @@ vendor/etc/acdbdata/adsp_avs_config.acdb
 lib64/libaptX_encoder.so|0cebad28afcf29f931bdc2d24fce2730dc882ecf
 lib64/libaptXHD_encoder.so|90f47f10af28b3ead143200cb4370b847c513127
 
-# Bluetooth - from Redmi K20 davinci-user 9 PKQ1.190302.001 V10.3.6.0.PFJCNXM release-keys
-vendor/bin/hw/android.hardware.bluetooth@1.0-service-qti|a735071da85d405f79c6228a27782900d8934893
-vendor/etc/init/android.hardware.bluetooth@1.0-service-qti.rc|a979981c55f3dcaf6cf2212e71b901ca4d58b959
-vendor/lib64/hw/android.hardware.bluetooth@1.0-impl-qti.so|8abc3e09b55f0ed662c89b4a0bd228aa8acc8e3b
-vendor/lib64/libbtnv.so|9d5b86dd6583c30c4a3dea424ac6f403a9237994
+# Bluetooth
+vendor/bin/hw/android.hardware.bluetooth@1.0-service-qti
+vendor/etc/init/android.hardware.bluetooth@1.0-service-qti.rc
+vendor/lib64/hw/android.hardware.bluetooth@1.0-impl-qti.so
+vendor/lib64/libbtnv.so
 
 # Camera
 vendor/etc/camera/beauty_ui9_intelligent_params.config
