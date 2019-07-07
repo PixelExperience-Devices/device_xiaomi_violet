@@ -807,7 +807,6 @@ vendor/lib64/hw/vendor.qti.hardware.soter@1.0-impl.so
 -vendor/app/TimeService/TimeService.apk
 vendor/bin/time_daemon
 vendor/lib64/libtime_genoff.so
-vendor/lib/libtime_genoff.so
 
 # Trusted User Interface
 vendor/bin/hw/vendor.qti.hardware.tui_comm@1.0-service-qti
