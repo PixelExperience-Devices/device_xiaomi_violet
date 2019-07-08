@@ -729,6 +729,7 @@ vendor/lib/libvpphvx.so|6d88442e021ff318d028f44625f7cf4051d85adf
 vendor/lib/libvqzip.so|0f3c9a2a4cf1fba251c15812bc62cfb048b577a4
 vendor/lib/libvpptestutils.so|86261b1f874bcc998aebc54e217ae23a5eb46425
 vendor/lib/vendor.qti.hardware.vpp@1.1.so|4a5ec90b0ae28dc2ed00b1d498ce422b664b34bb
+vendor/lib/vendor.qti.hardware.vpp@1.2.so|125cd2a186a9c651d65e27d2b81b082d7f02e9b6
 vendor/lib64/libAlacSwDec.so|075b504694c7f2961778cd9f7d2232b3df418954
 vendor/lib64/libApeSwDec.so|863cb1bde34ffb373a4a0edf83a31ee277a37756
 vendor/lib64/libFlacSwDec.so|b7f1f608db80ce3394a9d9371f9d4c3aa7f48fe5
@@ -752,6 +753,7 @@ vendor/lib64/libvpplibrary.so|f15722c428bf4325c5518ac57c4f4a2d4e31362a
 vendor/lib64/libvpphvx.so|90a8c4d63e8af90f6930a51dd2edbf11f25f9ecd
 vendor/lib64/libvpptestutils.so|12d04186cfc72575a4e4c14a125ecd906ba3dbbe
 vendor/lib64/vendor.qti.hardware.vpp@1.1.so|9b09cc9ba87869b866868771a4e0fb2a68b99945
+vendor/lib64/vendor.qti.hardware.vpp@1.2.so|dc839e732bc6c57a43ef427ccc52fff967ac2a9f
 
 # Mlipay - from Redmi K20 davinci-user 9 PKQ1.190302.001 V10.3.6.0.PFJCNXM release-keys
 vendor/bin/mlipayd@1.1|0167e5ee1eae0929ba6a1488fbfad4b655212496
