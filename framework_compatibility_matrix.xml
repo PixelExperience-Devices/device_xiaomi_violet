@@ -568,10 +568,6 @@
         <name>vendor.lineage.livedisplay</name>
         <version>2.0</version>
         <interface>
-            <name>IDisplayModes</name>
-            <instance>default</instance>
-        </interface>
-        <interface>
             <name>IPictureAdjustment</name>
             <instance>default</instance>
         </interface>
