@@ -558,14 +558,6 @@
         <item>10</item>
     </integer-array>
 
-    <!-- List supported color modes. -->
-    <integer-array name="config_availableColorModes">
-        <item>0</item>
-        <item>1</item>
-        <item>2</item>
-        <item>3</item>
-    </integer-array>
-
     <!-- Boolean indicating whether single radio chain scan results are to be used for network selection -->
     <bool name="config_wifi_framework_use_single_radio_chain_scan_results_network_selection">true</bool>
 
