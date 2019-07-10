@@ -60,7 +60,7 @@ public :
     inline virtual void getName(string& name);
     virtual void notify(const list<IDataItemCore*>& dlist);
 
-    bool updateLockStatus(GnssConfigGpsLock lock);
+    bool updateLockStatus(uint32_t lock);
     bool updateConnections(uint64_t allConnections);
     bool updateTac(const string& tac);
     bool updateMccMnc(const string& mccmnc);
@@ -74,7 +74,7 @@ protected:
 private:
     IOsObserver*    mSystemStatusObsrvr;
     const MsgTask* mMsgTask;
-    GnssConfigGpsLock mGpsLock;
+    int32_t mGpsLock;
     uint64_t mConnections;
     string mTac;
     string mMccmnc;

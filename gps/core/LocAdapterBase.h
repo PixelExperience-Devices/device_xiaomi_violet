@@ -34,8 +34,6 @@
 #include <LocationAPI.h>
 #include <map>
 
-#define MIN_TRACKING_INTERVAL (100) // 100 msec
-
 typedef struct LocationSessionKey {
     LocationAPI* client;
     uint32_t id;
@@ -71,11 +69,15 @@ protected:
     inline LocAdapterBase(const MsgTask* msgTask) :
         mIsMaster(false), mEvtMask(0), mContext(NULL), mLocApi(NULL),
         mLocAdapterProxyBase(NULL), mMsgTask(msgTask) {}
+    LocAdapterBase(const LOC_API_ADAPTER_EVENT_MASK_T mask,
+        ContextBase* context, bool isMaster,
+        LocAdapterProxyBase *adapterProxyBase = NULL);
 public:
     inline virtual ~LocAdapterBase() { mLocApi->removeAdapter(this); }
-    LocAdapterBase(const LOC_API_ADAPTER_EVENT_MASK_T mask,
-                   ContextBase* context, bool isMaster = false,
-                   LocAdapterProxyBase *adapterProxyBase = NULL);
+    inline LocAdapterBase(const LOC_API_ADAPTER_EVENT_MASK_T mask,
+                          ContextBase* context,
+                          LocAdapterProxyBase *adapterProxyBase = NULL) :
+        LocAdapterBase(mask, context, false, adapterProxyBase) {}
 
     inline LOC_API_ADAPTER_EVENT_MASK_T
         checkMask(LOC_API_ADAPTER_EVENT_MASK_T mask) const {
@@ -170,9 +172,6 @@ public:
     virtual bool requestOdcpiEvent(OdcpiRequestInfo& request);
     virtual bool reportGnssEngEnergyConsumedEvent(uint64_t energyConsumedSinceFirstBoot);
     virtual bool reportDeleteAidingDataEvent(GnssAidingData &aidingData);
-    virtual bool reportKlobucharIonoModelEvent(GnssKlobucharIonoModel& ionoModel);
-    virtual bool reportGnssAdditionalSystemInfoEvent(
-            GnssAdditionalSystemInfo& additionalSystemInfo);
 };
 
 } // namespace loc_core

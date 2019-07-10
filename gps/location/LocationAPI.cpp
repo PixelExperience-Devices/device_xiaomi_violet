@@ -41,6 +41,13 @@ typedef const FlpInterface* (getFlpInterface)();
 typedef const GeofenceInterface* (getGeofenceInterface)();
 
 
+typedef uint16_t LocationAdapterTypeMask;
+typedef enum {
+    LOCATION_ADAPTER_GNSS_TYPE_BIT      = (1<<0), // adapter type is GNSS
+    LOCATION_ADAPTER_FLP_TYPE_BIT       = (1<<1), // adapter type is FLP
+    LOCATION_ADAPTER_GEOFENCE_TYPE_BIT  = (1<<2)  // adapter type is geo fence
+} LocationAdapterTypeBits;
+
 typedef struct {
     // bit mask of the adpaters that we need to wait for the removeClientCompleteCallback
     // before we invoke the registered locationApiDestroyCompleteCallback
@@ -111,13 +118,14 @@ static bool isGeofenceClient(LocationCallbacks& locationCallbacks)
 }
 
 
-void LocationAPI::onRemoveClientCompleteCb (LocationAdapterTypeMask adapterType)
+void onRemoveClientCompleteCb (
+    LocationAPI* client, LocationAdapterTypeMask adapterType)
 {
     bool invokeCallback = false;
     locationApiDestroyCompleteCallback destroyCompleteCb;
     LOC_LOGd("adatper type %x", adapterType);
     pthread_mutex_lock(&gDataMutex);
-    auto it = gData.destroyClientData.find(this);
+    auto it = gData.destroyClientData.find(client);
     if (it != gData.destroyClientData.end()) {
         it->second.waitAdapterMask &= ~adapterType;
         if (it->second.waitAdapterMask == 0) {
@@ -132,24 +140,22 @@ void LocationAPI::onRemoveClientCompleteCb (LocationAdapterTypeMask adapterType)
         LOC_LOGd("invoke client destroy cb");
         (destroyCompleteCb) ();
         LOC_LOGd("finish invoke client destroy cb");
-
-        delete this;
     }
 }
 
 void onGnssRemoveClientCompleteCb (LocationAPI* client)
 {
-    client->onRemoveClientCompleteCb (LOCATION_ADAPTER_GNSS_TYPE_BIT);
+    onRemoveClientCompleteCb (client, LOCATION_ADAPTER_GNSS_TYPE_BIT);
 }
 
 void onFlpRemoveClientCompleteCb (LocationAPI* client)
 {
-    client->onRemoveClientCompleteCb (LOCATION_ADAPTER_FLP_TYPE_BIT);
+    onRemoveClientCompleteCb (client, LOCATION_ADAPTER_FLP_TYPE_BIT);
 }
 
 void onGeofenceRemoveClientCompleteCb (LocationAPI* client)
 {
-    client->onRemoveClientCompleteCb (LOCATION_ADAPTER_GEOFENCE_TYPE_BIT);
+    onRemoveClientCompleteCb (client, LOCATION_ADAPTER_GEOFENCE_TYPE_BIT);
 }
 
 LocationAPI*
@@ -296,7 +302,6 @@ LocationAPI::destroy(locationApiDestroyCompleteCallback destroyCompleteCb)
     pthread_mutex_unlock(&gDataMutex);
     if (invokeDestroyCb == true) {
         (destroyCompleteCb) ();
-        delete this;
     }
 }
 
@@ -308,7 +313,6 @@ LocationAPI::LocationAPI()
 // private destructor
 LocationAPI::~LocationAPI()
 {
-    LOC_LOGD("LOCATION API DESTRUCTOR");
 }
 
 void
