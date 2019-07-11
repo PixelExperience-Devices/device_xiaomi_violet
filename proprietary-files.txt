@@ -837,15 +837,6 @@ vendor/etc/init/vendor.qti.hardware.soter@1.0-service.rc
 vendor/lib64/vendor.qti.hardware.soter@1.0.so
 vendor/lib64/hw/vendor.qti.hardware.soter@1.0-impl.so
 
-# SSR
-vendor/bin/ssr_diag
-vendor/bin/ssr_setup
-vendor/bin/subsystem_ramdump
-vendor/lib64/libsubsystem_control.so
-vendor/lib64/libSubSystemShutdown.so
-vendor/lib/libsubsystem_control.so
-vendor/lib/libSubSystemShutdown.so
-
 # Thermal
 -vendor/lib64/libthermalclient.so
 -vendor/lib/libthermalclient.so
