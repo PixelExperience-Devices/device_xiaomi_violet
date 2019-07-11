@@ -239,6 +239,9 @@ include device/qcom/sepolicy/sepolicy.mk
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += $(COMMON_PATH)
 
+# Treble
+PRODUCT_FULL_TREBLE_OVERRIDE := true
+
 # WiFi
 BOARD_WLAN_DEVICE := qcwcn
 BOARD_HOSTAPD_DRIVER := NL80211
