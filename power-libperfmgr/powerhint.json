@@ -410,13 +410,13 @@
     {
       "PowerHint": "INTERACTION",
       "Node": "UfsClkGateEnable",
-      "Duration": 0,
+      "Duration": 200,
       "Value": "0"
     },
     {
       "PowerHint": "INTERACTION",
       "Node": "UfsHibern8Enable",
-      "Duration": 0,
+      "Duration": 200,
       "Value": "0"
     },
     {
