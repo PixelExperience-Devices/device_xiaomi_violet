@@ -2,8 +2,6 @@
 PRODUCT_PROPERTY_OVERRIDES += \
     af.fast_track_multiplier=1 \
     audio.deep_buffer.media=true \
-    audio.offload.buffer.size.kb=32 \
-    audio.offload.gapless.enabled=true \
     audio.offload.min.duration.secs=40 \
     persist.vendor.audio.avs.afe_api_version=2 \
     persist.vendor.audio.fluence.speaker=true \
@@ -23,7 +21,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
     vendor.audio_hal.period_multiplier=3 \
     vendor.audio_hal.period_size=192 \
     vendor.audio.noisy.broadcast.delay=600 \
-    vendor.audio.offload.buffer.size.kb=32 \
+    vendor.audio.offload.buffer.size.kb=256 \
     vendor.audio.offload.gapless.enabled=true \
     vendor.audio.offload.multiaac.enable=true \
     vendor.audio.offload.multiple.enabled=false \
