@@ -63,6 +63,7 @@ static const std::map<enum CameraStreamingMode, std::string> kCamStreamingHint =
         {CAMERA_STREAMING_OFF, "CAMERA_STREAMING_OFF"},
         {CAMERA_STREAMING, "CAMERA_STREAMING"},
         {CAMERA_STREAMING_1080P, "CAMERA_STREAMING_1080P"},
+        {CAMERA_STREAMING_60FPS, "CAMERA_STREAMING_60FPS"},
         {CAMERA_STREAMING_4K, "CAMERA_STREAMING_4K"},
         {CAMERA_STREAMING_SECURE, "CAMERA_STREAMING_SECURE"}};
 
@@ -92,6 +93,10 @@ Power::Power() :
                                 ALOGI("Initialize CAMERA_STREAMING_1080P on");
                                 mHintManager->DoHint("CAMERA_STREAMING_1080P");
                                 mCameraStreamingMode = CAMERA_STREAMING_1080P;
+                            } else if (state == "CAMERA_STREAMING_60FPS") {
+                                ALOGI("Initialize CAMERA_STREAMING_60FPS on");
+                                mHintManager->DoHint("CAMERA_STREAMING_60FPS");
+                                mCameraStreamingMode = CAMERA_STREAMING_60FPS;
                             } else if (state == "CAMERA_STREAMING_4K") {
                                 ALOGI("Initialize with CAMERA_STREAMING_4K on");
                                 mHintManager->DoHint("CAMERA_STREAMING_4K");
