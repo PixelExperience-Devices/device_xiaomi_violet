@@ -552,6 +552,20 @@ vendor/lib/hw/android.hardware.gatekeeper@1.0-impl-qti.so|17d6b0a8cbe2b71ab6bd3c
 vendor/lib64/hw/android.hardware.gatekeeper@1.0-impl-qti.so|6a3c30c6e9e774ae9f36bf4619faecb164baa516
 
 # GPS - from Redmi K20 davinci-user 9 PKQ1.190302.001 V10.3.12.0.PFJCNXM release-keys
+etc/permissions/com.qti.location.sdk.xml|101bb6d5fe15a7a694bce35036c97e7cdfc005b5
+etc/permissions/com.qualcomm.location.xml|022f7aee9bae989304a157cf8d83188196cbc880
+etc/permissions/izat.xt.srv.xml|a64fe261e26355c61628511bab1fe582d1e2954f
+etc/permissions/privapp-permissions-com.qualcomm.location.xml|d87ab93a54238e66b038cfa5ed4286b31bb3e1ab
+framework/com.qti.location.sdk.jar|ab29646a50b7587ae93ef0c6191facb10eaa10d1
+framework/izat.xt.srv.jar|2015e7c9382c5c4db385fe7344dedbb4d84468dc
+lib64/liblocationservice_jni.so|9520d2e83b018c5631563162577a8a1afe197471
+lib64/libxt_native.so|a8884abcee2633c59036d17c18c2bcee764acf9e
+lib64/vendor.qti.gnss@1.0.so|9fa52342e5aff1a700913e41b5aea7381507c6ad
+lib64/vendor.qti.gnss@1.1.so|8edf0fafba7cdd4b9772a3f8653886b0ca5ccf23
+lib64/vendor.qti.gnss@1.2.so|661001984c9afbaacb50f5932ca679b923e96d30
+lib64/vendor.qti.gnss@2.0.so|29c0e0dffe480c71e6cf210b11dfaa6e8b682663
+lib64/vendor.qti.gnss@2.1.so|fae7281f68d41e0f80e48bcb5ca7a9dbafd76a0d
+-priv-app/com.qualcomm.location/com.qualcomm.location.apk|8693dbd6314348e94a567fc36a5ea56f36077017
 vendor/bin/hw/vendor.qti.gnss@2.1-service|cb325959b495f3649749da0ad2e844edbf106ebc
 vendor/bin/garden_app|c41b3127b4a319b7bd697cf494c2ccdeae8bb063
 vendor/bin/loc_launcher|eb334b0ed844b2ade9b038da57413fcee67e568d
