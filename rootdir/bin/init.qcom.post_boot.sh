@@ -3541,6 +3541,9 @@ case "$target" in
     echo 51 > /proc/sys/kernel/sched_min_task_util_for_boost
     echo 51 > /proc/sys/kernel/sched_min_task_util_for_colocation
 
+    # Enable conservative pl
+    echo 1 > /proc/sys/kernel/sched_conservative_pl
+
     echo "0:1228800" > /sys/devices/system/cpu/cpu_boost/input_boost_freq
     echo 40 > /sys/devices/system/cpu/cpu_boost/input_boost_ms
 
