@@ -636,6 +636,12 @@
       "Value": "10"
     },
     {
+      "PowerHint": "CAMERA_STREAMING",
+      "Node": "CDSchedtuneBoost",
+      "Duration": 0,
+      "Value": "1"
+    },
+    {
       "PowerHint": "CAMERA_STREAMING_60FPS",
       "Node": "PowerHALMainState",
       "Duration": 0,
