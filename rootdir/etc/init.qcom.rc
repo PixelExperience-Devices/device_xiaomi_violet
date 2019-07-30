@@ -899,8 +899,9 @@ service profiler_daemon /system/bin/profiler_daemon
 
 service charger /sbin/chargeonlymode
     class charger
-    group system graphics
-    seclabel u:r:healthd:s0
+    user system
+    group system graphics input
+    seclabel u:r:charger:s0
 
 service vendor.ssr_diag /system/vendor/bin/ssr_diag
     class late_start
