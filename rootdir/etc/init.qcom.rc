@@ -692,7 +692,7 @@ on property:ro.vendor.ril.mbn_copy_completed=1
 service vendor.charger /system/bin/chargeonlymode
     class charger
     user system
-    group system graphics
+    group system graphics input
     seclabel u:r:charger:s0
 
 service vendor.msm_irqbalance /vendor/bin/msm_irqbalance -f /system/vendor/etc/msm_irqbalance.conf
