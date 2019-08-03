@@ -124,6 +124,12 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.opengles.version=196610
 
+# WFD
+PRODUCT_PROPERTY_OVERRIDES += \
+    debug.sf.enable_hwc_vds=1 \
+    persist.debug.wfd.enable=1 \
+    persist.sys.wfd.virtual=0
+
 # Display
 PRODUCT_PROPERTY_OVERRIDES += \
     debug.sf.hw=0 \
