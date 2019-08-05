@@ -483,25 +483,23 @@ vendor/bin/dpmQmiMgr|5c8868fa54fe77e5bdef995950843ab35bf4e686
 vendor/lib64/libdpmqmihal.so|e7dbf5ed0bd789da89faf35027dfd2b8f303b192
 vendor/lib64/com.qualcomm.qti.dpm.api@1.0.so|ecf91d0902c45d133425f69903844d26871c60c8
 
-# DRM
-vendor/bin/qseecomd
-vendor/lib/libdrmfs.so
-vendor/lib/libQSEEComAPI.so
-vendor/lib/libsdedrm.so
-vendor/lib64/libdrmfs.so
-vendor/lib64/libdrmtime.so
-vendor/lib64/libGPreqcancel_svc.so
-vendor/lib64/libGPreqcancel.so
-vendor/lib64/libqisl.so
-vendor/lib64/libQSEEComAPI.so
-vendor/lib64/librpmb.so
-vendor/lib64/libsdedrm.so
-vendor/lib64/libsecureui_svcsock.so
-vendor/lib64/libsecureui.so
-vendor/lib64/libSecureUILib.so
-vendor/lib64/libssd.so
-vendor/lib64/libStDrvInt.so
-vendor/lib64/libtzdrmgenprov.so
+# DRM - from Redmi K20 davinci-user 9 PKQ1.190302.001 V10.3.6.0.PFJCNXM release-keys
+vendor/bin/qseecomd|fb46deefbb479276c30259d936c8e1a71d0abda9
+vendor/lib/libdrmfs.so|3957565cd7d4b7d45411cfb2baefbd56371c7dd1
+vendor/lib/libQSEEComAPI.so|941bbce63c20d9071defb6d09bfce46117c2959d
+vendor/lib64/libdrmfs.so|bd2ee8fd5ed83fe6f317800f9542c844a2a64031
+vendor/lib64/libdrmtime.so|5bdf7fda9a34e021b1055281884e01f1a3497580
+vendor/lib64/libGPreqcancel_svc.so|69bf391b5ca36b6c883f8a211bbe4becff2f74e1
+vendor/lib64/libGPreqcancel.so|28236013217a581b4b8d3b6bfac26084894756ba
+vendor/lib64/libqisl.so|46278d326f075e18232212873edf0fe652c1204d
+vendor/lib64/libQSEEComAPI.so|76c4442547e52a08f8c12124103c9d297ee3621a
+vendor/lib64/librpmb.so|f4ee5203fcbff24035493f2b7375e7e487798f05
+vendor/lib64/libsecureui_svcsock.so|575daa793ba270e0e9be5979831a512ffbcc41d0
+vendor/lib64/libsecureui.so|7c4535e2c4e7399f4378e22022460f741367417c
+vendor/lib64/libSecureUILib.so|59a77c2eeca82b604e253b4805f55c8555042643
+vendor/lib64/libssd.so|97061a42b770f93453a4355939fcc9da988664fc
+vendor/lib64/libStDrvInt.so|cbb332c6162dc4db917fa4713310d10ab271e5b9
+vendor/lib64/libtzdrmgenprov.so|0bfac9169eb54ac35531085897f5541e837d5b58
 
 # DRM - Widevine - from Redmi K20 davinci-user 9 PKQ1.190302.001 V10.3.6.0.PFJCNXM release-keys
 vendor/bin/hw/android.hardware.drm@1.1-service.widevine|35fdfb67ad964f586334f52942ed9c8a50633d42
