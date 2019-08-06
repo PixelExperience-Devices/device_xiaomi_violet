@@ -174,9 +174,6 @@ PRODUCT_PACKAGES += \
     android.hardware.drm@1.1-service.clearkey
 
 # Fingerprint feature
-PRODUCT_PACKAGES += \
-    android.hardware.biometrics.fingerprint@2.1-service.xiaomi_sm6150
-
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.fingerprint.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.fingerprint.xml
 
@@ -219,15 +216,6 @@ PRODUCT_BOOT_JARS += \
 PRODUCT_PACKAGES += \
     ims-ext-common
 
-# Input
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/keylayout/uinput-fpc.kl:system/usr/keylayout/uinput-fpc.kl \
-    $(LOCAL_PATH)/keylayout/uinput-goodix.kl:system/usr/keylayout/uinput-goodix.kl
-
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/idc/uinput-fpc.idc:system/usr/idc/uinput-fpc.idc \
-    $(LOCAL_PATH)/idc/uinput-goodix.idc:system/usr/idc/uinput-goodix.idc
-
 # IPACM
 PRODUCT_PACKAGES += \
     ipacm \
@@ -238,6 +226,10 @@ PRODUCT_PACKAGES += \
 # IRSC
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/sec_config:$(TARGET_COPY_OUT_VENDOR)/etc/sec_config
+
+# Keylayout
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/keylayout/sm6150-idp-snd-card_Button_Jack.kl:system/usr/keylayout/sm6150-idp-snd-card_Button_Jack.kl
 
 # Lights
 PRODUCT_PACKAGES += \
