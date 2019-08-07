@@ -427,41 +427,41 @@ vendor/etc/diracmobile.config|d781cd6798a7481a8f7128d144abfb2b8794212d
 vendor/etc/qdcm_calib_data_ft8719_video_mode_dsi_tianma_panel.xml
 vendor/etc/qdcm_calib_data_nt36672a_video_mode_dsi_shenchao_panel.xml
 
-# Display - hardware
-vendor/bin/hw/vendor.qti.hardware.display.allocator@1.0-service
-vendor/etc/init/vendor.qti.hardware.display.allocator@1.0-service.rc
-vendor/lib64/hw/android.hardware.graphics.mapper@2.0-impl-qti-display.so
-vendor/lib64/hw/gralloc.sm6150.so
-vendor/lib64/hw/hwcomposer.sm6150.so
-vendor/lib64/hw/memtrack.sm6150.so
-vendor/lib64/libdisplaydebug.so
-vendor/lib64/libdisplayqos.so
-vendor/lib64/libdpps.so
-vendor/lib64/libgpu_tonemapper.so
-vendor/lib64/libgralloccore.so
-vendor/lib64/libgrallocutils.so
-vendor/lib64/libqdMetaData.so
-vendor/lib64/libdrmutils.so
-vendor/lib64/libsdedrm.so
-vendor/lib64/libsdmcore.so
-vendor/lib64/libsdmutils.so
-vendor/lib64/libsdm-colormgr-algo.so
-vendor/lib/hw/android.hardware.graphics.mapper@2.0-impl-qti-display.so
-vendor/lib/hw/gralloc.sm6150.so
-vendor/lib/hw/hwcomposer.sm6150.so
-vendor/lib/hw/memtrack.sm6150.so
-vendor/lib/libdisplaydebug.so
-vendor/lib/libdisplayqos.so
-vendor/lib/libdpps.so
-vendor/lib/libgpu_tonemapper.so
-vendor/lib/libgralloccore.so
-vendor/lib/libgrallocutils.so
-vendor/lib/libqdMetaData.so
-vendor/lib/libdrmutils.so
-vendor/lib/libsdedrm.so
-vendor/lib/libsdmcore.so
-vendor/lib/libsdmutils.so
-vendor/lib/libsdm-colormgr-algo.so
+# Display - hardware - from ZenFone 6 WW_I01WD-user 9 PPR2.181005.003 16.1210.1904.133-0 release-keys
+vendor/bin/hw/vendor.qti.hardware.display.allocator@1.0-service|6d79469ae609454f4845157bb7cc02c1fd219bbc
+vendor/etc/init/vendor.qti.hardware.display.allocator@1.0-service.rc|110424738e85ab9600ba2e389d162978d7bb950c
+vendor/lib64/hw/android.hardware.graphics.mapper@2.0-impl-qti-display.so|eefdcd22469fda73636c570cdeb754a1f1e15947
+vendor/lib64/hw/gralloc.sm6150.so|23ae804cf7b7f9cb6ea7c6ff3c4f9aced3194097
+vendor/lib64/hw/hwcomposer.sm6150.so|0cacb8d33e74e3834baa72e4905a3fa99c96df8d
+vendor/lib64/hw/memtrack.sm6150.so|ca0bff9c154b6139643a2db64877b9d035f11e50
+vendor/lib64/libdisplaydebug.so|de0532983fff34579853d101f4e5916766e042f2
+vendor/lib64/libdisplayqos.so|3d11de1affe0d8a5e442153b0687edc6be8840f0
+vendor/lib64/libdpps.so|11064702153f3f4a3cb5411117f941bffe2c7f4a
+vendor/lib64/libgpu_tonemapper.so|d41cc0ecb0839792b3eba708381765ae982c2351
+vendor/lib64/libgralloccore.so|18e586b6c701c685a0773876e84134475258df28
+vendor/lib64/libgrallocutils.so|a034c7144294be7bb9602a5a2f1d6f7cc1ef4540
+vendor/lib64/libqdMetaData.so|37a92902fd5fc26443f5098c8097911e8d4417e2
+vendor/lib64/libdrmutils.so|f3128da4d018b6a4c9ba2f06a6337da1655b5063
+vendor/lib64/libsdedrm.so|f9db3ab530e78021a60510e7d17548621dacff6b
+vendor/lib64/libsdmcore.so|0a0143c377a86f025f5ac3b80e0e63ccb24663ac
+vendor/lib64/libsdmutils.so|e74a5347ab76a510c8f34aa4537320d668ff39b1
+vendor/lib64/libsdm-colormgr-algo.so|50217d5d62d6c6d8f9ffde4354a2741a7a591e71
+vendor/lib/hw/android.hardware.graphics.mapper@2.0-impl-qti-display.so|99877e62b3ad566b5c960ee9d92891d022ffd2c4
+vendor/lib/hw/gralloc.sm6150.so|ab239750eba6866ab3096c72a107f32c646992e5
+vendor/lib/hw/hwcomposer.sm6150.so|b194bea7788d2d4d4cc72eae61f37e7c9aed7ee1
+vendor/lib/hw/memtrack.sm6150.so|71563d8131aff59a0941fe0cf2a5a0d105b2c290
+vendor/lib/libdisplaydebug.so|d6656d4b644f8f772c8106d33e576eab71a453a2
+vendor/lib/libdisplayqos.so|8ba049902ab54b83bd0eae579753c79e5d13fb9c
+vendor/lib/libdpps.so|8ca5efd983283eafb6eaab8e8aad44d53d431d3e
+vendor/lib/libgpu_tonemapper.so|b06937b0544085950431741d070542a635f551c4
+vendor/lib/libgralloccore.so|317d507683ab5b9d676bf90729eafe643dc19980
+vendor/lib/libgrallocutils.so|7bef59f8879fe035c76a80555cddae2199297a44
+vendor/lib/libqdMetaData.so|e05e34361a75724bfdfc45cd25e42b1f566b283e
+vendor/lib/libdrmutils.so|f2f6cb78def6a76420d1a4814da972a6c5a876b4
+vendor/lib/libsdedrm.so|e04efd6885fd8a72f7fd039282d2c1e1ee270d08
+vendor/lib/libsdmcore.so|7a14d4029dbbb4550156f88fac5c025b42fc4bc1
+vendor/lib/libsdmutils.so|3c9dfb1d2a471fe85c5628ddbc7d39401a8aca11
+vendor/lib/libsdm-colormgr-algo.so|456680354269d9653b19e101718fcfbc05d4b650
 
 # DPM - from Redmi K20 davinci-user 9 PKQ1.190302.001 V10.3.6.0.PFJCNXM release-keys
 bin/dpmd|b4ab23a880c43a5e32c1b74c3743445d64c3cf25
@@ -603,67 +603,59 @@ vendor/firmware/a612_zap.mdt
 vendor/firmware/a615_zap.b00
 vendor/firmware/a615_zap.elf
 
-# Graphics
-vendor/lib64/egl/eglSubDriverAndroid.so
-vendor/lib64/egl/libEGL_adreno.so
-vendor/lib64/egl/libGLESv1_CM_adreno.so
-vendor/lib64/egl/libGLESv2_adreno.so
-vendor/lib64/egl/libq3dtools_adreno.so
-vendor/lib64/egl/libq3dtools_esx.so
-vendor/lib64/egl/libQTapGLES.so
-vendor/lib64/libadreno_utils.so
-vendor/lib64/libbccQTI.so
-vendor/lib64/libC2D2.so
-vendor/lib64/libc2d30_bltlib.so
-vendor/lib64/libCB.so
-vendor/lib64/libgsl.so
-vendor/lib64/libllvm-glnext.so
-vendor/lib64/libllvm-qcom.so
-vendor/lib64/libOpenCL.so
-vendor/lib64/librs_adreno_sha1.so
-vendor/lib64/librs_adreno.so
-vendor/lib64/libRSDriver_adreno.so
-vendor/lib/egl/eglSubDriverAndroid.so
-vendor/lib/egl/libEGL_adreno.so
-vendor/lib/egl/libGLESv1_CM_adreno.so
-vendor/lib/egl/libGLESv2_adreno.so
-vendor/lib/egl/libq3dtools_adreno.so
-vendor/lib/egl/libq3dtools_esx.so
-vendor/lib/egl/libQTapGLES.so
-vendor/lib/libadreno_utils.so
-vendor/lib/libbccQTI.so
-vendor/lib/libC2D2.so
-vendor/lib/libc2d30_bltlib.so
-vendor/lib/libCB.so
-vendor/lib/libgsl.so
-vendor/lib/libllvm-glnext.so
-vendor/lib/libllvm-qcom.so
-vendor/lib/libOpenCL.so
-vendor/lib/librs_adreno_sha1.so
-vendor/lib/librs_adreno.so
-vendor/lib/libRSDriver_adreno.so
+# Graphics - from ZenFone 6 WW_I01WD-user 9 PPR2.181005.003 16.1210.1904.133-0 release-keys
+vendor/lib64/egl/eglSubDriverAndroid.so|94e0e15ea0e43ab851261d114cb938ee427191c9
+vendor/lib64/egl/libEGL_adreno.so|ecfd84bcd7546d9ce0d61d10b462dd6a910a1d80
+vendor/lib64/egl/libGLESv1_CM_adreno.so|f744b6fe295bfe222aaeeb78d2f35950c90ee8ef
+vendor/lib64/egl/libGLESv2_adreno.so|155159cdfa32ff92d5011408876212c7d6cd342c
+vendor/lib64/egl/libq3dtools_adreno.so|2001080174e0df4d6cdf69a63bf904b0386b585c
+vendor/lib64/egl/libq3dtools_esx.so|0dbae5b9037d4f825d996db82a33b48610829d5a
+vendor/lib64/egl/libQTapGLES.so|663f50e947c6b0b7ffccfe5a922cf078eb4e35f4
+vendor/lib64/libadreno_utils.so|840b76efee1920a345b7f26ca3ac3aace7085b17
+vendor/lib64/libC2D2.so|cb0d79e2d50ef6ae7a8e04e1ebb9c62c8cd07038
+vendor/lib64/libc2d30_bltlib.so|08f5042948bbde959ae6fbfb4e790da51988b833
+vendor/lib64/libCB.so|add296d7484c8948730592a7e4796ebd1a6b8a62
+vendor/lib64/libgsl.so|2317d99f16a77b241ef1237cada8f85f821a0368
+vendor/lib64/libllvm-glnext.so|080d20c11f3b3f8ab5be374ee204bf9f03f43c0b
+vendor/lib64/libllvm-qcom.so|2512086c0272b5729f89a8dcac38fef9daa4d1df
+vendor/lib64/libOpenCL.so|1913f8bb7894aefb517c87f84faa925efe57bf8e
+vendor/lib/egl/eglSubDriverAndroid.so|db314060c20c5e8cdc370b5da18f58606d59e6b4
+vendor/lib/egl/libEGL_adreno.so|ac0e59defcedb731445c44f77e53d16fa80d3cc4
+vendor/lib/egl/libGLESv1_CM_adreno.so|9ae5f0717608021d9791f617311b7d4adb2ac44c
+vendor/lib/egl/libGLESv2_adreno.so|03553f8deb63ce83556c5b9bf5cd6eeeb4474a34
+vendor/lib/egl/libq3dtools_adreno.so|a2506b94eb0fe3c2bccc7c8e6d8b8d21bd314ae8
+vendor/lib/egl/libq3dtools_esx.so|2129c5c117500ec35b9ec80c8bbd545aa87303ac
+vendor/lib/egl/libQTapGLES.so|e1fc7629818c9c8a65acf431879c2ab2e5074bd8
+vendor/lib/libadreno_utils.so|7fa753631642002065248b40fc9fe88e8a65d015
+vendor/lib/libC2D2.so|a7b9d82f2fe1b7e7d27e2ac78a7ca564aa121e92
+vendor/lib/libc2d30_bltlib.so|8c66b61743dc9636857cad499d2cae1b477abda7
+vendor/lib/libCB.so|ad28f73a6b90f2d16abc757e7f886a1d6fc25877
+vendor/lib/libgsl.so|f74cc09fe5d9871ba4cfdac0748a70c8ea86ca15
+vendor/lib/libllvm-glnext.so|6a5ac14dea044d35e60b11c9bfd2461c4bae1edb
+vendor/lib/libllvm-qcom.so|3e584084a484c2bf5745bc425183e7bb07626829
+vendor/lib/libOpenCL.so|16cd3c08bb816198b70d773f1a2b1dac4e3d6f2a
 
-# Graphics (HDR)
-vendor/lib/libhdr_tm.so
-vendor/lib64/libhdr_tm.so
+# Graphics (HDR) - from ZenFone 6 WW_I01WD-user 9 PPR2.181005.003 16.1210.1904.133-0 release-keys
+vendor/lib/libhdr_tm.so|ff7668186f22b10bbdbd5f665db9240d5f247aea
+vendor/lib64/libhdr_tm.so|71381513ced6733110bea360cf6e0f961634e657
 
-# Graphics (SDM)
-vendor/lib/libqseed3.so
-vendor/lib/libsdm-color.so
-vendor/lib/libsdm-diag.so
--vendor/lib/libsdm-disp-vndapis.so
-vendor/lib/libsdmextension.so
-vendor/lib/libtinyxml2_1.so
-vendor/lib64/libqseed3.so
-vendor/lib64/libsdm-color.so
-vendor/lib64/libsdm-diag.so
--vendor/lib64/libsdm-disp-vndapis.so
-vendor/lib64/libsdmextension.so
-vendor/lib64/libtinyxml2_1.so
+# Graphics (SDM) - from ZenFone 6 WW_I01WD-user 9 PPR2.181005.003 16.1210.1904.133-0 release-keys
+vendor/lib/libqseed3.so|55d9148c931c2ad6983d30a9d3a8aff2a27b9a00
+vendor/lib/libsdm-color.so|bcc9d211fdafed95cb083451683ef38ec249c6e2
+vendor/lib/libsdm-diag.so|ec84be26f59c0511cc16cd49a2eaef2262f4c96f
+-vendor/lib/libsdm-disp-vndapis.so|31193054972e538f5a5648197bbe93ce0a16b345
+vendor/lib/libsdmextension.so|122b888388a1099f07eebee00549402ebf0f5152
+vendor/lib/libtinyxml2_1.so|040b260c7652d1a21e6935d9df1351706e2c953a
+vendor/lib64/libqseed3.so|fb17af6d01fbbb8aae45f31ae80cb4492bf19d13
+vendor/lib64/libsdm-color.so|520f6b2cfa0594b8abfefa3d764fdcfaa0ad1561
+vendor/lib64/libsdm-diag.so|9d1ae91a44d9aa9cc84a7b1a2fbb67544b32e305
+-vendor/lib64/libsdm-disp-vndapis.so|53fb2a6c1bff71d8cfede425362ea4baf7c0445a
+vendor/lib64/libsdmextension.so|7675c77b9311ebcee236e757ecda0c7e4091e859
+vendor/lib64/libtinyxml2_1.so|0019bedf2e12642fe4113093bc5a5590f6f5021b
 
-# Graphics (Vulkan)
-vendor/lib/hw/vulkan.sm6150.so
-vendor/lib64/hw/vulkan.sm6150.so
+# Graphics (Vulkan) - from ZenFone 6 WW_I01WD-user 9 PPR2.181005.003 16.1210.1904.133-0 release-keys
+vendor/lib/hw/vulkan.sm6150.so|048ec307a00ba57e1fc41e72bf334ff6f691768d
+vendor/lib64/hw/vulkan.sm6150.so|bbac8f3b6ddead979fb7666d9f47e214f40ae958
 
 # IPA
 vendor/firmware/ipa_fws.b00
