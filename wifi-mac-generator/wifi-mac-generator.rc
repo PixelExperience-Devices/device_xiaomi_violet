@@ -1,0 +1,17 @@
+service nv_mac /vendor/bin/nv_mac
+    class main
+    user system
+    group system inet net_admin wifi net_raw
+    disabled
+    oneshot
+
+service vendor.wifi-mac-generator /vendor/bin/wifi-mac-generator
+    class main
+    user system
+    group system
+    oneshot
+    disabled
+
+on post-fs-data
+    start nv_mac
+    start vendor.wifi-mac-generator

@@ -452,6 +452,7 @@ PRODUCT_PACKAGES += \
     libwifi-hal-ctrl \
     libwifi-hal-qcom \
     libwpa_client \
+    wifi-mac-generator \
     wpa_supplicant \
     wpa_supplicant.conf
 
