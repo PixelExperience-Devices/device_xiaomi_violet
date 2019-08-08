@@ -766,7 +766,6 @@ vendor/etc/perf/perfboostsconfig.xml|65946aefb3cf87cf0aef26617e89bcabf71fcaba
 vendor/etc/perf/targetconfig.xml|53d6e2936c1cdc67edf86a2ccf04084adbff4a68
 vendor/etc/perf/targetresourceconfigs.xml|0a614d97672c516aedc253aec525468fbdb270ec
 vendor/etc/perf/thermalboost.conf|3a70ac91160e48a64578f0b7775798f19040e87d
-vendor/etc/powerhint.xml|a6a552f11d0c8cdee91c21293118ca1e0881e00c
 vendor/lib64/liblearningmodule.so|3d92dcc8e4ba7fe0227e47a236eacda62babce9c
 vendor/lib64/libmeters.so|742ad0162bfa789a107473789106fd14d2bf41ca
 vendor/lib64/libperfgluelayer.so|eb137856d7180bac0bb33c463ac1851fa3904f39
