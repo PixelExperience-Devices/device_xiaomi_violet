@@ -44,17 +44,12 @@ PRODUCT_PROPERTY_OVERRIDES += \
 # Bluetooth
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.vendor.bt.a2dp_offload_cap=sbc-aptx-aptxtws-aptxhd-aac-ldac-aptxadaptive \
-    persist.vendor.btstack.a2dp_offload_cap=sbc-aptx-aptxtws-aptxhd-aac-ldac \
-    persist.vendor.btstack.enable.splita2dp=true \
     vendor.bluetooth.soc=cherokee \
-    vendor.qcom.bluetooth.soc=cherokee \
-    bt.max.hfpclient.connections=1
+    vendor.qcom.bluetooth.soc=cherokee
 
 # Camera
 PRODUCT_PROPERTY_OVERRIDES += \
-    camera.aux.packagelist="org.codeaurora.snapcam,com.android.camera,com.android.lightboxtest" \
-    camera.disable_zsl_mode=1 \
-    vendor.camera.aux.packagelist="org.codeaurora.snapcam,com.android.camera"
+    camera.disable_zsl_mode=1
 
 # Charger
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -81,7 +76,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
 # Display
  PRODUCT_PROPERTY_OVERRIDES += \
     ro.vendor.display.sensortype=2 \
-    ro.vendor.display.svi=1 \
     vendor.display.comp_mask=0 \
     vendor.display.dataspace_saturation_matrix=1.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,1.0 \
     vendor.display.disable_decimation=1 \
@@ -119,9 +113,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 # Fluence/Audio Proccessing
 PRODUCT_PROPERTY_OVERRIDES += \
-    persist.audio.fluence.speaker=true \
-    persist.audio.fluence.voicecall=true \
-    persist.audio.fluence.voicerec=false \
     persist.vendor.audio.fluence.speaker=true \
     persist.vendor.audio.fluence.voicecall=true \
     persist.vendor.audio.fluence.voicerec=false \
@@ -149,20 +140,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.hardware.keystore_desede=true
 
-# Media
-PRODUCT_PROPERTY_OVERRIDES += \
-    media.aac_51_output_enabled=true \
-    media.stagefright.enable-aac=true \
-    media.stagefright.enable-http=true \
-    media.stagefright.enable-player=true \
-    media.stagefright.enable-qcp=true \
-    media.stagefright.enable-scan=true \
-    mm.enable.smoothstreaming=true \
-    mmp.enable.3g2=true \
-    persist.mm.enable.prefetch=true \
-    vendor.mm.enable.qcom_parser=63963135 \
-    media.stagefright.enable-fma2dp=true
-
 # Memory Optimisations
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.vendor.qti.sys.fw.bservice_enable=true
@@ -176,7 +153,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 # NetFlix
 PRODUCT_PROPERTY_OVERRIDES += \
-ro.netflix.bsp_rev=Q6150-17263-1
+    ro.netflix.bsp_rev=Q6150-17263-1
 
 # Netmgr
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -226,7 +203,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 # SSR
 PRODUCT_PROPERTY_OVERRIDES += \
-persist.vendor.ssr.restart_level=ALL_ENABLE
+    persist.vendor.ssr.restart_level=ALL_ENABLE
 
 # Simulate sdcard on /data/media
 PRODUCT_PROPERTY_OVERRIDES += \

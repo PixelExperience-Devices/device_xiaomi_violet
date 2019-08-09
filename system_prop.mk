@@ -21,10 +21,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.qualcomm.cabl=0 \
     ro.vendor.display.ad=1 \
-    ro.vendor.display.sensortype=2 \
-    ro.vendor.display.svi=1 \
-    vendor.display.svi.config=1 \
-    vendor.display.svi.config_path=/system/etc/display/SVIConfig.xml
+    ro.vendor.display.sensortype=2
 
 # FM Radio/BT
 PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
@@ -43,7 +40,16 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 # Media
 PRODUCT_PROPERTY_OVERRIDES += \
-    audio.offload.video=true
+    audio.offload.video=true \
+    media.aac_51_output_enabled=true \
+    media.stagefright.enable-aac=true \
+    media.stagefright.enable-fma2dp=true \
+    media.stagefright.enable-http=true \
+    media.stagefright.enable-player=true \
+    media.stagefright.enable-qcp=true \
+    media.stagefright.enable-scan=true \
+    persist.mm.enable.prefetch=true \
+    vendor.mm.enable.qcom_parser=63963135 \
 
 # Memory optimizations
 PRODUCT_PROPERTY_OVERRIDES += \
