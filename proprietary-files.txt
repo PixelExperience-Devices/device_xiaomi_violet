@@ -427,6 +427,9 @@ vendor/etc/diracmobile.config|d781cd6798a7481a8f7128d144abfb2b8794212d
 vendor/etc/qdcm_calib_data_ft8719_video_mode_dsi_tianma_panel.xml
 vendor/etc/qdcm_calib_data_nt36672a_video_mode_dsi_shenchao_panel.xml
 
+# Display SVI configuration
+etc/display/SVIConfig.xml
+
 # Display - hardware - from ZenFone 6 WW_I01WD-user 9 PPR2.181005.003 16.1210.1904.133-0 release-keys
 vendor/bin/hw/vendor.qti.hardware.display.allocator@1.0-service|6d79469ae609454f4845157bb7cc02c1fd219bbc
 vendor/etc/init/vendor.qti.hardware.display.allocator@1.0-service.rc|110424738e85ab9600ba2e389d162978d7bb950c
