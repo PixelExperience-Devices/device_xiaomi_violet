@@ -168,7 +168,7 @@ limitations under the License.
             <Limit name="measured-frame-rate-1920x1080" range="11-14" />
         </MediaCodec>
         <MediaCodec name="c2.android.hevc.decoder" type="video/hevc" update="true">
-            <Limit name="measured-frame-rate-352x288" range="125-159" />
+            <Limit name="measured-frame-rate-352x288" range="283-420" />
             <Limit name="measured-frame-rate-640x360" range="68-99" />
             <Limit name="measured-frame-rate-720x480" range="57-95" />
             <Limit name="measured-frame-rate-1280x720" range="54-68" />
