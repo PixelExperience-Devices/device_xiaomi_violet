@@ -150,11 +150,12 @@ class GnssAdapter : public LocAdapterBase {
 
     /* ==== CONTROL ======================================================================== */
     LocationControlCallbacks mControlCallbacks;
-    uint32_t mPowerVoteId;
+    uint32_t mAfwControlId;
     uint32_t mNmeaMask;
     GnssSvIdConfig mGnssSvIdConfig;
     GnssSvTypeConfig mGnssSvTypeConfig;
     GnssSvTypeConfigCallback mGnssSvTypeConfigCb;
+    bool mSupportNfwControl;
 
     /* ==== NI ============================================================================= */
     NiData mNiData;
@@ -281,7 +282,6 @@ public:
     void disableCommand(uint32_t id);
     void setControlCallbacksCommand(LocationControlCallbacks& controlCallbacks);
     void readConfigCommand();
-    void setConfigCommand();
     void requestUlpCommand();
     void initEngHubProxyCommand();
     uint32_t* gnssUpdateConfigCommand(GnssConfig config);
@@ -289,8 +289,8 @@ public:
     uint32_t gnssDeleteAidingDataCommand(GnssAidingData& data);
     void deleteAidingData(const GnssAidingData &data, uint32_t sessionId);
     void gnssUpdateXtraThrottleCommand(const bool enabled);
-    std::vector<LocationError> gnssUpdateConfig(const std::string& oldServerUrl,
-            const std::string& oldMoServerUrl, const GnssConfig& gnssConfigRequested,
+    std::vector<LocationError> gnssUpdateConfig(const std::string& oldMoServerUrl,
+            const GnssConfig& gnssConfigRequested,
             const GnssConfig& gnssConfigNeedEngineUpdate, size_t count = 0);
 
     /* ==== GNSS SV TYPE CONFIG ============================================================ */
@@ -313,6 +313,7 @@ public:
     { mGnssSvTypeConfigCb = callback; }
     inline GnssSvTypeConfigCallback gnssGetSvTypeConfigCallback()
     { return mGnssSvTypeConfigCb; }
+    void setConfig();
 
     /* ========= AGPS ====================================================================== */
     /* ======== COMMANDS ====(Called from Client Thread)==================================== */
@@ -337,10 +338,8 @@ public:
     LocationControlCallbacks& getControlCallbacks() { return mControlCallbacks; }
     void setControlCallbacks(const LocationControlCallbacks& controlCallbacks)
     { mControlCallbacks = controlCallbacks; }
-    void setAfwControlId(uint32_t id) { mPowerVoteId = id; }
-    uint32_t getAfwControlId() { return mPowerVoteId; }
-    void setPowerVoteId(uint32_t id) { mPowerVoteId = id; }
-    uint32_t getPowerVoteId() { return mPowerVoteId; }
+    void setAfwControlId(uint32_t id) { mAfwControlId = id; }
+    uint32_t getAfwControlId() { return mAfwControlId; }
     virtual bool isInSession() { return !mTimeBasedTrackingSessions.empty(); }
     void initDefaultAgps();
     bool initEngHubProxy();
