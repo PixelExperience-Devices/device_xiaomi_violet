@@ -1,20 +1,10 @@
-# Activity Manager/Trim
-PRODUCT_PROPERTY_OVERRIDES += \
-    ro.sys.fw.use_trim_settings=true
-
 # Audio
 PRODUCT_PROPERTY_OVERRIDES += \
     af.fast_track_multiplier=1 \
     audio.deep_buffer.media=true \
-    audio.offload.buffer.size.kb=32 \
-    audio.offload.gapless.enabled=true \
     audio.offload.min.duration.secs=30 \
     audio.offload.video=true \
-    av.offload.enable=true \
-    vendor.audio.dolby.ds2.enabled=false \
-    vendor.audio.dolby.ds2.hardbypass=false \
     vendor.audio.flac.sw.decoder.24bit=true \
-    vendor.audio.noisy.broadcast.delay=600 \
     vendor.audio.offload.buffer.size.kb=32 \
     vendor.audio.offload.gapless.enabled=true \
     vendor.audio.offload.multiaac.enable=true \
@@ -30,12 +20,8 @@ PRODUCT_PROPERTY_OVERRIDES += \
     vendor.audio_hal.period_multiplier=3 \
     vendor.audio_hal.period_size=192 \
     persist.vendor.audio.ras.enabled=false \
-    ro.qc.sdk.audio.ssr=false \
-    ro.vendor.audio.sdk.ssr=false \
-    ro.vendor.audio.sos=true \
     ro.vendor.audio.voice.volume.boost=manual \
-    tunnel.audio.encode = true \
-    qcom.hw.aac.encoder=true
+    tunnel.audio.encode = true
 
 # AudioFlinger client heap size
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -55,9 +41,12 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.vendor.chg.max_volt_mv=9000
 
-# CnE
+# CNE/DPM
 PRODUCT_PROPERTY_OVERRIDES += \
-    persist.vendor.cne.feature=1
+    persist.vendor.cne.feature=1 \
+    persist.vendor.dpm.feature=1 \
+    persist.vendor.dpm.loglevel=0 \
+    persist.vendor.dpm.nsrm.bkg.evt=3955
 
 # Crypto
  PRODUCT_PROPERTY_OVERRIDES += \
@@ -82,29 +71,23 @@ PRODUCT_PROPERTY_OVERRIDES += \
     vendor.display.disable_excl_rect=0 \
     vendor.display.disable_excl_rect_partial_fb=1 \
     vendor.display.disable_hw_recovery=1 \
-    vendor.display.disable_inline_rotator=1 \
-    vendor.display.disable_scaler=0 \
-    vendor.display.enable_default_color_mode=0 \
-    vendor.display.enable_null_display=0 \
     vendor.display.enable_optimize_refresh=1 \
     debug.mdpcomp.logs=0 \
     persist.sys.sf.color_saturation=1.0 \
     ro.colorpick_adjust=true
 
-# DPM
+# Display post-processing
 PRODUCT_PROPERTY_OVERRIDES += \
-    persist.dpm.feature=1
+    ro.qualcomm.cabl=0 \
+    ro.vendor.display.ad=1
 
 # DRM
 PRODUCT_PROPERTY_OVERRIDES += \
     drm.service.enabled=true
 
-# Enable stm-events
-PRODUCT_PROPERTY_OVERRIDES += \
-	persist.debug.coresight.config=stm-events
-
 # FM
 PRODUCT_PROPERTY_OVERRIDES += \
+    vendor.bluetooth.soc=cherokee \
     vendor.hw.fm.init=0
 
 # Factory Reset Protection
@@ -126,11 +109,11 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 # Graphics
 PRODUCT_PROPERTY_OVERRIDES += \
-    vendor.gralloc.disable_ubwc=0 \
-    ro.opengles.version=196610 \
+    debug.sf.enable_hwc_vds=1 \
     dev.pm.dyn_samplingrate=1 \
     persist.demo.hdmirotationlock=false \
-    persist.sys.force_sw_gles=0
+    persist.sys.force_sw_gles=0 \
+    ro.opengles.version=196610
 
 # IO CGroup
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -139,6 +122,18 @@ PRODUCT_PROPERTY_OVERRIDES += \
 # Keystore
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.hardware.keystore_desede=true
+
+# Media
+PRODUCT_PROPERTY_OVERRIDES += \
+    audio.offload.video=true \
+    media.aac_51_output_enabled=true \
+    media.stagefright.enable-aac=true \
+    media.stagefright.enable-fma2dp=true \
+    media.stagefright.enable-http=true \
+    media.stagefright.enable-player=true \
+    media.stagefright.enable-qcp=true \
+    media.stagefright.enable-scan=true \
+    persist.mm.enable.prefetch=true
 
 # Memory Optimisations
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -157,6 +152,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 # Netmgr
 PRODUCT_PROPERTY_OVERRIDES += \
+    persist.vendor.data.iwlan.enable=true \
     persist.vendor.data.mode=concurrent \
     ro.vendor.use_data_netmgrd=true
 
@@ -169,22 +165,20 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.vendor.extension_library=libqti-perfd-client.so \
     vendor.perf.dolphin.enable=false \
+    ro.vendor.qti.config.zram=true \
+    vendor.iop.enable_prefetch_ofr=0 \
     vendor.perf.gestureflingboost.enable=true \
-    vendor.perf.workloadclassifier.enable=true \
-    persist.vendor.qti.games.gt.prof=1 \
-    ro.vendor.qti.config.zram=true
+    vendor.perf.workloadclassifier.enable=true
+
 
 # Qualcomm System Daemon
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.vendor.qcomsysd.enabled=1
 
-# RMNet Data
-PRODUCT_PROPERTY_OVERRIDES += \
-    persist.data.df.dev_name=rmnet_usb0
-
 # Radio/RIL
  PRODUCT_PROPERTY_OVERRIDES += \
     use.voice.path.for.pcm.voip=true \
+    persist.data.df.dev_name=rmnet_usb0 \
     persist.radio.atfwd.start=false \
     persist.radio.multisim.config=dsds \
     persist.vendor.radio.apm_sim_not_pwdn=1 \
@@ -201,25 +195,24 @@ PRODUCT_PROPERTY_OVERRIDES += \
     keyguard.no_require_sim=true \
     DEVICE_PROVISIONED=1
 
-# SSR
-PRODUCT_PROPERTY_OVERRIDES += \
-    persist.vendor.ssr.restart_level=ALL_ENABLE
-
 # Simulate sdcard on /data/media
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.fuse_sdcard=true
 
 # Time
 PRODUCT_PROPERTY_OVERRIDES += \
-	persist.timed.enable=true
+    persist.timed.enable=true
 
-# VoWIFI
+# VoLTE
 PRODUCT_PROPERTY_OVERRIDES += \
-    persist.vendor.data.iwlan.enable=true
+    persist.dbg.volte_avail_ovr=1 \
+    persist.dbg.vt_avail_ovr=1  \
+    persist.dbg.wfc_avail_ovr=1
 
 # WLAN
 PRODUCT_PROPERTY_OVERRIDES += \
     config.disable_rtt=true \
+    persist.vendor.data.iwlan.enable=true \
     ro.wlan.chip=39xx
 
 # WiFi Display
