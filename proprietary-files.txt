@@ -959,14 +959,14 @@ vendor/lib64/vendor.qti.imsrtpservice@1.0.so|376be3f1233317132caa5e38e538040b507
 vendor/lib64/vendor.qti.ims.callinfo@1.0.so|e584a83377c0e80fa01e5ab5695155d98e581bc1
 vendor/lib64/vendor.qti.ims.rcsconfig@1.0.so|6b6de57f4ff3ae0972bfb8fb9f472609ccd2bbe6
 
-# Sensors - from laurus-user 9 PKQ1.190416.001 V10.2.10.0.PFMCNXM release-keys
-vendor/bin/sensors.qti|383741ef8d505eb7103724e103ad68750fcfc160
-vendor/lib/libsensorslog.so|f8e8b673bafe02fb3d330054c636d3af019b3733
-vendor/lib/sensors.ssc.so|2b26b814c298ba3d5a99f377c8b4cbe178580d7c
-vendor/lib/libssc.so|8ad6377b17a73910f228fa22707f4162e6a5cb2b
-vendor/lib64/libsensorslog.so|c31f0ebee83eae75423e4c9b80ace5b8f6d30794
-vendor/lib64/sensors.ssc.so|eca90b58484f0af21042d943e84aa272636f11d6
-vendor/lib64/libssc.so|f52c876c28254540c2a34593f8f5b98306342810
+# Sensors
+vendor/bin/sensors.qti
+vendor/lib/libsensorslog.so
+vendor/lib/sensors.ssc.so
+vendor/lib/libssc.so
+vendor/lib64/libsensorslog.so
+vendor/lib64/sensors.ssc.so
+vendor/lib64/libssc.so
 
 # Sensor Configs
 vendor/etc/sensors/config/ak991x_dri_0.json
