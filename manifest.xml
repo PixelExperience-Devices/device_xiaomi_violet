@@ -411,7 +411,7 @@
     <hal format="hidl">
         <name>vendor.display.config</name>
         <transport>hwbinder</transport>
-        <version>1.7</version>
+        <version>1.8</version>
         <interface>
             <name>IDisplayConfig</name>
             <instance>default</instance>
