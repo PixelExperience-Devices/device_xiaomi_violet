@@ -56,7 +56,7 @@ using namespace loc_core;
 #endif
 #define LOG_TAG "LocSvc_XSSO"
 
-bool XtraSystemStatusObserver::updateLockStatus(uint32_t lock) {
+bool XtraSystemStatusObserver::updateLockStatus(GnssConfigGpsLock lock) {
     mGpsLock = lock;
 
     if (!mReqStatusReceived) {
@@ -219,8 +219,11 @@ void XtraSystemStatusObserver::notify(const list<IDataItemCore*>& dlist)
         }
 
         inline ~HandleOsObserverUpdateMsg() {
-            for (auto each : mDataItemList) {
-                delete each;
+            for (auto itor = mDataItemList.begin(); itor != mDataItemList.end(); ++itor) {
+                if (*itor != nullptr) {
+                    delete *itor;
+                    *itor = nullptr;
+                }
             }
         }
 

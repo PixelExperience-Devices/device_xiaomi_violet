@@ -34,6 +34,8 @@
 #include <LocationAPI.h>
 #include <map>
 
+#define MIN_TRACKING_INTERVAL (100) // 100 msec
+
 typedef struct LocationSessionKey {
     LocationAPI* client;
     uint32_t id;
@@ -168,6 +170,9 @@ public:
     virtual bool requestOdcpiEvent(OdcpiRequestInfo& request);
     virtual bool reportGnssEngEnergyConsumedEvent(uint64_t energyConsumedSinceFirstBoot);
     virtual bool reportDeleteAidingDataEvent(GnssAidingData &aidingData);
+    virtual bool reportKlobucharIonoModelEvent(GnssKlobucharIonoModel& ionoModel);
+    virtual bool reportGnssAdditionalSystemInfoEvent(
+            GnssAdditionalSystemInfo& additionalSystemInfo);
 };
 
 } // namespace loc_core
