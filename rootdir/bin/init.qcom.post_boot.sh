@@ -3138,6 +3138,8 @@ case "$target" in
       echo "0:1209600" > /sys/module/cpu_boost/parameters/input_boost_freq
       echo 150 > /sys/module/cpu_boost/parameters/input_boost_ms
 
+      echo "0:1708800 1:0 2:0 3:0 4:0 5:0 6:2016000 7:0" > /sys/module/cpu_boost/parameters/powerkey_input_boost_freq
+
       # Set Memory parameters
       configure_memory_parameters
 
