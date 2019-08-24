@@ -28,7 +28,6 @@
 import /vendor/etc/init/hw/init.power.rc
 import /vendor/etc/init/hw/init.qcom.usb.rc
 import /vendor/etc/init/hw/init.msm.usb.configfs.rc
-import /vendor/etc/init/hw/init.target.rc
 
 on early-init
     # Disable EAS
@@ -402,7 +401,6 @@ on post-fs-data
     mkdir /data/vendor/hbtp 0750 system system
     mkdir /mnt/vendor/persist/qti_fp 0700 system system
 
-    mkdir /data/vendor/nfc 0770 nfc nfc
     mkdir /data/vendor/thermal 0771 root system
     mkdir /data/vendor/thermal/config 0771 root system
 

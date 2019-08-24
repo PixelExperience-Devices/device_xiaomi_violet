@@ -362,6 +362,19 @@ PRODUCT_PACKAGES += \
     rcs_service_api \
     rcs_service_api.xml
 
+ifeq ($(strip $(TARGET_PRODUCT_HARDWARE)),davinci)
+PRODUCT_PACKAGES += \
+    init.davinci.rc
+else ifeq ($(strip $(TARGET_PRODUCT_HARDWARE)),tucana)
+PRODUCT_PACKAGES += \
+    init.tucana.rc
+endif
+
+ifneq ($(strip $(TARGET_PRODUCT_HARDWARE)),violet)
+PRODUCT_PACKAGES += \
+    init.sm7150.rc
+endif
+
 # Recovery
 PRODUCT_PACKAGES += \
     librecovery_updater_xiaomi
