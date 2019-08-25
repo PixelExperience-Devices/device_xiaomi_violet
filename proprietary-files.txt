@@ -38,7 +38,7 @@ vendor/lib/rfsa/adsp/libVC1Dec.so
 # Alarm - from laurus-user 9 PKQ1.190416.001 V10.2.10.0.PFMCNXM release-keys
 -vendor/app/PowerOffAlarm/PowerOffAlarm.apk|7d0b15c6cb5153cdde14fa5cc7867fd1f1ee11c2
 vendor/bin/hw/vendor.qti.hardware.alarm@1.0-service|3747e7b3eea0f4c6f268c220fd6f27bdb7e1bfdd
-vendor/etc/init/vendor.qti.hardware.alarm@1.0-service.rc|6a269b8cc6354f8b3aaadc0c5e8c6b49c6c7d69e
+vendor/etc/init/vendor.qti.hardware.alarm@1.0-service.rc|c9877b6cae0353d5fdea5bc23dba77101b3d6980
 vendor/lib64/hw/vendor.qti.hardware.alarm@1.0-impl.so|955fd9f9d460181ad6ea414160ea19dc00873b96
 vendor/lib64/vendor.qti.hardware.alarm@1.0.so|e51ebc8d5382321b43b82d3c3ecb09a113d4f161
 
@@ -347,8 +347,8 @@ vendor/lib/libsdsprpc.so
 vendor/bin/hvdcp_opti|999a9980d14a65a8efe4b75fd51450c496cd8ad6
 
 # CNE - from laurus-user 9 PKQ1.190416.001 V10.2.10.0.PFMCNXM release-keys
-etc/permissions/cneapiclient.xml|21d084e6804145e943613f8d1a5d6252ab138ec9
-etc/permissions/com.quicinc.cne.xml|803acf5c7b1faf32c82e674a9d90e80d4e621daa
+etc/permissions/cneapiclient.xml|15831adf0e80243042b90c734eea0a68eb8ae9c9
+etc/permissions/com.quicinc.cne.xml|e99e631d8b06ba4680529e9e4004d8d05baf6904
 framework/cneapiclient.jar|af7db889362e562a4c5073bb6aae32947218abf0
 framework/com.quicinc.cne.api-V1.0-java.jar|9cf7b7f1784c3594e3329954f64b1b129c433e8d
 framework/com.quicinc.cne.api-V1.1-java.jar|6c8815af55cb424fe3936f37a72e2d5bdbfb3b53
@@ -364,33 +364,33 @@ framework/vendor.qti.data.factory-V1.0-java.jar|23a060c1197f21f4f3b0f77485d8ee38
 framework/vendor.qti.hardware.data.qmi-V1.0-java.jar|94c3e0efe3bc51358fe9145ed1ff0708c262380d
 -priv-app/CNEService/CNEService.apk|e871eb09d3fb6f271dee6989ea7576761d8e1cda
 vendor/bin/cnd|8eed54dabfc056dff207222b1c44d7041907b9bc
-vendor/etc/cne/wqeclient/ATT/ATT_profile1.xml|35dbdf894b537e654e06c1bfa4fc5b1997a025d1
-vendor/etc/cne/wqeclient/ATT/ATT_profile2.xml|20e362e80c9306a1813348e4239075584edcf7a2
-vendor/etc/cne/wqeclient/ATT/ATT_profile3.xml|8f8a7742a6e2c48049632ad07187be2bd72540b1
-vendor/etc/cne/wqeclient/ATT/ATT_profile4.xml|032d770c00e8c3384de052619f570e01686abdab
-vendor/etc/cne/wqeclient/ATT/ATT_profile5.xml|54466c9c41529bcf3a221d7f725b14593757bfea
-vendor/etc/cne/wqeclient/ATT/ATT_profile6.xml|8bda3051461da0718e3a167b291f210193245fac
-vendor/etc/cne/wqeclient/ROW/ROW_profile1.xml|f000fd329130819c9081091e0e8fe473eef2d5c7
-vendor/etc/cne/wqeclient/ROW/ROW_profile2.xml|81165bfc6eb982700421db7f68ba7354d92d5965
-vendor/etc/cne/wqeclient/ROW/ROW_profile3.xml|134993fcd8ba72fe0d20343a048cda368262818e
-vendor/etc/cne/wqeclient/ROW/ROW_profile4.xml|8f8a7742a6e2c48049632ad07187be2bd72540b1
-vendor/etc/cne/wqeclient/ROW/ROW_profile5.xml|4b1d26fa6a575498e0a2146d21ae3da16a976fed
-vendor/etc/cne/wqeclient/ROW/ROW_profile6.xml|6df5bbc36a8d800ec062f13513cb574749cd2795
-vendor/etc/cne/wqeclient/ROW/ROW_profile7.xml|958eaeeaeaadf08023133f21b629179ee441feaf
-vendor/etc/cne/wqeclient/ROW/ROW_profile15.xml|78d92b54438105ecfdb35e8d90d023f66f262bf4
-vendor/etc/cne/wqeclient/ROW/ROW_profile16.xml|abe32691f078648b1715b9ff9d47a6efcd9b0bc6
-vendor/etc/cne/wqeclient/ROW/ROW_profile17.xml|8388750b77761aebfc816d8e738f3f51e1baff55
-vendor/etc/cne/wqeclient/ROW/ROW_profile18.xml|ec2dbf2ce7351c23bddb0dce5f5bb2bc30391f54
-vendor/etc/cne/wqeclient/ROW/ROW_profile19.xml|a933ddffbd0c03f4548aa4225c614185c225dc2b
-vendor/etc/cne/wqeclient/ROW/ROW_profile20.xml|1c7d1fc1d6037c41735fe4774549d393e5e1538a
-vendor/etc/cne/wqeclient/ROW/ROW_profile21.xml|77185a73ba32882de5b14a96d2f98d84249e816b
-vendor/etc/cne/wqeclient/ROW/ROW_profile32.xml|0fdef2cdaeae3699b0b080d72c75026774371898
-vendor/etc/cne/wqeclient/VZW/VZW_profile1.xml|d04e35474c4985150c5b609979ebccd0296b0745
-vendor/etc/cne/wqeclient/VZW/VZW_profile2.xml|df208b7fb9d546ff3ffc2a909384054de3da6ea8
-vendor/etc/cne/wqeclient/VZW/VZW_profile3.xml|9f891257192468ffb5bd76c05c797a8274dfe1c7
-vendor/etc/cne/wqeclient/VZW/VZW_profile4.xml|262e46b72716ebaa42088c8573c9cb45e84df8b2
-vendor/etc/cne/wqeclient/VZW/VZW_profile5.xml|088d04c63712bf805f33e7c6fcc04e1cba32037f
-vendor/etc/cne/wqeclient/VZW/VZW_profile6.xml|a0a754557dacb71315107d0ac7840aded695ce65
+vendor/etc/cne/wqeclient/ATT/ATT_profile1.xml|578f3f8f56059bfdbef926bcc68d01c15e06951f
+vendor/etc/cne/wqeclient/ATT/ATT_profile2.xml|1fb42c672a12b6660bdce3ea94e0c43719dd9de8
+vendor/etc/cne/wqeclient/ATT/ATT_profile3.xml|f88e13f1dd7b82388c90358f71813026370c9ed8
+vendor/etc/cne/wqeclient/ATT/ATT_profile4.xml|fb08e04f57797c5684bf734f7ce4bb4968859b18
+vendor/etc/cne/wqeclient/ATT/ATT_profile5.xml|eb726ad1a42b9b78b9ee3b821fc108611bc9eeac
+vendor/etc/cne/wqeclient/ATT/ATT_profile6.xml|be97b46b0d07ee2f6ebcc677d8099ed2140d5d85
+vendor/etc/cne/wqeclient/ROW/ROW_profile1.xml|e7ca213d0998cb3a6a603ad3eca7bda69830ff55
+vendor/etc/cne/wqeclient/ROW/ROW_profile2.xml|169a5209000e357a1a3183e8e5bfdf6fd07c2787
+vendor/etc/cne/wqeclient/ROW/ROW_profile3.xml|4be4060e8ac2d9fcea490feec7938cadcff46e1f
+vendor/etc/cne/wqeclient/ROW/ROW_profile4.xml|f88e13f1dd7b82388c90358f71813026370c9ed8
+vendor/etc/cne/wqeclient/ROW/ROW_profile5.xml|96101f6b01436a02572c67a469ff67ccfb738874
+vendor/etc/cne/wqeclient/ROW/ROW_profile6.xml|cef14ff8a160c7ad719b85d024a4b3301c3638d0
+vendor/etc/cne/wqeclient/ROW/ROW_profile7.xml|8d6773a4c418d0dcc4dc9096017d2681c7a1defe
+vendor/etc/cne/wqeclient/ROW/ROW_profile15.xml|0130dfd8326ee710bf4e15718ede87c49a85b763
+vendor/etc/cne/wqeclient/ROW/ROW_profile16.xml|e05b935d7ccf48d306b71c719b2e4df83187d9c0
+vendor/etc/cne/wqeclient/ROW/ROW_profile17.xml|f1b33204799268eda78dd8314f26abf2e37431e2
+vendor/etc/cne/wqeclient/ROW/ROW_profile18.xml|19db16f62dabb806a62f192858a9d52b5bc2a064
+vendor/etc/cne/wqeclient/ROW/ROW_profile19.xml|1fcc57b1fa4dbbc7d250e8dd92acf1527d447eb3
+vendor/etc/cne/wqeclient/ROW/ROW_profile20.xml|7be0614cf0116c39b736c58fe5eca36838aeb3db
+vendor/etc/cne/wqeclient/ROW/ROW_profile21.xml|cc62517e6c37e12ee1ebebbb27f9c22878749be3
+vendor/etc/cne/wqeclient/ROW/ROW_profile32.xml|b87542b9284efe4c2bd0ae868bb9a765c2c3dbc5
+vendor/etc/cne/wqeclient/VZW/VZW_profile1.xml|c89d3c062790b442cbe941cafc641a4e322f2d59
+vendor/etc/cne/wqeclient/VZW/VZW_profile2.xml|ba14a9df975cf872ed0cbe28bee8fac63cd848d4
+vendor/etc/cne/wqeclient/VZW/VZW_profile3.xml|9b123d81c9b8991499cda33b0706810e0c8fb974
+vendor/etc/cne/wqeclient/VZW/VZW_profile4.xml|ff91feb5060a6df07e3e4d9bc99ae58bccad7649
+vendor/etc/cne/wqeclient/VZW/VZW_profile5.xml|f76c894f3c6d5b6ed35113a088dc3174c900501b
+vendor/etc/cne/wqeclient/VZW/VZW_profile6.xml|14d136e7fcc682311757d3edc0b9d3eaeba11815
 -vendor/lib64/com.quicinc.cne.api@1.0.so|8cef708bb247071fb493bf41f7e9f43064cbeb53
 -vendor/lib64/com.quicinc.cne.api@1.1.so|274d0706ab46907432e5ac0092e6486829bed78b
 -vendor/lib64/com.quicinc.cne.constants@1.0.so|25e137064d7c93121e0a8bc6122ddac72e3d3ba4
@@ -467,10 +467,10 @@ vendor/lib/libsdm-colormgr-algo.so|48689a441aad372e676a06e39fd08d739a037126
 
 # DPM - from laurus-user 9 PKQ1.190416.001 V10.2.10.0.PFMCNXM release-keys
 bin/dpmd|38da5daf816793abe6dee1e8346c3662db608116
-etc/dpm/dpm.conf|d44f59c7db36eaf465aaa25e3ba8c07cb73ef593
-etc/init/dpmd.rc|0dfaf6bf60feabb5df5771aaa8d5940db530cdf4
-etc/permissions/com.qti.dpmframework.xml|b739db64de529f756630c65cf9daaedb5f7a67f5
-etc/permissions/dpmapi.xml|91f2f700b26a66559621de32fe05f922d169bb3d
+etc/dpm/dpm.conf|fec89edb6cff81424a6c3a730fed92efa3613f72
+etc/init/dpmd.rc|52ca6ad920a1804e4ff608113cece063730f5e0c
+etc/permissions/com.qti.dpmframework.xml|36b94c9338069e434b83359a92cdc7ff62b822df
+etc/permissions/dpmapi.xml|ded29f9befaef20a7ccee0c75427fda1d1d04890
 framework/com.qti.dpmframework.jar|2a6ff555ebff148a508fc7ea2fbeaee4b9a2dff6
 framework/dpmapi.jar|89ddc5bf0c4c88a3f341169edc4d89f9e834337b
 framework/tcmclient.jar|91b415288494fa208b5f5ec9fafa33c47e569c96
@@ -505,7 +505,7 @@ vendor/lib64/libtzdrmgenprov.so|12055efc646c8c080a1279113f8a2767b3b05931
 
 # DRM - Widevine - from laurus-user 9 PKQ1.190416.001 V10.2.10.0.PFMCNXM release-keys
 vendor/bin/hw/android.hardware.drm@1.1-service.widevine|bb8773116e59075a53b0d1979add4386eb9b3254
-vendor/etc/init/android.hardware.drm@1.1-service.widevine.rc|d372c58c562c223bb073990f6e6c54991c6456d0
+vendor/etc/init/android.hardware.drm@1.1-service.widevine.rc|458dd241f5f8536eccb57f012b3eba0061736e8e
 vendor/lib/mediadrm/libwvdrmengine.so|dbe7a8f6f83d77fdb6ee8a63070281cc932cfc16
 vendor/lib/libbase64.so|85eb6fde34c9d40e2efd836a236573b36d6cdd95
 vendor/lib/libcpion.so|af35efc0c3c29a07c9e50895ae6e133fb6f5fcbe
@@ -549,15 +549,15 @@ vendor/lib64/vendor.qti.hardware.fm@1.0.so|65e5f44a54f42fcebc3d2eec62dee3d80640e
 
 # Gatekeeper - from laurus-user 9 PKQ1.190416.001 V10.2.10.0.PFMCNXM release-keys
 vendor/bin/hw/android.hardware.gatekeeper@1.0-service-qti|eadae88382bc4ee64c5c6c5a6e77d23f204ed540
-vendor/etc/init/android.hardware.gatekeeper@1.0-service-qti.rc|ee4b00830aae272c4b4d4d5432d540a6d1e9ab26
+vendor/etc/init/android.hardware.gatekeeper@1.0-service-qti.rc|1b8d5f58fe0a57906acf72b862c16a2521daa97b
 vendor/lib/hw/android.hardware.gatekeeper@1.0-impl-qti.so|d0f29a5b8f444b95924131ad095e0b0a16b37583
 vendor/lib64/hw/android.hardware.gatekeeper@1.0-impl-qti.so|7e778dbf8a72d1cb591523ded4c8f7dab9faa2e1
 
 # GPS - from laurus-user 9 PKQ1.190416.001 V10.2.10.0.PFMCNXM release-keys
-etc/permissions/com.qti.location.sdk.xml|101bb6d5fe15a7a694bce35036c97e7cdfc005b5
-etc/permissions/com.qualcomm.location.xml|022f7aee9bae989304a157cf8d83188196cbc880
-etc/permissions/izat.xt.srv.xml|a64fe261e26355c61628511bab1fe582d1e2954f
-etc/permissions/privapp-permissions-com.qualcomm.location.xml|d87ab93a54238e66b038cfa5ed4286b31bb3e1ab
+etc/permissions/com.qti.location.sdk.xml|cb68a566bd77dcc75bb7547199d528289fac01cb
+etc/permissions/com.qualcomm.location.xml|1d36e7cf8e16813aa13ee6b3fca8d8687b543828
+etc/permissions/izat.xt.srv.xml|a0f460056f27b5495a4d6e959eecf0e429c42a57
+etc/permissions/privapp-permissions-com.qualcomm.location.xml|055fb40299c0a2340bb1b2c9be218a4d2c0f8c72
 framework/com.qti.location.sdk.jar|d459beab3d784d220e39b30257f2b65eb8f6a1cb
 framework/izat.xt.srv.jar|cd5b66ee590c584fb16ef9616ee1a00b00732e0e
 lib64/liblocationservice_jni.so|a4fe0615f1dc1939f72b6226ce797f0fad7e5e02
@@ -574,9 +574,9 @@ vendor/bin/loc_launcher|07e120f08235084441161fe5516ceeb4e1fd22e3
 vendor/bin/lowi-server|68ad8eb51e2c5beb8ab73b8a394a070145a1432d
 vendor/bin/slim_daemon|ea42cd8712be21528fe601582450274fdba014e5
 vendor/bin/xtra-daemon|66a35c690dd4797e5cd95d7e8e397b747e48a810
-vendor/etc/cacert_location.pem|889cf4db38e9bb94907c13cfcafea0615b869f4d
-vendor/etc/xtra_root_cert.pem|ee56ec436aeb82e2b1d86b4684c59dbbf8df720e
-vendor/etc/init/vendor.qti.gnss@2.1-service.rc|22e91c8fc7fd2b1720495c4945047e15dfb869fa
+vendor/etc/cacert_location.pem|0789bf799c7e45d352a83e2f79ddb0cea86db85b
+vendor/etc/xtra_root_cert.pem|f55a31ec4d9cf8ce2724acadecf00c779f8767db
+vendor/etc/init/vendor.qti.gnss@2.1-service.rc|5a8311fca0f4dd511b7cfcda955193844f412872
 vendor/lib64/hw/vendor.qti.gnss@2.1-impl.so|521e8078493faec77b818bd8a98de177c430fe4d
 vendor/lib64/libaoa.so|3d479be6c413c4cceb983baf9632990706841848
 vendor/lib64/libdataitems.so|6ca7a037b021cb9617e46ac5292a9f5a9d39f1cd
@@ -630,6 +630,7 @@ vendor/lib64/libadreno_utils.so|790a82e17e19ecb804e5bb1095a3f986ecd73f45
 vendor/lib64/libC2D2.so|295e7675f85b74e379605bc717f8b0a7133a38c9
 vendor/lib64/libc2d30_bltlib.so|6e50dbe492fd067eb7fc4b6b1c39f66fc2bbb73b
 vendor/lib64/libCB.so|a86c9750637cc0c5a3985fccc4277bc820d76f36
+vendor/lib64/libbccQTI.so|3077833cf44830519e656d20b5bad3edb354a869
 vendor/lib64/libgsl.so|7be635cab8a463b019ea8460334a13fb73659681
 vendor/lib64/libllvm-glnext.so|30faaaf47671378c2a7584b11b18cc88965ff12b
 vendor/lib64/libllvm-qcom.so|83e6dab850efec11878a52ebdab9ff3606d5104c
@@ -648,6 +649,7 @@ vendor/lib/libadreno_utils.so|bcb8c2d8c05655f3fade987c36954d475242130c
 vendor/lib/libC2D2.so|c175b89ee5d3f1791eefac9883d4f3e93287956a
 vendor/lib/libc2d30_bltlib.so|3ad87fcc014d91be03fc34ca199cda746cde0f63
 vendor/lib/libCB.so|ab2377bfa7bfca697424771d5e98df2386bb93e5
+vendor/lib/libbccQTI.so|66ad5da1b4d5233f0689a97759e8f5e50408b2fd
 vendor/lib/libgsl.so|e9ad4f65a8de5961977d7e88d76b3a77005ee7fa
 vendor/lib/libllvm-glnext.so|f7c48886e4148760374ce3e1dbb0aea9374bb42a
 vendor/lib/libllvm-qcom.so|61ddd559a51a3a130a21b85e80d176f5a330ec99
@@ -689,7 +691,7 @@ vendor/firmware/ipa_fws.elf
 
 # Keystore - from laurus-user 9 PKQ1.190416.001 V10.2.10.0.PFMCNXM release-keys
 vendor/bin/hw/android.hardware.keymaster@4.0-service-qti|9c737dce0cfaee67d415334ee4eec3fd39d17be5
-vendor/etc/init/android.hardware.keymaster@4.0-service-qti.rc|8111029832dfe6946471fc5da7aa09d54dc70638
+vendor/etc/init/android.hardware.keymaster@4.0-service-qti.rc|e502c7046fb6a1955e54936d6c8f4f8c2889b201
 vendor/lib/libkeymasterdeviceutils.so|bf67a90740050fcb54627c671abc08e2e9fd47b7
 vendor/lib/libkeymasterprovision.so|7a40b550441841824527955487a5ce42816d8c88
 vendor/lib/libkeymasterutils.so|bef268871170b4dddcf5f2d9e050f36d5ff58a1c
@@ -758,7 +760,7 @@ vendor/lib64/libOmxSwVencMpeg4.so|d829298e8a332c08ef5ec9e9450928cde92f4306
 
 # Mlipay - from laurus-user 9 PKQ1.190416.001 V10.2.10.0.PFMCNXM release-keys
 vendor/bin/mlipayd@1.1|86d7adfcafa00d5c4b82f37481ef5b644049d29e
-vendor/etc/init/vendor.xiaomi.hardware.mlipay@1.1-service.rc|d20d3e0851e5f6d2674b22c516c4cd1383a4453d
+vendor/etc/init/vendor.xiaomi.hardware.mlipay@1.1-service.rc|b5ab5bcd031fe4d9781b5911c0595eaeac8b80ea
 vendor/lib64/libmlipay@1.1.so|6b66bc6fe74dc966b077fe3d7a61ced0fb334d7f
 vendor/lib64/libmlipay.so|32c3b1a6675ededdc0b08bfe12529f21fa871de8
 vendor/lib64/vendor.xiaomi.hardware.mlipay@1.0.so|e22bd6b2a80bc0685a32e3782c1fabb169c3892a
@@ -767,14 +769,14 @@ vendor/lib64/vendor.xiaomi.hardware.mlipay@1.1.so|f6c2a590973c2c54fecc461cea3c67
 # Perf - from laurus-user 9 PKQ1.190416.001 V10.2.10.0.PFMCNXM release-keys
 vendor/bin/msm_irqbalance|d189e3f624a6df88c6d369254990e433a6e4b234
 vendor/bin/hw/vendor.qti.hardware.perf@1.0-service|136f6c2bdd5507f1f1377f874c22411e87d28eb3
-vendor/etc/init/vendor.qti.hardware.perf@1.0-service.rc|e86b146571b8636179566e6bd2a0effd81f468c5
-vendor/etc/lm/AdaptLaunchFeature.xml|54cba25ea85b329bcf9dc587368ca88c518277eb
-vendor/etc/lm/AppClassifierFeature.xml|ba160ec7c2d393ddb08bd1fddeaaf06d42d65153
-vendor/etc/lm/GameOptimizationFeature.xml|e4ee647cf2ef9ccd6b822e3b93d730681e5fb7c2
-vendor/etc/perf/commonresourceconfigs.xml|77cc702fa9b0b0581a44301f90f168caa5bd96ea
-vendor/etc/perf/perfboostsconfig.xml|edcf97f22036ebd671374bc8e29839b167dd5551
-vendor/etc/perf/targetconfig.xml|4104e3262ecd8756e1046671902062a8362db71a
-vendor/etc/perf/targetresourceconfigs.xml|91e45d558bc23fbc0bd6b3cc95e2793b16c800cf
+vendor/etc/init/vendor.qti.hardware.perf@1.0-service.rc|b06477c0943e543d58a71550b544160d28b9b9d0
+vendor/etc/lm/AdaptLaunchFeature.xml|ad4516342729e79a8914762c2737f7faa08b1e9d
+vendor/etc/lm/AppClassifierFeature.xml|69baba75bf7880a3bac99a9aefa2f97a047e9eea
+vendor/etc/lm/GameOptimizationFeature.xml|df9720376ef888a48882d5e27d453204230b5d8d
+vendor/etc/perf/commonresourceconfigs.xml|7bf6b442875ec6244db05ffcc2ebb85a1c370863
+vendor/etc/perf/perfboostsconfig.xml|cffacd25f27eefa778aaa27933e4c6989e57dae2
+vendor/etc/perf/targetconfig.xml|53d6e2936c1cdc67edf86a2ccf04084adbff4a68
+vendor/etc/perf/targetresourceconfigs.xml|0a614d97672c516aedc253aec525468fbdb270ec
 vendor/etc/perf/thermalboost.conf|3a70ac91160e48a64578f0b7775798f19040e87d
 vendor/lib64/libadaptlaunch.so|7789fd57d1710527013051107f0fe24c38aee5ec
 vendor/lib64/libappclassifier.so|8ef13fdb8e1b549f53868f8f57937f244fb8afa2
@@ -800,7 +802,7 @@ vendor/lib64/libperipheral_client.so|1ba2dc8ec5196b305a84ee4580365cd06f7bc7a7
 
 # Postprocessing - from laurus-user 9 PKQ1.190416.001 V10.2.10.0.PFMCNXM release-keys
 vendor/bin/hw/vendor.display.color@1.0-service|2aac117d5c76255af08b51e7ca3dc0f6319ef95d
-vendor/etc/init/vendor.display.color@1.0-service.rc|3c94c5140dd1765d604c3d66bf11e9cb6022d832
+vendor/etc/init/vendor.display.color@1.0-service.rc|5ad673f879b3685a0e79b5633437e5499cb94f48
 vendor/lib64/libdisp-aba.so|bef081a4a63fca47ffbb06c03c6a28eb29b38880
 vendor/lib64/vendor.display.color@1.0.so|6b110cca98fa02bda154c86a39ec5ddec715fd2c
 vendor/lib64/vendor.display.color@1.1.so|0399d400d92c59e0bab3dde68d782d6a145b0a56
@@ -809,8 +811,8 @@ vendor/lib64/vendor.display.color@1.3.so|17e31d9b5a83e34e677d9f68089da821066562a
 vendor/lib64/vendor.display.postproc@1.0.so|97200fff953a417f1fc64f1d001952a8980bbe03
 
 # QMI - from laurus-user 9 PKQ1.190416.001 V10.2.10.0.PFMCNXM release-keys
-etc/permissions/qti_libpermissions.xml|a647ec4a4021340f923a3bbca2b5568130d4be95
-etc/permissions/qti_permissions.xml|2e8e56ca756d5795ef896a4019a0a403acc6835a
+etc/permissions/qti_libpermissions.xml|593bcb72cce68ceb0a70f50bcae7d460114e7c62
+etc/permissions/qti_permissions.xml|e6ff4572352b1a4f91b6b9d7cbb1cad9924410a0
 vendor/bin/irsc_util|5e66e30144d4302a3c9316ea4ca9be8e51a06c85
 vendor/bin/pd-mapper|67300f6783533b8a598504408d2afadb03e9d183
 vendor/lib/libdiag.so|e6e53c2e71b4c80475151a143128a45bcb6c462d
@@ -855,12 +857,12 @@ vendor/bin/qrtr-ns|73f2e6a1e67c591d22ed4d8c06cc2bdd92d5774d
 vendor/bin/rmt_storage|dc7674d8b1a28317bba35f88a43b74c5ed9f9ee8
 vendor/bin/tftp_server|33af7a94dd0c0d2f63751f1a023aebde3f8a457c
 vendor/bin/hw/qcrild|1acb7652fc35bc3c632306df2d1c1d21cc8a92df
-vendor/etc/data/dsi_config.xml|61d000cf349d8bd0893857275e15434fab5c7b87
-vendor/etc/data/netmgr_config.xml|b31afbb14ee4ee6a73381c95f87af09a0df77194
-vendor/etc/init/qcrild.rc|53d7f0e8b59eb1a013a21d0a84bd5415f36724df
-etc/permissions/embms.xml|1252f38f426f20f7fd62aca254caa3a57773d596
-etc/permissions/qcrilhook.xml|946244dddb1cf9b5effb283363949c4babb1a226
-etc/permissions/telephonyservice.xml|b376a70b8093c9178981d8586911169fe5004303
+vendor/etc/data/dsi_config.xml|c57bfe60718980cff9af7b9cace7a280f6959cee
+vendor/etc/data/netmgr_config.xml|4f9a64a0a096b082f44c3db971bcc5c9a368f1e6
+vendor/etc/init/qcrild.rc|17cf4934bf443cf6469d8b3ff622eeb0e4a0aac6
+etc/permissions/embms.xml|5e1b492874c221a7e1188fc3a5369d32b3e67969
+etc/permissions/qcrilhook.xml|9fc58a3d54d20ac1d53bab14608815121aefbce5
+etc/permissions/telephonyservice.xml|b297c8a27443570377d78586b00198839ce326bb
 framework/embmslibrary.jar|980832af89ed59120b7362ddb56d3120bb6b2239
 framework/qcrilhook.jar|117808e4fbea29950a69e71a35e68ae1ebc8e7e2
 framework/qti-telephony-common.jar|4c30129200c06546527f1883de8dd7d621032523
@@ -911,9 +913,9 @@ vendor/radio/qcril_database/qcril.db|d836ac0842db00e0350c185ad74a851dce4d69ac
 # Radio - IMS - from laurus-user 9 PKQ1.190416.001 V10.2.10.0.PFMCNXM release-keys
 -priv-app/ims/ims.apk|88b47a9a563c5090f9f1f37dec122d4b0500acdc
 -app/imssettings/imssettings.apk|40dfb8d12949b6cfbc9e61200fe4939df1c788f3
-etc/permissions/com.qualcomm.qti.imscmservice.xml|3be6aa68512edc7899c980f10b9807980827f03e
-etc/permissions/com.qualcomm.qti.imscmservice-V2.0-java.xml|9678d2821f0fb5eea3f7f6e4262436a41eb4a548
-etc/permissions/com.qualcomm.qti.imscmservice-V2.1-java.xml|942518210c092f0d282fb38b17c26e0a894928b5
+etc/permissions/com.qualcomm.qti.imscmservice.xml|db25ef24f1937366d58a53b4f4b8923bc9e98d2d
+etc/permissions/com.qualcomm.qti.imscmservice-V2.0-java.xml|8d25bd7b79baf266950eb484c1a28817f891aec2
+etc/permissions/com.qualcomm.qti.imscmservice-V2.1-java.xml|998076243537f61f3683a3c083f7b27510617368
 framework/com.qualcomm.qti.imscmservice-V2.0-java.jar|ec513de148aa703eaad96ad871d80ca33808cfdd
 framework/com.qualcomm.qti.imscmservice-V2.1-java.jar|7b29b48b7c289e8d8ebbe3624c16142e9260201b
 framework/com.qualcomm.qti.uceservice-V2.0-java.jar|55f0c50f35a0b079403dcf264003a871088b4d33
@@ -1036,7 +1038,7 @@ vendor/etc/sensors/sns_reg_config
 # Soter - from laurus-user 9 PKQ1.190416.001 V10.2.10.0.PFMCNXM release-keys
 -app/SoterService/SoterService.apk|93eaa9fa1cf2371cbb77c4e56af68b8aba0a8cdc
 vendor/bin/hw/vendor.qti.hardware.soter@1.0-service|9ae91e7e46012d41ab5bf54bd1e70d13712206eb
-vendor/etc/init/vendor.qti.hardware.soter@1.0-service.rc|61c3a782b65dccba0f61f001b9958f0d7f9983f8
+vendor/etc/init/vendor.qti.hardware.soter@1.0-service.rc|76447a61ad5529949365eeb7e8ca000e48bd28ae
 vendor/lib64/vendor.qti.hardware.soter@1.0.so|804908e5fee4c6d90599d944ac13679563372eed
 vendor/lib64/hw/vendor.qti.hardware.soter@1.0-impl.so|358b571ee0035536b4bf4de4d35bb444879fa9dc
 
@@ -1063,7 +1065,7 @@ vendor/lib64/libtime_genoff.so|bd1ef99d07a181236b5da5de25a9b36a38bbdd9a
 
 # TUI - from laurus-user 9 PKQ1.190416.001 V10.2.10.0.PFMCNXM release-keys
 vendor/bin/hw/vendor.qti.hardware.tui_comm@1.0-service-qti|cc84c732034a8e022ae5ba91183a0af3bfe2fb8c
-vendor/etc/init/vendor.qti.hardware.tui_comm@1.0-service-qti.rc|a6bd2ff94dd9a50ddb3fa5e24aa5df0d90b072ed
+vendor/etc/init/vendor.qti.hardware.tui_comm@1.0-service-qti.rc|2cfc563d7e1579374f001c94588fae7835a12ffc
 vendor/lib64/vendor.qti.hardware.tui_comm@1.0.so|49dd37da3c0d53590b9ff3dae6ed7fe44ffa235d
 
 # Wifi
@@ -1072,9 +1074,9 @@ vendor/bin/nv_mac
 
 # WiFi Display - from laurus-user 9 PKQ1.190416.001 V10.2.10.0.PFMCNXM release-keys
 bin/wfdservice|84d22cb9f7cc1b3ae823b666ae5a2e0259cc520e
-etc/init/wfdservice.rc|e96d0ab656c1a53a432fbe56770a3245ef9afaa2
-etc/wfdconfig.xml|c5af62ac7ee0aaf9040d7362ec6b5a23bba4f0f6
-etc/wfdconfigsink.xml|4aedc6a4d2ba5c01de09e5c4c18271b8af92dff0
+etc/init/wfdservice.rc|311bfdd1675e56499662f39455536b75b78477bb
+etc/wfdconfig.xml|8573b80cac9b7eeb70772b4b1f2451125c46ff38
+etc/wfdconfigsink.xml|ce9377e196c13a85d146f491c164e23ef3c7d296
 -framework/WfdCommon.jar|b60e8a0886eb825566a5bf3854bb8a33562e2f7a
 lib/com.qualcomm.qti.wifidisplayhal@1.0.so|29a6bfe399397e5a50f9fd7bdd89a2d532d7c6cd
 lib64/extractors/libmmparser.so|dff5cca6a99f0a4e10037a662e8ba196fd3f7966
@@ -1110,7 +1112,7 @@ lib/libwfduibcsrc.so|0dc0e780789d8210e3bcf8c84d7cab0a72e2b6a0
 lib/libwfduibcsrcinterface.so|dd912e13424b20d019be038652b77191e94aadfc
 -priv-app/WfdService/WfdService.apk|2630a403cce1c38219e98f04c0fc08d15c1c53bd
 vendor/bin/wifidisplayhalservice|9ad74975a7e510898838fe78e3746b23c01e01c8
-vendor/etc/init/com.qualcomm.qti.wifidisplayhal@1.0-service.rc|eae86ccd57af7ad8b71f23e79f35d1b401b811e0
+vendor/etc/init/com.qualcomm.qti.wifidisplayhal@1.0-service.rc|04e463342cbba4c0e9c311a18238f95dec9359fd
 vendor/lib/com.qualcomm.qti.wifidisplayhal@1.0-halimpl.so|9af6a861a689d9d86dd7cbf4afcc9a6fb30b922c
 vendor/lib/com.qualcomm.qti.wifidisplayhal@1.0.so|319d5c89906ceafb43601786d30024454130a291
 vendor/lib/libwfdcommonutils_proprietary.so|00e30ae0793cb1799263eff36b92c3b8c9038c13
