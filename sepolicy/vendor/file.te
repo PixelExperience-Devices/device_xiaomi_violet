@@ -1,0 +1,4 @@
+type fingerprint_data_file, data_file_type, file_type;
+type keylayout_file, file_type, vendor_file_type;
+type idc_file, file_type, vendor_file_type;
+type thermal_data_file, data_file_type, file_type;
