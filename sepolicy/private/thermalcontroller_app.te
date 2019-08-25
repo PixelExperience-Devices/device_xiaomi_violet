@@ -1,0 +1,13 @@
+type thermalcontroller_app, domain;
+
+app_domain(thermalcontroller_app)
+
+# Allow thermalcontroller_app to find app_api_service
+allow thermalcontroller_app app_api_service:service_manager find;
+
+# Allow thermalcontroller_app read and write /data/data subdirectory
+allow thermalcontroller_app system_app_data_file:dir create_dir_perms;
+allow thermalcontroller_app system_app_data_file:{ file lnk_file } create_file_perms;
+
+# Allow thermalcontroller_app to write to sysfs thermal nodes
+allow thermalcontroller_app sysfs_thermal:file { w_file_perms getattr };

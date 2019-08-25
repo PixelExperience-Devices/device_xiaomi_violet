@@ -1,0 +1,6 @@
+# /vendor/usr/keylayout
+r_dir_file(system_server, idc_file)
+# /vendor/usr/idc
+r_dir_file(system_server, keylayout_file)
+
+get_prop(system_server, vendor_fp_prop)

@@ -1,0 +1,3 @@
+binder_call(hal_mlipay_client, hal_mlipay_server)
+
+add_hwservice(hal_mlipay_server, hal_mlipay_hwservice)

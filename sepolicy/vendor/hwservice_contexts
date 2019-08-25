@@ -1,0 +1,3 @@
+vendor.xiaomi.hardware.mlipay::IMlipayService u:object_r:hal_mlipay_hwservice:s0
+vendor.goodix.hardware.interfaces.biometrics.fingerprint::IGoodixFingerprintDaemon u:object_r:hal_fingerprint_hwservice:s0
+vendor.goodix.hardware.interfaces.biometrics.fingerprint::IGoodixFingerprintDaemonExt u:object_r:hal_fingerprint_hwservice:s0
