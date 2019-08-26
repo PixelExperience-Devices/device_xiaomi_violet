@@ -1,0 +1,4 @@
+allow hal_audio_default mnt_vendor_file:dir search;
+allow hal_audio_default property_socket:sock_file write;
+
+set_prop(hal_audio_default, vendor_audio_prop)
