@@ -1,5 +1,6 @@
 # Camera
 camera.                     u:object_r:camera_prop:s0
+ro.boot.hwc                 u:object_r:camera_prop:s0
 persist.camera.             u:object_r:camera_prop:s0
 persist.vendor.camera.      u:object_r:camera_prop:s0
 vendor.camera.              u:object_r:camera_prop:s0
@@ -9,7 +10,13 @@ vidhance.                   u:object_r:camera_prop:s0
 persist.sys.ifaa            u:object_r:ifaa_prop:s0
 persist.vendor.sys.pay.     u:object_r:ifaa_prop:s0
 
+# Miui
+ro.miui.                    u:object_r:exported_default_prop:s0
+ro.cust.test                u:object_r:exported_default_prop:s0
+ro.build.software.version   u:object_r:exported_default_prop:s0
+
 # Fingerprint
+persist.vendor.fpc.         u:object_r:vendor_fp_prop:s0
 persist.vendor.sys.fp.      u:object_r:vendor_fp_prop:s0
 ro.boot.fpsensor            u:object_r:vendor_fp_prop:s0
 ro.hardware.fp              u:object_r:vendor_fp_prop:s0

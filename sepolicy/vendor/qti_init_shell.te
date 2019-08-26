@@ -1,0 +1,2 @@
+allow qti_init_shell configfs:dir write;
+allow qti_init_shell sysfs_usbpd_device:file setattr;

@@ -1,0 +1,1 @@
+allow wcnss_service vendor_shell_exec:file execute_no_trans;
