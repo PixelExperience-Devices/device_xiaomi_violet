@@ -429,36 +429,36 @@ vendor/etc/qdcm_calib_data_nt36672a_video_mode_dsi_shenchao_panel.xml
 # Display SVI configuration
 etc/display/SVIConfig.xml
 
-# Display - hardware - laurus-user 9 PKQ1.190416.001 V10.2.10.0.PFMCNXM release-keys
+# Display - hardware - from laurus-user 9 PKQ1.190416.001 V10.2.10.0.PFMCNXM release-keys
 vendor/bin/hw/vendor.qti.hardware.display.allocator@1.0-service|b30e15389dea678f3aeb5b4fe0f4836edff596d4
 vendor/etc/init/vendor.qti.hardware.display.allocator@1.0-service.rc|110424738e85ab9600ba2e389d162978d7bb950c
 vendor/lib64/hw/android.hardware.graphics.mapper@2.0-impl-qti-display.so|8f3ad9bdda8fa9992fada73b1471492175b9504e
-vendor/lib64/hw/gralloc.sm6150.so|740d005ac034aaf4e164b8cf149c0350e1cc651d
+vendor/lib64/hw/gralloc.sm6150.so|5a8adfe871d12af89d2105e7708c59d3882c283f
 vendor/lib64/hw/hwcomposer.sm6150.so|021e3233bc6c701f706be3d9779b0bd680706f0a
 vendor/lib64/hw/memtrack.sm6150.so|a10679b67b37b533246e26d77d73c64d3b1aaa4c
 vendor/lib64/libdisplaydebug.so|de0532983fff34579853d101f4e5916766e042f2
 vendor/lib64/libdisplayqos.so|e2908b677697e14646bb36f64b7306c2d5983f6f
 vendor/lib64/libdpps.so|1bb9d043d1117e86e77378182ab950ccd1f796d5
 vendor/lib64/libgpu_tonemapper.so|5a76651d9a38410427c9ab319568a927892d500e
-vendor/lib64/libgralloccore.so|af1ab93b752bdc4ce4dd98ef548629cd14e1ebc2
-vendor/lib64/libgrallocutils.so|11a682a373e78dd98b731200c63c0230cdff520d
-vendor/lib64/libqdMetaData.so|da3542ab0b85e89fa806d74cb4ff00be71ed1350
+vendor/lib64/libgralloccore.so|80f1741d7f39da3f267464f04c68757b5cdc9eba
+vendor/lib64/libgrallocutils.so|c93d2b627e426aab664c0bfe195c362506414a37
+vendor/lib64/libqdMetaData.so|f93cb5a8bdf8fdc27a19cba4ed76a94c1b422ab7
 vendor/lib64/libdrmutils.so|b1fa7469cec9894d0e68ddb7e7e52104d96750a2
 vendor/lib64/libsdedrm.so|4ea5ed088384031af57fda2977e0b8670cbbbd65
 vendor/lib64/libsdmcore.so|b7cbff090f28d60f1aef3e71a6df003bb7ee3ba7
 vendor/lib64/libsdmutils.so|3146e6d8d0aa06e939fcbb6ff6365fb25f98e8d8
 vendor/lib64/libsdm-colormgr-algo.so|ac678b17690e840d71251066c4c49de46d48b271
 vendor/lib/hw/android.hardware.graphics.mapper@2.0-impl-qti-display.so|c87b4cdee3efb7fa680629266da3d5b9210b791c
-vendor/lib/hw/gralloc.sm6150.so|e24473854204975e930b7c741115e7de1b7c6f45
+vendor/lib/hw/gralloc.sm6150.so|cb0ba151a0199859b5339f51b9095f0cfede7583
 vendor/lib/hw/hwcomposer.sm6150.so|eda93d7b2e5ed9699796edf9c4995b2b2fbeded2
 vendor/lib/hw/memtrack.sm6150.so|56a75ccf676cf1ca8c30f8e7caf81f705b5639e3
 vendor/lib/libdisplaydebug.so|b74de648fe13e44b05f6f8d8040af2fa3cdbc418
 vendor/lib/libdisplayqos.so|9cd3cdddd0bc5e6545df63cf0fa4dcfc8936232a
 vendor/lib/libdpps.so|1dbbf331e30be7d5d043ee4855191af2f28098ae
 vendor/lib/libgpu_tonemapper.so|f3555b1b4eb2a072562541a43ebcd97a3da6d008
-vendor/lib/libgralloccore.so|fd0504a9dbfbd97267a4752453f8410f95890996
-vendor/lib/libgrallocutils.so|3384183f8ab98dd24a1a3284e1db81f678c9db4d
-vendor/lib/libqdMetaData.so|5701e2472de6bc29594898600852dcdd7c48b7ee
+vendor/lib/libgralloccore.so|e1da8098d01054951ca11c3fc79b7708717eff08
+vendor/lib/libgrallocutils.so|b6d426bb20df4662f55e1ccc0c74ae2d808bd8c6
+vendor/lib/libqdMetaData.so|97102bdfa8e3fd2cdc7da3a00e32d9e7c77e067c
 vendor/lib/libdrmutils.so|3085347e85117a1ee2e903b7c4cfb4c00d4c278b
 vendor/lib/libsdedrm.so|0f81a7da2ea199bcf4e2717974ce7386a8651f7d
 vendor/lib/libsdmcore.so|f9c270887e6d2082a3bf37019ffc7f9e795ce757
