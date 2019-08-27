@@ -674,15 +674,6 @@ on charger
     write /sys/class/leds/green/max_brightness 32
     write /sys/class/leds/blue/max_brightness 32
 
-service thermal-engine /vendor/bin/thermal-engine
-   class main
-   user root
-   socket thermal-send-client stream 0666 system system
-   socket thermal-recv-client stream 0660 system system
-   socket thermal-recv-passive-client stream 0666 system system
-   socket thermal-send-rule stream 0660 system system
-   group root
-
 service remosaic_daemon /vendor/bin/remosaic_daemon
    class late_start
    user camera

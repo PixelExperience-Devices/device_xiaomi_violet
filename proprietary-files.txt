@@ -757,6 +757,9 @@ vendor/lib64/hw/vendor.qti.hardware.soter@1.0-impl.so
 # Thermal
 vendor/lib64/libthermalclient.so
 
+# Thermal (init script) - from LA.UM.8.9.r1-07100-SM6xx.0
+vendor/etc/init/init_thermal-engine.rc|f0d14aa4734b2e8afd61a4eed73238187b268f48
+
 # Time - from LA.UM.8.9.r1-04400-SM6xx.0
 -vendor/app/TimeService/TimeService.apk;:timeservice_app_cert|4a37afd1395758d946580af184a738e3c657b1e2
 vendor/bin/time_daemon|cf03d8aabb356a278c1145388cc9bceb766d0d33
