@@ -3590,6 +3590,7 @@ case "$target" in
 
         for npubw in $device/*npu*-npu-ddr-bw/devfreq/*npu*-npu-ddr-bw
         do
+            echo 1 > /sys/devices/virtual/npu/msm_npu/pwr
             echo "bw_hwmon" > $npubw/governor
             echo 40 > $npubw/polling_interval
             echo "1144 1720 2086 2929 3879 5931 6881 7980" > $npubw/bw_hwmon/mbps_zones
@@ -3601,6 +3602,7 @@ case "$target" in
             echo 0 > $npubw/bw_hwmon/guard_band_mbps
             echo 250 > $npubw/bw_hwmon/up_scale
             echo 0 > $npubw/bw_hwmon/idle_mbps
+            echo 0 > /sys/devices/virtual/npu/msm_npu/pwr
         done
 
         #Enable mem_latency governor for L3, LLCC, and DDR scaling
