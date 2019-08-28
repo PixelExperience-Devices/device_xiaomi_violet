@@ -13,7 +13,9 @@ persist.vendor.sys.pay.     u:object_r:ifaa_prop:s0
 # Miui
 ro.miui.                    u:object_r:exported_default_prop:s0
 ro.cust.test                u:object_r:exported_default_prop:s0
-ro.build.software.version   u:object_r:exported_default_prop:s0
+
+# IMS
+ro.build.software.version   u:object_r:qcom_ims_prop:s0
 
 # Fingerprint
 persist.vendor.sys.fp.      u:object_r:vendor_fp_prop:s0
