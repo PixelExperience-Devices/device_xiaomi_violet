@@ -371,13 +371,6 @@
          The user is forbidden from setting the brightness below this level. -->
     <integer name="config_screenBrightnessSettingMinimum">1</integer>
 
-    <!-- MMS user agent string -->
-    <string name="config_mms_user_agent" translatable="false">Android-Mms/2.0</string>
-
-    <!-- MMS user agent prolfile url -->
-    <string name="config_mms_user_agent_profile_url" translatable="false"
-            >http://www.google.com/oha/rdf/ua-profile-kila.xml</string>
-   
     <!-- Configure wifi tcp buffersizes in the form:
          rmem_min,rmem_def,rmem_max,wmem_min,wmem_def,wmem_max -->
     <string name="config_wifi_tcp_buffers" translatable="false">524288,1048576,5505024,262144,524288,5505024</string>
@@ -397,13 +390,9 @@
          Doze dreams will run whenever the power manager is in a dozing state. -->
     <string name="config_dozeComponent">com.android.systemui/com.android.systemui.doze.DozeService</string>
 
-    <!-- Configuration to restart radio upon PDP_DEACTIVATE with
-         error cause as Regular deactivation(36). -->
-    <!--
-    <bool name="config_radio_reset_on_regular_deactivation">false</bool>
-    -->
     <!-- Flag indicating if the speed up audio on mt call code should be executed -->
     <bool name="config_speed_up_audio_on_mt_calls">true</bool>
+
     <!-- Flag specifying whether VoLTE, VT and WFC is available on device -->
     <bool name="config_device_volte_available">true</bool>
     <bool name="config_device_vt_available">true</bool>
@@ -448,25 +437,6 @@
          Refer to autosuspend.h for details.
     -->
     <bool name="config_powerDecoupleAutoSuspendModeFromDisplay">true</bool>
-
-    <!-- Power Management: Specifies whether to decouple the interactive state of the
-         device from the display on/off state.
-
-         When false, setInteractive(..., true) will be called before the display is turned on
-         and setInteractive(..., false) will be called after the display is turned off.
-         This mode provides best compatibility for devices that expect the interactive
-         state to be tied to the display state.
-
-         When true, setInteractive(...) will be called independently of whether the display
-         is being turned on or off.  This mode enables the power manager to reduce
-         clocks and disable the touch controller while the display is on.
-
-         This resource should be set to "true" when a doze component has been specified
-         to maximize power savings but not all devices support it.
-
-         Refer to power.h for details.
-    -->
-    <bool name="config_powerDecoupleInteractiveModeFromDisplay">false</bool>
 
     <!-- Screen brightness used to dim the screen while dozing in a very low power state.
          May be less than the minimum allowed brightness setting
@@ -587,11 +557,8 @@
         <item>10</item>
     </integer-array>
 
-    <!-- Boolean indicating whether single radio chain scan results are to be used for network selection -->
-    <bool name="config_wifi_framework_use_single_radio_chain_scan_results_network_selection">true</bool>
-
     <!-- Regex of wired ethernet ifaces -->
-    <string name="config_ethernet_iface_regex">eth0</string>
+    <string translatable="false" name="config_ethernet_iface_regex">eth0</string>
 
     <!-- Whether device ignores the RSSNR signal implementation -->
     <bool name="config_ignoreRssnrSignalLevel">true</bool>
