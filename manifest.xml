@@ -246,23 +246,6 @@
         </interface>
     </hal>
     <hal format="hidl">
-        <name>vendor.qti.hardware.mlshal</name>
-        <transport>hwbinder</transport>
-        <version>1.0</version>
-        <interface>
-            <name>IMlsDap</name>
-            <instance>mlsdaphal</instance>
-        </interface>
-        <interface>
-            <name>IMlsVnc</name>
-            <instance>mlsvnchal</instance>
-        </interface>
-        <interface>
-            <name>IMlsIon</name>
-            <instance>mlsionhal</instance>
-        </interface>
-    </hal>
-    <hal format="hidl">
         <name>android.hardware.thermal</name>
         <transport>hwbinder</transport>
         <version>1.0</version>
