@@ -99,8 +99,6 @@ on post-fs-data
     mkdir /data/vendor/mac_addr 0770 system wifi
     mkdir /data/vendor/thermal 0771 root system
     mkdir /data/vendor/thermal/config 0771 root system
-    chmod 0644 /dev/goodix_fp
-    chown system system /dev/goodix_fp
 
     chmod 0666 /dev/migt
     restorecon /dev/migt
