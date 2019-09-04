@@ -535,9 +535,9 @@ vendor/lib64/libvendor.goodix.hardware.interfaces.biometrics.fingerprint@2.1.so
 vendor/lib64/vendor.qti.hardware.fingerprint@1.0.so
 
 # FM - from laurel_sprout-user 9 PKQ1.190416.001 V10.3.4.0.PFQMIXM release-keys
-lib/libfm-hci.so|11ab9956ce99f6741934fc3f19d9d494b8d2f3f6
+lib/libfm-hci.so|a1bf3a8e7b854e3d42bfaa59149ae571fdd51939
 lib/fm_helium.so|d0b20653d6b5f74ee298c4c539e2cbf7e8a5910e
-lib64/libfm-hci.so|0d0b73ba4d16e14517c1dbd92a42c4971020eec1
+lib64/libfm-hci.so|2bc70e398b4f43a463f5fc95a754579365c7346a
 lib64/fm_helium.so|b4c342e57541cb842f757a39db55669b468cffca
 vendor/bin/fm_qsoc_patches|9ace34a25bee431559c45f975953dd0ad873f58c
 -lib/vendor.qti.hardware.fm@1.0.so|d50021b553ab924835e5472470064b2816e67870
@@ -560,8 +560,8 @@ etc/permissions/izat.xt.srv.xml|a0f460056f27b5495a4d6e959eecf0e429c42a57
 etc/permissions/privapp-permissions-com.qualcomm.location.xml|055fb40299c0a2340bb1b2c9be218a4d2c0f8c72
 framework/com.qti.location.sdk.jar|a6a000260ff9dd5c6cefedaec4f8b958403dc2b7
 framework/izat.xt.srv.jar|cd5b66ee590c584fb16ef9616ee1a00b00732e0e
-lib64/liblocationservice_jni.so|4d1bccbccef121f516c3a336a9f8399614dc3513
-lib64/libxt_native.so|a8884abcee2633c59036d17c18c2bcee764acf9e
+lib64/liblocationservice_jni.so|6256b10f5e9d52993ec60738ec3113c3161f79ed
+lib64/libxt_native.so|d6131b490b4a9ef377034f382043f55945f5606f
 lib64/vendor.qti.gnss@1.0.so|b9ad34e21528c20aa45c8948de372c9a1672c9ce
 lib64/vendor.qti.gnss@1.1.so|5bea1acc61836e0339d60274d948696892b9d296
 lib64/vendor.qti.gnss@1.2.so|78173ae06290c0c774dc57d06d4c41db8f7f4dfe
@@ -800,7 +800,7 @@ vendor/lib64/libperipheral_client.so|1ba2dc8ec5196b305a84ee4580365cd06f7bc7a7
 -sbin/charger:sbin/chargeonlymode;rootfs|f048d2cc20783ba1a608b73d440b3053af6ec9fd
 
 # Postprocessing - from laurel_sprout-user 9 PKQ1.190416.001 V10.3.4.0.PFQMIXM release-keys
-vendor/bin/hw/vendor.display.color@1.0-service|2aac117d5c76255af08b51e7ca3dc0f6319ef95d
+vendor/bin/hw/vendor.display.color@1.0-service|bd70727d49e0f49d7827bc0a7cc19e13a16e176e
 vendor/etc/init/vendor.display.color@1.0-service.rc|5ad673f879b3685a0e79b5633437e5499cb94f48
 vendor/lib64/libdisp-aba.so|bef081a4a63fca47ffbb06c03c6a28eb29b38880
 vendor/lib64/vendor.display.color@1.0.so|6b110cca98fa02bda154c86a39ec5ddec715fd2c
@@ -912,6 +912,7 @@ vendor/radio/qcril_database/qcril.db|229ad06fad051dc73508a7b4b0ad4299cfae84d7
 # Radio - IMS - from laurel_sprout-user 9 PKQ1.190416.001 V10.3.4.0.PFQMIXM release-keys
 -priv-app/ims/ims.apk|3ded183624fd325fd86cae2830bfd3d8030b64d0
 -app/imssettings/imssettings.apk|20d9b2c3f5939d4bfa7c03b5383d0cf03dbbc39e
+-app/uceShimService/uceShimService.apk|a2de7d90c4319c0a66e565869dca741cd9799d77
 etc/permissions/com.qualcomm.qti.imscmservice.xml|db25ef24f1937366d58a53b4f4b8923bc9e98d2d
 etc/permissions/com.qualcomm.qti.imscmservice-V2.0-java.xml|8d25bd7b79baf266950eb484c1a28817f891aec2
 etc/permissions/com.qualcomm.qti.imscmservice-V2.1-java.xml|998076243537f61f3683a3c083f7b27510617368
@@ -1083,7 +1084,7 @@ lib64/libFileMux.so|7be1cc2cbf976f368eae1a8b7ac72893edd8e372
 lib64/libmmparser_lite.so|2f06236ae6f63ee086f7e8e3f97378bced0da3cf
 lib64/libmmosal.so|bd5c3edf0f977f0a1cf175c8e4f0d3b7e8620384
 lib64/libwfdclient.so|e5725ada5c62314352906f53aa2dab8322d7ae40
-lib64/libwfdnative.so|0cb63eb8b7f101a338e9407676bb037e0eac33ad
+lib64/libwfdnative.so|ef91817b69139c5b6e9b1765e9751476061d1a88
 lib/extractors/libmmparser.so|6ebf24ef5a217a42827228562a311e86030a4d72
 lib/libFileMux.so|c1305329a91f7cc5f1091e644f86740e6032868e
 lib/libmmparser_lite.so|46012318b4d0819661f052a01da9c7362cf4470d
@@ -1100,7 +1101,7 @@ lib/libwfdclient.so|e2de4e6c241aefbb4ee129a320f53cf5396b35ed
 lib/libwfdmminterface.so|d586f9025b7496a0c54378071fdfa40817ab1697
 lib/libwfdmmsink.so|f51224e3f247d5a40a43879914df803c51683a81
 lib/libwfdmmsrc.so|732bc698fbe813f8568d4aeb8308ecb5b30dc00e
-lib/libwfdnative.so|fbfba8cd0922d6607c0d27dc6701aa36b9b80fa6
+lib/libwfdnative.so|8848c464c89a3e72261a2c57c064f9ac2e0cb245
 lib/libwfdrtsp.so|f0720f4ab2216e29c8b62780c80b48dce7dde51c
 lib/libwfdservice.so|847ace141d05d95e2d0aa94cd1ad0f81aaa7e8e0
 lib/libwfdsm.so|6b8c00c2d032c8a1d53f90f3b3b44a23aeb98c62
