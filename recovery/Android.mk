@@ -7,5 +7,5 @@ LOCAL_C_INCLUDES := \
     bootable/recovery/otautil/include
 LOCAL_SRC_FILES := recovery_updater.cpp
 LOCAL_MODULE := librecovery_updater_xiaomi
-LOCAL_MODULE_TAGS := eng
+LOCAL_MODULE_TAGS := optional
 include $(BUILD_STATIC_LIBRARY)
