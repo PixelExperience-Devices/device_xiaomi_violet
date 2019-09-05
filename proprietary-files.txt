@@ -773,6 +773,11 @@ vendor/lib64/libOmxQcelp13Dec.so|754ed9a0f189b6383fbe95669e11f1f066b00244
 vendor/lib64/libOmxSwVdec.so|66e237c8fa37c8d3be8fb12ec588edb286e51d15
 vendor/lib64/libOmxSwVencMpeg4.so|26afb75d88b8dd726ee338e2ebe4f8da5dbaaddd
 
+# Neural-networks - from laurus-user 9 PKQ1.190416.001 V10.2.10.0.PFMCNXM release-keys
+vendor/bin/hw/android.hardware.neuralnetworks@1.1-service-qti|86cfd2cbac8405805dddcb9c27c36d715d8bd12f
+vendor/etc/init/android.hardware.neuralnetworks@1.1-service-qti.rc|f36a191ba1fdd82d8c05cf9abf3940f9af32e238
+vendor/lib64/libhexagon_nn_stub.so|2ff38e841830e0aa7ba1e074a6ce2f2d961d3352
+
 # Mlipay - from laurus-user 9 PKQ1.190416.001 V10.2.10.0.PFMCNXM release-keys
 vendor/bin/mlipayd@1.1|86d7adfcafa00d5c4b82f37481ef5b644049d29e
 vendor/etc/init/vendor.xiaomi.hardware.mlipay@1.1-service.rc|b5ab5bcd031fe4d9781b5911c0595eaeac8b80ea
