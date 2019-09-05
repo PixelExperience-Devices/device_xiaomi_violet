@@ -908,6 +908,11 @@ vendor/lib64/vendor.qti.hardware.radio.uim_remote_server@1.0.so|5b3f6bcfec48a917
 vendor/lib64/vendor.qti.hardware.radio.qcrilhook@1.0.so|6fa37c0f2f0372515caa9caf227004e8c95ea109
 vendor/lib64/vendor.qti.hardware.radio.am@1.0.so|e8b259f36ec77d62a8fbd72f2bff5658da11b4ec
 vendor/radio/qcril_database/qcril.db|229ad06fad051dc73508a7b4b0ad4299cfae84d7
+vendor/radio/qcril_database/upgrade/0_initial.sql|78de3c4b98579af21ef550b8b0dc55bdeb4195ef
+vendor/radio/qcril_database/upgrade/1_version_intro.sql|67b96cb3e94737bfe271b2519b9eb5fae17373a2
+vendor/radio/qcril_database/upgrade/2_version_add_wps_config.sql|b4a825ba20fea3e2f20c7f02c8bd64596c24a75e
+vendor/radio/qcril_database/upgrade/3_version_update_wps_config.sql|0571aacaf9fc0868c48bba2f7542f5b4e68c9022
+vendor/radio/qcril_database/upgrade/4_version_update_ecc_table.sql|c5147744f264d8a8c0432968d3890a32b883b5ef
 
 # Radio - IMS - from laurel_sprout-user 9 PKQ1.190416.001 V10.3.4.0.PFQMIXM release-keys
 -priv-app/ims/ims.apk|3ded183624fd325fd86cae2830bfd3d8030b64d0
