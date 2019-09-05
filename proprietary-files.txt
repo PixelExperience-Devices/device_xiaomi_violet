@@ -520,6 +520,12 @@ vendor/lib64/libcppf.so|0e89e34f0850430c204d4cdfcfbec12ec7bd6213
 vendor/lib64/libhdcpsrm.so|2665306cd4ab4077eb72093a9e996fd1696179ac
 vendor/lib64/liboemcrypto.so|84cf7252ae349548d0e33296aa62e983be3178f0
 
+# ESE-Powermanager - from laurel_sprout-user 9 PKQ1.190416.001 V10.3.4.0.PFQMIXM release-keys
+vendor/bin/hw/vendor.qti.esepowermanager@1.0-service|4d86f22bfa2848d987a8b1c1e449b3f3adef3ac0
+vendor/etc/init/vendor.qti.esepowermanager@1.0-service.rc|58a3866ad5a7613d9392c9adb671eaa7825578a2
+vendor/lib64/hw/vendor.qti.esepowermanager@1.0-impl.so|481d25dc71de322e0bf87b5239bd1613e1b48dbf
+vendor/lib64/vendor.qti.esepowermanager@1.0.so|b885b11b1e33a8cd7f35471c2243168bb4bb1d3f
+
 # Fingerprint sensor
 -vendor/app/FingerprintExtensionService/FingerprintExtensionService.apk
 vendor/etc/permissions/com.fingerprints.extension.xml
