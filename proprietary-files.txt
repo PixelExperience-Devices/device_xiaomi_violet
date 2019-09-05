@@ -858,6 +858,15 @@ vendor/lib64/libqmi_encdec.so|4390f579458d9a6c4c39051df6e0eee4bdc45693
 vendor/lib64/libqmi.so|640515ce399a3a717fba43713d0c821d63d382eb
 vendor/lib64/libqmiservices.so|9042fb99270d053d0efd842255024889b1fbd05a
 
+# Qualcomm Trusted Execution Environment - from laurel_sprout-user 9 PKQ1.190416.001 V10.3.4.0.PFQMIXM release-keys
+vendor/bin/hw/vendor.qti.hardware.qteeconnector@1.0-service|b9b9c09605f3a3fe04ab7cbc3e6fbbd52b51e8c1
+vendor/etc/init/vendor.qti.hardware.qteeconnector@1.0-service.rc|c966350ee67d3a7c73ca7184e3725264025d16f5
+vendor/lib64/hw/vendor.qti.hardware.qteeconnector@1.0-impl.so|3a4d04349131403994208b80c205fd76744b1640
+vendor/lib64/libGPQTEEC_vendor.so|947649645dbebac2fa45a701f752de42f154db10
+vendor/lib64/libGPTEE_vendor.so|e3217e832f56f31ac2758ed67fc20b1036b483d7
+vendor/lib64/libQTEEConnector_vendor.so|67e631e152e5cbbd18dba04280cf77c8930b0dd1
+vendor/lib64/vendor.qti.hardware.qteeconnector@1.0.so|fb83d48de244d55b39e6cb43597c01a8b62b6938
+
 # Radio - from laurel_sprout-user 9 PKQ1.190416.001 V10.3.4.0.PFQMIXM release-keys
 -app/datastatusnotification/datastatusnotification.apk|ceafcce87298531a3adb13a87709a1fd65291625
 -app/embms/embms.apk|d0f7509e59c4be57cfd85779a531b4276be91d59
