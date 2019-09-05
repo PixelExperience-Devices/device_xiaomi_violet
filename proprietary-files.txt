@@ -816,6 +816,11 @@ vendor/bin/pm-proxy|6c5f7259df83b849ba136187e366db6ce1598d21
 vendor/bin/pm-service|8ec0b27d756339f75c989d4642a9edc27c1c978c
 vendor/lib64/libperipheral_client.so|1ba2dc8ec5196b305a84ee4580365cd06f7bc7a7
 
+# Qualcomm Display Utils - from laurel_sprout-user 9 PKQ1.190416.001 V10.3.4.0.PFQMIXM release-keys
+vendor/bin/hw/vendor.qti.hardware.qdutils_disp@1.0-service-qti|d73d67e0b6d676d3f47217b046db78d764cb7f3a
+vendor/etc/init/vendor.qti.hardware.qdutils_disp@1.0-service-qti.rc|69d9cbc54f8ac0a0fb010f92bfa7de5981d643cf
+vendor/lib64/vendor.qti.hardware.qdutils_disp@1.0.so|2d5d02a40bbb8141664aa46febdbb93626ad9de2
+
 # Power-off charging daemon
 -sbin/charger:sbin/chargeonlymode;rootfs|f048d2cc20783ba1a608b73d440b3053af6ec9fd
 
