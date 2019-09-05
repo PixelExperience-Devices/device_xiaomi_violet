@@ -686,6 +686,15 @@ vendor/lib64/libtinyxml2_1.so|0019bedf2e12642fe4113093bc5a5590f6f5021b
 vendor/lib/hw/vulkan.sm6150.so|7b4d68d27bc2e79ce27f5bfb8c280f09eddd63ee
 vendor/lib64/hw/vulkan.sm6150.so|d7c5c36b78f72b096013ac35b5428b827ad34bed
 
+# IO Prefetcher - from laurel_sprout-user 9 PKQ1.190416.001 V10.3.4.0.PFQMIXM release-keys
+vendor/bin/hw/vendor.qti.hardware.iop@2.0-service|40d7bf132ba2139f10567fda516783b05ca24005
+vendor/etc/init/vendor.qti.hardware.iop@2.0-service.rc|fd11367b2585702190ef2577ce2ce6fc68f3a2f8
+vendor/lib64/hw/vendor.qti.hardware.iop@2.0-impl.so|1c522c2c56f590754a8fbc9a2860c5ab505d0318
+vendor/lib64/libqti-iopd-client.so|6e7946057cb64a5b9f083adff35ef0de23808ce4
+vendor/lib64/libqti-iopd.so|ddd3e395b9830ccd5bdc909bc992d541d7823478
+vendor/lib64/vendor.qti.hardware.iop@1.0.so|b31123f442eaa9e977521d7cfb08d0aaa2738fcd
+vendor/lib64/vendor.qti.hardware.iop@2.0.so|ad5a839b2ee94a3895adb5c6e3830a4840d343de
+
 # IPA
 vendor/firmware/ipa_fws.b00
 vendor/firmware/ipa_fws.b01
