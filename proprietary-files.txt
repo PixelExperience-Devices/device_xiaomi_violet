@@ -1001,12 +1001,20 @@ vendor/lib64/vendor.qti.ims.rcsconfig@1.0.so|6b6de57f4ff3ae0972bfb8fb9f472609ccd
 
 # Sensors
 vendor/bin/sensors.qti
+vendor/bin/hw/vendor.qti.hardware.sensorscalibrate@1.0-service
+vendor/etc/init/vendor.qti.hardware.sensorscalibrate@1.0-service.rc
+vendor/lib/hw/vendor.qti.hardware.sensorscalibrate@1.0-impl.so
+vendor/lib/libsensorcal.so
 vendor/lib/libsensorslog.so
 vendor/lib/sensors.ssc.so
 vendor/lib/libssc.so
+vendor/lib/vendor.qti.hardware.sensorscalibrate@1.0.so
+vendor/lib64/hw/vendor.qti.hardware.sensorscalibrate@1.0-impl.so
+vendor/lib64/libsensorcal.so
 vendor/lib64/libsensorslog.so
 vendor/lib64/sensors.ssc.so
 vendor/lib64/libssc.so
+vendor/lib64/vendor.qti.hardware.sensorscalibrate@1.0.so
 
 # Sensor Configs
 vendor/etc/sensors/config/ak991x_dri_0.json
