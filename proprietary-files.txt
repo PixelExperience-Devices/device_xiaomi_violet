@@ -36,6 +36,7 @@ vendor/lib/rfsa/adsp/libVC1DecDsp_skel.so
 vendor/lib/rfsa/adsp/libVC1Dec.so
 
 # Alarm - from laurel_sprout-user 9 PKQ1.190416.001 V10.3.4.0.PFQMIXM release-keys
+framework/vendor.qti.hardware.alarm-V1.0-java.jar|4f863e8a2dd71eab1429538a4d8f055e40258a0d
 -vendor/app/PowerOffAlarm/PowerOffAlarm.apk|0d6312f89aa5407d8376d067b956fad358c6411b
 vendor/bin/hw/vendor.qti.hardware.alarm@1.0-service|3747e7b3eea0f4c6f268c220fd6f27bdb7e1bfdd
 vendor/etc/init/vendor.qti.hardware.alarm@1.0-service.rc|c9877b6cae0353d5fdea5bc23dba77101b3d6980
@@ -407,12 +408,10 @@ vendor/lib64/libcneqmiutils.so|9ec85e1bbc071893431a849cf24af7d50ac2c52b
 vendor/lib64/libwms.so|cfd820b9596cb62eb5755569d0ed369d9a2e91a2
 vendor/lib64/libwqe.so|61337125e94ba0e0d25faa82ea4bd775575bd60a
 vendor/lib64/libxml.so|adc896f637f434f65a3e2fecb9f2405fff4a168c
-vendor/lib64/vendor.qti.hardware.data.latency@1.0.so|1a9af9130c8b7435e604904634a3fc117024de3b
 vendor/lib64/vendor.qti.hardware.data.dynamicdds@1.0.so|39346d7790fd5069cb1b8b6264c1e3296094eca9
 vendor/lib64/vendor.qti.hardware.data.qmi@1.0.so|bcdcd5600e7e0b5cc6e967f117fdc934a0147199
 vendor/lib64/vendor.qti.data.factory@1.0.so|370f034fe2d0d5eb69b2c94129f4e5d4b3e431eb
 vendor/lib64/vendor.qti.data.factory@1.1.so|7308e2711694efcdc4eccfd973f4cfb9aeb44635
-vendor/lib64/vendor.qti.latency@2.0.so|e933dd98b057c425745c595be00f6ca2ffd5559c
 
 # Consumerir
 vendor/lib64/hw/consumerir.default.so
@@ -480,6 +479,11 @@ lib64/libdpmctmgr.so|b6c5664dfb9dd8d5aaac37e87345462e74a58a3d
 lib64/libdpmfdmgr.so|54c9d64a55489e0216a6a8be0e100ea5aaae93e5
 lib64/libdpmframework.so|1c4162eefcd33072c2caf85e626ebf5e66d6521c
 lib64/libdpmtcm.so|170c6801ef39b55cf809d71535a8224f4b0a0a18
+lib/com.qualcomm.qti.dpm.api@1.0.so|9f5ed22e88a09e61111397ffd53616e2db97b899
+lib/libdpmctmgr.so|0a8f16b3333311ba15e2283db40897788a144ab9
+lib/libdpmfdmgr.so|407705dff76f6255e87d862b442128997430e775
+lib/libdpmframework.so|43554ef6c65ab7f48231dd37e5a42fda9874eb94
+lib/libdpmtcm.so|128991e7d988875209633a1345f939d408abb2fd
 -priv-app/dpmserviceapp/dpmserviceapp.apk|a642336052f3e5d70580700e2aebba230a5f663f
 vendor/bin/dpmQmiMgr|6be9fc790b38b24d8c3312651cb1c1fc6094c4d9
 vendor/lib64/libdpmqmihal.so|54f7da0356c0da2ed4a18759df87f5d90da9020f
@@ -488,7 +492,18 @@ vendor/lib64/com.qualcomm.qti.dpm.api@1.0.so|ee7d14d8054ab05266484ac9df8887b3885
 # DRM - from laurel_sprout-user 9 PKQ1.190416.001 V10.3.4.0.PFQMIXM release-keys
 vendor/bin/qseecomd|1138981a4509b946f0c8e936c494a19831e328e3
 vendor/lib/libdrmfs.so|57318d610e0918a13b532a4bdb335b361d2e6886
+vendor/lib/libdrmtime.so|97df336cc92202253198b8724d6456963b2fb05f
+vendor/lib/libGPreqcancel_svc.so|260243bb3dcb7cfab44bd91245deb8206c8d031e
+vendor/lib/libGPreqcancel.so|8d6ea19a86426eef12d625281ab78c93dd05ebf6
+vendor/lib/libqisl.so|7d06e13b79088556a503666bb5fe8e6873a70438
 vendor/lib/libQSEEComAPI.so|dc8ea264da14f4b40eb7dad948b1867464ea31f4
+vendor/lib/librpmb.so|5623b8055ac1462c68e9d62bd13d0ce66cbcf658
+vendor/lib/libsecureui_svcsock.so|33342506a3bf1f35cc4741a0714a8b2f2e5656b7
+vendor/lib/libsecureui.so|4a34395451a2a2532935da90d8a5c68eb83fb5f9
+vendor/lib/libSecureUILib.so|2b318c7eec3d9524f8dc0a3e144735b9aca0d582
+vendor/lib/libssd.so|d0616e4c50d1d80f97615a356c18f9316276e45c
+vendor/lib/libStDrvInt.so|3e8ee96a37a0501adc9cba959a428d3743422ada
+vendor/lib/libtzdrmgenprov.so|ae2ebc99663e9586261cd9c2e9ad8f28d3e05f58
 vendor/lib64/libdrmfs.so|51a45531db019c3cc8afa65099b4f56e380047de
 vendor/lib64/libdrmtime.so|927bf015b914f331f6eb10539d28690a9024bbe7
 vendor/lib64/libGPreqcancel_svc.so|f080d122e41802c851171e7511080c9f0e26db36
@@ -521,8 +536,12 @@ vendor/lib64/libhdcpsrm.so|2665306cd4ab4077eb72093a9e996fd1696179ac
 vendor/lib64/liboemcrypto.so|84cf7252ae349548d0e33296aa62e983be3178f0
 
 # ESE-Powermanager - from laurel_sprout-user 9 PKQ1.190416.001 V10.3.4.0.PFQMIXM release-keys
+lib/vendor.qti.esepowermanager@1.0.so|c365902cf602815ccb2d2ea489f0b25f7b33afa0
+lib64/vendor.qti.esepowermanager@1.0.so|3b95a7a614ad0273c22287618697e8a42d4b3d59
 vendor/bin/hw/vendor.qti.esepowermanager@1.0-service|4d86f22bfa2848d987a8b1c1e449b3f3adef3ac0
 vendor/etc/init/vendor.qti.esepowermanager@1.0-service.rc|58a3866ad5a7613d9392c9adb671eaa7825578a2
+vendor/lib/hw/vendor.qti.esepowermanager@1.0-impl.so|9d1e983de21fe9ef40b5284c3d4ad8937e839879
+vendor/lib/vendor.qti.esepowermanager@1.0.so|4bba5a40507a8da2d64aa311edb8154f77c92b49
 vendor/lib64/hw/vendor.qti.esepowermanager@1.0-impl.so|481d25dc71de322e0bf87b5239bd1613e1b48dbf
 vendor/lib64/vendor.qti.esepowermanager@1.0.so|b885b11b1e33a8cd7f35471c2243168bb4bb1d3f
 
@@ -689,6 +708,11 @@ vendor/lib64/hw/vulkan.sm6150.so|d7c5c36b78f72b096013ac35b5428b827ad34bed
 # IO Prefetcher - from laurel_sprout-user 9 PKQ1.190416.001 V10.3.4.0.PFQMIXM release-keys
 vendor/bin/hw/vendor.qti.hardware.iop@2.0-service|40d7bf132ba2139f10567fda516783b05ca24005
 vendor/etc/init/vendor.qti.hardware.iop@2.0-service.rc|fd11367b2585702190ef2577ce2ce6fc68f3a2f8
+vendor/lib/hw/vendor.qti.hardware.iop@2.0-impl.so|9d029a135458c6a791a057b9138d884457ec3a44
+vendor/lib/libqti-iopd-client.so|bfa2869c05cad8067c42afd3b1d83661145e42fb
+vendor/lib/libqti-iopd.so|b63dc5b126a3e3197b3e612e7f27be8c55bf23b4
+vendor/lib/vendor.qti.hardware.iop@1.0.so|4e9acdf2144418131bf2ba00d175bd721ec0ab12
+vendor/lib/vendor.qti.hardware.iop@2.0.so|14d72e60e0432357acec706da2cbd8724dd47681
 vendor/lib64/hw/vendor.qti.hardware.iop@2.0-impl.so|1c522c2c56f590754a8fbc9a2860c5ab505d0318
 vendor/lib64/libqti-iopd-client.so|6e7946057cb64a5b9f083adff35ef0de23808ce4
 vendor/lib64/libqti-iopd.so|ddd3e395b9830ccd5bdc909bc992d541d7823478
@@ -715,6 +739,18 @@ vendor/lib64/libkeymasterdeviceutils.so|b8a6353df29142529c3d14ed95c194bb0e7b4c1a
 vendor/lib64/libkeymasterprovision.so|13d48ca3afa664bb739e50481e7e41ca376043e7
 vendor/lib64/libkeymasterutils.so|bf1830d5e7b64fac168f6bae45bd0512db872679
 vendor/lib64/libqtikeymaster4.so|830a186c23b0a2d12c59e08ec6cf96b724ac2bed
+
+# Latency - from laurel_sprout-user 9 PKQ1.190416.001 V10.3.4.0.PFQMIXM release-keys
+framework/vendor.qti.hardware.data.latency-V1.0-java.jar|85ef62289e8284ff8189cfdac82409970bd0acd7
+framework/vendor.qti.latency-V2.0-java.jar|68b700a6f07272aa2c2387f36a7f40b0233d5b4d
+lib/vendor.qti.hardware.data.latency@1.0.so|9dc536c92adf9ce7d40e5a104966a8db077707b1
+lib/vendor.qti.latency@2.0.so|d8af0b2d954cb560e2a4fe9179e566e6c9b448a6
+lib64/vendor.qti.hardware.data.latency@1.0.so|11e53263737fa4eb20910bbcd2679f85397b4a45
+lib64/vendor.qti.latency@2.0.so|b53f30ab17c1fcdb94d7629d41290d457a488ec6
+vendor/lib/vendor.qti.hardware.data.latency@1.0.so|68aaf391330eccd01f161529f251dcb47fe69d15
+vendor/lib/vendor.qti.latency@2.0.so|2e6e22a34f9d1d56e6f3f8f4e342f0462065362b
+vendor/lib64/vendor.qti.hardware.data.latency@1.0.so|1a9af9130c8b7435e604904634a3fc117024de3b
+vendor/lib64/vendor.qti.latency@2.0.so|e933dd98b057c425745c595be00f6ca2ffd5559c
 
 # Listen - from laurel_sprout-user 9 PKQ1.190416.001 V10.3.4.0.PFQMIXM release-keys
 vendor/lib/libadpcmdec.so|81ff51d498dcbb93e02970e69dce637c1064b6f6
@@ -797,6 +833,12 @@ vendor/etc/perf/commonresourceconfigs.xml|7bf6b442875ec6244db05ffcc2ebb85a1c3708
 vendor/etc/perf/perfboostsconfig.xml|cffacd25f27eefa778aaa27933e4c6989e57dae2
 vendor/etc/perf/targetconfig.xml|53d6e2936c1cdc67edf86a2ccf04084adbff4a68
 vendor/etc/perf/targetresourceconfigs.xml|0a614d97672c516aedc253aec525468fbdb270ec
+vendor/lib/libperfgluelayer.so|6cee0719bb4189572ce77f05c01bf871358738fd
+vendor/lib/libqti-perfd-client.so|bb7c14654c20e29b7527a230a75b873dea57669c
+vendor/lib/libqti-perfd.so|83d8dfb3ba3033c4ac108facbcef0ed82de982d4
+vendor/lib/libqti-util.so|061db0a854ac86d9696aa19ce134eea41f4ddedd
+vendor/lib/libqti-utils.so|1f28d1330b61f67be98d39ff538ca644a6818820
+vendor/lib/vendor.qti.hardware.perf@1.0.so|20a457c82691988c146faa2944dc8f1b9dc583f1
 vendor/lib64/libadaptlaunch.so|7789fd57d1710527013051107f0fe24c38aee5ec
 vendor/lib64/libappclassifier.so|8ef13fdb8e1b549f53868f8f57937f244fb8afa2
 vendor/lib64/libgameoptfeature.so|84839fd1de0f483c47a9567ea6c3431d58bbdc20
@@ -814,11 +856,13 @@ vendor/lib64/vendor.qti.hardware.perf@1.0.so|acdc5a108542616db6653f84df5e34e3ed5
 # Peripheral manager - from laurel_sprout-user 9 PKQ1.190416.001 V10.3.4.0.PFQMIXM release-keys
 vendor/bin/pm-proxy|6c5f7259df83b849ba136187e366db6ce1598d21
 vendor/bin/pm-service|8ec0b27d756339f75c989d4642a9edc27c1c978c
+vendor/lib/libperipheral_client.so|00f3630df0df221bb05cdaee50a28859874e4808
 vendor/lib64/libperipheral_client.so|1ba2dc8ec5196b305a84ee4580365cd06f7bc7a7
 
 # Qualcomm Display Utils - from laurel_sprout-user 9 PKQ1.190416.001 V10.3.4.0.PFQMIXM release-keys
 vendor/bin/hw/vendor.qti.hardware.qdutils_disp@1.0-service-qti|d73d67e0b6d676d3f47217b046db78d764cb7f3a
 vendor/etc/init/vendor.qti.hardware.qdutils_disp@1.0-service-qti.rc|69d9cbc54f8ac0a0fb010f92bfa7de5981d643cf
+vendor/lib/vendor.qti.hardware.qdutils_disp@1.0.so|f22a0e2013aa04c3618ea5d06eb495c92b5e399d
 vendor/lib64/vendor.qti.hardware.qdutils_disp@1.0.so|2d5d02a40bbb8141664aa46febdbb93626ad9de2
 
 # Power-off charging daemon
@@ -827,6 +871,11 @@ vendor/lib64/vendor.qti.hardware.qdutils_disp@1.0.so|2d5d02a40bbb8141664aa46febd
 # Postprocessing - from laurel_sprout-user 9 PKQ1.190416.001 V10.3.4.0.PFQMIXM release-keys
 vendor/bin/hw/vendor.display.color@1.0-service|bd70727d49e0f49d7827bc0a7cc19e13a16e176e
 vendor/etc/init/vendor.display.color@1.0-service.rc|5ad673f879b3685a0e79b5633437e5499cb94f48
+vendor/lib/libdisp-aba.so|a1ae139c15b5722bd2ebf6f38159a9d35dac65d6
+vendor/lib/vendor.display.color@1.0.so|9238dbc9a75fb194a64fb73808e157750db7b32f
+vendor/lib/vendor.display.color@1.1.so|ba5c5bcb088cd1cb12c1556329ba6254013b66ab
+vendor/lib/vendor.display.color@1.2.so|1204121163dfb7311c92d5a4a423e313f76b1d9e
+vendor/lib/vendor.display.postproc@1.0.so|29faf157d045691d02ba3485321d454d701cb76c
 vendor/lib64/libdisp-aba.so|bef081a4a63fca47ffbb06c03c6a28eb29b38880
 vendor/lib64/vendor.display.color@1.0.so|6b110cca98fa02bda154c86a39ec5ddec715fd2c
 vendor/lib64/vendor.display.color@1.1.so|0399d400d92c59e0bab3dde68d782d6a145b0a56
@@ -871,6 +920,11 @@ vendor/lib64/libqmiservices.so|9042fb99270d053d0efd842255024889b1fbd05a
 # Qualcomm Trusted Execution Environment - from laurel_sprout-user 9 PKQ1.190416.001 V10.3.4.0.PFQMIXM release-keys
 vendor/bin/hw/vendor.qti.hardware.qteeconnector@1.0-service|b9b9c09605f3a3fe04ab7cbc3e6fbbd52b51e8c1
 vendor/etc/init/vendor.qti.hardware.qteeconnector@1.0-service.rc|c966350ee67d3a7c73ca7184e3725264025d16f5
+vendor/lib/hw/vendor.qti.hardware.qteeconnector@1.0-impl.so|be9ae3e94cb130223cdf853bb7ceb6f8c5600e1f
+vendor/lib/libGPQTEEC_vendor.so|a2261c74d8f562a562fad4ff20867d91a27d8032
+vendor/lib/libGPTEE_vendor.so|6511150ab413aa8a244e7ead70b5d3b0b8ec2cd3
+vendor/lib/libQTEEConnector_vendor.so|5a4879be0887e696d6a034c376c0dae3b73aaaad
+vendor/lib/vendor.qti.hardware.qteeconnector@1.0.so|96ee4da5b4d6e301b0789a2c236c83c1e3dc24c7
 vendor/lib64/hw/vendor.qti.hardware.qteeconnector@1.0-impl.so|3a4d04349131403994208b80c205fd76744b1640
 vendor/lib64/libGPQTEEC_vendor.so|947649645dbebac2fa45a701f752de42f154db10
 vendor/lib64/libGPTEE_vendor.so|e3217e832f56f31ac2758ed67fc20b1036b483d7
@@ -1108,11 +1162,13 @@ vendor/lib64/libthermalfeature.so
 # Time services - from laurel_sprout-user 9 PKQ1.190416.001 V10.3.4.0.PFQMIXM release-keys
 -vendor/app/TimeService/TimeService.apk|3c9e8763b1b81e71b378eb735eee8c6f657a26d4
 vendor/bin/time_daemon|b5e5f82f158493962fe6607413a582204209d56e
+vendor/lib/libtime_genoff.so|db81e5e57aa6904d814ca4754bee392d81c36765
 vendor/lib64/libtime_genoff.so|bd1ef99d07a181236b5da5de25a9b36a38bbdd9a
 
 # TUI - from laurel_sprout-user 9 PKQ1.190416.001 V10.3.4.0.PFQMIXM release-keys
 vendor/bin/hw/vendor.qti.hardware.tui_comm@1.0-service-qti|cc84c732034a8e022ae5ba91183a0af3bfe2fb8c
 vendor/etc/init/vendor.qti.hardware.tui_comm@1.0-service-qti.rc|2cfc563d7e1579374f001c94588fae7835a12ffc
+vendor/lib/vendor.qti.hardware.tui_comm@1.0.so|ec767dffa9d0cf80659a9a2493e5b9eb2856fa73
 vendor/lib64/vendor.qti.hardware.tui_comm@1.0.so|49dd37da3c0d53590b9ff3dae6ed7fe44ffa235d
 
 # Wifi
