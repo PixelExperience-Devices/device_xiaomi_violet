@@ -22,6 +22,8 @@
 #include <fstream>
 #include <cmath>
 
+#define FINGERPRINT_ERROR_VENDOR 8
+
 #define COMMAND_NIT 10
 #define PARAM_NIT_FOD 3
 #define PARAM_NIT_NONE 0
@@ -111,7 +113,7 @@ Return<bool> FingerprintInscreen::handleAcquired(int32_t acquiredInfo, int32_t v
 
 Return<bool> FingerprintInscreen::handleError(int32_t error, int32_t vendorCode) {
     LOG(ERROR) << "error: " << error << ", vendorCode: " << vendorCode << "\n";
-    return false;
+    return error == FINGERPRINT_ERROR_VENDOR && vendorCode == 6;
 }
 
 Return<void> FingerprintInscreen::setLongPressEnabled(bool) {
