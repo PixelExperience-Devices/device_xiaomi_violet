@@ -143,14 +143,16 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     android.hardware.graphics.composer@2.2-service \
     android.hardware.graphics.composer@2.2-impl \
+    android.hardware.graphics.mapper@2.0-impl-qti-display \
     android.hardware.memtrack@1.0-impl \
     android.hardware.memtrack@1.0-service \
+    gralloc.sm6150 \
+    hwcomposer.sm6150 \
     libdisplayconfig \
-    libqdMetaData.system \
     libtinyxml \
     libvulkan \
-    vendor.display.config@1.7 \
-    vendor.display.config@1.7.vendor
+    memtrack.sm6150 \
+    vendor.qti.hardware.display.allocator@1.0-service
 
 # DRM
 PRODUCT_PACKAGES += \
@@ -376,5 +378,8 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/wifi/WCNSS_qcom_cfg.ini:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/WCNSS_qcom_cfg.ini
 
 # WiFi Display
+PRODUCT_PACKAGES += \
+    libqdMetaData.system
+
 PRODUCT_BOOT_JARS += \
     WfdCommon
