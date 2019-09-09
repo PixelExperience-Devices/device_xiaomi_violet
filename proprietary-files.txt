@@ -53,7 +53,7 @@ vendor/lib/hw/com.qualcomm.qti.ant@1.0-impl.so
 # ACDB
 vendor/etc/acdbdata/adsp_avs_config.acdb
 
-# Audio - hardware
+# Audio - Hardware
 vendor/lib/hw/audio.primary.sm6150.so
 vendor/lib/libtinycompress_vendor.so
 vendor/lib64/hw/audio.primary.sm6150.so
@@ -513,7 +513,7 @@ vendor/lib64/libvpptestutils.so
 vendor/lib64/vendor.qti.hardware.vpp@1.1.so
 vendor/lib64/vendor.qti.hardware.vpp@1.2.so
 
-# Media - hardware
+# Media - Hardware
 vendor/lib/libOmxSwVdec.so
 vendor/lib/libOmxSwVencMpeg4.so
 vendor/lib64/libOmxSwVdec.so
@@ -526,11 +526,6 @@ vendor/lib64/libmlipay@1.1.so
 vendor/lib64/libmlipay.so
 vendor/lib64/vendor.xiaomi.hardware.mlipay@1.0.so
 vendor/lib64/vendor.xiaomi.hardware.mlipay@1.1.so
-
-# Neural-networks
-vendor/bin/hw/android.hardware.neuralnetworks@1.1-service-qti
-vendor/etc/init/android.hardware.neuralnetworks@1.1-service-qti.rc
-vendor/lib64/libhexagon_nn_stub.so
 
 # Perf
 vendor/bin/hw/vendor.qti.hardware.perf@1.0-service
@@ -618,20 +613,6 @@ vendor/lib64/libqmi_common_so.so
 vendor/lib64/libqmi_csi.so
 vendor/lib64/libqmi_encdec.so
 vendor/lib64/libqmiservices.so
-
-# QTEE connector
-vendor/bin/hw/vendor.qti.hardware.qteeconnector@1.0-service
-vendor/etc/init/vendor.qti.hardware.qteeconnector@1.0-service.rc
-vendor/lib64/hw/vendor.qti.hardware.qteeconnector@1.0-impl.so
-vendor/lib64/libGPQTEEC_vendor.so
-vendor/lib64/libGPTEE_vendor.so
-vendor/lib64/libQTEEConnector_vendor.so
-vendor/lib64/vendor.qti.hardware.qteeconnector@1.0.so
-vendor/lib/hw/vendor.qti.hardware.qteeconnector@1.0-impl.so
-vendor/lib/libGPQTEEC_vendor.so
-vendor/lib/libGPTEE_vendor.so
-vendor/lib/libQTEEConnector_vendor.so
-vendor/lib/vendor.qti.hardware.qteeconnector@1.0.so
 
 # Radio
 -app/datastatusnotification/datastatusnotification.apk
@@ -766,20 +747,6 @@ vendor/lib64/vendor.qti.ims.rcsconfig@1.0.so
 
 # Snapdragon Computer Vision Engine
 vendor/etc/scve/facereco/gModel.dat
-lib/vendor.qti.hardware.scve.objecttracker@1.0-adapter-helper.so
-lib/vendor.qti.hardware.scve.objecttracker@1.0.so
-lib/vendor.qti.hardware.scve.panorama@1.0-adapter-helper.so
-lib/vendor.qti.hardware.scve.panorama@1.0.so
-lib64/vendor.qti.hardware.scve.objecttracker@1.0-adapter-helper.so
-lib64/vendor.qti.hardware.scve.objecttracker@1.0.so
-lib64/vendor.qti.hardware.scve.panorama@1.0-adapter-helper.so
-lib64/vendor.qti.hardware.scve.panorama@1.0.so
-vendor/bin/hw/vendor.qti.hardware.scve.objecttracker@1.0-service
-vendor/bin/hw/vendor.qti.hardware.scve.panorama@1.0-service
-vendor/etc/init/vendor.qti.hardware.scve.objecttracker@1.0-service.rc
-vendor/etc/init/vendor.qti.hardware.scve.panorama@1.0-service.rc
-vendor/lib/hw/vendor.qti.hardware.scve.objecttracker@1.0-impl.so
-vendor/lib/hw/vendor.qti.hardware.scve.panorama@1.0-impl.so
 vendor/lib/libfastcvdsp_stub.so
 vendor/lib/libfastcvopt.so
 vendor/lib/libscveBlobDescriptor.so
@@ -794,12 +761,6 @@ vendor/lib/libscveObjectTracker.so
 vendor/lib/libscveObjectTracker_stub.so
 vendor/lib/libscvePanorama.so
 vendor/lib/libscvePanorama_lite.so
-vendor/lib/vendor.qti.hardware.scve.objecttracker@1.0-halimpl.so
-vendor/lib/vendor.qti.hardware.scve.objecttracker@1.0.so
-vendor/lib/vendor.qti.hardware.scve.panorama@1.0-halimpl.so
-vendor/lib/vendor.qti.hardware.scve.panorama@1.0.so
-vendor/lib64/hw/vendor.qti.hardware.scve.objecttracker@1.0-impl.so
-vendor/lib64/hw/vendor.qti.hardware.scve.panorama@1.0-impl.so
 vendor/lib64/libfastcvdsp_stub.so
 vendor/lib64/libfastcvopt.so
 vendor/lib64/libscveBlobDescriptor.so
@@ -814,35 +775,26 @@ vendor/lib64/libscveObjectTracker.so
 vendor/lib64/libscveObjectTracker_stub.so
 vendor/lib64/libscvePanorama.so
 vendor/lib64/libscvePanorama_lite.so
-vendor/lib64/vendor.qti.hardware.scve.objecttracker@1.0.so
-vendor/lib64/vendor.qti.hardware.scve.panorama@1.0.so
 vendor/lib/rfsa/adsp/libscveBlobDescriptor_skel.so
 vendor/lib/rfsa/adsp/libscveObjectSegmentation_skel.so
 vendor/lib/rfsa/adsp/libscveT2T_skel.so
 
 # Sensors
-vendor/bin/hw/vendor.qti.hardware.sensorscalibrate@1.0-service
 vendor/bin/sensors.qti
 vendor/bin/sscrpcd
-vendor/etc/init/vendor.qti.hardware.sensorscalibrate@1.0-service.rc
-vendor/etc/permissions/vendor-qti-hardware-sensorscalibrate.xml
 vendor/etc/sensors/hals.conf
-vendor/lib/hw/vendor.qti.hardware.sensorscalibrate@1.0-impl.so
 vendor/lib/libsensorcal.so
 vendor/lib/libsensorslog.so
 vendor/lib/libssc.so
 vendor/lib/libssc_default_listener.so
 vendor/lib/libssccalapi.so
 vendor/lib/sensors.ssc.so
-vendor/lib/vendor.qti.hardware.sensorscalibrate@1.0.so
-vendor/lib64/hw/vendor.qti.hardware.sensorscalibrate@1.0-impl.so
 vendor/lib64/libsensorcal.so
 vendor/lib64/libsensorslog.so
 vendor/lib64/libssc.so
 vendor/lib64/libssc_default_listener.so
 vendor/lib64/libssccalapi.so
 vendor/lib64/sensors.ssc.so
-vendor/lib64/vendor.qti.hardware.sensorscalibrate@1.0.so
 
 # Soter
 -app/SoterService/SoterService.apk
