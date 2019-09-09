@@ -461,6 +461,9 @@ vendor/lib/libsdsprpc.so
 # Charger - from laurel_sprout-user 9 PKQ1.190416.001 V10.3.4.0.PFQMIXM release-keys
 vendor/bin/hvdcp_opti|999a9980d14a65a8efe4b75fd51450c496cd8ad6
 
+# CNEService - from mata QP1A.190711.107
+-priv-app/CNEService/CNEService.apk|d8579ab4633111f5473b3be8c9da487504908167
+
 # CNE - from laurel_sprout-user 9 PKQ1.190416.001 V10.3.4.0.PFQMIXM release-keys
 etc/permissions/cneapiclient.xml|15831adf0e80243042b90c734eea0a68eb8ae9c9
 etc/permissions/com.quicinc.cne.xml|e99e631d8b06ba4680529e9e4004d8d05baf6904
@@ -479,7 +482,6 @@ framework/com.quicinc.cne.server-V2.3-java.jar|76e36b94624139b1b845b8200e5bcb998
 framework/vendor.qti.data.factory-V1.0-java.jar|23a060c1197f21f4f3b0f77485d8ee387d740e5d
 framework/vendor.qti.data.factory-V1.1-java.jar|6e27d77fe3bb64eeadb301ff58b596c7b55adcb5
 framework/vendor.qti.hardware.data.qmi-V1.0-java.jar|94c3e0efe3bc51358fe9145ed1ff0708c262380d
--priv-app/CNEService/CNEService.apk|e871eb09d3fb6f271dee6989ea7576761d8e1cda
 vendor/bin/cnd|8eed54dabfc056dff207222b1c44d7041907b9bc
 vendor/etc/cne/wqeclient/ATT/ATT_profile1.xml|578f3f8f56059bfdbef926bcc68d01c15e06951f
 vendor/etc/cne/wqeclient/ATT/ATT_profile2.xml|1fb42c672a12b6660bdce3ea94e0c43719dd9de8
