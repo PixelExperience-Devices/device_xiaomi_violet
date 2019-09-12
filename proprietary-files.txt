@@ -579,7 +579,7 @@ vendor/lib/vendor.qti.hardware.qdutils_disp@1.0.so
 vendor/lib64/vendor.qti.hardware.qdutils_disp@1.0.so
 
 # Qualcomm MSM Interface
-etc/permissions/qti_libpermissions.xml|40363a2318e67ac69bd67f3187fd12b8faa60c9e
+etc/permissions/qti_libpermissions.xml
 etc/permissions/qti_permissions.xml
 vendor/bin/irsc_util
 vendor/bin/pd-mapper
