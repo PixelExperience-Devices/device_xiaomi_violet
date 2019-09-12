@@ -603,26 +603,6 @@ vendor/lib/libsdmutils.so|3967f13048406442ae05b9a61fff7a949d4bc2ad
 vendor/lib/libsdm-colormgr-algo.so|48689a441aad372e676a06e39fd08d739a037126
 
 # DPM - from laurel_sprout-user 9 PKQ1.190416.001 V10.3.4.0.PFQMIXM release-keys
-bin/dpmd|38da5daf816793abe6dee1e8346c3662db608116
-etc/dpm/dpm.conf|fec89edb6cff81424a6c3a730fed92efa3613f72
-etc/init/dpmd.rc|52ca6ad920a1804e4ff608113cece063730f5e0c
-etc/permissions/com.qti.dpmframework.xml|36b94c9338069e434b83359a92cdc7ff62b822df
-etc/permissions/dpmapi.xml|ded29f9befaef20a7ccee0c75427fda1d1d04890
-framework/com.qti.dpmframework.jar|2a6ff555ebff148a508fc7ea2fbeaee4b9a2dff6
-framework/dpmapi.jar|89ddc5bf0c4c88a3f341169edc4d89f9e834337b
-framework/tcmclient.jar|91b415288494fa208b5f5ec9fafa33c47e569c96
-lib64/libdiag_system.so|05b5d2fabdececd0b71028656005f9277dfbefc1
-lib64/com.qualcomm.qti.dpm.api@1.0.so|cf8ef6f0f641c55273acf7d2644f7f3a41cce2ca
-lib64/libdpmctmgr.so|b6c5664dfb9dd8d5aaac37e87345462e74a58a3d
-lib64/libdpmfdmgr.so|54c9d64a55489e0216a6a8be0e100ea5aaae93e5
-lib64/libdpmframework.so|1c4162eefcd33072c2caf85e626ebf5e66d6521c
-lib64/libdpmtcm.so|170c6801ef39b55cf809d71535a8224f4b0a0a18
-lib/com.qualcomm.qti.dpm.api@1.0.so|9f5ed22e88a09e61111397ffd53616e2db97b899
-lib/libdpmctmgr.so|0a8f16b3333311ba15e2283db40897788a144ab9
-lib/libdpmfdmgr.so|407705dff76f6255e87d862b442128997430e775
-lib/libdpmframework.so|43554ef6c65ab7f48231dd37e5a42fda9874eb94
-lib/libdpmtcm.so|128991e7d988875209633a1345f939d408abb2fd
--priv-app/dpmserviceapp/dpmserviceapp.apk|a642336052f3e5d70580700e2aebba230a5f663f
 vendor/bin/dpmQmiMgr|6be9fc790b38b24d8c3312651cb1c1fc6094c4d9
 vendor/lib64/libdpmqmihal.so|54f7da0356c0da2ed4a18759df87f5d90da9020f
 vendor/lib64/com.qualcomm.qti.dpm.api@1.0.so|ee7d14d8054ab05266484ac9df8887b388593f47
