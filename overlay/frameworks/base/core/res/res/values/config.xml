@@ -578,9 +578,6 @@
     <!-- Regex of wired ethernet ifaces -->
     <string translatable="false" name="config_ethernet_iface_regex">eth0</string>
 
-    <!-- Whether device ignores the RSSNR signal implementation -->
-    <bool name="config_ignoreRssnrSignalLevel">true</bool>
-
     <!-- Pocket Lock -->
     <bool name="config_pocketModeSupported">false</bool>
 
