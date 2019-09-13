@@ -1126,6 +1126,7 @@ vendor/radio/qcril_database/upgrade/4_version_update_ecc_table.sql|c5147744f264d
 # Radio - IMS - from laurel_sprout-user 9 PKQ1.190416.001 V10.3.4.0.PFQMIXM release-keys
 -priv-app/ims/ims.apk|3ded183624fd325fd86cae2830bfd3d8030b64d0
 -app/imssettings/imssettings.apk|20d9b2c3f5939d4bfa7c03b5383d0cf03dbbc39e
+-app/uceShimService/uceShimService.apk|a2de7d90c4319c0a66e565869dca741cd9799d77
 etc/permissions/com.qualcomm.qti.imscmservice.xml|db25ef24f1937366d58a53b4f4b8923bc9e98d2d
 etc/permissions/com.qualcomm.qti.imscmservice-V2.0-java.xml|8d25bd7b79baf266950eb484c1a28817f891aec2
 etc/permissions/com.qualcomm.qti.imscmservice-V2.1-java.xml|998076243537f61f3683a3c083f7b27510617368
