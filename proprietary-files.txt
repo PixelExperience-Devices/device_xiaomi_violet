@@ -1050,6 +1050,9 @@ vendor/lib64/libGPTEE_vendor.so|e3217e832f56f31ac2758ed67fc20b1036b483d7
 vendor/lib64/libQTEEConnector_vendor.so|67e631e152e5cbbd18dba04280cf77c8930b0dd1
 vendor/lib64/vendor.qti.hardware.qteeconnector@1.0.so|fb83d48de244d55b39e6cb43597c01a8b62b6938
 
+# Radio - from mata QP1A.190711.107
+-priv-app/qcrilmsgtunnel/qcrilmsgtunnel.apk|956a4017d0ba7f68e6d225e57b40d3b2bcbb4837
+
 # Radio - from laurel_sprout-user 9 PKQ1.190416.001 V10.3.4.0.PFQMIXM release-keys
 -app/datastatusnotification/datastatusnotification.apk|ceafcce87298531a3adb13a87709a1fd65291625
 -app/embms/embms.apk|d0f7509e59c4be57cfd85779a531b4276be91d59
@@ -1073,7 +1076,6 @@ framework/embmslibrary.jar|980832af89ed59120b7362ddb56d3120bb6b2239
 framework/qcrilhook.jar|1e9862883b4e1a32e82022cf9d1f5fd078959bc0
 framework/qti-telephony-common.jar|559422d5bd4c4ac7043f76c125589cbc50bb8092
 framework/QtiTelephonyServicelibrary.jar|41c406bdfffb00f4eec4dbe0e862252ee6365b6e
--priv-app/qcrilmsgtunnel/qcrilmsgtunnel.apk|1da446a4391ef4c9b1c60c407096437dcf5d5aab
 vendor/bin/qti|d53307aa7fb8aaf2db3732fc6c35710a33ab9f7b
 vendor/lib/libmdmdetect.so|823af73e8fe30a3195cbae84fc8a46e306f45261
 vendor/lib64/libconfigdb.so|2bf7b169bf3d5d36e97f09b1e96d11e9bbc5f9c6
