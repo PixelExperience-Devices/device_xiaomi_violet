@@ -3,7 +3,7 @@ on boot
     chown system system /sys/class/backlight/panel0-backlight/brightness
     chown system system /sys/class/backlight/panel0-backlight/max_brightness
     chmod 0644 /sys/class/backlight/panel0-backlight/brightness
-    chmod 0644 system /sys/class/backlight/panel0-backlight/max_brightness
+    chmod 0644 /sys/class/backlight/panel0-backlight/max_brightness
 
     # Real notification light
     chown system system /sys/class/leds/green/brightness
