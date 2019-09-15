@@ -53,26 +53,6 @@ vendor/lib64/hw/com.qualcomm.qti.ant@1.0-impl.so|203528c568c1c5ce33b35dcb9ee9eb7
 # ACDB
 vendor/etc/acdbdata/adsp_avs_config.acdb
 
-# Audio Modules - hardware
-vendor/lib64/libbatterylistener.so
-vendor/lib64/libcirrusspkrprot.so
-vendor/lib64/libcomprcapture.so
-vendor/lib64/libexthwplugin.so
-vendor/lib64/libhdmiedid.so
-vendor/lib64/libhdmipassthru.so
-vendor/lib64/libhfp.so
-vendor/lib64/libsndmonitor.so
-vendor/lib64/libspkrprot.so
-vendor/lib/libbatterylistener.so
-vendor/lib/libcirrusspkrprot.so
-vendor/lib/libcomprcapture.so
-vendor/lib/libexthwplugin.so
-vendor/lib/libhdmiedid.so
-vendor/lib/libhdmipassthru.so
-vendor/lib/libhfp.so
-vendor/lib/libsndmonitor.so
-vendor/lib/libspkrprot.so
-
 # AptX - from bonito-user-10-QPP6.190730.005-5773495-release-keys
 product/lib64/libaptXHD_encoder.so|e13fa70c97caaa24d061678bdee608eb8850a69e
 product/lib64/libaptX_encoder.so|df1c89d7af1bb35808d5fe3496b04ba066c10cbc
@@ -82,20 +62,18 @@ vendor/lib64/libbtnv.so
 vendor/lib64/libbt-hidlclient.so
 
 # Bluetooth Audio
-vendor/lib64/btaudio_offload_if.so
 vendor/lib64/hw/audio.bluetooth_qti.default.so
+vendor/lib64/btaudio_offload_if.so
 vendor/lib64/hw/vendor.qti.hardware.bluetooth_audio@2.0-impl.so
 vendor/lib64/hw/vendor.qti.hardware.bluetooth_sar@1.0-impl.so
 vendor/lib64/hw/vendor.qti.hardware.btconfigstore@1.0-impl.so
-vendor/lib64/liba2dpoffload.so
 vendor/lib64/libbluetooth_audio_session_qti.so
 vendor/lib64/vendor.qti.hardware.bluetooth_sar@1.0.so
-vendor/lib/btaudio_offload_if.so
 vendor/lib/hw/audio.bluetooth_qti.default.so
+vendor/lib/btaudio_offload_if.so
 vendor/lib/hw/vendor.qti.hardware.bluetooth_audio@2.0-impl.so
 vendor/lib/hw/vendor.qti.hardware.bluetooth_sar@1.0-impl.so
 vendor/lib/hw/vendor.qti.hardware.btconfigstore@1.0-impl.so
-vendor/lib/liba2dpoffload.so
 vendor/lib/libbluetooth_audio_session_qti.so
 vendor/lib/vendor.qti.hardware.bluetooth_sar@1.0.so
 

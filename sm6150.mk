@@ -96,11 +96,22 @@ PRODUCT_PACKAGES += \
     android.hardware.soundtrigger@2.2-impl:32 \
     audio.a2dp.default \
     audio.r_submix.default \
+    audio.primary.sm6150 \
     audio.usb.default \
+    liba2dpoffload \
     libaudio-resampler \
+    libbatterylistener \
+    libcirrusspkrprot \
+    libcomprcapture \
+    libexthwplugin \
+    libhdmiedid \
+    libhdmipassthru \
+    libhfp \
     libqcompostprocbundle \
     libqcomvisualizer \
     libqcomvoiceprocessing \
+    libsndmonitor \
+    libspkrprot \
     libtinycompress \
     libtinycompress.vendor \
     libvolumelistener \
