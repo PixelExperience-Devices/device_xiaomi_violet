@@ -33,7 +33,7 @@
     <Powerhint>
         <!--video encode 30 fps-->
         <Config
-            Id="0x00001203" Enable="true" Target="msmnile" Timeout="0"
+            Id="0x00001203" Enable="true" Target="msmsteppe" Timeout="0"
             Resources="" />
 
         <!--sustained performance-->
@@ -44,17 +44,17 @@
         <!-- GPU - max pwrlevel 0 -->
         <!-- Max Prime CPUs 0 -->
         <Config
-            Id="0x00001206" Enable="true" Target="msmnile" Timeout="0"
+            Id="0x00001206" Enable="true" Target="msmsteppe" Timeout="0"
             Resources="0x40800000, 0x420, 0x40800100, 0x40C, 0x40804000, 0x70C,
             0X42804000, 0x2, 0X42808000, 0x0, 0x41004200, 0x0"/>
         <!--vr mode-->
         <Config
-            Id="0x00001207" Enable="true" Target="msmnile" Timeout="0"
+            Id="0x00001207" Enable="true" Target="msmsteppe" Timeout="0"
             Resources=""/>
 
         <!--vr mode sustained performance-->
         <Config
-            Id="0x00001301" Enable="true" Target="msmnile" Timeout="0"
+            Id="0x00001301" Enable="true" Target="msmsteppe" Timeout="0"
             Resources=""/>
 
         <!-- same settings for all the VR power levels intentionally -->
@@ -72,7 +72,7 @@
         <!-- Min Prime CPUs 1 -->
         <!-- Idefinite Duration -->
         <Config
-            Id="0x0000130A" Enable="true" Target="msmnile" Timeout="0"
+            Id="0x0000130A" Enable="true" Target="msmsteppe" Timeout="0"
             Resources="0x40800000, 0x360, 0x40804000, 0x7E0, 0x40800100, 0x240, 0x40804100, 0x4F3, 0x40800200, 0x3AD, 0x40804200, 0x806,
             0x42804000, 0x5, 0x42808000, 0x0, 0x41000000, 0x3, 0x41000200, 0x1"/>
 
@@ -89,7 +89,7 @@
         <!-- Min Prime CPUs 1 -->
         <!-- Idefinite Duration -->
         <Config
-            Id="0x0000130B" Enable="true" Target="msmnile" Timeout="0"
+            Id="0x0000130B" Enable="true" Target="msmsteppe" Timeout="0"
             Resources="0x40800000, 0x360, 0x40804000, 0x7E0, 0x40800100, 0x240, 0x40804100, 0x4F3, 0x40800200, 0x3AD, 0x40804200, 0x806,
             0x42804000, 0x5, 0x42808000, 0x0, 0x41000000, 0x3, 0x41000200, 0x1"/>
 
@@ -106,7 +106,7 @@
         <!-- Min Prime CPUs 1 -->
         <!-- Idefinite Duration -->
         <Config
-            Id="0x0000130C" Enable="true" Target="msmnile" Timeout="0"
+            Id="0x0000130C" Enable="true" Target="msmsteppe" Timeout="0"
             Resources="0x40800000, 0x360, 0x40804000, 0x7E0, 0x40800100, 0x240, 0x40804100, 0x4F3, 0x40800200, 0x3AD, 0x40804200, 0x806,
             0x42804000, 0x5, 0x42808000, 0x0, 0x41000000, 0x3, 0x41000200, 0x1"/>
 
@@ -123,7 +123,7 @@
         <!-- Min Prime CPUs 1 -->
         <!-- Idefinite Duration -->
         <Config
-            Id="0x0000130D" Enable="true" Target="msmnile" Timeout="0"
+            Id="0x0000130D" Enable="true" Target="msmsteppe" Timeout="0"
             Resources="0x40800000, 0x360, 0x40804000, 0x7E0, 0x40800100, 0x240, 0x40804100, 0x4F3, 0x40800200, 0x3AD, 0x40804200, 0x806,
             0x42804000, 0x5, 0x42808000, 0x0, 0x41000000, 0x3, 0x41000200, 0x1"/>
 
@@ -140,7 +140,7 @@
         <!-- Min Prime CPUs 1 -->
         <!-- Idefinite Duration -->
         <Config
-            Id="0x0000130E" Enable="true" Target="msmnile" Timeout="0"
+            Id="0x0000130E" Enable="true" Target="msmsteppe" Timeout="0"
             Resources="0x40800000, 0x360, 0x40804000, 0x7E0, 0x40800100, 0x240, 0x40804100, 0x4F3, 0x40800200, 0x3AD, 0x40804200, 0x806,
             0x42804000, 0x5, 0x42808000, 0x0, 0x41000000, 0x3, 0x41000200, 0x1"/>
 
@@ -157,7 +157,7 @@
         <!-- Min Prime CPUs 1 -->
         <!-- Idefinite Duration -->
         <Config
-            Id="0x0000130F" Enable="true" Target="msmnile" Timeout="0"
+            Id="0x0000130F" Enable="true" Target="msmsteppe" Timeout="0"
             Resources="0x40800000, 0x360, 0x40804000, 0x7E0, 0x40800100, 0x240, 0x40804100, 0x4F3, 0x40800200, 0x3AD, 0x40804200, 0x806,
             0x42804000, 0x5, 0x42808000, 0x0, 0x41000000, 0x3, 0x41000200, 0x1"/>
 
@@ -174,7 +174,7 @@
         <!-- Min Prime CPUs 1 -->
         <!-- Idefinite Duration -->
         <Config
-            Id="0x00001310" Enable="true" Target="msmnile" Timeout="0"
+            Id="0x00001310" Enable="true" Target="msmsteppe" Timeout="0"
             Resources="0x40800000, 0x360, 0x40804000, 0x7E0, 0x40800100, 0x240, 0x40804100, 0x4F3, 0x40800200, 0x3AD, 0x40804200, 0x806,
             0x42804000, 0x5, 0x42808000, 0x0, 0x41000000, 0x3, 0x41000200, 0x1"/>
 
@@ -191,7 +191,7 @@
         <!-- Min Prime CPUs 1 -->
         <!-- Idefinite Duration -->
         <Config
-            Id="0x00001311" Enable="true" Target="msmnile" Timeout="0"
+            Id="0x00001311" Enable="true" Target="msmsteppe" Timeout="0"
             Resources="0x40800000, 0x360, 0x40804000, 0x7E0, 0x40800100, 0x240, 0x40804100, 0x4F3, 0x40800200, 0x3AD, 0x40804200, 0x806,
             0x42804000, 0x5, 0x42808000, 0x0, 0x41000000, 0x3, 0x41000200, 0x1"/>
 
@@ -208,7 +208,7 @@
         <!-- Min Prime CPUs 1 -->
         <!-- Idefinite Duration -->
         <Config
-            Id="0x00001312" Enable="true" Target="msmnile" Timeout="0"
+            Id="0x00001312" Enable="true" Target="msmsteppe" Timeout="0"
             Resources="0x40800000, 0x360, 0x40804000, 0x7E0, 0x40800100, 0x240, 0x40804100, 0x4F3, 0x40800200, 0x3AD, 0x40804200, 0x806,
             0x42804000, 0x5, 0x42808000, 0x0, 0x41000000, 0x3, 0x41000200, 0x1"/>
 
@@ -227,7 +227,7 @@
         <!--LLC-DDR BWMON - Set hyst_length 0 -->
         <!--CPU0-LLC MEM LAT - Set ratio_ceil 100 -->
         <Config
-            Id="0x00001331" Enable="true" Timeout="0" Target="msmnile"
+            Id="0x00001331" Enable="true" Timeout="0" Target="msmsteppe"
             Resources="0x40C68100, 0xFFFFFFF6, 0x40C68110, 0xFFFFFFF6, 0x40C68120, 0xFFFFFFF6,
             0x40C68130, 0xFFFFFFF6,0x41444100, 0, 0x41440100, 0x63,
             0x4300C000, 0xA ,0x41820000, 0xA, 0x43004000, 0x64 ,0x41808000, 0x64, 0x4180C000, 0, 0x43008000, 0, 0x43420000, 0x64"/>
@@ -242,7 +242,7 @@
         <!--LLC-DDR BWMON - Set sample_ms 20 -->
         <!--CPU-LLC BWMON - Set sample_ms 20 -->
         <Config
-            Id="0x00001332" Enable="true" Timeout="0" Target="msmnile"
+            Id="0x00001332" Enable="true" Timeout="0" Target="msmsteppe"
             Resources="0x40C68100, 0xFFFFFFF6, 0x40C68110, 0xFFFFFFF6, 0x40C68120, 0xFFFFFFF6,
             0x40C68130, 0xFFFFFFF6,0x41444100, 0, 0x41440100, 0x5F, 0x4300C000, 0x14 ,0x41820000, 0x14"/>
 
@@ -254,7 +254,7 @@
         <!--LLC-DDR BWMON - Set sample_ms 10 -->
         <!--CPU-LLC BWMON - Set sample_ms 10 -->
         <Config
-            Id="0x00001333" Enable="true" Timeout="0" Target="msmnile"
+            Id="0x00001333" Enable="true" Timeout="0" Target="msmsteppe"
             Resources="0x40C68100, 0xFFFFFFF6, 0x40C68110, 0xFFFFFFF6, 0x40C68120, 0xFFFFFFF6,
             0x40C68130, 0xFFFFFFF6, 0x4300C000, 0xA ,0x41820000, 0xA"/>
 
@@ -266,7 +266,7 @@
         <!--LLC-DDR BWMON - Set sample_ms 10 -->
         <!--CPU-LLC BWMON - Set sample_ms 10 -->
         <Config
-            Id="0x00001334" Enable="true" Timeout="0" Target="msmnile"
+            Id="0x00001334" Enable="true" Timeout="0" Target="msmsteppe"
             Resources="0x40C68100, 0xFFFFFFF6, 0x40C68110, 0xFFFFFFF6, 0x40C68120, 0xFFFFFFF6,
             0x40C68130, 0xFFFFFFF6, 0x4300C000, 0xA ,0x41820000, 0xA"/>
     </Powerhint>
