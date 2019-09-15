@@ -53,6 +53,10 @@ vendor/lib/hw/com.qualcomm.qti.ant@1.0-impl.so
 # ACDB
 vendor/etc/acdbdata/adsp_avs_config.acdb
 
+# AptX - from bonito-user-9-PQ3B.190801.002-5674421-release-keys
+lib64/libaptXHD_encoder.so|90f47f10af28b3ead143200cb4370b847c513127
+lib64/libaptX_encoder.so|0cebad28afcf29f931bdc2d24fce2730dc882ecf
+
 # Audio - Hardware
 vendor/lib/hw/audio.primary.sm6150.so
 vendor/lib/libtinycompress_vendor.so
