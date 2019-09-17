@@ -57,12 +57,6 @@ vendor/etc/acdbdata/adsp_avs_config.acdb
 lib64/libaptXHD_encoder.so|90f47f10af28b3ead143200cb4370b847c513127
 lib64/libaptX_encoder.so|0cebad28afcf29f931bdc2d24fce2730dc882ecf
 
-# Audio - Hardware
-vendor/lib/hw/audio.primary.sm6150.so
-vendor/lib/libtinycompress_vendor.so
-vendor/lib64/hw/audio.primary.sm6150.so
-vendor/lib64/libtinycompress_vendor.so
-
 # CDSP
 vendor/bin/cdsprpcd
 vendor/lib/libcdsp_default_listener.so
