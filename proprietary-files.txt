@@ -371,13 +371,17 @@ vendor/lib/libhdr_tm.so|2c28de3b912cd7a1380f1ae878b649495871c027
 vendor/lib64/libhdr_tm.so|dbc0b979eb88f05bf6cec86608ad1dd00cacd757
 
 # Graphics (SDM) - from LA.UM.7.9.r1-07800-sm6150.0
+vendor/lib/libdpps.so|ac1bd64a0266e8c5a27abf45debbadf8de4fce9b
 vendor/lib/libqseed3.so|593edb182fe4d8e17e511a00cc015dce25d16fce
 vendor/lib/libsdm-color.so|5a0205fa3b253ba2895550fca8bf58e18386e69b
+vendor/lib/libsdm-colormgr-algo.so|8202c436c91d04b34658c0b06c5b32ce300670a1
 vendor/lib/libsdm-diag.so|ebf15ce3d148fffd564777c0db06636832fea1e7
 vendor/lib/libsdmextension.so|ed31f3f59eb47ad0665e0f7be2e0b6bcf0baeab6
 vendor/lib/libtinyxml2_1.so|269dab7a6e3b10f587adaa832cdafdc51eac831d
+vendor/lib64/libdpps.so|6b1c5f8a7497e0fa6919ed96bb37b177bf2d2049
 vendor/lib64/libqseed3.so|fb17af6d01fbbb8aae45f31ae80cb4492bf19d13
 vendor/lib64/libsdm-color.so|094bdbfb2137a2e642151395de60d88f4959a2a5
+vendor/lib64/libsdm-colormgr-algo.so|f3eb317df74d75bda3980439fa5492ef8fd6f86c
 vendor/lib64/libsdm-diag.so|11d898fc16b62e517afc8d85552dedbb771c0dbd
 vendor/lib64/libsdmextension.so|30c9696b8a92c21fb7638d28dc30a65b4512df07
 vendor/lib64/libtinyxml2_1.so|0019bedf2e12642fe4113093bc5a5590f6f5021b
