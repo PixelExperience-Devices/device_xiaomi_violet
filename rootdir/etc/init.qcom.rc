@@ -491,6 +491,7 @@ service qcom-c_core-sh  /vendor/bin/init.qcom.class_core.sh
 service qcom-c_main-sh /vendor/bin/init.class_main.sh
     class main
     user root
+    group root system
     oneshot
 
 service qcom-c_late-sh /vendor/bin/init.class_late.sh
