@@ -602,10 +602,25 @@ vendor/lib/libsdmcore.so|631a42d9b557dbf5f974251f590e099f0d2bae93
 vendor/lib/libsdmutils.so|3967f13048406442ae05b9a61fff7a949d4bc2ad
 vendor/lib/libsdm-colormgr-algo.so|48689a441aad372e676a06e39fd08d739a037126
 
-# DPM - from laurel_sprout-user 9 PKQ1.190416.001 V10.3.4.0.PFQMIXM release-keys
-vendor/bin/dpmQmiMgr|6be9fc790b38b24d8c3312651cb1c1fc6094c4d9
-vendor/lib64/libdpmqmihal.so|54f7da0356c0da2ed4a18759df87f5d90da9020f
-vendor/lib64/com.qualcomm.qti.dpm.api@1.0.so|ee7d14d8054ab05266484ac9df8887b388593f47
+# DPM - from raphael-user 10 QKQ1.190716.003 V10.4.6.0.QFKCNXM release-keys
+framework/tcmclient.jar|ce8454cc44b35ad1ea7d2c64a27979906bfcb406
+lib64/libdiag_system.so|7c57857c5c529490d194516d12ace122d120465e
+product/bin/dpmd|2ef62dcc2eda82755516059b7062b9440dc345be
+product/etc/dpm/dpm.conf|95e27da8c989e96c6faea6f0697bce11955b62a5
+product/etc/init/dpmd.rc|7f95195a89fddce06b93006a737701270e91f669
+product/etc/permissions/com.qti.dpmframework.xml|4613f8b8629d0b823e6aaab45d399ac30da06c09
+product/etc/permissions/dpmapi.xml|0991b3069308620cfcad53873e9f09af181b981d
+product/framework/com.qti.dpmframework.jar|e39a7e06af2d1e95a3724c19c36b8716277f53a1
+product/framework/dpmapi.jar|4696df9793ad676b305d53b5d7ce65ecf74771ad
+product/lib64/com.qualcomm.qti.dpm.api@1.0.so|d11451750a01f20bb11cec9925dd94239f3ccf6d
+product/lib64/libdpmctmgr.so|261f4db82c02f15a651389f8694c6f90e44d1be3
+product/lib64/libdpmfdmgr.so|65703eb4012d7889cc5d69d05ad0952ee128b9aa
+product/lib64/libdpmframework.so|553f7c6730e09fc1f4342eac1f577408fe3561f4
+product/lib64/libdpmtcm.so|6d61621f6ee0a7456f7bc68d66f3da121067f287
+vendor/bin/dpmQmiMgr|a4cc9d02de68fe738b5e9ba670ff9699f4b21c2e
+vendor/etc/init/dpmQmiMgr.rc|67569302d3a8828a9118c835e5b69c51b0c8ac68
+vendor/lib64/com.qualcomm.qti.dpm.api@1.0.so|c5b0ef024255d9bb6ac7119dad6a40063de72066
+vendor/lib64/libdpmqmihal.so|9bc43f15e4e2e23b44a3a96647f02138372bc34a
 
 # DRM - from laurel_sprout-user 9 PKQ1.190416.001 V10.3.4.0.PFQMIXM release-keys
 vendor/bin/qseecomd|1138981a4509b946f0c8e936c494a19831e328e3
@@ -1124,7 +1139,7 @@ vendor/radio/qcril_database/upgrade/3_version_update_wps_config.sql|0571aacaf9fc
 vendor/radio/qcril_database/upgrade/4_version_update_ecc_table.sql|c5147744f264d8a8c0432968d3890a32b883b5ef
 
 # Radio - IMS - from laurel_sprout-user 9 PKQ1.190416.001 V10.3.4.0.PFQMIXM release-keys
--priv-app/ims/ims.apk|3ded183624fd325fd86cae2830bfd3d8030b64d0
+-priv-app/ims/ims.apk|99052a0da79c597cf30031d3dcfa09ffebc56ace
 -app/imssettings/imssettings.apk|20d9b2c3f5939d4bfa7c03b5383d0cf03dbbc39e
 -app/uceShimService/uceShimService.apk|a2de7d90c4319c0a66e565869dca741cd9799d77
 etc/permissions/com.qualcomm.qti.imscmservice.xml|db25ef24f1937366d58a53b4f4b8923bc9e98d2d

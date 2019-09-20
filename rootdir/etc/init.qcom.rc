@@ -540,11 +540,6 @@ service vendor.cnd /system/vendor/bin/cnd
     user system
     group system wifi inet radio wakelock net_admin
 
-service dpmQmiMgr /system/vendor/bin/dpmQmiMgr
-    class main
-    user system
-    group system
-
 service vendor.qrtr-ns /vendor/bin/qrtr-ns -f
     class core
     user vendor_qrtr

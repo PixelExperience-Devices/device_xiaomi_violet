@@ -108,7 +108,8 @@ PRODUCT_PROPERTY_OVERRIDES += \
 # CNE and DPM
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.vendor.cne.feature=1 \
-    persist.vendor.dpm.feature=1
+    persist.vendor.dpm.feature=1 \
+    persist.vendor.dpm.nsrm.bkg.evt
 
 # Dalvik
 PRODUCT_PROPERTY_OVERRIDES += \
