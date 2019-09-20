@@ -4699,7 +4699,7 @@ case "$target" in
 			echo "1720 2086 2929 3879 5931 6881 7980 10437" > $npubw/bw_hwmon/mbps_zones
 		fi
 		echo 4 > $npubw/bw_hwmon/sample_ms
-		echo 80 > $npubw/bw_hwmon/io_percent
+		echo 160 > $npubw/bw_hwmon/io_percent
 		echo 20 > $npubw/bw_hwmon/hist_memory
 		echo 10 > $npubw/bw_hwmon/hyst_length
 		echo 30 > $npubw/bw_hwmon/down_thres
@@ -4716,7 +4716,7 @@ case "$target" in
 		echo 40 > $npullccbw/polling_interval
 		echo "4577 7110 9155 12298 14236 15258" > $npullccbw/bw_hwmon/mbps_zones
 		echo 4 > $npullccbw/bw_hwmon/sample_ms
-		echo 100 > $npullccbw/bw_hwmon/io_percent
+		echo 160 > $npullccbw/bw_hwmon/io_percent
 		echo 20 > $npullccbw/bw_hwmon/hist_memory
 		echo 10 > $npullccbw/bw_hwmon/hyst_length
 		echo 30 > $npullccbw/bw_hwmon/down_thres
