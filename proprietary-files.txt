@@ -999,21 +999,21 @@ vendor/lib64/vendor.qti.hardware.qdutils_disp@1.0.so|695c43548e9bf1719bbd460f80d
 # Power-off charging daemon
 -sbin/charger:sbin/chargeonlymode;rootfs|f048d2cc20783ba1a608b73d440b3053af6ec9fd
 
-# Postprocessing - from laurel_sprout-user 9 PKQ1.190416.001 V10.3.4.0.PFQMIXM release-keys
-lib64/vendor.display.color@1.0.so|e68a67af003653dd2900049b5c9f68ca6e9c7103
-vendor/bin/hw/vendor.display.color@1.0-service|bd70727d49e0f49d7827bc0a7cc19e13a16e176e
+# Postprocessing - from raphael-user 10 QKQ1.190716.003 V10.4.6.0.QFKCNXM release-keys
+product/lib64/vendor.display.color@1.0.so|e259932736f3f0a17537e604e338f1e7a6a40a8a
+vendor/bin/hw/vendor.display.color@1.0-service|5beaf0853d25440445f197a54547d32b47885f4b
 vendor/etc/init/vendor.display.color@1.0-service.rc|5ad673f879b3685a0e79b5633437e5499cb94f48
-vendor/lib/libdisp-aba.so|a1ae139c15b5722bd2ebf6f38159a9d35dac65d6
-vendor/lib/vendor.display.color@1.0.so|9238dbc9a75fb194a64fb73808e157750db7b32f
-vendor/lib/vendor.display.color@1.1.so|ba5c5bcb088cd1cb12c1556329ba6254013b66ab
-vendor/lib/vendor.display.color@1.2.so|1204121163dfb7311c92d5a4a423e313f76b1d9e
-vendor/lib/vendor.display.postproc@1.0.so|29faf157d045691d02ba3485321d454d701cb76c
-vendor/lib64/libdisp-aba.so|bef081a4a63fca47ffbb06c03c6a28eb29b38880
-vendor/lib64/vendor.display.color@1.0.so|6b110cca98fa02bda154c86a39ec5ddec715fd2c
-vendor/lib64/vendor.display.color@1.1.so|0399d400d92c59e0bab3dde68d782d6a145b0a56
-vendor/lib64/vendor.display.color@1.2.so|026ea059839cff12fbf3ae7841566a7b37d177f5
-vendor/lib64/vendor.display.color@1.3.so|17e31d9b5a83e34e677d9f68089da821066562aa
-vendor/lib64/vendor.display.postproc@1.0.so|97200fff953a417f1fc64f1d001952a8980bbe03
+vendor/lib/libdisp-aba.so|3185d357011d0283661139a2eab3bce3be6e0eea
+vendor/lib/vendor.display.color@1.0.so|34be175dfc831a04eb328a25b65364e9f7351f96
+vendor/lib/vendor.display.color@1.1.so|a25ad4229691e53081cdb0977f7cd690ecd836ac
+vendor/lib/vendor.display.color@1.2.so|3638d33f99e9a70b1ba04c4fbb7a49c88032ae10
+vendor/lib/vendor.display.postproc@1.0.so|0af2397d51f24e009a8d0681b150ec847a555ef8
+vendor/lib64/libdisp-aba.so|193c498f9474410ad01eacc376e13927408ec814
+vendor/lib64/vendor.display.color@1.0.so|c1350275f730b65dfc0d5132a480dcbf8f428acf
+vendor/lib64/vendor.display.color@1.1.so|50090e00cbfd26961d5081af2a50447ef2ad5564
+vendor/lib64/vendor.display.color@1.2.so|23708e3707dfc6366880ce5cab7b490cbb21d3f9
+vendor/lib64/vendor.display.color@1.3.so|5964fd25a29db747f5c619e3f67aa5ce9d8dbd9d
+vendor/lib64/vendor.display.postproc@1.0.so|ee8a17c19291672bc6d23415be1b356a5b53a60c
 
 # QMI - from laurel_sprout-user 9 PKQ1.190416.001 V10.3.4.0.PFQMIXM release-keys
 etc/permissions/qti_libpermissions.xml|593bcb72cce68ceb0a70f50bcae7d460114e7c62
