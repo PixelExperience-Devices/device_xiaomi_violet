@@ -951,36 +951,38 @@ vendor/lib64/libmlipay.so|32c3b1a6675ededdc0b08bfe12529f21fa871de8
 vendor/lib64/vendor.xiaomi.hardware.mlipay@1.0.so|e22bd6b2a80bc0685a32e3782c1fabb169c3892a
 vendor/lib64/vendor.xiaomi.hardware.mlipay@1.1.so|f6c2a590973c2c54fecc461cea3c67fc7e9a5b94
 
-# Perf - from laurel_sprout-user 9 PKQ1.190416.001 V10.3.4.0.PFQMIXM release-keys
-vendor/bin/msm_irqbalance|d189e3f624a6df88c6d369254990e433a6e4b234
-vendor/bin/hw/vendor.qti.hardware.perf@1.0-service|136f6c2bdd5507f1f1377f874c22411e87d28eb3
-vendor/etc/init/vendor.qti.hardware.perf@1.0-service.rc|b06477c0943e543d58a71550b544160d28b9b9d0
+# Perf - from raphael-user 10 QKQ1.190716.003 V10.4.6.0.QFKCNXM release-keys
+vendor/bin/msm_irqbalance|7f72d2f5dfb93465d3468e7e03863b6ebe60212f
+vendor/bin/hw/vendor.qti.hardware.perf@2.0-service|ec54271b7fe6e60c297bcb668a3466cd8a666bb4
+vendor/etc/init/vendor.qti.hardware.perf@2.0-service.rc|0101a3294311c2988060a00f7b25d8abf2f428f9
 vendor/etc/lm/AdaptLaunchFeature.xml|ad4516342729e79a8914762c2737f7faa08b1e9d
-vendor/etc/lm/AppClassifierFeature.xml|69baba75bf7880a3bac99a9aefa2f97a047e9eea
-vendor/etc/lm/GameOptimizationFeature.xml|df9720376ef888a48882d5e27d453204230b5d8d
+vendor/etc/lm/AppClassifierFeature.xml|102e4291357dd384c0f474d4192370e25123c5e7
+vendor/etc/lm/GameOptimizationFeature.xml|d88a79b80e93b04ce7c0371e6e46f2d8d39b6d50
 vendor/etc/perf/commonresourceconfigs.xml|7bf6b442875ec6244db05ffcc2ebb85a1c370863
 vendor/etc/perf/perfboostsconfig.xml|cffacd25f27eefa778aaa27933e4c6989e57dae2
 vendor/etc/perf/targetconfig.xml|53d6e2936c1cdc67edf86a2ccf04084adbff4a68
 vendor/etc/perf/targetresourceconfigs.xml|0a614d97672c516aedc253aec525468fbdb270ec
-vendor/lib/libperfgluelayer.so|6cee0719bb4189572ce77f05c01bf871358738fd
-vendor/lib/libqti-perfd-client.so|bb7c14654c20e29b7527a230a75b873dea57669c
-vendor/lib/libqti-perfd.so|83d8dfb3ba3033c4ac108facbcef0ed82de982d4
-vendor/lib/libqti-util.so|061db0a854ac86d9696aa19ce134eea41f4ddedd
-vendor/lib/libqti-utils.so|1f28d1330b61f67be98d39ff538ca644a6818820
-vendor/lib/vendor.qti.hardware.perf@1.0.so|20a457c82691988c146faa2944dc8f1b9dc583f1
-vendor/lib64/libadaptlaunch.so|7789fd57d1710527013051107f0fe24c38aee5ec
-vendor/lib64/libappclassifier.so|8ef13fdb8e1b549f53868f8f57937f244fb8afa2
-vendor/lib64/libgameoptfeature.so|84839fd1de0f483c47a9567ea6c3431d58bbdc20
-vendor/lib64/liblearningmodule.so|1fdaf203215e6d244785ffa199df675f1aa8c973
-vendor/lib64/liblmutils-ns.so|094e9b6118ffbb93234839b66681c309c4b77222
-vendor/lib64/libmeters-ns.so|2360de7509b07d03371f50bcbbb8939e8cfcfe8b
-vendor/lib64/libmeters.so|9747033a9187992ea9b0a98430e4abe95c29d5ca
-vendor/lib64/libperfgluelayer.so|183eeaacee83f4c37d8d8d89587f3345074acaa5
-vendor/lib64/libqti-perfd-client.so|318648692119ff496bd359e9d3b9a9a2ba8a6da4
-vendor/lib64/libqti-perfd.so|81e4b003bee1fa898e9741de6d4684cdd48fbb52
-vendor/lib64/libqti-util.so|e2afe83fefd79327eb763364011b14cb5fdf840a
-vendor/lib64/libqti-utils.so|c9ded4c62af77afd47835ed8d7fcf0d09b4a9871
-vendor/lib64/vendor.qti.hardware.perf@1.0.so|acdc5a108542616db6653f84df5e34e3ed5ae8d7
+vendor/etc/perf/thermalboost.conf|825896eab27b1e84ce4ba6ad8cd5de917a0793bd
+vendor/lib/libperfconfig.so|54196abc3888b749978eb64e962d7437479b7e61
+vendor/lib/libperfgluelayer.so|0090fb4efe03bab1773ee174b29fb5e8d6bd6a7c
+vendor/lib/libqti-perfd-client.so|7caa9783eb30a34eecac770505bbf86ee1e9bb62
+vendor/lib/libqti-perfd.so|47de38b9424e6e3ec6684aff66ea03d3d18e35e2
+vendor/lib/libqti-util.so|9532fb89585d38709160e3b7c28769eb209a997c
+vendor/lib/libqti-utils.so|d545c4b61690b0920b1fc7849b2ab393785857ed
+vendor/lib/vendor.qti.hardware.perf@2.0.so|dc085d75c5be72e5e5e36dec420d6353574973dc
+vendor/lib64/libadaptlaunch.so|be042f4de73fd874a1ad51eda69f59ea9855297d
+vendor/lib64/libappclassifier.so|e4e82055e4187e2b40c80722d15e2a00129f0618
+vendor/lib64/libgameoptfeature.so|cac4b0137ad011815cf15fc421f27053263e3560
+vendor/lib64/liblearningmodule.so|151988fa039256aba7a89af2abaa2d4dcd57cd23
+vendor/lib64/libmeters-ns.so|9210df7dde4e9246b35a3eff7d7f77a843219d37
+vendor/lib64/libmeters.so|97f5ed00be03ee1192e1342dce94de87e63436f8
+vendor/lib64/libperfconfig.so|fccb1c2e4abf6a969f8bb8398df0b42fbda97bb0
+vendor/lib64/libperfgluelayer.so|33659b1cfe28126df3580ae504b3eb4f17fde8ac
+vendor/lib64/libqti-perfd-client.so|b343197f7fb2b41048e4be4e8c75d13e276b8cfb
+vendor/lib64/libqti-perfd.so|244aa55408c81fe508338ee88a4dc4e3ce49c4fd
+vendor/lib64/libqti-util.so|04be2c51cddf63689db1dfa490a697379ecb825e
+vendor/lib64/libqti-utils.so|c6c96af1b3d15b32206882ae44a3d02d88e5202c
+vendor/lib64/vendor.qti.hardware.perf@2.0.so|5f9077ec1314e2d1bd03eda4d31f76c7f1ce7e1b
 
 # Peripheral manager - from laurel_sprout-user 9 PKQ1.190416.001 V10.3.4.0.PFQMIXM release-keys
 vendor/bin/pm-proxy|6c5f7259df83b849ba136187e366db6ce1598d21
