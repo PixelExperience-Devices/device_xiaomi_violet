@@ -1308,11 +1308,11 @@ vendor/bin/time_daemon|2652ed04ebe55219b5da38db021d43b38e9227d3
 vendor/lib/libtime_genoff.so|cd8a5cc7ccc598e3c3308980c45acb804baa5986
 vendor/lib64/libtime_genoff.so|746db5267fde236de820fa7d887386f65aea7a8a
 
-# TUI - from laurel_sprout-user 9 PKQ1.190416.001 V10.3.4.0.PFQMIXM release-keys
-vendor/bin/hw/vendor.qti.hardware.tui_comm@1.0-service-qti|cc84c732034a8e022ae5ba91183a0af3bfe2fb8c
+# TUI - from raphael-user 10 QKQ1.190716.003 V10.4.6.0.QFKCNXM release-keys
+vendor/bin/hw/vendor.qti.hardware.tui_comm@1.0-service-qti|fbcc60fd03801de8a6e00e8bfac45ada92d286aa
 vendor/etc/init/vendor.qti.hardware.tui_comm@1.0-service-qti.rc|2cfc563d7e1579374f001c94588fae7835a12ffc
-vendor/lib/vendor.qti.hardware.tui_comm@1.0.so|ec767dffa9d0cf80659a9a2493e5b9eb2856fa73
-vendor/lib64/vendor.qti.hardware.tui_comm@1.0.so|49dd37da3c0d53590b9ff3dae6ed7fe44ffa235d
+vendor/lib/vendor.qti.hardware.tui_comm@1.0.so|3f5ad85323db888067e8f98eafce5f43f558fcbc
+vendor/lib64/vendor.qti.hardware.tui_comm@1.0.so|c6772b82c02af368d9b52f4c84b98f1e5a9f7123
 
 # Wifi
 vendor/bin/cnss-daemon
