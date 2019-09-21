@@ -1049,19 +1049,19 @@ vendor/lib64/libqmi_encdec.so|4390f579458d9a6c4c39051df6e0eee4bdc45693
 vendor/lib64/libqmi.so|640515ce399a3a717fba43713d0c821d63d382eb
 vendor/lib64/libqmiservices.so|9042fb99270d053d0efd842255024889b1fbd05a
 
-# Qualcomm Trusted Execution Environment - from laurel_sprout-user 9 PKQ1.190416.001 V10.3.4.0.PFQMIXM release-keys
-vendor/bin/hw/vendor.qti.hardware.qteeconnector@1.0-service|b9b9c09605f3a3fe04ab7cbc3e6fbbd52b51e8c1
+# Qualcomm Trusted Execution Environment - from raphael-user 10 QKQ1.190716.003 V10.4.6.0.QFKCNXM release-keys
+vendor/bin/hw/vendor.qti.hardware.qteeconnector@1.0-service|7d8c260daf775535eb5fc4bdb36012dfdca8489b
 vendor/etc/init/vendor.qti.hardware.qteeconnector@1.0-service.rc|c966350ee67d3a7c73ca7184e3725264025d16f5
-vendor/lib/hw/vendor.qti.hardware.qteeconnector@1.0-impl.so|be9ae3e94cb130223cdf853bb7ceb6f8c5600e1f
-vendor/lib/libGPQTEEC_vendor.so|a2261c74d8f562a562fad4ff20867d91a27d8032
-vendor/lib/libGPTEE_vendor.so|6511150ab413aa8a244e7ead70b5d3b0b8ec2cd3
-vendor/lib/libQTEEConnector_vendor.so|5a4879be0887e696d6a034c376c0dae3b73aaaad
-vendor/lib/vendor.qti.hardware.qteeconnector@1.0.so|96ee4da5b4d6e301b0789a2c236c83c1e3dc24c7
-vendor/lib64/hw/vendor.qti.hardware.qteeconnector@1.0-impl.so|3a4d04349131403994208b80c205fd76744b1640
-vendor/lib64/libGPQTEEC_vendor.so|947649645dbebac2fa45a701f752de42f154db10
-vendor/lib64/libGPTEE_vendor.so|e3217e832f56f31ac2758ed67fc20b1036b483d7
-vendor/lib64/libQTEEConnector_vendor.so|67e631e152e5cbbd18dba04280cf77c8930b0dd1
-vendor/lib64/vendor.qti.hardware.qteeconnector@1.0.so|fb83d48de244d55b39e6cb43597c01a8b62b6938
+vendor/lib/hw/vendor.qti.hardware.qteeconnector@1.0-impl.so|6b053143b8f32c4d5e2d7a707aba4a961c8e54e1
+vendor/lib/libGPQTEEC_vendor.so|45e8e52e6cfdb441f00fc5c39fe8e27234f53729
+vendor/lib/libGPTEE_vendor.so|70037444800596eee6f7fafa05c7fc1fd414f354
+vendor/lib/libQTEEConnector_vendor.so|c973113d0e90c7fb7051dbd0cd13ee7b0e8e3d8e
+vendor/lib/vendor.qti.hardware.qteeconnector@1.0.so|f1eae57862e3692b16c96123a8cdb2fde26d57ff
+vendor/lib64/hw/vendor.qti.hardware.qteeconnector@1.0-impl.so|3f69ed5d41896e6711747a12356b528ba936cc31
+vendor/lib64/libGPQTEEC_vendor.so|1402612e96753e315ccc956b59d03fcaa2dfd68b
+vendor/lib64/libGPTEE_vendor.so|b5f4f556e90dc2995968e0faa413c6ed4c281406
+vendor/lib64/libQTEEConnector_vendor.so|3624dd15f75d1549b45a4dba2ce209c8e30ffa7c
+vendor/lib64/vendor.qti.hardware.qteeconnector@1.0.so|ddef93ffbb1e68ea5ad1adadec8a0e62165ac154
 
 # Radio - from raphael-user 10 QKQ1.190716.003 V10.4.6.0.QFKCNXM release-keys
 -product/app/datastatusnotification/datastatusnotification.apk|ea611e4f1efc3077adf3054051ead13422927426
