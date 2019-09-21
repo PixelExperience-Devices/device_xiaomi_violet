@@ -984,11 +984,11 @@ vendor/lib64/libqti-util.so|04be2c51cddf63689db1dfa490a697379ecb825e
 vendor/lib64/libqti-utils.so|c6c96af1b3d15b32206882ae44a3d02d88e5202c
 vendor/lib64/vendor.qti.hardware.perf@2.0.so|5f9077ec1314e2d1bd03eda4d31f76c7f1ce7e1b
 
-# Peripheral manager - from laurel_sprout-user 9 PKQ1.190416.001 V10.3.4.0.PFQMIXM release-keys
-vendor/bin/pm-proxy|6c5f7259df83b849ba136187e366db6ce1598d21
-vendor/bin/pm-service|8ec0b27d756339f75c989d4642a9edc27c1c978c
-vendor/lib/libperipheral_client.so|00f3630df0df221bb05cdaee50a28859874e4808
-vendor/lib64/libperipheral_client.so|1ba2dc8ec5196b305a84ee4580365cd06f7bc7a7
+# Peripheral manager - from raphael-user 10 QKQ1.190716.003 V10.4.6.0.QFKCNXM release-keys
+vendor/bin/pm-proxy|f2cfc0d3c064cad5a29f90dee3bdf679a86b5710
+vendor/bin/pm-service|967fc57186eceb33dadaf1513355bf659082b984
+vendor/lib/libperipheral_client.so|6d81e52a26ac757b44b6fa1fe366495a1f0d7f97
+vendor/lib64/libperipheral_client.so|a7f180d07b152a6638e9358f5cd9e06d98aa517c
 
 # Qualcomm Display Utils - from laurel_sprout-user 9 PKQ1.190416.001 V10.3.4.0.PFQMIXM release-keys
 vendor/bin/hw/vendor.qti.hardware.qdutils_disp@1.0-service-qti|d73d67e0b6d676d3f47217b046db78d764cb7f3a
