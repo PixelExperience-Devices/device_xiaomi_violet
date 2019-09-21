@@ -755,49 +755,41 @@ vendor/firmware/a612_zap.mdt
 vendor/firmware/a615_zap.b00
 vendor/firmware/a615_zap.elf
 
-# Graphics - from laurel_sprout-user 9 PKQ1.190416.001 V10.3.4.0.PFQMIXM release-keys
-vendor/lib64/egl/eglSubDriverAndroid.so|000f6f7a09ba21a3ecf0fa9add5f842b0c812680
-vendor/lib64/egl/libEGL_adreno.so|bfa89ca4fd88fb0e5a5a2bb432d7d2cb61b840fc
-vendor/lib64/egl/libGLESv1_CM_adreno.so|5c15c3dc8c36cc4cd97ad7e620aebbed11209a7a
-vendor/lib64/egl/libGLESv2_adreno.so|cec3e957f63f2fb1b3cbcce5f39d68de2addb7c9
-vendor/lib64/egl/libq3dtools_adreno.so|bc625a05fc5a577e4421afb260a462ff18617ef5
-vendor/lib64/egl/libq3dtools_esx.so|406fa93ddce702a8c2225c7d8aecbc73c3d63191
-vendor/lib64/egl/libQTapGLES.so|5d57ce0c27aefcf303a0fd0f3801f7ebf9b1d3c2
-vendor/lib64/libadreno_utils.so|790a82e17e19ecb804e5bb1095a3f986ecd73f45
-vendor/lib64/libC2D2.so|295e7675f85b74e379605bc717f8b0a7133a38c9
-vendor/lib64/libc2d30_bltlib.so|6e50dbe492fd067eb7fc4b6b1c39f66fc2bbb73b
-vendor/lib64/libCB.so|a86c9750637cc0c5a3985fccc4277bc820d76f36
-vendor/lib64/libbccQTI.so|3077833cf44830519e656d20b5bad3edb354a869
-vendor/lib64/libgsl.so|7be635cab8a463b019ea8460334a13fb73659681
-vendor/lib64/libllvm-glnext.so|30faaaf47671378c2a7584b11b18cc88965ff12b
-vendor/lib64/libllvm-qcom.so|83e6dab850efec11878a52ebdab9ff3606d5104c
-vendor/lib64/libOpenCL.so|83f3557edf308fceef10c1e834522d29b01a429d
-vendor/lib64/librs_adreno_sha1.so|11af082fb8a6b6d8fb42f3bc08bf677815a2af28
-vendor/lib64/librs_adreno.so|15438575a4c19c1304d83f25b3aa4af9b706b403
-vendor/lib64/libRSDriver_adreno.so|c08adc97dd3b7546e8d8c1d5a9e3bef618f36fb3
-vendor/lib/egl/eglSubDriverAndroid.so|14e74b7a68e75056e973bc689096a888bc29ac49
-vendor/lib/egl/libEGL_adreno.so|0e1b8b6111c4b8ac4c849b523dde1a896fef41f7
-vendor/lib/egl/libGLESv1_CM_adreno.so|e2b599dac313bcc1137d20add6f1bf4d467e698c
-vendor/lib/egl/libGLESv2_adreno.so|c804e9bb57f20b325413e0931a5b94918fc01c1b
-vendor/lib/egl/libq3dtools_adreno.so|5efca72e46bf464b6ba94ddc6102033ae1cfa0de
-vendor/lib/egl/libq3dtools_esx.so|5c1e11e72cc8aa04aa894e64925f3f81768c0bcc
-vendor/lib/egl/libQTapGLES.so|0573cebef724bdb2e1ee42500762d34f3771105d
-vendor/lib/libadreno_utils.so|bcb8c2d8c05655f3fade987c36954d475242130c
-vendor/lib/libC2D2.so|c175b89ee5d3f1791eefac9883d4f3e93287956a
-vendor/lib/libc2d30_bltlib.so|3ad87fcc014d91be03fc34ca199cda746cde0f63
-vendor/lib/libCB.so|ab2377bfa7bfca697424771d5e98df2386bb93e5
-vendor/lib/libbccQTI.so|66ad5da1b4d5233f0689a97759e8f5e50408b2fd
-vendor/lib/libgsl.so|e9ad4f65a8de5961977d7e88d76b3a77005ee7fa
-vendor/lib/libllvm-glnext.so|f7c48886e4148760374ce3e1dbb0aea9374bb42a
-vendor/lib/libllvm-qcom.so|61ddd559a51a3a130a21b85e80d176f5a330ec99
-vendor/lib/libOpenCL.so|888f1db52c03ecaab5032f983f265b7e1b8187ed
-vendor/lib/librs_adreno_sha1.so|379b96535e86d686de56cf94f6b6c84992579748
-vendor/lib/librs_adreno.so|998e9a6a2e23f95ac1a9a85d3d0424d1155fe75c
-vendor/lib/libRSDriver_adreno.so|d5f3ceee45b1b52960478928d051035ffc4bff9a
+# Graphics - from from raphael-user 10 QKQ1.190716.003 V10.4.6.0.QFKCNXM release-keys
+vendor/lib64/egl/eglSubDriverAndroid.so|459ab9a29cb77b20dc413ebf5993a33fbf15b5d5
+vendor/lib64/egl/libEGL_adreno.so|3475d4433d5c14dfa0c21b13f884259cad859796
+vendor/lib64/egl/libGLESv1_CM_adreno.so|6d5197fb726d36f3d41798d220fa87081e514a73
+vendor/lib64/egl/libGLESv2_adreno.so|877fdec4d3aa16d6ad4b377cb37b6f2fe2c88724
+vendor/lib64/egl/libq3dtools_adreno.so|934c11747755959fdc39d002c7203fafabc2ea23
+vendor/lib64/egl/libq3dtools_esx.so|1efd57e2eec84c35ad816aa8c3ba82efe7a77da0
+vendor/lib64/egl/libQTapGLES.so|a5a9dcaae2343cfb44e274108083e5c18903cf6b
+vendor/lib64/libadreno_utils.so|2d0098e1d494aea4a4ed8afd9fe51f7c1ca33089
+vendor/lib64/libC2D2.so|ee2e28bde5ac8f399cfba50fca45f72f30bba79e
+vendor/lib64/libc2d30_bltlib.so|5381bbb4f4b53f634411a5b28f87dda665a9f310
+vendor/lib64/libCB.so|dc42c9db7b498ac310e1e7b3b29db1117bb215c5
+vendor/lib64/libgsl.so|9255f533916a7fb926a8f202d17e820d9911713a
+vendor/lib64/libllvm-glnext.so|3622e533964d05c3bbbfdfb0f0579c83763f5b23
+vendor/lib64/libllvm-qcom.so|f1f1bac060612f013ecbf69560b476ac0ce72c4a
+vendor/lib64/libOpenCL.so|fcbd6b45020514f74d21774152862f229700f307
+vendor/lib/egl/eglSubDriverAndroid.so|24b42a4bc0ef0a0d64899374ff5f310877d47ffa
+vendor/lib/egl/libEGL_adreno.so|c5950ff29d433636c8366da506a75d89dfd9b067
+vendor/lib/egl/libGLESv1_CM_adreno.so|959e1bcfe43f8926cd89e3e4978b499e314a9182
+vendor/lib/egl/libGLESv2_adreno.so|4510a73ffcac6a74cfa4aff69166ccf1e3338b56
+vendor/lib/egl/libq3dtools_adreno.so|61f3c4c0acefa9787b40c8fdc9924e7d9a9fa482
+vendor/lib/egl/libq3dtools_esx.so|6e3cf6cf497b955a15b1b265fc6eef8da5ce9cd3
+vendor/lib/egl/libQTapGLES.so|82f37cab0b260d64d36f73171cc4f7d734ed2644
+vendor/lib/libadreno_utils.so|c257c8e0034fbc22ade21cefaf1655d4916979ad
+vendor/lib/libC2D2.so|28fbf54a564aa4a9bbe299829e062aa53c321627
+vendor/lib/libc2d30_bltlib.so|c96e07da79fd7c78014abbc14c17dfb86f61b42a
+vendor/lib/libCB.so|215873d92ff536bfd896d151c225d5d7eb5d8165
+vendor/lib/libgsl.so|8592daebad9b17fbee91e9074614aed0bd7de7e4
+vendor/lib/libllvm-glnext.so|6318473771ae7edc4bf014153f6f432fde809d5d
+vendor/lib/libllvm-qcom.so|deacc2332a3d27693dadc189610c1a6216fe3d1f
+vendor/lib/libOpenCL.so|308538ab08b6046cf0ecb9d41e4240aa48d73dd6
 
-# Graphics (HDR) - from laurel_sprout-user 9 PKQ1.190416.001 V10.3.4.0.PFQMIXM release-keys
-vendor/lib/libhdr_tm.so|ee93805b3894d0c2428d3965fa5795017df9808d
-vendor/lib64/libhdr_tm.so|dbc0b979eb88f05bf6cec86608ad1dd00cacd757
+# Graphics (HDR) - from raphael-user 10 QKQ1.190716.003 V10.4.6.0.QFKCNXM release-keys
+vendor/lib/libhdr_tm.so|92fd38cb3d323b4d697b2b3d7d921bc1f37fe839
+vendor/lib64/libhdr_tm.so|653d7c4ef473b70944bad4b174df5cad5cf1e7a0
 
 # Graphics (SDM) - from laurel_sprout-user 9 PKQ1.190416.001 V10.3.4.0.PFQMIXM release-keys
 vendor/lib/libqseed3.so|3f5349b43a9ee95b5be090f150120ba895d6fba3
@@ -813,9 +805,9 @@ vendor/lib64/libsdm-diag.so|55d076d00f3d2f770f092cdb30cf01013667fffa
 vendor/lib64/libsdmextension.so|53b6371f68b23808f64a5e857df50f15dafe39d4
 vendor/lib64/libtinyxml2_1.so|0019bedf2e12642fe4113093bc5a5590f6f5021b
 
-# Graphics (Vulkan) - from laurel_sprout-user 9 PKQ1.190416.001 V10.3.4.0.PFQMIXM release-keys
-vendor/lib/hw/vulkan.sm6150.so|7b4d68d27bc2e79ce27f5bfb8c280f09eddd63ee
-vendor/lib64/hw/vulkan.sm6150.so|d7c5c36b78f72b096013ac35b5428b827ad34bed
+# Graphics (Vulkan) - from raphael-user 10 QKQ1.190716.003 V10.4.6.0.QFKCNXM release-keys
+vendor/lib/hw/vulkan.sm6150.so|fc62d26b4fa0234308a6fc6745e7903bae834b59
+vendor/lib64/hw/vulkan.sm6150.so|30b53d5bca63292898528ff5c796546d4fc3f9fa
 
 # IO Prefetcher - from raphael-user 10 QKQ1.190716.003 V10.4.6.0.QFKCNXM release-keys
 vendor/bin/hw/vendor.qti.hardware.iop@2.0-service|17167ed031fc91f60d784f619555241543703c45
