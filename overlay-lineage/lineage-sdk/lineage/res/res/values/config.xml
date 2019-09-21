@@ -70,11 +70,12 @@
          app, they can be remapped here. The format is
          "oldname:newname", one per entry. -->
     <string-array name="config_displayModeMappings" translatable="false">
-        <item>oled_default:standard</item>
-        <item>01-warm:reading</item>
-        <item>02-cool:dynamic</item>
-        <item>p3_ce:dci_p3</item>
-        <item>srgb_d65:srgb</item>
+        <item>none:standard</item>
+        <item>smart_MC:dci_p3</item>
+        <item>GM_1:Boosted</item>
+        <item>GM_2:Saturated</item>
+        <item>GM_3:Automatic</item>
+        <item>hal_srgb:reading</item>
     </string-array>
 
     <!-- Should we filter any display modes which are unampped? -->
