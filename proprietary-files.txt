@@ -649,15 +649,13 @@ vendor/lib64/libhdcpsrm.so|1457782a7f1780306349e7d2cba659e59d67fe34
 vendor/lib64/liboemcrypto.so|84cf7252ae349548d0e33296aa62e983be3178f0
 vendor/lib64/libwvhidl.so|eb14c71529d0ed01551c51f19c28fa808f1bcf14
 
-# ESE-Powermanager - from laurel_sprout-user 9 PKQ1.190416.001 V10.3.4.0.PFQMIXM release-keys
-lib/vendor.qti.esepowermanager@1.0.so|c365902cf602815ccb2d2ea489f0b25f7b33afa0
-lib64/vendor.qti.esepowermanager@1.0.so|3b95a7a614ad0273c22287618697e8a42d4b3d59
-vendor/bin/hw/vendor.qti.esepowermanager@1.0-service|4d86f22bfa2848d987a8b1c1e449b3f3adef3ac0
+# ESE-Powermanager - from raphael-user 10 QKQ1.190716.003 V10.4.6.0.QFKCNXM release-keys
+vendor/bin/hw/vendor.qti.esepowermanager@1.0-service|47f8ab5330525b89d021161b52723a7af536df32
 vendor/etc/init/vendor.qti.esepowermanager@1.0-service.rc|58a3866ad5a7613d9392c9adb671eaa7825578a2
-vendor/lib/hw/vendor.qti.esepowermanager@1.0-impl.so|9d1e983de21fe9ef40b5284c3d4ad8937e839879
-vendor/lib/vendor.qti.esepowermanager@1.0.so|4bba5a40507a8da2d64aa311edb8154f77c92b49
-vendor/lib64/hw/vendor.qti.esepowermanager@1.0-impl.so|481d25dc71de322e0bf87b5239bd1613e1b48dbf
-vendor/lib64/vendor.qti.esepowermanager@1.0.so|b885b11b1e33a8cd7f35471c2243168bb4bb1d3f
+vendor/lib/hw/vendor.qti.esepowermanager@1.0-impl.so|812ed808b964489e0e2a157ef04de354a5b49e4e
+vendor/lib/vendor.qti.esepowermanager@1.0.so|c58cd1e7d2c8588bc46e06c388904b049423a73c
+vendor/lib64/hw/vendor.qti.esepowermanager@1.0-impl.so|d7756e0b3eb97db47675ba937214b735b9cfde21
+vendor/lib64/vendor.qti.esepowermanager@1.0.so|4e6185c300acabe4dbe397a77e09ced413a58afb
 
 # Fingerprint sensor
 -vendor/app/FingerprintExtensionService/FingerprintExtensionService.apk
