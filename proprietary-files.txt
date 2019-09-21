@@ -934,10 +934,14 @@ vendor/lib64/libvpptestutils.so|8a54a778d47d87a2b96dcbeea4e5d992859ab346
 vendor/lib64/vendor.qti.hardware.vpp@1.1.so|e6fc7cae3215ca39745b5e85d937a7fafca9ed5f
 vendor/lib64/vendor.qti.hardware.vpp@1.2.so|b663f9ef8df821bf6d2c3bd0d0c6fafd7baf6a37
 
-# Neural-networks - from laurus-user 9 PKQ1.190416.001 V10.2.10.0.PFMCNXM release-keys
-vendor/bin/hw/android.hardware.neuralnetworks@1.1-service-qti|86cfd2cbac8405805dddcb9c27c36d715d8bd12f
-vendor/etc/init/android.hardware.neuralnetworks@1.1-service-qti.rc|f36a191ba1fdd82d8c05cf9abf3940f9af32e238
-vendor/lib64/libhexagon_nn_stub.so|2ff38e841830e0aa7ba1e074a6ce2f2d961d3352
+# Neural-networks - from raphael-user 10 QKQ1.190716.003 V10.4.6.0.QFKCNXM release-keys
+vendor/bin/hw/android.hardware.neuralnetworks@1.2-service-qti|fbf1fd549aae06e463ea90594fb8a74b3ed40012
+vendor/etc/init/android.hardware.neuralnetworks@1.2-service-qti.rc|db9900f3a9d88f2f207c1a86ec6184f32551ab39
+vendor/lib64/libhexagon_nn_stub.so|c19d3fa83d41c27bf2ed2bc7b42ef3b37d4679d2
+vendor/lib64/unnhal-acc-adreno.so|45aa3ecc886da0471125ee1d726fe3e39e33f034
+vendor/lib64/unnhal-acc-common.so|723a061797f61fc7d71ca569f4a801b3b36028ef
+vendor/lib64/unnhal-acc-hta.so|cf857e619f886ff6869ff9c02e55d5d2bfd79a61
+vendor/lib64/unnhal-acc-hvx.so|98ca2f7e800f92cc28d5f56999c71e2304a6c1e9
 
 # Mlipay - from laurus-user 9 PKQ1.190416.001 V10.2.10.0.PFMCNXM release-keys
 vendor/bin/mlipayd@1.1|86d7adfcafa00d5c4b82f37481ef5b644049d29e
