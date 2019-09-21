@@ -864,18 +864,18 @@ vendor/lib/vendor.qti.latency@2.0.so|8fd4728c89a0700c85e2eb4ed15ee3608ddb148a
 vendor/lib64/vendor.qti.hardware.data.latency@1.0.so|10d24f1e86e4ac55fd2acb0fbb68f9585cfef1f3
 vendor/lib64/vendor.qti.latency@2.0.so|39c9f71ff80942bc2a6c6984fada97dfed6286a4
 
-# Listen - from laurel_sprout-user 9 PKQ1.190416.001 V10.3.4.0.PFQMIXM release-keys
-vendor/lib/libadpcmdec.so|81ff51d498dcbb93e02970e69dce637c1064b6f6
-vendor/lib/libgcs-calwrapper.so|63be0338a31d967017a6d4a7cebff9076ebe9e35
-vendor/lib/libgcs-ipc.so|cc836634b1c30d2a6dd1ad75c9211eccaeee0386
-vendor/lib/libgcs-osal.so|8481d4fbbe8e10d3d9c525c8086b3ad2515f08eb
-vendor/lib/libgcs.so|102c2ce9339e1a46bfff037061b51ac438bb004b
-vendor/lib/liblistensoundmodel2.so|e030332696f9b559b3045c0df5574721c5f9c4a9
-vendor/lib64/libgcs-calwrapper.so|c62947d897e58355a7b832c5bc3168ad5c1ff98f
-vendor/lib64/libgcs-ipc.so|cf245fac7195bfffb99a6f0a70485f54f34f9b94
-vendor/lib64/libgcs-osal.so|d3af7c45f6c97d88c519af5227096e5bc0c1ded8
-vendor/lib64/libgcs.so|001bd286b61f0ba0022615bddb5b400982e251dc
-vendor/lib64/liblistensoundmodel2.so|80135f45fdba5f954baff999b6b7a95e7c66d2bd
+# Listen - from raphael-user 10 QKQ1.190716.003 V10.4.6.0.QFKCNXM release-keys
+vendor/lib/libadpcmdec.so|0814f09dc41317a5b63064acccdf94f22ce55000
+vendor/lib/libgcs-calwrapper.so|95970a8958b2eff7bb03ee4096b4977355d5f9eb
+vendor/lib/libgcs-ipc.so|a3b7ab9786321840da5e6efb8cd9cf4415516e94
+vendor/lib/libgcs-osal.so|534918053aab6c6b04ea99fc40219fc276ee81f2
+vendor/lib/libgcs.so|88fa4aa8a538dc8486a70596ddee11c65ac87216
+vendor/lib/liblistensoundmodel2.so|eeef1868fee9696d1c3dad8e2abdff064f923a60
+vendor/lib64/libgcs-calwrapper.so|3e584a621e569e99233be4c9bf91c270dd5adf9f
+vendor/lib64/libgcs-ipc.so|06e412d688f331d450b5033645c601222fa3e014
+vendor/lib64/libgcs-osal.so|c1bfe5e694541e9f6ec700e04df33550b5948d05
+vendor/lib64/libgcs.so|1cb6361b834507a56f7986c5deb385660c8b20da
+vendor/lib64/liblistensoundmodel2.so|a33a47924184423c700a8b070008de17525220df
 
 # Media - from laurel_sprout-user 9 PKQ1.190416.001 V10.3.4.0.PFQMIXM release-keys
 vendor/lib/libAlacSwDec.so|416f62998097443a53b962452ef4ef4d40cd7074
