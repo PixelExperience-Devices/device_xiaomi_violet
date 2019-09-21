@@ -852,17 +852,17 @@ vendor/lib64/libkeymasterprovision.so|13d48ca3afa664bb739e50481e7e41ca376043e7
 vendor/lib64/libkeymasterutils.so|bf1830d5e7b64fac168f6bae45bd0512db872679
 vendor/lib64/libqtikeymaster4.so|830a186c23b0a2d12c59e08ec6cf96b724ac2bed
 
-# Latency - from laurel_sprout-user 9 PKQ1.190416.001 V10.3.4.0.PFQMIXM release-keys
-framework/vendor.qti.hardware.data.latency-V1.0-java.jar|85ef62289e8284ff8189cfdac82409970bd0acd7
-framework/vendor.qti.latency-V2.0-java.jar|68b700a6f07272aa2c2387f36a7f40b0233d5b4d
-lib/vendor.qti.hardware.data.latency@1.0.so|9dc536c92adf9ce7d40e5a104966a8db077707b1
-lib/vendor.qti.latency@2.0.so|d8af0b2d954cb560e2a4fe9179e566e6c9b448a6
-lib64/vendor.qti.hardware.data.latency@1.0.so|11e53263737fa4eb20910bbcd2679f85397b4a45
-lib64/vendor.qti.latency@2.0.so|b53f30ab17c1fcdb94d7629d41290d457a488ec6
-vendor/lib/vendor.qti.hardware.data.latency@1.0.so|68aaf391330eccd01f161529f251dcb47fe69d15
-vendor/lib/vendor.qti.latency@2.0.so|2e6e22a34f9d1d56e6f3f8f4e342f0462065362b
-vendor/lib64/vendor.qti.hardware.data.latency@1.0.so|1a9af9130c8b7435e604904634a3fc117024de3b
-vendor/lib64/vendor.qti.latency@2.0.so|e933dd98b057c425745c595be00f6ca2ffd5559c
+# Latency - from raphael-user 10 QKQ1.190716.003 V10.4.6.0.QFKCNXM release-keys
+product/framework/vendor.qti.hardware.data.latency-V1.0-java.jar|c6c5d5bbf50b068df0184aef8551b95daa5f4791
+product/framework/vendor.qti.latency-V2.0-java.jar|d345e24271b83faecdb1abe1361db812fae0646f
+product/lib/vendor.qti.hardware.data.latency@1.0.so|98e42d70368ae1f3345a9c6e1689ec743e03832e
+product/lib/vendor.qti.latency@2.0.so|466f2dd3e69b81a6f058bafa1ef8c340cd9c2b98
+product/lib64/vendor.qti.hardware.data.latency@1.0.so|9d6ca29a9a9ae10b923a8b76758b54cf3e237642
+product/lib64/vendor.qti.latency@2.0.so|c23e71ee4a755944393a2e4e2787fe3d02cefc8f
+vendor/lib/vendor.qti.hardware.data.latency@1.0.so|70b5f26dfb7e6b29a091473812292e1715d06467
+vendor/lib/vendor.qti.latency@2.0.so|8fd4728c89a0700c85e2eb4ed15ee3608ddb148a
+vendor/lib64/vendor.qti.hardware.data.latency@1.0.so|10d24f1e86e4ac55fd2acb0fbb68f9585cfef1f3
+vendor/lib64/vendor.qti.latency@2.0.so|39c9f71ff80942bc2a6c6984fada97dfed6286a4
 
 # Listen - from laurel_sprout-user 9 PKQ1.190416.001 V10.3.4.0.PFQMIXM release-keys
 vendor/lib/libadpcmdec.so|81ff51d498dcbb93e02970e69dce637c1064b6f6
