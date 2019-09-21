@@ -990,11 +990,11 @@ vendor/bin/pm-service|967fc57186eceb33dadaf1513355bf659082b984
 vendor/lib/libperipheral_client.so|6d81e52a26ac757b44b6fa1fe366495a1f0d7f97
 vendor/lib64/libperipheral_client.so|a7f180d07b152a6638e9358f5cd9e06d98aa517c
 
-# Qualcomm Display Utils - from laurel_sprout-user 9 PKQ1.190416.001 V10.3.4.0.PFQMIXM release-keys
-vendor/bin/hw/vendor.qti.hardware.qdutils_disp@1.0-service-qti|d73d67e0b6d676d3f47217b046db78d764cb7f3a
+# Qualcomm Display Utils - from raphael-user 10 QKQ1.190716.003 V10.4.6.0.QFKCNXM release-keys
+vendor/bin/hw/vendor.qti.hardware.qdutils_disp@1.0-service-qti|df5b4955b98984da35ba62f13873a4ce58964d96
 vendor/etc/init/vendor.qti.hardware.qdutils_disp@1.0-service-qti.rc|69d9cbc54f8ac0a0fb010f92bfa7de5981d643cf
-vendor/lib/vendor.qti.hardware.qdutils_disp@1.0.so|f22a0e2013aa04c3618ea5d06eb495c92b5e399d
-vendor/lib64/vendor.qti.hardware.qdutils_disp@1.0.so|2d5d02a40bbb8141664aa46febdbb93626ad9de2
+vendor/lib/vendor.qti.hardware.qdutils_disp@1.0.so|5ab6c87792eb610e35ae575ced7b67f33d5bba7e
+vendor/lib64/vendor.qti.hardware.qdutils_disp@1.0.so|695c43548e9bf1719bbd460f80db1cacc5abe405
 
 # Power-off charging daemon
 -sbin/charger:sbin/chargeonlymode;rootfs|f048d2cc20783ba1a608b73d440b3053af6ec9fd
