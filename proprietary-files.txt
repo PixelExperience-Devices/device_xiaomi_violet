@@ -1302,11 +1302,11 @@ vendor/lib/libthermalfeature.so
 vendor/lib64/libthermalfeature.so
 -vendor/lib64/libthermalclient.so
 
-# Time services - from laurel_sprout-user 9 PKQ1.190416.001 V10.3.4.0.PFQMIXM release-keys
--vendor/app/TimeService/TimeService.apk|3c9e8763b1b81e71b378eb735eee8c6f657a26d4
-vendor/bin/time_daemon|b5e5f82f158493962fe6607413a582204209d56e
-vendor/lib/libtime_genoff.so|db81e5e57aa6904d814ca4754bee392d81c36765
-vendor/lib64/libtime_genoff.so|bd1ef99d07a181236b5da5de25a9b36a38bbdd9a
+# Time services - from raphael-user 10 QKQ1.190716.003 V10.4.6.0.QFKCNXM release-keys
+-vendor/app/TimeService/TimeService.apk|27f9b81621c446baa8c37581d9bfbca2fd67b496
+vendor/bin/time_daemon|2652ed04ebe55219b5da38db021d43b38e9227d3
+vendor/lib/libtime_genoff.so|cd8a5cc7ccc598e3c3308980c45acb804baa5986
+vendor/lib64/libtime_genoff.so|746db5267fde236de820fa7d887386f65aea7a8a
 
 # TUI - from laurel_sprout-user 9 PKQ1.190416.001 V10.3.4.0.PFQMIXM release-keys
 vendor/bin/hw/vendor.qti.hardware.tui_comm@1.0-service-qti|cc84c732034a8e022ae5ba91183a0af3bfe2fb8c
