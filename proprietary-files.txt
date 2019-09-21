@@ -634,22 +634,20 @@ vendor/lib64/libssd.so|53ec97da596eb15797506960f4e4336f848a971a
 vendor/lib64/libStDrvInt.so|2d9a1e682cb2c0325eb6656a692e695cd7209e75
 vendor/lib64/libtzdrmgenprov.so|12055efc646c8c080a1279113f8a2767b3b05931
 
-# DRM - Widevine - from laurel_sprout-user 9 PKQ1.190416.001 V10.3.4.0.PFQMIXM release-keys
-vendor/bin/hw/android.hardware.drm@1.1-service.widevine|bb8773116e59075a53b0d1979add4386eb9b3254
-vendor/etc/init/android.hardware.drm@1.1-service.widevine.rc|458dd241f5f8536eccb57f012b3eba0061736e8e
-vendor/lib/mediadrm/libwvdrmengine.so|99b09915c8327c7afcafa6d4d9c8c8618be8ae9d
-vendor/lib/libbase64.so|85eb6fde34c9d40e2efd836a236573b36d6cdd95
-vendor/lib/libcpion.so|af35efc0c3c29a07c9e50895ae6e133fb6f5fcbe
-vendor/lib/libcppf.so|a19ed8233293251e6b9ad64fbe8bdfaf59dad4b7
-vendor/lib/libhdcpsrm.so|6682de4b48f20825a868c493a928484df06ad924
+# DRM - Widevine - from raphael-user 10 QKQ1.190716.003 V10.4.6.0.QFKCNXM release-keys
+vendor/bin/hw/android.hardware.drm@1.2-service.widevine|60fe8f977d6ec64dc00f5708ec625252bb6108ac
+vendor/etc/init/android.hardware.drm@1.2-service.widevine.rc|68767969f86126ada017fc09af151e299db651d5
+vendor/lib/mediadrm/libwvdrmengine.so|6d6bab6b740ae172754481c1d904c464a5eb19ea
+vendor/lib/libbase64.so|5f3ed55eb91f973334630e3b3e04dde6c1671927
+vendor/lib/libcpion.so|1958c79f8f7126517fb7c6d018f1981325d3a57c
+vendor/lib/libhdcpsrm.so|9338fa55afbb0ab21529b90065f59bd9b5a72d1a
 vendor/lib/liboemcrypto.so|d672422449c6e49f932e401d4452c653540f1d22
-vendor/lib/libwvhidl.so|9c6af5995de3e0737417b318347854322a474600
-vendor/lib64/mediadrm/libwvdrmengine.so|285c296aa797fa71dff8ccf8b0aeaab03851f74e
-vendor/lib64/libbase64.so|a58a33a27d3527f5fad463005290ad0070e3d621
-vendor/lib64/libcpion.so|cba0ff74f4ba555fe4d0d56e4c4e9ba650421aba
-vendor/lib64/libcppf.so|0e89e34f0850430c204d4cdfcfbec12ec7bd6213
-vendor/lib64/libhdcpsrm.so|2665306cd4ab4077eb72093a9e996fd1696179ac
+vendor/lib64/mediadrm/libwvdrmengine.so|5f7c49701658cefc51d63fab1a4b0eb9a80d578b
+vendor/lib64/libbase64.so|df4eadae5fc1a8848b43e3b965d360e555b1921d
+vendor/lib64/libcpion.so|907ef26fa435a68d66662914acf7be76e99486bd
+vendor/lib64/libhdcpsrm.so|1457782a7f1780306349e7d2cba659e59d67fe34
 vendor/lib64/liboemcrypto.so|84cf7252ae349548d0e33296aa62e983be3178f0
+vendor/lib64/libwvhidl.so|eb14c71529d0ed01551c51f19c28fa808f1bcf14
 
 # ESE-Powermanager - from laurel_sprout-user 9 PKQ1.190416.001 V10.3.4.0.PFQMIXM release-keys
 lib/vendor.qti.esepowermanager@1.0.so|c365902cf602815ccb2d2ea489f0b25f7b33afa0
