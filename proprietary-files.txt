@@ -684,11 +684,11 @@ vendor/lib/vendor.qti.hardware.fm@1.0.so|567282b3c776e5c6639a4c9a34483482acd1afd
 vendor/lib64/hw/vendor.qti.hardware.fm@1.0-impl.so|92f52da7a0785074c3102b10137ad13cd00ab4fa
 vendor/lib64/vendor.qti.hardware.fm@1.0.so|65e5f44a54f42fcebc3d2eec62dee3d80640e006
 
-# Gatekeeper - from laurel_sprout-user 9 PKQ1.190416.001 V10.3.4.0.PFQMIXM release-keys
-vendor/bin/hw/android.hardware.gatekeeper@1.0-service-qti|eadae88382bc4ee64c5c6c5a6e77d23f204ed540
+# Gatekeeper - from raphael-user 10 QKQ1.190716.003 V10.4.6.0.QFKCNXM release-keys
+vendor/bin/hw/android.hardware.gatekeeper@1.0-service-qti|f09a5a5d82d96458347a31635ad6346f772cf2d5
 vendor/etc/init/android.hardware.gatekeeper@1.0-service-qti.rc|1b8d5f58fe0a57906acf72b862c16a2521daa97b
-vendor/lib/hw/android.hardware.gatekeeper@1.0-impl-qti.so|d0f29a5b8f444b95924131ad095e0b0a16b37583
-vendor/lib64/hw/android.hardware.gatekeeper@1.0-impl-qti.so|7e778dbf8a72d1cb591523ded4c8f7dab9faa2e1
+vendor/lib/hw/android.hardware.gatekeeper@1.0-impl-qti.so|4e7c7d9f82beedfb2075068f73a37126e2982cf6
+vendor/lib64/hw/android.hardware.gatekeeper@1.0-impl-qti.so|bd66f592a7e8eca06f4190473caea6797a234d08
 
 # GPS - from laurel_sprout-user 9 PKQ1.190416.001 V10.3.4.0.PFQMIXM release-keys
 etc/permissions/com.qti.location.sdk.xml|cb68a566bd77dcc75bb7547199d528289fac01cb
