@@ -35,13 +35,13 @@ vendor/lib/rfsa/adsp/libsns_low_lat_stream_skel.so
 vendor/lib/rfsa/adsp/libVC1DecDsp_skel.so
 vendor/lib/rfsa/adsp/libVC1Dec.so
 
-# Alarm - from laurel_sprout-user 9 PKQ1.190416.001 V10.3.4.0.PFQMIXM release-keys
-framework/vendor.qti.hardware.alarm-V1.0-java.jar|4f863e8a2dd71eab1429538a4d8f055e40258a0d
--vendor/app/PowerOffAlarm/PowerOffAlarm.apk|0d6312f89aa5407d8376d067b956fad358c6411b
-vendor/bin/hw/vendor.qti.hardware.alarm@1.0-service|3747e7b3eea0f4c6f268c220fd6f27bdb7e1bfdd
+# Alarm - from raphael-user 10 QKQ1.190716.003 V10.4.6.0.QFKCNXM release-keys
+-product/app/PowerOffAlarm/PowerOffAlarm.apk|04fa09a343309407aae6a06e3d92056e7b299df1
+product/framework/vendor.qti.hardware.alarm-V1.0-java.jar|69dedc62181ae26bb2fac4eaacb1f2c38eb21c31
+vendor/bin/hw/vendor.qti.hardware.alarm@1.0-service|ace444a46744cc1f99b579ff57503d3be6d33e1b
 vendor/etc/init/vendor.qti.hardware.alarm@1.0-service.rc|c9877b6cae0353d5fdea5bc23dba77101b3d6980
-vendor/lib64/hw/vendor.qti.hardware.alarm@1.0-impl.so|955fd9f9d460181ad6ea414160ea19dc00873b96
-vendor/lib64/vendor.qti.hardware.alarm@1.0.so|e51ebc8d5382321b43b82d3c3ecb09a113d4f161
+vendor/lib64/hw/vendor.qti.hardware.alarm@1.0-impl.so|4e66cbe25c3b31662b986ee3b58160f526f04e07
+vendor/lib64/vendor.qti.hardware.alarm@1.0.so|af14bdb67a6ea27662a607fff62bd06b20cf8607
 
 # ANT+ (system) - from laurel_sprout-user 9 PKQ1.190416.001 V10.3.4.0.PFQMIXM release-keys
 lib/com.qualcomm.qti.ant@1.0.so|fd8a3ac1c865ef3b0f6f3eedd85786a9993db114
