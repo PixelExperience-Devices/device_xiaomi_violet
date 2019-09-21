@@ -817,19 +817,19 @@ vendor/lib64/libtinyxml2_1.so|0019bedf2e12642fe4113093bc5a5590f6f5021b
 vendor/lib/hw/vulkan.sm6150.so|7b4d68d27bc2e79ce27f5bfb8c280f09eddd63ee
 vendor/lib64/hw/vulkan.sm6150.so|d7c5c36b78f72b096013ac35b5428b827ad34bed
 
-# IO Prefetcher - from laurel_sprout-user 9 PKQ1.190416.001 V10.3.4.0.PFQMIXM release-keys
-vendor/bin/hw/vendor.qti.hardware.iop@2.0-service|40d7bf132ba2139f10567fda516783b05ca24005
+# IO Prefetcher - from raphael-user 10 QKQ1.190716.003 V10.4.6.0.QFKCNXM release-keys
+vendor/bin/hw/vendor.qti.hardware.iop@2.0-service|17167ed031fc91f60d784f619555241543703c45
 vendor/etc/init/vendor.qti.hardware.iop@2.0-service.rc|fd11367b2585702190ef2577ce2ce6fc68f3a2f8
-vendor/lib/hw/vendor.qti.hardware.iop@2.0-impl.so|9d029a135458c6a791a057b9138d884457ec3a44
-vendor/lib/libqti-iopd-client.so|bfa2869c05cad8067c42afd3b1d83661145e42fb
-vendor/lib/libqti-iopd.so|b63dc5b126a3e3197b3e612e7f27be8c55bf23b4
-vendor/lib/vendor.qti.hardware.iop@1.0.so|4e9acdf2144418131bf2ba00d175bd721ec0ab12
-vendor/lib/vendor.qti.hardware.iop@2.0.so|14d72e60e0432357acec706da2cbd8724dd47681
-vendor/lib64/hw/vendor.qti.hardware.iop@2.0-impl.so|1c522c2c56f590754a8fbc9a2860c5ab505d0318
-vendor/lib64/libqti-iopd-client.so|6e7946057cb64a5b9f083adff35ef0de23808ce4
-vendor/lib64/libqti-iopd.so|ddd3e395b9830ccd5bdc909bc992d541d7823478
-vendor/lib64/vendor.qti.hardware.iop@1.0.so|b31123f442eaa9e977521d7cfb08d0aaa2738fcd
-vendor/lib64/vendor.qti.hardware.iop@2.0.so|ad5a839b2ee94a3895adb5c6e3830a4840d343de
+vendor/lib/hw/vendor.qti.hardware.iop@2.0-impl.so|278f2087e19b50784a37fda456c1fee499194c91
+vendor/lib/libqti-iopd-client.so|6fbc7c917d44e8ec40f0b46a255aafa9f11103f5
+vendor/lib/libqti-iopd.so|291660600905d3507806208db07a341753db3806
+vendor/lib/vendor.qti.hardware.iop@1.0.so|84c6e46f5f6644518ff20d406a97401f5d179ee5
+vendor/lib/vendor.qti.hardware.iop@2.0.so|11cfc3b61853ca647878da82d7f131b5f0b87267
+vendor/lib64/hw/vendor.qti.hardware.iop@2.0-impl.so|59cb4db3a773f760084a7874dc3e99f23fed2209
+vendor/lib64/libqti-iopd-client.so|5ff9cc9294eb7347ce15d8b4af26d5628ec330d0
+vendor/lib64/libqti-iopd.so|34ea9c4ffdc1c8807492ae14382c98f38b07c03d
+vendor/lib64/vendor.qti.hardware.iop@1.0.so|00fd7f75435e5436e4998d5d81c068f7d6e3c18b
+vendor/lib64/vendor.qti.hardware.iop@2.0.so|3a2ea07bbc1ef859c1c959245dbfe0227b6d1803
 
 # IPA
 vendor/firmware/ipa_fws.b00
