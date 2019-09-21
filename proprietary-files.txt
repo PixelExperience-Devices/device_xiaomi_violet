@@ -1279,12 +1279,12 @@ vendor/etc/sensors/config/tmd2725.json
 vendor/etc/sensors/config/tmx4903.json
 vendor/etc/sensors/sns_reg_config
 
-# Soter - from laurus-user 9 PKQ1.190416.001 V10.2.10.0.PFMCNXM release-keys
--app/SoterService/SoterService.apk|93eaa9fa1cf2371cbb77c4e56af68b8aba0a8cdc
-vendor/bin/hw/vendor.qti.hardware.soter@1.0-service|9ae91e7e46012d41ab5bf54bd1e70d13712206eb
+# Soter - from raphael-user 10 QKQ1.190716.003 V10.4.6.0.QFKCNXM release-keys
+-app/SoterService/SoterService.apk|401f49c5a47b8679b4844ab6d74fac462920f210
+vendor/bin/hw/vendor.qti.hardware.soter@1.0-service|294850ae1c7dc1561025decefbfbb363412ce090
 vendor/etc/init/vendor.qti.hardware.soter@1.0-service.rc|76447a61ad5529949365eeb7e8ca000e48bd28ae
-vendor/lib64/vendor.qti.hardware.soter@1.0.so|804908e5fee4c6d90599d944ac13679563372eed
-vendor/lib64/hw/vendor.qti.hardware.soter@1.0-impl.so|358b571ee0035536b4bf4de4d35bb444879fa9dc
+vendor/lib64/vendor.qti.hardware.soter@1.0.so|765f6d70495c302d31992b213fc38741a5701d65
+vendor/lib64/hw/vendor.qti.hardware.soter@1.0-impl.so|eebd9f169a91ec68fb1ba4a0bd1e33dce408ca64
 
 # Thermal
 vendor/etc/thermal-engine.conf
