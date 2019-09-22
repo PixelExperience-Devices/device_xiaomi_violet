@@ -937,13 +937,13 @@ vendor/lib64/unnhal-acc-common.so|723a061797f61fc7d71ca569f4a801b3b36028ef
 vendor/lib64/unnhal-acc-hta.so|cf857e619f886ff6869ff9c02e55d5d2bfd79a61
 vendor/lib64/unnhal-acc-hvx.so|98ca2f7e800f92cc28d5f56999c71e2304a6c1e9
 
-# Mlipay - from laurus-user 9 PKQ1.190416.001 V10.2.10.0.PFMCNXM release-keys
-vendor/bin/mlipayd@1.1|86d7adfcafa00d5c4b82f37481ef5b644049d29e
+# Mlipay - from raphael-user 10 QKQ1.190716.003 V10.4.6.0.QFKCNXM release-keys
+vendor/bin/mlipayd@1.1|48da3e9ca9ecfa6324f8639cd941445c3e47119e
 vendor/etc/init/vendor.xiaomi.hardware.mlipay@1.1-service.rc|b5ab5bcd031fe4d9781b5911c0595eaeac8b80ea
-vendor/lib64/libmlipay@1.1.so|6b66bc6fe74dc966b077fe3d7a61ced0fb334d7f
-vendor/lib64/libmlipay.so|32c3b1a6675ededdc0b08bfe12529f21fa871de8
-vendor/lib64/vendor.xiaomi.hardware.mlipay@1.0.so|e22bd6b2a80bc0685a32e3782c1fabb169c3892a
-vendor/lib64/vendor.xiaomi.hardware.mlipay@1.1.so|f6c2a590973c2c54fecc461cea3c67fc7e9a5b94
+vendor/lib64/libmlipay@1.1.so|074ecf45ab01688f711cf6943587dfe70645f307
+vendor/lib64/libmlipay.so|625122f7da0caaeedbcdef0d4ff75e65d040bed6
+vendor/lib64/vendor.xiaomi.hardware.mlipay@1.0.so|619f294b9e2c4e0e490f7177cb6e9f3fc0169714
+vendor/lib64/vendor.xiaomi.hardware.mlipay@1.1.so|2fa6a29e250b31873d5b8986db93f649ccb5c8e3
 
 # Perf - from raphael-user 10 QKQ1.190716.003 V10.4.6.0.QFKCNXM release-keys
 vendor/bin/msm_irqbalance|7f72d2f5dfb93465d3468e7e03863b6ebe60212f
