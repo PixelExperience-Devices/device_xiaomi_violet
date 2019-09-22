@@ -250,7 +250,7 @@ service vendor.hvdcp_opti /vendor/bin/hvdcp_opti
 service nv_mac /vendor/bin/nv_mac
     class late_start
     user system
-    group system inet net_raw wifi
+    group system inet net_admin wifi net_raw
     oneshot
 
 #lcd feature nodes test begin

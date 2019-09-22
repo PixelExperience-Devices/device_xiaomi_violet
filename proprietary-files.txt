@@ -1308,9 +1308,9 @@ vendor/etc/init/vendor.qti.hardware.tui_comm@1.0-service-qti.rc|2cfc563d7e157937
 vendor/lib/vendor.qti.hardware.tui_comm@1.0.so|3f5ad85323db888067e8f98eafce5f43f558fcbc
 vendor/lib64/vendor.qti.hardware.tui_comm@1.0.so|c6772b82c02af368d9b52f4c84b98f1e5a9f7123
 
-# Wifi
-vendor/bin/cnss-daemon
-vendor/bin/nv_mac
+# Wifi - from raphael-user 10 QKQ1.190716.003 V10.4.6.0.QFKCNXM release-keys
+vendor/bin/cnss-daemon|988141a2d4c5d46021b818a74567a1c1082f0662
+vendor/bin/nv_mac|d64c9db2bae95560f55cabac889167ce2150a4b5
 
 # WiFi Display - from laurel_sprout-user 9 PKQ1.190416.001 V10.3.4.0.PFQMIXM release-keys
 bin/wfdservice|13af295a9b41cf82bb81230643388fbdea4e3a7b
