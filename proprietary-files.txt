@@ -619,6 +619,7 @@ vendor/lib/libsecureui.so|764d50dc42703741102badf648055f8f693800a5
 vendor/lib/libSecureUILib.so|1b5e524b992a6db1c9adeb390903d469b04752d4
 vendor/lib/libssd.so|c4f4a589074e7994455f54f09a9bfc184cd8365c
 vendor/lib/libspl.so|ed7f96c3b6162243d8e206b055b670e9d020ea3f
+vendor/lib/libops.so|6da1f59477c82421db6eb13d028f6e94737dc1dd
 vendor/lib/libStDrvInt.so|1bf9ccbca2d1195ba7cfd764fbc70f844028c0ae
 vendor/lib/libtzdrmgenprov.so|a8a6f3cc4ff781cc289356448cad860e701f734c
 vendor/lib64/libdrmfs.so|c742e05922db1a23acadd5985d3ee1c6412441bb
@@ -633,6 +634,7 @@ vendor/lib64/libsecureui.so|9aaeb954d8394f2331d035eb77fd5c1d458a7c04
 vendor/lib64/libSecureUILib.so|e13b2453c27d7e8aedd0821bd4d1604e3bca7d9e
 vendor/lib64/libssd.so|d245148d8a90caa810edda0a2f4433c2fd7788bb
 vendor/lib64/libspl.so|8c848b95674bb6c9f40415568dafe086a3d952f7
+vendor/lib64/libops.so|958ddc525ccf1b660f66183e403c15c5c4fc776e
 vendor/lib64/libStDrvInt.so|f2cc82c28ea86121647fe92496b12f9696ca2841
 vendor/lib64/libtzdrmgenprov.so|ec0bfeed777945481d5f31d31c1f27870604d2b0
 
