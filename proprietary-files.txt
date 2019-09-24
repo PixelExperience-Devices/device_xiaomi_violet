@@ -53,9 +53,9 @@ vendor/lib/hw/com.qualcomm.qti.ant@1.0-impl.so
 # ACDB
 vendor/etc/acdbdata/adsp_avs_config.acdb
 
-# AptX - from bonito-user-9-PQ3B.190801.002-5674421-release-keys
-lib64/libaptXHD_encoder.so|90f47f10af28b3ead143200cb4370b847c513127
-lib64/libaptX_encoder.so|0cebad28afcf29f931bdc2d24fce2730dc882ecf
+# AptX - from bonito-user-10-QPP6.190730.005-5773495-release-keys
+product/lib64/libaptXHD_encoder.so|e13fa70c97caaa24d061678bdee608eb8850a69e
+product/lib64/libaptX_encoder.so|df1c89d7af1bb35808d5fe3496b04ba066c10cbc
 
 # CDSP
 vendor/bin/cdsprpcd
