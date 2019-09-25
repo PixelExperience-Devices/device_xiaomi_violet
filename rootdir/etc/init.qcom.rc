@@ -689,10 +689,11 @@ on property:sys.boot_completed=1
 on property:ro.vendor.ril.mbn_copy_completed=1
     write /data/vendor/radio/copy_complete 1
 
-service charger /charger	
-    class charger	
-    group system graphics	
-    seclabel u:r:healthd:s0
+service vendor.charger /system/bin/chargeonlymode
+    class charger
+    user system
+    group system graphics
+    seclabel u:r:charger:s0
 
 service vendor.msm_irqbalance /vendor/bin/msm_irqbalance -f /system/vendor/etc/msm_irqbalance.conf
     class core
