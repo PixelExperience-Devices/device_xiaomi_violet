@@ -7,10 +7,6 @@
 # Power HAL
 /(vendor|system/vendor)/bin/hw/android\.hardware\.power@1\.2-service\.violet u:object_r:hal_power_default_exec:s0
 
-# Input files
-/vendor/usr/idc(/.*)?        u:object_r:idc_file:s0
-/vendor/usr/keylayout(/.*)?  u:object_r:keylayout_file:s0
-
 # IR
 /dev/spidev[0-9]\.1          u:object_r:lirc_device:s0
 
@@ -22,9 +18,6 @@
 
 # Fingerprint devices
 /dev/goodix_fp               u:object_r:fingerprint_device:s0
-
-# Qti Charger
-/(vendor|system/vendor)/bin/init.qti.charger.sh     u:object_r:qti_init_shell_exec:s0
 
 # Executables
 /(vendor|system/vendor)/bin/nv_mac           u:object_r:wcnss_service_exec:s0

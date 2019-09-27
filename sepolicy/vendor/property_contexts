@@ -1,10 +1,9 @@
 # Camera
-camera.                     u:object_r:camera_prop:s0
-ro.boot.hwc                 u:object_r:camera_prop:s0
-persist.camera.             u:object_r:camera_prop:s0
-persist.vendor.camera.      u:object_r:camera_prop:s0
-vendor.camera.              u:object_r:camera_prop:s0
-vidhance.                   u:object_r:camera_prop:s0
+persist.camera.             u:object_r:persist_camera_prop:s0
+camera.                     u:object_r:vendor_camera_prop:s0
+ro.boot.hwc                 u:object_r:vendor_camera_prop:s0
+vendor.camera.              u:object_r:vendor_camera_prop:s0
+vidhance.                   u:object_r:vendor_camera_prop:s0
 
 # Mlipay
 persist.sys.ifaa            u:object_r:ifaa_prop:s0
@@ -13,9 +12,6 @@ persist.vendor.sys.pay.     u:object_r:ifaa_prop:s0
 # Miui
 ro.miui.                    u:object_r:exported_default_prop:s0
 ro.cust.test                u:object_r:exported_default_prop:s0
-
-# IMS
-ro.build.software.version   u:object_r:qcom_ims_prop:s0
 
 # Fingerprint
 persist.vendor.sys.fp.      u:object_r:vendor_fp_prop:s0
