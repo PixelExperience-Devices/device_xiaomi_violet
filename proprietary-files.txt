@@ -874,6 +874,10 @@ vendor/lib64/libgcs.so|1cb6361b834507a56f7986c5deb385660c8b20da
 vendor/lib64/liblistensoundmodel2.so|a33a47924184423c700a8b070008de17525220df
 
 # Media - from raphael-user 10 QKQ1.190716.003 V10.4.6.0.QFKCNXM release-keys
+vendor/bin/hw/vendor.qti.hardware.capabilityconfigstore@1.0-service|7ed46c4c8d0200ede4db5fabeb8aca402318f013
+vendor/etc/init/vendor.qti.hardware.capabilityconfigstore@1.0-service.rc|4ede0250585a44b01d351bbc301d7a13cc3d783d
+vendor/lib/hw/vendor.qti.hardware.capabilityconfigstore@1.0-impl.so|e30051bc2da78e74bd74cd664306e5b20e299720
+vendor/lib/libFileMux_proprietary.so|6c73256c2ab8113ec50a741425a66cc9586a20df
 vendor/lib/libAlacSwDec.so|9275befb81b9e19742adb86c820696cfc2575ef7
 vendor/lib/libApeSwDec.so|0364256befc49c87652d5d5562ab9e77ca794ba4
 vendor/lib/libdsd2pcm.so|0488e2eb6bbb32f44d7b92e66284db8cad653459
@@ -882,6 +886,8 @@ vendor/lib/libvpplibrary.so|46a3788588fe8805c0de0514a4154a2b2cb77c25
 vendor/lib/libI420colorconvert.so|7ede0ffd3d6466872ba3baac6b0f5bcd5d65fe15
 vendor/lib/libmm-color-convertor.so|449e9a9f602d2c6e0dac187b254e81f8241935dc
 vendor/lib/libmmosal_proprietary.so|eaf98e732dd9e8db4bd6f15c2fd16856a3cb67bd
+vendor/lib/libmmparser_lite_proprietary.so|0355d947e550c614cfc805d57ec1b7214c828608
+-vendor/lib/libplatformconfig.so|6fda9bc4c057c31107fb5204e8ae6190eb14158c
 -vendor/lib/libMpeg4SwEncoder.so|48eaef104ce83be8fd7ca73f8df24ca644064c12
 vendor/lib/libOmxAacDec.so|4f501e92e1d4488adabfc7b16f86a56d7384b34f
 vendor/lib/libOmxEvrcDec.so|b82c41ec561203340462d186a0e4ecc911323c65
@@ -901,8 +907,10 @@ vendor/lib/libOmxVideoDSMode.so|84776832be0abdd67c8eac8a3b833ac226a451cc
 vendor/lib/libvppclient.so|1e74092ef855fbbc413fcf7844019d1c040ae139
 vendor/lib/libvpphvx.so|1235d35ea93d27dd505c847fa7598c9706ca5b39
 vendor/lib/libvpptestutils.so|af92b6ff867f627c19f2c88130c5afee732c10e4
+vendor/lib/vendor.qti.hardware.capabilityconfigstore@1.0.so|3b6750475997b68317d59244b366677537b2b3d8
 vendor/lib/vendor.qti.hardware.vpp@1.1.so|0e56d081306854f6cdded22a382e8b4ec83bfe64
 vendor/lib/vendor.qti.hardware.vpp@1.2.so|dcfecd2deebaf3e5a9f958a85792400a48bcb334
+vendor/lib64/hw/vendor.qti.hardware.capabilityconfigstore@1.0-impl.so|1649be928c3d7b7bd0237b5cbf8dca7f19627aab
 vendor/lib64/libAlacSwDec.so|871b8e3e4d347dc2875e7a8f990d3eb5fb13ea8b
 vendor/lib64/libApeSwDec.so|682afcac712a044bc71a93fe1a3706d66b79d1e7
 vendor/lib64/libFlacSwDec.so|90fe14444c30689bdfc26ba0a127e96de0e0cdb0
@@ -910,6 +918,8 @@ vendor/lib64/libvpplibrary.so|e2d6055c1f847e779b980ef927f2c1b3708b85e0
 vendor/lib64/libI420colorconvert.so|2087c64780561ddd26ce9e19b109f253c52d90d8
 vendor/lib64/libmm-color-convertor.so|cb2537114117a2a27202dec3f8f3642ac248ae07
 vendor/lib64/libmmosal_proprietary.so|9b4be7c730660d40e6f0e7eae52affa12e2c2439
+vendor/lib64/libmmparser_lite_proprietary.so|76500d61228d5f95c1e6fc55e843de220969e15a
+-vendor/lib64/libplatformconfig.so|fe6211d16dd037b9428e1abd82998efeaafa4351
 -vendor/lib64/libMpeg4SwEncoder.so|4293182905eed320a4283dd14a8273a8dc0f9e2f
 vendor/lib64/libOmxVpp.so|4eb083e5c7ad56a06ae33a059fa92bec9df1de45
 vendor/lib64/libOmxAacDec.so|3298ccfc2ee94b1e92781af29d2db628a99a2303
@@ -927,6 +937,7 @@ vendor/lib64/libOmxSwVencMpeg4.so|67b85df3fc097c181a196be4d42eb44d4dd14367
 vendor/lib64/libvppclient.so|03de98ae6dbb92efb949e0c3d2d3873eb39a0378
 vendor/lib64/libvpphvx.so|dd0d8a096a776187ac463a9358d1170670f5ddf5
 vendor/lib64/libvpptestutils.so|8a54a778d47d87a2b96dcbeea4e5d992859ab346
+vendor/lib64/vendor.qti.hardware.capabilityconfigstore@1.0.so|96280f92fe1c84179a3a0a52585d18904fdaab7c
 vendor/lib64/vendor.qti.hardware.vpp@1.1.so|e6fc7cae3215ca39745b5e85d937a7fafca9ed5f
 vendor/lib64/vendor.qti.hardware.vpp@1.2.so|b663f9ef8df821bf6d2c3bd0d0c6fafd7baf6a37
 
