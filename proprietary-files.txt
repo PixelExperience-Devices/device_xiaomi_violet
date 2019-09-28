@@ -695,20 +695,6 @@ vendor/lib/hw/android.hardware.gatekeeper@1.0-impl-qti.so|d0f29a5b8f444b95924131
 vendor/lib64/hw/android.hardware.gatekeeper@1.0-impl-qti.so|7e778dbf8a72d1cb591523ded4c8f7dab9faa2e1
 
 # GPS - from laurel_sprout-user 9 PKQ1.190416.001 V10.3.4.0.PFQMIXM release-keys
-etc/permissions/com.qti.location.sdk.xml|cb68a566bd77dcc75bb7547199d528289fac01cb
-etc/permissions/com.qualcomm.location.xml|1d36e7cf8e16813aa13ee6b3fca8d8687b543828
-etc/permissions/izat.xt.srv.xml|a0f460056f27b5495a4d6e959eecf0e429c42a57
-etc/permissions/privapp-permissions-com.qualcomm.location.xml|055fb40299c0a2340bb1b2c9be218a4d2c0f8c72
-framework/com.qti.location.sdk.jar|a6a000260ff9dd5c6cefedaec4f8b958403dc2b7
-framework/izat.xt.srv.jar|cd5b66ee590c584fb16ef9616ee1a00b00732e0e
-lib64/liblocationservice_jni.so|6256b10f5e9d52993ec60738ec3113c3161f79ed
-lib64/libxt_native.so|d6131b490b4a9ef377034f382043f55945f5606f
-lib64/vendor.qti.gnss@1.0.so|b9ad34e21528c20aa45c8948de372c9a1672c9ce
-lib64/vendor.qti.gnss@1.1.so|5bea1acc61836e0339d60274d948696892b9d296
-lib64/vendor.qti.gnss@1.2.so|78173ae06290c0c774dc57d06d4c41db8f7f4dfe
-lib64/vendor.qti.gnss@2.0.so|c108edebdb7e58d81935aa0a7167461228e21dd2
-lib64/vendor.qti.gnss@2.1.so|7688bb8142214d3ef28ab3bfa0e71eaf6df6e024
--priv-app/com.qualcomm.location/com.qualcomm.location.apk|eabf7eb80ae9aadc6fef040bf3bec00801efca11
 vendor/bin/hw/vendor.qti.gnss@2.1-service|bf474f8a9ba8b8a402816bdfc2e4fb3a4a55d913
 vendor/bin/garden_app|e0a4ed3fb0abb5a0683b6dfd2042e21cd52b0d1c
 vendor/bin/loc_launcher|07e120f08235084441161fe5516ceeb4e1fd22e3
