@@ -30,7 +30,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
     vendor.audio.offload.pstimeout.secs=3 \
     vendor.audio_hal.in_period_size=144 \
     vendor.audio_hal.period_multiplier=3 \
-    vendor.audio.adm.buffering.ms=2
+    vendor.audio.adm.buffering.ms=6
 
 # Camera
 PRODUCT_PROPERTY_OVERRIDES += \
