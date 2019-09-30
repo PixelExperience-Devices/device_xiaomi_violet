@@ -1000,6 +1000,10 @@ vendor/lib64/libssc.so
 vendor/lib64/libssc_default_listener.so
 vendor/lib64/sensors.ssc.so
 
+# Sensors (init script) - from CAF
+vendor/etc/init/init.vendor.sensors.rc|76af799ee1c3b4a7fd0a29f1cb133e520e9721f2
+vendor/etc/init/vendor.sensors.qti.rc|f34fc966af816b50f10ae7520b33863961a14478
+
 # Sensor Configs
 vendor/etc/sensors/config/ak991x_dri_0.json
 vendor/etc/sensors/config/bma2x2_0.json
