@@ -16,36 +16,6 @@ value:2905
 [AID_VENDOR_QRTR]
 value:2906
 
-[bt_firmware/]
-mode: 0771
-user: AID_SYSTEM
-group: AID_SYSTEM
-caps: 0
-
-[dsp/]
-mode: 0771
-user: AID_MEDIA
-group: AID_MEDIA
-caps: 0
-
-[firmware/]
-mode: 0771
-user: AID_SYSTEM
-group: AID_SYSTEM
-caps: 0
-
-[firmware/image/*]
-mode: 0771
-user: AID_SYSTEM
-group: AID_SYSTEM
-caps: 0
-
-[persist/]
-mode: 0771
-user: AID_SYSTEM
-group: AID_SYSTEM
-caps: 0
-
 [vendor/bin/cnd]
 mode: 0755
 user: AID_SYSTEM
@@ -123,4 +93,3 @@ mode: 0771
 user: AID_SYSTEM
 group: AID_SYSTEM
 caps: 0
-
