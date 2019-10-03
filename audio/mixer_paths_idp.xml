@@ -2661,6 +2661,10 @@
     </path>
     <!-- Add by dzy for ce mode end-->
 
+    <path name="headphones-hifi-filter">
+        <path name="headphones" />
+    </path>
+
     <path name="hph-highquality-mode">
     </path>
 
@@ -2737,6 +2741,11 @@
     <path name="speaker-and-headphones-ce">
 	<path name="speaker" />
         <path name="headphones-ce" />
+    </path>
+
+    <path name="speaker-and-headphones-hifi-filter">
+        <path name="headphones" />
+        <path name="speaker" />
     </path>
 
     <path name="speaker-safe-and-headphones">
