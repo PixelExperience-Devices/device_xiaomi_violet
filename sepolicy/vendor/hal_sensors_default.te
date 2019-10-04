@@ -1,1 +1,4 @@
 get_prop(hal_sensors_default, vendor_adsprpc_prop)
+
+allow hal_sensors_default audio_socket:sock_file rw_file_perms;
+unix_socket_connect(hal_sensors_default, audio, hal_audio_default)

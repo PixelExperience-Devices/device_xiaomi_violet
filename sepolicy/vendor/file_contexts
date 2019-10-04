@@ -49,6 +49,9 @@
 # Mac
 /vendor/bin/nv_mac       u:object_r:wcnss_service_exec:s0
 
+# Sockets
+/dev/socket/audio_hw_socket                   u:object_r:audio_socket:s0
+
 # SSR
 /sys/devices(/platform)?/soc/[a-z0-9\.:]+,[a-z0-9\-\_]+/subsys[0-9]+/name         u:object_r:sysfs_ssr:s0
 
