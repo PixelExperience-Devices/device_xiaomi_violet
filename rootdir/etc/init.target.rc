@@ -132,6 +132,9 @@ on boot
 #Load WLAN driver
     chown wifi wifi /sys/module/wlan/parameters/fwpath
 
+# Thermal Profile
+    write /sys/class/thermal/thermal_message/sconfig 0
+
 #USB controller configuration
     setprop vendor.usb.rndis.func.name "gsi"
     setprop vendor.usb.rmnet.func.name "gsi"
