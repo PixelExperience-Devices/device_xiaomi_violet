@@ -401,6 +401,8 @@ esac
 case "$product" in
         "sdmshrike_au")
          setprop vendor.display.lcd_density 160
+         echo 940800000 > /sys/class/devfreq/soc:qcom,cpu0-cpu-l3-lat/min_freq
+         echo 940800000 > /sys/class/devfreq/soc:qcom,cpu4-cpu-l3-lat/min_freq
          ;;
         *)
         ;;
