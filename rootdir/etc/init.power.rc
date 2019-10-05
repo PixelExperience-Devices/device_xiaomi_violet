@@ -17,7 +17,7 @@
 
 on property:vendor.setup.power=1
     # Enable EAS
-    write /sys/kernel/debug/sched_features ENERGY_AWARE
+    write /proc/sys/kernel/sched_energy_aware 1
 
     # Enable suspend clock reporting
     write /sys/kernel/debug/clk/debug_suspend 1
