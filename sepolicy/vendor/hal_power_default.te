@@ -9,7 +9,7 @@ allow hal_power_default {
 
 allow hal_power_default {
   cgroup
-  debugfs_sched_features 
+  proc_sched_energy_aware
   sysfs_devfreq
   sysfs_devices_system_cpu
   sysfs_graphics

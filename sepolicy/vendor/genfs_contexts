@@ -10,7 +10,7 @@ genfscon sysfs /devices/platform/soc/soc:qcom,cpu-cpu-llcc-bw                   
 genfscon sysfs /devices/platform/soc/soc:qcom,cpu-llcc-ddr-bw                   u:object_r:sysfs_msm_subsys:s0
 genfscon sysfs /devices/platform/soc/soc:qcom,cpu0-cpu-l3-lat                   u:object_r:sysfs_msm_subsys:s0
 genfscon sysfs /devices/platform/soc/soc:qcom,cpu6-cpu-l3-lat                   u:object_r:sysfs_msm_subsys:s0
-genfscon debugfs /sched_features                      u:object_r:debugfs_sched_features:s0
+genfscon proc /sys/kernel/sched_energy_aware                                    u:object_r:proc_sched_energy_aware:s0
 genfscon sysfs /devices/platform/soc/1d84000.ufshc/clkgate_enable               u:object_r:sysfs_scsi_host:s0
 genfscon sysfs /devices/platform/soc/1d84000.ufshc/hibern8_on_idle_enable       u:object_r:sysfs_scsi_host:s0
 

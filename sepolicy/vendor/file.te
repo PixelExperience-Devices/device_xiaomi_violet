@@ -1,4 +1,4 @@
-type debugfs_sched_features, debugfs_type, fs_type;
+type proc_sched_energy_aware, proc_type, fs_type;
 type sysfs_msm_boot, fs_type, sysfs_type;
 type sysfs_msm_subsys, sysfs_type, fs_type;
 

@@ -4,6 +4,6 @@ set_prop(vendor_init, vendor_video_prop)
 
 allow vendor_init {
   debugfs_clk
-  debugfs_sched_features
   proc_dirty
+  proc_sched_energy_aware
 }:file w_file_perms;
