@@ -54,9 +54,6 @@ function blob_fixup() {
         vendor/bin/mlipayd@1.1 | vendor/lib64/libmlipay.so | vendor/lib64/libmlipay@1.1.so )
                 patchelf --remove-needed vendor.xiaomi.hardware.mtdservice@1.0.so "${2}"
         ;;
-        etc/permissions/qti_libpermissions.xml )
-                sed -i "s|name=\"android.hidl.manager-V1.0-java|name=\"android.hidl.manager@V1.0-java|g" "${2}"
-        ;;
         esac
 }
 
