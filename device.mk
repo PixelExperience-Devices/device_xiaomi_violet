@@ -153,6 +153,8 @@ PRODUCT_PACKAGES += \
     libqdutils \
     libdrm.vendor \
     libdisplayconfig \
+    libdisplayconfig.vendor \
+    libqdMetaData \
     libqdMetaData.system \
     libtinyxml \
     libvulkan \
