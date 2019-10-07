@@ -215,22 +215,6 @@ service vendor.cnss_diag /system/vendor/bin/cnss_diag -q -f -t HELIUM
    group system wifi inet sdcard_rw media_rw diag
    disabled
 
-service ppd /vendor/bin/mm-pp-dpps
-    class late_start
-    user system
-    group system graphics
-    socket pps stream 0660 system system
-    disabled
-
-on property:init.svc.hwcomposer-2-1=stopped
-    stop ppd
-
-on property:init.svc.hwcomposer-2-1=running
-    start ppd
-
-on property:init.svc.hwcomposer-2-1=restarting
-    stop ppd
-
 service qfp-daemon /vendor/bin/qfp-daemon
     class late_start
     user system
@@ -252,43 +236,6 @@ service nv_mac /vendor/bin/nv_mac
     user system
     group system inet net_admin wifi net_raw
     oneshot
-
-#lcd feature nodes test begin
-on property:persist.sys.display_srgb=1
-    write /sys/devices/platform/soc/soc:qcom,dsi-display/dsi_display_srgb 1
-
-on property:persist.sys.display_srgb=2
-    write /sys/devices/platform/soc/soc:qcom,dsi-display/dsi_display_srgb 2
-
-on property:persist.sys.display_ce=4
-    write /sys/devices/platform/soc/soc:qcom,dsi-display/dsi_display_ce 1
-
-on property:persist.sys.display_ce=0
-    write /sys/devices/platform/soc/soc:qcom,dsi-display/dsi_display_ce 2
-
-on property:persist.sys.display_cabc=1
-    write /sys/devices/platform/soc/soc:qcom,dsi-display/dsi_display_cabc 1
-
-on property:persist.sys.display_cabc=2
-    write /sys/devices/platform/soc/soc:qcom,dsi-display/dsi_display_cabc 2
-
-on property:persist.sys.display_cabc=3
-    write /sys/devices/platform/soc/soc:qcom,dsi-display/dsi_display_cabc 3
-
-on property:persist.sys.display_cabc=0
-    write /sys/devices/platform/soc/soc:qcom,dsi-display/dsi_display_cabc 0
-
-on property:sys.display_hbm=1
-    write /sys/devices/platform/soc/soc:qcom,dsi-display/dsi_display_hbm 1
-
-on property:sys.display_hbm=2
-    write /sys/devices/platform/soc/soc:qcom,dsi-display/dsi_display_hbm 2
-
-on property:sys.display_hbm=3
-    write /sys/devices/platform/soc/soc:qcom,dsi-display/dsi_display_hbm 3
-
-on property:sys.display_hbm=0
-    write /sys/devices/platform/soc/soc:qcom,dsi-display/dsi_display_hbm 0
 
 on property:sys.thermallct.isincall=1
     write /sys/class/power_supply/battery/device/thermalcall 1
