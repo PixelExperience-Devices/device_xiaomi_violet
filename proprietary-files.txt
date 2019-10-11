@@ -1067,7 +1067,7 @@ product/etc/permissions/qcrilhook.xml|ceb890ab3c1645aa0d0044abab1ba58c4097a991
 product/etc/permissions/telephonyservice.xml|a39eefcaf85fb8da60044fdbbcfddd95deb031c8
 product/framework/embmslibrary.jar|00eb5b4144f001423032a88cc1d227b3655db88b
 product/framework/qcrilhook.jar|23768fda90519d799e682fd058ec85b7b5cd6f89
-product/framework/qti-telephony-common.jar|c7a2b3cfd98cf0e80cfb0af3f72e0d2c894725df
+product/framework/qti-telephony-common.jar|1d658e58652d014f1362626a0d9e812d9cb39f90
 product/framework/QtiTelephonyServicelibrary.jar|ea30b05eaad3ebee157421b3f31bf8585566b4cd
 
 # Radio - from laurel_sprout-user 9 PKQ1.190416.001 V10.3.4.0.PFQMIXM release-keys
