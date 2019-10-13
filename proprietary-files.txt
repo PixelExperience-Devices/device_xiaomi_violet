@@ -462,6 +462,7 @@ vendor/lib/libsdsprpc.so
 vendor/bin/hvdcp_opti|999a9980d14a65a8efe4b75fd51450c496cd8ad6
 
 # CNE - from raphael-user 10 QKQ1.190716.003 V10.4.6.0.QFKCNXM release-keys
+-vendor/app/CneApp/CneApp.apk|b582ee0bc180dfb051b76857d0081cf1af7a7fbc
 product/framework/com.quicinc.cne.api-V1.1-java.jar|207b66fb9d79b4f06e0a67a0e82c19c1f3b2d210
 product/framework/com.quicinc.cne.constants-V1.0-java.jar|96476b6df625fcd79d546faa097a20eb6360d858
 product/framework/com.quicinc.cne.constants-V2.0-java.jar|847d4c453e6192da9374f0b01f72f28a297a65d1
@@ -1062,6 +1063,7 @@ vendor/lib64/vendor.qti.hardware.qteeconnector@1.0.so|ddef93ffbb1e68ea5ad1adadec
 -product/app/embms/embms.apk|e364de916ae2dd9a69aee6a9766c3783457a6d75
 -product/app/QtiTelephonyService/QtiTelephonyService.apk|db60b6fe27b3033f6468b3170b23af18dd0bcdaf
 -product/priv-app/qcrilmsgtunnel/qcrilmsgtunnel.apk|8c2a62b66601940981b95bee6481fa14f03fdd5f
+-vendor/app/IWlanService/IWlanService.apk|c152322e169240d16a599581c0af8a3f2c8ee0a9
 product/etc/permissions/embms.xml|5589ed8da213acd27e2ad2109094561eb1be30a7
 product/etc/permissions/qcrilhook.xml|ceb890ab3c1645aa0d0044abab1ba58c4097a991
 product/etc/permissions/telephonyservice.xml|a39eefcaf85fb8da60044fdbbcfddd95deb031c8
