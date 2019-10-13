@@ -1083,11 +1083,6 @@ service poweroffhandler /system/vendor/bin/poweroffhandler
 on property:vendor.display.lcd_density=*
     setprop ro.sf.lcd_density ${vendor.display.lcd_density}
 
-service vendor.vppservice /vendor/bin/vppservice
-    class main
-    user media
-    group camera
-
 # Set vendor-ril lib path based on Meta version
 on property:vendor.rild.libpath=*
     setprop rild.libpath ${vendor.rild.libpath}
