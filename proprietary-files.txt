@@ -2,12 +2,10 @@
 vendor/bin/adsprpcd
 vendor/lib/libadsp_default_listener.so
 vendor/lib/libadsprpc.so
-vendor/lib/libfastcvopt.so
 vendor/lib/libmdsprpc.so
 vendor/lib/libsdsprpc.so
 vendor/lib64/libadsp_default_listener.so
 vendor/lib64/libadsprpc.so
-vendor/lib64/libfastcvopt.so
 vendor/lib64/libmdsprpc.so
 vendor/lib64/libsdsprpc.so
 
@@ -24,12 +22,7 @@ vendor/lib/rfsa/adsp/libdsp_streamer_add_constant.so
 vendor/lib/rfsa/adsp/libdsp_streamer_binning.so
 vendor/lib/rfsa/adsp/libdsp_streamer_skel.so
 vendor/lib/rfsa/adsp/libexternal_dog_skel.so
-vendor/lib/rfsa/adsp/libfastcvadsp.so
-vendor/lib/rfsa/adsp/libfastcvdsp_skel.so
 vendor/lib/rfsa/adsp/libhexagon_nn_skel.so
-vendor/lib/rfsa/adsp/libscveBlobDescriptor_skel.so
-vendor/lib/rfsa/adsp/libscveObjectSegmentation_skel.so
-vendor/lib/rfsa/adsp/libscveT2T_skel.so
 vendor/lib/rfsa/adsp/libsns_device_mode_skel.so
 vendor/lib/rfsa/adsp/libsns_low_lat_stream_skel.so
 vendor/lib/rfsa/adsp/libVC1DecDsp_skel.so
@@ -124,7 +117,6 @@ vendor/etc/camera/lf_facerank_model.bin
 vendor/etc/camera/megviifacepp_0_5_2_model
 vendor/etc/camera/sdm_ys_32p_120_21_5_perturb50.bin
 vendor/etc/camera/vidhance_calibration_F7B
-vendor/etc/scve/facereco/gModel.dat
 vendor/firmware/CAMERA_ICP.elf
 vendor/lib/camera/com.qti.tuned.liteon_ov7251.bin
 vendor/lib/camera/components/com.qti.eisv2.so
@@ -220,18 +212,6 @@ vendor/lib/libcamxtintlessalgo.so
 vendor/lib/libmialgo_fs.so
 vendor/lib/libmmcamera_faceproc.so
 vendor/lib/libmmcamera_faceproc2.so
-vendor/lib/libscveBlobDescriptor.so
-vendor/lib/libscveBlobDescriptor_stub.so
-vendor/lib/libscveCommon.so
-vendor/lib/libscveCommon_stub.so
-vendor/lib/libscveFaceLandmarks.so
-vendor/lib/libscveFaceRecognition.so
-vendor/lib/libscveObjectSegmentation.so
-vendor/lib/libscveObjectSegmentation_stub.so
-vendor/lib/libscveObjectTracker.so
-vendor/lib/libscveObjectTracker_stub.so
-vendor/lib/libscvePanorama.so
-vendor/lib/libscvePanorama_lite.so
 vendor/lib/libsnsapi.so
 vendor/lib/libsns_device_mode_stub.so
 vendor/lib/libsnsdiaglog.so
@@ -423,18 +403,6 @@ vendor/lib64/libmmcamera_faceproc2.so
 vendor/lib64/libmpbase.so
 vendor/lib64/libVDSuperPhotoAPI.so
 vendor/lib64/libpvr.so
-vendor/lib64/libscveBlobDescriptor.so
-vendor/lib64/libscveBlobDescriptor_stub.so
-vendor/lib64/libscveCommon.so
-vendor/lib64/libscveCommon_stub.so
-vendor/lib64/libscveFaceLandmarks.so
-vendor/lib64/libscveFaceRecognition.so
-vendor/lib64/libscveObjectSegmentation.so
-vendor/lib64/libscveObjectSegmentation_stub.so
-vendor/lib64/libscveObjectTracker.so
-vendor/lib64/libscveObjectTracker_stub.so
-vendor/lib64/libscvePanorama.so
-vendor/lib64/libscvePanorama_lite.so
 vendor/lib64/libSNPE.so
 vendor/lib64/libsnsapi.so
 vendor/lib64/libsns_device_mode_stub.so
@@ -860,10 +828,27 @@ vendor/lib64/libgcs-osal.so|c1bfe5e694541e9f6ec700e04df33550b5948d05
 vendor/lib64/libgcs.so|1cb6361b834507a56f7986c5deb385660c8b20da
 vendor/lib64/liblistensoundmodel2.so|a33a47924184423c700a8b070008de17525220df
 
-# Media - from raphael-user 10 QKQ1.190716.003 V10.4.6.0.QFKCNXM release-keys
+# Machine learning - from raphael-user 10 QKQ1.190716.003 V10.4.6.0.QFKCNXM release-keys
+vendor/bin/hw/vendor.qti.hardware.mlshal@1.0-service|62ce08d93589e2c7ef1b82f96375a0a81a2815f4
+vendor/etc/init/vendor.qti.hardware.mlshal@1.0-service.rc|76bc4b49ebfb8ad30ebc5335306a5914a96ee07c
+vendor/lib64/hw/vendor.qti.hardware.mlshal@1.0-impl.so|39efffae4d97365a96d5634b6840c4fffc2e4c14
+vendor/lib64/vendor.qti.hardware.mlshal@1.0-halimpl.so|6d78c90af85c667ef51ec83bf5f47c1a21a60493
+vendor/lib64/vendor.qti.hardware.mlshal@1.0.so|2fdcf590f20998543fb7b32c253d7d2914f0b314
+
+# Configstore - from raphael-user 10 QKQ1.190716.003 V10.4.6.0.QFKCNXM release-keys
 vendor/bin/hw/vendor.qti.hardware.capabilityconfigstore@1.0-service|7ed46c4c8d0200ede4db5fabeb8aca402318f013
 vendor/etc/init/vendor.qti.hardware.capabilityconfigstore@1.0-service.rc|4ede0250585a44b01d351bbc301d7a13cc3d783d
 vendor/lib/hw/vendor.qti.hardware.capabilityconfigstore@1.0-impl.so|e30051bc2da78e74bd74cd664306e5b20e299720
+vendor/lib/vendor.qti.hardware.capabilityconfigstore@1.0.so|3b6750475997b68317d59244b366677537b2b3d8
+-vendor/lib/libplatformconfig.so|6fda9bc4c057c31107fb5204e8ae6190eb14158c
+vendor/lib64/hw/vendor.qti.hardware.capabilityconfigstore@1.0-impl.so|1649be928c3d7b7bd0237b5cbf8dca7f19627aab
+vendor/lib64/vendor.qti.hardware.capabilityconfigstore@1.0.so|96280f92fe1c84179a3a0a52585d18904fdaab7c
+-vendor/lib64/libplatformconfig.so|fe6211d16dd037b9428e1abd82998efeaafa4351
+
+# Media - from raphael-user 10 QKQ1.190716.003 V10.4.6.0.QFKCNXM release-keys
+vendor/bin/vppservice|292e0db24537d5b580fe6af6c63e890d1682694b
+vendor/etc/configstore/vpp.configstore.xml|d5095f33c326017a21fff186d19a2ce146b85d94
+vendor/etc/init/vppservice.rc|7da97c7e7df32edf1ca6c4b635b0ce032eeb3b27
 vendor/lib/libFileMux_proprietary.so|6c73256c2ab8113ec50a741425a66cc9586a20df
 vendor/lib/libAlacSwDec.so|9275befb81b9e19742adb86c820696cfc2575ef7
 vendor/lib/libApeSwDec.so|0364256befc49c87652d5d5562ab9e77ca794ba4
@@ -874,7 +859,6 @@ vendor/lib/libI420colorconvert.so|7ede0ffd3d6466872ba3baac6b0f5bcd5d65fe15
 vendor/lib/libmm-color-convertor.so|449e9a9f602d2c6e0dac187b254e81f8241935dc
 vendor/lib/libmmosal_proprietary.so|eaf98e732dd9e8db4bd6f15c2fd16856a3cb67bd
 vendor/lib/libmmparser_lite_proprietary.so|0355d947e550c614cfc805d57ec1b7214c828608
--vendor/lib/libplatformconfig.so|6fda9bc4c057c31107fb5204e8ae6190eb14158c
 -vendor/lib/libMpeg4SwEncoder.so|48eaef104ce83be8fd7ca73f8df24ca644064c12
 vendor/lib/libOmxAacDec.so|4f501e92e1d4488adabfc7b16f86a56d7384b34f
 vendor/lib/libOmxEvrcDec.so|b82c41ec561203340462d186a0e4ecc911323c65
@@ -894,10 +878,9 @@ vendor/lib/libOmxVideoDSMode.so|84776832be0abdd67c8eac8a3b833ac226a451cc
 vendor/lib/libvppclient.so|1e74092ef855fbbc413fcf7844019d1c040ae139
 vendor/lib/libvpphvx.so|1235d35ea93d27dd505c847fa7598c9706ca5b39
 vendor/lib/libvpptestutils.so|af92b6ff867f627c19f2c88130c5afee732c10e4
-vendor/lib/vendor.qti.hardware.capabilityconfigstore@1.0.so|3b6750475997b68317d59244b366677537b2b3d8
 vendor/lib/vendor.qti.hardware.vpp@1.1.so|0e56d081306854f6cdded22a382e8b4ec83bfe64
 vendor/lib/vendor.qti.hardware.vpp@1.2.so|dcfecd2deebaf3e5a9f958a85792400a48bcb334
-vendor/lib64/hw/vendor.qti.hardware.capabilityconfigstore@1.0-impl.so|1649be928c3d7b7bd0237b5cbf8dca7f19627aab
+vendor/lib/vendor.qti.hardware.vpp@1.3.so|fb72de303546d249231aa9b69ff408d9f5b33347
 vendor/lib64/libAlacSwDec.so|871b8e3e4d347dc2875e7a8f990d3eb5fb13ea8b
 vendor/lib64/libApeSwDec.so|682afcac712a044bc71a93fe1a3706d66b79d1e7
 vendor/lib64/libFlacSwDec.so|90fe14444c30689bdfc26ba0a127e96de0e0cdb0
@@ -906,7 +889,6 @@ vendor/lib64/libI420colorconvert.so|2087c64780561ddd26ce9e19b109f253c52d90d8
 vendor/lib64/libmm-color-convertor.so|cb2537114117a2a27202dec3f8f3642ac248ae07
 vendor/lib64/libmmosal_proprietary.so|9b4be7c730660d40e6f0e7eae52affa12e2c2439
 vendor/lib64/libmmparser_lite_proprietary.so|76500d61228d5f95c1e6fc55e843de220969e15a
--vendor/lib64/libplatformconfig.so|fe6211d16dd037b9428e1abd82998efeaafa4351
 -vendor/lib64/libMpeg4SwEncoder.so|4293182905eed320a4283dd14a8273a8dc0f9e2f
 vendor/lib64/libOmxVpp.so|4eb083e5c7ad56a06ae33a059fa92bec9df1de45
 vendor/lib64/libOmxAacDec.so|3298ccfc2ee94b1e92781af29d2db628a99a2303
@@ -924,9 +906,9 @@ vendor/lib64/libOmxSwVencMpeg4.so|67b85df3fc097c181a196be4d42eb44d4dd14367
 vendor/lib64/libvppclient.so|03de98ae6dbb92efb949e0c3d2d3873eb39a0378
 vendor/lib64/libvpphvx.so|dd0d8a096a776187ac463a9358d1170670f5ddf5
 vendor/lib64/libvpptestutils.so|8a54a778d47d87a2b96dcbeea4e5d992859ab346
-vendor/lib64/vendor.qti.hardware.capabilityconfigstore@1.0.so|96280f92fe1c84179a3a0a52585d18904fdaab7c
 vendor/lib64/vendor.qti.hardware.vpp@1.1.so|e6fc7cae3215ca39745b5e85d937a7fafca9ed5f
 vendor/lib64/vendor.qti.hardware.vpp@1.2.so|b663f9ef8df821bf6d2c3bd0d0c6fafd7baf6a37
+vendor/lib64/vendor.qti.hardware.vpp@1.3.so|bb68f5c369f585ae80297d8d6b5d7dfc45a67ae4
 
 # Neural-networks - from raphael-user 10 QKQ1.190716.003 V10.4.6.0.QFKCNXM release-keys
 vendor/bin/hw/android.hardware.neuralnetworks@1.2-service-qti|fbf1fd549aae06e463ea90594fb8a74b3ed40012
@@ -1274,6 +1256,44 @@ vendor/etc/sensors/config/talos_stk3x3x_0.json
 vendor/etc/sensors/config/tmd2725.json
 vendor/etc/sensors/config/tmx4903.json
 vendor/etc/sensors/sns_reg_config
+
+# Snapdragon Computer Vision Engine - from raphael-user 10 QKQ1.190716.003 V10.4.6.0.QFKCNXM release-keys
+vendor/etc/scve/facereco/gModel.dat|447e5e3fefe8bcf36db0f7a8595c63fb326879ba
+vendor/lib64/libfastcvopt.so|f21acac999017c79cb5bcf94661820c2017d2fc0
+vendor/lib64/libfastcvdsp_stub.so|0c6a87646829e2386488e42a7dc02e9170db371c
+vendor/lib64/libscveBlobDescriptor.so|4f1ef314c8e0f161bd2899cf2770e8657c21e308
+vendor/lib64/libscveBlobDescriptor_stub.so|2cb8b1297b0c03fc21abd4b25277ee197ee1f3ba
+vendor/lib64/libscveCommon.so|b9b821b6f746a90d2bdcae384ee9100a2b6512c8
+vendor/lib64/libscveCommon_stub.so|7118866d3b03daddb63cdd08422fe1c8beb3c00c
+vendor/lib64/libscveFaceLandmarks.so|4350df0a2fd5365a53769d19faf59075e4a671a0
+vendor/lib64/libscveFaceRecognition.so|275e73f82e4f30f00148ac0a95f916643e915a3f
+vendor/lib64/libscveObjectSegmentation.so|9ce1d03104046efe47344cdc5fcd4be78ead426e
+vendor/lib64/libscveObjectSegmentation_stub.so|bfe67097e5203dd21cd00fa9751eb3d2498a28ed
+vendor/lib64/libscveObjectTracker.so|1fe6be0229663e29cddbe7cc7db2d821fa0dcf9f
+vendor/lib64/libscveObjectTracker_stub.so|47a64f2a93e28622c9f0eef82fe83b729f74e5a2
+vendor/lib64/libscvePanorama.so|3b4cfee6c237647148fdb1029945d5894369bf4c
+vendor/lib64/libscvePanorama_lite.so|65819f6630bbf59d1c865825095d8a14ff720783
+vendor/lib64/libscveScan3D.so|2f177243b898cc91dc828a7a7ac9a33c906c32c7
+vendor/lib/rfsa/adsp/libfastcvadsp.so|cb6849db333972f3891973d052106dfc95f88c90
+vendor/lib/rfsa/adsp/libfastcvdsp_skel.so|096236d79d282a872a3226fea3a0dafd67184767
+vendor/lib/rfsa/adsp/libscveBlobDescriptor_skel.so|7aff0b90dbb8b0c92c5c7f132a7edc5342e06d6f
+vendor/lib/rfsa/adsp/libscveObjectSegmentation_skel.so|07558223d445756090d898425dee55a0a950ae61
+vendor/lib/rfsa/adsp/libscveT2T_skel.so|f0d23d0ca8e1aa38d7e5317aff55e47b033510bb
+vendor/lib/libfastcvopt.so|9f4c35e9f3a4aedf3d6dfed3700cc54cc2ef80cd
+vendor/lib/libfastcvdsp_stub.so|3335a1efffb9560b1c8d3f4e28600ff19de73b9a
+vendor/lib/libscveBlobDescriptor.so|3b7b9b5f74b2454df6064e8a33e73cefb68b9e6c
+vendor/lib/libscveBlobDescriptor_stub.so|6fb8b3174636fb2300301dbbdc768ad65164b95f
+vendor/lib/libscveCommon.so|1257ab877a2f3fbaf04a69c7afbe60a0a76eac21
+vendor/lib/libscveCommon_stub.so|428f16c5b6827794cd17f662e30f3c39331ed423
+vendor/lib/libscveFaceLandmarks.so|274c56835b02ce9eebd6912e84dbafafe7299cac
+vendor/lib/libscveFaceRecognition.so|af3aef83305648bb5278ec09b1e7aa33690b2bc8
+vendor/lib/libscveObjectSegmentation.so|d3912c212f807cd98c4d2963974c63c1d068a4c1
+vendor/lib/libscveObjectSegmentation_stub.so|77e18ce1071513d1bc8a06bf7cfea43d8ab45627
+vendor/lib/libscveObjectTracker.so|a3025252b9305229cdf79b342a18ef8c8e692abf
+vendor/lib/libscveObjectTracker_stub.so|506fc7078d663dbd01a6afbea7763a708f09bae5
+vendor/lib/libscvePanorama.so|693a0393f724c6d05bbdd3f33c5d2b79e18aee5b
+vendor/lib/libscvePanorama_lite.so|62120719cd67772a0e0acd2fd278ce62f5462701
+vendor/lib/libscveScan3D.so|e31731cb17e25b41f9880f519ad2e8c8bc96f32e
 
 # Soter - from raphael-user 10 QKQ1.190716.003 V10.4.6.0.QFKCNXM release-keys
 -app/SoterService/SoterService.apk|401f49c5a47b8679b4844ab6d74fac462920f210
