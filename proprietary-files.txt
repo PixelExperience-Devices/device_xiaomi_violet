@@ -834,6 +834,8 @@ vendor/etc/init/vendor.qti.hardware.mlshal@1.0-service.rc|76bc4b49ebfb8ad30ebc53
 vendor/lib64/hw/vendor.qti.hardware.mlshal@1.0-impl.so|39efffae4d97365a96d5634b6840c4fffc2e4c14
 vendor/lib64/vendor.qti.hardware.mlshal@1.0-halimpl.so|6d78c90af85c667ef51ec83bf5f47c1a21a60493
 vendor/lib64/vendor.qti.hardware.mlshal@1.0.so|2fdcf590f20998543fb7b32c253d7d2914f0b314
+vendor/lib64/libmls_v4l2enc_vendor.so|1b2ae2286434f4415b578196ac1ef01038b03199
+vendor/lib64/libmls_utils_vendor.so|9cc9db7722f248893397e12b9631ee5fcf98a63c
 
 # Configstore - from raphael-user 10 QKQ1.190716.003 V10.4.6.0.QFKCNXM release-keys
 vendor/bin/hw/vendor.qti.hardware.capabilityconfigstore@1.0-service|7ed46c4c8d0200ede4db5fabeb8aca402318f013
