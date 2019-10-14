@@ -128,6 +128,10 @@ on boot
     write /dev/cpuset/background/cpus 0-7
     write /dev/cpuset/system-background/cpus 0-7
 
+# D2TW
+    chown system system /proc/tp_gesture
+    chmod 0660 /proc/tp_gesture
+
 # access permissions for FPC service
    chown system system /sys/bus/platform/devices/soc/soc:fpc1020/irq
    chown system system /sys/bus/platform/devices/soc/soc:fpc1020/wakeup_enable
