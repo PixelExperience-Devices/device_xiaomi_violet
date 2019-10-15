@@ -52,21 +52,22 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 # RIL
 PRODUCT_PROPERTY_OVERRIDES += \
+    persist.radio.multisim.config=dsds \
+    persist.vendor.radio.apm_sim_not_pwdn=1 \
     persist.vendor.radio.atfwd.start=true \
-    persist.vendor.radio.data_con_rprt=1 \
+    persist.vendor.radio.custom_ecc=1 \
+    persist.vendor.radio.enable_temp_dds=true \
+    persist.vendor.radio.enableadvancedscan=true \
     persist.vendor.radio.force_on_dc=true \
-    persist.vendor.radio.snapshot_enabled=1 \
-    persist.vendor.radio.snapshot_timer=5 \
+    persist.vendor.radio.procedure_bytes=SKIP \
+    persist.vendor.radio.rat_on=combine \
     persist.vendor.radio.redir_party_num=1 \
     persist.vendor.radio.report_codec=1 \
-    persist.vendor.radio.apm_sim_not_pwdn=1 \
     persist.vendor.radio.sib16_support=1 \
-    persist.vendor.radio.custom_ecc=1 \
-    persist.vendor.radio.rat_on=combine \
-    persist.radio.multisim.config=dsds \
     ril.subscription.types=NV,RUIM \
-    telephony.lteOnCdmaDevice=1 \
-    ro.telephony.default_network=22,22
+    rild.libpath=/vendor/lib64/libril-qc-hal-qmi.so \
+    ro.telephony.default_network=22,22 \
+    telephony.lteOnCdmaDevice=1
 
 # IMS
 PRODUCT_PROPERTY_OVERRIDES += \
