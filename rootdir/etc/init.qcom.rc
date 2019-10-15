@@ -152,29 +152,18 @@ on boot
     mkdir /mnt/vendor/persist/iar_db 0770 system system
     mkdir /mnt/vendor/spunvm 0770 system system
 
-    #Create NETMGR daemon socket area
-    mkdir /dev/socket/netmgr 0750 radio radio
-
     setprop wifi.interface wlan0
 
 #   Define TCP buffer sizes for various networks
 #   ReadMin, ReadInitial, ReadMax, WriteMin, WriteInitial, WriteMax,
     setprop net.tcp.buffersize.wifi    524288,2097152,4194304,262144,524288,1048576
 
-
     setprop ro.telephony.call_ring.multiple false
-
 
     #Remove SUID bit for iproute2 ip tool
     chmod 0755 /system/bin/ip
 
-
     chmod 0444 /sys/devices/platform/msm_hsusb/gadget/usb_state
-
-#   Assign TCP buffer thresholds to be ceiling value of technology maximums
-#   Increased technology maximums should be reflected here.
-    write /proc/sys/net/core/rmem_max  16777216
-    write /proc/sys/net/core/wmem_max  8388608
 
     # To prevent out of order acknowledgements from making
     # connection tracking to treat them as not belonging to
@@ -287,18 +276,6 @@ on post-fs-data
     mkdir /data/vendor/wifi/wigig_hostapd 0770 wifi wifi
     mkdir /data/vendor/wifi/wpa 0770 wifi wifi
     mkdir /data/vendor/wifi/wpa/sockets 0770 wifi wifi
-
-    #create port-bridge log dir
-    mkdir /data/vendor/port_bridge 0770 radio radio
-    chmod 0770 /data/vendor/port_bridge
-
-    #create netmgr log dir
-    mkdir /data/vendor/netmgr 0770 radio radio
-    chmod 0770 /data/vendor/netmgr
-
-    #Create QTI dir for logs
-    mkdir /data/vendor/dataqti 0770 radio radio
-    chmod 0770 /data/vendor/dataqti
 
     # Create the directories used by LctDiagSendData
     mkdir /data/vendor/lct_diag 0771 system system
@@ -562,13 +539,6 @@ service vendor.tftp_server /vendor/bin/tftp_server
    class core
    user root
 
-service vendor.port-bridge /system/vendor/bin/port-bridge
-    class main
-    user radio
-    group radio system inet
-    disabled
-    oneshot
-
 service qmiproxy /system/bin/qmiproxy
     class main
     user radio
@@ -582,22 +552,6 @@ service vendor.qmuxd /system/vendor/bin/qmuxd
     group radio audio bluetooth gps nfc diag
     disabled
 
-service vendor.netmgrd /system/vendor/bin/netmgrd
-    class main
-    disabled
-
-service vendor.dataqti /system/vendor/bin/qti
-    class main
-    user radio
-    group radio oem_2901 diag usb net_admin
-    disabled
-
-service vendor.dataadpl /system/vendor/bin/adpl
-    class main
-    user radio
-    group radio oem_2901 diag usb net_admin
-    disabled
-
 service vendor.sensors /vendor/bin/sscrpcd
     class core
     user system
@@ -609,10 +563,6 @@ service vendor.sensors.qti /vendor/bin/sensors.qti
     user system
     group system
     disabled
-
-on property:ro.vendor.use_data_netmgrd=false
-    # netmgr not supported on specific target
-    stop vendor.netmgrd
 
 # Adjust socket buffer to enlarge TCP receive window for high bandwidth
 # but only if ro.data.large_tcp_window_size property is set.
