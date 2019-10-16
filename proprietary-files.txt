@@ -928,7 +928,7 @@ vendor/etc/lm/AppClassifierFeature.xml|102e4291357dd384c0f474d4192370e25123c5e7
 vendor/etc/lm/GameOptimizationFeature.xml|de0bd5be9e1f6ad936fb817fa2ff745a8ca94fd4
 vendor/etc/perf/commonresourceconfigs.xml|9e277f76243eb5ad16d3e55843aadf68a54e7aaa
 vendor/etc/perf/perfboostsconfig.xml|d01a36d112e3b7ac578f8cd428eac5a928a1c401
-vendor/etc/perf/perfconfigstore.xml|4fe545e1f61a36c678df0d76893cb3b78b5273ae
+vendor/etc/perf/perfconfigstore.xml|afb6ef1b9891d979a01867fbb38546ac303037e1
 vendor/etc/perf/targetconfig.xml|53d6e2936c1cdc67edf86a2ccf04084adbff4a68
 vendor/etc/perf/targetresourceconfigs.xml|0a614d97672c516aedc253aec525468fbdb270ec
 vendor/etc/perf/thermalboost.conf|3a70ac91160e48a64578f0b7775798f19040e87d
