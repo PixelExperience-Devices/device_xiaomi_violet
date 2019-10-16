@@ -42,7 +42,6 @@ case "$baseband" in
     if [ -n "$rild_status" ] || [ -n "$vendor_rild_status" ]; then
       stop ril-daemon
       stop vendor.ril-daemon
-      start vendor.ipacm
     fi
 esac
 
@@ -105,8 +104,6 @@ case "$baseband" in
     if [[ -z "$rild_status" || "$rild_status" = "stopped" ]] && [[ -z "$vendor_rild_status" || "$vendor_rild_status" = "stopped" ]]; then
       start vendor.qcrild
     fi
-    start vendor.ipacm-diag
-    start vendor.ipacm
     case "$baseband" in
         "svlte2a" | "csfb")
           start qmiproxy
