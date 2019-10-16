@@ -267,11 +267,6 @@ on post-fs-data
     mkdir /data/vendor/wifi/wpa 0770 wifi wifi
     mkdir /data/vendor/wifi/wpa/sockets 0770 wifi wifi
 
-    # Create the directories used by LctDiagSendData
-    mkdir /data/vendor/lct_diag 0771 system system
-    chown system system /data/vendor/lct_diag
-    rm /data/vendor/lct_diag/client_*
-
     # Create the directories used by WiGig Sensing
     mkdir /data/vendor/sensing 0770 system wifi
 
