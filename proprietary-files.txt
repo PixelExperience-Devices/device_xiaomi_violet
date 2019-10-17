@@ -840,7 +840,7 @@ vendor/lib64/hw/vendor.qti.hardware.soter@1.0-impl.so
 -vendor/lib/libthermalclient.so
 
 # Time
--vendor/app/TimeService/TimeService.apk
+-vendor/app/TimeService/TimeService.apk;PRESIGNED
 vendor/bin/time_daemon
 vendor/etc/init/init.time_daemon.rc
 vendor/lib64/libtime_genoff.so
