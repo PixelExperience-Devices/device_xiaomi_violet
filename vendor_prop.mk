@@ -117,6 +117,15 @@ PRODUCT_PROPERTY_OVERRIDES += \
     dalvik.vm.heapminfree=512k \
     dalvik.vm.heapmaxfree=8m
 
+# SurfaceFlinger
+PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
+    ro.surface_flinger.force_hwc_copy_for_virtual_displays=true \
+    ro.surface_flinger.max_frame_buffer_acquired_buffers=3 \
+    ro.surface_flinger.max_virtual_display_dimension=4096 \
+    ro.surface_flinger.protected_contents=true \
+    ro.surface_flinger.vsync_event_phase_offset_ns=2000000 \
+    ro.surface_flinger.vsync_sf_event_phase_offset_ns=6000000
+
 # Netmgr
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.data.df.dev_name=rmnet_usb0 \
@@ -143,22 +152,15 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_PROPERTY_OVERRIDES += \
     debug.sf.hw=0 \
     debug.egl.hw=0 \
-    debug.sf.latch_unsignaled=1 \
-    ro.vendor.display.cabl=0 \
-    ro.vendor.display.svi=1 \
+    debug.mdpcomp.logs=0 \
     ro.vendor.display.sensortype=2 \
     vendor.gralloc.disable_ubwc=0 \
-    vendor.display.svi.config=1 \
     vendor.display.disable_scaler=0 \
     vendor.display.disable_inline_rotator=1 \
     vendor.display.disable_decimation=1 \
     vendor.display.enable_null_display=0 \
     vendor.display.disable_excl_rect=0 \
-    vendor.display.disable_excl_rect_partial_fb=1 \
     vendor.display.comp_mask=0 \
-    vendor.display.disable_hw_recovery=0 \
-    vendor.display.enable_default_color_mode=1 \
     vendor.display.disable_hw_recovery_dump=1 \
-    vendor.display.enable_optimize_refresh=1 \
-    vendor.display.svi.config_path=/system/etc/display/SVIConfig.xml \
+    vendor.display.enable_default_color_mode=0 \
     vendor.display.dataspace_saturation_matrix=1.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,1.0

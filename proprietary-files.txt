@@ -396,7 +396,6 @@ vendor/lib64/libmmcamera_faceproc.so
 vendor/lib64/libmmcamera_faceproc2.so
 vendor/lib64/libmpbase.so
 vendor/lib64/libVDSuperPhotoAPI.so
-vendor/lib64/libpvr.so
 vendor/lib64/libSNPE.so
 vendor/lib64/libsnsapi.so
 vendor/lib64/libsns_device_mode_stub.so
@@ -504,45 +503,6 @@ vendor/lib64/hw/consumerir.default.so
 # Display calibration
 vendor/etc/qdcm_calib_data_ft8719_video_mode_dsi_tianma_panel.xml
 vendor/etc/qdcm_calib_data_nt36672a_video_mode_dsi_shenchao_panel.xml
-
-# Display SVI configuration
-etc/display/SVIConfig.xml
-
-# Display - hardware - from laurel_sprout-user 9 PKQ1.190416.001 V10.3.4.0.PFQMIXM release-keys
-vendor/bin/hw/vendor.qti.hardware.display.allocator@1.0-service|230a26db686f817fd17579064899fd35431fee17
-vendor/etc/init/vendor.qti.hardware.display.allocator@1.0-service.rc|110424738e85ab9600ba2e389d162978d7bb950c
-vendor/lib64/hw/android.hardware.graphics.mapper@2.0-impl-qti-display.so|8a17f08cf3f524b2020f07fe6ef4392617293532
-vendor/lib64/hw/gralloc.sm6150.so|5a8adfe871d12af89d2105e7708c59d3882c283f
-vendor/lib64/hw/hwcomposer.sm6150.so|af465397c8c6e2a90e98ce354365241bfd10bb5b
-vendor/lib64/hw/memtrack.sm6150.so|7d2d9755bfc7579eededc498d0b48407d30aa1df
-vendor/lib64/libdisplaydebug.so|de0532983fff34579853d101f4e5916766e042f2
-vendor/lib64/libdisplayqos.so|e2908b677697e14646bb36f64b7306c2d5983f6f
-vendor/lib64/libdpps.so|1bb9d043d1117e86e77378182ab950ccd1f796d5
-vendor/lib64/libgpu_tonemapper.so|64c49013215cd1d0d7f3718c5f4bd6dcd4f007c3
-vendor/lib64/libgralloccore.so|80f1741d7f39da3f267464f04c68757b5cdc9eba
-vendor/lib64/libgrallocutils.so|c93d2b627e426aab664c0bfe195c362506414a37
-vendor/lib64/libqdMetaData.so|f93cb5a8bdf8fdc27a19cba4ed76a94c1b422ab7
-vendor/lib64/libdrmutils.so|d95d51ccb665b8cfbf8b3cc6d3c306371b4ebef0
-vendor/lib64/libsdedrm.so|34535e729fa3bf7e2607303c703db35eebed9158
-vendor/lib64/libsdmcore.so|cddad76b592968d0357ba3ff4ab04719f795c4e0
-vendor/lib64/libsdmutils.so|3146e6d8d0aa06e939fcbb6ff6365fb25f98e8d8
-vendor/lib64/libsdm-colormgr-algo.so|ac678b17690e840d71251066c4c49de46d48b271
-vendor/lib/hw/android.hardware.graphics.mapper@2.0-impl-qti-display.so|ca26c68f3d9fdd52e0be63274515ecbc44c9a0e7
-vendor/lib/hw/gralloc.sm6150.so|cb0ba151a0199859b5339f51b9095f0cfede7583
-vendor/lib/hw/hwcomposer.sm6150.so|b904098b9cfbdc478a816e3ab6c363125aade037
-vendor/lib/hw/memtrack.sm6150.so|d3ead24894358cbf50995bbad3c82c2152bf38d9
-vendor/lib/libdisplaydebug.so|b74de648fe13e44b05f6f8d8040af2fa3cdbc418
-vendor/lib/libdisplayqos.so|9cd3cdddd0bc5e6545df63cf0fa4dcfc8936232a
-vendor/lib/libdpps.so|1dbbf331e30be7d5d043ee4855191af2f28098ae
-vendor/lib/libgpu_tonemapper.so|d5059f5e0de0c2b03326d4f268069394fc86f750
-vendor/lib/libgralloccore.so|e1da8098d01054951ca11c3fc79b7708717eff08
-vendor/lib/libgrallocutils.so|b6d426bb20df4662f55e1ccc0c74ae2d808bd8c6
-vendor/lib/libqdMetaData.so|97102bdfa8e3fd2cdc7da3a00e32d9e7c77e067c
-vendor/lib/libdrmutils.so|ec82c7af55f435b356e9c8645bc7d655ab9f76a6
-vendor/lib/libsdedrm.so|ee6131aee2234c759064a634e29d9744cec82d15
-vendor/lib/libsdmcore.so|631a42d9b557dbf5f974251f590e099f0d2bae93
-vendor/lib/libsdmutils.so|3967f13048406442ae05b9a61fff7a949d4bc2ad
-vendor/lib/libsdm-colormgr-algo.so|48689a441aad372e676a06e39fd08d739a037126
 
 # DPM - from davinci-user 10 QKQ1.190825.002 9.10.9 release-keys
 framework/tcmclient.jar|a55e6981795bf74b3249c5e7297ea4e3cf1dea83
@@ -713,6 +673,7 @@ vendor/lib64/libbccQTI.so|d4732f569f53d0152bcb824d94819c7b183a7a8b
 vendor/lib64/libgsl.so|c10b7606da2926abd59161243a1d404963e341dc
 vendor/lib64/libllvm-glnext.so|6175b85f148444c2e2f9d6396b0bb78470371750
 vendor/lib64/libllvm-qcom.so|40555ee894fb7aef442b74d4a7d995b7c1e61303
+vendor/lib64/libpvr.so|55ad310d84bb60bb761a2396fdc5ace4564c9b0a
 vendor/lib64/libOpenCL.so|21897637e702c4a97eb748934e9f1fc8880881c5
 vendor/lib64/librs_adreno_sha1.so|df03717b40ad5457dbf9234ce4475129f83aff92
 vendor/lib64/librs_adreno.so|c84431c31efd21b30d95ebe9ea3dc4792f0de4ac
@@ -732,6 +693,7 @@ vendor/lib/libbccQTI.so|131cc7db5fe13b60277e3c993cf493d81f041eb2
 vendor/lib/libgsl.so|ac63f06c0eafae2a4abfce97ecfefceeb0ac7d7d
 vendor/lib/libllvm-glnext.so|5289d8c4c600de062569d2dfea81ed2ad9b2a8d5
 vendor/lib/libllvm-qcom.so|75c509b62e29d4c33f7c93975614a3f8d2fbb30b
+vendor/lib/libpvr.so|78adbda9057d2bed6aa556a28e345f062bf1169d
 vendor/lib/libOpenCL.so|fd7559d43657e3e8b3b5b4c46613f17f2865ce57
 vendor/lib/librs_adreno_sha1.so|959b4acd0a63ac80b925eced44aa7f0976884fa1
 vendor/lib/librs_adreno.so|361de6afe5421246d4910b2e9e568e7dfc3d7e4b
@@ -741,19 +703,25 @@ vendor/lib/libRSDriver_adreno.so|03cd2143301033c96793d65343ed12a96173d353
 vendor/lib/libhdr_tm.so|fffd91bcfe1b9ae33498624e3e36b46364bf7991
 vendor/lib64/libhdr_tm.so|103b2f0893a767f162ffc2945b5edea062fb0354
 
-# Graphics (SDM) - from laurel_sprout-user 9 PKQ1.190416.001 V10.3.4.0.PFQMIXM release-keys
-vendor/lib/libqseed3.so|3f5349b43a9ee95b5be090f150120ba895d6fba3
-vendor/lib/libsdm-color.so|fbbb70b83145b1d9dd728901b726d3b02b7f6b2a
-vendor/lib/libsdm-diag.so|15c2cce9f17b532682a94258f6d69beb6e4c5446
--vendor/lib/libsdm-disp-vndapis.so|bd830761476443ae2e4f6b83b0b5aec3616476a6
-vendor/lib/libsdmextension.so|a7b44943c53ccb992711650c9061e6b831263c15
-vendor/lib/libtinyxml2_1.so|32aed353a883557299083374b40bacc9f4a228a3
-vendor/lib64/libqseed3.so|fb17af6d01fbbb8aae45f31ae80cb4492bf19d13
-vendor/lib64/libsdm-color.so|72a82d90e5986edb3531ead900e66260e6b0d605
-vendor/lib64/libsdm-diag.so|55d076d00f3d2f770f092cdb30cf01013667fffa
--vendor/lib64/libsdm-disp-vndapis.so|5f35b6463fca61173f6fe4130f6da3183c53269c
-vendor/lib64/libsdmextension.so|53b6371f68b23808f64a5e857df50f15dafe39d4
-vendor/lib64/libtinyxml2_1.so|0019bedf2e12642fe4113093bc5a5590f6f5021b
+# Graphics (SDM) - from davinci-user 10 QKQ1.190825.002 9.10.9 release-keys
+vendor/lib/libdpps.so|508d7d5aa3ad34aea4ae47f943f4c018ee9f77cf
+vendor/lib/libqseed3.so|be6d4f64c5a41e5cce849617df3f13c23a4a9de6
+vendor/lib/libsdedrm.so|3422c90488c8c8f20ac9f074259a5bd45da65ced
+vendor/lib/libsdm-color.so|300fc08d79821c29155338c25dbb5c3a7920253f
+vendor/lib/libsdm-colormgr-algo.so|5e90df89db6d8957d9e9dc69023a83f7d2ee1c4b
+vendor/lib/libsdm-diag.so|0e9a778b540bcb918f84bb125cf07f29e422e6dc
+-vendor/lib/libsdm-disp-vndapis.so|c78d69efe54441c39146991bf748aa453bc38d1a
+vendor/lib/libsdmextension.so|487209c63dc901b6fc55e5c66f93fbd4a4756e92
+vendor/lib/libtinyxml2_1.so|655efc7e2a0ec6714d6c2883a2836197a1b4a8eb
+vendor/lib64/libdpps.so|91623bbe09758fad2f109b1e64605be011495a12
+vendor/lib64/libqseed3.so|4a4fbff019467a4531816ab58e259b22d95630fa
+vendor/lib64/libsdedrm.so|6657f06897a4dc2e6ea413492c640b9b2de8757e
+vendor/lib64/libsdm-color.so|e5c120cb6acbecf5a2c344029b103d6b61fc3925
+vendor/lib64/libsdm-colormgr-algo.so|992e5066d0f7bf284c599f65a89849ae9693c456
+vendor/lib64/libsdm-diag.so|d7a96d76dd2fb7516a9ed89c39a3f0992ec3266e
+-vendor/lib64/libsdm-disp-vndapis.so|aa658050b07c04b114cb43e6535fe45883943152
+vendor/lib64/libsdmextension.so|63879c247f0a99a87b514316b43996db63a8b87a
+vendor/lib64/libtinyxml2_1.so|ba981e332895a053a67fc54a8190365a3ad37f2d
 
 # Graphics (Vulkan) - from davinci-user 10 QKQ1.190825.002 9.10.9 release-keys
 vendor/lib/hw/vulkan.sm6150.so|c3f1a905c936834f49ce74679d40ce0ab66dd582
@@ -974,11 +942,13 @@ product/lib64/vendor.display.color@1.0.so|e90c75046ba1f6f677b9f719caaae8d91d1a5c
 vendor/bin/hw/vendor.display.color@1.0-service|ab46995540bd4721e1241de17241e55dbbd5435c
 vendor/etc/init/vendor.display.color@1.0-service.rc|5ad673f879b3685a0e79b5633437e5499cb94f48
 vendor/lib/libdisp-aba.so|95e3dbcf26416500a23ceac04e6b1b881a9204ba
+vendor/lib/libdisplayqos.so|5b68a1a8f6e13e32e481a3c7d3d26d7633808929
 vendor/lib/vendor.display.color@1.0.so|1c6cdfd0be07497fd82c509b0e8d43eb1b2516c3
 vendor/lib/vendor.display.color@1.1.so|1db61e68a6fe9e99debc63a00d68e665564881d5
 vendor/lib/vendor.display.color@1.2.so|df54fd87747b8b78c73b18e9426e28d668e790ce
 vendor/lib/vendor.display.postproc@1.0.so|d51673718da0fe3437f87bd8b223885f0ccf03d6
 vendor/lib64/libdisp-aba.so|3a35a8c7120d5f0748b4584dd56b1398d1acdd69
+vendor/lib64/libdisplayqos.so|86abe8922c686f205520b6980f337dda79182bec
 vendor/lib64/vendor.display.color@1.0.so|3939e4d1ab4f74e6bbd04524a9e6211ade9c5d0b
 vendor/lib64/vendor.display.color@1.1.so|ce0030a7e6593236277962ffff290b834eaf1f25
 vendor/lib64/vendor.display.color@1.2.so|6adfa77494dbad3be8a34b259b25f8a4d9dd6a04
