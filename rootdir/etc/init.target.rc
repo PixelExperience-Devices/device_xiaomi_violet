@@ -228,11 +228,6 @@ service energy-awareness /system/vendor/bin/energy-awareness
     group system
     oneshot
 
-service vendor.hvdcp_opti /vendor/bin/hvdcp_opti
-    class main
-    user root
-    group system wakelock
-
 service nv_mac /vendor/bin/nv_mac
     class late_start
     user system

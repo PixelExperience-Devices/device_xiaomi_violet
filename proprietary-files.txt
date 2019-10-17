@@ -421,6 +421,7 @@ vendor/lib/libcdsprpc.so
 vendor/lib/libsdsprpc.so
 
 # Charger - from davinci-user 10 QKQ1.190825.002 9.10.9 release-keys
+vendor/etc/init/vendor.qti.hardware.charger_monitor@1.0-service.rc|3dab489feaf8d00e06894db7c92b462d701e4c98
 vendor/bin/hvdcp_opti|69837e193ff8183a886b2778cc0f8d1bcbd85a7b
 
 # CNE - from davinci-user 10 QKQ1.190825.002 9.10.9 release-keys

@@ -213,10 +213,6 @@ on boot
     # Create vpp directory
     mkdir /mnt/vendor/persist/vpp 0770 media media
 
-
-    # Create hvdcp_opti directory
-    mkdir /mnt/vendor/persist/hvdcp_opti 0770 root system
-
     # Create pa-cal driver directory lct-20181009
     mkdir /mnt/vendor/persist/audio 0770 audio audio
 
