@@ -122,13 +122,14 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.netflix.bsp_rev=Q6150-17263-1
 
-# OEM Unlock
-PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
-    ro.oem_unlock_supported=1
-
 # Perf
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.vendor.extension_library=libqti-perfd-client.so
+
+# Qualcomm / OEM Unlock
+PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
+    ro.oem_unlock_supported=1 \
+    ro.vendor.qti.va_aosp.support=1
 
 # RIL
 PRODUCT_PROPERTY_OVERRIDES += \
