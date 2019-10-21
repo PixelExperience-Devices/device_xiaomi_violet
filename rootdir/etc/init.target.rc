@@ -190,26 +190,6 @@ service thermal-engine /system/vendor/bin/thermal-engine
    socket thermal-send-rule stream 0660 system system
    group root
 
-service adsprpcd_root /vendor/bin/adsprpcd
-   class main
-   user media
-   group media
-
-service adsprpcd /vendor/bin/adsprpcd audiopd
-   class main
-   user media
-   group media
-
-service adsprpcd_sensorspd /vendor/bin/adsprpcd sensorspd
-   class core
-   user system
-   group system
-
-service cdsprpcd /vendor/bin/cdsprpcd
-   class main
-   user system
-   group system
-
 service vendor.cnss_diag /system/vendor/bin/cnss_diag -q -f -t HELIUM
    class main
    user system
