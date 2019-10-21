@@ -172,7 +172,6 @@ on property:sys.shutdown.requested=*
     stop vendor.ims_rtp_daemon
 
 on charger
-    start vendor.hvdcp_opti
     setprop vendor.usb.controller a600000.dwc3
     setprop sys.usb.configfs 1
     start vendor.power_off_alarm
