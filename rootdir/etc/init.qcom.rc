@@ -897,8 +897,7 @@ service profiler_daemon /system/bin/profiler_daemon
 
 service charger /sbin/chargeonlymode
     class charger
-    user system
-    group system graphics input
+    group system graphics
     seclabel u:r:charger:s0
 
 service vendor.ssr_diag /system/vendor/bin/ssr_diag
