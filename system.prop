@@ -30,6 +30,7 @@ ro.netflix.bsp_rev=Q6150-17263-1
 # Radio
 DEVICE_PROVISIONED=1
 persist.radio.atfwd.start=false
+persist.sys.fflag.override.settings_network_and_internet_v2=true
 persist.vendor.radio.enable_temp_dds=true
 persist.vendor.radio.force_on_dc=true
 ril.subscription.types=RUIM
