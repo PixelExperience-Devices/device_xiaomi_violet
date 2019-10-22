@@ -134,6 +134,7 @@ PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
 # RIL
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.radio.multisim.config=dsds \
+    persist.sys.fflag.override.settings_network_and_internet_v2=true \
     persist.vendor.radio.apm_sim_not_pwdn=1 \
     persist.vendor.radio.atfwd.start=true \
     persist.vendor.radio.custom_ecc=1 \
