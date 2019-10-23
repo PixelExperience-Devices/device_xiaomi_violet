@@ -2,7 +2,6 @@ cc_library_shared {
     name: "libqti_vndfwk_detect",
     srcs: ["vndfwk-detect.c"],
     shared_libs: ["libcutils"],
-    vendor_available: true,
     export_include_dirs: ["."],
 
     compile_multilib: "both",
@@ -10,18 +9,19 @@ cc_library_shared {
         "-Wall",
         "-Werror",
     ],
+    vendor: true,
 }
 
 cc_test {
     name: "vndfwk-test",
     srcs: ["vndfwk-test.c"],
     shared_libs: ["libqti_vndfwk_detect"],
-    vendor_available: true,
 
     cflags: [
         "-Wall",
         "-Werror",
     ],
+    vendor: true,
 }
 
 cc_library_shared {
@@ -41,12 +41,12 @@ cc_library_shared {
         "jni_headers",
     ],
 
-    vendor_available: true,
     compile_multilib: "both",
 
     cflags: [
         "-Wno-unused-parameter",
     ],
+    vendor: true,
 }
 
 java_library_static {

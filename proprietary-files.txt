@@ -482,7 +482,6 @@ vendor/lib64/libcne.so|9f84d7a6bdfc64feff196ed008fe42f2c6172511
 vendor/lib64/libcneapiclient.so|b048979a1bc6267a08f277847f4bf8e93f67276c
 vendor/lib64/libcneoplookup.so|b005bd1f9e58b0a464825864162f493e8a32395a
 vendor/lib64/libcneqmiutils.so|f2fc09230fdf877020f734451c13a6adb749838d
-vendor/lib64/libqti_vndfwk_detect.so|d4c353fbb03e0961f07652cb55bea78b081b8d23
 vendor/lib64/libwms.so|539eafe3cdc409ab59cf7919bfc4f4757ef2d48e
 vendor/lib64/libwqe.so|780b70e10794dce037b7ce9114185b9fcbc9c6c4
 vendor/lib64/libxml.so|0aebd7a46a98cd020308ae6c5cafc3a006c30ff2
