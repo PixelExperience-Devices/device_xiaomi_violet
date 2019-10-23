@@ -1334,6 +1334,28 @@ vendor/lib64/vendor.qti.hardware.tui_comm@1.0.so|e47baed52f1c0637de34fa55e45a86b
 # Wifi - from davinci-user 10 QKQ1.190825.002 9.10.9 release-keys
 vendor/bin/cnss-daemon|28898c30dc2819b3521f3dac54aa7023b110195b
 vendor/bin/nv_mac|a1e4c9d0032732e9d5a2fa38f1dfb9d0005451a8
+vendor/bin/wifilearner|78d083c35899b6e01a92e6893e4e9e1c27c5dc42
+vendor/etc/configstore/wigig.xml|2752200cc901da4a2f514f07f9bf1b0a3272884d
+vendor/etc/init/vendor.qti.hardware.wifi.wifilearner@1.0-service.rc|aacefc44da5e64760bc12779a83b905ca6b78f01
+vendor/etc/init/vendor.qti.hardware.wigig.supptunnel@1.0-service.rc|0ad6f8871ffb8130d6af385434b2eb0512c04733
+vendor/etc/wifi/aoa_cldb_falcon.bin|7511e868c40e66e9758568b7112894cbce2650a4
+vendor/etc/wifi/aoa_cldb_swl14.bin|2a3be07a8f24bc1b9798d07c7133b0f71b77738f
+vendor/etc/wifi/p2p_supplicant_overlay.conf|0725cc89d1658b695f0345490dc5cab61c912480
+vendor/etc/wifi/wigig_p2p_supplicant.conf|2ba755ef8ae5f665b830b6930026534ddd3a1a4b
+vendor/etc/wifi/wigig_supplicant.conf|c62e0b2dee7cb149accbe658d841daabbc92a6b9
+vendor/etc/wifi/wpa_supplicant_overlay.conf|289b5ff519e935f4a1431414c83e2e7e9e6603d0
+vendor/firmware/wigig/wigig.ini|1ec12833a14cab778168c24c283e237cadbd1781
+vendor/lib/libaoa.so|430896da0e452a9f82dc5b5955fd1e898f40e974
+vendor/lib/libwigig_flashaccess.so|4efc0823bedff2c17f3e0a7b8360c00b414b750e
+vendor/lib/libwigig_pciaccess.so|279b5041b873729880d23436664392045ef3885c
+vendor/lib/libwigig_utils.so|e3fcc591a4235a78c025314a0057cfcd35bd3a9a
+vendor/lib64/libwigig_flashaccess.so|22df4eb2bc35ef3bd02965a162583c4f89376e81
+vendor/lib64/libwigig_pciaccess.so|1186ff4f2bbc0baccebf4191256fd990bcc2d62f
+vendor/lib64/libwigig_utils.so|a7a4c8836ab2775af73fb5bf681e697b48316eb0
+vendor/lib64/vendor.qti.hardware.wifi.keystore@1.0.so|d20889da64cf0e5d86311e31e3a503b348aebd46
+vendor/lib64/vendor.qti.hardware.wifi.wifilearner@1.0.so|c343972cbc348c03399ad07136a70c05b745a060
+vendor/lib64/vendor.qti.hardware.wigig.netperftuner@1.0.so|344a9028b19b8bc53b23686caabf21b612f2f2ef
+vendor/lib64/vendor.qti.hardware.wigig.supptunnel@1.0.so|25ba0bbdef2872364f636faf794d098074e81f4a
 
 # WiFi Display - from davinci-user 10 QKQ1.190825.002 9.10.9 release-keys
 -framework/WfdCommon.jar|00e8b3cd1303785928d3146f4ddbfa7dc84e16dc
