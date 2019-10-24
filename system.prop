@@ -3,6 +3,8 @@ vendor.bluetooth.soc=cherokee
 vendor.qcom.bluetooth.soc=cherokee
 
 # Camera
+persist.camera.privapp.list=org.codeaurora.snapcam
+persist.vendor.camera.privapp.list=org.codeaurora.snapcam
 vendor.camera.aux.packagelist=org.codeaurora.snapcam,com.android.camera,org.lineageos.snap
 
 # CNE
