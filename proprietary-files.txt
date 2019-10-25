@@ -1054,6 +1054,9 @@ vendor/lib64/libGPTEE_vendor.so|0abd055676626e20585b9ab396c8973fd53af191
 vendor/lib64/libQTEEConnector_vendor.so|48275dc35631062248c7d697478c58eb6793a92a
 vendor/lib64/vendor.qti.hardware.qteeconnector@1.0.so|3202c209bd8249e3f76dec1108788b1a85b53561
 
+# Telephony (qti-telephony-common) - from DRG - QKQ1.190828.002
+product/framework/qti-telephony-common.jar|74adbf98e89531ac385ab5c4cea3c2549a0d24b0
+
 # Radio - from davinci-user 10 QKQ1.190825.002 9.10.9 release-keys
 -product/app/QtiTelephonyService/QtiTelephonyService.apk|db60b6fe27b3033f6468b3170b23af18dd0bcdaf
 -product/app/datastatusnotification/datastatusnotification.apk|ea611e4f1efc3077adf3054051ead13422927426
@@ -1066,7 +1069,6 @@ product/etc/permissions/telephonyservice.xml|a39eefcaf85fb8da60044fdbbcfddd95deb
 product/framework/QtiTelephonyServicelibrary.jar|ea30b05eaad3ebee157421b3f31bf8585566b4cd
 product/framework/embmslibrary.jar|00eb5b4144f001423032a88cc1d227b3655db88b
 product/framework/qcrilhook.jar|23768fda90519d799e682fd058ec85b7b5cd6f89
-product/framework/qti-telephony-common.jar|160e765e29a7d8fd2c0af3e4ce0e860bc5a954a0
 vendor/bin/ATFWD-daemon|317cb9a7a2e1eb5727d5b355c6779d3d8807d2db
 vendor/bin/hw/qcrild|2c2869715c1fb8ff162d3d3e3f43a4ec2193f670
 vendor/bin/netmgrd|90cba32bb3de3ecb5cb571ecbf0136ceb780cda3
