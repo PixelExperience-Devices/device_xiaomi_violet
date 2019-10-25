@@ -90,7 +90,6 @@ Only the three quirks included above are recognized at this point:
  | mpeg4-sw    | 1920    1088    30      40       244800 |
  | vp8         | 3840    2160    30      100      972000 |
  | vp9         | 4096    2160    24      100      829440 |
- | vc1         | 1920    1088    30      20       244800 |
  | div4/5/6-sw | 1920    1088    30      10       244800 |
  | h263-sw     | 864     480     30      16        48600 |
  | mpeg2       | 1920    1088    30      40       244800 |
@@ -120,6 +119,7 @@ Only the three quirks included above are recognized at this point:
 
 <MediaCodecs>
     <Include href="media_codecs_google_audio.xml" />
+    <Include href="media_codecs_vendor_audio.xml" />
     <Include href="media_codecs_google_telephony.xml" />
     <Settings>
         <Setting name="max-video-encoder-input-buffers" value="11" />
@@ -395,7 +395,6 @@ Only the three quirks included above are recognized at this point:
             <Limit name="concurrent-instances" max="16" />
             <Limit name="performance-point-1920x1080" value="30" />
         </MediaCodec>
-        <MediaCodec name="OMX.google.opus.decoder" type="audio/opus" update="true" rank="100"/>
     </Decoders>
     <Include href="media_codecs_google_video.xml" />
 </MediaCodecs>
