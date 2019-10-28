@@ -49,39 +49,35 @@ vendor/lib/hw/com.qualcomm.qti.ant@1.0-impl.so|1626b16bd3de85db4bd68e933bef0d24f
 vendor/lib64/com.qualcomm.qti.ant@1.0.so|671430030323a3e8b5dd334383143df6dd85d0fa
 vendor/lib64/hw/com.qualcomm.qti.ant@1.0-impl.so|83759b8f07fb1e64baecff205cef1f2e67381243
 
-# Audio
-etc/permissions/audiosphere.xml
-framework/audiosphere.jar
-vendor/firmware/tas2563_uCDSP.bin
-vendor/lib/libacdb-fts.so
-vendor/lib/libacdbloader.so
-vendor/lib/libacdbrtac.so
-vendor/lib/libadiertac.so
-vendor/lib/libadm.so
-vendor/lib/libaudcal.so
-vendor/lib/libaudioalsa.so
-vendor/lib/libaudioparsers.so
-vendor/lib/libdrc.so
-vendor/lib/libqtigef.so
-vendor/lib/libsurround_3mic_proc.so
-vendor/lib/soundfx/libasphere.so
-vendor/lib64/libacdb-fts.so
-vendor/lib64/libacdbloader.so
-vendor/lib64/libacdbrtac.so
-vendor/lib64/libadiertac.so
-vendor/lib64/libaudcal.so
-vendor/lib64/libaudioalsa.so
-vendor/lib64/libaudioparsers.so
-vendor/lib64/libqtigef.so
-vendor/lib64/soundfx/libasphere.so
+# Audio - from davinci-user 10 QKQ1.190825.002 9.10.9 release-keys
+etc/permissions/audiosphere.xml|3c6d8f14bd99e52a424282fd5d0a5b9b06485dea
+framework/audiosphere.jar|c1679f5aca56f0cb24745b3f7d219acd04833bed
+vendor/lib/libacdb-fts.so|1578268cdbd2a722affc4be02872353cc702a969
+vendor/lib/libacdbloader.so|4bbea222afe1a9a20566ff097c59e623ff0738f4
+vendor/lib/libacdbrtac.so|1804fa13c8bac7f02af550ef9ca0bb7ca672dd73
+vendor/lib/libadiertac.so|dde05100c7bc3e752ea984a6e74dafa5617e1bac
+vendor/lib/libadm.so|fd0c0a2a1864023c221a23bc4587fb85134e4e28
+vendor/lib/libaudcal.so|3d8ca7cab5849f9003844d17fa982a17ff2affff
+vendor/lib/libaudioalsa.so|89665aca431ac6de9f0848ff23fba585e70820e5
+vendor/lib/libaudioparsers.so|11ad61b7e57e57fe45929a66310c101984c3b341
+vendor/lib/libdrc.so|80297cbca91cc6ef470cd667d003e2b27990ef8e
+vendor/lib/libhdmipassthru.so|6fa8b4c4ccd9355047e416dea0927e5a0c035ca2
+vendor/lib/libqtigef.so|23f654b3be361b422d7d36375460d1dac232b350
+vendor/lib/libsurround_3mic_proc.so|9020976e90c2b78bcff5cbd6a913b1de8a436000
+vendor/lib/soundfx/libasphere.so|b16636ad3a2d5b4bf575012ed212b8e51269c7d5
+vendor/lib64/libacdb-fts.so|7ab3d376308ff949358819a4b65cd0bf095f2da1
+vendor/lib64/libacdbloader.so|a423320848031e21091bc9e163b2ce9dc27f2d90
+vendor/lib64/libacdbrtac.so|381ea26c98ce1bd00d0d3f0e30b8ced802703a1e
+vendor/lib64/libadiertac.so|9e4c4f06ad861f89487f3780c197a9a2cbbe12ed
+vendor/lib64/libaudcal.so|393768b0a7aa6ae5c87016381ab547e976018aea
+vendor/lib64/libaudioalsa.so|a743be854f0af2ae8f60d6c598f078a4c09f8b41
+vendor/lib64/libaudioparsers.so|ab849844b97f005231b1b3150e61cd4b67cbdb11
+vendor/lib64/libhdmipassthru.so|32c0323639a4c01b815fae0daff149de03d87ed0
+vendor/lib64/libqtigef.so|886285c40cd45a4f17d3b2e5e909da5a4fd9bf6c
+vendor/lib64/soundfx/libasphere.so|bd48aa3d7cf27bf3b12ce29f429b719383e104fc
 
-# Audio - hardware
-vendor/lib/hw/audio.primary.sm6150.so
-vendor/lib/libaudio_log_utils.so
-vendor/lib/libtinycompress_vendor.so
-vendor/lib64/hw/audio.primary.sm6150.so
-vendor/lib64/libaudio_log_utils.so
-vendor/lib64/libtinycompress_vendor.so
+# Audio Firmware
+vendor/firmware/tas2563_uCDSP.bin
 
 # Audio ACDB
 vendor/etc/acdbdata/IDP/IDP_Bluetooth_cal.acdb
@@ -801,17 +797,26 @@ vendor/lib64/vendor.qti.hardware.data.latency@1.0.so|ff7a319e51ddd4de14af28a84f7
 vendor/lib64/vendor.qti.latency@2.0.so|91a8b05b20485057ee9f42c55ce70207ef6af761
 
 # Listen - from davinci-user 10 QKQ1.190825.002 9.10.9 release-keys
+vendor/lib/hw/sound_trigger.primary.sm6150.so|8bae77966f5614665b7d3ac4db7fcb29806d63e3
 vendor/lib/libadpcmdec.so|8dc9036e15aa62a85becfda6eb4865de4308ce33
+vendor/lib/libcapiv2svacnn.so|f93b8628ab59ac93d73536142b931f0e059a3f28
+vendor/lib/libcapiv2vop.so|da2e8fc76aa2d5ea6a0f24b9002a5922aee68e63
 vendor/lib/libgcs-calwrapper.so|fa8ba4c39920f8ab1ffd8bb84a1b5d3953b377c5
 vendor/lib/libgcs-ipc.so|7bc3733efc941edc176a3c702d6d85438f4971f1
 vendor/lib/libgcs-osal.so|8d3a12a99a1da67cf0897a2ee6e6859e482c122c
 vendor/lib/libgcs.so|41d9701411cb42160fa3dee31ba86bb341909476
 vendor/lib/liblistensoundmodel2.so|04c2e792b63cc6074dc62c2c7baf5d85fbfc05c5
+vendor/lib/librice.so|2e966969b4fe157b3461a0cf8a5b284f1378e132
+vendor/lib/libsmwrapper.so|f9cb362def354cc0a8853aecaebc4394789f5a37
+vendor/lib64/hw/sound_trigger.primary.sm6150.so|561ccec329f6f3351dd064a5e35cc27c6dc1208c
+vendor/lib64/libcapiv2svacnn.so|a56f82f4bd038010bcae2bd9cec4819dbbfdc496
+vendor/lib64/libcapiv2vop.so|10a7057705174042e55add72fd4472fccca5e4b8
 vendor/lib64/libgcs-calwrapper.so|5a828b9697123634569eaa2f1751550ae6bf1601
 vendor/lib64/libgcs-ipc.so|963b1183b1950d16bd462d47b9149bfbd8c3a14a
 vendor/lib64/libgcs-osal.so|5eca0a8d8ea32505d5b8d69b3e13bf640b34976a
 vendor/lib64/libgcs.so|144b92a0f996879349400c6f0fc5daff0d8f5180
 vendor/lib64/liblistensoundmodel2.so|8aaa1875266d9c1798d3f78544599978e534d354
+vendor/lib64/librice.so|d90c7fe87420bc3482ec85af8df8cf1cddb84848
 
 # Machine learning - from davinci-user 10 QKQ1.190825.002 9.10.9 release-keys
 vendor/bin/hw/vendor.qti.hardware.mlshal@1.0-service|e04553770a8c6865e168d211613b4b893b748bff
