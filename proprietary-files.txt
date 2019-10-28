@@ -829,7 +829,7 @@ vendor/lib64/libssccalapi.so
 vendor/lib64/sensors.ssc.so
 
 # Soter
--app/SoterService/SoterService.apk
+-vendor/app/SoterService/SoterService.apk
 vendor/bin/hw/vendor.qti.hardware.soter@1.0-service
 vendor/etc/init/vendor.qti.hardware.soter@1.0-service.rc
 vendor/lib64/vendor.qti.hardware.soter@1.0.so
