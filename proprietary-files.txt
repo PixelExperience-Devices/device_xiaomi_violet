@@ -494,6 +494,22 @@ vendor/lib64/vendor.qti.hardware.data.qmi@1.0.so|90f1106f7462a9e01721e1159ed3301
 # Consumerir
 vendor/lib64/hw/consumerir.default.so
 
+# CVP - from davinci-user 10 QKQ1.190825.002 9.10.9 release-keys
+vendor/bin/hw/vendor.qti.hardware.cvp@1.0-service|c4d796056f605408da827289559e4d5a8cdfb8b3
+vendor/etc/init/vendor.qti.hardware.cvp@1.0-service.rc|8bc22298c934bdfc6290ae97b13da80fe99d1f89
+vendor/lib/hw/vendor.qti.hardware.cvp@1.0-impl.so|3b5eb1d53f9f0c67f20b833aff17f500df27fc6a
+vendor/lib/libcvp.so|65170c2e2af22862be6536213c6eff370d8609e9
+vendor/lib/libcvp_common.so|2f491a8ee32f0e5eddca98d82cc5fafc16ec154d
+vendor/lib/libcvp_stub.so|8175c8ffbc59cc243ee7bf9f6078f7008da6df43
+vendor/lib/vendor.qti.hardware.cvp@1.0-halimpl.so|3b22c1434b161f43452c2a1eefedc42480d80770
+vendor/lib/vendor.qti.hardware.cvp@1.0.so|7536777a5210033ad4d0cf45c635b8061a382168
+vendor/lib64/hw/vendor.qti.hardware.cvp@1.0-impl.so|d890c7a62dec4b11362c0d3bcf7ee5bf613ee8ac
+vendor/lib64/libcvp.so|c6cd518e70fa6d95213abda1893b9ac4790fd9b9
+vendor/lib64/libcvp_common.so|dd8b04458aeb8f8747b3901540aa8a3bd4200c43
+vendor/lib64/libcvp_stub.so|addf270a9e8339cec283e31ad72f1cebb27c5550
+vendor/lib64/vendor.qti.hardware.cvp@1.0-halimpl.so|d9ad45b11f3779ecac38f28ab3f1e44bc09119f6
+vendor/lib64/vendor.qti.hardware.cvp@1.0.so|8b4756451c038042970bd57330801cb49f89e1f2
+
 # Display calibration
 vendor/etc/qdcm_calib_data_ft8719_video_mode_dsi_tianma_panel.xml
 vendor/etc/qdcm_calib_data_nt36672a_video_mode_dsi_shenchao_panel.xml
