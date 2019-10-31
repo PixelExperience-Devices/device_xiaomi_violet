@@ -1,0 +1,2 @@
+# Allow hal_bluetooth_default to read files in wifi_vendor_data_file
+r_dir_file(hal_bluetooth_default, wifi_vendor_data_file)

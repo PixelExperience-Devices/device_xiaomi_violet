@@ -1,0 +1,22 @@
+type hal_motor_default, domain;	
+hal_server_domain(hal_motor_default, hal_motor)	
+
+type hal_motor_default_exec, exec_type, vendor_file_type, file_type;	
+init_daemon_domain(hal_motor_default)	
+
+binder_call(hal_motor_client, hal_motor_server)	
+
+add_hwservice(hal_motor_server, hal_motor_hwservice)	
+allow hal_motor_client hal_motor_hwservice:hwservice_manager find;
+
+# Allow hal_motor_default to read and write to { motor_device hall_device }
+allow hal_motor_default motor_device:chr_file rw_file_perms;
+allow hal_motor_default hall_device:chr_file { open read write };
+
+# Allow hal_motor_default to read and write to persist_sensors_file
+allow hal_motor_default persist_sensors_file:dir rw_dir_perms;
+allow hal_motor_default persist_sensors_file:file rw_file_perms;
+
+# Allow hal_motor_default to read and write to mnt_vendor_file
+allow hal_motor_default mnt_vendor_file:dir rw_dir_perms;
+allow hal_motor_default mnt_vendor_file:file rw_file_perms;

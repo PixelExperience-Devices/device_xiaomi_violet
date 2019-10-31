@@ -1,37 +1,29 @@
-# Audio
-tas.smartamp.           u:object_r:vendor_audio_prop:s0
-
 # Camera
-persist.camera.         u:object_r:vendor_camera_prop:s0
-persist.vendor.camera.  u:object_r:vendor_camera_prop:s0
-ro.boot.hwc             u:object_r:vendor_camera_prop:s0
-ro.camera.              u:object_r:vendor_camera_prop:s0
-camera.                 u:object_r:vendor_camera_prop:s0
-vendor.camera           u:object_r:vendor_camera_prop:s0
-
-# CHRE
-vendor.chre.enabled              u:object_r:vendor_chre_enabled_prop:s0
+camera. u:object_r:vendor_camera_prop:s0
+persist.camera. u:object_r:vendor_camera_prop:s0
+ro.boot.hwc u:object_r:public_vendor_default_prop:s0
+vendor.camera.  u:object_r:vendor_camera_prop:s0
 
 # Fingerprint
-gf.debug.dump_data u:object_r:vendor_fp_prop:s0
-persist.sys.fp.  u:object_r:vendor_fp_prop:s0
-ro.boot.fp.  u:object_r:vendor_fp_prop:s0
-ro.boot.fpsensor u:object_r:vendor_fp_prop:s0
-persist.vendor.fpc.  u:object_r:vendor_fp_prop:s0
+gf.debug.                  u:object_r:vendor_fp_prop:s0
+persist.vendor.sys.fp.     u:object_r:vendor_fp_prop:s0
+persist.sys.fp.            u:object_r:vendor_fp_prop:s0
+ro.boot.fpsensor           u:object_r:vendor_fp_prop:s0
+ro.hardware.fp             u:object_r:vendor_fp_prop:s0
+vendor.fps_hal.            u:object_r:vendor_fp_prop:s0
 
-# Media
-vendor.media.sm6150.version      u:object_r:vendor_media_sm6150_version_prop:s0
+# Init
+vendor.all.devices.ready        u:object_r:vendor_device_prop:s0
+
+# Power
+vendor.powerhal.state      u:object_r:power_prop:s0
+vendor.powerhal.audio      u:object_r:power_prop:s0
+vendor.powerhal.lpm        u:object_r:power_prop:s0
+vendor.powerhal.init       u:object_r:power_prop:s0
+vendor.powerhal.rendering  u:object_r:power_prop:s0
 
 # Mlipay
-persist.sys.ifaa                    u:object_r:ifaa_prop:s0
-persist.vendor.sys.pay.		    u:object_r:ifaa_prop:s0
-
-# Perf
-persist.vendor.perfservice.	u:object_r:vendor_mpctl_prop:s0
-
-# RIL
-ro.vendor.ril u:object_r:vendor_radio_prop:s0
+persist.vendor.sys.pay     u:object_r:vendor_tee_listener_prop:s0
 
 # Thermal
-sys.thermal.			u:object_r:thermal_engine_prop:s0
-persist.sys.thermal.		u:object_r:thermal_engine_prop:s0
+sys.thermal.               u:object_r:thermal_normal_prop:s0

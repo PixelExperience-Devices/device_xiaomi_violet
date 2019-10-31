@@ -1,6 +1,20 @@
-allow hal_power_default proc_touchpanel:file { w_file_perms read };
-allow hal_power_default proc_touchpanel:dir search;
-
 # Allow hal_power_default to write to dt2w nodes
 allow hal_power_default input_device:dir search;
 allow hal_power_default input_device:chr_file rw_file_perms;
+
+allow hal_power_default proc_touchpanel:dir search;
+allow hal_power_default proc_touchpanel:chr_file rw_file_perms;
+ 
+r_dir_file(hal_power_default, sysfs_graphics)
+
+# Rule for hal_power_default to access graphics composer process
+unix_socket_connect(hal_power_default, pps, hal_graphics_composer_default);
+
+# To do powerhint on nodes defined in powerhint.json
+allow hal_power_default { cgroup sysfs_devfreq }:dir search;
+allow hal_power_default { cgroup debugfs_sched_features sysfs sysfs_devfreq sysfs_devices_system_cpu sysfs_kgsl }:file rw_file_perms;
+allow hal_power_default latency_device:chr_file rw_file_perms;
+allow hal_power_default sysfs_kgsl:lnk_file rw_file_perms;
+
+# To get/set powerhal state property
+set_prop(hal_power_default, power_prop)

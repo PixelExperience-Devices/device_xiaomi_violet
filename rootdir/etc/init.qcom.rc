@@ -34,18 +34,9 @@ on early-init
     # Disable EAS
     write /sys/kernel/debug/sched_features NO_ENERGY_AWARE
     mount_all /vendor/etc/fstab.persist --early
-    mkdir /dsp 0771 media media
-    mkdir /firmware 0771 system system
-    mkdir /bt_firmware 0771 system system
-    symlink /data/tombstones /tombstones
 
     mount debugfs debugfs /sys/kernel/debug
     chmod 0755 /sys/kernel/debug
-
-    # Create symlink for vendor mount points
-    symlink /vendor/firmware_mnt /firmware
-    symlink /vendor/bt_firmware /bt_firmware
-    symlink /vendor/dsp /dsp
 
     # Change ownership of hw_recovery related nodes
     chown system graphics /sys/kernel/debug/dri/0/debug/dump
@@ -411,11 +402,6 @@ on boot
 
 # msm specific files that need to be created on /data
 on post-fs-data
-    mkdir /data/tombstones 0771 system system
-    mkdir /tombstones/modem 0771 system system
-    mkdir /tombstones/lpass 0771 system system
-    mkdir /tombstones/wcnss 0771 system system
-    mkdir /tombstones/dsps 0771 system system
     mkdir /data/vendor/hbtp 0750 system system
     mkdir /mnt/vendor/persist/qti_fp 0700 system system
 
@@ -447,7 +433,6 @@ on post-fs-data
     mkdir /data/vendor/camera 0770 camera camera
 
     # Create directory for tftp
-    mkdir /data/vendor/tombstones 0771 system system
     mkdir /data/vendor/tombstones/rfs 0771 system system
 
     mkdir /data/vendor/ramdump 0771 root system

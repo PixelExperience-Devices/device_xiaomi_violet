@@ -1,5 +1,17 @@
+# For interfacing with PowerHAL
+hal_client_domain(hal_audio_default, hal_power)
+
+# Allow hal_audio_default to read persist_audio_file
 r_dir_file(hal_audio_default, persist_audio_file)
-allow hal_audio_default property_socket:sock_file write;
-allow hal_audio_default init:unix_stream_socket { connectto };
-allow hal_audio_default mnt_vendor_file:dir search;
-get_prop(hal_audio_default, vendor_audio_prop)
+
+# Allow hal_audio_default to read sysfs
+r_dir_file(hal_audio_default, sysfs)
+
+allow hal_audio_default sound_device:chr_file rw_file_perms;
+
+allow hal_audio_default audio_socket:sock_file rw_file_perms;
+
+# Rule for hal_audio_default to access init process
+unix_socket_connect(hal_audio_default, property, init);
+
+set_prop(hal_audio_default, vendor_audio_prop)
