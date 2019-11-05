@@ -883,6 +883,8 @@ lib64/libwfduibcsinkinterface.so|c48c93990b73f18f27ba112f1df1c89f960044d1
 lib64/libwfduibcsrc.so|72ae9ef578d8b9383d1059b655df92d8289ee979
 lib64/libwfduibcsrcinterface.so|0e0502124a3d6b82890114a96d29459d6d00e39f
 -priv-app/WfdService/WfdService.apk|b3666906ec4487dc485ab34c7f51f49729ca9d88
+product/lib64/vendor.qti.hardware.wifidisplaysession@1.0.so|a9362219c300266a90a7a26f45c70a8c427fb64d
+product/lib/vendor.qti.hardware.wifidisplaysession@1.0.so|92851078f89307192cc80b2d971208bb0ce65e79
 vendor/bin/wfdvndservice|c21eb2fffe1aeceac0fd6c1b8dc1ab1f13f7027a
 vendor/bin/wifidisplayhalservice|7964a4f9284edfc96156bcd03d34cff003126a34
 vendor/etc/init/com.qualcomm.qti.wifidisplayhal@1.0-service.rc|ca2f5157de56d0917243522f609022b3faad3ddc
