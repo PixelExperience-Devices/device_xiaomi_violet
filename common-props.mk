@@ -138,7 +138,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
     vendor.display.dataspace_saturation_matrix=1.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,1.0 \
     vendor.display.disable_decimation=1 \
     vendor.display.disable_excl_rect=0 \
-    vendor.display.disable_excl_rect_partial_fb=1 \
     vendor.display.enable_default_color_mode=1 \
     vendor.display.enable_force_split=1 \
     vendor.display.disable_inline_rotator=1 \
