@@ -638,7 +638,7 @@ product/etc/permissions/telephonyservice.xml
 product/etc/permissions/telephony_product_privapp-permissions-qti.xml
 product/framework/embmslibrary.jar
 product/framework/qcrilhook.jar
-product/framework/qti-telephony-common.jar|a28ef4bdf31b8d036a417366413d67c7671dd400
+product/framework/qti-telephony-common.jar|f5ab97a0b2b3784021ae68d09edf71f6f73c2c83
 product/framework/QtiTelephonyServicelibrary.jar
 -product/priv-app/qcrilmsgtunnel/qcrilmsgtunnel.apk
 vendor/bin/ATFWD-daemon
