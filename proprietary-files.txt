@@ -985,9 +985,6 @@ vendor/etc/init/vendor.qti.hardware.qdutils_disp@1.0-service-qti.rc|69d9cbc54f8a
 vendor/lib/vendor.qti.hardware.qdutils_disp@1.0.so|9aa1eacb0880e2cf95f3745f13b1e2222dceb562
 vendor/lib64/vendor.qti.hardware.qdutils_disp@1.0.so|f227ee67b99082b8aeea5ef9830a3c23efc7e4c6
 
-# Power-off charging daemon
--sbin/charger:sbin/chargeonlymode;rootfs|f048d2cc20783ba1a608b73d440b3053af6ec9fd
-
 # Postprocessing - from davinci-user 10 QKQ1.190825.002 9.10.9 release-keys
 product/lib64/vendor.display.color@1.0.so|e90c75046ba1f6f677b9f719caaae8d91d1a5cde
 vendor/bin/hw/vendor.display.color@1.0-service|ab46995540bd4721e1241de17241e55dbbd5435c

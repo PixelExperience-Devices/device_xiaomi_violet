@@ -847,7 +847,7 @@ service profiler_daemon /system/bin/profiler_daemon
     group root
     disabled
 
-service charger /sbin/chargeonlymode
+service charger /system/bin/charger
     class charger
     group system graphics
     seclabel u:r:charger:s0
