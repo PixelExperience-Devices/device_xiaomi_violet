@@ -447,6 +447,9 @@ else
     set_perms /sys/devices/virtual/hdcp/msm_hdcp/min_level_change system.graphics 0660
 fi
 
+# fix the persist sensors context
+chcon -R u:object_r:persist_sensors_file:s0 /mnt/vendor/persist/sensors
+
 # allow system_graphics group to access pmic secure_mode node
 set_perms /sys/class/lcd_bias/secure_mode system.graphics 0660
 set_perms /sys/class/leds/wled/secure_mode system.graphics 0660
