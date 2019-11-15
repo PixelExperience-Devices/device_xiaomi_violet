@@ -146,6 +146,13 @@ PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.frp.pst=/dev/block/bootdevice/by-name/frp
 
+# IMS	
+PRODUCT_PROPERTY_OVERRIDES += \	
+    persist.dbg.ims_volte_enable=1 \	
+    persist.dbg.volte_avail_ovr=1 \	
+    persist.dbg.vt_avail_ovr=1 \	
+    persist.dbg.wfc_avail_ovr=1
+    
 # Keystore
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.hardware.keystore_desede=true
