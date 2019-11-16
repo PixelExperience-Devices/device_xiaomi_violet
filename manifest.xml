@@ -567,6 +567,16 @@ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
             <instance>default</instance>
         </interface>
     </hal>
+    <!-- QCC HAL Service -->
+    <hal format="hidl">
+        <name>vendor.qti.hardware.qccvndhal</name>
+        <transport>hwbinder</transport>
+        <version>1.0</version>
+        <interface>
+            <name>IQccvndhal</name>
+            <instance>qccvndhal</instance>
+        </interface>
+    </hal> <!-- QCC HAL Service -->
      <!-- dpm QMI hal service -->
      <hal format="hidl">
          <name>com.qualcomm.qti.dpm.api</name>
