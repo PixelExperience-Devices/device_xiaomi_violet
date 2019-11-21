@@ -597,7 +597,7 @@ on property:sys.boot_completed=1
     # Setup runtime blkio
     # value for group_idle is us
     write /dev/blkio/blkio.weight 1000
-    write /dev/blkio/background/blkio.weight 10
+    write /dev/blkio/background/blkio.weight 200
     write /dev/blkio/blkio.group_idle 2000
     write /dev/blkio/background/blkio.group_idle 0
 
