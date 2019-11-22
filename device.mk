@@ -77,19 +77,13 @@ PRODUCT_PACKAGES += \
     android.hardware.soundtrigger@2.1-impl \
     audio.a2dp.default \
     audio.bluetooth.default \
-    audio.primary.sm6150 \
     audio.r_submix.default \
     audio.usb.default \
     libaudio-resampler \
     libaudioroute \
-    libcirrusspkrprot \
-    libhdmiedid \
-    libhfp \
     libqcompostprocbundle \
     libqcomvisualizer \
     libqcomvoiceprocessing \
-    libsndmonitor \
-    libspkrprot \
     libvolumelistener \
     tinymix
 
