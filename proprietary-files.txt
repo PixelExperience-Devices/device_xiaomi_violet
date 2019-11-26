@@ -529,6 +529,20 @@ vendor/bin/pm-proxy|b7278fbb1f9fec5394a80055e5eb4878acd60022
 vendor/bin/pm-service|ed6593c7a5f6e6347034c3fcb41c6c75f94fd109
 vendor/lib64/libperipheral_client.so|6d188816240b066555824e163f26174b674ce774
 
+# Popup camera sound effects - from davinci-user-10-QKQ1.190825.002-V11.0.2.0.QFJCNXM-release-keys
+media/audio/ui/popup_cangmen_down.ogg|573b107889ccf639db5455af21129ce1fee93bc5
+media/audio/ui/popup_cangmen_up.ogg|f152dea254b4eaae403b791c49c60c05ccf12ea7
+media/audio/ui/popup_chilun_down.ogg|e200a3de45abbf2057ca0c6a735b6a6a78ec1b1c
+media/audio/ui/popup_chilun_up.ogg|908bd714b58648c8861c0e56ca7c6f0db84d4e2b
+media/audio/ui/popup_jijia_down.ogg|680b41897aaa47972630012e0c68396bf4cbe9c7
+media/audio/ui/popup_jijia_up.ogg|bd71c2f07f439a2afc9e9b435ef8d1a7a28a4fc1
+media/audio/ui/popup_mofa_down.ogg|ebfec5126f64a5eea69aad43af169de5eed398ae
+media/audio/ui/popup_mofa_up.ogg|95ef57769ca5e4a3264e4adf7c9958d55ff1a32c
+media/audio/ui/popup_muqin_down.ogg|3ecf82ae3d4ec853e0832901d2163c252ad62e07
+media/audio/ui/popup_muqin_up.ogg|047ae904c2932bc6112cd7ef4458f4cad1972181
+media/audio/ui/popup_yingyan_down.ogg|de1623b20f311322dc79a3d152ca30318e1ed0db
+media/audio/ui/popup_yingyan_up.ogg|0c3a716ba49dd682a6d58cca04eece0f81ca6834
+
 # Postprocessing - from LA.UM.8.9.r1-05500-SM6xx.0
 vendor/bin/hw/vendor.display.color@1.0-service|8646c74c5b19e6d5086d7a4f83e0757610d18f3f
 vendor/bin/ppd|df9140d5c836508b0f79cf34c882089aab1d16c7
