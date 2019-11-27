@@ -1,5 +1,0 @@
-cc_library_static {
-    name: "libcamera_parameters_ext_violet",
-    include_dirs: ["frameworks/av/include"],
-    srcs: ["CameraParameters.cpp"],
-}
