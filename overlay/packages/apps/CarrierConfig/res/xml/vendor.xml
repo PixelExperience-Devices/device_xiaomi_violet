@@ -2150,6 +2150,10 @@ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.-->
     <carrier_config mcc="404" mnc="93">
         <boolean name="carrier_volte_available_bool" value="true" />
     </carrier_config>
+    
+    <carrier_config mcc="404" mnc="94">
+        <boolean name="carrier_volte_available_bool" value="true" />
+    </carrier_config>
 
     <carrier_config mcc="404" mnc="95">
         <boolean name="carrier_volte_available_bool" value="true" />
