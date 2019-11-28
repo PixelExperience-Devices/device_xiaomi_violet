@@ -535,9 +535,6 @@
     <!-- Whether device ignores the RSSNR signal implementation -->
     <bool name="config_ignoreRssnrSignalLevel">true</bool>
 
-    <!-- Pocket Lock -->
-    <bool name="config_pocketModeSupported">false</bool>
-
     <!-- True if the firmware supports connected MAC randomization -->
     <bool name="config_wifi_connected_mac_randomization_supported">true</bool>
 
