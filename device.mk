@@ -63,6 +63,10 @@ PRODUCT_PACKAGES += \
     rcs_service_api \
     rcs_service_api.xml
 
+# Recovery Ramdisk
+PRODUCT_PACKAGES += \
+    init.recovery.qcom.rc
+
 # AOT Preload
 PRODUCT_DEXPREOPT_SPEED_APPS += \
     SystemUI \
