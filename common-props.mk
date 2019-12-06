@@ -103,15 +103,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.crypto.allow_encrypt_override=true \
     ro.crypto.volume.filenames_mode=aes-256-cts
 
-# Dalvik VM
-PRODUCT_PROPERTY_OVERRIDES += \
-    dalvik.vm.heapstartsize=8m \
-    dalvik.vm.heapmaxfree=8m \
-    dalvik.vm.heapminfree=512k \
-    dalvik.vm.heapsize=512m \
-    dalvik.vm.heaptargetutilization=0.75 \
-    ro.dalvik.vm.native.bridge=0
- 
 # Display post-processing
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.vendor.display.cabl=2 \
