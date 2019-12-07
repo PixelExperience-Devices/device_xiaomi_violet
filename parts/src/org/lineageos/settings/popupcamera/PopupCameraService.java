@@ -27,15 +27,13 @@ import android.hardware.SensorEventListener;
 import android.hardware.SensorManager;
 import android.media.AudioAttributes;
 import android.media.SoundPool;
-import android.os.IBinder;
 import android.os.Handler;
-import android.os.SystemClock;
+import android.os.IBinder;
 import android.os.UserHandle;
 import android.util.Log;
 
-import java.util.List;
-
 import org.lineageos.internal.util.FileUtils;
+
 import vendor.xiaomi.hardware.motor.V1_0.IMotor;
 
 public class PopupCameraService extends Service {
@@ -44,10 +42,12 @@ public class PopupCameraService extends Service {
     private static final boolean DEBUG = false;
     private static final String closeCameraState = "0";
     private static final String openCameraState = "1";
+    private static final int FREE_FALL_SENSOR_ID = 33171042;
+    private static final String GREEN_LED_PATH = "/sys/class/leds/green/brightness";
+    private static final String BLUE_LED_PATH = "/sys/class/leds/blue/brightness";
     private static String mCameraState = "-1";
-
+    private static Handler mHandler = new Handler();
     private IMotor mMotor = null;
-
     private SensorManager mSensorManager;
     private Sensor mFreeFallSensor;
     private PopupCameraPreferences mPopupCameraPreferences;
@@ -57,16 +57,33 @@ public class PopupCameraService extends Service {
             "popup_cangmen_down.ogg" };
     private SoundPool mSoundPool;
     private int[] mSounds = new int[mSoundNames.length];
-    private static final int FREE_FALL_SENSOR_ID = 33171042;
+    private SensorEventListener mFreeFallListener = new SensorEventListener() {
+        @Override
+        public void onSensorChanged(SensorEvent event) {
+            if (event.sensor.getType() == FREE_FALL_SENSOR_ID && event.values[0] == 2.0f) {
+                updateMotor(closeCameraState);
+                goBackHome();
+            }
+        }
 
-    private static final String GREEN_LED_PATH = "/sys/class/leds/green/brightness";
-    private static final String BLUE_LED_PATH = "/sys/class/leds/blue/brightness";
-
-    private static Handler mHandler = new Handler();
+        @Override
+        public void onAccuracyChanged(Sensor sensor, int accuracy) {
+        }
+    };
+    private BroadcastReceiver mIntentReceiver = new BroadcastReceiver() {
+        @Override
+        public void onReceive(Context context, Intent intent) {
+            final String action = intent.getAction();
+            if (lineageos.content.Intent.ACTION_CAMERA_STATUS_CHANGED.equals(action)) {
+                mCameraState = intent.getExtras().getString(lineageos.content.Intent.EXTRA_CAMERA_STATE);
+                updateMotor(mCameraState);
+            }
+        }
+    };
 
     @Override
     public void onCreate() {
-        mSensorManager = this.getSystemService(SensorManager.class);
+        mSensorManager = getSystemService(SensorManager.class);
         mFreeFallSensor = mSensorManager.getDefaultSensor(FREE_FALL_SENSOR_ID);
         registerReceiver();
         mPopupCameraPreferences = new PopupCameraPreferences(this);
@@ -85,6 +102,7 @@ public class PopupCameraService extends Service {
         try {
             mMotor = IMotor.getService();
         } catch (Exception e) {
+            // Do nothing
         }
     }
 
@@ -99,7 +117,7 @@ public class PopupCameraService extends Service {
     public void onDestroy() {
         if (DEBUG)
             Log.d(TAG, "Destroying service");
-        this.unregisterReceiver(mIntentReceiver);
+        unregisterReceiver(mIntentReceiver);
         super.onDestroy();
     }
 
@@ -110,24 +128,10 @@ public class PopupCameraService extends Service {
 
     private void registerReceiver() {
         IntentFilter filter = new IntentFilter();
-        filter.addAction("android.intent.action.ACTION_SHUTDOWN");
-        filter.addAction("android.intent.action.SCREEN_ON");
-        filter.addAction("android.intent.action.SCREEN_OFF");
-        filter.addAction("lineageos.intent.action.CAMERA_STATUS_CHANGED");
-        filter.addAction("lineageos.intent.action.ACTIVE_PACKAGE_CHANGED");
-        this.registerReceiver(mIntentReceiver, filter);
+        filter.addAction(Intent.ACTION_SCREEN_OFF);
+        filter.addAction(lineageos.content.Intent.ACTION_CAMERA_STATUS_CHANGED);
+        registerReceiver(mIntentReceiver, filter);
     }
-
-    private BroadcastReceiver mIntentReceiver = new BroadcastReceiver() {
-        @Override
-        public void onReceive(Context context, Intent intent) {
-            final String action = intent.getAction();
-            if (lineageos.content.Intent.ACTION_CAMERA_STATUS_CHANGED.equals(action)) {
-                mCameraState = intent.getExtras().getString(lineageos.content.Intent.EXTRA_CAMERA_STATE);
-                updateMotor(mCameraState);
-            }
-        }
-    };
 
     private void updateMotor(String cameraState) {
         if (mMotor == null)
@@ -145,6 +149,7 @@ public class PopupCameraService extends Service {
                 mSensorManager.unregisterListener(mFreeFallListener, mFreeFallSensor);
             }
         } catch (Exception e) {
+            // Do nothing
         }
     }
 
@@ -173,24 +178,10 @@ public class PopupCameraService extends Service {
         }
     }
 
-    private SensorEventListener mFreeFallListener = new SensorEventListener() {
-        @Override
-        public void onSensorChanged(SensorEvent event) {
-            if (event.sensor.getType() == FREE_FALL_SENSOR_ID && event.values[0] == 2.0f) {
-                updateMotor(closeCameraState);
-                goBackHome();
-            }
-        }
-
-        @Override
-        public void onAccuracyChanged(Sensor sensor, int accuracy) {
-        }
-    };
-
     public void goBackHome() {
         Intent homeIntent = new Intent(Intent.ACTION_MAIN);
         homeIntent.addCategory(Intent.CATEGORY_HOME);
         homeIntent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-        startActivity(homeIntent);
+        startActivityAsUser(homeIntent, null, UserHandle.CURRENT);
     }
 }
