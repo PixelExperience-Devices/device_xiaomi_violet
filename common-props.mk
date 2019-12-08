@@ -82,21 +82,11 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 # Bluetooth
 PRODUCT_PROPERTY_OVERRIDES += \
-    persist.vendor.bt.a2dp_offload_cap=sbc-aptx-aptxtws-aptxhd-aac-ldac-aptxadaptive \
-    persist.vendor.bt.aac_frm_ctl.enabled=true \
-    vendor.bluetooth.soc=cherokee \
-    vendor.qcom.bluetooth.soc=cherokee
+    persist.vendor.bt.aac_frm_ctl.enabled=true
 
 # Camera
 PRODUCT_PROPERTY_OVERRIDES += \
     camera.disable_zsl_mode=1
-
-# CNE/DPM
-PRODUCT_PROPERTY_OVERRIDES += \
-    persist.vendor.cne.feature=1 \
-    persist.vendor.dpm.feature=1 \
-    persist.vendor.dpm.loglevel=0 \
-    persist.vendor.dpm.nsrm.bkg.evt=3955
 
 # Crypto
  PRODUCT_PROPERTY_OVERRIDES += \
@@ -134,11 +124,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
     debug.sf.enable_hwc_vds=1 \
     debug.sf.hw=0 \
     debug.sf.latch_unsignaled=1 \
-    persist.debug.wfd.enable=1 \
-    persist.demo.hdmirotationlock=false \
-    persist.hwc.enable_vds=1 \
     persist.sys.sf.color_saturation=1.0 \
-    persist.sys.wfd.virtual=0 \
     ro.opengles.version=196610 \
     vendor.display.comp_mask=0 \
     vendor.display.disable_decimation=1 \
@@ -210,14 +196,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_PROPERTY_OVERRIDES += \
     audio.offload.video=true
 
-# Memory Optimisations
-PRODUCT_PROPERTY_OVERRIDES += \
-    ro.vendor.qti.sys.fw.bservice_enable=true
-
-# NetFlix
-PRODUCT_PROPERTY_OVERRIDES += \
-    ro.netflix.bsp_rev=Q6150-17263-1
-
 # Netmgr
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.vendor.data.iwlan.enable=true
@@ -232,15 +210,11 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 # Data modules
 PRODUCT_PROPERTY_OVERRIDES += \
-    persist.data.df.dev_name=rmnet_usb0 \
-    persist.vendor.data.profile_update=true \
     persist.vendor.data.mode=concurrent \
     ro.vendor.use_data_netmgrd=true
 
 # Radio/RIL
 PRODUCT_PROPERTY_OVERRIDES += \
-    DEVICE_PROVISIONED=1 \
-    persist.radio.atfwd.start=false \
     persist.radio.multisim.config=dsds \
     persist.vendor.radio.apm_sim_not_pwdn=1 \
     persist.vendor.radio.custom_ecc=1 \
@@ -248,7 +222,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
     persist.vendor.radio.redir_party_num=1 \
     persist.vendor.radio.rat_on=combine \
     persist.vendor.radio.sib16_support=1 \
-    ril.subscription.types=RUIM \
     rild.libpath=/vendor/lib64/libril-qc-hal-qmi.so \
     ro.telephony.default_network=22,22 \
     telephony.lteOnCdmaDevice=1
