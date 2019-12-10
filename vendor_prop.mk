@@ -136,6 +136,10 @@ PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
     ro.oem_unlock_supported=1 \
     ro.vendor.qti.va_aosp.support=1
 
+# Recovery
+PRODUCT_PROPERTY_OVERRIDES += \
+    persist.sys.recovery_update=true
+
 # RIL
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.radio.multisim.config=dsds \
