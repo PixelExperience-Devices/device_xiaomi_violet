@@ -652,12 +652,6 @@ service insmod_sh /vendor/bin/init.insmod.sh /vendor/etc/init.insmod.cfg
     disabled
     oneshot
 
-service time_daemon /vendor/bin/time_daemon
-    class main
-    user system
-    group system
-    capabilities SYS_TIME
-
 on property:ro.vendor.radio.noril=*
     setprop ro.radio.noril ${ro.vendor.radio.noril}
 
