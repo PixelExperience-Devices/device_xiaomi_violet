@@ -124,6 +124,9 @@ TARGET_RECOVERY_UI_MARGIN_HEIGHT := 80
 # Releasetools
 TARGET_RELEASETOOLS_EXTENSIONS := device/xiaomi/violet-firmware
 
+# SurfaceFlinger
+TARGET_USE_AOSP_SURFACEFLINGER := true
+
 # Sepolicy
 BOARD_PLAT_PRIVATE_SEPOLICY_DIR += $(DEVICE_PATH)/sepolicy/private
 
