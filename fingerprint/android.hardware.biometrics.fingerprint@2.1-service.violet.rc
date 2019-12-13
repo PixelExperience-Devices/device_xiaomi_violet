@@ -13,3 +13,7 @@ service vendor.fps_hal /vendor/bin/hw/android.hardware.biometrics.fingerprint@2.
     user system
     group system input uhid
     writepid /dev/cpuset/system-background/tasks
+    disabled
+
+on property:ro.crypto.state=encrypted
+    enable vendor.fps_hal
