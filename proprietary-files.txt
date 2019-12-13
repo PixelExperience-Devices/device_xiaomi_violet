@@ -58,16 +58,6 @@ vendor/etc/init/vendor.qti.hardware.alarm@1.0-service.rc
 vendor/lib64/hw/vendor.qti.hardware.alarm@1.0-impl.so
 vendor/lib64/vendor.qti.hardware.alarm@1.0.so
 
-# ANT+
--lib64/libantradio.so
--lib/libantradio.so
-product/lib64/com.qualcomm.qti.ant@1.0.so
-product/lib/com.qualcomm.qti.ant@1.0.so
-vendor/lib64/com.qualcomm.qti.ant@1.0.so
-vendor/lib64/hw/com.qualcomm.qti.ant@1.0-impl.so
-vendor/lib/com.qualcomm.qti.ant@1.0.so
-vendor/lib/hw/com.qualcomm.qti.ant@1.0-impl.so
-
 # Audio
 vendor/lib64/libadiertac.so
 vendor/lib64/libaudcal.so
