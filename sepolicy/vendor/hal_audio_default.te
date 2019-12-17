@@ -15,3 +15,5 @@ allow hal_audio_default audio_socket:sock_file rw_file_perms;
 unix_socket_connect(hal_audio_default, property, init);
 
 set_prop(hal_audio_default, vendor_audio_prop)
+
+dontaudit hal_audio_default sysfs:dir read;
