@@ -6,15 +6,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
     audio.offload.video=true \
     audio.sys.noisy.broadcast.delay=600 \
     audio.sys.offload.pstimeout.secs=3 \
-    persist.audio.fluence.speaker=true \
-    persist.audio.fluence.voicecall=true\
-    persist.audio.fluence.voicecomm=true \
-    persist.audio.fluence.voicerec=false\
     persist.vendor.audio.ras.enabled=false \
-    ro.config.media_vol_steps=25 \
-    ro.config.vc_call_vol_steps=7 \
-    ro.qc.sdk.audio.fluencetype=none \
-    ro.qc.sdk.audio.ssr=false \
     ro.vendor.audio.sdk.fluencetype=none \
     ro.vendor.audio.sdk.ssr=false \
     vendor.audio.adm.buffering.ms=12 \
@@ -43,10 +35,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
     persist.vendor.bt.a2dp_offload_cap=sbc-aptx-aptxtws-aptxhd-aac-ldac-aptxadaptive \
     persist.vendor.bt.aac_frm_ctl.enabled=true \
     vendor.qcom.bluetooth.soc=cherokee
-
-# Camera
-PRODUCT_PROPERTY_OVERRIDES += \
-    vendor.camera.aux.packagelist=org.codeaurora.snapcam,com.android.camera,org.lineageos.snap
 
 # CNE and DPM
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -106,26 +94,10 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.hardware.keystore_desede=true
 
-# Media
-PRODUCT_PROPERTY_OVERRIDES += \
-    media.aac_51_output_enabled=true \
-    media.stagefright.enable-aac=true \
-    media.stagefright.enable-fma2dp=true \
-    media.stagefright.enable-http=true \
-    media.stagefright.enable-player=true \
-    media.stagefright.enable-qcp=true \
-    media.stagefright.enable-scan=true \
-    persist.mm.enable.prefetch=true
-
 # Netmgr
 PRODUCT_PROPERTY_OVERRIDES += \
-    persist.data.df.dev_name=rmnet_usb0 \
     persist.vendor.data.iwlan.enable=true \
     persist.vendor.data.mode=concurrent
-
-# Netflix
-PRODUCT_PROPERTY_OVERRIDES += \
-    ro.netflix.bsp_rev=Q6150-17263-1
 
 # Perf
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -135,10 +107,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
     ro.oem_unlock_supported=1 \
     ro.vendor.qti.va_aosp.support=1
-
-# Recovery
-PRODUCT_PROPERTY_OVERRIDES += \
-    persist.sys.recovery_update=true
 
 # RIL
 PRODUCT_PROPERTY_OVERRIDES += \

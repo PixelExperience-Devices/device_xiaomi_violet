@@ -1,0 +1,31 @@
+# Audio
+persist.audio.fluence.speaker=true
+persist.audio.fluence.voicecall=true
+persist.audio.fluence.voicecomm=true
+persist.audio.fluence.voicerec=false
+ro.config.media_vol_steps=25
+ro.config.vc_call_vol_steps=7
+ro.qc.sdk.audio.fluencetype=none
+ro.qc.sdk.audio.ssr=false
+
+# Camera
+vendor.camera.aux.packagelist=org.codeaurora.snapcam,com.android.camera,org.lineageos.snap
+
+# Media
+media.aac_51_output_enabled=true
+media.stagefright.enable-aac=true
+media.stagefright.enable-fma2dp=true
+media.stagefright.enable-http=true
+media.stagefright.enable-player=true
+media.stagefright.enable-qcp=true
+media.stagefright.enable-scan=true
+persist.mm.enable.prefetch=true
+
+# Netmgr
+persist.data.df.dev_name=rmnet_usb0
+
+# Netflix
+ro.netflix.bsp_rev=Q6150-17263-1
+
+# Recovery
+persist.sys.recovery_update=true
