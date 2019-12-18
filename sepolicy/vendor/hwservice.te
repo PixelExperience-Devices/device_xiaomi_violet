@@ -1,3 +1,7 @@
 type hal_mlipay_hwservice, hwservice_manager_type;
 
 type hal_motor_hwservice, hwservice_manager_type;
+
+type nxpese_hwservice, hwservice_manager_type;
+
+type nxpnfc_hwservice, hwservice_manager_type;
