@@ -1,4 +1,4 @@
-# ADSP - from davinci-user 10 QKQ1.190825.002 9.10.9 release-keys
+# ADSP - from davinci-user 10 QKQ1.190825.002 V11.0.2.0.QFJCNXM release-keys
 vendor/bin/adsprpcd|0cdd541ee0a365c5dccd0613e495611f4d0f6607
 vendor/etc/init/vendor.qti.adsprpc-sscrpc-service.rc|13d8a911642844bde32d533948a35730e17d41ad
 vendor/lib/libadsp_default_listener.so|7da1a1cfef2f04e3577d0e1cda81ce12204598fa
@@ -10,7 +10,7 @@ vendor/lib64/libadsprpc.so|aea62273ca4355ceb76dfeec2cd11d39614a854e
 vendor/lib64/libmdsprpc.so|df135d5ca3e0ac4ccc670a4133f781d77315f089
 vendor/lib64/libsdsprpc.so|65f23710d4895b738c9eb827b513b1d9d9480aad
 
-# ADSP modules - from davinci-user 10 QKQ1.190825.002 9.10.9 release-keys
+# ADSP modules - from davinci-user 10 QKQ1.190825.002 V11.0.2.0.QFJCNXM release-keys
 vendor/lib/rfsa/adsp/capi_v2_aptX_Classic.so|59cbdf5d84ba2ff64014941f3ad9e6c2c35e2c06
 vendor/lib/rfsa/adsp/capi_v2_aptX_HD.so|e25f1087edc95d2ff76c1e37787ca37aae2cf175
 vendor/lib/rfsa/adsp/dirac_resource.dar|8697ff9e77a872b849cd2ce95afa45dac97cb01e
@@ -28,7 +28,7 @@ vendor/lib/rfsa/adsp/libhexagon_nn_skel.so|1dc2f84efcb8ac9a72f98de014b7f763ad618
 vendor/lib/rfsa/adsp/libsns_device_mode_skel.so|733a5b8861bb6eb1285bb8982992531c94800997
 vendor/lib/rfsa/adsp/libsns_low_lat_stream_skel.so|c30bb30eecf968e02f72c055d3cc13a7f769644f
 
-# Alarm - from davinci-user 10 QKQ1.190825.002 9.10.9 release-keys
+# Alarm - from davinci-user 10 QKQ1.190825.002 V11.0.2.0.QFJCNXM release-keys
 -product/app/PowerOffAlarm/PowerOffAlarm.apk|29ea64d6d9b20b29f7b3ffb3f71a81038a0ec64c
 product/framework/vendor.qti.hardware.alarm-V1.0-java.jar|69dedc62181ae26bb2fac4eaacb1f2c38eb21c31
 vendor/bin/power_off_alarm|9f800336a28ad1ad111f164b8c779313cddc98c1
@@ -49,7 +49,7 @@ vendor/lib/hw/com.qualcomm.qti.ant@1.0-impl.so|1626b16bd3de85db4bd68e933bef0d24f
 vendor/lib64/com.qualcomm.qti.ant@1.0.so|671430030323a3e8b5dd334383143df6dd85d0fa
 vendor/lib64/hw/com.qualcomm.qti.ant@1.0-impl.so|83759b8f07fb1e64baecff205cef1f2e67381243
 
-# Audio - from davinci-user 10 QKQ1.190825.002 9.10.9 release-keys
+# Audio - from davinci-user 10 QKQ1.190825.002 V11.0.2.0.QFJCNXM release-keys
 etc/permissions/audiosphere.xml|3c6d8f14bd99e52a424282fd5d0a5b9b06485dea
 framework/audiosphere.jar|c1679f5aca56f0cb24745b3f7d219acd04833bed
 vendor/lib/libacdb-fts.so|1578268cdbd2a722affc4be02872353cc702a969
@@ -57,11 +57,11 @@ vendor/lib/libacdbloader.so|4bbea222afe1a9a20566ff097c59e623ff0738f4
 vendor/lib/libacdbrtac.so|1804fa13c8bac7f02af550ef9ca0bb7ca672dd73
 vendor/lib/libadiertac.so|dde05100c7bc3e752ea984a6e74dafa5617e1bac
 vendor/lib/libadm.so|fd0c0a2a1864023c221a23bc4587fb85134e4e28
-vendor/lib/libaudcal.so|3d8ca7cab5849f9003844d17fa982a17ff2affff
+vendor/lib/libaudcal.so|38efce23772f90564123ef842dfb1cd66f63b5a2
 vendor/lib/libaudioalsa.so|89665aca431ac6de9f0848ff23fba585e70820e5
 vendor/lib/libaudioparsers.so|11ad61b7e57e57fe45929a66310c101984c3b341
 vendor/lib/libdrc.so|80297cbca91cc6ef470cd667d003e2b27990ef8e
-vendor/lib/libhdmipassthru.so|6fa8b4c4ccd9355047e416dea0927e5a0c035ca2
+vendor/lib/libhdmipassthru.so|9791b492788d3f678e1dfe63b53d091ef7f6459b
 vendor/lib/libqtigef.so|23f654b3be361b422d7d36375460d1dac232b350
 vendor/lib/libsurround_3mic_proc.so|9020976e90c2b78bcff5cbd6a913b1de8a436000
 vendor/lib/soundfx/libasphere.so|b16636ad3a2d5b4bf575012ed212b8e51269c7d5
@@ -72,10 +72,10 @@ vendor/lib64/libacdb-fts.so|7ab3d376308ff949358819a4b65cd0bf095f2da1
 vendor/lib64/libacdbloader.so|a423320848031e21091bc9e163b2ce9dc27f2d90
 vendor/lib64/libacdbrtac.so|381ea26c98ce1bd00d0d3f0e30b8ced802703a1e
 vendor/lib64/libadiertac.so|9e4c4f06ad861f89487f3780c197a9a2cbbe12ed
-vendor/lib64/libaudcal.so|393768b0a7aa6ae5c87016381ab547e976018aea
+vendor/lib64/libaudcal.so|28757d7f2947efbd6b3909630edfd7b03635a65b
 vendor/lib64/libaudioalsa.so|a743be854f0af2ae8f60d6c598f078a4c09f8b41
 vendor/lib64/libaudioparsers.so|ab849844b97f005231b1b3150e61cd4b67cbdb11
-vendor/lib64/libhdmipassthru.so|32c0323639a4c01b815fae0daff149de03d87ed0
+vendor/lib64/libhdmipassthru.so|882fe62187d282a4c0fe257cd54a7090fe809824
 vendor/lib64/libqtigef.so|886285c40cd45a4f17d3b2e5e909da5a4fd9bf6c
 vendor/lib64/soundfx/libasphere.so|bd48aa3d7cf27bf3b12ce29f429b719383e104fc
 vendor/lib64/soundfx/libqcbassboost.so|6df111d89e7604127381224cd48802fa7adc4c9d
@@ -421,18 +421,18 @@ vendor/lib64/libsymphonypower.so
 vendor/lib64/libvidhance.so|e92bdcd6a3bb4c0edb8ffb1f029f3a1cc6aa90dd
 vendor/lib64/mibokeh_660_opencl.bin
 
-# CDSP - from davinci-user 10 QKQ1.190825.002 9.10.9 release-keys
+# CDSP - from davinci-user 10 QKQ1.190825.002 V11.0.2.0.QFJCNXM release-keys
 vendor/bin/cdsprpcd|c9fc5873c205e1ebb844d18bc10f89dd428a01ee
 vendor/lib/libcdsp_default_listener.so|40ace1e3eb14fc8aa5aa04b0870b752980c70400
 vendor/lib/libcdsprpc.so|0e14f3b527c6ab9b13b350ae32cc368480b73f21
 vendor/lib64/libcdsp_default_listener.so|ebde03266606d634172d41bbc97ba9ebc5606423
 vendor/lib64/libcdsprpc.so|ee74a437bd96c0e1d4acf139099eb00689db9f42
 
-# Charger - from davinci-user 10 QKQ1.190825.002 9.10.9 release-keys
-vendor/bin/hvdcp_opti|69837e193ff8183a886b2778cc0f8d1bcbd85a7b
+# Charger - from davinci-user 10 QKQ1.190825.002 V11.0.2.0.QFJCNXM release-keys
+vendor/bin/hvdcp_opti|f2dd72f3ce6874e33f893cd03aaf188b4c95050c
 vendor/etc/init/vendor.qti.hardware.charger_monitor@1.0-service.rc|3dab489feaf8d00e06894db7c92b462d701e4c98
 
-# CNE - from davinci-user 10 QKQ1.190825.002 9.10.9 release-keys
+# CNE - from davinci-user 10 QKQ1.190825.002 V11.0.2.0.QFJCNXM release-keys
 -vendor/app/CneApp/CneApp.apk|b582ee0bc180dfb051b76857d0081cf1af7a7fbc
 etc/cne/Nexus/ATT/ATT_profiles.xml|33e568627fd3f94dc45bca1c01ad10e6d8fb5b52
 etc/cne/Nexus/ROW/ROW_profiles.xml|238e785e9674b27c4b2365958d127533d7293132
@@ -511,7 +511,7 @@ vendor/lib64/vendor.qti.hardware.data.qmi@1.0.so|90f1106f7462a9e01721e1159ed3301
 # Consumerir
 vendor/lib64/hw/consumerir.default.so
 
-# CVP - from davinci-user 10 QKQ1.190825.002 9.10.9 release-keys
+# CVP - from davinci-user 10 QKQ1.190825.002 V11.0.2.0.QFJCNXM release-keys
 vendor/bin/hw/vendor.qti.hardware.cvp@1.0-service|c4d796056f605408da827289559e4d5a8cdfb8b3
 vendor/etc/init/vendor.qti.hardware.cvp@1.0-service.rc|8bc22298c934bdfc6290ae97b13da80fe99d1f89
 vendor/lib/hw/vendor.qti.hardware.cvp@1.0-impl.so|3b5eb1d53f9f0c67f20b833aff17f500df27fc6a
@@ -531,7 +531,7 @@ vendor/lib64/vendor.qti.hardware.cvp@1.0.so|8b4756451c038042970bd57330801cb49f89
 vendor/etc/qdcm_calib_data_ft8719_video_mode_dsi_tianma_panel.xml
 vendor/etc/qdcm_calib_data_nt36672a_video_mode_dsi_shenchao_panel.xml
 
-# DPM - from davinci-user 10 QKQ1.190825.002 9.10.9 release-keys
+# DPM - from davinci-user 10 QKQ1.190825.002 V11.0.2.0.QFJCNXM release-keys
 -product/priv-app/dpmserviceapp/dpmserviceapp.apk|9fd873c5330c03c62dfdeb6540b5984588295319
 framework/tcmclient.jar|a55e6981795bf74b3249c5e7297ea4e3cf1dea83
 lib64/libdiag_system.so|45d5f9eb339e0e92994948c8e15587385deafd4d
@@ -552,7 +552,7 @@ vendor/etc/init/dpmQmiMgr.rc|67569302d3a8828a9118c835e5b69c51b0c8ac68
 vendor/lib64/com.qualcomm.qti.dpm.api@1.0.so|fbff6357ee46dd6d62f490a942ff567b6ce955d1
 vendor/lib64/libdpmqmihal.so|30a170684219dd589d05ce5b446e73b7501f13e3
 
-# DRM - from davinci-user 10 QKQ1.190825.002 9.10.9 release-keys
+# DRM - from davinci-user 10 QKQ1.190825.002 V11.0.2.0.QFJCNXM release-keys
 vendor/bin/qseecomd|085fe618caebc1ee728f14ddac3333d5982f90aa
 vendor/etc/init/qseecomd.rc|3e596c60490756388a5bd56378a91d0db7c3779b
 vendor/lib/libGPreqcancel.so|41827597d177591e4a3881c38bccb186ebb5e4a8
@@ -580,7 +580,7 @@ vendor/lib64/libsecureui.so|6cac3cdc3645084aae88ea7cca3a7e58ff9bd70b
 vendor/lib64/libsecureui_svcsock.so|395c566741520f1c6d97259355f04d6095eb1688
 vendor/lib64/libssd.so|5ca153e887b9e386de6ae998af9f849ada111747
 
-# DRM - Widevine - from davinci-user 10 QKQ1.190825.002 9.10.9 release-keys
+# DRM - Widevine - from davinci-user 10 QKQ1.190825.002 V11.0.2.0.QFJCNXM release-keys
 vendor/bin/hw/android.hardware.drm@1.2-service.widevine|95fb8c0063c50bd34c43c58c55840239207f26cb
 vendor/etc/init/android.hardware.drm@1.2-service.widevine.rc|68767969f86126ada017fc09af151e299db651d5
 vendor/lib/libbase64.so|55aa81f6d225cdf33d3db4eb944a17c5255659c4
@@ -593,7 +593,7 @@ vendor/lib64/libcpion.so|becd3018e5780ef4862852da8743933759ce14ac
 vendor/lib64/libhdcpsrm.so|a8be07baf75681a045172d68c5301a3d4ef26efb
 vendor/lib64/liboemcrypto.so|84cf7252ae349548d0e33296aa62e983be3178f0
 
-# ESE-Powermanager - from davinci-user 10 QKQ1.190825.002 9.10.9 release-keys
+# ESE-Powermanager - from davinci-user 10 QKQ1.190825.002 V11.0.2.0.QFJCNXM release-keys
 vendor/bin/hw/vendor.qti.esepowermanager@1.0-service|6d76ad36f33e885c14b7176753ee228d405e64d4
 vendor/etc/init/vendor.qti.esepowermanager@1.0-service.rc|58a3866ad5a7613d9392c9adb671eaa7825578a2
 vendor/lib/hw/vendor.qti.esepowermanager@1.0-impl.so|48768b9be453eb86ffbff3a71fe5654841bc048a
@@ -628,13 +628,13 @@ vendor/lib/vendor.qti.hardware.fm@1.0.so|567282b3c776e5c6639a4c9a34483482acd1afd
 vendor/lib64/hw/vendor.qti.hardware.fm@1.0-impl.so|92f52da7a0785074c3102b10137ad13cd00ab4fa
 vendor/lib64/vendor.qti.hardware.fm@1.0.so|65e5f44a54f42fcebc3d2eec62dee3d80640e006
 
-# Gatekeeper - from davinci-user 10 QKQ1.190825.002 9.10.9 release-keys
+# Gatekeeper - from davinci-user 10 QKQ1.190825.002 V11.0.2.0.QFJCNXM release-keys
 vendor/bin/hw/android.hardware.gatekeeper@1.0-service-qti|a189a50515831e6ac9a7e88a165ac979ae6ac077
 vendor/etc/init/android.hardware.gatekeeper@1.0-service-qti.rc|1b8d5f58fe0a57906acf72b862c16a2521daa97b
 vendor/lib/hw/android.hardware.gatekeeper@1.0-impl-qti.so|c55e5c78d0e5e6268cc03cb4232005e3ccc5a223
 vendor/lib64/hw/android.hardware.gatekeeper@1.0-impl-qti.so|80a74259090a718fee2da944aecb914fd9460544
 
-# GPS - from davinci-user 10 QKQ1.190825.002 9.10.9 release-keys
+# GPS - from davinci-user 10 QKQ1.190825.002 V11.0.2.0.QFJCNXM release-keys
 vendor/bin/garden_app|a5d9db8922eda5427fb7cefea4eb0fcbf1c53d54
 vendor/bin/hw/android.hardware.gnss@2.0-service-qti|108fa375ea1f0fd62aa5302da75f971a562a1f79
 vendor/bin/loc_launcher|c7835fafb271f9bc503b55277da528347ca17a4c
@@ -650,43 +650,43 @@ vendor/etc/vintf/manifest/android.hardware.gnss@2.0-service-qti.xml|8d7eafd68db9
 vendor/etc/vintf/manifest/vendor.qti.gnss@3.0-service.xml|9b2f6691d6c224bcb9ab9a0d57adfb9e52f1b53e
 vendor/etc/xtra_root_cert.pem|f55a31ec4d9cf8ce2724acadecf00c779f8767db
 vendor/lib/hw/android.hardware.gnss@2.0-impl-qti.so|26d42ed9ee9b1899a2c3fa712d69699e191f4bf3
-vendor/lib/hw/vendor.qti.gnss@3.0-impl.so|f2608c9f64c3e82d1f20a8dc016dc935a8569a18
+vendor/lib/hw/vendor.qti.gnss@3.0-impl.so|0d561e8a8ee61003784ce382db1c58712643d50c
 vendor/lib/libbatching.so|6867cfaca9ca0fc23780682c5d0e659ca89c8dec
 vendor/lib/libgarden.so|4905230a050db73ed31292bfbb85636708a1eb6a
 vendor/lib/libgeofencing.so|cda8dff0fe81024a7b8b41418a16da0fccd5988f
-vendor/lib/libgnss.so|e94582eb1cf8ac8de6afc823e81d576eafad94ce
+vendor/lib/libgnss.so|c777704b49ec29aa5899c45a8176ac0eca84cd73
 vendor/lib/libgnsspps.so|77d735e7be5d5e690c71b3fb11af69ef9a1874f7
 vendor/lib/libgps.utils.so|b71549fc2c0476abc374fc4dd393f24d336ee5b1
 vendor/lib/libizat_client_api.so|f7a1b372b2f16c82555308c84550b9ff5b11c69c
 vendor/lib/libizat_core.so|ab49e9a4d20e8c3e829856c842ee287351dd04dd
-vendor/lib/libloc_core.so|a62dbcff12721baed68e9fa9d5142c30ffc01482
+vendor/lib/libloc_core.so|91ae820547eef0d646d2b8970dd9ebef94907e05
 vendor/lib/liblocation_api.so|30b309ba794ec7210590cb90c14a1c1b0b88898a
 vendor/lib/libslimclient.so|6d739dc73622a9f33587540233080389be5c2c40
 vendor/lib/vendor.qti.gnss@3.0-service.so|aed4f48ee569308fa58c1950d1a5962907f2e37b
 vendor/lib64/hw/android.hardware.gnss@2.0-impl-qti.so|48226e1cb36a8ee1905c758b230056d7322659ce
-vendor/lib64/hw/vendor.qti.gnss@3.0-impl.so|a875c631ec33ea63c9e05b5e94ec9a0bb0177c58
-vendor/lib64/hw/vendor.qti.gnss@3.0-impl.so|a875c631ec33ea63c9e05b5e94ec9a0bb0177c58
+vendor/lib64/hw/vendor.qti.gnss@3.0-impl.so|726f44e212a393af8c8e3cb8c41f3fe57df8f29e
+vendor/lib64/hw/vendor.qti.gnss@3.0-impl.so|726f44e212a393af8c8e3cb8c41f3fe57df8f29e
 vendor/lib64/libbatching.so|a8539fe03b2762b56850668203eb3283a2fb75de
 vendor/lib64/libdataitems.so|e92231f15d22e867284cadb5ef964dfc65760ee7
 vendor/lib64/libgarden.so|59b924c2e44ddf727424e7a1075760b6e0ad9367
 vendor/lib64/libgarden_haltests_e2e.so|e878901b1893eff6ea0088d8b849c569c3c17114
 vendor/lib64/libgdtap.so|6a4781971b51dc57276118034987adec4b62320b
 vendor/lib64/libgeofencing.so|ee7a19b0b2a817cd9c67e2e090253f8a82595bd1
-vendor/lib64/libgnss.so|10f3a950999b9158832d50e266992037e2a18ca9
+vendor/lib64/libgnss.so|ee4bef3828dd9e64c88f7e35b75f5a86ce725c3a
 vendor/lib64/libgnsspps.so|b854526890bf64915fdb42731857f7e6756aaad7
 vendor/lib64/libgps.utils.so|4862dc449193509d92314d80d2a96075a3a5a804
 vendor/lib64/libizat_client_api.so|6853a04145b921abf3214ceb208b3d264c4cda5f
 vendor/lib64/libizat_core.so|fc55c0fb68ad492329ca7f489720b50284ac835f
 vendor/lib64/liblbs_core.so|eeda054bf2edc964033b18ed28daafaa05e08759
 vendor/lib64/libloc_api_v02.so|47dd8e262a3197f80d9956bd213065d676e889c4
-vendor/lib64/libloc_core.so|62a3bcd32da2c2503b4b161f18f8f0c26beb9eee
+vendor/lib64/libloc_core.so|5c37f47b7e09c4139c369dc0543fe2a268aac0ca
 vendor/lib64/libloc_socket.so|a179040a8d418ae359b164c154523dff78392e42
 vendor/lib64/liblocation_api.so|ab59320c338161c760b6ceb213792fdffa98e648
-vendor/lib64/liblocationservice.so|5ababefd61d4b5485a94a507ae3ebcfe0acaa0db
+vendor/lib64/liblocationservice.so|9c5f6f98d9f1c9a53e962c5eb196af9fafce85c1
 vendor/lib64/liblocationservice_glue.so|d599249eac5e5d62b64e2d37b15620eb057fd962
 vendor/lib64/liblowi_client.so|3a5280bf0a62eda74046cf0400d4615358f6d361
 vendor/lib64/liblowi_wifihal.so|6b0f8dbd7a3f1d087781d3bc49edbbd9972d94f5
-vendor/lib64/libqdma_file_agent.so|38a86e1e4ae50af00fded269e8eeb6d93f29fcaf
+vendor/lib64/libqdma_file_agent.so|db515f94ffe2d06eabe93311de54dd3966cc6a1e
 vendor/lib64/libslimclient.so|89c4806c1e0e23681481c8cca377c3f68e99ad29
 vendor/lib64/libxtadapter.so|4310b83ee9374937fc46caff16fda7af4c101bdd
 vendor/lib64/vendor.qti.gnss@1.0.so|5b5a503d27a9eb6371941cbed71b160d67983dbb
@@ -713,7 +713,7 @@ vendor/firmware/a612_zap.mdt
 vendor/firmware/a615_zap.b00
 vendor/firmware/a615_zap.elf
 
-# Graphics - from davinci-user 10 QKQ1.190825.002 9.10.9 release-keys
+# Graphics - from davinci-user 10 QKQ1.190825.002 V11.0.2.0.QFJCNXM release-keys
 vendor/lib/egl/eglSubDriverAndroid.so|930b9765626da6454c010596af51c01a40967d63
 vendor/lib/egl/libEGL_adreno.so|8ca78d3373e0481b0562f93a6629a7b9a0bc1ad5
 vendor/lib/egl/libGLESv1_CM_adreno.so|74e1a229517e44bf6f1f37f314d8561bee8f5d0a
@@ -755,16 +755,16 @@ vendor/lib64/libpvr.so|55ad310d84bb60bb761a2396fdc5ace4564c9b0a
 vendor/lib64/librs_adreno.so|c84431c31efd21b30d95ebe9ea3dc4792f0de4ac
 vendor/lib64/librs_adreno_sha1.so|df03717b40ad5457dbf9234ce4475129f83aff92
 
-# Graphics (HDR) - from davinci-user 10 QKQ1.190825.002 9.10.9 release-keys
+# Graphics (HDR) - from davinci-user 10 QKQ1.190825.002 V11.0.2.0.QFJCNXM release-keys
 vendor/lib/libhdr_tm.so|fffd91bcfe1b9ae33498624e3e36b46364bf7991
 vendor/lib64/libhdr_tm.so|103b2f0893a767f162ffc2945b5edea062fb0354
 
-# Graphics (SDM) - from davinci-user 10 QKQ1.190825.002 9.10.9 release-keys
+# Graphics (SDM) - from davinci-user 10 QKQ1.190825.002 V11.0.2.0.QFJCNXM release-keys
 -vendor/lib/libsdm-disp-vndapis.so|c78d69efe54441c39146991bf748aa453bc38d1a
 -vendor/lib64/libsdm-disp-vndapis.so|aa658050b07c04b114cb43e6535fe45883943152
 vendor/lib/libdpps.so|508d7d5aa3ad34aea4ae47f943f4c018ee9f77cf
 vendor/lib/libqseed3.so|be6d4f64c5a41e5cce849617df3f13c23a4a9de6
-vendor/lib/libsdedrm.so|3422c90488c8c8f20ac9f074259a5bd45da65ced
+vendor/lib/libsdedrm.so|8cf0c7475f3e3a492f5dc148f80016a15ea66843
 vendor/lib/libsdm-color.so|300fc08d79821c29155338c25dbb5c3a7920253f
 vendor/lib/libsdm-colormgr-algo.so|5e90df89db6d8957d9e9dc69023a83f7d2ee1c4b
 vendor/lib/libsdm-diag.so|0e9a778b540bcb918f84bb125cf07f29e422e6dc
@@ -772,18 +772,18 @@ vendor/lib/libsdmextension.so|487209c63dc901b6fc55e5c66f93fbd4a4756e92
 vendor/lib/libtinyxml2_1.so|655efc7e2a0ec6714d6c2883a2836197a1b4a8eb
 vendor/lib64/libdpps.so|91623bbe09758fad2f109b1e64605be011495a12
 vendor/lib64/libqseed3.so|4a4fbff019467a4531816ab58e259b22d95630fa
-vendor/lib64/libsdedrm.so|6657f06897a4dc2e6ea413492c640b9b2de8757e
+vendor/lib64/libsdedrm.so|3c82dc9fa9b249d3d00d209ed2c06ad458d3f167
 vendor/lib64/libsdm-color.so|e5c120cb6acbecf5a2c344029b103d6b61fc3925
 vendor/lib64/libsdm-colormgr-algo.so|992e5066d0f7bf284c599f65a89849ae9693c456
 vendor/lib64/libsdm-diag.so|d7a96d76dd2fb7516a9ed89c39a3f0992ec3266e
-vendor/lib64/libsdmextension.so|63879c247f0a99a87b514316b43996db63a8b87a
+vendor/lib64/libsdmextension.so|baa5807e39b25134fbe6c9ba2667eead26256e25
 vendor/lib64/libtinyxml2_1.so|ba981e332895a053a67fc54a8190365a3ad37f2d
 
-# Graphics (Vulkan) - from davinci-user 10 QKQ1.190825.002 9.10.9 release-keys
+# Graphics (Vulkan) - from davinci-user 10 QKQ1.190825.002 V11.0.2.0.QFJCNXM release-keys
 vendor/lib/hw/vulkan.sm6150.so|c3f1a905c936834f49ce74679d40ce0ab66dd582
 vendor/lib64/hw/vulkan.sm6150.so|56531ebe2af3c0d8eb63ca3a3e0e630e24ea7365
 
-# IO Prefetcher - from davinci-user 10 QKQ1.190825.002 9.10.9 release-keys
+# IO Prefetcher - from davinci-user 10 QKQ1.190825.002 V11.0.2.0.QFJCNXM release-keys
 vendor/bin/hw/vendor.qti.hardware.iop@2.0-service|98c38e3647a6c286e5bfb8b271827328f6c04148
 vendor/etc/init/vendor.qti.hardware.iop@2.0-service.rc|fd11367b2585702190ef2577ce2ce6fc68f3a2f8
 vendor/lib/hw/vendor.qti.hardware.iop@2.0-impl.so|feaee7a3969d3f711db4fa5f12d1d4cca5fc2072
@@ -806,7 +806,7 @@ vendor/firmware/ipa_fws.b04
 vendor/firmware/ipa_fws.mdt
 vendor/firmware/ipa_fws.elf
 
-# Keystore - from davinci-user 10 QKQ1.190825.002 9.10.9 release-keys
+# Keystore - from davinci-user 10 QKQ1.190825.002 V11.0.2.0.QFJCNXM release-keys
 vendor/bin/hw/android.hardware.keymaster@4.0-service-qti|312e4ff5d9f7e3548a0f1404b0c33c1a56b3b0f6
 vendor/etc/init/android.hardware.keymaster@4.0-service-qti.rc|c8999fb1bccbef81e6b362059e9a6ebd023de98f
 vendor/lib/libkeymasterdeviceutils.so|fdef44a1d20019ed0aa4de1216135b72a4070507
@@ -818,7 +818,7 @@ vendor/lib64/libkeymasterprovision.so|09a61b1a36e28b9d5c485dfa7a290b3923abfb04
 vendor/lib64/libkeymasterutils.so|679491d7b415f45469990380e4fd61e4bfbc445e
 vendor/lib64/libqtikeymaster4.so|08e3341250f7cec2c0cd9b203bacd3bccf79e8f5
 
-# Latency - from davinci-user 10 QKQ1.190825.002 9.10.9 release-keys
+# Latency - from davinci-user 10 QKQ1.190825.002 V11.0.2.0.QFJCNXM release-keys
 product/framework/vendor.qti.hardware.data.latency-V1.0-java.jar|c6c5d5bbf50b068df0184aef8551b95daa5f4791
 product/framework/vendor.qti.latency-V2.0-java.jar|d345e24271b83faecdb1abe1361db812fae0646f
 product/lib/vendor.qti.hardware.data.latency@1.0.so|8a099459d7412b75b1b803cec2c2d3293f759198
@@ -830,7 +830,7 @@ vendor/lib/vendor.qti.latency@2.0.so|c6b9efda9c2e39fd33bc42e6aee745bd6ee176c8
 vendor/lib64/vendor.qti.hardware.data.latency@1.0.so|ff7a319e51ddd4de14af28a84f7bca5e82547f6e
 vendor/lib64/vendor.qti.latency@2.0.so|91a8b05b20485057ee9f42c55ce70207ef6af761
 
-# Listen - from davinci-user 10 QKQ1.190825.002 9.10.9 release-keys
+# Listen - from davinci-user 10 QKQ1.190825.002 V11.0.2.0.QFJCNXM release-keys
 vendor/lib/libadpcmdec.so|8dc9036e15aa62a85becfda6eb4865de4308ce33
 vendor/lib/libgcs-calwrapper.so|fa8ba4c39920f8ab1ffd8bb84a1b5d3953b377c5
 vendor/lib/libgcs-ipc.so|7bc3733efc941edc176a3c702d6d85438f4971f1
@@ -843,7 +843,7 @@ vendor/lib64/libgcs-osal.so|5eca0a8d8ea32505d5b8d69b3e13bf640b34976a
 vendor/lib64/libgcs.so|144b92a0f996879349400c6f0fc5daff0d8f5180
 vendor/lib64/liblistensoundmodel2.so|8aaa1875266d9c1798d3f78544599978e534d354
 
-# Machine learning - from davinci-user 10 QKQ1.190825.002 9.10.9 release-keys
+# Machine learning - from davinci-user 10 QKQ1.190825.002 V11.0.2.0.QFJCNXM release-keys
 vendor/bin/hw/vendor.qti.hardware.mlshal@1.0-service|e04553770a8c6865e168d211613b4b893b748bff
 vendor/etc/init/vendor.qti.hardware.mlshal@1.0-service.rc|76bc4b49ebfb8ad30ebc5335306a5914a96ee07c
 vendor/lib64/hw/vendor.qti.hardware.mlshal@1.0-impl.so|1cc5786840a1ab8672231c4d0c138b3f92fe3233
@@ -852,17 +852,17 @@ vendor/lib64/libmls_v4l2enc_vendor.so|ad32c9bb5d9f3df237c22ab2d4903a4e623adb68
 vendor/lib64/vendor.qti.hardware.mlshal@1.0-halimpl.so|7d35b04a54e456bed0fcc9ce2fb9a85efb29463c
 vendor/lib64/vendor.qti.hardware.mlshal@1.0.so|d1657e9511971f6262eae310d580d4e58068590b
 
-# Configstore - from davinci-user 10 QKQ1.190825.002 9.10.9 release-keys
+# Configstore - from davinci-user 10 QKQ1.190825.002 V11.0.2.0.QFJCNXM release-keys
 -vendor/lib/libplatformconfig.so|05f9ad27a2e17f3df6ee9258744e0369ef16e8fa
 -vendor/lib64/libplatformconfig.so|68ffaf8e448c32b11b5da47708170d0decb8dc7b
-vendor/bin/hw/vendor.qti.hardware.capabilityconfigstore@1.0-service|74ba0ad0339060b6022174fabd0057dc5b3adfd6
+vendor/bin/hw/vendor.qti.hardware.capabilityconfigstore@1.0-service|21cba9e17196a7b6f0a66fb17bade23cab4b5b94
 vendor/etc/init/vendor.qti.hardware.capabilityconfigstore@1.0-service.rc|4ede0250585a44b01d351bbc301d7a13cc3d783d
-vendor/lib/hw/vendor.qti.hardware.capabilityconfigstore@1.0-impl.so|99fb118e36fc0e636da9813a47a2ab97cfe62a1c
+vendor/lib/hw/vendor.qti.hardware.capabilityconfigstore@1.0-impl.so|ecf907cce3c8fcb8594bc025c78c4be6505bc563
 vendor/lib/vendor.qti.hardware.capabilityconfigstore@1.0.so|bf310fa21ed2d3500f30228b36bcce3173b85d8b
-vendor/lib64/hw/vendor.qti.hardware.capabilityconfigstore@1.0-impl.so|71a0ed501c544d0c78a72db8bc3bde05eea61010
+vendor/lib64/hw/vendor.qti.hardware.capabilityconfigstore@1.0-impl.so|2755930adacac26e11801db7a8f1957b869aabd6
 vendor/lib64/vendor.qti.hardware.capabilityconfigstore@1.0.so|9e02db5f6b99905b22b0814da97852dff38a578b
 
-# Media - from davinci-user 10 QKQ1.190825.002 9.10.9 release-keys
+# Media - from davinci-user 10 QKQ1.190825.002 V11.0.2.0.QFJCNXM release-keys
 -vendor/lib/libMpeg4SwEncoder.so|a8e1523fd9d27853506d4e2261284a5fb19169d8
 -vendor/lib64/libMpeg4SwEncoder.so|2398396a465d3261f79e8e514cf8416b1e6f7519
 product/lib/vendor.qti.hardware.vpp@1.1.so|6990dfdeb1b68989318fc9dfab4fb4245e0fd681
@@ -891,16 +891,16 @@ vendor/lib/libOmxG711Dec.so|b84279a9ff42ad12fdc0e9c5f72cc6362c5c1fb9
 vendor/lib/libOmxMux_proprietary.so|0f8778554dc98aa7529c76fe27de8a89658b272c
 vendor/lib/libOmxQcelp13Dec.so|f4ab929319f1d238fa39134f9121bf99f00c5da6
 vendor/lib/libOmxSwVdec.so|0e7e6843732ee44cd800c5546d71717a288e23e9
-vendor/lib/libOmxSwVencMpeg4.so|c44af13d2da8be8fd67000e40b3d1037089eaef5
+vendor/lib/libOmxSwVencMpeg4.so|5804bc366a42f18aefd09237406358e610b47319
 vendor/lib/libOmxVideoDSMode.so|4121b928aec8ea0acc897e57c83d593c10ab4403
-vendor/lib/libOmxVpp.so|5b39fdb780b46c3bab1d3d10b3c2dec10d2499c9
+vendor/lib/libOmxVpp.so|838d0379ee4f97e5904e236c230a012190a3e3bf
 vendor/lib/libdsd2pcm.so|ed7384c0acc167e7c31e087720821cf581c4d69e
 vendor/lib/libmm-color-convertor.so|3828b7e36d7a195be7dd4f3e686da1341593c98d
 vendor/lib/libmmosal_proprietary.so|ad6aa5baefdb8fcff08665ab81efb9b45a1951d9
 vendor/lib/libvppclient.so|9f3e92950a5fe812be6bc07e98d3df94fd55be5f
 vendor/lib/libvpphvx.so|5d50c0e13b91a0379da7f42690dc89ffef422edc
 vendor/lib/libvpplibrary.so|931b6bfdc08a07c71d471b34363681db64939cc3
-vendor/lib/libvpptestutils.so|2005aacf1141d0c64c6bbaed014694699933d96d
+vendor/lib/libvpptestutils.so|3f8ee84d7b493d12f411e3d4a05f6a66ea76898d
 vendor/lib/vendor.qti.hardware.vpp@1.1.so|8eaf85ce72b22b0b804f102da5910b0ef862793f
 vendor/lib/vendor.qti.hardware.vpp@1.2.so|0e70596f65649520811306d74da3ada9b764ee51
 vendor/lib/vendor.qti.hardware.vpp@1.3.so|e0164ede204f555a21e7689694cb818a97ae2a5d
@@ -919,19 +919,19 @@ vendor/lib64/libOmxEvrcDec.so|a01305da07187050a13350a02bc4eda991513ffb
 vendor/lib64/libOmxG711Dec.so|939984ae65e6957d6328fc4416a98fc147eb99d6
 vendor/lib64/libOmxQcelp13Dec.so|49b829f63c2dd67490c01fe87f2d17d7e498292a
 vendor/lib64/libOmxSwVdec.so|68398c4bf8c2cee1acd6591441394fd27ab05363
-vendor/lib64/libOmxSwVencMpeg4.so|3d7580783ebc7f4384bccdb8be1180d1cdd8fbb8
-vendor/lib64/libOmxVpp.so|6435e25feeb1b8664a2c45a6e99729c68d0afb94
+vendor/lib64/libOmxSwVencMpeg4.so|fa3b0f112db992c614aca0036677b9cdd3b96622
+vendor/lib64/libOmxVpp.so|ec90a2d0f6a2719f13a62889c54bd1f25f9121bd
 vendor/lib64/libmm-color-convertor.so|19e7e51bce005dcb73941f0c00c5d79f53f744a0
 vendor/lib64/libmmosal_proprietary.so|b8dbc765c15f30dec9f1c0907a25810df1bc9731
 vendor/lib64/libvppclient.so|03c926a8dd6f7a28c26d548e301dd61d3460cbd2
 vendor/lib64/libvpphvx.so|39529dcddabe294d9108047813529fca32a2b315
 vendor/lib64/libvpplibrary.so|97e1628084f81869bce38e9cd04ba353b493f788
-vendor/lib64/libvpptestutils.so|7219dc37a27025e2d137a22d64d5ebed65d296ba
+vendor/lib64/libvpptestutils.so|f112ee7aa5f0caf1a9941bae9ffa2e5b7adf1faf
 vendor/lib64/vendor.qti.hardware.vpp@1.1.so|3e3eba7284fa506f4f57f414b301bf15ba441277
 vendor/lib64/vendor.qti.hardware.vpp@1.2.so|b9b340f01ce4e900738eb85e6b431f85a3dbd82c
 vendor/lib64/vendor.qti.hardware.vpp@1.3.so|420cb42e5a3187924acef0163354f711339787eb
 
-# Neural-networks - from davinci-user 10 QKQ1.190825.002 9.10.9 release-keys
+# Neural-networks - from davinci-user 10 QKQ1.190825.002 V11.0.2.0.QFJCNXM release-keys
 vendor/bin/hw/android.hardware.neuralnetworks@1.2-service-qti|06613a0e0541e27ddf2af5e9c6512890012d0d06
 vendor/etc/init/android.hardware.neuralnetworks@1.2-service-qti.rc|db9900f3a9d88f2f207c1a86ec6184f32551ab39
 vendor/lib64/libhexagon_nn_stub.so|baa9dca0c174e10f05a49f2678f21f7becf011da
@@ -940,15 +940,15 @@ vendor/lib64/unnhal-acc-common.so|ddceb10f1008a3b2ab6f4f64a3b519b042a91894
 vendor/lib64/unnhal-acc-hta.so|c96f5b5fb99909b0da2cf9a8abc956d589480359
 vendor/lib64/unnhal-acc-hvx.so|3ef790f573551e8dcda378e86ea389ce0a66a3e4
 
-# Mlipay - from davinci-user 10 QKQ1.190825.002 9.10.9 release-keys
+# Mlipay - from davinci-user 10 QKQ1.190825.002 V11.0.2.0.QFJCNXM release-keys
 vendor/bin/mlipayd@1.1|caff3f800ba16c251d0f7ace8e031fe86dd47a2e
 vendor/etc/init/vendor.xiaomi.hardware.mlipay@1.1-service.rc|b5ab5bcd031fe4d9781b5911c0595eaeac8b80ea
-vendor/lib64/libmlipay@1.1.so|c0672ce767493db8cf3895be28925781b07ee7d3
-vendor/lib64/libmlipay.so|86665e06e2291959223a910f3367d627174694f2
+vendor/lib64/libmlipay@1.1.so|ab573a93d659e7496368d5e4f22befee29346431
+vendor/lib64/libmlipay.so|8510d27c292ca9077704724564b635978c0992b9
 vendor/lib64/vendor.xiaomi.hardware.mlipay@1.0.so|43cae59576c8570a37bbf9d4a059b5e9c207360d
 vendor/lib64/vendor.xiaomi.hardware.mlipay@1.1.so|521357ee808c1a248db9e76269880b1f9d0a0617
 
-# Perf - from davinci-user 10 QKQ1.190825.002 9.10.9 release-keys
+# Perf - from davinci-user 10 QKQ1.190825.002 V11.0.2.0.QFJCNXM release-keys
 vendor/bin/hw/vendor.qti.hardware.perf@2.0-service|1bfabae277be75c5caa2946868ca8d88ff05467f
 vendor/bin/msm_irqbalance|e917104fbd26c844d27ffb2b7ec4f665fdfb8b78
 vendor/etc/init/vendor.qti.hardware.perf@2.0-service.rc|0101a3294311c2988060a00f7b25d8abf2f428f9
@@ -957,7 +957,7 @@ vendor/etc/lm/AppClassifierFeature.xml|102e4291357dd384c0f474d4192370e25123c5e7
 vendor/etc/lm/GameOptimizationFeature.xml|de0bd5be9e1f6ad936fb817fa2ff745a8ca94fd4
 vendor/etc/perf/commonresourceconfigs.xml|9e277f76243eb5ad16d3e55843aadf68a54e7aaa
 vendor/etc/perf/perfboostsconfig.xml|d01a36d112e3b7ac578f8cd428eac5a928a1c401
-vendor/etc/perf/perfconfigstore.xml|afb6ef1b9891d979a01867fbb38546ac303037e1
+vendor/etc/perf/perfconfigstore.xml|fe23523d649d4e37db7585d384634953fe4e4b0a
 vendor/etc/perf/targetconfig.xml|53d6e2936c1cdc67edf86a2ccf04084adbff4a68
 vendor/etc/perf/targetresourceconfigs.xml|0a614d97672c516aedc253aec525468fbdb270ec
 vendor/etc/perf/thermalboost.conf|3a70ac91160e48a64578f0b7775798f19040e87d
@@ -971,9 +971,9 @@ vendor/lib/vendor.qti.hardware.perf@2.0.so|79b74df48e39d46038b5ba13e7a0ae3513364
 vendor/lib64/libadaptlaunch.so|3d0d481af1112df5a5cc5eff886fad9d5d334c58
 vendor/lib64/libappclassifier.so|da027fb34f7c6ce67999b64810e231943b052278
 vendor/lib64/libgameoptfeature.so|b82be985421dd21bb25ed217f762e3955db16765
-vendor/lib64/liblearningmodule.so|3f392ff20e1d0479107b985b531a5c74e99a01a8
+vendor/lib64/liblearningmodule.so|d7a76fc9e48af3bf30dc928c80f71b7517793024
 vendor/lib64/libmeters-ns.so|73f78b3461a4cbee6419721149dd95fec9029f8b
-vendor/lib64/libmeters.so|696d6965199744db39bcfed740a804da9e32464a
+vendor/lib64/libmeters.so|5a518301ad77996a47c9c893093f2c2f36085ded
 vendor/lib64/libperfconfig.so|6b7535b00836fe98ff330864740b5bba293c8e87
 vendor/lib64/libperfgluelayer.so|b8d4864e2bc3b903e1a0d9c548686e5fac81fe54
 vendor/lib64/libqti-perfd-client.so|9db27376ef994c4c90eb90dc3c7c4e493c2902e4
@@ -982,19 +982,19 @@ vendor/lib64/libqti-util.so|c78b855b3909b01071ced5fc898add769de4a5b6
 vendor/lib64/libqti-utils.so|3726d65486928bc014e657960dc023d920524922
 vendor/lib64/vendor.qti.hardware.perf@2.0.so|3717b35807fd7b33dced6e311c3b609d57399363
 
-# Peripheral manager - from davinci-user 10 QKQ1.190825.002 9.10.9 release-keys
+# Peripheral manager - from davinci-user 10 QKQ1.190825.002 V11.0.2.0.QFJCNXM release-keys
 vendor/bin/pm-proxy|4200aecba89950e684d284b521a0896347b59487
 vendor/bin/pm-service|0115038b692a2914e28df8b250689306887e2d9b
 vendor/lib/libperipheral_client.so|7ef98f63b1cec72113f7c2193bc4e8ff523f7503
 vendor/lib64/libperipheral_client.so|179a96f4e443c754fd70ff4e0c3c76b71047836c
 
-# Qualcomm Display Utils - from davinci-user 10 QKQ1.190825.002 9.10.9 release-keys
+# Qualcomm Display Utils - from davinci-user 10 QKQ1.190825.002 V11.0.2.0.QFJCNXM release-keys
 vendor/bin/hw/vendor.qti.hardware.qdutils_disp@1.0-service-qti|680370eae4858b06e5be5d3380bdebd0d8b13b8d
 vendor/etc/init/vendor.qti.hardware.qdutils_disp@1.0-service-qti.rc|69d9cbc54f8ac0a0fb010f92bfa7de5981d643cf
 vendor/lib/vendor.qti.hardware.qdutils_disp@1.0.so|9aa1eacb0880e2cf95f3745f13b1e2222dceb562
 vendor/lib64/vendor.qti.hardware.qdutils_disp@1.0.so|f227ee67b99082b8aeea5ef9830a3c23efc7e4c6
 
-# Postprocessing - from davinci-user 10 QKQ1.190825.002 9.10.9 release-keys
+# Postprocessing - from davinci-user 10 QKQ1.190825.002 V11.0.2.0.QFJCNXM release-keys
 product/lib64/vendor.display.color@1.0.so|e90c75046ba1f6f677b9f719caaae8d91d1a5cde
 vendor/bin/hw/vendor.display.color@1.0-service|ab46995540bd4721e1241de17241e55dbbd5435c
 vendor/etc/init/vendor.display.color@1.0-service.rc|5ad673f879b3685a0e79b5633437e5499cb94f48
@@ -1005,14 +1005,14 @@ vendor/lib/vendor.display.color@1.1.so|1db61e68a6fe9e99debc63a00d68e665564881d5
 vendor/lib/vendor.display.color@1.2.so|df54fd87747b8b78c73b18e9426e28d668e790ce
 vendor/lib/vendor.display.postproc@1.0.so|d51673718da0fe3437f87bd8b223885f0ccf03d6
 vendor/lib64/libdisp-aba.so|3a35a8c7120d5f0748b4584dd56b1398d1acdd69
-vendor/lib64/libdisplayqos.so|86abe8922c686f205520b6980f337dda79182bec
+vendor/lib64/libdisplayqos.so|535c9247d47d15936cae3fecb585687889dd635a
 vendor/lib64/vendor.display.color@1.0.so|3939e4d1ab4f74e6bbd04524a9e6211ade9c5d0b
 vendor/lib64/vendor.display.color@1.1.so|ce0030a7e6593236277962ffff290b834eaf1f25
 vendor/lib64/vendor.display.color@1.2.so|6adfa77494dbad3be8a34b259b25f8a4d9dd6a04
 vendor/lib64/vendor.display.color@1.3.so|906603578d0b833d990a50bff62f36a0fc186f85
 vendor/lib64/vendor.display.postproc@1.0.so|0b578a42706c770c6c61eccdee8a9e4c89c08b10
 
-# QMI - from davinci-user 10 QKQ1.190825.002 9.10.9 release-keys
+# QMI - from davinci-user 10 QKQ1.190825.002 V11.0.2.0.QFJCNXM release-keys
 etc/permissions/qti_libpermissions.xml|593bcb72cce68ceb0a70f50bcae7d460114e7c62
 etc/permissions/qti_permissions.xml|e6ff4572352b1a4f91b6b9d7cbb1cad9924410a0
 vendor/bin/irsc_util|4381ded94ac2775cf186c97c7ad6236eaa209eac
@@ -1046,7 +1046,7 @@ vendor/lib64/libqmi_csi.so|e71b58c6a1439ed46553a34680c4dadc0019e52b
 vendor/lib64/libqmi_encdec.so|5e536057be350651379b772aa1bba5f4735d11ee
 vendor/lib64/libqmiservices.so|4c8e2085245a4be823f908e64a8bb4fcad6409ca
 
-# Qualcomm Trusted Execution Environment - from davinci-user 10 QKQ1.190825.002 9.10.9 release-keys
+# Qualcomm Trusted Execution Environment - from davinci-user 10 QKQ1.190825.002 V11.0.2.0.QFJCNXM release-keys
 vendor/bin/hw/vendor.qti.hardware.qteeconnector@1.0-service|186b7410234082720a7c9fc3cd8f27b9c9cfe962
 vendor/etc/init/vendor.qti.hardware.qteeconnector@1.0-service.rc|c966350ee67d3a7c73ca7184e3725264025d16f5
 vendor/lib/hw/vendor.qti.hardware.qteeconnector@1.0-impl.so|ee750c252381ee7d89ca2ac4080ed582edbf1fbf
@@ -1063,7 +1063,7 @@ vendor/lib64/vendor.qti.hardware.qteeconnector@1.0.so|3202c209bd8249e3f76dec1108
 # Telephony (qti-telephony-common) - from DRG - QKQ1.190828.002
 product/framework/qti-telephony-common.jar|74adbf98e89531ac385ab5c4cea3c2549a0d24b0
 
-# Radio - from davinci-user 10 QKQ1.190825.002 9.10.9 release-keys
+# Radio - from davinci-user 10 QKQ1.190825.002 V11.0.2.0.QFJCNXM release-keys
 -product/app/QtiTelephonyService/QtiTelephonyService.apk|db60b6fe27b3033f6468b3170b23af18dd0bcdaf
 -product/app/atfwd/atfwd.apk|62ec25e5b0e68a820a7a52223465d95e8e5c9be8
 -product/app/datastatusnotification/datastatusnotification.apk|ea611e4f1efc3077adf3054051ead13422927426
@@ -1109,11 +1109,11 @@ vendor/lib64/libnlnetmgr.so|e844efc8afdf1917e197f13943b33088e3910171
 vendor/lib64/libpdmapper.so|68588816650a22deff95d7c4f63917ddc6eecf9f
 vendor/lib64/libpdnotifier.so|b1f1b4984b3de38d61cece38522e2dee1ed1a93a
 vendor/lib64/libqcmaputils.so|4fbcdbf699a5ef60bc835d9a15a0277343f5f9dc
-vendor/lib64/libqcrilFramework.so|e80c4a2f0d1be9f27dc6445006e48a4c8772104d
+vendor/lib64/libqcrilFramework.so|0848da056cef711f98c05bdf3f3d25b9601fdd36
 vendor/lib64/libqcrildatactl.so|89c471f0bfdcd3b6cc0fea4265c7a2c7d71d99ff
 vendor/lib64/libqrtr.so|9addbb504885bb2a82e0b19e38077742bc48c10f
 vendor/lib64/libqsocket.so|dd4067d7a79565f11034277d4ef46698cd17c19b
-vendor/lib64/libril-qc-hal-qmi.so|098e93a5323df4c7297051451dac8aeb87e53586
+vendor/lib64/libril-qc-hal-qmi.so|ed99c03071ed3eb38919cde74d72a58e079b7d16
 vendor/lib64/libril-qc-ltedirectdisc.so|2320253bc10c4683dd4d035f14f3c22da89a2fd4
 vendor/lib64/libril-qc-radioconfig.so|5a2b7e36d9c9d74cc29c55516fd77d5ee8d04618
 vendor/lib64/libril-qcril-hook-oem.so|bc216efecb94b352b1d9be890bbcf5fc29e2f830
@@ -1121,7 +1121,7 @@ vendor/lib64/librilqmiservices.so|89eb3d9df3bbc8f184c7c89d16f610fa393bf19d
 vendor/lib64/libsettings.so|b1145cff4de454e2057e157f779f8ccf2885620f
 vendor/lib64/libsystem_health_mon.so|a329ee0593f1811528a2d6fa9661160cbd1cc405
 vendor/lib64/qcrild_librilutils.so|314a90af94477d973109f0162a0a0d0d38ae1226
-vendor/lib64/qtibus.so|5fac83a4532ceb8837559b2f681e29d6fe0f99b6
+vendor/lib64/qtibus.so|a9c5612501384596f06f963ccda4ffe6fde9f38b
 vendor/lib64/qtimutex.so|e2376fe9faf6279074d2b6ea94f52fd606f80ca8
 vendor/lib64/vendor.qti.hardware.data.connection@1.0.so|e2f77b104fbc3abe7423fc24743051b69cc887be
 vendor/lib64/vendor.qti.hardware.radio.am@1.0.so|437d740fd549753fe6cc1db97e6e45b2f75d4076
@@ -1147,7 +1147,7 @@ vendor/radio/qcril_database/upgrade/3_version_update_wps_config.sql|0571aacaf9fc
 vendor/radio/qcril_database/upgrade/4_version_update_ecc_table.sql|0734c6a2863edadc7a8422b8310d267c594d11a0
 vendor/radio/qcril_database/upgrade/5_version_update_ecc_table.sql|fcb2cba3bfd718ecdc8d3cfac3a0b2b2c7e8c506
 
-# Radio - IMS - from davinci-user 10 QKQ1.190825.002 9.10.9 release-keys
+# Radio - IMS - from davinci-user 10 QKQ1.190825.002 V11.0.2.0.QFJCNXM release-keys
 -product/app/uceShimService/uceShimService.apk|7a67142692073117f0ec6a2d6859dc002b0c02b2
 -product/priv-app/ims/ims.apk|77ea72ab04c651c2a365320179cb1b7c75dcd8bb
 product/etc/permissions/com.qualcomm.qti.imscmservice-V2.0-java.xml|aeaf8d4c7d421bd25a1aca1736980b6e4575c7ce
@@ -1160,12 +1160,12 @@ product/framework/com.qualcomm.qti.uceservice-V2.0-java.jar|2f4d6d2681e1adfc249e
 product/framework/com.qualcomm.qti.uceservice-V2.1-java.jar|f9dadb1b224d100ecc0a8785bde463d9d1bc7a45
 product/framework/vendor.qti.ims.callinfo-V1.0-java.jar|a01874e994d2674d538f86de39e9ccbf6ef3fc8c
 product/framework/vendor.qti.ims.rcsconfig-V1.0-java.jar|f2a2e5554ad6ae1363a9aa76c6d0e6732bbdc7fb
-product/lib64/lib-imsvideocodec.so|94e6ed0fb6b6d41775439763d9d5756f510aa044
+product/lib64/lib-imsvideocodec.so|eb99fd4fc193acdfee8defb77d22821a41173843
 product/lib64/lib-imsvt.so|df2c3dabb854d10fa50d6938540bef3101446926
 product/lib64/lib-imsvtextutils.so|219d6239a154ee727b50f8fa52d382783dd49f74
 product/lib64/lib-imsvtutils.so|b566407a5a8c1be3550b49cdd6a81a7ef0af4974
 product/lib64/libimscamera_jni.so|7cb89110cca94d37d68c705f12a7a5a4ee106139
-product/lib64/libimsmedia_jni.so|e50217e9eb8878136614db66313508ac970a2b42
+product/lib64/libimsmedia_jni.so|3540752cc3658261ea3c909f03018eea4398f84e
 product/lib64/vendor.qti.imsrtpservice@2.0.so|2a5bca02128b51f8d47dd2f9cf886e0d23e7bbd9
 product/lib64/vendor.qti.imsrtpservice@2.1.so|4c9f4eb70e8697472d96522a5118964d7beb73fe
 vendor/bin/ims_rtp_daemon|bfc152708ef4d2f5a6b91942af727b19cc579f74
@@ -1187,7 +1187,7 @@ vendor/lib64/lib-imsdpl.so|6e80e5a45002c7a93d1c42a799e74b9bed3d9c59
 vendor/lib64/lib-imsqimf.so|360304b6160a41ef3e24acf534bedc891a443995
 vendor/lib64/lib-imsrcs-v2.so|d667fd6ec594b4ad95260f265900f8896774ae98
 vendor/lib64/lib-imsrcsbaseimpl.so|8e9c21fc443d6e156abdd3a534ea07b872c1e0f1
-vendor/lib64/lib-imsvtcore.so|938380b222bbfe229511861da4c892f080bbf027
+vendor/lib64/lib-imsvtcore.so|0b22ea5909229de9f92ed372906644277c98b629
 vendor/lib64/lib-imsxml.so|5497908cbced4d035f397d8c085d1c2a3dfeb759
 vendor/lib64/lib-rtpcommon.so|dcf1dca65ee1b9ae7032a0e4e3511506d8f681b6
 vendor/lib64/lib-rtpcore.so|33e01dd28ec816ea25504813e7ccd30ea1ee96db
@@ -1291,7 +1291,7 @@ vendor/etc/sensors/config/tmd2725.json
 vendor/etc/sensors/config/tmx4903.json
 vendor/etc/sensors/sns_reg_config
 
-# Snapdragon Computer Vision Engine - from davinci-user 10 QKQ1.190825.002 9.10.9 release-keys
+# Snapdragon Computer Vision Engine - from davinci-user 10 QKQ1.190825.002 V11.0.2.0.QFJCNXM release-keys
 vendor/etc/scve/facereco/gModel.dat|447e5e3fefe8bcf36db0f7a8595c63fb326879ba
 vendor/lib/libfastcvdsp_stub.so|bf139041e559e10df95c0ac3246c0cca6112d162
 vendor/lib/libfastcvopt.so|7909f3636ae3b20892d58e7ff94ef84c710d845b
@@ -1327,8 +1327,8 @@ vendor/lib64/libscveObjectTracker_stub.so|b4ab0472e565a69f3c4dce0d1061fad9e990e4
 vendor/lib64/libscvePanorama.so|62cb5a9e8f00a856c6834a95cee4970dd007f63f
 vendor/lib64/libscvePanorama_lite.so|ef7dbeff0c7fbfd5b2faa78dc3521ccbc90d4044
 
-# Soter - from davinci-user 10 QKQ1.190825.002 9.10.9 release-keys
--app/SoterService/SoterService.apk|401f49c5a47b8679b4844ab6d74fac462920f210
+# Soter - from davinci-user 10 QKQ1.190825.002 V11.0.2.0.QFJCNXM release-keys
+-vendor/app/SoterService/SoterService.apk|05a33f07ddabd56f8027762ce142016632936498
 vendor/bin/hw/vendor.qti.hardware.soter@1.0-service|4f7e3c8a6cde9efefd8b9bf440fb1ed442e21fd3
 vendor/etc/init/vendor.qti.hardware.soter@1.0-service.rc|76447a61ad5529949365eeb7e8ca000e48bd28ae
 vendor/lib64/hw/vendor.qti.hardware.soter@1.0-impl.so|208a00cb9c154c53e6c0f28eb24fbc4d7f6f15cf
@@ -1350,21 +1350,21 @@ vendor/etc/thermal-engine.conf
 vendor/lib/libthermalfeature.so
 vendor/lib64/libthermalfeature.so
 
-# Time services - from davinci-user 10 QKQ1.190825.002 9.10.9 release-keys
+# Time services - from davinci-user 10 QKQ1.190825.002 V11.0.2.0.QFJCNXM release-keys
 -vendor/app/TimeService/TimeService.apk;PRESIGNED|27f9b81621c446baa8c37581d9bfbca2fd67b496
 vendor/bin/time_daemon|0e8fd168d881c017eac09452df816eadba7de6a1
 vendor/etc/init/init.time_daemon.rc|b253ca2a498757e14e1d7a051bf504ae09218f51
 vendor/lib/libtime_genoff.so|8578fc5aab1509fedb744f9b73721dc1acfd9748
 vendor/lib64/libtime_genoff.so|c8e0bbc9c6b7b5beddba43bc4125a9eaeba7c79f
 
-# TUI - from davinci-user 10 QKQ1.190825.002 9.10.9 release-keys
+# TUI - from davinci-user 10 QKQ1.190825.002 V11.0.2.0.QFJCNXM release-keys
 vendor/bin/hw/vendor.qti.hardware.tui_comm@1.0-service-qti|a0d692fe10ef9dc4479497fa666640612f06fbb4
 vendor/etc/init/vendor.qti.hardware.tui_comm@1.0-service-qti.rc|2cfc563d7e1579374f001c94588fae7835a12ffc
 vendor/lib/vendor.qti.hardware.tui_comm@1.0.so|de568c428f28470cbd03fc32774b20a11ea5e610
 vendor/lib64/vendor.qti.hardware.tui_comm@1.0.so|e47baed52f1c0637de34fa55e45a86b4b412a672
 
-# Wifi - from davinci-user 10 QKQ1.190825.002 9.10.9 release-keys
-vendor/bin/cnss-daemon|28898c30dc2819b3521f3dac54aa7023b110195b
+# Wifi - from davinci-user 10 QKQ1.190825.002 V11.0.2.0.QFJCNXM release-keys
+vendor/bin/cnss-daemon|fa3a0a2618d7cc51a23b3de5110c9aee391018d2
 vendor/bin/nv_mac|a1e4c9d0032732e9d5a2fa38f1dfb9d0005451a8
 vendor/bin/wifilearner|78d083c35899b6e01a92e6893e4e9e1c27c5dc42
 vendor/etc/configstore/wigig.xml|2752200cc901da4a2f514f07f9bf1b0a3272884d
@@ -1378,12 +1378,12 @@ vendor/etc/wifi/wigig_supplicant.conf|c62e0b2dee7cb149accbe658d841daabbc92a6b9
 vendor/etc/wifi/wpa_supplicant_overlay.conf|289b5ff519e935f4a1431414c83e2e7e9e6603d0
 vendor/firmware/wigig/wigig.ini|1ec12833a14cab778168c24c283e237cadbd1781
 vendor/lib/libaoa.so|430896da0e452a9f82dc5b5955fd1e898f40e974
-vendor/lib/libwigig_flashaccess.so|4efc0823bedff2c17f3e0a7b8360c00b414b750e
-vendor/lib/libwigig_pciaccess.so|279b5041b873729880d23436664392045ef3885c
-vendor/lib/libwigig_utils.so|e3fcc591a4235a78c025314a0057cfcd35bd3a9a
-vendor/lib64/libwigig_flashaccess.so|22df4eb2bc35ef3bd02965a162583c4f89376e81
-vendor/lib64/libwigig_pciaccess.so|1186ff4f2bbc0baccebf4191256fd990bcc2d62f
-vendor/lib64/libwigig_utils.so|a7a4c8836ab2775af73fb5bf681e697b48316eb0
+vendor/lib/libwigig_flashaccess.so|fe5c6a215a17eea835458990aa62150da1ad23ab
+vendor/lib/libwigig_pciaccess.so|dfdb4b624b75bb4379fb9b45360865af1ca07b94
+vendor/lib/libwigig_utils.so|ad2102d4d936418a180514132b314302fcac8469
+vendor/lib64/libwigig_flashaccess.so|8f554607d8ce51c0b4ac9a8a6ca9cf2005aa54fa
+vendor/lib64/libwigig_pciaccess.so|29c7f1720108baae5aa08e3c3050e196cabf01b5
+vendor/lib64/libwigig_utils.so|658963ecac8f0156458bd95b37f8874d8980fbd9
 vendor/lib64/vendor.qti.hardware.wifi.keystore@1.0.so|d20889da64cf0e5d86311e31e3a503b348aebd46
 vendor/lib64/vendor.qti.hardware.wifi.wifilearner@1.0.so|c343972cbc348c03399ad07136a70c05b745a060
 vendor/lib64/vendor.qti.hardware.wigig.netperftuner@1.0.so|344a9028b19b8bc53b23686caabf21b612f2f2ef
