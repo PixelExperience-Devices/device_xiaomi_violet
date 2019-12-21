@@ -6,5 +6,11 @@
   {
     "repository": "android_kernel_xiaomi_violet",
     "target_path": "kernel/xiaomi/violet"
+  },
+  {
+    "repository"   :"packages_apps_PixelLiveWallpaper",
+    "target_path"  :"packages/apps/PixelLiveWallpaper",
+    "branch"       :"ten",
+    "remote"       :"pixel-gitlab"
   }
 ]
