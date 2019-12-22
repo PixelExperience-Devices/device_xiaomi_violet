@@ -4,8 +4,8 @@
     "target_path": "kernel/xiaomi/sm6150"
   },
   {
-    "repository": "vendor_xiaomi_violet",
-    "target_path": "vendor/xiaomi/violet"
+    "repository": "vendor_xiaomi",
+    "target_path": "vendor/xiaomi"
   },
   {
     "repository": "android_packages_resources_devicesettings",
