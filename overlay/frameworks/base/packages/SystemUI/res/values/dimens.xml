@@ -16,13 +16,7 @@
 */
 -->
 <resources>
-    <dimen name="rounded_corner_content_padding">36px</dimen>
-    <dimen name="system_icons_keyguard_padding_end">16dp</dimen>
-    <!-- Radius of the software rounded corners at the top of the display in its natural
-         orientation. If zero, the value of rounded_corner_radius is used. -->
-    <dimen name="rounded_corner_radius_top">96px</dimen>
-
-    <!-- Radius of the software rounded corners at the bottom of the display in its natural
-         orientation. If zero, the value of rounded_corner_radius is used. -->
-    <dimen name="rounded_corner_radius_bottom">106px</dimen>
+    <!-- The padding on the side of the navigation bar. Must be greater than or equal to
+         navigation_extra_key_width -->
+    <dimen name="navigation_side_padding">85dp</dimen>
 </resources>
