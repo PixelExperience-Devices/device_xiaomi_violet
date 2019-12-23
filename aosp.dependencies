@@ -18,5 +18,11 @@
     "target_path": "packages/apps/PixelLiveWallpaper",
     "branch": "ten",
     "remote": "pixel-gitlab"
+  },
+  {
+    "repository": "packages_apps_GoogleCamera_violet",
+    "target_path": "packages/apps/GoogleCamera",
+    "branch": "ten",
+    "remote": "pixel-gitlab"
   }
 ]
