@@ -113,7 +113,8 @@ PRODUCT_COPY_FILES += \
 # Bluetooth
 PRODUCT_PACKAGES += \
     liba2dpoffload \
-    libbthost_if
+    libbthost_if \
+    libldacBT_dec
 
 # Sensor HAL conf file
 PRODUCT_COPY_FILES += \
