@@ -7,6 +7,9 @@
 # Get non-open-source specific aspects
 $(call inherit-product-if-exists, vendor/xiaomi/violet/violet-vendor.mk)
 
+# GoogleCamera
+$(call inherit-product-if-exists, packages/apps/GoogleCamera/gcam.mk)
+
 # Vendor properties
 -include $(LOCAL_PATH)/vendor_prop.mk
 
