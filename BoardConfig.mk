@@ -27,6 +27,10 @@ TARGET_BOARD_PLATFORM_GPU := qcom-adreno612
 # Properties
 TARGET_VENDOR_PROP += $(DEVICE_PATH)/vendor.prop
 
+# Vendor init
+TARGET_INIT_VENDOR_LIB := //$(DEVICE_PATH):libinit_violet
+TARGET_RECOVERY_DEVICE_MODULES := libinit_violet
+
 # HIDL
 DEVICE_MANIFEST_FILE += $(DEVICE_PATH)/manifest.xml
 
