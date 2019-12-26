@@ -1,11 +1,13 @@
 [
   {
     "repository": "kernel_xiaomi_sm6150",
-    "target_path": "kernel/xiaomi/sm6150"
+    "target_path": "kernel/xiaomi/sm6150",
+    "branch": "ten"
   },
   {
     "repository": "vendor_xiaomi",
-    "target_path": "vendor/xiaomi"
+    "target_path": "vendor/xiaomi",
+    "branch": "ten"
   },
   {
     "repository": "android_packages_resources_devicesettings",
