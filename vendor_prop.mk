@@ -50,23 +50,14 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 # Display
 PRODUCT_PROPERTY_OVERRIDES += \
-    debug.egl.hw=0 \
-    debug.mdpcomp.logs=0 \
-    debug.sf.hw=0 \
-    debug.sf.latch_unsignaled=1 \
+    debug.gralloc.enable_fb_ubwc=1 \
     ro.opengles.version=196610 \
     ro.vendor.display.sensortype=2 \
     vendor.display.comp_mask=0 \
     vendor.display.dataspace_saturation_matrix=1.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,1.0 \
     vendor.display.disable_decimation=1 \
-    vendor.display.disable_excl_rect=0 \
     vendor.display.disable_hw_recovery_dump=1 \
-    vendor.display.disable_inline_rotator=1 \
-    vendor.display.disable_scaler=0 \
-    vendor.display.disable_ui_3d_tonemap=1 \
     vendor.display.enable_default_color_mode=0 \
-    vendor.display.enable_null_display=0 \
-    vendor.display.enable_optimize_refresh=1 \
     vendor.gralloc.disable_ubwc=0
 
 # Dalvik
