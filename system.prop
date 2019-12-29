@@ -21,6 +21,11 @@ media.stagefright.enable-qcp=true
 media.stagefright.enable-scan=true
 persist.mm.enable.prefetch=true
 
+# Bluetooth SOC type
+vendor.bluetooth.soc=cherokee
+persist.vendor.btstack.enable.splita2dp=true
+persist.vendor.btstack.a2dp_offload_cap=sbc-aptx-aptxtws-aptxhd-aptxadaptive-aac-ldac
+
 # Netmgr
 persist.data.df.dev_name=rmnet_usb0
 
