@@ -19,11 +19,11 @@ import common
 import re
 
 def FullOTA_InstallEnd(info):
-  OTA_InstallEnd(info)
+  OTA_InstallEnd(info, False)
   return
 
 def IncrementalOTA_InstallEnd(info):
-  OTA_InstallEnd(info)
+  OTA_InstallEnd(info, True)
   return
 
 def FullOTA_Assertions(info):
@@ -34,19 +34,23 @@ def IncrementalOTA_Assertions(info):
   AddBasebandAssertion(info)
   return
 
-def AddImage(info, basename, dest):
+def AddImage(info, basename, dest, incremental):
   path = "IMAGES/" + basename
   if path not in info.input_zip.namelist():
     return
 
-  data = info.input_zip.read(path)
+  if incremental:
+    input_zip = info.source_zip
+  else:
+    input_zip = info.input_zip
+  data = input_zip.read("IMAGES/" + basename)
   common.ZipWriteStr(info.output_zip, basename, data)
   info.script.Print("Flashing {} image".format(dest.split('/')[-1]))
   info.script.AppendExtra('package_extract_file("%s", "%s");' % (basename, dest))
 
-def OTA_InstallEnd(info):
-  AddImage(info, "dtbo.img", "/dev/block/bootdevice/by-name/dtbo")
-  AddImage(info, "vbmeta.img", "/dev/block/bootdevice/by-name/vbmeta")
+def OTA_InstallEnd(info, incremental):
+  AddImage(info, "dtbo.img", "/dev/block/bootdevice/by-name/dtbo", incremental)
+  AddImage(info, "vbmeta.img", "/dev/block/bootdevice/by-name/vbmeta", incremental)
   return
 
 def AddBasebandAssertion(info):
