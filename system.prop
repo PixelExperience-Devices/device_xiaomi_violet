@@ -31,11 +31,15 @@ ro.netflix.bsp_rev=Q6150-17263-1
 # Radio
 DEVICE_PROVISIONED=1
 persist.radio.atfwd.start=false
+persist.vendor.radio.enable_temp_dds=true
+persist.vendor.radio.force_on_dc=true
 ril.subscription.types=RUIM
+use.voice.path.for.pcm.voip=true
 
 # Time
 persist.timed.enale=true
 
 # Wireless display
+debug.sf.latch_unsignaled=1
 persist.debug.wfd.enable=1
 persist.sys.wfd.virtual=0
