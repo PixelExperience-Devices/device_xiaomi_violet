@@ -1,2 +1,3 @@
 dontaudit init bt_firmware_file:filesystem getattr;
 dontaudit init firmware_file:filesystem getattr;
+allow init persist_block_device:lnk_file relabelto;
