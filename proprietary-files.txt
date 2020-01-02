@@ -221,13 +221,13 @@ vendor/bin/hw/android.hardware.drm@1.2-service.widevine|95fb8c0063c50bd34c43c58c
 vendor/etc/init/android.hardware.drm@1.2-service.widevine.rc|68767969f86126ada017fc09af151e299db651d5
 vendor/lib64/libbase64.so|d401c8afa0cf35e20149943abf94717b79e93e32
 vendor/lib64/libcpion.so|7cf2784d31f93fb087b747ad8f27746b906154f2
-vendor/lib64/liboemcrypto.so|252479cc9952ffdb3fe77e044b7a6cc91e48e488
+vendor/lib64/liboemcrypto.so|2cee717b25559030a61709e826b4a5dae6043c20
 vendor/lib64/librmp.so|f952b2ab9dab2f412f7f014a90089d529e784f3b
 vendor/lib64/mediadrm/libwvdrmengine.so|0e3181aea6857db7f4378064fc102f800b44f027
 vendor/lib/libbase64.so|90345ddebb0517e1b2ebbd43b938a318f13bc40a
 vendor/lib/libcppf.so|f7030a408959bff1f11499230b6d357cf570c7b5
 vendor/lib/libdrmfs.so|2d8573a3ff6bf52145cff4c7b368077d7b6f52e4
-vendor/lib/liboemcrypto.so|6f12eff0ea54c8d3dcbbe90396e2494528706cf1
+vendor/lib/liboemcrypto.so|b349d1d049709bbdff15a133698264dc8c01db14
 vendor/lib/librmp.so|5a78255271ec2d83bd906b12e5168b653514b4c9
 vendor/lib/libwvhidl.so|c6250a2107597ec978cec3a91e74a12d042e4f32
 vendor/lib/mediadrm/libwvdrmengine.so|990102c67939cb5fd5a183feb7a9aa4acd5c3aa1
