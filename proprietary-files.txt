@@ -1345,7 +1345,7 @@ vendor/lib/libthermalfeature.so
 vendor/lib64/libthermalfeature.so
 
 # Time services - from davinci-user 10 QKQ1.190825.002 V11.0.2.0.QFJCNXM release-keys
--vendor/app/TimeService/TimeService.apk;PRESIGNED|27f9b81621c446baa8c37581d9bfbca2fd67b496
+-vendor/app/TimeService/TimeService.apk;:timeservice_app_cert|27f9b81621c446baa8c37581d9bfbca2fd67b496
 vendor/bin/time_daemon|0e8fd168d881c017eac09452df816eadba7de6a1
 vendor/etc/init/init.time_daemon.rc|b253ca2a498757e14e1d7a051bf504ae09218f51
 vendor/lib/libtime_genoff.so|8578fc5aab1509fedb744f9b73721dc1acfd9748
