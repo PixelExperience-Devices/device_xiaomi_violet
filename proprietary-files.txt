@@ -804,7 +804,7 @@ vendor/lib64/hw/vendor.qti.hardware.soter@1.0-impl.so
 -vendor/lib/libthermalclient.so
 
 # Time - from LA.UM.8.9.r1-05500-SM6xx.0
--vendor/app/TimeService/TimeService.apk;PRESIGNED|4a37afd1395758d946580af184a738e3c657b1e2
+-vendor/app/TimeService/TimeService.apk;:timeservice_app_cert|4a37afd1395758d946580af184a738e3c657b1e2
 vendor/bin/time_daemon|13568f60088576b12e8048e8717288d79a82ab0b
 vendor/etc/init/init.time_daemon.rc|b253ca2a498757e14e1d7a051bf504ae09218f51
 vendor/lib64/libtime_genoff.so|2c052df0d8c69e351ab59a434ae8c1405fedd689
