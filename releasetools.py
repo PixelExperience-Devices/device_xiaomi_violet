@@ -27,22 +27,22 @@ def IncrementalOTA_InstallEnd(info):
   return
 
 def FullOTA_Assertions(info):
-  AddBasebandAssertion(info)
+  AddBasebandAssertion(info, False)
   return
 
 def IncrementalOTA_Assertions(info):
-  AddBasebandAssertion(info)
+  AddBasebandAssertion(info, True)
   return
 
 def AddImage(info, basename, dest, incremental):
-  path = "IMAGES/" + basename
-  if path not in info.input_zip.namelist():
-    return
-
   if incremental:
     input_zip = info.source_zip
   else:
     input_zip = info.input_zip
+  path = "IMAGES/" + basename
+  if path not in input_zip.namelist():
+    return
+  
   data = input_zip.read("IMAGES/" + basename)
   common.ZipWriteStr(info.output_zip, basename, data)
   info.script.Print("Flashing {} image".format(dest.split('/')[-1]))
@@ -53,8 +53,12 @@ def OTA_InstallEnd(info, incremental):
   AddImage(info, "vbmeta.img", "/dev/block/bootdevice/by-name/vbmeta", incremental)
   return
 
-def AddBasebandAssertion(info):
-  android_info = info.input_zip.read("OTA/android-info.txt")
+def AddBasebandAssertion(info, incremental):
+  if incremental:
+    input_zip = info.source_zip
+  else:
+    input_zip = info.input_zip
+  android_info = input_zip.read("OTA/android-info.txt")
   m = re.search(r'require\s+version-baseband\s*=\s*(.+)', android_info)
   if m:
     timestamp, firmware_version = m.group(1).rstrip().split(',')
