@@ -59,5 +59,5 @@ void vendor_load_properties()
 {
     // fingerprint
     property_override("ro.build.description", "violet-user 9 PKQ1.181203.001 V10.3.9.0.PFHINXM release-keys");
-    property_override_dual("ro.build.fingerprint", "ro.vendor.build.fingerprint", "google/coral/coral:10/QQ1B.191205.011/5974828:user/release-keys");
+    property_override_dual("ro.build.fingerprint", "ro.vendor.build.fingerprint", "google/coral/coral:10/QQ1B.200105.004/6031802:user/release-keys");
 }
