@@ -8,6 +8,7 @@ public abstract class IFAAManager {
     private static final int IFAA_VERSION_V2 = 2;
     private static final int IFAA_VERSION_V3 = 3;
     private static final int IFAA_VERSION_V4 = 4;
+
     static int sIfaaVer;
     static boolean sIsFod = SystemProperties.getBoolean("ro.hardware.fp.fod", false);
 
@@ -48,14 +49,15 @@ public abstract class IFAAManager {
      */
     static {
         sIfaaVer = 1;
+
         if (VERSION.SDK_INT >= 28) {
-            sIfaaVer = 4;
+            sIfaaVer = IFAA_VERSION_V4;
         } else if (sIsFod) {
-            sIfaaVer = 3;
+            sIfaaVer = IFAA_VERSION_V3;
         } else if (VERSION.SDK_INT >= 24) {
-            sIfaaVer = 2;
+            sIfaaVer = IFAA_VERSION_V2;
         } else {
-            System.loadLibrary("teeclientjni");//teeclientjni for TA test binary //ifaateeclient
+            System.loadLibrary("teeclientjni"); //teeclientjni for TA test binary //ifaateeclient
         }
     }
 }
