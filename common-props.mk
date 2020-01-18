@@ -10,8 +10,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
     persist.vendor.audio.ras.enabled=false \
     persist.vendor.audio.spv3.enable=true\
     ro.af.client_heap_size_kbyte=7168 \
-    ro.vendor.audio.sdk.ssr=false \
-    ro.vendor.audio.sos=true \
     ro.vendor.audio.voice.volume.boost=manual \
     vendor.audio.adm.buffering.ms=6 \
     vendor.audio.dolby.ds2.enabled=false \
@@ -78,7 +76,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
     vendor.audio.feature.usb_offload.enable=true \
     vendor.audio.feature.usb_offload_sidetone_volume.enable=false \
     vendor.audio.feature.vbat.enable=true \
-    vendor.audio.feature.wsa.enable=false \
+    vendor.audio.feature.wsa.enable=false
 
 # Bluetooth
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -91,11 +89,10 @@ PRODUCT_PROPERTY_OVERRIDES += \
 # Crypto
  PRODUCT_PROPERTY_OVERRIDES += \
     ro.crypto.allow_encrypt_override=true \
-    ro.crypto.volume.filenames_mode=aes-256-cts
+    ro.crypto.volume.filenames_mode = "aes-256-cts"
 
 # Display post-processing
 PRODUCT_PROPERTY_OVERRIDES += \
-    ro.vendor.display.cabl=2 \
     ro.vendor.display.sensortype=2
 
 # DRM
@@ -121,9 +118,9 @@ PRODUCT_ODM_PROPERTIES += \
 PRODUCT_PROPERTY_OVERRIDES += \
     debug.egl.hw=0 \
     debug.mdpcomp.logs=0 \
+    debug.sf.disable_backpressure=1 \
     debug.sf.enable_hwc_vds=1 \
     debug.sf.hw=0 \
-    debug.sf.latch_unsignaled=1 \
     persist.sys.sf.color_saturation=1.0 \
     ro.opengles.version=196610 \
     vendor.display.comp_mask=0 \
@@ -179,18 +176,14 @@ PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
     ro.surface_flinger.use_color_management=true \
     ro.surface_flinger.wcg_composition_dataspace=143261696
 
-# IO CGroup
-PRODUCT_PROPERTY_OVERRIDES += \
-    ro.vendor.iocgrp.config=1
-
 # Keystore
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.hardware.keystore_desede=true
 
 # Listen
 PRODUCT_PROPERTY_OVERRIDES += \
-    ro.vendor.audio.soundtrigger=xiaomi \
-    ro.vendor.audio.soundtrigger.lowpower=false
+    ro.vendor.audio.soundtrigger.lowpower=false \
+    ro.vendor.audio.soundtrigger=none
 
 # Media
 PRODUCT_PROPERTY_OVERRIDES += \
