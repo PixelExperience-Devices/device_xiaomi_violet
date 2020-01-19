@@ -10,6 +10,12 @@
     "branch": "ten"
   },
   {
+    "repository": "vendor_xiaomi_violet_firmware",
+    "target_path": "vendor/xiaomi/violet/firmware",
+    "branch": "ten",
+    "remote": "pixel-gitlab"
+  },
+  {
     "repository": "android_packages_resources_devicesettings",
     "target_path": "packages/resources/devicesettings",
     "branch": "lineage-17.0",
