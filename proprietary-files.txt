@@ -707,16 +707,16 @@ vendor/firmware/a612_zap.mdt
 vendor/firmware/a615_zap.b00
 vendor/firmware/a615_zap.elf
 
-# Graphics - from davinci-user 10 QKQ1.190825.002 V11.0.2.0.QFJCNXM release-keys
+# Graphics - from def_reteu-user 10 QPF30.103-21-1 3932d release-keys
 vendor/lib/egl/eglSubDriverAndroid.so|930b9765626da6454c010596af51c01a40967d63
 vendor/lib/egl/libEGL_adreno.so|8ca78d3373e0481b0562f93a6629a7b9a0bc1ad5
 vendor/lib/egl/libGLESv1_CM_adreno.so|74e1a229517e44bf6f1f37f314d8561bee8f5d0a
-vendor/lib/egl/libGLESv2_adreno.so|0a82696149a0396732d1542502e8c9cfbe9f6b84
+vendor/lib/egl/libGLESv2_adreno.so|e1bf0d97297f52580ccbcf6a9a82eba048892830
 vendor/lib/egl/libQTapGLES.so|ace68d6e0d2c4e6f395ab542f939a4b3e027a0cd
 vendor/lib/egl/libq3dtools_adreno.so|c28bfb4e627e62e6b041fade66d18632ed10d0f7
 vendor/lib/egl/libq3dtools_esx.so|9f9a65d2f39f8bbadf9e8f19bfb22a45319514a7
 vendor/lib/libC2D2.so|aec13c4cf2f766cbff060e8edfa5d465135d7c35
-vendor/lib/libCB.so|d5c706d02ac289542a1a3cd02c578ed690b6eaf4
+vendor/lib/libCB.so|f7593c79763b2127712cbda7324a82ad7d0fa6ed
 vendor/lib/libOpenCL.so|fd7559d43657e3e8b3b5b4c46613f17f2865ce57
 vendor/lib/libRSDriver_adreno.so|03cd2143301033c96793d65343ed12a96173d353
 vendor/lib/libadreno_utils.so|179e0e9d7115129980876abfe7623af644ffb243
@@ -727,29 +727,29 @@ vendor/lib/libllvm-glnext.so|5289d8c4c600de062569d2dfea81ed2ad9b2a8d5
 vendor/lib/libllvm-qcom.so|75c509b62e29d4c33f7c93975614a3f8d2fbb30b
 vendor/lib/libpvr.so|78adbda9057d2bed6aa556a28e345f062bf1169d
 vendor/lib/librs_adreno.so|361de6afe5421246d4910b2e9e568e7dfc3d7e4b
-vendor/lib/librs_adreno_sha1.so|959b4acd0a63ac80b925eced44aa7f0976884fa1
+vendor/lib/librs_adreno_sha1.so|591b84979e80d575d7cb233db7f4245f461a7fec
 vendor/lib64/egl/eglSubDriverAndroid.so|e83b41438c485f909e20f2f9023dfdc4ead59254
 vendor/lib64/egl/libEGL_adreno.so|0708871b8022100266143afe86795d730edde45b
 vendor/lib64/egl/libGLESv1_CM_adreno.so|05650dc41a03e98ad0a9f7f37c90df53c2e75606
-vendor/lib64/egl/libGLESv2_adreno.so|bec22a88fb6e61c36229c97ff434b2b4cf3eb175
+vendor/lib64/egl/libGLESv2_adreno.so|581a75cb3f4ee0c20cc9a84dfdbaf298bf376c9b
 vendor/lib64/egl/libQTapGLES.so|e8b51af9542d3b41c79b69163732d4386ad07aee
 vendor/lib64/egl/libq3dtools_adreno.so|ecf0fd2df00aa673373b9965c426e04bb30760d5
 vendor/lib64/egl/libq3dtools_esx.so|90fce574018866d1099ee4918940350a71aa7782
 vendor/lib64/libC2D2.so|ce0aceb5116cea71454c5313f661c5d042eeb218
-vendor/lib64/libCB.so|65dd12e02813f3c2eade3e19e8ffbf289dc8de5f
+vendor/lib64/libCB.so|36fe52398b7defe82e078a77836f4468fba066c6
 vendor/lib64/libOpenCL.so|21897637e702c4a97eb748934e9f1fc8880881c5
 vendor/lib64/libRSDriver_adreno.so|69cdad43c1ffdcfd7a610e7a659737c171e1493a
 vendor/lib64/libadreno_utils.so|a732da174c5f9714e494882cc6a1984548492757
 vendor/lib64/libbccQTI.so|d4732f569f53d0152bcb824d94819c7b183a7a8b
 vendor/lib64/libc2d30_bltlib.so|254b4b60fe1795188628ab4d156b9656af79c776
 vendor/lib64/libgsl.so|c10b7606da2926abd59161243a1d404963e341dc
-vendor/lib64/libllvm-glnext.so|6175b85f148444c2e2f9d6396b0bb78470371750
+vendor/lib64/libllvm-glnext.so|eb5871c4ef66b06aeda4e7bc0c395037ebc3d325
 vendor/lib64/libllvm-qcom.so|40555ee894fb7aef442b74d4a7d995b7c1e61303
 vendor/lib64/libpvr.so|55ad310d84bb60bb761a2396fdc5ace4564c9b0a
 vendor/lib64/librs_adreno.so|c84431c31efd21b30d95ebe9ea3dc4792f0de4ac
-vendor/lib64/librs_adreno_sha1.so|df03717b40ad5457dbf9234ce4475129f83aff92
+vendor/lib64/librs_adreno_sha1.so|909deb2c2f33349e9b3a5edf2c23b367416a4a46
 
-# Graphics (HDR) - from davinci-user 10 QKQ1.190825.002 V11.0.2.0.QFJCNXM release-keys
+# Graphics (HDR) - from def_reteu-user 10 QPF30.103-21-1 3932d release-keys
 vendor/lib/libhdr_tm.so|fffd91bcfe1b9ae33498624e3e36b46364bf7991
 vendor/lib64/libhdr_tm.so|103b2f0893a767f162ffc2945b5edea062fb0354
 
@@ -773,9 +773,9 @@ vendor/lib64/libsdm-diag.so|d7a96d76dd2fb7516a9ed89c39a3f0992ec3266e
 vendor/lib64/libsdmextension.so|baa5807e39b25134fbe6c9ba2667eead26256e25
 vendor/lib64/libtinyxml2_1.so|ba981e332895a053a67fc54a8190365a3ad37f2d
 
-# Graphics (Vulkan) - from davinci-user 10 QKQ1.190825.002 V11.0.2.0.QFJCNXM release-keys
-vendor/lib/hw/vulkan.sm6150.so|c3f1a905c936834f49ce74679d40ce0ab66dd582
-vendor/lib64/hw/vulkan.sm6150.so|56531ebe2af3c0d8eb63ca3a3e0e630e24ea7365
+# Graphics (Vulkan) - from def_reteu-user 10 QPF30.103-21-1 3932d release-keys
+vendor/lib/hw/vulkan.sm6150.so|e7f7076b24cd8ef787f9f68fb13c34292eef3aea
+vendor/lib64/hw/vulkan.sm6150.so|f0a3a51d3eabe03ff5c20e70d4c035d9f1478af5
 
 # IO Prefetcher - from davinci-user 10 QKQ1.190825.002 V11.0.2.0.QFJCNXM release-keys
 vendor/bin/hw/vendor.qti.hardware.iop@2.0-service|98c38e3647a6c286e5bfb8b271827328f6c04148
@@ -951,7 +951,7 @@ vendor/etc/lm/AppClassifierFeature.xml|102e4291357dd384c0f474d4192370e25123c5e7
 vendor/etc/lm/GameOptimizationFeature.xml|de0bd5be9e1f6ad936fb817fa2ff745a8ca94fd4
 vendor/etc/perf/commonresourceconfigs.xml|9e277f76243eb5ad16d3e55843aadf68a54e7aaa
 vendor/etc/perf/perfboostsconfig.xml|d01a36d112e3b7ac578f8cd428eac5a928a1c401
-vendor/etc/perf/perfconfigstore.xml|fe23523d649d4e37db7585d384634953fe4e4b0a
+vendor/etc/perf/perfconfigstore.xml|afb6ef1b9891d979a01867fbb38546ac303037e1
 vendor/etc/perf/targetconfig.xml|53d6e2936c1cdc67edf86a2ccf04084adbff4a68
 vendor/etc/perf/targetresourceconfigs.xml|0a614d97672c516aedc253aec525468fbdb270ec
 vendor/etc/perf/thermalboost.conf|3a70ac91160e48a64578f0b7775798f19040e87d
