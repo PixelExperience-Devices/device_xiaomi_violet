@@ -31,7 +31,7 @@ def IncrementalOTA_InstallEnd(info):
   return
 
 def OTA_UpdateFirmware(info):
-  info.script.AppendExtra('ui_print("Flashing firmware images);')
+  info.script.AppendExtra('ui_print("Flashing firmware images");')
   info.script.AppendExtra('package_extract_file("install/firmware-update/cmnlib64.mbn", "/dev/block/bootdevice/by-name/cmnlib64");')
   info.script.AppendExtra('package_extract_file("install/firmware-update/imagefv.elf", "/dev/block/bootdevice/by-name/imagefv");')
   info.script.AppendExtra('package_extract_file("install/firmware-update/cmnlib.mbn", "/dev/block/bootdevice/by-name/cmnlib");')
