@@ -16,5 +16,11 @@
     "target_path": "kernel/xiaomi/violet",
     "branch":"eleven",
     "remote":"pixel-devices"
+  },
+  {
+    "repository": "vendor_xiaomi-firmware",
+    "target_path": "vendor/xiaomi-firmware",
+    "branch":"eleven",
+    "remote":"pixel-devices-blobs"
   }
 ]
