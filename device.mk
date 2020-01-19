@@ -209,6 +209,9 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     android.hardware.biometrics.fingerprint@2.1-service.xiaomi_sm6150
 
+# Firmware
+$(call inherit-product, vendor/xiaomi-firmware/violet/firmware.mk)
+
 # FM
 PRODUCT_PACKAGES += \
     FM2 \
@@ -351,10 +354,6 @@ PRODUCT_PACKAGES += \
     rcs_service_aidl.xml \
     rcs_service_api \
     rcs_service_api.xml
-
-# Recovery
-PRODUCT_PACKAGES += \
-    librecovery_updater_xiaomi
 
 # RenderScript HAL
 PRODUCT_PACKAGES += \
