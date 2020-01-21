@@ -1,4 +1,5 @@
 set_prop(vendor_init, power_prop)
+set_prop(vendor_init, vendor_alarm_boot_prop)
 
 allow vendor_init debugfs_clk:file write;
 
