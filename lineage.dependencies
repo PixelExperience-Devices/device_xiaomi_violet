@@ -2,9 +2,5 @@
   {
     "repository": "android_device_xiaomi_common",
     "target_path": "device/xiaomi/common"
-  },
-  {
-    "repository": "android_packages_resources_devicesettings",
-    "target_path": "packages/resources/devicesettings"
   }
 ]
