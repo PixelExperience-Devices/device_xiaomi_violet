@@ -43,12 +43,12 @@ static constexpr const char* kDispParamHbmFodOn = "0x20000";
 
 bool hasAmoledPanel() {
     std::string device = android::base::GetProperty("ro.product.device", "");
-    return device == "davinci" || device == "tucana";
+    return device == "davinci" || device == "davinciin" || device == "tucana";
 }
 
 bool hasFingerprintOnDisplay() {
     std::string device = android::base::GetProperty("ro.product.device", "");
-    return device == "davinci" || device == "tucana";
+    return device == "davinci" || device == "davinciin" || device == "tucana";
 }
 
 bool SunlightEnhancement::isSupported() {
