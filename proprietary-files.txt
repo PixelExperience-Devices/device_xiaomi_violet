@@ -363,7 +363,6 @@ vendor/lib64/camera/components/com.qtistatic.stats.awb.so
 vendor/lib64/camera/components/com.qtistatic.stats.pdlib.so
 vendor/lib64/camera/components/com.vidhance.stats.aec_dmbr.so
 vendor/lib64/camera/components/com.xiaomi.node.mibokeh.so
-vendor/lib64/camera/components/com.xiaomi.node.misegment.so
 vendor/lib64/camera/components/libdepthmapwrapper.so
 vendor/lib64/camera/components/libmmcamera_cac3.so
 vendor/lib64/camera/components/model_back.dlc
@@ -372,7 +371,7 @@ vendor/lib64/camera/fdconfigpreview.bin
 vendor/lib64/camera/fdconfigpreviewlite.bin
 vendor/lib64/camera/fdconfigvideo.bin
 vendor/lib64/camera/fdconfigvideolite.bin
-vendor/lib64/hw/camera.qcom.so|76d212b8453540ffecc7a5fd873ca8ba18f8a8c9
+vendor/lib64/hw/camera.qcom.so
 vendor/lib64/hw/com.qti.chi.override.so
 vendor/lib64/hw/com.qti.chi.override_moorea.so
 vendor/lib64/libFaceGrade.so
@@ -412,7 +411,7 @@ vendor/lib64/libswregistrationalgo.so
 vendor/lib64/libswvdec.so
 vendor/lib64/libsymphony-cpu.so
 vendor/lib64/libsymphonypower.so
-vendor/lib64/libvidhance.so|e92bdcd6a3bb4c0edb8ffb1f029f3a1cc6aa90dd
+vendor/lib64/libvidhance.so
 vendor/lib64/mibokeh_660_opencl.bin
 
 # CDSP - from davinci-user 10 QKQ1.190825.002 V11.0.2.0.QFJCNXM release-keys
@@ -1333,11 +1332,8 @@ vendor/lib64/vendor.qti.hardware.soter@1.0.so|5815859dc07d3181901596d06612b379e8
 -vendor/lib64/libthermalclient.so
 vendor/bin/thermal-engine
 vendor/etc/thermal-engine-camera.conf
-vendor/etc/thermal-engine-high.conf
 vendor/etc/thermal-engine-map.conf
-vendor/etc/thermal-engine-normal.conf
-vendor/etc/thermal-engine-pubgmhd.conf
-vendor/etc/thermal-engine-sgame.conf
+vendor/etc/thermal-engine-normal.conf|5be83a05098a63a22348c7bac2f9cb3c9e6897df
 vendor/etc/thermal-engine-studio.conf
 vendor/etc/thermal-engine-tgame.conf
 vendor/etc/thermal-engine.conf
