@@ -76,13 +76,13 @@ vendor/lib64/libhdmipassthru.so|882fe62187d282a4c0fe257cd54a7090fe809824
 vendor/lib64/libqtigef.so|886285c40cd45a4f17d3b2e5e909da5a4fd9bf6c
 vendor/lib64/soundfx/libasphere.so|bd48aa3d7cf27bf3b12ce29f429b719383e104fc
 
-# Audio - hardware
-vendor/lib/hw/audio.primary.sm6150.so
-vendor/lib/libaudio_log_utils.so
-vendor/lib/libtinycompress_vendor.so
-vendor/lib64/hw/audio.primary.sm6150.so
-vendor/lib64/libaudio_log_utils.so
-vendor/lib64/libtinycompress_vendor.so
+# Audio - hardware - from violet-user 9 PKQ1.181203.001 9.9.3 release-keys
+vendor/lib/hw/audio.primary.sm6150.so|50fa07b8cfd356fc10d7cf9537f0bd3862941939
+vendor/lib/libaudio_log_utils.so|a8e0f5215004c493ff9bc4541e91ed8d1b4411a6
+vendor/lib/libtinycompress_vendor.so|9ba9aecb21cdf179a9acbcf3996c967eb81fd181
+vendor/lib64/hw/audio.primary.sm6150.so|02da298846334b8dd1c39c8d6f769d670fb46c95
+vendor/lib64/libaudio_log_utils.so|df3362525f612e00988a16307c4a3781e564516d
+vendor/lib64/libtinycompress_vendor.so|f1b9ea591545cede86490fd6ab9092391c56be86
 
 # Audio Firmware
 vendor/firmware/tas2563_uCDSP.bin

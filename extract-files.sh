@@ -65,9 +65,6 @@ sed -i "s/android.hidl.base@1.0.so/libhidlbase.so\x00\x00\x00\x00\x00\x00\x00\x0
 sed -i "s/android.hidl.base@1.0.so/libhidlbase.so\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00/" "${BLOB_ROOT}/vendor/bin/hw/vendor.qti.hardware.cvp@1.0-service"
 sed -i "s/android.hidl.base@1.0.so/libhidlbase.so\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00/" "${BLOB_ROOT}/vendor/lib64/vendor.qti.hardware.cvp@1.0-halimpl.so" "${BLOB_ROOT}/vendor/lib/vendor.qti.hardware.cvp@1.0-halimpl.so"
 
-patchelf --add-needed "libprocessgroup.so" "${BLOB_ROOT}/vendor/lib/hw/audio.primary.sm6150.so"
-patchelf --add-needed "libprocessgroup.so" "${BLOB_ROOT}/vendor/lib64/hw/audio.primary.sm6150.so"
-
 patchelf --remove-needed "vendor.xiaomi.hardware.mtdservice@1.0.so" "${BLOB_ROOT}/vendor/bin/mlipayd@1.1"
 patchelf --remove-needed "vendor.xiaomi.hardware.mtdservice@1.0.so" "${BLOB_ROOT}/vendor/lib64/libmlipay.so"
 patchelf --remove-needed "vendor.xiaomi.hardware.mtdservice@1.0.so" "${BLOB_ROOT}/vendor/lib64/libmlipay@1.1.so"
