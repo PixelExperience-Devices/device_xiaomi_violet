@@ -289,36 +289,26 @@ vendor/lib64/hw/android.hardware.gatekeeper@1.0-impl-qti.so
 
 # GPS - from LA.UM.8.9.r1-05500-SM6xx.0
 vendor/bin/garden_app|0d86fed7714cde2a80c39ccc8107a73c09c9d562
-vendor/bin/hw/android.hardware.gnss@2.0-service-qti|6b0264fb87b4caab908a706fc5d979df5173a311
 vendor/bin/loc_launcher|50d085f46ad6e46daf44e1738ed569fc9f16e2f2
 vendor/bin/lowi-server|ba450be5381f7e8c37fb5abadae703b3f9cf26d2
 vendor/bin/slim_daemon|5e3d2c3b64517e74883af6dca7b381c31f80a8ed
 vendor/bin/xtra-daemon|b827d70c05910dbcdcaa2f07df2fd338865045c8
 vendor/etc/cacert_location.pem|0789bf799c7e45d352a83e2f79ddb0cea86db85b
-vendor/etc/init/android.hardware.gnss@2.0-service-qti.rc|8e0b0596a13b8d653e6f5415c41d8a53bb12b73a
-vendor/etc/vintf/manifest/android.hardware.gnss@2.0-service-qti.xml|8d7eafd68db9bbe7ec7a5c4d547f026869766081
 vendor/etc/vintf/manifest/vendor.qti.gnss@3.0-service.xml|9b2f6691d6c224bcb9ab9a0d57adfb9e52f1b53e
 vendor/etc/xtra_root_cert.pem|f55a31ec4d9cf8ce2724acadecf00c779f8767db
-vendor/lib64/hw/android.hardware.gnss@2.0-impl-qti.so|75b8868bb34c94321e5f881c8a908be88f8f3ba4
 vendor/lib64/hw/vendor.qti.gnss@3.0-impl.so|1b63a0ad759f72e48a1ee685740cfe75c1137401
 vendor/lib64/libaoa.so|f302a815eb998cda920702d31d955309d11ade0a
-vendor/lib64/libbatching.so|a75d586ad584387f87dbaf955d19ff87dd172e0f
 vendor/lib64/libcacertclient.so|e04aa49d3b3b4534f5eb2b1ccea69ff8fee0182c
 vendor/lib64/libdataitems.so|ec1ee4c0315036890e8bfa4bd43a879bebf953aa
 vendor/lib64/libgarden.so|5dbaccce2ef56cf57ce610f6e1b0dd48c7c956f0
 vendor/lib64/libgarden_haltests_e2e.so|398921fe477e2c63a8d4a741a8d1a244b92d0296
 vendor/lib64/libgdtap.so|cfcb2d8c3a79c3c152be800bc1f45ac44816ea91
-vendor/lib64/libgeofencing.so|c073bdbd76fa53581af21d8856249915809535bb
-vendor/lib64/libgnss.so|cb87ab3119cec6084faa0bb5a73f91105e3166ab
 vendor/lib64/libgnsspps.so|0204de9be4c7a3858781c9691f2b8165465519dd
-vendor/lib64/libgps.utils.so|a13ce4697aeafb775cb2ccfa621b6a66c765bac8
 vendor/lib64/libizat_client_api.so|0725613dcc5faa7c32948b440d2afc39c2d23f73
 vendor/lib64/libizat_core.so|474564defbeb8586adf059d6d9938a04bf308612
 vendor/lib64/liblbs_core.so|c6326310581af36f022bc7694178b80369f6b1f9
 vendor/lib64/libloc_api_v02.so|8015d8d32618871fdc7e5db41eac1b702d05cde8
-vendor/lib64/libloc_core.so|c00ca4e575bc77ac640bb054a4ddef15602c61a2
 vendor/lib64/libloc_socket.so|494d8bd06715a9073b0fe8426eb0c9e6a41fc0dd
-vendor/lib64/liblocation_api.so|b7ce5eb054e70676ea05ef516206fce0b39934ff
 vendor/lib64/liblocationservice.so|be05e6fba2b604e27de7754f3f854cd4c2983c5f
 vendor/lib64/liblocationservice_glue.so|1ac2efe0ccb6462e9b4d8edfd809a868e2e04c85
 vendor/lib64/liblowi_client.so|637c103aafca1eec33f28c211f41dd62287fe1af
