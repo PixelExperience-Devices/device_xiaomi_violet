@@ -28,9 +28,9 @@ cc_binary {
         "liblog",
         "libhwbinder",
         "libutils",
-        "vendor.goodix.hardware.biometrics.fingerprint@2.1",
+        "//device/xiaomi/common:vendor.goodix.hardware.biometrics.fingerprint@2.1",
         "vendor.lineage.biometrics.fingerprint.inscreen@1.0",
-        "vendor.xiaomi.hardware.fingerprintextension@1.0",
+        "//device/xiaomi/common:vendor.xiaomi.hardware.fingerprintextension@1.0",
     ],
     proprietary: true,
 }
