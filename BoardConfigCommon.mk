@@ -122,6 +122,7 @@ DEVICE_MATRIX_FILE := $(COMMON_PATH)/compatibility_matrix.xml
 TARGET_PROVIDES_KEYMASTER := true
 
 # Media
+TARGET_DISABLED_UBWC := true
 TARGET_USES_MEDIA_EXTENSIONS := true
 
 # Partitions
