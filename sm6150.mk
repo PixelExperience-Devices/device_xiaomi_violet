@@ -28,7 +28,6 @@ PRODUCT_ENFORCE_RRO_EXCLUDED_OVERLAYS += \
     $(LOCAL_PATH)/overlay/packages/apps/Snap
 
 # Properties
--include $(LOCAL_PATH)/common-props.mk
 PRODUCT_COMPATIBLE_PROPERTY_OVERRIDE := true
 
 # Device uses high-density artwork where available
