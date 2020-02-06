@@ -1357,7 +1357,7 @@ vendor/lib64/vendor.qti.hardware.soter@1.0.so|5815859dc07d3181901596d06612b379e8
 vendor/bin/thermal-engine
 vendor/etc/thermal-engine-camera.conf
 vendor/etc/thermal-engine-map.conf
-vendor/etc/thermal-engine-normal.conf|5be83a05098a63a22348c7bac2f9cb3c9e6897df
+vendor/etc/thermal-engine-normal.conf|0f952860f1f9fca9b724fc7121fc761629abe4fe
 vendor/etc/thermal-engine-studio.conf
 vendor/etc/thermal-engine-tgame.conf
 vendor/etc/thermal-engine.conf
