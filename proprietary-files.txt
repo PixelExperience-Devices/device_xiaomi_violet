@@ -1386,10 +1386,8 @@ vendor/etc/init/vendor.qti.hardware.wifi.wifilearner@1.0-service.rc|aacefc44da5e
 vendor/etc/init/vendor.qti.hardware.wigig.supptunnel@1.0-service.rc|0ad6f8871ffb8130d6af385434b2eb0512c04733
 vendor/etc/wifi/aoa_cldb_falcon.bin|7511e868c40e66e9758568b7112894cbce2650a4
 vendor/etc/wifi/aoa_cldb_swl14.bin|2a3be07a8f24bc1b9798d07c7133b0f71b77738f
-vendor/etc/wifi/p2p_supplicant_overlay.conf|38f4ac0782e813953925b506582252210b0e3670
 vendor/etc/wifi/wigig_p2p_supplicant.conf|add33c197c2e740071e0e55fe8b14eadc3eedf4c
 vendor/etc/wifi/wigig_supplicant.conf|c3114b4c7dddad57eb3bfb66974d440777d22054
-vendor/etc/wifi/wpa_supplicant_overlay.conf|2b74853f14038dfc91d17deb950dafa04c6a463b
 vendor/firmware/wigig/wigig.ini|165fdbe0c75ddee78fe6a3a8cc8feebd31b903c2
 vendor/lib/libaoa.so|430896da0e452a9f82dc5b5955fd1e898f40e974
 vendor/lib/libwigig_flashaccess.so|fe5c6a215a17eea835458990aa62150da1ad23ab
