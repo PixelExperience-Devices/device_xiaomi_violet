@@ -37,17 +37,17 @@ vendor/etc/init/vendor.qti.hardware.alarm@1.0-service.rc|c9877b6cae0353d5fdea5bc
 vendor/lib64/hw/vendor.qti.hardware.alarm@1.0-impl.so|1e2631850cc97dfedbde50a9d0d55c8d14881b44
 vendor/lib64/vendor.qti.hardware.alarm@1.0.so|271f85f1c6dc0c65dc3aa9a8603f3910fa50e1ea
 
-# ANT+ (system) - from laurel_sprout-user 9 PKQ1.190416.001 V10.3.4.0.PFQMIXM release-keys
--lib/libantradio.so|8d9bd787f54a5ad028591ca8a68ba2e0ba43158a
--lib64/libantradio.so|b1b05e284c71a9552bc7e3f5407520f0757033a8
-lib/com.qualcomm.qti.ant@1.0.so|fd8a3ac1c865ef3b0f6f3eedd85786a9993db114
-lib64/com.qualcomm.qti.ant@1.0.so|ad4f7601400bbe6ca9d82dcc6a38023e48d35469
+# ANT+ (system) - from davinci-user 10 QKQ1.190825.002 V11.0.2.0.QFJCNXM release-keys
+product/lib/com.qualcomm.qti.ant@1.0.so|a6e5dc519d76a0d938701b8773df19cfa98596b4
+product/lib64/com.qualcomm.qti.ant@1.0.so|f40868ad57012f1a512b14c889bc8380652cc50f
+-lib/libantradio.so|d343bed6e26f99d9870f730303096f6ea8a9bcf8
+-lib64/libantradio.so|43f6105678c082216f1606d8dd43fa1b0b753d7e
 
-# ANT+ (vendor) - from laurel_sprout-user 9 PKQ1.190416.001 V10.3.4.0.PFQMIXM release-keys
-vendor/lib/com.qualcomm.qti.ant@1.0.so|33cd99e965f44ad13c5d2496dace78445f7d1734
-vendor/lib/hw/com.qualcomm.qti.ant@1.0-impl.so|1626b16bd3de85db4bd68e933bef0d24fa573818
-vendor/lib64/com.qualcomm.qti.ant@1.0.so|671430030323a3e8b5dd334383143df6dd85d0fa
-vendor/lib64/hw/com.qualcomm.qti.ant@1.0-impl.so|83759b8f07fb1e64baecff205cef1f2e67381243
+# ANT+ (vendor) - from davinci-user 10 QKQ1.190825.002 V11.0.2.0.QFJCNXM release-keys
+vendor/lib/com.qualcomm.qti.ant@1.0.so|f06db3ccdcd6b184d26f4e4a3880e587e09f3a6b
+vendor/lib/hw/com.qualcomm.qti.ant@1.0-impl.so|41eb9b42a7ab4a15c50e26956377b68f8cb922a5
+vendor/lib64/com.qualcomm.qti.ant@1.0.so|181a8ab9b1d40705d3151821b53732c5566a2848
+vendor/lib64/hw/com.qualcomm.qti.ant@1.0-impl.so|aa08f9ec51392ed841f60ad08b7f083312c8c5ee
 
 # Audio - from davinci-user 10 QKQ1.190825.002 V11.0.2.0.QFJCNXM release-keys
 etc/permissions/audiosphere.xml|da5c0d10354f621b9efa0cb339c2015b9c2bf889
@@ -103,11 +103,29 @@ vendor/etc/acdbdata/adsp_avs_config.acdb
 product/lib64/libaptX_encoder.so|df1c89d7af1bb35808d5fe3496b04ba066c10cbc
 product/lib64/libaptXHD_encoder.so|e13fa70c97caaa24d061678bdee608eb8850a69e
 
-# Bluetooth
-vendor/bin/hw/android.hardware.bluetooth@1.0-service-qti
-vendor/etc/init/android.hardware.bluetooth@1.0-service-qti.rc
-vendor/lib/hw/android.hardware.bluetooth@1.0-impl-qti.so
-vendor/lib64/hw/android.hardware.bluetooth@1.0-impl-qti.so
+# Bluetooth - from def_reteu-user 10 QPF30.103-21-1 3932d release-keys
+vendor/bin/hw/android.hardware.bluetooth@1.0-service-qti|adfd9ebbc82c5daf4f1c603831325859d968e51e
+vendor/etc/init/android.hardware.bluetooth@1.0-service-qti.rc|a979981c55f3dcaf6cf2212e71b901ca4d58b959
+vendor/lib/hw/android.hardware.bluetooth@1.0-impl-qti.so|7c1cb84ac44d0c9d9d6de58d0c5d3493a9f76ae6
+vendor/lib64/hw/android.hardware.bluetooth@1.0-impl-qti.so|0689431c7f9aca32653b6fd8e31208ce625b85c3
+vendor/lib64/libbtnv.so|6b33cc22e3b3cd433e8e6e3d70eab2d523a3d377
+vendor/lib64/libbt-hidlclient.so|0fea38b7a4db63c759f3c962627596db601a14ec
+
+# Bluetooth Audio - from davinci-user 10 QKQ1.190825.002 V11.0.2.0.QFJCNXM release-keys
+vendor/lib64/hw/audio.bluetooth_qti.default.so|8b390a57d5c58a362f435342c9f892a32da5078f
+vendor/lib64/hw/vendor.qti.hardware.bluetooth_audio@2.0-impl.so|332bbe7b0e76358500605f7651b0dcfa0cd7f27b
+vendor/lib64/hw/vendor.qti.hardware.bluetooth_sar@1.0-impl.so|71ad8980142e7d8d754607accc0cffd8f5e68dbd
+vendor/lib64/hw/vendor.qti.hardware.btconfigstore@1.0-impl.so|96b44484392abf88f8473100279e9f68b05f1f50
+vendor/lib64/libbluetooth_audio_session_qti.so|1e483158e908282e33cb2ce5591aabf8fa88c489
+vendor/lib64/vendor.qti.hardware.bluetooth_sar@1.0.so|9346946b110086a6b473c8226e072e9a0cdbb87e
+vendor/lib64/vendor.qti.hardware.btconfigstore@1.0.so|c51214b092f7e47c2d21989a605c4a8c7e7b85eb
+vendor/lib/hw/audio.bluetooth_qti.default.so|7dcd20a9637021233693ac2474e61bc651dbea76
+vendor/lib/hw/vendor.qti.hardware.bluetooth_audio@2.0-impl.so|c8f0515e3d9c2dfc99e2562f3b43100690ee2054
+vendor/lib/hw/vendor.qti.hardware.bluetooth_sar@1.0-impl.so|6f9f0f1a9bbd14682caf825844cf652adb7b8f4b
+vendor/lib/hw/vendor.qti.hardware.btconfigstore@1.0-impl.so|d04ce5677ea683330ea26dfebe40759e7e533d6d
+vendor/lib/libbluetooth_audio_session_qti.so|0bd178da637471b31f991a4e0d8894223a6af8ba
+vendor/lib/vendor.qti.hardware.bluetooth_sar@1.0.so|37bc226f0aa9793a6beca1cabdde40030a7637f9
+vendor/lib/vendor.qti.hardware.btconfigstore@1.0.so|52855c14cca9af580f2006304a5fb69ffd35e9ac
 
 # Camera
 vendor/etc/camera/beauty_ui9_intelligent_params.config
@@ -614,18 +632,18 @@ vendor/lib64/libgoodixhwfingerprint.so
 vendor/lib64/libvendor.goodix.hardware.interfaces.biometrics.fingerprint@2.1.so
 vendor/lib64/vendor.qti.hardware.fingerprint@1.0.so
 
-# FM - from laurel_sprout-user 9 PKQ1.190416.001 V10.3.4.0.PFQMIXM release-keys
--lib/vendor.qti.hardware.fm@1.0.so|d50021b553ab924835e5472470064b2816e67870
--lib64/vendor.qti.hardware.fm@1.0.so|100979a7f77eb3fd6fd84785c0b55e397d8229f7
-lib/fm_helium.so|d0b20653d6b5f74ee298c4c539e2cbf7e8a5910e
-lib/libfm-hci.so|a1bf3a8e7b854e3d42bfaa59149ae571fdd51939
-lib64/fm_helium.so|b4c342e57541cb842f757a39db55669b468cffca
-lib64/libfm-hci.so|2bc70e398b4f43a463f5fc95a754579365c7346a
-vendor/bin/fm_qsoc_patches|9ace34a25bee431559c45f975953dd0ad873f58c
-vendor/lib/hw/vendor.qti.hardware.fm@1.0-impl.so|9cf41306b2f7d814f4b55cc86c852ac45ecf3d96
-vendor/lib/vendor.qti.hardware.fm@1.0.so|567282b3c776e5c6639a4c9a34483482acd1afd1
-vendor/lib64/hw/vendor.qti.hardware.fm@1.0-impl.so|92f52da7a0785074c3102b10137ad13cd00ab4fa
-vendor/lib64/vendor.qti.hardware.fm@1.0.so|65e5f44a54f42fcebc3d2eec62dee3d80640e006
+# FM - from davinci-user 10 QKQ1.190825.002 V11.0.2.0.QFJCNXM release-keys
+lib/fm_helium.so|3e02cb1f3b0896cb42e9c1bb145cc260b570f006
+lib/libfm-hci.so|12095633161de5c80c212211ba7eb71ab2d973d7
+lib64/fm_helium.so|bc9f6314528630c060b593cef4a8cec786b22467
+lib64/libfm-hci.so|1b0b0c2660da95eaf8f6148cc10ee5ab10225c69
+-product/lib/vendor.qti.hardware.fm@1.0.so|71efd722f71d858c6b02d4a0baaff0163691348e
+-product/lib64/vendor.qti.hardware.fm@1.0.so|fc7ad886f82089edf36509865fadac17a7340f32
+vendor/bin/fm_qsoc_patches|ad51215ec3538dc0f6d4fe6d107f939d597f8894
+vendor/lib/hw/vendor.qti.hardware.fm@1.0-impl.so|6cb87b8f0d4439c9e9f81920230ed9a2da43de62
+vendor/lib/vendor.qti.hardware.fm@1.0.so|5f595ffd02e97b14689f9b1d50863dc843500fcf
+vendor/lib64/hw/vendor.qti.hardware.fm@1.0-impl.so|506efd87250697bdae271f86ea472785a77b84ef
+vendor/lib64/vendor.qti.hardware.fm@1.0.so|073cace3aa8d0ffa025d9df67c45f8a907109339
 
 # Gatekeeper - from davinci-user 10 QKQ1.190825.002 V11.0.2.0.QFJCNXM release-keys
 vendor/bin/hw/android.hardware.gatekeeper@1.0-service-qti|a189a50515831e6ac9a7e88a165ac979ae6ac077

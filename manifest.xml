@@ -577,6 +577,36 @@
         <fqname>@1.0::ICvp/cvphalservice</fqname>
     </hal>
     <hal format="hidl">
+        <name>vendor.qti.hardware.bluetooth_audio</name>
+        <transport>hwbinder</transport>
+        <version>2.0</version>
+        <interface>
+            <name>IBluetoothAudioProvidersFactory</name>
+            <instance>default</instance>
+        </interface>
+        <fqname>@2.0::IBluetoothAudioProvidersFactory/default</fqname>
+    </hal>
+    <hal format="hidl">
+        <name>vendor.qti.hardware.bluetooth_sar</name>
+        <transport>hwbinder</transport>
+        <version>1.0</version>
+        <interface>
+            <name>IBluetoothSar</name>
+            <instance>default</instance>
+        </interface>
+        <fqname>@1.0::IBluetoothSar/default</fqname>
+    </hal>
+    <hal format="hidl">
+        <name>vendor.qti.hardware.btconfigstore</name>
+        <transport>hwbinder</transport>
+        <version>1.0</version>
+        <interface>
+            <name>IBTConfigStore</name>
+            <instance>default</instance>
+        </interface>
+        <fqname>@1.0::IBTConfigStore/default</fqname>
+    </hal>
+    <hal format="hidl">
         <name>vendor.qti.hardware.data.connection</name>
         <transport>hwbinder</transport>
         <version>1.1</version>
