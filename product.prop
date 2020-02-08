@@ -16,6 +16,13 @@ persist.sys.wfd.virtual=0
 # Camera
 vendor.camera.aux.packagelist=org.codeaurora.snapcam,com.android.camera,com.google.android.GoogleCamera
 
+# LMKD
+ro.config.low_ram=false
+ro.lmk.kill_heaviest_task=true
+ro.lmk.kill_timeout_ms=100
+ro.lmk.use_minfree_levels=true
+ro.lmk.log_stats=true
+
 # Media
 media.aac_51_output_enabled=true
 media.stagefright.enable-aac=true
