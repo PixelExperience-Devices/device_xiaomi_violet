@@ -1,1 +1,2 @@
 user=system seinfo=platform name=org.lineageos.settings domain=settings type=system_app_data_file
+user=system seinfo=platform name=org.lineageos.settings.flickerfree domain=settings type=system_app_data_file
