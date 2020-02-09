@@ -675,12 +675,7 @@ on charger
     setprop vendor.usb.controller a600000.dwc3
     setprop sys.usb.configfs 1
 
-    symlink /dev/block/platform/soc/1da4000.ufshc /dev/block/bootdevice
-    mkdir /mnt/vendor/persist
-    chown root system /mnt/vendor/persist
-    chmod 0771 /mnt/vendor/persist
     mkdir /mnt/vendor/persist/subsys 0770 root system
-    wait /dev/block/platform/soc/1da4000.ufshc/by-name/persist
     mkdir /data/vendor/charge_logger 0771 system system
     write /sys/class/leds/green/max_brightness 32
     write /sys/class/leds/blue/max_brightness 32
