@@ -1,5 +1,5 @@
 #!/vendor/bin/sh
-# Copyright (c) 2012-2018, The Linux Foundation. All rights reserved.
+# Copyright (c) 2012-2018, 2020 The Linux Foundation. All rights reserved.
 #
 # Redistribution and use in source and binary forms, with or without
 # modification, are permitted provided that the following conditions are
@@ -42,22 +42,10 @@ soc_id=`cat /sys/devices/soc0/soc_id 2> /dev/null`
 esoc_name=`cat /sys/bus/esoc/devices/esoc0/esoc_name 2> /dev/null`
 
 target=`getprop ro.board.platform`
-product=`getprop ro.product.name`
-product=${product:(-4)}
 
 if [ -f /sys/class/android_usb/f_mass_storage/lun/nofua ]; then
 	echo 1  > /sys/class/android_usb/f_mass_storage/lun/nofua
 fi
-
-#
-# Allow USB enumeration with default PID/VID
-#
-baseband=`getprop ro.baseband`
-
-echo 1  > /sys/class/android_usb/f_mass_storage/lun/nofua
-usb_config=`getprop persist.vendor.usb.config`
-debuggable=`getprop ro.debuggable`
-buildvariant=`getprop ro.build.type`
 
 #
 # Override USB default composition
@@ -77,26 +65,16 @@ if [ "$(getprop persist.vendor.usb.config)" == "" -a \
 	          "Dragon" | "SBC")
 	              setprop persist.vendor.usb.config diag,adb
 	          ;;
-		  "DAVINCI")
-                      if [ "$buildvariant" = "eng" ]; then
-                         setprop persist.vendor.usb.config diag,serial_cdev,rmnet,dpl,qdss,adb
-                      elif [ -z "$debuggable" -o "$debuggable" = "1"  ]; then
-                         setprop persist.vendor.usb.config adb
-                      else
-                         setprop persist.vendor.usb.config none
-                      fi
-                  ;;
                   *)
 		  case "$soc_machine" in
 		    "SA")
-			if [ "$product" == "gvmq" ]; then
-				setprop persist.vendor.usb.config adb
-			else
-				setprop persist.vendor.usb.config diag,adb
-			fi
+	              setprop persist.vendor.usb.config diag,adb
 		    ;;
 		    *)
 	            case "$target" in
+	              "msm8996")
+	                  setprop persist.vendor.usb.config diag,serial_cdev,serial_tty,rmnet_ipa,mass_storage,adb
+		      ;;
 	              "msm8909")
 		          setprop persist.vendor.usb.config diag,serial_smd,rmnet_qti_bam,adb
 		      ;;
@@ -121,21 +99,21 @@ if [ "$(getprop persist.vendor.usb.config)" == "" -a \
 				      setprop persist.vendor.usb.config diag,serial_smd,rmnet_ipa,adb
 			      fi
 		      ;;
-	              "msm8996")
-			      if [ -d /config/usb_gadget ]; then
-				      setprop persist.vendor.usb.config diag,serial_cdev,rmnet,adb
-			      else
-				      setprop persist.vendor.usb.config diag,serial_cdev,serial_tty,rmnet_ipa,mass_storage,adb
-			      fi
-		      ;;
 	              "msm8998" | "sdm660" | "apq8098_latv")
 		          setprop persist.vendor.usb.config diag,serial_cdev,rmnet,adb
 		      ;;
 	              "sdm845" | "sdm710")
 		          setprop persist.vendor.usb.config diag,serial_cdev,rmnet,dpl,adb
 		      ;;
-	              "msmnile" | "sm6150" | "trinket" | "lito")
+	              "msmnile" | "sm6150" | "trinket" | "lito" | "atoll")
 			  setprop persist.vendor.usb.config diag,serial_cdev,rmnet,dpl,qdss,adb
+		      ;;
+                      "lahaina")
+			      if [ -d /config/usb_gadget/g1/functions/qdss.qdss ]; then
+				      setprop persist.vendor.usb.config diag,serial_cdev,rmnet,dpl,qdss,adb
+			      else
+				      setprop persist.vendor.usb.config diag,serial_cdev,rmnet,dpl,adb
+			      fi
 		      ;;
 	              *)
 		          setprop persist.vendor.usb.config diag,adb
@@ -174,31 +152,18 @@ if [ "$target" == "msm8937" ]; then
 		*)
 		;;
 	   esac
-	else
-	   case "$soc_id" in
-		"313" | "320")
-		   setprop vendor.usb.rndis.func.name "rndis_bam"
-		   setprop vendor.usb.rmnet.func.name "rmnet_bam"
-		   setprop vendor.usb.rmnet.inst.name "rmnet"
-		   setprop vendor.usb.dpl.inst.name "dpl"
-		;;
-		*)
-		;;
-	   esac
 	fi
-fi
-
-if [ "$target" == "msm8996" ]; then
-       if [ -d /config/usb_gadget ]; then
-                  setprop vendor.usb.rndis.func.name "rndis_bam"
-                  setprop vendor.usb.rmnet.func.name "rmnet_bam"
-                  setprop vendor.usb.rmnet.inst.name "rmnet"
-                  setprop vendor.usb.dpl.inst.name "dpl"
-       fi
 fi
 
 # check configfs is mounted or not
 if [ -d /config/usb_gadget ]; then
+	# Chip-serial is used for unique MSM identification in Product string
+	msm_serial=`cat /sys/devices/soc0/serial_number`;
+	msm_serial_hex=`printf %08X $msm_serial`
+	machine_type=`cat /sys/devices/soc0/machine`
+	product_string="$machine_type-$soc_hwplatform _SN:$msm_serial_hex"
+	echo "$product_string" > /config/usb_gadget/g1/strings/0x409/product
+
 	# ADB requires valid iSerialNumber; if ro.serialno is missing, use dummy
 	serialnumber=`cat /config/usb_gadget/g1/strings/0x409/serialnumber 2> /dev/null`
 	if [ "$serialnumber" == "" ]; then
