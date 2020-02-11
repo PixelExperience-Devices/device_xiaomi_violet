@@ -7,5 +7,3 @@ genfscon sysfs /devices/platform/soc/soc:fingerprint_fpc/device_prepare        u
 genfscon sysfs /devices/platform/soc/soc:fingerprint_fpc/fingerdown_wait       u:object_r:sysfs_fingerprint:s0
 genfscon sysfs /devices/platform/soc/soc:fingerprint_fpc/irq                   u:object_r:sysfs_fingerprint:s0
 genfscon sysfs /devices/platform/soc/soc:fingerprint_fpc/wakeup_enable         u:object_r:sysfs_fingerprint:s0
-
-genfscon sysfs /devices/virtual/touch/tp_dev/fod_status                u:object_r:sysfs_graphics:s0
