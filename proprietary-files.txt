@@ -1,14 +1,14 @@
-# ADSP	
-vendor/bin/adsprpcd	
+# ADSP
+vendor/bin/adsprpcd
 vendor/etc/init/vendor.qti.adsprpc-sscrpc-service.rc
-vendor/lib/libadsp_default_listener.so	
-vendor/lib/libadsprpc.so	
-vendor/lib/libmdsprpc.so	
-vendor/lib/libsdsprpc.so	
-vendor/lib64/libadsp_default_listener.so	
-vendor/lib64/libadsprpc.so	
-vendor/lib64/libmdsprpc.so	
-vendor/lib64/libsdsprpc.so	
+vendor/lib/libadsp_default_listener.so
+vendor/lib/libadsprpc.so
+vendor/lib/libmdsprpc.so
+vendor/lib/libsdsprpc.so
+vendor/lib64/libadsp_default_listener.so
+vendor/lib64/libadsprpc.so
+vendor/lib64/libmdsprpc.so
+vendor/lib64/libsdsprpc.so
 
 # ADSP Modules
 vendor/lib/rfsa/adsp/capi_v2_aptX_Classic.so
