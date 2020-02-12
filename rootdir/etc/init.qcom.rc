@@ -788,12 +788,6 @@ service vendor.charger /system/bin/chargeonlymode
     capabilities SYS_BOOT
     seclabel u:r:charger:s0
 
-service vendor.msm_irqbalance /vendor/bin/msm_irqbalance -f /vendor/etc/msm_irqbalance.conf
-    class core
-    user root
-    group root
-    disabled
-
 service insmod_sh /vendor/bin/init.insmod.sh /vendor/etc/init.insmod.cfg
     class main
     user root
