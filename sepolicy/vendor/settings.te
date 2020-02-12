@@ -5,7 +5,7 @@ app_domain(settings)
 # Allow settings to find *_service
 allow settings { app_api_service audioserver_service drmserver_service mediaextractor_service mediametrics_service mediaserver_service }:service_manager find;
 
-# Allow settings to find hal_motor_hwservice	
+# Allow settings to find hal_motor_hwservice
 allow settings hal_motor_hwservice:hwservice_manager find;
 
 # Allow settings read and write /data/data subdirectory
