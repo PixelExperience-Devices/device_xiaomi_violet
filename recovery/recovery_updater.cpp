@@ -180,7 +180,7 @@ Value * VerifyBasebandFn(const char *name, State *state,
     ret = 0;
     for (auto &baseband_version : args) {
         if (strncmp(baseband_version.c_str(), current_baseband_version,
-                strlen(baseband_version.c_str())) == 0) {
+                baseband_version.length()) <= 0) {
             ret = 1;
             break;
         }
