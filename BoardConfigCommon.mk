@@ -1,5 +1,5 @@
 #
-# Copyright (C) 2018-2019 The LineageOS Project
+# Copyright (C) 2018-2020 The LineageOS Project
 #
 # SPDX-License-Identifier: Apache-2.0
 #
@@ -166,9 +166,6 @@ TARGET_USES_QTI_MAPPER_EXTENSIONS_1_1 := true
 DEVICE_MANIFEST_FILE := $(COMMON_PATH)/manifest.xml
 DEVICE_MATRIX_FILE := $(COMMON_PATH)/compatibility_matrix.xml
 PRODUCT_COPY_FILES += $(COMMON_PATH)/manifest-qva.xml:$(TARGET_COPY_OUT_ODM)/etc/vintf/manifest.xml
-
-# Keystore
-TARGET_PROVIDES_KEYMASTER := true
 
 # Media
 TARGET_DISABLED_UBWC := true
