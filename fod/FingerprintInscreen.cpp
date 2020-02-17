@@ -94,7 +94,6 @@ Return<void> FingerprintInscreen::onRelease() {
 }
 
 Return<void> FingerprintInscreen::onShowFODView() {
-    TouchFeatureService->setTouchMode(Touch_Fod_Enable, 1);
     this->mFodCircleVisible = true;
     return Void();
 }
