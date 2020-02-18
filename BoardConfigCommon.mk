@@ -162,7 +162,6 @@ TARGET_USES_QTI_MAPPER_EXTENSIONS_1_1 := true
 # HIDL
 DEVICE_MANIFEST_FILE := $(COMMON_PATH)/manifest.xml
 DEVICE_MATRIX_FILE := $(COMMON_PATH)/compatibility_matrix.xml
-PRODUCT_COPY_FILES += $(COMMON_PATH)/manifest-qva.xml:$(TARGET_COPY_OUT_ODM)/etc/vintf/manifest.xml
 
 # Media
 TARGET_DISABLED_UBWC := true
