@@ -139,6 +139,9 @@ ro.hardware.keystore_desede=true
 # Media
 audio.offload.video=true
 
+# Netflix
+ro.netflix.bsp_rev=Q6150-17263-1
+
 # Netmgr
 persist.vendor.data.iwlan.enable=true
 
