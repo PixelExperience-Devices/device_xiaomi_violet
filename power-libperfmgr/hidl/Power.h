@@ -25,7 +25,7 @@
 #include <hidl/Status.h>
 #include <perfmgr/HintManager.h>
 
-#include "InteractionHandler.h"
+#include "disp-power/InteractionHandler.h"
 
 namespace android {
 namespace hardware {
