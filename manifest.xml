@@ -625,6 +625,16 @@ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
             <instance>default</instance>
         </interface>
     </hal>
+    <!-- Bluetooth AFH -->
+    <hal format="hidl">
+        <name>vendor.qti.hardware.bt_channel_avoidance</name>
+        <transport>hwbinder</transport>
+        <version>1.0</version>
+        <interface>
+            <name>IBTChannelAvoidance</name>
+            <instance>default</instance>
+        </interface>
+    </hal>
     <hal format="hidl">
         <name>vendor.xiaomi.hardware.mlipay</name>
         <transport>hwbinder</transport>
