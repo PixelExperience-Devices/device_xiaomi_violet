@@ -148,9 +148,6 @@ persist.vendor.data.iwlan.enable=true
 # Perf
 ro.vendor.extension_library=libqti-perfd-client.so
 
-# Power
-vendor.power.pasr.enabled=true
-
 # RCS
 persist.rcs.supported=0
 
