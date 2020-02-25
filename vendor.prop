@@ -87,6 +87,7 @@ ro.bluetooth.a2dp_offload.supported=true
 
 # Camera
 camera.disable_zsl_mode=1
+persist.camera.gyro.disable=0
 
 # Crypto
 ro.crypto.allow_encrypt_override=true
