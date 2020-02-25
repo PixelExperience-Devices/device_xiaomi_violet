@@ -136,10 +136,6 @@ vendor.gralloc.disable_ubwc=0
 # Keystore
 ro.hardware.keystore_desede=true
 
-# Listen
-ro.vendor.audio.soundtrigger.lowpower=false
-ro.vendor.audio.soundtrigger=none
-
 # Media
 audio.offload.video=true
 
