@@ -77,12 +77,12 @@ vendor/lib/hw/vendor.qti.hardware.btconfigstore@1.0-impl.so
 vendor/lib/libbluetooth_audio_session_qti.so
 vendor/lib/vendor.qti.hardware.bluetooth_sar@1.0.so
 
-# CDSP
-vendor/bin/cdsprpcd
-vendor/lib/libcdsp_default_listener.so
-vendor/lib/libcdsprpc.so
-vendor/lib64/libcdsp_default_listener.so
-vendor/lib64/libcdsprpc.so
+# CDSP - from LA.UM.8.9.r1-07700-SM6xx.0
+vendor/bin/cdsprpcd|6fb2700151a6e6dd57a5d9a388cf3a95d3e8262b
+vendor/lib/libcdsp_default_listener.so|a92281e3c69e4498c25daa103cbffd129ac7fa3d
+vendor/lib/libcdsprpc.so|e5a3a3df8ef2f2d37d092f4824946cf94939b43b
+vendor/lib64/libcdsp_default_listener.so|886ba3921f81439cb1b4e520ad622e1089291fa7
+vendor/lib64/libcdsprpc.so|a73d56edfd26ce2a9c70b8f2bc7bc1464c50ece6
 
 # Charger - from LA.UM.8.9.r1-07700-SM6xx.0
 vendor/bin/hvdcp_opti|7e5c59be16d5cf140423d727ebf7858cf989e520
