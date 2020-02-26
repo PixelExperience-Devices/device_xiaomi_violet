@@ -422,23 +422,21 @@ vendor/lib64/libkeymasterprovision.so
 vendor/lib64/libkeymasterutils.so
 vendor/lib64/libqtikeymaster4.so
 
-# Listen
-vendor/lib/hw/sound_trigger.primary.sm6150.so
-vendor/lib/libadpcmdec.so
-vendor/lib/libgcs-calwrapper.so
-vendor/lib/libgcs-ipc.so
-vendor/lib/libgcs-osal.so
-vendor/lib/libgcs.so
-vendor/lib/liblistensoundmodel2.so
-vendor/lib/librice.so
-vendor/lib/libsmwrapper.so
-vendor/lib64/hw/sound_trigger.primary.sm6150.so
-vendor/lib64/libgcs-calwrapper.so
-vendor/lib64/libgcs-ipc.so
-vendor/lib64/libgcs-osal.so
-vendor/lib64/libgcs.so
-vendor/lib64/liblistensoundmodel2.so
-vendor/lib64/librice.so
+# Listen - from LA.UM.8.9.r1-07700-SM6xx.0
+vendor/lib/hw/sound_trigger.primary.sm6150.so|1cae096f39273c2f01d5e0608d46b3620fe9b0a4
+vendor/lib/libadpcmdec.so|949e672467231103aa1804dba8b3ca72a2a3f1a4
+vendor/lib/libgcs-calwrapper.so|dd127c90635846542ad97140965b758aced71142
+vendor/lib/libgcs-ipc.so|b5048c5d26281ffa2930d709b011670db211e63e
+vendor/lib/libgcs-osal.so|98b04d0dacbd13bec4d77114ab3c271a386d82f6
+vendor/lib/libgcs.so|2b589a8daa4aa8a5423fe8107c187d2f33c5ad99
+vendor/lib/liblistensoundmodel2.so|33e76423f1f3ca7b32c2dd8f65243337fd32546e
+vendor/lib/libsmwrapper.so|7f70af63945b4d338d035cb7750b17aeab5c7e65
+vendor/lib64/hw/sound_trigger.primary.sm6150.so|44b4c867b0b43d6fbcd6d1a697be6cb7117eed2b
+vendor/lib64/libgcs-calwrapper.so|dc2f6931e759abbfd20bc5eb0a837db5a46f9901
+vendor/lib64/libgcs-ipc.so|0f7f7fddf68e072f445b914b80de009ee5e910f0
+vendor/lib64/libgcs-osal.so|a1c5c73662cfaeaf462fe8f30fac6abe991e0f2a
+vendor/lib64/libgcs.so|098d39984874cf2074ee44327073eee10afc4d64
+vendor/lib64/liblistensoundmodel2.so|fbad53231b386b490607049a49a9cb41b7e457ee
 
 # Media - from LA.UM.8.9.r1-07700-SM6xx.0
 vendor/etc/configstore/vpp.configstore.xml|d5095f33c326017a21fff186d19a2ce146b85d94
