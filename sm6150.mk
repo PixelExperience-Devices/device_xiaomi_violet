@@ -204,11 +204,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.fingerprint.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.fingerprint.xml
 
-ifeq ($(strip $(TARGET_USES_FOD)),true)
-PRODUCT_PACKAGES += \
-    vendor.lineage.biometrics.fingerprint.inscreen@1.0-service.xiaomi_sm6150
-endif
-
 # FM
 PRODUCT_PACKAGES += \
     FM2 \
@@ -271,13 +266,6 @@ PRODUCT_PACKAGES += \
 # LiveDisplay
 PRODUCT_PACKAGES += \
     vendor.lineage.livedisplay@2.0-service-sdm
-
-ifeq ($(strip $(TARGET_USES_FOD)),true)
-PRODUCT_PACKAGES += \
-    vendor.lineage.livedisplay@2.0-service.xiaomi_sm6150
-else ifeq ($(strip $(TARGET_PRODUCT_HARDWARE)),violet)
-    DEVICE_MANIFEST_FILE += $(LOCAL_PATH)/livedisplay/vendor.lineage.livedisplay@2.0-service-sdm.xml
-endif
 
 # Media
 PRODUCT_PACKAGES += \
@@ -342,19 +330,6 @@ PRODUCT_PACKAGES += \
     rcs_service_aidl.xml \
     rcs_service_api \
     rcs_service_api.xml
-
-ifeq ($(strip $(TARGET_PRODUCT_HARDWARE)),davinci)
-PRODUCT_PACKAGES += \
-    init.davinci.rc
-else ifeq ($(strip $(TARGET_PRODUCT_HARDWARE)),tucana)
-PRODUCT_PACKAGES += \
-    init.tucana.rc
-endif
-
-ifneq ($(strip $(TARGET_PRODUCT_HARDWARE)),violet)
-PRODUCT_PACKAGES += \
-    init.sm7150.rc
-endif
 
 # Recovery
 PRODUCT_PACKAGES += \
