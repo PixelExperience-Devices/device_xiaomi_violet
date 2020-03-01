@@ -4,6 +4,4 @@ type sysfs_msm_boot, fs_type, sysfs_type;
 type fingerprint_data_file, data_file_type, file_type, vendor_persist_type;
 type thermal_data_file, file_type, data_file_type;
 
-type audio_socket, file_type;
-
 type camera_persist_file, file_type, vendor_persist_type;

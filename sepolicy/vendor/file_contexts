@@ -1,9 +1,3 @@
-# Audio
-/dev/tfa_rw                     u:object_r:sound_device:s0
-/dev/tfa_rpc                    u:object_r:sound_device:s0
-/dev/tfa_reg                    u:object_r:sound_device:s0
-/dev/tfa_control                u:object_r:sound_device:s0
-
 # Camera
 /dev/akm09970                   u:object_r:hall_device:s0
 /dev/drv8846_dev                u:object_r:motor_device:s0
@@ -29,7 +23,6 @@
 /sys/devices/platform/soc/[a-z0-9]+.qcom,mdss_mdp/drm/card([0-3])+/card([0-3])+-DSI-1/fod_ui_ready      u:object_r:sysfs_graphics:s0
 /sys/devices/platform/soc/[a-z0-9]+.qcom,mdss_mdp/drm/card([0-3])+/card([0-3])+-DSI-1/hbm_status        u:object_r:sysfs_graphics:s0
 /sys/devices/platform/soc/[a-z0-9]+.qcom,mdss_mdp/drm/card([0-3])+/card([0-3])+-DSI-1/panel_info        u:object_r:sysfs_graphics:s0
-/sys/devices/platform/soc/soc:qcom,dsi-display/ea_enable                                                u:object_r:sysfs_graphics:s0
 
 # HALs
 /vendor/bin/hw/android\.hardware\.biometrics\.fingerprint@2\.1-service\.xiaomi_davinci                  u:object_r:hal_fingerprint_default_exec:s0
@@ -57,9 +50,6 @@
 # Mac
 /vendor/bin/nv_mac       u:object_r:wcnss_service_exec:s0
 /vendor/bin/wifi-mac-generator      u:object_r:wcnss_service_exec:s0
-
-# Socket
-/dev/socket/audio_hw_socket        u:object_r:audio_socket:s0
 
 # SSR
 /sys/devices(/platform)?/soc/[a-z0-9\.:]+,[a-z0-9\-\_]+/subsys[0-9]+/name         u:object_r:sysfs_ssr:s0

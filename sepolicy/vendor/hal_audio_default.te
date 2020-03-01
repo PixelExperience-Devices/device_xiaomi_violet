@@ -7,13 +7,4 @@ r_dir_file(hal_audio_default, persist_audio_file)
 # Allow hal_audio_default to read sysfs
 r_dir_file(hal_audio_default, sysfs)
 
-allow hal_audio_default sound_device:chr_file rw_file_perms;
-
-allow hal_audio_default audio_socket:sock_file rw_file_perms;
-
-# Rule for hal_audio_default to access init process
-unix_socket_connect(hal_audio_default, property, init);
-
 set_prop(hal_audio_default, vendor_audio_prop)
-
-dontaudit hal_audio_default sysfs:dir read;
