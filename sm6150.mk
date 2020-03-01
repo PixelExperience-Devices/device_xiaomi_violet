@@ -86,13 +86,13 @@ PRODUCT_PACKAGES += \
 
 # Audio
 PRODUCT_PACKAGES += \
+    android.hardware.audio.effect@5.0-impl \
     android.hardware.audio@2.0-service \
     android.hardware.audio@5.0-impl \
-    android.hardware.audio.effect@5.0-impl \
-    android.hardware.soundtrigger@2.2-impl:32 \
+    android.hardware.soundtrigger@2.2-impl \
     audio.a2dp.default \
-    audio.r_submix.default \
     audio.primary.sm6150 \
+    audio.r_submix.default \
     audio.usb.default \
     liba2dpoffload \
     libaudio-resampler \
@@ -101,7 +101,6 @@ PRODUCT_PACKAGES += \
     libcomprcapture \
     libexthwplugin \
     libhdmiedid \
-    libhdmipassthru \
     libhfp \
     libqcompostprocbundle \
     libqcomvisualizer \
@@ -136,8 +135,8 @@ PRODUCT_COPY_FILES += \
 
 # Bluetooth
 PRODUCT_PACKAGES += \
-    audio.bluetooth.default \
     android.hardware.bluetooth.audio@2.0-impl \
+    audio.bluetooth.default \
     libbthost_if \
     vendor.qti.hardware.bluetooth_audio@2.0.vendor \
     vendor.qti.hardware.btconfigstore@1.0.vendor
@@ -146,6 +145,8 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     android.hardware.camera.provider@2.4-impl \
     android.hardware.camera.provider@2.4-service_64 \
+    libdng_sdk.vendor \
+    libgui_vendor \
     libxml2 \
     Snap \
     vendor.qti.hardware.camera.device@1.0.vendor
@@ -186,30 +187,12 @@ PRODUCT_PACKAGES += \
 
 # Display interfaces
 PRODUCT_PACKAGES += \
-    vendor.display.config@1.0.vendor \
-    vendor.display.config@1.1.vendor \
-    vendor.display.config@1.2.vendor \
-    vendor.display.config@1.3.vendor \
-    vendor.display.config@1.4.vendor \
-    vendor.display.config@1.5.vendor \
-    vendor.display.config@1.6.vendor \
-    vendor.display.config@1.7.vendor \
-    vendor.display.config@1.8.vendor \
-    vendor.display.config@1.9.vendor \
-    vendor.display.config@1.10.vendor \
-    vendor.display.config@1.11.vendor \
     vendor.qti.hardware.display.allocator@1.0.vendor \
-    vendor.qti.hardware.display.allocator@3.0.vendor \
     vendor.qti.hardware.display.composer@1.0.vendor \
     vendor.qti.hardware.display.composer@2.0.vendor \
-    vendor.qti.hardware.display.mapper@2.0.vendor \
-    vendor.qti.hardware.display.mapper@3.0.vendor \
     vendor.qti.hardware.display.mapper@1.0.vendor \
     vendor.qti.hardware.display.mapper@1.1.vendor \
-    vendor.qti.hardware.display.mapper@2.0.vendor \
-    vendor.qti.hardware.display.mapper@3.0.vendor \
-    vendor.qti.hardware.display.mapperextensions@1.0.vendor \
-    vendor.qti.hardware.display.mapperextensions@1.1.vendor
+    vendor.qti.hardware.display.mapper@2.0.vendor
 
 # DRM
 PRODUCT_PACKAGES += \
@@ -234,9 +217,7 @@ PRODUCT_PACKAGES += \
 
 # Framework detect
 PRODUCT_PACKAGES += \
-    libqti_vndfwk_detect \
     libqti_vndfwk_detect.vendor \
-    libvndfwk_detect_jni.qti \
     libvndfwk_detect_jni.qti.vendor
 
 # GPS
@@ -252,7 +233,6 @@ PRODUCT_COPY_FILES += \
 
 # Health
 PRODUCT_PACKAGES += \
-    android.hardware.health@2.0-impl \
     android.hardware.health@2.0-service
 
 # IFAA manager
@@ -347,14 +327,14 @@ PRODUCT_COPY_FILES += \
 
 # Ramdisk
 PRODUCT_PACKAGES += \
+    fstab.qcom \
     init.insmod.sh \
     init.msm.usb.configfs.rc \
     init.power.rc \
     init.qcom.rc \
     init.qcom.usb.rc \
     init.qcom.usb.sh \
-    ueventd.qcom.rc \
-    fstab.qcom
+    ueventd.qcom.rc
 
 # RCS
 PRODUCT_PACKAGES += \
@@ -386,13 +366,13 @@ PRODUCT_PACKAGES += \
 
 # RIL
 PRODUCT_PACKAGES += \
+    android.hardware.radio.config@1.0 \
     android.hardware.radio@1.4 \
-    android.hardware.radio.config@1.2 \
     android.hardware.secure_element@1.0 \
     libjson \
+    libprotobuf-cpp-full \
     librmnetctl \
-    libxml2 \
-    libprotobuf-cpp-full
+    libxml2
 
 # Seccomp policy
 PRODUCT_COPY_FILES += \
@@ -411,10 +391,10 @@ PRODUCT_SOONG_NAMESPACES += \
 
 # Telephony
 PRODUCT_PACKAGES += \
-    qti-telephony-hidl-wrapper \
     qti_telephony_hidl_wrapper.xml \
-    qti-telephony-utils \
     qti_telephony_utils.xml \
+    qti-telephony-hidl-wrapper \
+    qti-telephony-utils \
     telephony-ext
 
 PRODUCT_BOOT_JARS += \
@@ -459,13 +439,13 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/wifi/p2p_supplicant_overlay.conf:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/p2p_supplicant_overlay.conf \
-    $(LOCAL_PATH)/wifi/wpa_supplicant_overlay.conf:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/wpa_supplicant_overlay.conf \
-    $(LOCAL_PATH)/wifi/WCNSS_qcom_cfg.ini:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/WCNSS_qcom_cfg.ini
+    $(LOCAL_PATH)/wifi/WCNSS_qcom_cfg.ini:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/WCNSS_qcom_cfg.ini \
+    $(LOCAL_PATH)/wifi/wpa_supplicant_overlay.conf:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/wpa_supplicant_overlay.conf
 
 # WiFi Display
 PRODUCT_PACKAGES += \
-    libnl \
     libdisplayconfig.vendor \
+    libnl \
     libqdMetaData \
     libqdMetaData.system \
     libqdMetaData.vendor

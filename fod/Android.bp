@@ -19,7 +19,10 @@ cc_binary {
     vintf_fragments: ["vendor.lineage.biometrics.fingerprint.inscreen@1.0-service.xiaomi_sm6150.xml"],
     init_rc: ["vendor.lineage.biometrics.fingerprint.inscreen@1.0-service.xiaomi_sm6150.rc"],
     defaults: ["hidl_defaults"],
-    srcs: ["service.cpp", "FingerprintInscreen.cpp"],
+    srcs: [
+        "service.cpp",
+        "FingerprintInscreen.cpp",
+    ],
     shared_libs: [
         "libbase",
         "libhardware",

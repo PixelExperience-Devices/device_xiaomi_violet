@@ -17,7 +17,10 @@ cc_binary {
     defaults: ["hidl_defaults"],
     name: "android.hardware.light@2.0-service.xiaomi_sm6150",
     init_rc: ["android.hardware.light@2.0-service.xiaomi_sm6150.rc"],
-    srcs: ["service.cpp", "Light.cpp"],
+    srcs: [
+        "service.cpp",
+        "Light.cpp",
+    ],
     shared_libs: [
         "libbase",
         "libhidlbase",
