@@ -30,4 +30,8 @@
 
     <!-- Margin on the left side of the carrier text on Keyguard -->
     <dimen name="keyguard_carrier_text_margin">20dp</dimen>
+
+    <dimen name="config_rounded_mask_size">136px</dimen>
+    <dimen name="config_rounded_mask_size_top">136px</dimen>
+    <dimen name="config_rounded_mask_size_bottom">136px</dimen>
 </resources>
