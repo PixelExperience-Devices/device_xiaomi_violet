@@ -61,3 +61,25 @@ cc_binary {
     required: ["powerhint.json"],
     proprietary: true,
 }
+
+cc_binary {
+    name: "android.hardware.power-service.pixel-libperfmgr",
+    relative_install_path: "hw",
+    init_rc: ["aidl/android.hardware.power-service.pixel-libperfmgr.rc"],
+    vintf_fragments: ["aidl/android.hardware.power-service.pixel.xml"],
+    vendor: true,
+    shared_libs: [
+        "android.hardware.power-ndk_platform",
+        "libbase",
+        "libcutils",
+        "liblog",
+        "libutils",
+        "libbinder_ndk",
+        "libdisppower-pixel",
+        "libperfmgr",
+    ],
+    srcs: [
+        "aidl/service.cpp",
+        "aidl/Power.cpp",
+    ],
+}
