@@ -37,9 +37,6 @@ ro.surface_flinger.wcg_composition_dataspace=143261696
 
 # LMKD
 ro.config.low_ram=false
-ro.lmk.kill_heaviest_task=true
-ro.lmk.kill_timeout_ms=100
-ro.lmk.use_minfree_levels=true
 
 # Media
 media.stagefright.thumbnail.prefer_hw_codecs=true
