@@ -65,11 +65,8 @@
          "oldname:newname", one per entry. -->
     <string-array name="config_displayModeMappings" translatable="false">
         <item>none:standard</item>
-        <item>smart_MC:dci_p3</item>
-        <item>GM_1:Boosted</item>
-        <item>GM_2:Saturated</item>
-        <item>GM_3:Automatic</item>
-        <item>hal_srgb:reading</item>
+        <item>hal_dci_p3:dci_p3</item>
+        <item>hal_srgb:srgb</item>
     </string-array>
 
     <!-- Should we filter any display modes which are unampped? -->
