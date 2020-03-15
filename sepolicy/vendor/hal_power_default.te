@@ -2,9 +2,6 @@
 allow hal_power_default input_device:dir r_dir_perms;
 allow hal_power_default input_device:chr_file rw_file_perms;
 
-allow hal_power_default proc_touchpanel:dir search;
-allow hal_power_default proc_touchpanel:chr_file rw_file_perms;
- 
 r_dir_file(hal_power_default, sysfs_graphics)
 
 # Rule for hal_power_default to access graphics composer process

@@ -15,6 +15,3 @@ type thermal_normal_prop, property_type;
 
 # Touchfeature
 type vendor_touchfeature_prop, property_type;
-
-# Touchpanel
-type proc_touchpanel, proc_type;

@@ -6,5 +6,3 @@ allow vendor_init debugfs_clk:file write;
 allow vendor_init debugfs_sched_features:file write;
 
 allow vendor_init proc_dirty:file w_file_perms;
-
-allow vendor_init proc_touchpanel:file { read setattr };
