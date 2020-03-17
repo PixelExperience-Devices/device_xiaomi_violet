@@ -599,7 +599,6 @@ product/framework/embmslibrary.jar|00eb5b4144f001423032a88cc1d227b3655db88b
 product/framework/qcrilhook.jar|fba9db045c8c167a78f2bcce0c00a3f83b1a792e
 product/framework/qti-telephony-common.jar|b707808f63cc494912969eb8f797e35092827acb
 -product/priv-app/qcrilmsgtunnel/qcrilmsgtunnel.apk|71d083671c3ea4cd5e287a63fb254bb0ab60ed20
-vendor/bin/ATFWD-daemon|d9a937ca25fdba17295920d0c58595089deec4a9
 vendor/bin/hw/qcrild|2110119d6a79ebf17bdd64925e4f6c9d19f32075
 vendor/bin/netmgrd|b0732b1f56d632d6c21913e8c7866da5101cf002
 vendor/bin/port-bridge|b4d6b8b99242160885c5e1ddbd89adeb2a4e4fd2
