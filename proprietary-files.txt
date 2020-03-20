@@ -813,9 +813,6 @@ vendor/bin/hw/vendor.qti.hardware.tui_comm@1.0-service-qti|d4d025e0a12af87f65104
 vendor/etc/init/vendor.qti.hardware.tui_comm@1.0-service-qti.rc|2cfc563d7e1579374f001c94588fae7835a12ffc
 vendor/lib64/vendor.qti.hardware.tui_comm@1.0.so|1ac676dca4c81094b254b62f1b608e471b385847
 
-# VNDK
-vendor/lib/vndk/libxlog.so
-
 # WiFi
 vendor/bin/cnss-daemon
 vendor/bin/nv_mac
