@@ -77,9 +77,11 @@ cc_binary {
         "libbinder_ndk",
         "libdisppower-pixel",
         "libperfmgr",
+        "pixel-power-ext-ndk_platform",
     ],
     srcs: [
         "aidl/service.cpp",
         "aidl/Power.cpp",
+        "aidl/PowerExt.cpp",
     ],
 }
