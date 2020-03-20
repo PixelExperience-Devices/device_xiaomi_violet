@@ -1,34 +1,36 @@
-# ADSP
-vendor/bin/adsprpcd
-vendor/etc/init/vendor.qti.adsprpc-sscrpc-service.rc
-vendor/lib/libadsp_default_listener.so
-vendor/lib/libadsprpc.so
-vendor/lib/libmdsprpc.so
-vendor/lib/libsdsprpc.so
-vendor/lib64/libadsp_default_listener.so
-vendor/lib64/libadsprpc.so
-vendor/lib64/libmdsprpc.so
-vendor/lib64/libsdsprpc.so
+# ADSP - from LA.UM.8.9.r1-07700-SM6xx.0
+vendor/bin/adsprpcd|5b803e679ddbce4e59c2a67433ffefa6396d61f3
+vendor/etc/init/vendor.qti.adsprpc-sscrpc-service.rc|564490ec94e70e87dc13796dd72520cfea699e83
+vendor/lib/libadsp_default_listener.so|9d368444c806d344f4ea78ad4ec2b499d67f53d6
+vendor/lib/libadsprpc.so|f73a982ead3095f8e85af1aa000a3d2f52bcce73
+vendor/lib/libmdsprpc.so|e49a64712c1240743f034505239f32e836649813
+vendor/lib/libsdsprpc.so|0f0b67379ba017245ce6811b992416cc23804375
+vendor/lib64/libadsp_default_listener.so|ec9a452e318db1ddc5d826dd7cc2b14dd5fb2a14
+vendor/lib64/libadsprpc.so|92fdd807e12606d89ec97e9dc0e906f9c0b2d0cf
+vendor/lib64/libmdsprpc.so|02223ebdb6ca328ee557f46f042957de3106beb8
+vendor/lib64/libsdsprpc.so|bc394e78027a2e84b9d5a7ffee6751122bc7d964
+
+# ADSP Modules - from LA.UM.8.9.r1-07700-SM6xx.0
+vendor/lib/rfsa/adsp/libVC1Dec.so|b95d4b6cf40d465a405ff27ceecd49a839ab74f7
+vendor/lib/rfsa/adsp/libVC1DecDsp_skel.so|b10140f450c053e3b88414c85454225aa9456473
+vendor/lib/rfsa/adsp/libapps_mem_heap.so|1cdac354c585c0d236d77b0888ebd5894b333326
+vendor/lib/rfsa/adsp/libcamera_nn_skel.so|29d949909c9f115491b781ff93604be238e0f965
+vendor/lib/rfsa/adsp/libcvpdsp_skel.so|58cbb97212073cf7e4780c6d77a7628c3ee845bd
+vendor/lib/rfsa/adsp/libdspCV_skel.so|c6034c389845a94a4054dd0fe9a0381adbf086e5
+vendor/lib/rfsa/adsp/libdsp_streamer_add_constant.so|c4ae81542111429bde7e08be7e80c8866d466875
+vendor/lib/rfsa/adsp/libdsp_streamer_binning.so|00eb6acc7c864371b932f95ff98e98351c6508d8
+vendor/lib/rfsa/adsp/libdsp_streamer_skel.so|ece66eb42105bb88f196e5678919393249ea2aac
+vendor/lib/rfsa/adsp/libfastcvadsp.so|5c86de2533d60534ce5b07e6be13bcf988e4b03b
+vendor/lib/rfsa/adsp/libfastcvdsp_skel.so|50ac955393bfae796e5fcaccad0bd8c90bd5d16a
+vendor/lib/rfsa/adsp/libhexagon_nn_skel.so|29aef8bf76e75de5256c4a31ee021e8bf520d939
+vendor/lib/rfsa/adsp/libsns_device_mode_skel.so|733a5b8861bb6eb1285bb8982992531c94800997
+vendor/lib/rfsa/adsp/libsns_low_lat_stream_skel.so|c30bb30eecf968e02f72c055d3cc13a7f769644f
 
 # ADSP Modules
 vendor/lib/rfsa/adsp/capi_v2_aptX_Classic.so
 vendor/lib/rfsa/adsp/capi_v2_aptX_HD.so
 vendor/lib/rfsa/adsp/dirac_resource.dar
-vendor/lib/rfsa/adsp/libVC1Dec.so
-vendor/lib/rfsa/adsp/libVC1DecDsp_skel.so
-vendor/lib/rfsa/adsp/libapps_mem_heap.so
-vendor/lib/rfsa/adsp/libcamera_nn_skel.so
-vendor/lib/rfsa/adsp/libcvpdsp_skel.so
 vendor/lib/rfsa/adsp/libdirac-capiv2.so
-vendor/lib/rfsa/adsp/libdspCV_skel.so
-vendor/lib/rfsa/adsp/libdsp_streamer_add_constant.so
-vendor/lib/rfsa/adsp/libdsp_streamer_binning.so
-vendor/lib/rfsa/adsp/libdsp_streamer_skel.so
-vendor/lib/rfsa/adsp/libfastcvadsp.so
-vendor/lib/rfsa/adsp/libfastcvdsp_skel.so
-vendor/lib/rfsa/adsp/libhexagon_nn_skel.so
-vendor/lib/rfsa/adsp/libsns_device_mode_skel.so
-vendor/lib/rfsa/adsp/libsns_low_lat_stream_skel.so
 
 # Alarm - from LA.UM.8.9.r1-07700-SM6xx.0
 -product/app/PowerOffAlarm/PowerOffAlarm.apk|3037ab960481343e6c42d42bead164ac730476c8
@@ -608,8 +610,8 @@ vendor/bin/qrtr-ns|d43bfbc74ebc51b4ce88a628579325388710cd7b
 vendor/bin/qti|259666fbf728cead953be1034e7b5e5edabc3f0c
 vendor/bin/rmt_storage|bba1b61c0a2f633031ffe43e9eba228093267ac9
 vendor/bin/tftp_server|e550e62f052bc6f7e4c4167d8b5f2cf1a1db432c
-vendor/etc/data/dsi_config.xml|65236d78f61fa7af19e92d5fbeb67ac6b20c33b0|ea623e39419785b17b08f1919187b441fada793f
-vendor/etc/data/netmgr_config.xml|c9f557ad53ac841d5425745e7ee50bb1480797ea|7867be422b10fbe069aea63a62b647796ca7643c
+vendor/etc/data/dsi_config.xml|ea623e39419785b17b08f1919187b441fada793f
+vendor/etc/data/netmgr_config.xml|7867be422b10fbe069aea63a62b647796ca7643c
 vendor/etc/init/dataadpl.rc|cd4907d9bfd438fe5f5c86f5d6cec590ac0bac2a
 vendor/etc/init/dataqti.rc|6abfd1a850d782adbbb6f42c9d8ca870036b2ad1
 vendor/etc/init/init-qcril-data.rc|890ac72fa49d0e52a263175a7b5b550539287800
@@ -835,7 +837,7 @@ lib64/libwfdcommonutils.so|e149722f92c11049b7be076468fcc2dc9502c929
 lib64/libwfdconfigutils.so|c6f3f5c498450ddc95b1803ba059c0f7dc23587d
 lib64/libwfdmminterface.so|18946765bfcc56589ca1f71e46f43858d76e8d5b
 lib64/libwfdmmsink.so|109a6652c6a90658c822ef901fff64973f359e4c
-lib64/libwfdnative.so|93267a18a2474bc480032ee4f0acdf66746ee199|fb7b002daf26713c54360f837b23db37bee42dfc
+lib64/libwfdnative.so|fb7b002daf26713c54360f837b23db37bee42dfc
 lib64/libwfdrtsp.so|8b76ee7f17ae2475f8d8f61b6a94c514a8f5a59a
 lib64/libwfdsinksm.so|a1d916ab231c42c4d25edd20a95d756333b34700
 lib64/libwfdsm.so|2226363941169fe38c5fb926d8f62e3cbc8f52d0
