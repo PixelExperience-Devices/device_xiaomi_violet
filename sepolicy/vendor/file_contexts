@@ -28,7 +28,7 @@
 # HALs
 /vendor/bin/hw/android\.hardware\.biometrics\.fingerprint@2\.1-service\.xiaomi_sm6150                   u:object_r:hal_fingerprint_default_exec:s0
 /vendor/bin/hw/android\.hardware\.light@2\.0-service\.xiaomi_sm6150                                     u:object_r:hal_light_default_exec:s0
-/vendor/bin/hw/android\.hardware\.power@1\.3-service\.sm6150-libperfmgr                                 u:object_r:hal_power_default_exec:s0
+/vendor/bin/hw/android\.hardware\.power-service\.sm6150-libperfmgr                                      u:object_r:hal_power_default_exec:s0
 /vendor/bin/hw/vendor\.lineage\.biometrics\.fingerprint\.inscreen@1.0-service\.xiaomi_sm6150            u:object_r:hal_lineage_fod_sm6150_exec:s0
 /vendor/bin/hw/vendor\.xiaomi\.hardware\.motor@1.0-service                                              u:object_r:hal_motor_default_exec:s0
 /vendor/bin/hw/vendor\.xiaomi\.hardware\.touchfeature@1\.0-service                                      u:object_r:hal_touchfeature_default_exec:s0
