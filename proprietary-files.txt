@@ -353,7 +353,7 @@ vendor/lib/libsdedrm.so|18568c442b560f5999f9da0227f642af500f4233
 vendor/lib64/libhdr_tm.so|4f08d65045893e0ec2b351581d6378f2e187ca82
 vendor/lib/libhdr_tm.so|43329dcdd1f390b12fbab1094ea8af46548aeb36
 
-# Graphics {Renderscript)
+# Graphics (Renderscript)
 vendor/lib64/libRSDriver_adreno.so
 vendor/lib64/libbccQTI.so
 vendor/lib64/librs_adreno.so
