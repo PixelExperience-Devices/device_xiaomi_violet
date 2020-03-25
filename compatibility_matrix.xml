@@ -80,29 +80,4 @@ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
             <instance>default</instance>
         </interface>
     </hal>
-    <hal format="hidl" optional="true">
-        <name>vendor.qti.hardware.sigma_miracast</name>
-        <transport>hwbinder</transport>
-        <version>1.0</version>
-        <interface>
-            <name>Isigma_miracast</name>
-            <instance>sigmahal</instance>
-        </interface>
-   </hal>
-    <hal format="hidl" optional="true">
-        <name>vendor.qti.hardware.wifi.keystore</name>
-        <version>1.0</version>
-        <interface>
-            <name>IKeystoreExt</name>
-            <instance>default</instance>
-        </interface>
-    </hal>
-    <hal format="hidl" optional="true">
-        <name>vendor.qti.hardware.radio.atcmdfwd</name>
-        <version>1.0</version>
-        <interface>
-            <name>IAtCmdFwd</name>
-            <instance>AtCmdFwdService</instance>
-        </interface>
-    </hal>
 </compatibility-matrix>
