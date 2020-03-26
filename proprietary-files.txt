@@ -1,3 +1,14 @@
+# ACDB
+vendor/etc/acdbdata/adsp_avs_config.acdb
+
+# ACDB loader - from LA.UM.8.9.r1-07700-SM6xx.0
+vendor/lib64/libacdb-fts.so|c61c1ff95260d7cec0f898395c4baef74c090d7c
+vendor/lib64/libacdbloader.so|141440d1d7f2e7167a2771f83fff8b5fa18a8b9a
+vendor/lib64/libacdbrtac.so|207de0ed40c2438cbfde718a59dd785357d2fb78
+vendor/lib/libacdb-fts.so|283d4818acb6be2d9572583a2e94be57d8a3ed97
+vendor/lib/libacdbloader.so|ce45869f9729cd8c765b6643ad2ee9539d10269f
+vendor/lib/libacdbrtac.so|cb479a1aef9cf30dcb8104b966dea607428ec569
+
 # ADSP - from LA.UM.8.9.r1-07700-SM6xx.0
 vendor/bin/adsprpcd|5b803e679ddbce4e59c2a67433ffefa6396d61f3
 vendor/etc/init/vendor.qti.adsprpc-sscrpc-service.rc|564490ec94e70e87dc13796dd72520cfea699e83
@@ -52,8 +63,6 @@ vendor/lib64/hw/com.qualcomm.qti.ant@1.0-impl.so|203528c568c1c5ce33b35dcb9ee9eb7
 vendor/lib/com.qualcomm.qti.ant@1.0.so|c87775e7482efe494d9cd91b738988f154a237fa
 vendor/lib/hw/com.qualcomm.qti.ant@1.0-impl.so|2c2769964955a031cd34056c4c7c39402d78dfb9
 
-# ACDB
-vendor/etc/acdbdata/adsp_avs_config.acdb
 
 # AptX - from bonito-user-10-QPP6.190730.005-5773495-release-keys
 product/lib64/libaptXHD_encoder.so|e13fa70c97caaa24d061678bdee608eb8850a69e
