@@ -1,0 +1,36 @@
+[
+  {
+    "repository": "vendor_xiaomi",
+    "target_path": "vendor/xiaomi",
+    "branch": "ten"
+  },
+  {
+    "repository": "device_xiaomi_violet-kernel",
+    "target_path": "device/xiaomi/violet-kernel",
+    "branch": "ten"
+  },
+  {
+    "repository": "vendor_xiaomi_violet-vendor",
+    "target_path": "device/xiaomi/violet-vendor",
+    "branch": "ten",
+    "remote": "pixel-gitlab"
+  },
+  {
+    "repository": "device_xiaomi_violet-firmware",
+    "target_path": "device/xiaomi/violet-firmware",
+    "branch": "ten",
+    "remote": "pixel-gitlab"
+  },
+  {
+    "repository": "packages_apps_PixelLiveWallpaper",
+    "target_path": "packages/apps/PixelLiveWallpaper",
+    "branch": "ten",
+    "remote": "pixel-gitlab"
+  },
+  {
+    "repository": "packages_apps_GoogleCamera_violet",
+    "target_path": "packages/apps/GoogleCamera",
+    "branch": "ten",
+    "remote": "pixel-gitlab"
+  }
+]

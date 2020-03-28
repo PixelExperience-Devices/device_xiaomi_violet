@@ -1,0 +1,64 @@
+# CNE
+product/framework/vendor.qti.hardware.data.dynamicdds-V1.0-java.jar
+product/framework/vendor.qti.hardware.data.iwlan-V1.0-java.jar
+product/lib64/com.quicinc.cne.api@1.0.so
+product/lib64/com.quicinc.cne.api@1.1.so
+product/lib64/com.quicinc.cne.constants@1.0.so
+product/lib64/com.quicinc.cne.constants@2.0.so
+product/lib64/com.quicinc.cne.constants@2.1.so
+product/lib64/vendor.qti.hardware.data.connection@1.0.so
+product/lib64/vendor.qti.hardware.data.dynamicdds@1.0.so
+product/lib64/vendor.qti.hardware.data.iwlan@1.0.so
+
+# Bluetooth (aptX)
+product/lib64/libaptX_encoder.so
+product/lib64/libaptXHD_encoder.so
+
+# DPM
+lib64/libdiag_system.so
+
+# Latency
+product/framework/vendor.qti.latency-V2.0-java.jar
+product/lib/vendor.qti.latency@2.0.so
+product/lib64/vendor.qti.latency@2.0.so
+
+# Radio
+-product/app/QtiTelephonyService/QtiTelephonyService.apk
+-product/app/atfwd/atfwd.apk
+-product/app/datastatusnotification/datastatusnotification.apk
+-product/app/uimremoteclient/uimremoteclient.apk
+-product/app/uimremoteserver/uimremoteserver.apk
+-product/priv-app/qcrilmsgtunnel/qcrilmsgtunnel.apk
+product/etc/permissions/UimService.xml
+product/etc/permissions/com.qualcomm.qcrilmsgtunnel.xml
+product/etc/permissions/embms.xml
+product/etc/permissions/org_codeaurora_ims.xml
+product/etc/permissions/qcrilhook.xml
+product/etc/permissions/telephonyservice.xml
+product/etc/permissions/uimremoteclient.xml
+product/etc/permissions/uimremoteserver.xml
+product/framework/QtiTelephonyServicelibrary.jar
+product/framework/qcrilhook.jar
+product/framework/uimremoteserverlibrary.jar
+
+# Radio - IMS
+-product/app/uceShimService/uceShimService.apk
+-product/priv-app/ims/ims.apk
+product/etc/permissions/com.qualcomm.qti.imscmservice-V2.0-java.xml
+product/etc/permissions/com.qualcomm.qti.imscmservice-V2.1-java.xml
+product/etc/permissions/com.qualcomm.qti.imscmservice-V2.2-java.xml
+product/framework/com.qualcomm.qti.imscmservice-V2.0-java.jar
+product/framework/com.qualcomm.qti.imscmservice-V2.1-java.jar
+product/framework/com.qualcomm.qti.imscmservice-V2.2-java.jar
+product/framework/vendor.qti.ims.rcsconfig-V1.0-java.jar
+product/lib64/lib-imsvideocodec.so
+product/lib64/lib-imsvt.so
+product/lib64/lib-imsvtextutils.so
+product/lib64/lib-imsvtutils.so
+product/lib64/libimscamera_jni.so
+product/lib64/libimsmedia_jni.so
+product/lib64/vendor.qti.imsrtpservice@2.0.so
+
+# Hotword enrollment
+-product/priv-app/HotwordEnrollmentXGoogleHEMIDELTA/HotwordEnrollmentXGoogleHEMIDELTA.apk;PRESIGNED
+-product/priv-app/HotwordEnrollmentOKGoogleHEMIDELTA/HotwordEnrollmentOKGoogleHEMIDELTA.apk;PRESIGNED

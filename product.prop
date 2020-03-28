@@ -1,0 +1,84 @@
+# Pixel identification
+ro.build.fingerprint=google/flame/flame:10/QQ2A.200405.005/6254899:user/release-keys
+
+# Radio
+persist.rild.nitz_plmn=
+persist.rild.nitz_long_ons_0=
+persist.rild.nitz_long_ons_1=
+persist.rild.nitz_long_ons_2=
+persist.rild.nitz_long_ons_3=
+persist.rild.nitz_short_ons_0=
+persist.rild.nitz_short_ons_1=
+persist.rild.nitz_short_ons_2=
+persist.rild.nitz_short_ons_3=
+DEVICE_PROVISIONED=1
+
+# Set network mode to Global by default and no DSDS/DSDA
+ro.telephony.default_network=10,10
+
+debug.sf.hw=1
+debug.gralloc.enable_fb_ubwc=1
+
+# Netflix
+ro.netflix.bsp_rev=Q6150-17263-1
+
+# Recovery
+persist.sys.recovery_update=true
+
+# system props for the cne module
+persist.vendor.cne.feature=1
+
+# system props for the MM modules
+media.stagefright.enable-player=true
+media.stagefright.enable-http=true
+media.stagefright.enable-aac=true
+media.stagefright.enable-qcp=true
+media.stagefright.enable-scan=true
+mmp.enable.3g2=true
+media.aac_51_output_enabled=true
+mm.enable.smoothstreaming=true
+#13631487 is decimal sum of supported codecs in AAL
+#codecs:(PARSER_)AAC AC3 AMR_NB AMR_WB ASF AVI DTS FLV 3GP 3G2 MKV MP2PS MP2TS MP3 OGG QCP WAV FLAC AIFF APE DSD
+mm.enable.qcom_parser=13631487
+persist.mm.enable.prefetch=true
+
+# system props for the data netmgrd
+persist.data.netmgrd.qos.enable=true
+persist.vendor.data.mode=concurrent
+
+# system props for time-services
+persist.timed.enable=true
+
+# system props for perfetto
+persist.traced.enable=1
+
+# System prop to turn on CdmaLTEPhone always
+telephony.lteOnCdmaDevice=1
+
+# Simulate sdcard on /data/media
+persist.fuse_sdcard=true
+
+#system prop for RmNet Data
+persist.rmnet.data.enable=true
+persist.data.wda.enable=true
+persist.data.df.dl_mode=5
+persist.data.df.ul_mode=5
+persist.data.df.agg.dl_pkt=10
+persist.data.df.agg.dl_size=4096
+persist.data.df.mux_count=8
+persist.data.df.iwlan_mux=9
+persist.data.df.dev_name=rmnet_usb0
+
+#
+## system props for the data modules
+#
+#ro.use_data_netmgrd=true
+persist.data.netmgrd.qos.enable=true
+persist.data.mode=concurrent
+
+# System props to enable Bluetooth Quality Report (BQR) feature
+# BQR event mask configuration
+persist.bluetooth.bqr.event_mask=14
+# BQR minimum report interval configuration
+persist.bluetooth.bqr.min_interval_ms=500
+
