@@ -19,6 +19,7 @@ TARGET_OTA_ASSERT_DEVICE := violet
 BOARD_KERNEL_BASE := 0x80000000
 BOARD_RAMDISK_OFFSET := 0x01000000
 TARGET_KERNEL_CONFIG := vendor/violet-perf_defconfig
+BOARD_KERNEL_CMDLINE += androidboot.selinux=permissive
 
 # Platform
 TARGET_BOARD_PLATFORM_GPU := qcom-adreno612
