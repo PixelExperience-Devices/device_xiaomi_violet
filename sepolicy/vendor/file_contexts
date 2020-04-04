@@ -57,7 +57,6 @@
 
 # Mac
 /vendor/bin/nv_mac       u:object_r:wcnss_service_exec:s0
-/vendor/bin/wifi-mac-generator      u:object_r:wcnss_service_exec:s0
 
 # SSR
 /sys/devices(/platform)?/soc/[a-z0-9\.:]+,[a-z0-9\-\_]+/subsys[0-9]+/name         u:object_r:sysfs_ssr:s0
