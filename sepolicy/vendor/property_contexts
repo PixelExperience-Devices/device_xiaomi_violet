@@ -40,6 +40,9 @@ vendor.powerhal.rendering  u:object_r:power_prop:s0
 # Mlipay
 persist.vendor.sys.pay     u:object_r:vendor_tee_listener_prop:s0
 
+# NFC
+ro.vendor.se.type          u:object_r:exported_default_prop:s0
+
 # Thermal
 sys.thermal.               u:object_r:thermal_normal_prop:s0
 
