@@ -38,6 +38,9 @@
 /vendor/bin/hw/vendor\.xiaomi\.hardware\.motor@1.0-service                                              u:object_r:hal_motor_default_exec:s0
 /vendor/bin/hw/vendor\.xiaomi\.hardware\.touchfeature@1\.0-service                                      u:object_r:hal_touchfeature_default_exec:s0
 
+# Health
+/sys/devices/platform/soc/soc:maxim_ds28e16/power_supply/batt_verify/(/.*)?                                                                         u:object_r:sysfs_battery_supply:s0
+
 # IR
 /dev/spidev[0-9]\.1        u:object_r:lirc_device:s0
 
