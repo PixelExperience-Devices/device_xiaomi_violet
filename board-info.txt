@@ -1,0 +1,2 @@
+require version-cn=CN,4.3.c2-00029,V11.0.1.0.QFHCNXM
+require version-in=India,4.3.c2-00029,V12.0.0.2.QFHINXM
