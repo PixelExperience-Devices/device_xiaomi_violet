@@ -185,7 +185,7 @@ on late-fs
     start surfaceflinger
     start themed_bootanimation
     start bootanim
-    start vendor.hwcomposer-2-2
+    start vendor.hwcomposer-2-4
     start vendor.configstore-hal
     start vendor.qti.hardware.display.allocator
 
@@ -742,7 +742,7 @@ service vendor.audio-hal /vendor/bin/hw/android.hardware.audio.service
     socket audio_hw_socket seqpacket 0666 system system
     onrestart restart audioserver
 
-service vendor.hwcomposer-2-2 /vendor/bin/hw/android.hardware.graphics.composer@2.2-service
+service vendor.hwcomposer-2-4 /vendor/bin/hw/android.hardware.graphics.composer@2.4-service
     override
     class hal animation
     user system
