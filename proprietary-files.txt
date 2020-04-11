@@ -267,15 +267,12 @@ vendor/firmware/a615_zap.b00
 vendor/firmware/a615_zap.b01
 vendor/firmware/a615_zap.b02
 vendor/firmware/a615_zap.elf
-vendor/firmware/a615_zap.mdt
 vendor/firmware/a630_sqe.fw
 vendor/firmware/ipa_fws.b00
 vendor/firmware/ipa_fws.b01
-vendor/firmware/ipa_fws.b02
 vendor/firmware/ipa_fws.b03
 vendor/firmware/ipa_fws.b04
 vendor/firmware/ipa_fws.elf
-vendor/firmware/ipa_fws.mdt
 
 # Firmware - from LA.UM.8.9.r1-07100-SM6xx.0
 vendor/firmware/a618_gmu.bin|cb773d4b34f610d53a4a2766e0fec5d7dd2c5982
