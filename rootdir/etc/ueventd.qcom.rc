@@ -209,7 +209,9 @@ firmware_directories /vendor/firmware_mnt/image/ /vendor/firmware/
 /dev/msm_rtac             0660   system     audio
 /dev/msm_voicememo        0660   system     audio
 /dev/ttyHSL1              0660   system     system
+/dev/ttyHS0               0660   bluetooth  net_bt
 /dev/ttyHS1               0660   system     system
+/dev/ttyHS2               0660   bluetooth  bluetooth
 /dev/mdm                  0660   system     radio
 /sys/devices/virtual/smdpkt/smdcntl*       open_timeout   0664 radio radio
 /dev/sdio_tty_ciq_00      0660   system     system
@@ -440,3 +442,13 @@ firmware_directories /vendor/firmware_mnt/image/ /vendor/firmware/
 #QG device
 /dev/qg               0660   system     system
 /dev/qg_battery       0660   system     system
+
+# TFA
+/dev/tfa_reg              0660   system       system
+/dev/tfa_rw               0660   system       system
+/dev/tfa_rpc              0660   system       system
+/dev/tfa_control          0660   system       system
+
+# Motor
+/dev/akm09970             0660   system       camera
+/dev/drv8846_dev          0660   system       camera
