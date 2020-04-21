@@ -13,7 +13,9 @@ allow init-insmod-sh self:capability sys_module;
 
 allow init-insmod-sh kernel:key search;
 
-allow init-insmod-sh { sysfs_msm_boot sysfs_boot_adsp }:file w_file_perms;
+allow init-insmod-sh {
+  sysfs_msm_boot
+  sysfs_boot_adsp
+}:file w_file_perms;
 
-r_dir_file(init-insmod-sh debugfs_wlan)
 r_dir_file(init-insmod-sh debugfs_ipc)

@@ -1,4 +1,8 @@
-allow thermal-engine sysfs_devfreq:dir search;
+allow thermal-engine {
+  sysfs_devfreq 
+  thermal_data_file
+}:dir search;
+
 allow thermal-engine sysfs_devfreq:file rw_file_perms;
 
 # Rule for thermal-engine to access init process

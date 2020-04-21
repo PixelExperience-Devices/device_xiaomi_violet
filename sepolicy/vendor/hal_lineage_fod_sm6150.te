@@ -13,7 +13,3 @@ binder_call(hal_lineage_fod_sm6150, hal_fingerprint_default)
 
 # Allow binder communication with hal_touchfeature_default
 binder_call(hal_lineage_fod_sm6150, hal_touchfeature_default)
-
-# Allow hal_lineage_fod_sm6150 to read and write to sysfs_graphics
-r_dir_file(hal_lineage_fod_sm6150 sysfs_graphics)
-allow hal_lineage_fod_sm6150 sysfs_graphics:file rw_file_perms;
