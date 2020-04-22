@@ -817,3 +817,7 @@ service nv_mac /vendor/bin/nv_mac
     user system
     group system inet net_admin wifi net_raw
     oneshot
+
+on property:persist.sys.device_provisioned=1
+    setprop dalvik.vm.dex2oat-cpu-set 0,1,2,3,4,5,7
+    setprop dalvik.vm.dex2oat-threads 6
