@@ -1,3 +1,5 @@
+vendor.goodix.hardware.cap.biometrics.fingerprint::IGoodixFingerprintDaemon              u:object_r:hal_fingerprint_hwservice:s0
+vendor.goodix.hardware.cap.biometrics.fingerprint::IGoodixFingerprintDaemonExt           u:object_r:hal_fingerprint_hwservice:s0
 vendor.goodix.hardware.interfaces.biometrics.fingerprint::IGoodixFingerprintDaemon       u:object_r:hal_fingerprint_hwservice:s0
 vendor.goodix.hardware.interfaces.biometrics.fingerprint::IGoodixFingerprintDaemonExt    u:object_r:hal_fingerprint_hwservice:s0
 vendor.goodix.hardware.biometrics.fingerprint::IGoodixFingerprintDaemon                  u:object_r:hal_fingerprint_hwservice:s0
