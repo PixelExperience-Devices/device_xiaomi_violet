@@ -98,6 +98,9 @@ camera.disable_zsl_mode=1
 ro.crypto.allow_encrypt_override=true
 ro.crypto.volume.filenames_mode=aes-256-cts
 
+# Dalvik
+dalvik.vm.dex2oat64.enabled=true
+
 # Display post-processing
 ro.vendor.display.sensortype=2
 
