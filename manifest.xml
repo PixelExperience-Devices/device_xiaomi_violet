@@ -545,16 +545,6 @@ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
             <instance>vppService</instance>
         </interface>
     </hal>
-    <!-- USB HAL -->
-    <hal format="hidl">
-        <name>android.hardware.usb</name>
-        <transport>hwbinder</transport>
-        <version>1.0</version>
-        <interface>
-            <name>IUsb</name>
-            <instance>default</instance>
-        </interface>
-    </hal>
     <!-- Alarm HAL service -->
     <hal format="hidl">
         <name>vendor.qti.hardware.alarm</name>
