@@ -993,13 +993,19 @@ vendor/lib64/libscvePanorama.so|ccf4d8b37eed8d0c886cc4b537cde84e40de8ad5
 vendor/lib64/libscvePanorama_lite.so|66a74d3b441bb2e8e5011187f0b2e40bcb77693c
 
 # Sensors
+vendor/bin/hw/android.hardware.sensors@2.0-service
+vendor/bin/sensors.qti
+vendor/etc/init/android.hardware.sensors@2.0-service.rc
 vendor/etc/sensors/hals.conf
+vendor/lib64/android.hardware.sensors@2.0-impl.so
 vendor/lib64/libsensorcal.so
 vendor/lib64/libsensorslog.so
 vendor/lib64/libsns_fastRPC_util.so
 vendor/lib64/libsns_low_lat_stream_stub.so
 vendor/lib64/libsnsdiaglog.so
+vendor/lib64/libssc.so
 vendor/lib64/libssc_default_listener.so
+vendor/lib64/sensors.ssc.so
 
 # Sensor Configs
 vendor/etc/sensors/config/ak991x_dri_0.json
