@@ -899,6 +899,9 @@ vendor/radio/qcril_database/upgrade/5_version_update_ecc_table.sql|fcb2cba3bfd71
 vendor/radio/qcril_database/upgrade/6_version_update_ecc_table.sql|0fdf4b6ccb48906b37885e060429f79c9fd6bdbf
 vendor/radio/qcril_database/upgrade/7_version_update_ecc_table.sql|9a76d5747da2876b87b214579c9d74ae92d218d7
 
+# Radio - from davinci-user 11 RKQ1.200826.002 20.10.30 release-keys
+system_ext/etc/permissions/telephony_system-ext_privapp-permissions-qti.xml|4f0056403f56928b8c75a617ba582f17061f89ae
+
 # Telephony - from smali edit: https://gist.github.com/PIPIPIG233666/72806386c8b93729ce7f2b2c263d8889
 system_ext/framework/qti-telephony-common.jar|7a3f1fa141520e83e58d4afc6eebfc4f38dc9f27
 
