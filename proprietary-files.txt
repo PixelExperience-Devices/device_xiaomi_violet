@@ -723,17 +723,13 @@ vendor/lib64/libscvePanorama.so|62cb5a9e8f00a856c6834a95cee4970dd007f63f
 vendor/lib64/libscvePanorama_lite.so|ef7dbeff0c7fbfd5b2faa78dc3521ccbc90d4044
 
 # Sensors
-vendor/bin/sensors.qti
 vendor/etc/sensors/hals.conf
 vendor/lib64/libsensorcal.so
 vendor/lib64/libsensorslog.so
 vendor/lib64/libsns_fastRPC_util.so
 vendor/lib64/libsns_low_lat_stream_stub.so
 vendor/lib64/libsnsdiaglog.so
-vendor/lib64/libssc.so
 vendor/lib64/libssc_default_listener.so
-vendor/lib64/libssccalapi.so
-vendor/lib64/sensors.ssc.so
 
 # Soter
 -vendor/app/SoterService/SoterService.apk
