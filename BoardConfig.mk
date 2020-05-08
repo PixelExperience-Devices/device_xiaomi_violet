@@ -30,8 +30,5 @@ TARGET_VENDOR_PROP += $(DEVICE_PATH)/vendor.prop
 # HIDL
 DEVICE_MANIFEST_FILE += $(DEVICE_PATH)/manifest.xml
 
-# Partitions
-BOARD_VENDORIMAGE_PARTITION_SIZE := 2147483648
-
 # Inherit from the proprietary version
 -include vendor/xiaomi/violet/BoardConfigVendor.mk
