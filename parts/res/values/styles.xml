@@ -59,4 +59,5 @@
         <item name="android:trackTint">@color/switchbar_switch_track_tint</item>
         <item name="android:thumbTint">@color/switchbar_switch_thumb_tint</item>
     </style>
+    <style name="TextAppearance.Medium" parent="@android:style/TextAppearance.Material.Medium" />
 </resources>

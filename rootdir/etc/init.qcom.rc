@@ -240,7 +240,6 @@ on boot
     start rmt_storage
     start rfs_access
     chown system system /sys/class/thermal/thermal_message/sconfig
-    write /sys/class/thermal/thermal_message/sconfig 10
 
     # Change owner of white led
     chown system system /sys/class/leds/white/brightness
