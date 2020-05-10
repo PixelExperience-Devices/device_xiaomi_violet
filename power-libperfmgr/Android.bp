@@ -13,12 +13,6 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-cc_library_headers {
-    name: "pixel_power_headers",
-    vendor_available: true,
-    export_include_dirs: ["."],
-}
-
 cc_binary {
     name: "android.hardware.power@1.3-service.sm6150-libperfmgr",
     relative_install_path: "hw",
