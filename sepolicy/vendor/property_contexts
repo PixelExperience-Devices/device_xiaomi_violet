@@ -2,9 +2,11 @@
 audio.soundtrigger.debug.urser_id u:object_r:vendor_audio_prop:s0
 
 # Camera
-camera. u:object_r:vendor_camera_prop:s0
-persist.camera. u:object_r:vendor_camera_prop:s0
-vendor.camera.  u:object_r:vendor_camera_prop:s0
+camera.                                         u:object_r:vendor_camera_prop:s0
+persist.camera.                                 u:object_r:vendor_camera_prop:s0
+persist.vendor.camera                           u:object_r:vendor_camera_prop:s0
+vendor.camera.boot_complete                     u:object_r:vendor_camera_prop:s0
+vendor.camera.sensor.                           u:object_r:vendor_camera_prop:s0
 ro.vendor.camera.                               u:object_r:vendor_camera_prop:s0
 ro.vendor.camera.res.fmq.size                   u:object_r:vendor_camera_prop:s0
 ro.vendor.camera.req.fmq.size                   u:object_r:vendor_camera_prop:s0
