@@ -1,5 +1,5 @@
 # Pixel identification
-ro.build.fingerprint=google/flame/flame:10/QQ2A.200405.005/6254899:user/release-keys
+ro.build.fingerprint=google/flame/flame:10/QQ2A.200501.001.B2/6352890:user/release-keys
 
 # Radio
 persist.rild.nitz_plmn=
