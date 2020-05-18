@@ -10,12 +10,6 @@
     "branch": "ten"
   },
   {
-    "repository": "vendor_xiaomi_violet-vendor",
-    "target_path": "device/xiaomi/violet-vendor",
-    "branch": "ten",
-    "remote": "pixel-gitlab"
-  },
-  {
     "repository": "device_xiaomi_violet-firmware",
     "target_path": "device/xiaomi/violet-firmware",
     "branch": "ten",

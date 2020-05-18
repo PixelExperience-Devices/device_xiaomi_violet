@@ -86,9 +86,6 @@ TARGET_USES_HWC2 := true
 # HIDL
 DEVICE_FRAMEWORK_MANIFEST_FILE := $(DEVICE_PATH)/framework_manifest.xml
 
-# Vendor
-BOARD_PREBUILT_VENDORIMAGE := device/xiaomi/violet-vendor/vendor.img
-
 # Partitions - SAR/Metadata
 BOARD_USES_METADATA_PARTITION := true
 BOARD_BUILD_SYSTEM_ROOT_IMAGE := true
