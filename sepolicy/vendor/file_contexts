@@ -30,7 +30,6 @@
 /sys/devices/platform/soc/[a-z0-9]+.qcom,mdss_mdp/drm/card([0-3])+/card([0-3])+-DSI-1/panel_info        u:object_r:sysfs_graphics:s0
 
 # HALs
-/vendor/bin/hw/android\.hardware\.biometrics\.fingerprint@2\.1-service\.xiaomi_davinci                  u:object_r:hal_fingerprint_default_exec:s0
 /vendor/bin/hw/android\.hardware\.biometrics\.fingerprint@2\.1-service\.xiaomi_sm6150                   u:object_r:hal_fingerprint_default_exec:s0
 /vendor/bin/hw/android\.hardware\.light@2\.0-service\.xiaomi_sm6150                                     u:object_r:hal_light_default_exec:s0
 /vendor/bin/hw/android\.hardware\.power@1\.3-service\.sm6150-libperfmgr                                 u:object_r:hal_power_default_exec:s0
