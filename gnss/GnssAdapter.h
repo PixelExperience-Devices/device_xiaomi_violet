@@ -521,6 +521,10 @@ public:
     void notifyClientOfCachedLocationSystemInfo(LocationAPI* client,
                                                 const LocationCallbacks& callbacks);
     void updateSystemPowerStateCommand(PowerStateType systemPowerState);
+    inline bool isNMEAPrintEnabled() {
+       return (((mContext != NULL) && (0 != mContext->mGps_conf.ENABLE_NMEA_PRINT)) ?
+              (true) : (false));
+    }
 };
 
 #endif //GNSS_ADAPTER_H
