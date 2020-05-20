@@ -15,15 +15,7 @@
  * limitations under the License.
  */
 
-#define LOG_TAG "android.hardware.biometrics.fingerprint@2.1-service.xiaomi_sm6150"
-
 #include "BiometricsFingerprint.h"
-
-#include <cutils/properties.h>
-#include <hardware/hardware.h>
-#include <hardware/hw_auth_token.h>
-#include <inttypes.h>
-#include <unistd.h>
 
 namespace android {
 namespace hardware {

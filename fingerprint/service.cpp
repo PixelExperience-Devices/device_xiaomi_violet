@@ -15,11 +15,6 @@
  * limitations under the License.
  */
 
-#define LOG_TAG "android.hardware.biometrics.fingerprint@2.1-service.xiaomi_sm6150"
-
-#include <android/log.h>
-#include <hidl/HidlTransportSupport.h>
-
 #include "BiometricsFingerprint.h"
 
 // libhwbinder:
