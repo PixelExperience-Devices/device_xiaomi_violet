@@ -135,6 +135,8 @@ BOARD_PLAT_PUBLIC_SEPOLICY_DIR += \
     device/qcom/sepolicy/generic/public \
     device/qcom/sepolicy/qva/public
 
+TARGET_USES_PREBUILT_VENDOR_SEPOLICY := false
+
 # Treble
 TARGET_PRODUCT_PROP += $(DEVICE_PATH)/product.prop
 
