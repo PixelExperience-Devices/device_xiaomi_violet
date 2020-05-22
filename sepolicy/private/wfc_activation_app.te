@@ -1,0 +1,9 @@
+type wfc_activation_app, domain, coredomain;
+
+app_domain(wfc_activation_app)
+net_domain(wfc_activation_app)
+
+# Services
+allow wfc_activation_app app_api_service:service_manager find;
+allow wfc_activation_app qchook_service:service_manager find;
+allow wfc_activation_app radio_service:service_manager find;

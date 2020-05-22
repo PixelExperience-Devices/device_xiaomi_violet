@@ -1,0 +1,2 @@
+# Domain for WfcActivation app
+user=_app seinfo=wfcactivation name=com.google.android.wfcactivation domain=wfc_activation_app levelFrom=all
