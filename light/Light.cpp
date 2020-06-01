@@ -165,10 +165,10 @@ void Light::setLightNotification(Type type, const LightState& state) {
         }
 
         // Fallback to battery light
-        if (!found && (cur_type == Type::BATTERY || IsLit(state.color))) {
+        if (!found && (cur_type == Type::BATTERY || IsLit(cur_state.color))) {
             found = true;
             LOG(DEBUG) << __func__ << ": type=" << toString(cur_type);
-            applyNotificationState(state);
+            applyNotificationState(cur_state);
         }
     }
 }
