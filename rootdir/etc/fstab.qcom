@@ -38,7 +38,7 @@
 /dev/block/bootdevice/by-name/boot                      /boot                    emmc    defaults                                             recoveryonly
 /dev/block/bootdevice/by-name/recovery                  /recovery                emmc    defaults                                             recoveryonly
 /dev/block/bootdevice/by-name/cache                     /cache                   ext4    nosuid,noatime,nodev,barrier=1                       wait
-/dev/block/bootdevice/by-name/metadata                  /metadata                ext4    noatime,nosuid,nodev,discard,sync                    wait,formattable
+/dev/block/by-name/metadata                             /metadata                ext4    noatime,nosuid,nodev,discard,sync                    wait,formattable
 /dev/block/bootdevice/by-name/userdata                  /data                    f2fs    noatime,nosuid,nodev,discard,fsync_mode=nobarrier    latemount,wait,check,quota,formattable,fileencryption=ice,reservedsize=128M,keydirectory=/metadata/vold/metadata_encryption
 /dev/block/bootdevice/by-name/bluetooth                 /vendor/bt_firmware      vfat    ro,shortname=lower,uid=1002,gid=3002,dmask=227,fmask=337,context=u:object_r:bt_firmware_file:s0 wait
 /dev/block/bootdevice/by-name/modem                     /vendor/firmware_mnt     vfat    ro,shortname=lower,uid=1000,gid=1000,dmask=227,fmask=337,context=u:object_r:firmware_file:s0 wait
