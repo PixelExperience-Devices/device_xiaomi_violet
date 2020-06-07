@@ -191,6 +191,7 @@ on post-fs
 on late-fs
     # Start services for bootanim
     start surfaceflinger
+    start themed_bootanimation
     start bootanim
     start vendor.hwcomposer-2-3
     start vendor.configstore-hal
