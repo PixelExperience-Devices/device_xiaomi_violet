@@ -439,12 +439,16 @@ static void convertGnssData_2_0(GnssMeasurementsNotification& in,
         if (currentTimeNanos >= measTimeNanos) {
             int64_t ageTimeNanos = currentTimeNanos - measTimeNanos;
             LOC_LOGD("%s]: ageTimeNanos:%" PRIi64 ")", __FUNCTION__, ageTimeNanos);
-            if (ageTimeNanos >= 0 && ageTimeNanos <= sinceBootTimeNanos) {
+            // the max trusted propagation time 100ms for ageTimeNanos to avoid user setting
+            //wrong time, it will affect elapsedRealtimeNanos
+            if (ageTimeNanos <= 100000000) {
                 out.elapsedRealtime.flags |= ElapsedRealtimeFlags::HAS_TIMESTAMP_NS;
                 out.elapsedRealtime.timestampNs = sinceBootTimeNanos - ageTimeNanos;
                 out.elapsedRealtime.flags |= ElapsedRealtimeFlags::HAS_TIME_UNCERTAINTY_NS;
-                // time uncertainty is 1 ms since it is calculated from utc time that is in ms
-                out.elapsedRealtime.timeUncertaintyNs = 1000000;
+                // time uncertainty is the max value between abs(AP_UTC - MP_UTC) and 100ms, to
+                //verify if user change the sys time
+                out.elapsedRealtime.timeUncertaintyNs =
+                        std::max(ageTimeNanos, (int64_t)100000000);
                 LOC_LOGd("timestampNs:%" PRIi64 ") timeUncertaintyNs:%" PRIi64 ")",
                          out.elapsedRealtime.timestampNs,
                          out.elapsedRealtime.timeUncertaintyNs);
