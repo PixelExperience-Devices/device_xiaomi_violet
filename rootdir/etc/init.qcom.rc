@@ -666,7 +666,6 @@ on property:sys.shutdown.requested=*
 
 on charger
     start vendor.power_off_alarm
-    start mi_thermald
     setprop vendor.usb.controller a600000.dwc3
     setprop sys.usb.configfs 1
 
@@ -688,12 +687,6 @@ service remosaic_daemon /vendor/bin/remosaic_daemon
    class late_start
    user camera
    group camera
-
-service mi_thermald /vendor/bin/mi_thermald
-    class main
-    user root
-    group system
-    seclabel u:r:mi_thermald:s0
 
 service vendor.qrtr-ns /vendor/bin/qrtr-ns -f
     class core
