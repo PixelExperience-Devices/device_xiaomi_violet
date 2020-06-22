@@ -24,10 +24,9 @@ allow devicesettings_app system_app_data_file:{ file lnk_file } create_file_perm
 binder_call(devicesettings_app, gpuservice)
 binder_call(devicesettings_app, hal_motor)
 
-# Allow devicesettings_app to read and write to cgroup/{hall,motor}_device/sysfs_graphics/sysfs_leds/sysfs_thermal
+# Allow devicesettings_app to read and write to cgroup/{hall,motor}_device/sysfs_graphics/sysfs_leds
 allow devicesettings_app sysfs_leds:dir search;
 allow devicesettings_app {
   cgroup
   sysfs_leds
-  sysfs_thermal
 }:file rw_file_perms;
