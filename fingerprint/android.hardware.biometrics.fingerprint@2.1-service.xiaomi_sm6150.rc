@@ -10,6 +10,7 @@ on boot
     chown system system /sys/bus/platform/devices/soc:fingerprint_fpc/device_prepare
     chown system system /sys/bus/platform/devices/soc:fingerprint_fpc/fingerdown_wait
     chown system system /sys/bus/platform/devices/soc:fingerprint_fpc/vendor
+    chown system system /sys/bus/platform/devices/soc:fingerprint_fpc/request_vreg
     chown system system /sys/bus/platform/devices/soc:fingerprint_fpc/regulator_enable
     chown system system /sys/bus/platform/devices/soc:fingerprint_fpc/screen_status
     chown system system /sys/bus/platform/devices/soc:fingerprint_fpc/vreg_op_cnt
@@ -19,6 +20,7 @@ on boot
     chmod 0700 /sys/bus/platform/devices/soc:fingerprint_fpc/hw_reset
     chmod 0700 /sys/bus/platform/devices/soc:fingerprint_fpc/device_prepare
     chmod 0700 /sys/bus/platform/devices/soc:fingerprint_fpc/vendor
+    chmod 0700 /sys/bus/platform/devices/soc:fingerprint_fpc/request_vreg
     chmod 0660 /sys/bus/platform/devices/soc:fingerprint_fpc/regulator_enable
     chmod 0660 /sys/bus/platform/devices/soc:fingerprint_fpc/screen_status
     chmod 0660 /sys/bus/platform/devices/soc:fingerprint_fpc/vreg_op_cnt
