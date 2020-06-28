@@ -181,8 +181,6 @@ on fs
     mkdir /mnt/vendor/persist/subsys 0770 root system
     mkdir /mnt/vendor/persist/time 0770 system system
     mkdir /mnt/vendor/persist/vpp 0770 media media
-    mkdir /dev/logfs 0771 system system
-    mount vfat /dev/block/bootdevice/by-name/logfs /dev/logfs noatime umask=006,uid=1000,gid=1000
     restorecon_recursive /mnt/vendor/persist
 
 on post-fs
