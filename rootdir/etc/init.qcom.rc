@@ -653,8 +653,6 @@ on charger
     setprop vendor.usb.controller a600000.dwc3
     setprop sys.usb.configfs 1
 
-    mkdir /mnt/vendor/persist/subsys 0770 root system
-    mkdir /data/vendor/charge_logger 0771 system system
     write /sys/class/leds/green/max_brightness 32
     write /sys/class/leds/blue/max_brightness 32
 
