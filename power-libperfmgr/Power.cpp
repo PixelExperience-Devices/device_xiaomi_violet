@@ -102,8 +102,8 @@ Power::Power() :
 }
 
 // Methods from ::android::hardware::power::V1_0::IPower follow.
-Return<void> Power::setInteractive(bool /* interactive */)  {
-    return Void();
+Return<void> Power::setInteractive(bool interactive) {
+    return updateHint("NOT_INTERACTIVE", !interactive);
 }
 
 Return<void> Power::powerHint(PowerHint_1_0 hint, int32_t data) {
