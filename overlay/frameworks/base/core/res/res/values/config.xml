@@ -589,11 +589,6 @@
     <!-- True if the firmware supports p2p MAC randomization -->
     <bool name="config_wifi_p2p_mac_randomization_supported">true</bool>
 
-    <!-- Control whether Night display is available. This should only be enabled on devices
-    that have a HWC implementation that can apply the matrix passed to setColorTransform
-    without impacting power, performance, and app compatibility (e.g. protected content). -->
-    <bool name="config_nightDisplayAvailable">false</bool>
-
     <!-- The bounding path of the cutout region of the main built-in display.
          Must either be empty if there is no cutout region, or a string that is parsable by
          {@link android.util.PathParser}.
