@@ -24,7 +24,6 @@
 #include <android-base/file.h>
 #include <android-base/logging.h>
 #include <android-base/properties.h>
-#include <android-base/stringprintf.h>
 #include <android-base/strings.h>
 
 #include <utils/Log.h>
@@ -223,24 +222,6 @@ ndk::ScopedAStatus Power::isBoostSupported(Boost type, bool *_aidl_return) {
     LOG(INFO) << "Power boost " << toString(type) << " isBoostSupported: " << supported;
     *_aidl_return = supported;
     return ndk::ScopedAStatus::ok();
-}
-
-constexpr const char *boolToString(bool b) {
-    return b ? "true" : "false";
-}
-
-binder_status_t Power::dump(int fd, const char **, uint32_t) {
-    std::string buf(::android::base::StringPrintf(
-            "HintManager Running: %s\n"
-            "SustainedPerformanceMode: %s\n",
-            boolToString(mHintManager->IsRunning()), boolToString(mSustainedPerfModeOn)));
-    // Dump nodes through libperfmgr
-    mHintManager->DumpToFd(fd);
-    if (!::android::base::WriteStringToFd(buf, fd)) {
-        PLOG(ERROR) << "Failed to dump state to fd";
-    }
-    fsync(fd);
-    return STATUS_OK;
 }
 
 }  // namespace pixel

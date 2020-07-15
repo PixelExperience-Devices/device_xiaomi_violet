@@ -44,7 +44,6 @@ class Power : public ::aidl::android::hardware::power::BnPower {
     ndk::ScopedAStatus isModeSupported(Mode type, bool *_aidl_return) override;
     ndk::ScopedAStatus setBoost(Boost type, int32_t durationMs) override;
     ndk::ScopedAStatus isBoostSupported(Boost type, bool *_aidl_return) override;
-    binder_status_t dump(int fd, const char **args, uint32_t numArgs) override;
 
   private:
     std::shared_ptr<HintManager> mHintManager;
