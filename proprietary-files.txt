@@ -1,4 +1,4 @@
-# Audio ACDB
+# ACDB
 vendor/etc/acdbdata/IDP/IDP_Bluetooth_cal.acdb
 vendor/etc/acdbdata/IDP/IDP_Codec_cal.acdb
 vendor/etc/acdbdata/IDP/IDP_General_cal.acdb
@@ -8,11 +8,8 @@ vendor/etc/acdbdata/IDP/IDP_Hdmi_cal.acdb
 vendor/etc/acdbdata/IDP/IDP_Headset_cal.acdb
 vendor/etc/acdbdata/IDP/IDP_Speaker_cal.acdb
 vendor/etc/acdbdata/IDP/IDP_workspaceFile.qwsp
-vendor/etc/acdbdata/adsp_avs_config.acdb
 
-# Audio + ADSP Modules
-vendor/lib/rfsa/adsp/libdirac-capiv2.so
-vendor/lib64/libadiertac.so
+# Audio and FX Module
 vendor/lib64/libadiertac.so
 vendor/lib64/libaudcal.so
 vendor/lib64/libaudioparsers.so
@@ -71,7 +68,6 @@ vendor/lib/camera/com.qti.sensormodule.sunny_imx586.bin
 vendor/lib/camera/com.qti.sensormodule.sunny_ov13855.bin
 vendor/lib/camera/com.qti.sensormodule.sunny_ov2281.bin
 vendor/lib/camera/com.qti.sensormodule.sunny_s5k2l7.bin
-vendor/lib/camera/com.qti.sensormodule.sunny_s5k2x5sp.bin
 vendor/lib/camera/com.qti.sensormodule.sunny_s5k5e8.bin
 vendor/lib/camera/com.qti.sensormodule.sunny_s5k5e9yu05.bin
 vendor/lib/camera/com.qti.sensormodule.truly_imx476.bin
@@ -106,7 +102,6 @@ vendor/lib/camera/com.qti.tuned.sunny_imx586_cn.bin
 vendor/lib/camera/com.qti.tuned.sunny_ov13855.bin
 vendor/lib/camera/com.qti.tuned.sunny_ov13855_cn.bin
 vendor/lib/camera/com.qti.tuned.sunny_s5k2l7.bin
-vendor/lib/camera/com.qti.tuned.sunny_s5k2x5sp.bin
 vendor/lib/camera/com.qti.tuned.sunny_s5k5e8.bin
 vendor/lib/camera/com.qti.tuned.sunny_s5k5e9yu05.bin
 vendor/lib/camera/com.qti.tuned.truly_ov8856.bin
@@ -133,7 +128,6 @@ vendor/lib/libcamxfdengine.so
 vendor/lib/libcamxstatscore.so
 vendor/lib/libcamxswprocessalgo.so
 vendor/lib/libcamxtintlessalgo.so
-vendor/lib/libmialgo_fs.so
 vendor/lib/libmmcamera_faceproc.so
 vendor/lib/libmmcamera_faceproc2.so
 vendor/lib/libsns_device_mode_stub.so
@@ -143,6 +137,7 @@ vendor/lib/libsnsapi.so
 vendor/lib/libsnsdiaglog.so
 vendor/lib/libswregistrationalgo.so
 vendor/lib/libswvdec.so
+vendor/etc/scve/facereco/gModel.dat
 vendor/lib64/camera/com.qti.eeprom.truly_cmb433.so
 vendor/lib64/camera/com.qti.sensor.imx318.so
 vendor/lib64/camera/com.qti.sensor.imx334.so
@@ -205,7 +200,6 @@ vendor/lib64/camera/com.qti.sensormodule.sunny_imx586.bin
 vendor/lib64/camera/com.qti.sensormodule.sunny_ov13855.bin
 vendor/lib64/camera/com.qti.sensormodule.sunny_ov2281.bin
 vendor/lib64/camera/com.qti.sensormodule.sunny_s5k2l7.bin
-vendor/lib64/camera/com.qti.sensormodule.sunny_s5k2x5sp.bin
 vendor/lib64/camera/com.qti.sensormodule.sunny_s5k5e8.bin
 vendor/lib64/camera/com.qti.sensormodule.sunny_s5k5e9yu05.bin
 vendor/lib64/camera/com.qti.sensormodule.truly_imx476.bin
@@ -240,11 +234,9 @@ vendor/lib64/camera/com.qti.tuned.sunny_imx586_cn.bin
 vendor/lib64/camera/com.qti.tuned.sunny_ov13855.bin
 vendor/lib64/camera/com.qti.tuned.sunny_ov13855_cn.bin
 vendor/lib64/camera/com.qti.tuned.sunny_s5k2l7.bin
-vendor/lib64/camera/com.qti.tuned.sunny_s5k2x5sp.bin
 vendor/lib64/camera/com.qti.tuned.sunny_s5k5e8.bin
 vendor/lib64/camera/com.qti.tuned.sunny_s5k5e9yu05.bin
 vendor/lib64/camera/com.qti.tuned.truly_ov8856.bin
-vendor/lib64/camera/components/GpuKernelRepo.pb
 vendor/lib64/camera/components/com.arcsoft.node.capturebokeh.so
 vendor/lib64/camera/components/com.arcsoft.node.hdr.so
 vendor/lib64/camera/components/com.arcsoft.node.hdrchecker.so
@@ -286,8 +278,11 @@ vendor/lib64/camera/components/com.qtistatic.stats.aec.so
 vendor/lib64/camera/components/com.qtistatic.stats.af.so
 vendor/lib64/camera/components/com.qtistatic.stats.awb.so
 vendor/lib64/camera/components/com.qtistatic.stats.pdlib.so
+vendor/lib64/camera/components/com.vidhance.node.eis.so
 vendor/lib64/camera/components/com.vidhance.stats.aec_dmbr.so
 vendor/lib64/camera/components/com.xiaomi.node.mibokeh.so
+vendor/lib64/camera/components/com.xiaomi.node.misegment.so
+vendor/lib64/camera/components/GpuKernelRepo.pb
 vendor/lib64/camera/components/libdepthmapwrapper.so
 vendor/lib64/camera/components/libmmcamera_cac3.so
 vendor/lib64/camera/components/model_back.dlc
@@ -299,11 +294,6 @@ vendor/lib64/camera/fdconfigvideolite.bin
 vendor/lib64/hw/camera.qcom.so
 vendor/lib64/hw/com.qti.chi.override.so
 vendor/lib64/hw/com.qti.chi.override_moorea.so
-vendor/lib64/libFaceGrade.so
-vendor/lib64/libMegviiFacepp-0.5.2.so
-vendor/lib64/libSNPE.so
-vendor/lib64/libVDSuperPhotoAPI.so
-vendor/lib64/libXMFD_AgeGender.so
 vendor/lib64/libarcsoft_beautyshot.so
 vendor/lib64/libarcsoft_dualcam_refocus.so
 vendor/lib64/libarcsoft_high_dynamic_range.so
@@ -311,7 +301,6 @@ vendor/lib64/libarcsoft_portrait_lighting.so
 vendor/lib64/libarcsoft_portrait_lighting_c.so
 vendor/lib64/libarcsoft_supernight.so
 vendor/lib64/libc++_shared.so
-vendor/lib64/libcam.so|ba1e1fb1ed1aea1e450cff835b97765d45082571
 vendor/lib64/libcamera_nn_stub.so
 vendor/lib64/libcamera_scene.so
 vendor/lib64/libcamxfdalgov7.so
@@ -321,12 +310,26 @@ vendor/lib64/libcamxstatscore.so
 vendor/lib64/libcamxswprocessalgo.so
 vendor/lib64/libcamxtintlessalgo.so
 vendor/lib64/libcom.qti.chinodeutils.so
+vendor/lib64/libFaceGrade.so
 vendor/lib64/libmegface.so
-vendor/lib64/libmialgo_fs.so
+vendor/lib64/libMegviiFacepp-0.5.2.so
 vendor/lib64/libmibokeh_660.so
 vendor/lib64/libmmcamera_faceproc.so
 vendor/lib64/libmmcamera_faceproc2.so
 vendor/lib64/libmpbase.so
+vendor/lib64/libscveBlobDescriptor.so
+vendor/lib64/libscveBlobDescriptor_stub.so
+vendor/lib64/libscveCommon.so
+vendor/lib64/libscveCommon_stub.so
+vendor/lib64/libscveFaceLandmarks.so
+vendor/lib64/libscveFaceRecognition.so
+vendor/lib64/libscveObjectSegmentation.so
+vendor/lib64/libscveObjectSegmentation_stub.so
+vendor/lib64/libscveObjectTracker.so
+vendor/lib64/libscveObjectTracker_stub.so
+vendor/lib64/libscvePanorama.so
+vendor/lib64/libscvePanorama_lite.so
+vendor/lib64/libSNPE.so
 vendor/lib64/libsns_device_mode_stub.so
 vendor/lib64/libsns_fastRPC_util.so
 vendor/lib64/libsns_low_lat_stream_stub.so
@@ -336,7 +339,9 @@ vendor/lib64/libswregistrationalgo.so
 vendor/lib64/libswvdec.so
 vendor/lib64/libsymphony-cpu.so
 vendor/lib64/libsymphonypower.so
+vendor/lib64/libVDSuperPhotoAPI.so
 vendor/lib64/libvidhance.so
+vendor/lib64/libXMFD_AgeGender.so
 vendor/lib64/mibokeh_660_opencl.bin
 
 # Consumer IR
