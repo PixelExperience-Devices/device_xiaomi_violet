@@ -376,6 +376,14 @@ vendor/firmware/a612_zap.mdt
 vendor/firmware/a615_zap.b00
 vendor/firmware/a615_zap.elf
 
+# Sensors
+vendor/bin/hw/android.hardware.sensors@2.0-service
+vendor/bin/sensors.qti
+vendor/etc/init/android.hardware.sensors@2.0-service.rc
+vendor/lib64/android.hardware.sensors@2.0-impl.so
+vendor/lib64/libssc.so
+vendor/lib64/sensors.ssc.so
+
 # Sensor Configs
 vendor/etc/sensors/config/ak991x_dri_0.json
 vendor/etc/sensors/config/bma2x2_0.json
@@ -391,12 +399,12 @@ vendor/etc/sensors/config/dps368_0.json
 vendor/etc/sensors/config/icp101xx_0.json
 vendor/etc/sensors/config/lsm6ds3_0.json
 vendor/etc/sensors/config/lsm6ds3c_0.json
-vendor/etc/sensors/config/lsm6dsm_0.json
 vendor/etc/sensors/config/lsm6dsm_0_16g.json
 vendor/etc/sensors/config/lsm6dsm_0_8g.json
-vendor/etc/sensors/config/lsm6dso_0.json
+vendor/etc/sensors/config/lsm6dsm_0.json
 vendor/etc/sensors/config/lsm6dso_0_16g.json
 vendor/etc/sensors/config/lsm6dso_0_8g.json
+vendor/etc/sensors/config/lsm6dso_0.json
 vendor/etc/sensors/config/ltr308_0_on_change.json
 vendor/etc/sensors/config/pah_8011_0_platform.ppg_enable_ex_1.json
 vendor/etc/sensors/config/pah_8011_0_platform.ppg_enable_ex_2.json
