@@ -1,6 +1,3 @@
-# Audio Firmware
-vendor/firmware/tas2563_uCDSP.bin
-
 # Audio ACDB
 vendor/etc/acdbdata/IDP/IDP_Bluetooth_cal.acdb
 vendor/etc/acdbdata/IDP/IDP_Codec_cal.acdb
@@ -342,39 +339,36 @@ vendor/lib64/libsymphonypower.so
 vendor/lib64/libvidhance.so
 vendor/lib64/mibokeh_660_opencl.bin
 
-# Display calibration
-vendor/etc/qdcm_calib_data_ft8719_video_mode_dsi_tianma_panel.xml
-vendor/etc/qdcm_calib_data_nt36672a_video_mode_dsi_shenchao_panel.xml
+# Consumer IR
+vendor/lib64/hw/consumerir.default.so:vendor/lib64/hw/consumerir.sm6150.so
 
-# Fingerprint sensor
--vendor/app/FingerprintExtensionService/FingerprintExtensionService.apk
-vendor/etc/permissions/com.fingerprints.extension.xml
-vendor/framework/com.fingerprints.extension.jar
+# Fingerprint
 vendor/lib/vendor.qti.hardware.fingerprint@1.0.so
-vendor/lib64/com.fingerprints.extension@2.0.so
 vendor/lib64/hw/fingerprint.fpc.default.so
 vendor/lib64/hw/fingerprint.goodix.default.so
+vendor/lib64/com.fingerprints.extension@2.0.so
 vendor/lib64/libgf_ca.so
 vendor/lib64/libgf_hal.so
 vendor/lib64/libgoodixhwfingerprint.so
 vendor/lib64/libvendor.goodix.hardware.interfaces.biometrics.fingerprint@2.1.so
 vendor/lib64/vendor.qti.hardware.fingerprint@1.0.so
 
-# GPU firmware
-vendor/firmware/a612_zap.b01
+# Firmware
 vendor/firmware/a612_rgmu.bin
-vendor/firmware/a615_zap.b01
-vendor/firmware/a615_zap.mdt
-vendor/firmware/a630_sqe.fw
-vendor/firmware/a640_gmu.bin
-vendor/firmware/a612_zap.elf
-vendor/firmware/a612_zap.b02
-vendor/firmware/a630_gmu.bin
 vendor/firmware/a612_zap.b00
-vendor/firmware/a615_zap.b02
+vendor/firmware/a612_zap.b01
+vendor/firmware/a612_zap.b02
+vendor/firmware/a612_zap.elf
 vendor/firmware/a612_zap.mdt
-vendor/firmware/a615_zap.b00
-vendor/firmware/a615_zap.elf
+vendor/firmware/ipa_fws.b02
+vendor/firmware/ipa_fws.mdt
+vendor/firmware/tas2563_uCDSP.bin
+vendor/firmware/CAMERA_ICP.elf
+vendor/firmware/goodixfp.b00
+vendor/firmware/goodixfp.b01
+vendor/firmware/goodixfp.b02
+vendor/firmware/goodixfp.b03
+vendor/firmware/goodixfp.b04
 
 # Sensors
 vendor/bin/hw/android.hardware.sensors@2.0-service
