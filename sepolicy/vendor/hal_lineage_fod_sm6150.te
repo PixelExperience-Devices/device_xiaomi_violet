@@ -18,3 +18,5 @@ binder_call(hal_lineage_fod_sm6150, hal_touchfeature_default)
 
 allow hal_lineage_fod_sm6150 sysfs_graphics:dir r_dir_perms;
 allow hal_lineage_fod_sm6150 sysfs_graphics:file r_file_perms;
+
+get_prop(hal_lineage_fod_sm6150, vendor_fp_prop)
