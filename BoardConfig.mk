@@ -5,7 +5,7 @@
 #
 
 # Display density
-TARGET_SCREEN_DENSITY := 480
+TARGET_SCREEN_DENSITY := 440
 
 # Inherit from sm6150-common
 -include device/xiaomi/sm6150-common/BoardConfigCommon.mk
@@ -16,9 +16,9 @@ DEVICE_PATH := device/xiaomi/violet
 TARGET_OTA_ASSERT_DEVICE := violet
 
 # Kernel
-BOARD_KERNEL_BASE := 0x80000000
+BOARD_KERNEL_BASE := 0x00000000
 BOARD_RAMDISK_OFFSET := 0x01000000
-TARGET_KERNEL_CONFIG := vendor/violet-perf_defconfig
+TARGET_KERNEL_CONFIG := vendor/lineage_violet_defconfig
 BOARD_KERNEL_CMDLINE += androidboot.selinux=permissive
 
 # Platform
