@@ -24,6 +24,9 @@ BOARD_KERNEL_CMDLINE += androidboot.selinux=permissive
 # Platform
 TARGET_BOARD_PLATFORM_GPU := qcom-adreno612
 
+# Properties
+TARGET_VENDOR_PROP += $(DEVICE_PATH)/vendor.prop
+
 # HIDL
 DEVICE_MANIFEST_FILE += $(DEVICE_PATH)/manifest.xml
 
