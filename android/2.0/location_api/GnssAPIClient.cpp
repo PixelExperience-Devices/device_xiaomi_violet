@@ -395,18 +395,20 @@ void GnssAPIClient::onCapabilitiesCb(LocationCapabilitiesMask capabilitiesMask)
         if (capabilitiesMask & LOCATION_CAPABILITIES_CONSTELLATION_ENABLEMENT_BIT)
             data |= IGnssCallback::Capabilities::SATELLITE_BLACKLIST;
 
-        IGnssCallback::GnssSystemInfo gnssInfo;
-        if (capabilitiesMask & LOCATION_CAPABILITIES_PRIVACY_BIT) {
-            gnssInfo.yearOfHw = 2019;
-        } else if (capabilitiesMask & LOCATION_CAPABILITIES_CONSTELLATION_ENABLEMENT_BIT ||
-            capabilitiesMask & LOCATION_CAPABILITIES_AGPM_BIT) {
-            gnssInfo.yearOfHw = 2018;
-        } else if (capabilitiesMask & LOCATION_CAPABILITIES_DEBUG_NMEA_BIT) {
-            gnssInfo.yearOfHw = 2017;
-        } else if (capabilitiesMask & LOCATION_CAPABILITIES_GNSS_MEASUREMENTS_BIT) {
-            gnssInfo.yearOfHw = 2016;
-        } else {
-            gnssInfo.yearOfHw = 2015;
+        IGnssCallback::GnssSystemInfo gnssInfo = { .yearOfHw = 2015 };
+
+        if (capabilitiesMask & LOCATION_CAPABILITIES_GNSS_MEASUREMENTS_BIT) {
+            gnssInfo.yearOfHw++; // 2016
+            if (capabilitiesMask & LOCATION_CAPABILITIES_DEBUG_NMEA_BIT) {
+                gnssInfo.yearOfHw++; // 2017
+                if (capabilitiesMask & LOCATION_CAPABILITIES_CONSTELLATION_ENABLEMENT_BIT ||
+                    capabilitiesMask & LOCATION_CAPABILITIES_AGPM_BIT) {
+                    gnssInfo.yearOfHw++; // 2018
+                    if (capabilitiesMask & LOCATION_CAPABILITIES_PRIVACY_BIT) {
+                        gnssInfo.yearOfHw++; // 2019
+                    }
+                }
+            }
         }
         LOC_LOGV("%s:%d] set_system_info_cb (%d)", __FUNCTION__, __LINE__, gnssInfo.yearOfHw);
 
