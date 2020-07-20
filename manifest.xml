@@ -670,4 +670,56 @@ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
             <instance>default</instance>
         </interface>
     </hal>
+    <!-- IMS CM Service -->
+    <hal format="hidl">
+        <name>com.qualcomm.qti.imscmservice</name>
+        <transport>hwbinder</transport>
+        <version>2.2</version>
+        <interface>
+          <name>IImsCmService</name>
+          <instance>qti.ims.connectionmanagerservice</instance>
+        </interface>
+    </hal>
+     <!-- dpm QMI hal service -->
+     <hal format="hidl">
+         <name>com.qualcomm.qti.dpm.api</name>
+         <transport>hwbinder</transport>
+         <version>1.0</version>
+         <interface>
+             <name>IdpmQmi</name>
+             <instance>dpmQmiService</instance>
+         </interface>
+     </hal>
+     <!-- Data Link Latency -->
+     <hal format="hidl">
+         <name>vendor.qti.hardware.data.latency</name>
+         <transport>hwbinder</transport>
+         <version>1.0</version>
+         <interface>
+             <name>ILinkLatency</name>
+             <instance>default</instance>
+         </interface>
+     </hal>
+     <!-- WFD HAL Service -->
+    <hal format="hidl">
+        <name>vendor.qti.hardware.wifidisplaysession</name>
+        <transport>hwbinder</transport>
+        <version>1.0</version>
+        <interface>
+            <name>IWifiDisplaySession</name>
+            <instance>wifidisplaysession</instance>
+        </interface>
+        <interface>
+            <name>IWifiDisplaySessionVideoTrack</name>
+            <instance>wifidisplaysessionvideotrack</instance>
+        </interface>
+        <interface>
+            <name>IWifiDisplaySessionAudioTrack</name>
+            <instance>wifidisplaysessionaudiotrack</instance>
+        </interface>
+        <interface>
+            <name>IWifiDisplaySessionImageTrack</name>
+            <instance>wifidisplaysessionimagetrack</instance>
+        </interface>
+    </hal>
 </manifest>
