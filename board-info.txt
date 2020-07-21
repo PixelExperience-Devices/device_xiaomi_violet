@@ -1,0 +1,1 @@
+require version-baseband=4.3.c2-00029,20.4.1
