@@ -133,12 +133,16 @@
     <ctl name="WSA_CDC_DMA_RX_0 Channels" value="One" />
     <ctl name="RX_CDC_DMA_RX_0 Channels" value="One" />
     <ctl name="VI_FEED_TX Channels" value="Two" />
+    <ctl name="WSA_AIF_VI Mixer WSA_SPKR_VI_1" value="0" />
+    <ctl name="WSA_AIF_VI Mixer WSA_SPKR_VI_2" value="0" />
     <ctl name="WSA_CDC_DMA_RX_0 Format" value="UNPACKED" />
+    <ctl name="WSA_CDC_DMA_TX_0 Format" value="UNPACKED" />
     <ctl name="RX_CDC_DMA_RX_0 Format" value="UNPACKED" />
     <ctl name="TX_CDC_DMA_TX_3 Format" value="UNPACKED" />
     <!-- HFP start -->
     <ctl name="HFP_SLIM7_UL_HL Switch" value="0" />
     <ctl name="PRI_MI2S_RX Port Mixer SLIM_7_TX" value="0" />
+    <ctl name="RX_CDC_DMA_RX_0 Port Mixer SLIM_7_TX" value="0" />
     <!-- HFP end -->
     <!-- echo reference -->
     <ctl name="AUDIO_REF_EC_UL1 MUX" value="None" />
@@ -187,6 +191,7 @@
     <!-- Multimode Voice2 -->
     <ctl name="PRI_MI2S_RX_Voice Mixer VoiceMMode2" value="0" />
     <ctl name="RX_CDC_DMA_RX_0_Voice Mixer VoiceMMode2" value="0" />
+    <ctl name="VoiceMMode1_Tx Mixer TX_CDC_DMA_TX_3_MMode2" value="0" />
     <!-- Multimode Voice2 BTSCO -->
     <ctl name="SLIM_7_RX_Voice Mixer VoiceMMode2" value="0" />
     <ctl name="VoiceMMode2_Tx Mixer SLIM_7_TX_MMode2" value="0" />
@@ -227,6 +232,8 @@
 
     <!-- compress-voip-call start -->
     <ctl name="PRI_MI2S_RX_Voice Mixer Voip" value="0" />
+    <ctl name="RX_CDC_DMA_RX_0_Voice Mixer Voip" value="0" />
+    <ctl name="Voip_Tx Mixer TX_CDC_DMA_TX_3_Voip" value="0" />
     <ctl name="SLIM_7_RX_Voice Mixer Voip" value="0" />
     <ctl name="Voip_Tx Mixer SLIM_7_TX_Voip" value="0" />
     <ctl name="AFE_PCM_RX_Voice Mixer Voip" value="0" />
@@ -263,12 +270,27 @@
 
     <!-- Codec controls -->
     <!-- WSA controls -->
+    <ctl name="WSA RX0 MUX" value="ZERO" />
+    <ctl name="WSA RX1 MUX" value="ZERO" />
+    <ctl name="WSA_RX0 INP0" value="ZERO" />
+    <ctl name="WSA_RX1 INP0" value="ZERO" />
+    <ctl name="WSA_AIF_VI Mixer WSA_SPKR_VI_1" value="0" />
+    <ctl name="WSA_AIF_VI Mixer WSA_SPKR_VI_2" value="0" />
     <ctl name="WSA_RX_0_VI_FB_LCH_MUX" value="ZERO" />
     <ctl name="WSA_RX_0_VI_FB_RCH_MUX" value="ZERO" />
+    <ctl name="SpkrLeft COMP Switch" value="0" />
+    <ctl name="SpkrRight COMP Switch" value="0" />
+    <ctl name="SpkrLeft BOOST Switch" value="0" />
+    <ctl name="SpkrRight BOOST Switch" value="0" />
+    <ctl name="SpkrLeft VISENSE Switch" value="0" />
+    <ctl name="SpkrRight VISENSE Switch" value="0" />
+    <ctl name="SpkrLeft SWR DAC_Port Switch" value="0" />
+    <ctl name="SpkrRight SWR DAC_Port Switch" value="0" />
 
     <!-- RX Controls -->
     <ctl name="RX_MACRO RX0 MUX" value="ZERO" />
     <ctl name="RX_MACRO RX1 MUX" value="ZERO" />
+    <ctl name="RX_Native" value="OFF" />
     <ctl name="RX_CDC_DMA_RX_0 Channels" value="One" />
     <ctl name="RX INT0_1 MIX1 INP0" value="ZERO" />
     <ctl name="RX INT0_1 MIX1 INP1" value="ZERO" />
@@ -327,11 +349,14 @@
     <ctl name="TX SMIC MUX7" value="ZERO" />
 
     <!-- Volume controls -->
+    <ctl name="WSA_RX0 Digital Volume" value="84" />
+    <ctl name="WSA_RX1 Digital Volume" value="84" />
     <ctl name="RX_RX0 Digital Volume" value="84" />
     <ctl name="RX_RX1 Digital Volume" value="84" />
     <ctl name="RX_RX2 Digital Volume" value="84" />
     <ctl name="HPHL Volume" value="20" />
     <ctl name="HPHR Volume" value="20" />
+    <ctl name="EAR SPKR PA Gain" value="G_DEFAULT" />
 
     <ctl name="TX_DEC0 Volume" value="84" />
     <ctl name="TX_DEC1 Volume" value="84" />
@@ -345,6 +370,12 @@
     <ctl name="ADC1 Volume" value="12" />
     <ctl name="ADC2 Volume" value="12" />
     <ctl name="ADC3 Volume" value="12" />
+
+    <!-- Compander controls -->
+    <ctl name="WSA_COMP1 Switch" value="0" />
+    <ctl name="WSA_COMP2 Switch" value="0" />
+    <ctl name="COMP7 Switch" value="0" />
+    <ctl name="COMP8 Switch" value="0" />
 
     <!-- Headphone Default mode - AB -->
     <ctl name="RX HPH Mode" value="CLS_AB" />
@@ -386,13 +417,25 @@
     <ctl name="IIR0 INP2 MUX" value="ZERO" />
     <ctl name="IIR0 INP3 MUX" value="ZERO" />
 
+    <!-- vbat related data -->
+    <ctl name="GSM mode Enable" value="OFF" />
+    <ctl name="WSA_Softclip0 Enable" value="0" />
+    <ctl name="WSA_Softclip1 Enable" value="0" />
+    <ctl name="WSA_RX INT0 VBAT WSA RX0 VBAT Enable" value="0" />
+    <ctl name="WSA_RX INT1 VBAT WSA RX1 VBAT Enable" value="0" />
+
     <!-- Codec controls end -->
 
     <!-- defaults for mmap record -->
     <ctl name="MultiMedia16 Mixer TX_CDC_DMA_TX_3" value="0" />
+    <ctl name="MultiMedia16 Mixer SLIM_7_TX" value="0" />
+    <ctl name="MultiMedia16 Mixer SLIM_8_TX" value="0" />
     <ctl name="MultiMedia16 Mixer USB_AUDIO_TX" value="0" />
 
     <!-- These are audio route (FE to BE) specific mixer settings -->
+    <path name="gsm-mode">
+        <ctl name="GSM mode Enable" value="ON" />
+    </path>
 
     <path name="echo-reference">
         <ctl name="AUDIO_REF_EC_UL1 MUX" value="I2S_RX" />
@@ -2313,9 +2356,17 @@
       <ctl name="MultiMedia16 Mixer TX_CDC_DMA_TX_3" value="1" />
     </path>
 
+    <path name="mmap-record bt-sco">
+      <ctl name="MultiMedia16 Mixer SLIM_7_TX" value="1" />
+    </path>
+
     <path name="mmap-record bt-sco-wb">
         <ctl name="BT SampleRate" value="KHZ_16" />
         <path name="mmap-record bt-sco" />
+    </path>
+
+    <path name="mmap-record capture-fm">
+      <ctl name="MultiMedia16 Mixer SLIM_8_TX" value="1" />
     </path>
 
     <path name="mmap-record usb-headset-mic">
@@ -2504,6 +2555,20 @@
 	<ctl name="PRIM_MI2S_RX Channels" value="One" />
 	<ctl name="Configuration" value="0" />
         <ctl name="WSA_CDC_DMA_RX_0 Channels" value="Two" />
+        <ctl name="WSA RX0 MUX" value="AIF1_PB" />
+        <ctl name="WSA RX1 MUX" value="AIF1_PB" />
+        <ctl name="WSA_RX0 INP0" value="RX0" />
+        <ctl name="WSA_RX1 INP0" value="RX1" />
+        <ctl name="WSA_COMP1 Switch" value="1" />
+        <ctl name="WSA_COMP2 Switch" value="1" />
+        <ctl name="SpkrLeft COMP Switch" value="1" />
+        <ctl name="SpkrLeft BOOST Switch" value="1" />
+        <ctl name="SpkrLeft VISENSE Switch" value="1" />
+        <ctl name="SpkrLeft SWR DAC_Port Switch" value="1" />
+        <ctl name="SpkrRight COMP Switch" value="1" />
+        <ctl name="SpkrRight BOOST Switch" value="1" />
+        <ctl name="SpkrRight VISENSE Switch" value="1" />
+        <ctl name="SpkrRight SWR DAC_Port Switch" value="1" />
     </path>
 
     <path name="speaker-ring">
@@ -2513,12 +2578,20 @@
 
     <path name="speaker-mono">
         <ctl name="WSA_CDC_DMA_RX_0 Channels" value="One" />
+        <ctl name="WSA RX0 MUX" value="AIF1_PB" />
+        <ctl name="WSA_RX0 INP0" value="RX0" />
+        <ctl name="WSA_COMP1 Switch" value="1" />
+        <ctl name="SpkrLeft COMP Switch" value="1" />
+        <ctl name="SpkrLeft BOOST Switch" value="1" />
+        <ctl name="SpkrLeft VISENSE Switch" value="1" />
+        <ctl name="SpkrLeft SWR DAC_Port Switch" value="1" />
     </path>
 
     <path name="speaker-mono-2">
         <ctl name="WSA_CDC_DMA_RX_0 Channels" value="One" />
         <ctl name="WSA RX1 MUX" value="AIF1_PB" />
         <ctl name="WSA_RX1 INP0" value="RX1" />
+        <ctl name="WSA_COMP2 Switch" value="1" />
         <ctl name="SpkrRight COMP Switch" value="1" />
         <ctl name="SpkrRight BOOST Switch" value="1" />
         <ctl name="SpkrRight VISENSE Switch" value="1" />
@@ -2570,6 +2643,7 @@
     </path>
 
     <path name="speaker-protected">
+        <ctl name="WSA_AIF_VI Mixer WSA_SPKR_VI_1" value="1" />
         <ctl name="WSA_CDC_DMA_0 TX Format" value="PACKED_16B" />
         <path name="speaker" />
         <ctl name="VI_FEED_TX Channels" value="One" />
@@ -2577,6 +2651,7 @@
     </path>
 
     <path name="voice-speaker-protected">
+        <ctl name="WSA_AIF_VI Mixer WSA_SPKR_VI_1" value="1" />
         <ctl name="WSA_CDC_DMA_0 TX Format" value="PACKED_16B" />
         <path name="speaker-mono" />
         <ctl name="VI_FEED_TX Channels" value="One" />
@@ -2660,8 +2735,8 @@
         <ctl name="RX_RX1 Digital Volume" value="84" />
     </path>
     <!-- Add by dzy for ce mode end-->
-
-    <path name="headphones-hifi-filter">
+    <path name="headphones-44.1">
+        <ctl name="RX_Native" value="ON" />
         <path name="headphones" />
     </path>
 
@@ -2741,11 +2816,6 @@
     <path name="speaker-and-headphones-ce">
 	<path name="speaker" />
         <path name="headphones-ce" />
-    </path>
-
-    <path name="speaker-and-headphones-hifi-filter">
-        <path name="headphones" />
-        <path name="speaker" />
     </path>
 
     <path name="speaker-safe-and-headphones">
