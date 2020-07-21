@@ -1,0 +1,8 @@
+[
+  {
+    "remote":      "github",
+    "repository":  "PixelExperience-Devices/device_xiaomi_sm6150-common",
+    "target_path": "device/xiaomi/sm6150-common",
+    "branch":      "ten"
+  }
+]
