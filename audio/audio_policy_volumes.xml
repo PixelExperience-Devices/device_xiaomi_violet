@@ -202,3 +202,4 @@ volume index from 0 to 100.
     <volume stream="AUDIO_STREAM_PATCH" deviceCategory="DEVICE_CATEGORY_HEARING_AID"
                                         ref="FULL_SCALE_VOLUME_CURVE"/>
 </volumes>
+

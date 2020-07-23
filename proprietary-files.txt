@@ -9,21 +9,17 @@ vendor/etc/acdbdata/IDP/IDP_Headset_cal.acdb
 vendor/etc/acdbdata/IDP/IDP_Speaker_cal.acdb
 vendor/etc/acdbdata/IDP/IDP_workspaceFile.qwsp
 
-# Audio and FX Module
-vendor/lib64/libadiertac.so
-vendor/lib64/libaudcal.so
-vendor/lib64/libaudioparsers.so
-vendor/lib64/libqtigef.so
-vendor/lib/libadiertac.so
-vendor/lib/libaudcal.so
-vendor/lib/libaudioparsers.so
-vendor/lib/libdrc.so
-vendor/lib/libqtigef.so
-vendor/lib/libsurround_3mic_proc.so
-etc/permissions/audiosphere.xml
-framework/audiosphere.jar
-vendor/lib64/soundfx/libasphere.so
-vendor/lib/soundfx/libasphere.so
+# ADSP Modules
+vendor/lib/rfsa/adsp/libarcsoft_dualcam_refocus_skel.so
+vendor/lib/rfsa/adsp/libhexagon_nn_skel_secondary.so
+vendor/lib/rfsa/adsp/libSuperSensor_skel.so
+vendor/lib/rfsa/adsp/libVDHexagonSuperPhoto_skel.so
+vendor/lib/rfsa/adsp/misound_karaokemix_res.bin
+vendor/lib/rfsa/adsp/misound_karaoke_res.bin
+vendor/lib/rfsa/adsp/misound_res.bin
+
+# Audio (speaker amplifier) firmware
+vendor/firmware/tas2563_uCDSP.bin
 
 # Bluetooth
 vendor/bin/hw/android.hardware.bluetooth@1.0-service-qti
@@ -38,105 +34,6 @@ vendor/etc/camera/lf_facerank_model.bin
 vendor/etc/camera/megviifacepp_0_5_2_model
 vendor/etc/camera/sdm_ys_32p_120_21_5_perturb50.bin
 vendor/etc/camera/vidhance_calibration_F7B
-vendor/firmware/CAMERA_ICP.elf
-vendor/lib/camera/com.qti.sensormodule.altek1_imx577.bin
-vendor/lib/camera/com.qti.sensormodule.altek2_imx577.bin
-vendor/lib/camera/com.qti.sensormodule.altek_imx577.bin
-vendor/lib/camera/com.qti.sensormodule.liteon_imx318.bin
-vendor/lib/camera/com.qti.sensormodule.liteon_imx362.bin
-vendor/lib/camera/com.qti.sensormodule.liteon_max7366_6dof.bin
-vendor/lib/camera/com.qti.sensormodule.liteon_max7366_eyetrack.bin
-vendor/lib/camera/com.qti.sensormodule.liteon_max7366_ov6211.bin
-vendor/lib/camera/com.qti.sensormodule.liteon_max7366_ov9282.bin
-vendor/lib/camera/com.qti.sensormodule.liteon_ov7251.bin
-vendor/lib/camera/com.qti.sensormodule.ofilm_imx376.bin
-vendor/lib/camera/com.qti.sensormodule.ofilm_imx586.bin
-vendor/lib/camera/com.qti.sensormodule.ofilm_ov12a10.bin
-vendor/lib/camera/com.qti.sensormodule.ofilm_ov12a10_front.bin
-vendor/lib/camera/com.qti.sensormodule.ofilm_ov13855.bin
-vendor/lib/camera/com.qti.sensormodule.ofilm_ov13880.bin
-vendor/lib/camera/com.qti.sensormodule.ofilm_s5k5e8.bin
-vendor/lib/camera/com.qti.sensormodule.pmd_irs1645.bin
-vendor/lib/camera/com.qti.sensormodule.semco_imx258.bin
-vendor/lib/camera/com.qti.sensormodule.semco_imx386.bin
-vendor/lib/camera/com.qti.sensormodule.semco_imx586.bin
-vendor/lib/camera/com.qti.sensormodule.semco_s5k5e8.bin
-vendor/lib/camera/com.qti.sensormodule.sony_imx334.bin
-vendor/lib/camera/com.qti.sensormodule.sunny_imx519.bin
-vendor/lib/camera/com.qti.sensormodule.sunny_imx576.bin
-vendor/lib/camera/com.qti.sensormodule.sunny_imx586.bin
-vendor/lib/camera/com.qti.sensormodule.sunny_ov13855.bin
-vendor/lib/camera/com.qti.sensormodule.sunny_ov2281.bin
-vendor/lib/camera/com.qti.sensormodule.sunny_s5k2l7.bin
-vendor/lib/camera/com.qti.sensormodule.sunny_s5k5e8.bin
-vendor/lib/camera/com.qti.sensormodule.sunny_s5k5e9yu05.bin
-vendor/lib/camera/com.qti.sensormodule.truly_imx476.bin
-vendor/lib/camera/com.qti.sensormodule.truly_ov8856.bin
-vendor/lib/camera/com.qti.tuned.altek1_imx577.bin
-vendor/lib/camera/com.qti.tuned.altek_imx577.bin
-vendor/lib/camera/com.qti.tuned.default.bin
-vendor/lib/camera/com.qti.tuned.liteon_imx318.bin
-vendor/lib/camera/com.qti.tuned.liteon_imx362.bin
-vendor/lib/camera/com.qti.tuned.liteon_max7366_6dof.bin
-vendor/lib/camera/com.qti.tuned.liteon_max7366_eyetrack.bin
-vendor/lib/camera/com.qti.tuned.liteon_max7366_ov9282.bin
-vendor/lib/camera/com.qti.tuned.liteon_ov7251.bin
-vendor/lib/camera/com.qti.tuned.ofilm_imx376.bin
-vendor/lib/camera/com.qti.tuned.ofilm_imx586.bin
-vendor/lib/camera/com.qti.tuned.ofilm_imx586_cn.bin
-vendor/lib/camera/com.qti.tuned.ofilm_ov12a10.bin
-vendor/lib/camera/com.qti.tuned.ofilm_ov12a10_front.bin
-vendor/lib/camera/com.qti.tuned.ofilm_ov13855.bin
-vendor/lib/camera/com.qti.tuned.ofilm_ov13855_cn.bin
-vendor/lib/camera/com.qti.tuned.ofilm_ov13880.bin
-vendor/lib/camera/com.qti.tuned.ofilm_s5k5e8.bin
-vendor/lib/camera/com.qti.tuned.semco_imx258.bin
-vendor/lib/camera/com.qti.tuned.semco_imx258_mono.bin
-vendor/lib/camera/com.qti.tuned.semco_imx386.bin
-vendor/lib/camera/com.qti.tuned.semco_imx481.bin
-vendor/lib/camera/com.qti.tuned.semco_imx586.bin
-vendor/lib/camera/com.qti.tuned.semco_s5k5e8.bin
-vendor/lib/camera/com.qti.tuned.sunny_imx519.bin
-vendor/lib/camera/com.qti.tuned.sunny_imx586.bin
-vendor/lib/camera/com.qti.tuned.sunny_imx586_cn.bin
-vendor/lib/camera/com.qti.tuned.sunny_ov13855.bin
-vendor/lib/camera/com.qti.tuned.sunny_ov13855_cn.bin
-vendor/lib/camera/com.qti.tuned.sunny_s5k2l7.bin
-vendor/lib/camera/com.qti.tuned.sunny_s5k5e8.bin
-vendor/lib/camera/com.qti.tuned.sunny_s5k5e9yu05.bin
-vendor/lib/camera/com.qti.tuned.truly_ov8856.bin
-vendor/lib/camera/components/com.qti.eisv2.so
-vendor/lib/camera/components/com.qti.eisv3.so
-vendor/lib/camera/components/com.qti.stats.aec.so
-vendor/lib/camera/components/com.qti.stats.af.so
-vendor/lib/camera/components/com.qti.stats.afd.so
-vendor/lib/camera/components/com.qti.stats.asd.so
-vendor/lib/camera/components/com.qti.stats.awb.so
-vendor/lib/camera/components/com.qti.stats.haf.so
-vendor/lib/camera/components/com.qti.stats.pdlib.so
-vendor/lib/camera/components/com.qti.stats.pdlibsony.so
-vendor/lib/camera/components/com.qti.stats.pdlibwrapper.so
-vendor/lib/camera/components/libmmcamera_cac3.so
-vendor/lib/camera/fdconfigpreview.bin
-vendor/lib/camera/fdconfigpreviewlite.bin
-vendor/lib/camera/fdconfigvideo.bin
-vendor/lib/camera/fdconfigvideolite.bin
-vendor/lib/libcamera_nn_stub.so
-vendor/lib/libcamxfdalgov7.so
-vendor/lib/libcamxfdalgov8.so
-vendor/lib/libcamxfdengine.so
-vendor/lib/libcamxstatscore.so
-vendor/lib/libcamxswprocessalgo.so
-vendor/lib/libcamxtintlessalgo.so
-vendor/lib/libmmcamera_faceproc.so
-vendor/lib/libmmcamera_faceproc2.so
-vendor/lib/libsns_device_mode_stub.so
-vendor/lib/libsns_fastRPC_util.so
-vendor/lib/libsns_low_lat_stream_stub.so
-vendor/lib/libsnsapi.so
-vendor/lib/libsnsdiaglog.so
-vendor/lib/libswregistrationalgo.so
-vendor/lib/libswvdec.so
 vendor/etc/scve/facereco/gModel.dat
 vendor/lib64/camera/com.qti.eeprom.truly_cmb433.so
 vendor/lib64/camera/com.qti.sensor.imx318.so
@@ -344,6 +241,9 @@ vendor/lib64/libvidhance.so
 vendor/lib64/libXMFD_AgeGender.so
 vendor/lib64/mibokeh_660_opencl.bin
 
+# Camera Firmware
+vendor/firmware/CAMERA_ICP.elf
+
 # Consumer IR
 vendor/lib64/hw/consumerir.default.so:vendor/lib64/hw/consumerir.sm6150.so
 
@@ -358,22 +258,24 @@ vendor/lib64/libgoodixhwfingerprint.so
 vendor/lib64/libvendor.goodix.hardware.interfaces.biometrics.fingerprint@2.1.so
 vendor/lib64/vendor.qti.hardware.fingerprint@1.0.so
 
-# Firmware
+# Fingerprint Firmware
+vendor/firmware/goodixfp.b00
+vendor/firmware/goodixfp.b01
+vendor/firmware/goodixfp.b02
+vendor/firmware/goodixfp.b03
+vendor/firmware/goodixfp.b04
+
+# GPU Firmware
 vendor/firmware/a612_rgmu.bin
 vendor/firmware/a612_zap.b00
 vendor/firmware/a612_zap.b01
 vendor/firmware/a612_zap.b02
 vendor/firmware/a612_zap.elf
 vendor/firmware/a612_zap.mdt
+
+# IPA Firmware
 vendor/firmware/ipa_fws.b02
 vendor/firmware/ipa_fws.mdt
-vendor/firmware/tas2563_uCDSP.bin
-vendor/firmware/CAMERA_ICP.elf
-vendor/firmware/goodixfp.b00
-vendor/firmware/goodixfp.b01
-vendor/firmware/goodixfp.b02
-vendor/firmware/goodixfp.b03
-vendor/firmware/goodixfp.b04
 
 # Sensors
 vendor/bin/hw/android.hardware.sensors@2.0-service
