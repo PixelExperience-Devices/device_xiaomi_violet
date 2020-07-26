@@ -130,11 +130,13 @@ typedef struct loc_sv_cache_info_s
     uint64_t bds_used_mask;
     uint64_t navic_used_mask;
     uint32_t gps_l1_count;
+    uint32_t gps_l2_count;
     uint32_t gps_l5_count;
     uint32_t glo_g1_count;
     uint32_t glo_g2_count;
     uint32_t gal_e1_count;
     uint32_t gal_e5_count;
+    uint32_t gal_e5b_count;
     uint32_t qzss_l1_count;
     uint32_t qzss_l5_count;
     uint32_t bds_b1_count;
@@ -412,6 +414,8 @@ static loc_nmea_sv_meta* loc_nmea_sv_meta_init(loc_nmea_sv_meta& sv_meta,
                 sv_meta.svCount = sv_cache_info.gps_l1_count;
             } else if (GNSS_SIGNAL_GPS_L5 == signalType) {
                 sv_meta.svCount = sv_cache_info.gps_l5_count;
+            } else if (GNSS_SIGNAL_GPS_L2 == signalType) {
+                sv_meta.svCount = sv_cache_info.gps_l2_count;
             }
             break;
         case GNSS_SV_TYPE_GLONASS:
@@ -438,6 +442,8 @@ static loc_nmea_sv_meta* loc_nmea_sv_meta_init(loc_nmea_sv_meta& sv_meta,
                 sv_meta.svCount = sv_cache_info.gal_e1_count;
             } else if (GNSS_SIGNAL_GALILEO_E5A == signalType) {
                 sv_meta.svCount = sv_cache_info.gal_e5_count;
+            } else if (GNSS_SIGNAL_GALILEO_E5B == signalType) {
+                sv_meta.svCount == sv_cache_info.gal_e5b_count;
             }
             break;
         case GNSS_SV_TYPE_QZSS:
@@ -2090,6 +2096,8 @@ void loc_nmea_generate_sv(const GnssSvNotification &svNotify,
             }
             if (GNSS_SIGNAL_GPS_L5 == svNotify.gnssSvs[svOffset].gnssSignalTypeMask) {
                 sv_cache_info.gps_l5_count++;
+            } else if (GNSS_SIGNAL_GPS_L2 == svNotify.gnssSvs[svOffset].gnssSignalTypeMask) {
+                sv_cache_info.gps_l2_count++;
             } else {
                 // GNSS_SIGNAL_GPS_L1CA or default
                 // If no signal type in report, it means default L1
@@ -2126,6 +2134,8 @@ void loc_nmea_generate_sv(const GnssSvNotification &svNotify,
             }
             if(GNSS_SIGNAL_GALILEO_E5A == svNotify.gnssSvs[svOffset].gnssSignalTypeMask){
                 sv_cache_info.gal_e5_count++;
+            } else if (GNSS_SIGNAL_GALILEO_E5B == svNotify.gnssSvs[svOffset].gnssSignalTypeMask) {
+                sv_cache_info.gal_e5b_count++;
             } else {
                 // GNSS_SIGNAL_GALILEO_E1 or default
                 // If no signal type in report, it means default E1
@@ -2202,6 +2212,14 @@ void loc_nmea_generate_sv(const GnssSvNotification &svNotify,
     loc_nmea_generate_GSV(svNotify, sentence, sizeof(sentence),
             loc_nmea_sv_meta_init(sv_meta, sv_cache_info, GNSS_SV_TYPE_GPS,
             GNSS_SIGNAL_GPS_L5, false), nmeaArraystr);
+
+    // ---------------------
+    // ------$GPGSV:L2------
+    // ---------------------
+    loc_nmea_generate_GSV(svNotify, sentence, sizeof(sentence),
+            loc_nmea_sv_meta_init(sv_meta, sv_cache_info, GNSS_SV_TYPE_GPS,
+            GNSS_SIGNAL_GPS_L2, false), nmeaArraystr);
+
     // ---------------------
     // ------$GLGSV:G1------
     // ---------------------
@@ -2232,6 +2250,13 @@ void loc_nmea_generate_sv(const GnssSvNotification &svNotify,
     loc_nmea_generate_GSV(svNotify, sentence, sizeof(sentence),
             loc_nmea_sv_meta_init(sv_meta, sv_cache_info, GNSS_SV_TYPE_GALILEO,
             GNSS_SIGNAL_GALILEO_E5A, false), nmeaArraystr);
+
+    // -------------------------
+    // ------$GAGSV:E5B---------
+    // -------------------------
+    loc_nmea_generate_GSV(svNotify, sentence, sizeof(sentence),
+            loc_nmea_sv_meta_init(sv_meta, sv_cache_info, GNSS_SV_TYPE_GALILEO,
+            GNSS_SIGNAL_GALILEO_E5B, false), nmeaArraystr);
 
     // -----------------------------
     // ------$PQGSV (QZSS):L1CA-----
