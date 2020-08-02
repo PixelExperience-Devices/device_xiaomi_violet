@@ -193,16 +193,16 @@ on post-fs
     chmod 0755 /sys/kernel/debug/tracing
 
 on late-fs
-    wait_for_prop hwservicemanager.ready true
-    exec_start wait_for_keymaster
-    mount_all /vendor/etc/fstab.qcom --late
-
     # Start services for bootanim
     start surfaceflinger
     start bootanim
     start vendor.hwcomposer-2-3
     start vendor.configstore-hal
     start vendor.qti.hardware.display.allocator
+
+    wait_for_prop hwservicemanager.ready true
+    exec_start wait_for_keymaster
+    mount_all /vendor/etc/fstab.qcom --late
 
 on early-boot
     # Wait for devices
