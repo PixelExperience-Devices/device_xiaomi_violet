@@ -1,7 +1,8 @@
 allow thermal-engine {
-  sysfs_devfreq 
+  sysfs_devfreq
+  sysfs_msm_subsys
   thermal_data_file
-}:dir search;
+}:dir r_dir_perms;
 
 allow thermal-engine sysfs_devfreq:file rw_file_perms;
 
