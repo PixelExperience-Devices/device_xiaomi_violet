@@ -13,6 +13,7 @@ allow hal_fingerprint_default self:netlink_socket create_socket_perms_no_ioctl;
 allow hal_fingerprint_default {
   input_device
   sysfs_graphics
+  sysfs_msm_subsys
 }: dir r_dir_perms;
 
 allow hal_fingerprint_default {
