@@ -1088,11 +1088,8 @@ vendor/lib64/libthermalclient.so
 vendor/bin/thermal-engine
 vendor/etc/thermal-engine.conf
 vendor/etc/thermal-engine-camera.conf
-vendor/etc/thermal-engine-high.conf
 vendor/etc/thermal-engine-map.conf
 vendor/etc/thermal-engine-normal.conf
-vendor/etc/thermal-engine-pubgmhd.conf
-vendor/etc/thermal-engine-sgame.conf
 vendor/etc/thermal-engine-studio.conf
 vendor/etc/thermal-engine-tgame.conf
 vendor/lib64/libthermalfeature.so
