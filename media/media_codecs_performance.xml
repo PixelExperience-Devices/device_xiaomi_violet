@@ -45,6 +45,12 @@ limitations under the License.
             <Limit name="measured-frame-rate-1280x720" range="74-92" />
             <Limit name="measured-frame-rate-1920x1080" range="16-40" />
         </MediaCodec>
+        <MediaCodec name="c2.qti.avc.encoder" type="video/avc" update="true">
+            <Limit name="measured-frame-rate-320x240" range="106-234" />
+            <Limit name="measured-frame-rate-720x480" range="64-140" />
+            <Limit name="measured-frame-rate-1280x720" range="26-56" />
+            <Limit name="measured-frame-rate-1920x1080" range="20-44" />
+        </MediaCodec>
         <MediaCodec name="OMX.google.h264.encoder" type="video/avc" update="true">
             <Limit name="measured-frame-rate-320x240" range="215-215" />
             <Limit name="measured-frame-rate-720x480" range="100-100" />
@@ -126,6 +132,12 @@ limitations under the License.
             <Limit name="measured-frame-rate-1280x720" range="262-262" />
             <Limit name="measured-frame-rate-1920x1080" range="77-81" />
             <Limit name="measured-frame-rate-3840x2160" range="18-19" />
+        </MediaCodec>
+        <MediaCodec name="c2.qti.avc.decoder" type="video/avc" update="true">
+            <Limit name="measured-frame-rate-320x240" range="220-630" />
+            <Limit name="measured-frame-rate-720x480" range="250-513" />
+            <Limit name="measured-frame-rate-1280x720" range="200-420" />
+            <Limit name="measured-frame-rate-1920x1088" range="189-301" />
         </MediaCodec>
         <MediaCodec name="OMX.google.h264.decoder" type="video/avc" update="true">
             <Limit name="measured-frame-rate-320x240" range="427-372" />
