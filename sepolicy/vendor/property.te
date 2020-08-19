@@ -1,11 +1,11 @@
 # Fingerprint
-type vendor_fp_prop, property_type;
+vendor_public_prop(vendor_fp_prop)
 
 # Init
-type vendor_device_prop, property_type;
+vendor_internal_prop(vendor_device_prop)
 
 # Power
-type vendor_power_prop, property_type;
+vendor_internal_prop(vendor_power_prop)
 
 # Thermal
-type vendor_thermal_normal_prop, property_type;
+vendor_internal_prop(vendor_thermal_normal_prop)
