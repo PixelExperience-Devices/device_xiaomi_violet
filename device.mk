@@ -264,6 +264,10 @@ PRODUCT_PACKAGES += \
     ipacm \
     IPACM_cfg.xml
 
+# Init scripts
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/rootdir/etc/init.violet.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init.violet.rc
+
 # IR
 PRODUCT_PACKAGES += \
     android.hardware.ir@1.0-impl \
