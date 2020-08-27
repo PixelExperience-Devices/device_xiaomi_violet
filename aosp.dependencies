@@ -1,11 +1,21 @@
 [
   {
-    "repository": "android_hardware_xiaomi",
-    "target_path": "hardware/xiaomi"
+    "repository": "LineageOS/android_hardware_xiaomi",
+    "target_path": "hardware/xiaomi",
+    "branch":"lineage-17.1",
+    "remote":"github"
   },
   {
-    "repository": "android_kernel_xiaomi_violet",
-    "target_path": "kernel/xiaomi/violet"
+    "repository" : "vendor_xiaomi_violet",
+    "target_path": "vendor/xiaomi/violet",
+    "branch": "ten",
+    "remote": "pixel-devices-blobs"
+  },
+  {
+    "repository": "kernel_xiaomi_violet",
+    "target_path": "kernel/xiaomi/violet",
+    "branch":"ten",
+    "remote":"pixel-devices"
   },
   {
     "repository"   :"packages_apps_PixelLiveWallpaper",
