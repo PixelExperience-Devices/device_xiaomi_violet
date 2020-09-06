@@ -510,7 +510,9 @@ on post-fs-data
     start vendor.qcrild2
 
 on charger
+    start vendor.power_off_alarm
     setprop sys.usb.controller a600000.dwc3
+    setprop vendor.usb.controller a600000.dwc3
     setprop sys.usb.configfs 1
     setprop vendor.setup.power 1
 
@@ -634,11 +636,6 @@ on property:init.svc.vendor.per_mgr=running
 
 on property:sys.shutdown.requested=*
     stop vendor.per_proxy
-
-on charger
-    start vendor.power_off_alarm
-    setprop vendor.usb.controller a600000.dwc3
-    setprop sys.usb.configfs 1
 
     write /sys/class/leds/green/max_brightness 32
     write /sys/class/leds/blue/max_brightness 32
