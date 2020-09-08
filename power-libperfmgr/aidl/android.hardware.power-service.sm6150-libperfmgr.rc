@@ -1,7 +1,7 @@
-service vendor.power-hal-aidl /vendor/bin/hw/android.hardware.power-service.pixel-libperfmgr
+service vendor.power-hal-aidl /vendor/bin/hw/android.hardware.power-service.sm6150-libperfmgr
     class hal
     user root
-    group system
+    group system input
     priority -20
 
 # restart powerHAL when framework died

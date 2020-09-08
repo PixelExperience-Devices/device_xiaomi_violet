@@ -63,10 +63,10 @@ cc_binary {
 }
 
 cc_binary {
-    name: "android.hardware.power-service.pixel-libperfmgr",
+    name: "android.hardware.power-service.sm6150-libperfmgr",
     relative_install_path: "hw",
-    init_rc: ["aidl/android.hardware.power-service.pixel-libperfmgr.rc"],
-    vintf_fragments: ["aidl/android.hardware.power-service.pixel.xml"],
+    init_rc: ["aidl/android.hardware.power-service.sm6150-libperfmgr.rc"],
+    vintf_fragments: ["aidl/android.hardware.power-service.sm6150.xml"],
     vendor: true,
     shared_libs: [
         "android.hardware.power-ndk_platform",
@@ -75,7 +75,7 @@ cc_binary {
         "liblog",
         "libutils",
         "libbinder_ndk",
-        "libdisppower-pixel",
+        "libdisppower",
         "libperfmgr",
         "pixel-power-ext-ndk_platform",
     ],
@@ -83,5 +83,9 @@ cc_binary {
         "aidl/service.cpp",
         "aidl/Power.cpp",
         "aidl/PowerExt.cpp",
+    ],
+    header_libs: [
+        "libhardware_headers",
+        "generated_kernel_headers",
     ],
 }
