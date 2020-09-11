@@ -19,12 +19,25 @@
 <!-- Phone app resources that may need to be customized
      for different hardware or product builds. -->
 <resources>
-    <!-- Flag indicating if hac is enabled -->
-    <bool name="hac_enabled">true</bool>
+    <!-- Allow handover from telephony calls to another ConnectionService. -->
+    <bool name="config_support_handover_from">true</bool>
+
+    <!-- Flag indicating whether the device supports RTT (real-time text) -->
+    <bool name="config_support_rtt">true</bool>
 
     <!-- String indicating the package name of the device ImsService implementation for MMTEL. -->
     <string name="config_ims_mmtel_package">org.codeaurora.ims</string>
 
     <!-- String indicating the package name of the device ImsService implementation for RCS. -->
     <string name="config_ims_rcs_package">com.android.service.ims</string>
+
+    <!-- This device supports the AudioManager Telephony audio device and output onto this
+         device using {@link AudioDeviceInfo#TYPE_TELEPHONY}.
+         This is used to support carriers which generate a recording tone to the remote party
+         when a call recording app is in use. -->
+    <bool name="config_support_telephony_audio_device">true</bool>
+
+    <!-- This device requires that emergency calls are placed over the default data SIM when
+         possible because GNSS SUPL can only be received from the network on data subscription. -->
+    <bool name="config_gnss_supl_requires_default_data_for_emergency">true</bool>
 </resources>
