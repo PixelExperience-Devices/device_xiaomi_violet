@@ -7,6 +7,9 @@
 
 set -e
 
+DEVICE=violet
+VENDOR=xiaomi
+
 INITIAL_COPYRIGHT_YEAR=2019
 
 # Load extract_utils and do some sanity checks
@@ -22,29 +25,13 @@ if [ ! -f "${HELPER}" ]; then
 fi
 source "${HELPER}"
 
-# Initialize the helper for common
-setup_vendor "${DEVICE_COMMON}" "${VENDOR}" "${LINEAGE_ROOT}" true
+# Initialize the helper
+setup_vendor "$DEVICE" "$VENDOR" "$AOSP_ROOT"
 
 # Copyright headers and guards
-write_headers "davinci phoenix violet"
+write_headers
 
-# The standard common blobs
 write_makefiles "${MY_DIR}/proprietary-files.txt" true
 
 # Finish
 write_footers
-
-if [ -s "${MY_DIR}/../${DEVICE}/proprietary-files.txt" ]; then
-    # Reinitialize the helper for device
-    INITIAL_COPYRIGHT_YEAR="$DEVICE_BRINGUP_YEAR"
-    setup_vendor "${DEVICE}" "${VENDOR}" "${LINEAGE_ROOT}" false
-
-    # Copyright headers and guards
-    write_headers
-
-    # The standard device blobs
-    write_makefiles "${MY_DIR}/../${DEVICE}/proprietary-files.txt" true
-
-    # Finish
-    write_footers
-fi
