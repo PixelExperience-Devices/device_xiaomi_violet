@@ -24,7 +24,7 @@ allow hal_power_default {
 allow hal_power_default latency_device:chr_file rw_file_perms;
 
 # Rule for hal_power_default to access graphics composer process
-unix_socket_connect(hal_power_default, pps, hal_graphics_composer_default);
+unix_socket_connect(hal_power_default, vendor_pps, hal_graphics_composer_default);
 
 # To get/set powerhal state property
 set_prop(hal_power_default, power_prop)
