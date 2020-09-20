@@ -614,8 +614,8 @@ vendor/lib/libllvm-glnext.so|44a69a87f0d00478bb8390317b08aa7ce425784a
 vendor/lib/libllvm-qcom.so|08cfde1c1912a6bf60dcd550ca232da5f1d04c4d
 vendor/lib/libpvr.so|76560c767927a164b41a211c269200fb3e4c02d0
 
-# Graphics (DRM) - from LA.UM.8.1.r1-13500-SM8150.0
-vendor/lib64/libsdedrm.so|1a6d6ac050678dbc2b7d724ff7c642e4946b573b
+# Graphics (DRM) - from LA.UM.8.9.r1-04400-SM6xx.0
+vendor/lib64/libsdedrm.so|022e763eac905e531112f39171530f836a85be77
 vendor/lib/libsdedrm.so|18568c442b560f5999f9da0227f642af500f4233
 
 # Graphics (HDR) - from LA.UM.8.9.r1-08400-SM6xx.0
@@ -632,15 +632,14 @@ vendor/lib/libbccQTI.so|067ecb34b36b612b66af58af7ea353703e1a3906
 vendor/lib/librs_adreno.so|cb90ff1608ef51f6e46f071ceabf987f2f0b37cb
 vendor/lib/librs_adreno_sha1.so|95ae76a45bff9167b76f01ab9dcd5675aea8ad77
 
-# Graphics (SDM) - from LA.UM.8.1.r1-13500-SM8150.0
-vendor/lib64/libqseed3.so|3fb480721b26a2df0a2a96359814ef37a5da9148
-vendor/lib64/libdisp-aba.so|a7f8975e5a323100bb9e5feb14085c0c4479ce96
-vendor/lib64/libsdm-color.so|76967da4af05736649eab5568f59861a16be33bd
-vendor/lib64/libsdm-colormgr-algo.so|5f497ba10168722455b0a3b80e7e3dca85e00c8f
-vendor/lib64/libsdm-diag.so|1044fd68ba610d08d7a02765a95563cc90dd5a54
-vendor/lib64/libsdm-disp-vndapis.so|6f4fd3a5a253ec4dff787de1ad6e67d07e921d94
-vendor/lib64/libsdmextension.so|fc9994028e62ed31223b9a494c4bf4a469b855a9
-vendor/lib64/libtinyxml2_1.so|92adc9b612766cda6fa50f4c36d046b1a6da0816
+# Graphics (SDM) - from LA.UM.8.9.r1-04400-SM6xx.0
+vendor/lib64/libqseed3.so|4a4fbff019467a4531816ab58e259b22d95630fa
+vendor/lib64/libsdm-color.so|e5c120cb6acbecf5a2c344029b103d6b61fc3925
+vendor/lib64/libsdm-colormgr-algo.so|2dc1679faf4a2fab6ae0e6b0ab89c3547f83ac7d
+vendor/lib64/libsdm-diag.so|d7a96d76dd2fb7516a9ed89c39a3f0992ec3266e
+vendor/lib64/libsdm-disp-vndapis.so|aa658050b07c04b114cb43e6535fe45883943152
+vendor/lib64/libsdmextension.so|72991016a61b3d56ef91265ac76134b55636c392
+vendor/lib64/libtinyxml2_1.so|ba981e332895a053a67fc54a8190365a3ad37f2d
 vendor/lib/libqseed3.so|be6d4f64c5a41e5cce849617df3f13c23a4a9de6
 vendor/lib/libsdm-color.so|300fc08d79821c29155338c25dbb5c3a7920253f
 vendor/lib/libsdm-colormgr-algo.so|5f98e1869ff894e36ed3b6fe94dcf0218672f4ca
@@ -759,7 +758,7 @@ vendor/bin/ppd
 vendor/etc/init/vendor.display.color@1.0-service.rc
 vendor/lib64/libdisp-aba.so
 vendor/lib64/libdpps.so
-vendor/lib64/libdisplayqos.so|8e5f13a5b7ea0efa8db2902c8719380d710bc857
+vendor/lib64/libdisplayqos.so
 vendor/lib64/vendor.display.color@1.0.so
 vendor/lib64/vendor.display.color@1.1.so
 vendor/lib64/vendor.display.color@1.2.so
