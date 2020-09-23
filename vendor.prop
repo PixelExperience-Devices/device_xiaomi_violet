@@ -111,6 +111,7 @@ ro.vendor.qti.va_aosp.support=1
 # Graphics
 debug.egl.hw=0
 debug.mdpcomp.logs=0
+debug.sdm.support_writeback=0
 debug.sf.disable_backpressure=1
 debug.sf.early_app_phase_offset_ns=11600000
 debug.sf.early_gl_app_phase_offset_ns=15000000
