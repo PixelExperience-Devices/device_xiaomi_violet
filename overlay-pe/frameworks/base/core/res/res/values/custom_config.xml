@@ -23,9 +23,6 @@
     <integer name="config_buttonBrightnessSettingDefault">0</integer>
     <bool name="config_deviceHasVariableButtonBrightness">false</bool>
 
-    <!-- Whether device ignores the RSSNR signal implementation -->
-    <bool name="config_ignoreRssnrSignalLevel">true</bool>
-
     <!-- Whether device has a physical display cutout -->
     <bool name="config_physicalDisplayCutout">true</bool>
 
