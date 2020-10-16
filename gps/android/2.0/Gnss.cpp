@@ -34,7 +34,7 @@ typedef const GnssInterface* (getLocationInterface)();
 
 #define IMAGES_INFO_FILE "/sys/devices/soc0/images"
 #define DELIMITER ";"
-#define MAX_GNSS_ACCURACY_ALLOWED 10000
+
 namespace android {
 namespace hardware {
 namespace gnss {
@@ -97,7 +97,6 @@ void location_on_battery_status_changed(bool charging) {
 Gnss::Gnss() {
     ENTRY_LOG_CALLFLOW();
     sGnss = this;
-    mIsGnssClient = true;
     // initilize gnss interface at first in case needing notify battery status
     sGnss->getGnssInterface()->initialize();
     // register health client to listen on battery change
@@ -110,7 +109,7 @@ Gnss::Gnss() {
 Gnss::~Gnss() {
     ENTRY_LOG_CALLFLOW();
     if (mApi != nullptr) {
-        delete mApi;
+        mApi->destroy();
         mApi = nullptr;
     }
     sGnss = nullptr;
@@ -191,7 +190,6 @@ Return<bool> Gnss::setCallback(const sp<V1_0::IGnssCallback>& callback)  {
 
     GnssAPIClient* api = getApi();
     if (api != nullptr) {
-        mIsGnssClient = true;
         api->gnssUpdateCallbacks(mGnssCbIface, mGnssNiCbIface);
         api->gnssEnable(LOCATION_TECHNOLOGY_TYPE_GNSS);
         api->requestCapabilities();
@@ -239,7 +237,7 @@ Return<bool> Gnss::updateConfiguration(GnssConfig& gnssConfig) {
         }
         if (gnssConfig.flags & GNSS_CONFIG_FLAGS_LPP_PROFILE_VALID_BIT) {
             mPendingConfig.flags |= GNSS_CONFIG_FLAGS_LPP_PROFILE_VALID_BIT;
-            mPendingConfig.lppProfile = gnssConfig.lppProfile;
+            mPendingConfig.lppProfileMask = gnssConfig.lppProfileMask;
         }
         if (gnssConfig.flags & GNSS_CONFIG_FLAGS_LPPE_CONTROL_PLANE_VALID_BIT) {
             mPendingConfig.flags |= GNSS_CONFIG_FLAGS_LPPE_CONTROL_PLANE_VALID_BIT;
@@ -335,28 +333,6 @@ Return<void> Gnss::deleteAidingData(V1_0::IGnss::GnssAidingData aidingDataFlags)
     return Void();
 }
 
-void Gnss::updateCallbacksByAccuracy(uint32_t preferredAccuracyMeters, GnssAPIClient* api) {
-    if (preferredAccuracyMeters >= MAX_GNSS_ACCURACY_ALLOWED && mIsGnssClient) {
-        // Swith to timebased FLP client, if request accuracy is very low
-        LOC_LOGd("Swith to timebased FlpClient due to low accuracy(m): %d",
-                preferredAccuracyMeters);
-        mIsGnssClient = false;
-        api->gnssUpdateFlpCallbacks();
-    } else if (preferredAccuracyMeters < MAX_GNSS_ACCURACY_ALLOWED && !mIsGnssClient) {
-        LOC_LOGd("Swith to timebased GnssClient accuracy(m):%d", preferredAccuracyMeters);
-        mIsGnssClient = true;
-        if (mGnssCbIface_2_0 != nullptr) {
-            api->gnssUpdateCallbacks_2_0(mGnssCbIface_2_0);
-        } else if (mGnssCbIface_1_1 != nullptr) {
-            api->gnssUpdateCallbacks(mGnssCbIface_1_1, mGnssNiCbIface);
-        } else if (mGnssCbIface != nullptr) {
-            api->gnssUpdateCallbacks(mGnssCbIface, mGnssNiCbIface);
-        } else {
-            LOC_LOGe("All client callbacks are null...");
-        }
-    }
-}
-
 Return<bool> Gnss::setPositionMode(V1_0::IGnss::GnssPositionMode mode,
                                    V1_0::IGnss::GnssPositionRecurrence recurrence,
                                    uint32_t minIntervalMs,
@@ -366,8 +342,7 @@ Return<bool> Gnss::setPositionMode(V1_0::IGnss::GnssPositionMode mode,
     bool retVal = false;
     GnssAPIClient* api = getApi();
     if (api) {
-                updateCallbacksByAccuracy(preferredAccuracyMeters, api);
-                retVal = api->gnssSetPositionMode(mode, recurrence, minIntervalMs,
+        retVal = api->gnssSetPositionMode(mode, recurrence, minIntervalMs,
                 preferredAccuracyMeters, preferredTimeMs);
     }
     return retVal;
@@ -475,7 +450,6 @@ Return<bool> Gnss::setCallback_1_1(const sp<V1_1::IGnssCallback>& callback) {
 
     GnssAPIClient* api = getApi();
     if (api != nullptr) {
-        mIsGnssClient = true;
         api->gnssUpdateCallbacks(mGnssCbIface_1_1, mGnssNiCbIface);
         api->gnssEnable(LOCATION_TECHNOLOGY_TYPE_GNSS);
         api->requestCapabilities();
@@ -494,7 +468,6 @@ Return<bool> Gnss::setPositionMode_1_1(V1_0::IGnss::GnssPositionMode mode,
     bool retVal = false;
     GnssAPIClient* api = getApi();
     if (api) {
-        updateCallbacksByAccuracy(preferredAccuracyMeters, api);
         GnssPowerMode powerMode = lowPowerMode?
                 GNSS_POWER_MODE_M4 : GNSS_POWER_MODE_M2;
         retVal = api->gnssSetPositionMode(mode, recurrence, minIntervalMs,
@@ -610,7 +583,6 @@ Return<bool> Gnss::setCallback_2_0(const sp<V2_0::IGnssCallback>& callback) {
 
     GnssAPIClient* api = getApi();
     if (api != nullptr) {
-        mIsGnssClient = true;
         api->gnssUpdateCallbacks_2_0(mGnssCbIface_2_0);
         api->gnssEnable(LOCATION_TECHNOLOGY_TYPE_GNSS);
         api->requestCapabilities();

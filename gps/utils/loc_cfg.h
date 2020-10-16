@@ -1,4 +1,4 @@
-/* Copyright (c) 2011-2015, 2018 The Linux Foundation. All rights reserved.
+/* Copyright (c) 2011-2015, 2018, 2020 The Linux Foundation. All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without
  * modification, are permitted provided that the following conditions are
@@ -56,14 +56,14 @@
 #define LOC_PROCESS_MAX_ARG_STR_LENGTH 32
 
 #define UTIL_UPDATE_CONF(conf_data, len, config_table) \
-    loc_update_conf((conf_data), (len), (config_table), \
+    loc_update_conf((conf_data), (len), (&config_table[0]), \
                     sizeof(config_table) / sizeof(config_table[0]))
 
 #define UTIL_READ_CONF_DEFAULT(filename) \
     loc_read_conf((filename), NULL, 0);
 
 #define UTIL_READ_CONF(filename, config_table) \
-    loc_read_conf((filename), (config_table), sizeof(config_table) / sizeof(config_table[0]))
+    loc_read_conf((filename), (&config_table[0]), sizeof(config_table) / sizeof(config_table[0]))
 
 /*=============================================================================
  *
@@ -132,6 +132,9 @@ extern const char LOC_PATH_SAP_CONF[];
 extern const char LOC_PATH_APDR_CONF[];
 extern const char LOC_PATH_XTWIFI_CONF[];
 extern const char LOC_PATH_QUIPC_CONF[];
+extern const char LOC_PATH_ANT_CORR[];
+extern const char LOC_PATH_SLIM_CONF[];
+extern const char LOC_PATH_VPE_CONF[];
 
 int loc_read_process_conf(const char* conf_file_name, uint32_t * process_count_ptr,
                           loc_process_info_s_type** process_info_table_ptr);

@@ -31,6 +31,7 @@
 #define __LOG_UTIL_H__
 
 #include <stdbool.h>
+#include <loc_pla.h>
 
 #if defined (USE_ANDROID_LOGGING) || defined (ANDROID)
 // Android and LE targets with logcat support
@@ -119,6 +120,12 @@ extern const char EXIT_TAG[];
 extern const char ENTRY_TAG[];
 extern const char EXIT_ERROR_TAG[];
 
+#define BUILD_TYPE_PROP_NA 0
+#define BUILD_TYPE_PROP_USER 1
+#define BUILD_TYPE_PROP_USERDEBUG 2
+#define BUILD_TYPE_PROP_INVALID 3
+extern int build_type_prop;
+
 /*=============================================================================
  *
  *                        MODULE EXPORTED FUNCTIONS
@@ -126,14 +133,28 @@ extern const char EXIT_ERROR_TAG[];
  *============================================================================*/
 inline void loc_logger_init(unsigned long debug, unsigned long timestamp)
 {
-   loc_logger.DEBUG_LEVEL = debug;
-#ifdef TARGET_BUILD_VARIANT_USER
-   // force user builds to 2 or less
-   if (loc_logger.DEBUG_LEVEL > 2) {
-       loc_logger.DEBUG_LEVEL = 2;
-   }
-#endif
-   loc_logger.TIMESTAMP   = timestamp;
+    loc_logger.DEBUG_LEVEL = debug;
+
+    if (BUILD_TYPE_PROP_NA == build_type_prop) {
+        char value[PROPERTY_VALUE_MAX] = "NA";
+        property_get("ro.build.type", value, "userdebug");
+        if (0 == strcmp(value, "user")) {
+            build_type_prop = BUILD_TYPE_PROP_USER;
+        } else if (0 == strcmp(value, "userdebug")) {
+            build_type_prop = BUILD_TYPE_PROP_USERDEBUG;
+        } else {
+            build_type_prop = BUILD_TYPE_PROP_INVALID;
+        }
+    }
+
+    if (BUILD_TYPE_PROP_USER == build_type_prop) {
+        // force user builds to 2 or less
+        if (loc_logger.DEBUG_LEVEL > 2) {
+            loc_logger.DEBUG_LEVEL = 2;
+        }
+     }
+
+    loc_logger.TIMESTAMP = timestamp;
 }
 
 inline void log_buffer_init(bool enabled) {

@@ -28,6 +28,10 @@
  */
 #ifndef _LOC_MISC_UTILS_H_
 #define _LOC_MISC_UTILS_H_
+#include <stdint.h>
+#include <ios>
+#include <string>
+#include <sstream>
 
 #ifdef __cplusplus
 extern "C" {
@@ -137,13 +141,142 @@ RETURN VALUE
 SIDE EFFECTS
    N/A
 ===========================================================================*/
-
-
 uint64_t getQTimerTickCount();
 
+/*===========================================================================
+FUNCTION getQTimerDeltaNanos
+
+DESCRIPTION
+This function is used to read the the difference in nanoseconds between
+Qtimer on AP side and Qtimer on MP side for dual-SoC architectures such as Kona
+
+DEPENDENCIES
+N/A
+
+RETURN VALUE
+uint64_t QTimer difference in nanoseconds
+
+SIDE EFFECTS
+N/A
+===========================================================================*/
+uint64_t getQTimerDeltaNanos();
+
+/*===========================================================================
+FUNCTION getQTimerFreq
+
+DESCRIPTION
+   This function is used to read the QTimer frequency in hz. This value is globally maintained and
+   must be the same across all processors on a target.
+
+DEPENDENCIES
+   N/A
+
+RETURN VALUE
+    uint64_t QTimer frequency
+
+SIDE EFFECTS
+   N/A
+===========================================================================*/
+uint64_t getQTimerFreq();
+
+/*===========================================================================
+FUNCTION getBootTimeMilliSec
+
+DESCRIPTION
+   This function is used to get boot time in milliseconds.
+
+DEPENDENCIES
+   N/A
+
+RETURN VALUE
+    uint64_t boot time in milliseconds
+
+SIDE EFFECTS
+   N/A
+===========================================================================*/
+uint64_t getBootTimeMilliSec();
 
 #ifdef __cplusplus
 }
 #endif
+
+using std::hex;
+using std::string;
+using std::stringstream;
+
+/*===========================================================================
+FUNCTION to_string_hex
+
+DESCRIPTION
+   This function works similar to std::to_string, but puts only in hex format.
+
+DEPENDENCIES
+   N/A
+
+RETURN VALUE
+   string, of input val in hex format
+
+SIDE EFFECTS
+   N/A
+===========================================================================*/
+template <typename T>
+string to_string_hex(T val) {
+    stringstream ss;
+    if (val < 0) {
+        val = -val;
+        ss << "-";
+    }
+    ss << hex << "0x" << val;
+    return ss.str();
+}
+
+/*===========================================================================
+FUNCTION loc_prim_arr_to_string
+
+DESCRIPTION
+   This function puts out primitive array in DEC or EHX format.
+
+DEPENDENCIES
+   N/A
+
+RETURN VALUE
+    string, space separated string of values in the input array, either
+            in decimal or hex format, depending on the value of decIfTrue
+
+SIDE EFFECTS
+   N/A
+===========================================================================*/
+template <typename T>
+static string loc_prim_arr_to_string(T* arr, uint32_t size, bool decIfTrue = true) {
+    stringstream ss;
+    for (uint32_t i = 0; i < size; i++) {
+        ss << (decIfTrue ? to_string(arr[i]) : to_string_hex(arr[i]));
+        if (i != size - 1) {
+            ss << " ";
+        }
+    }
+    return ss.str();
+}
+
+/*===========================================================================
+FUNCTION qTimerTicksToNanos
+
+DESCRIPTION
+    Transform from ticks to nanoseconds, clock is 19.2 MHz
+    so the formula would be qtimer(ns) = (ticks * 1000000000) / 19200000
+    or simplified qtimer(ns) = (ticks * 10000) / 192.
+
+DEPENDENCIES
+    N/A
+
+RETURN VALUE
+    Qtimer value in nanoseconds
+
+SIDE EFFECTS
+    N/A
+===========================================================================*/
+inline uint64_t qTimerTicksToNanos(double qTimer) {
+    return (uint64_t((qTimer * double(10000ull)) / (double)192ull));
+}
 
 #endif //_LOC_MISC_UTILS_H_

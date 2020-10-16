@@ -105,24 +105,13 @@ void GnssAPIClient::initLocationOptions()
     mTrackingOptions.mode = GNSS_SUPL_MODE_STANDALONE;
 }
 
-void GnssAPIClient::setFlpCallbacks() {
-    LOC_LOGd("Going to set Flp Callbacks...");
-    LocationCallbacks locationCallbacks;
-    memset(&locationCallbacks, 0, sizeof(LocationCallbacks));
-    locationCallbacks.size = sizeof(LocationCallbacks);
-
-    locationCallbacks.trackingCb = [this](Location location) {
-        onTrackingCb(location);
-    };
-    locAPISetCallbacks(locationCallbacks);
-}
-
 void GnssAPIClient::setCallbacks()
 {
     LocationCallbacks locationCallbacks;
     memset(&locationCallbacks, 0, sizeof(LocationCallbacks));
     locationCallbacks.size = sizeof(LocationCallbacks);
 
+    locationCallbacks.trackingCb = nullptr;
     locationCallbacks.trackingCb = [this](Location location) {
         onTrackingCb(location);
     };
@@ -145,10 +134,12 @@ void GnssAPIClient::setCallbacks()
         }
     }
 
+    locationCallbacks.gnssSvCb = nullptr;
     locationCallbacks.gnssSvCb = [this](GnssSvNotification gnssSvNotification) {
         onGnssSvCb(gnssSvNotification);
     };
 
+    locationCallbacks.gnssNmeaCb = nullptr;
     locationCallbacks.gnssNmeaCb = [this](GnssNmeaNotification gnssNmeaNotification) {
         onGnssNmeaCb(gnssNmeaNotification);
     };
@@ -184,12 +175,6 @@ void GnssAPIClient::gnssUpdateCallbacks_2_0(const sp<V2_0::IGnssCallback>& gpsCb
 
     if (mGnssCbIface_2_0 != nullptr) {
         setCallbacks();
-    }
-}
-
-void GnssAPIClient::gnssUpdateFlpCallbacks() {
-    if (mGnssCbIface_2_0 != nullptr || mGnssCbIface != nullptr) {
-        setFlpCallbacks();
     }
 }
 

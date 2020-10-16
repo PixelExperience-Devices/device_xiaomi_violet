@@ -430,7 +430,7 @@ void LocTimerPollTask::addPoll(LocTimerContainer& timerContainer) {
     struct epoll_event ev;
     memset(&ev, 0, sizeof(ev));
 
-    ev.events = EPOLLIN | EPOLLWAKEUP;
+    ev.events = EPOLLIN;
     ev.data.fd = timerContainer.getTimerFd();
     // it is important that we set this context pointer with the input
     // timer container this is how we know which container should handle
