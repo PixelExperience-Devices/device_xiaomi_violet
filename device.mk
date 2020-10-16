@@ -221,8 +221,8 @@ PRODUCT_PACKAGES += \
 
 # GPS
 PRODUCT_PACKAGES += \
-    android.hardware.gnss@2.0-impl-qti \
-    android.hardware.gnss@2.0-service-qti \
+    android.hardware.gnss@2.1-impl-qti \
+    android.hardware.gnss@2.1-service-qti \
     libbatching \
     libgeofencing \
     libgnss
