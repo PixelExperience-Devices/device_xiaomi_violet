@@ -236,13 +236,6 @@ on boot
     setprop vendor.usb.controller a600000.dwc3
     setprop sys.usb.configfs 1
 
-    # Set the default voltage to 5v
-    setprop persist.vendor.cp.taper_term_mv 5000
-
-    setprop persist.vendor.qg_cold_temp -150
-    setprop persist.vendor.qg_coff_gain 1
-    setprop persist.vendor.qg_cld_coff_gain 1.5
-
     chown bluetooth bluetooth /sys/module/bluetooth_power/parameters/power
     chown bluetooth net_bt /sys/class/rfkill/rfkill0/type
     chown bluetooth net_bt /sys/class/rfkill/rfkill0/state

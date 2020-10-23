@@ -166,6 +166,13 @@ ro.vendor.use_data_netmgrd=true
 # Perf
 ro.vendor.extension_library=libqti-perfd-client.so
 
+# Power
+persist.vendor.cp.support_qc3p5=0
+persist.vendor.cp.taper_term_mv=6500
+persist.vendor.qg_cld_coff_gain=1.5
+persist.vendor.qg_coff_gain=1
+persist.vendor.qg_cold_temp=-150
+
 # RCS
 persist.rcs.supported=0
 
