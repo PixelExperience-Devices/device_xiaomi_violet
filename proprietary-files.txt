@@ -414,11 +414,7 @@ vendor/lib64/vendor.qti.latency@2.0.so|c4de1ba004bd8d07dbe92f58abb6250c7bbaf968
 vendor/bin/hw/vendor.qti.hardware.capabilityconfigstore@1.0-service|b779f7b415a5618b72d7a73868d2ffedd598949d
 vendor/etc/init/vendor.qti.hardware.capabilityconfigstore@1.0-service.rc|4ede0250585a44b01d351bbc301d7a13cc3d783d
 vendor/lib64/hw/vendor.qti.hardware.capabilityconfigstore@1.0-impl.so|3a6975aa96a6262877029360df992e6e6960d967
--vendor/lib64/libplatformconfig.so|fe9287475c804a5a8bd2f9ee786df3b84df2a9a4
--vendor/lib64/vendor.qti.hardware.capabilityconfigstore@1.0.so|3a3e63810b8d9785bb21536ba65f99a5dbfe54cd
 vendor/lib/hw/vendor.qti.hardware.capabilityconfigstore@1.0-impl.so|c40a42aefdc8ffcea3f979733ce3fc62754965c8
--vendor/lib/libplatformconfig.so|99f3422d2d09e65615589407cb380797519df363
--vendor/lib/vendor.qti.hardware.capabilityconfigstore@1.0.so|f1b8eba16662ef3548b11e263ee75082469ac692
 
 # Consumer IR
 vendor/lib64/hw/consumerir.default.so:vendor/lib64/hw/consumerir.sm6150.so
