@@ -223,6 +223,7 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     android.hardware.gnss@2.1-impl-qti \
     android.hardware.gnss@2.1-service-qti \
+    libavservices_minijail.vendor \
     libbatching \
     libgeofencing \
     libgnss
