@@ -263,15 +263,6 @@
       "ResetOnInit": true
     },
     {
-      "Name": "SchedFeatures",
-      "Path": "/sys/kernel/debug/sched_features",
-      "Values": [
-        "NO_ENERGY_AWARE",
-        "ENERGY_AWARE"
-      ],
-      "ResetOnInit": true
-    },
-    {
       "Name": "PowerHALMainState",
       "Path": "vendor.powerhal.state",
       "Values": [
@@ -449,12 +440,6 @@
       "Node": "ForegroundCpuset",
       "Duration": 2000,
       "Value": "0-5"
-    },
-    {
-      "PowerHint": "LAUNCH",
-      "Node": "SchedFeatures",
-      "Duration": 2000,
-      "Value": "NO_ENERGY_AWARE"
     },
     {
       "PowerHint": "LAUNCH",
