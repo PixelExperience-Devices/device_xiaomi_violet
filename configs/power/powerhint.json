@@ -239,7 +239,7 @@
       "Name": "L3BigClusterMinFreq",
       "Path": "/sys/class/devfreq/soc:qcom,cpu6-cpu-l3-lat/min_freq",
       "Values": [
-        "1459200000",
+        "1363200000",
         "300000000"
       ],
       "ResetOnInit": true
@@ -259,6 +259,15 @@
       "Values": [
         "0-5",
         "0-5,7"
+      ],
+      "ResetOnInit": true
+    },
+    {
+      "Name": "EnergyAware",
+      "Path": "/proc/sys/kernel/sched_energy_aware",
+      "Values": [
+        "0",
+        "1"
       ],
       "ResetOnInit": true
     },
@@ -443,6 +452,12 @@
     },
     {
       "PowerHint": "LAUNCH",
+      "Node": "EnergyAware",
+      "Duration": 2000,
+      "Value": "0"
+    },
+    {
+      "PowerHint": "LAUNCH",
       "Node": "CPUBigClusterMaxFreq",
       "Duration": 2000,
       "Value": "9999999"
@@ -517,7 +532,7 @@
       "PowerHint": "LAUNCH",
       "Node": "L3BigClusterMinFreq",
       "Duration": 2000,
-      "Value": "1459200000"
+      "Value": "1363200000"
     },
     {
       "PowerHint": "AUDIO_STREAMING",
@@ -554,42 +569,6 @@
       "Node": "GPUMaxFreq",
       "Duration": 0,
       "Value": "845000000"
-    },
-    {
-      "PowerHint": "NOT_INTERACTIVE",
-      "Node": "CPULittleClusterMinFreq",
-      "Duration": 0,
-      "Value": "576000"
-    },
-    {
-      "PowerHint": "NOT_INTERACTIVE",
-      "Node": "CPULittleClusterMaxFreq",
-      "Duration": 0,
-      "Value": "576000"
-    },
-    {
-      "PowerHint": "NOT_INTERACTIVE",
-      "Node": "CPUBigClusterMinFreq",
-      "Duration": 0,
-      "Value": "652800"
-    },
-    {
-      "PowerHint": "NOT_INTERACTIVE",
-      "Node": "CPUBigClusterMaxFreq",
-      "Duration": 0,
-      "Value": "652800"
-    },
-    {
-      "PowerHint": "NOT_INTERACTIVE",
-      "Node": "GPUMinFreq",
-      "Duration": 0,
-      "Value": "290000000"
-    },
-    {
-      "PowerHint": "NOT_INTERACTIVE",
-      "Node": "GPUMaxFreq",
-      "Duration": 0,
-      "Value": "290000000"
     }
   ]
 }
