@@ -5,8 +5,6 @@ on boot
     chmod 0644 /sys/class/backlight/panel0-backlight/brightness
     chmod 0644 /sys/class/backlight/panel0-backlight/max_brightness
 
-    start vendor.light-hal-2-0
-
 service vendor.light-hal-2-0 /vendor/bin/hw/android.hardware.light@2.0-service.xiaomi_sm6150
     interface android.hardware.light@2.0::ILight default
     class hal
@@ -14,4 +12,3 @@ service vendor.light-hal-2-0 /vendor/bin/hw/android.hardware.light@2.0-service.x
     group system
     # shutting off lights while powering-off
     shutdown critical
-    disabled

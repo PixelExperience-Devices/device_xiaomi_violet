@@ -40,16 +40,13 @@ class Light : public ILight {
     Return<void> getSupportedTypes(getSupportedTypes_cb _hidl_cb) override;
 
   private:
-    void setLightBacklight(Type type, const LightState& state);
     void setLightNotification(Type type, const LightState& state);
     void applyNotificationState(const LightState& state);
 
     uint32_t max_led_brightness_;
-    uint32_t max_screen_brightness_;
 
     std::unordered_map<Type, std::function<void(Type type, const LightState&)>> lights_{
             {Type::ATTENTION, [this](auto&&... args) { setLightNotification(args...); }},
-            {Type::BACKLIGHT, [this](auto&&... args) { setLightBacklight(args...); }},
             {Type::BATTERY, [this](auto&&... args) { setLightNotification(args...); }},
             {Type::NOTIFICATIONS, [this](auto&&... args) { setLightNotification(args...); }}};
 

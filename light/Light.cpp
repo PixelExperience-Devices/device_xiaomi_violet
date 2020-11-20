@@ -29,9 +29,6 @@ namespace {
 #define STRINGIFY_INNER(x) #x
 #define STRINGIFY(x) STRINGIFY_INNER(x)
 
-#define LCD(x) PPCAT(/sys/class/backlight, x)
-#define LCD_ATTR(x) STRINGIFY(PPCAT(LCD(panel0-backlight), x))
-
 #define LEDS(x) PPCAT(/sys/class/leds, x)
 #define BLUE_ATTR(x) STRINGIFY(PPCAT(LEDS(blue), x))
 #define GREEN_ATTR(x) STRINGIFY(PPCAT(LEDS(green), x))
@@ -43,7 +40,6 @@ using ::android::base::WriteStringToFile;
 
 // Default max brightness
 constexpr auto kDefaultMaxLedBrightness = 255;
-constexpr auto kDefaultMaxScreenBrightness = 4095;
 
 // Each step will stay on for 50ms by default.
 constexpr auto kRampStepDuration = 50;
@@ -113,14 +109,6 @@ namespace implementation {
 Light::Light() {
     std::string buf;
 
-    if (ReadFileToString(LCD_ATTR(max_brightness), &buf)) {
-        max_screen_brightness_ = std::stoi(buf);
-    } else {
-        max_screen_brightness_ = kDefaultMaxScreenBrightness;
-        LOG(ERROR) << "Failed to read max screen brightness, fallback to "
-                   << kDefaultMaxLedBrightness;
-    }
-
     if (ReadFileToString(BLUE_ATTR(max_brightness), &buf) ||
         ReadFileToString(RED_ATTR(max_brightness), &buf)) {
         max_led_brightness_ = std::stoi(buf);
@@ -150,11 +138,6 @@ Return<void> Light::getSupportedTypes(getSupportedTypes_cb _hidl_cb) {
     _hidl_cb(types);
 
     return Void();
-}
-
-void Light::setLightBacklight(Type /*type*/, const LightState& state) {
-    uint32_t brightness = RgbaToBrightness(state.color, max_screen_brightness_);
-    WriteToFile(LCD_ATTR(brightness), brightness);
 }
 
 void Light::setLightNotification(Type type, const LightState& state) {
