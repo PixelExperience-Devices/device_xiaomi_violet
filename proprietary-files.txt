@@ -58,6 +58,9 @@ vendor/etc/init/vendor.qti.hardware.alarm@1.0-service.rc
 vendor/lib64/hw/vendor.qti.hardware.alarm@1.0-impl.so
 vendor/lib64/vendor.qti.hardware.alarm@1.0.so
 
+# ANT+ - from davinci-user 11 RKQ1.200826.002 20.10.30 release-keys
+vendor/lib64/hw/com.dsi.ant@1.0-impl.so|8b19b9cb7cdf2c7635608c270bec1c6cb9281049
+
 # Audio
 vendor/lib64/libadiertac.so
 vendor/lib64/libaudcal.so
@@ -516,12 +519,12 @@ vendor/firmware/ipa_fws.mdt
 # Firmware - from LA.UM.8.9.r1-07100-SM6xx.0
 vendor/firmware/a618_gmu.bin|cb773d4b34f610d53a4a2766e0fec5d7dd2c5982
 
-# FM - from LA.UM.8.9.r1-08400-SM6xx.0
-lib64/fm_helium.so|33bdeb9eec03ca1706e8bc5200061f267b408cd1
-lib64/libfm-hci.so|98bd75916682df51096776630ee34256b196b2c4
-product/lib64/vendor.qti.hardware.fm@1.0.so|b7358cd2a52e6e0798efa01f9595f8b8e8f7b152
-vendor/lib64/hw/vendor.qti.hardware.fm@1.0-impl.so|750fe55d93426408d1770d753a624923ac656d6e
-vendor/lib64/vendor.qti.hardware.fm@1.0.so|20b23ee5efbd2e41faad2592be8d0d588a41eb17
+# FM - from davinci-user 11 RKQ1.200826.002 20.10.30 release-keys
+system_ext/lib64/fm_helium.so|f5c9cc8de62340ab8b38cca2555eeac9ab18d84b
+system_ext/lib64/libfm-hci.so|6fd608b27c9caf5a055c7c29ae386f596f399bc1
+system_ext/lib64/vendor.qti.hardware.fm@1.0.so|b9dc0797da5790a7d5f1c9a7a2fd9c4a7b87d304
+vendor/lib64/hw/vendor.qti.hardware.fm@1.0-impl.so|d4de618bbff16a9683c6c567084f6b5ef4b85246
+vendor/lib64/vendor.qti.hardware.fm@1.0.so|86e247473332ecb950164eb115d7fea6214c7a45
 
 # Gatekeeper
 vendor/bin/hw/android.hardware.gatekeeper@1.0-service-qti
