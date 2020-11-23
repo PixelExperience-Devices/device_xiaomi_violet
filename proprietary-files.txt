@@ -442,42 +442,44 @@ vendor/lib64/libdpmqmihal.so|d5b8330b56d7e0c036b00a817754748bf3137774
 # DPM - from oneplus8 - qssi-user-11-RP1A.201005.001-2009051300-release-keys
 system_ext/lib64/libdpmframework.so|67ebd736333ae7158632735e3db06a4f9664f6a6
 
-# DRM - from LA.UM.8.9.r1-07100-SM6xx.0
-vendor/bin/qseecomd|70b84d6f6a5c59826ad75c80648a1a25eff1cbc1
+# DRM - from davinci-user 11 RKQ1.200826.002 20.10.30 release-keys
+vendor/bin/qseecomd|41d31b001430c9e707eb4fdec5f409468b9183b9
 vendor/etc/gpfspath_oem_config.xml|7aeade35b0bbe27530f6aca8c1ed5192a7acf59d
 vendor/etc/init/qseecomd.rc|3e596c60490756388a5bd56378a91d0db7c3779b
-vendor/lib64/libGPreqcancel.so|bfff7b7d51e917a16b9a15a27fb81e16d0359348
-vendor/lib64/libGPreqcancel_svc.so|5a898d2f54dd1c0c072829c18bc07fe5aec38119
-vendor/lib64/libQSEEComAPI.so|dbe1635bab106734ebc0f0839c74b220d2c4e630
-vendor/lib64/libSecureUILib.so|1dc72d41cfee5a908710989880e9ebdbf3919ee3
-vendor/lib64/libStDrvInt.so|8de13b46e8f21016c0fffaec34b0a2bacfccec04
-vendor/lib64/libdrmfs.so|d4d19dcd0aab6d62a2069d5807a0c33dea704af1
-vendor/lib64/libdrmtime.so|4e217cd2c0b6386eafa51e730baf8831f58ea4b8
-vendor/lib64/libqisl.so|c4e7f283f3d416b784f2ec0f7000d607e044809b
-vendor/lib64/librpmb.so|d0fd210fa30dd02be655c6ab2ee9db34d84cf12e
-vendor/lib64/libsecureui.so|f9f81bfaee498bc28ddcba2480cdf4b9a5af59e6
-vendor/lib64/libsecureui_svcsock.so|316b2f2225c8711b2cdfde43b889a91a7946f3de
-vendor/lib64/libsi.so|0799636c3004948d7c12741e0338aa42fc615899
-vendor/lib64/libssd.so|3b161674d4e83ceef28260686b498e2a5dbb0327
-vendor/lib/libQSEEComAPI.so|b30e8077449164cb5c6246041dcc2fda96f498d0
-vendor/lib/libcpion.so|63b8c485d90b1e38ea3426b172cb93f869c7480e
-vendor/lib/libdrmfs.so|cb73770f243a4ad32b2f9dac29bc138f977ed2a7
+vendor/lib64/libGPreqcancel.so|7e47b162a5baa4570a8f53f4d4451fd57c391210
+vendor/lib64/libGPreqcancel_svc.so|681cb055cb5affa81fbc8e3233813a1cb0142450
+vendor/lib64/libQSEEComAPI.so|a739303816492c261f6e8525d0957ff37a9b01ea
+vendor/lib64/libSecureUILib.so|b6abc2e45064c1e7616b54ecddb063b9e7156017
+vendor/lib64/libStDrvInt.so|095780183be2789198974e1bbe833ccd1b5f33dc
+vendor/lib64/libdrmfs.so|66e4465427ca61c7ff1479cf0f0465290311e44d
+vendor/lib64/libdrmtime.so|103663a8597106a8fd90838b94194ff8c08223d2
+vendor/lib64/libqisl.so|4a2f72346c7f4b3368b88582da7cc7487a3be5ce
+vendor/lib64/librpmb.so|60a8b54660e885bc8fa51a1e593ba5f491f5f71b
+vendor/lib64/libsecureui.so|fd2de1ccefcdacf6e8c1c2fa6319cea692b03ba2
+vendor/lib64/libsecureui_svcsock.so|0d17798788c8fc7e48a18ed04ec0215247fcb2cf
+vendor/lib64/libsi.so|a5870b031fb37a75a88c543715c0fc8f7a6f664a
+vendor/lib64/libssd.so|a00caa9a0bdf44bafbb18856a7ef3f54014e3941
+vendor/lib/libQSEEComAPI.so|dd3196f6739f1014b25a89fada46926d7818d7b4
+vendor/lib/libcpion.so|9149b9bf44d5b6fbada1a8340c87942861dd0b84
+vendor/lib/libdrmfs.so|0e3f6b49491fea4967435176b5e1227692c49612
 
-# DRM - Widevine
-vendor/bin/hw/android.hardware.drm@1.2-service.widevine
-vendor/etc/init/android.hardware.drm@1.2-service.widevine.rc
-vendor/lib64/libbase64.so
-vendor/lib64/libcpion.so
-vendor/lib64/librmp.so
-vendor/lib64/mediadrm/libwvdrmengine.so
-vendor/lib/libbase64.so
-vendor/lib/libcppf.so
-vendor/lib/librmp.so
-vendor/lib/mediadrm/libwvdrmengine.so
+# DRM - Widevine - from davinci-user 11 RKQ1.200826.002 20.10.30 release-keys
+vendor/bin/hw/android.hardware.drm@1.3-service.widevine|07ac13a602f25788e54c1500c2957f561dd9f90a
+vendor/etc/init/android.hardware.drm@1.3-service.widevine.rc|c35e1a6f9a6faff19064a81e07c4be82ceaf4bb5
+-vendor/etc/vintf/manifest/manifest_android.hardware.drm@1.3-service.widevine.xml|ebebcf8f367641480cf7d512fc06e6ab777527be
+vendor/lib64/libbase64.so|7affa7459f91bec1a7f5aeab83c0cc6349354853
+vendor/lib64/libcpion.so|103e6756e87912b34d910d424f2658580fea025c
+vendor/lib64/librmp.so|2e84f3e665bbce083aefb5eaf9fcc4fbcd17ec31
+vendor/lib64/mediadrm/libwvdrmengine.so|8e9f726c51650e4e80a06fbb7a16252d023c6b96
+vendor/lib/libbase64.so|73d04f085db31cf16cd24be608f503b9d6ace1e1
+vendor/lib/libcppf.so|70d5c828d409ea0580d087cca937ae956715c821
+vendor/lib/librmp.so|329fdbba89b4cf2633809bd2b350aade192fb56e
+vendor/lib/mediadrm/libwvdrmengine.so|4555e8051861020b471175baba9a5ab5b5760f01
 
 # DRM - Widevine -L1 - from DAVINCIGLOBAL
 vendor/lib64/liboemcrypto.so|2cee717b25559030a61709e826b4a5dae6043c20
 vendor/lib/liboemcrypto.so|b349d1d049709bbdff15a133698264dc8c01db14
+vendor/lib64/libwvhidl.so|2abdbc8966795ed903062ec1a8ba2e79bb5883f8
 vendor/lib/libwvhidl.so|dd599b1055d1faf025d60bc4f702f9ae11123c30
 
 # Fingerprint
