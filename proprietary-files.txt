@@ -481,6 +481,12 @@ vendor/lib/liboemcrypto.so|b349d1d049709bbdff15a133698264dc8c01db14
 vendor/lib64/libwvhidl.so|2abdbc8966795ed903062ec1a8ba2e79bb5883f8
 vendor/lib/libwvhidl.so|dd599b1055d1faf025d60bc4f702f9ae11123c30
 
+# DSP HAL Service - from LA.UM.9.1.r1-07300-SMxxx0.0
+vendor/bin/dspservice|c7809e32581d5c6efac65a3a7689f43526c17bb8
+vendor/etc/init/vendor.qti.hardware.dsp@1.0-service.rc|fbf2bb38ca6bdddf98c7123da9e1f263a4eec55f
+vendor/etc/seccomp_policy/vendor.qti.hardware.dsp.policy|8119845f8e6a24e53bdf286e19f34e9906d64e78
+vendor/lib64/vendor.qti.hardware.dsp@1.0.so|5f30d9c5fff738e6194a36a5b93372fa32ec0471
+
 # Fingerprint
 vendor/lib/vendor.qti.hardware.fingerprint@1.0.so
 vendor/lib64/hw/fingerprint.fpc.default.so
