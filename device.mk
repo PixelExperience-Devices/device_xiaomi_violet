@@ -453,6 +453,4 @@ PRODUCT_BOOT_JARS += \
     WfdCommon
 
 # Wallpapers
-PRODUCT_PACKAGES += \
-    PixelLiveWallpaperPrebuilt \
-    librs_jni
+TARGET_INCLUDE_LIVE_WALLPAPERS := false
