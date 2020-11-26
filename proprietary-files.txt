@@ -1109,9 +1109,9 @@ vendor/bin/hw/vendor.qti.hardware.tui_comm@1.0-service-qti
 vendor/etc/init/vendor.qti.hardware.tui_comm@1.0-service-qti.rc
 vendor/lib64/vendor.qti.hardware.tui_comm@1.0.so
 
-# WiFi
-vendor/bin/cnss-daemon
-vendor/bin/nv_mac
+# WiFi - from davinci-user 11 RKQ1.200826.002 20.10.30 release-keys
+vendor/bin/cnss-daemon|d9c7e416771c02f67457ad812fac8e9609712373
+vendor/bin/nv_mac|e6b724960185e3eb752a85cf59ad4453c08298e2
 
 # WiFi Display - from davinci-user 11 RKQ1.200826.002 20.10.30 release-keys
 -framework/WfdCommon.jar|de1adc7a4adbb117123aa5bb116c5df83c686433
