@@ -10,74 +10,75 @@ vendor/etc/acdbdata/IDP/IDP_Headset_cal.acdb
 vendor/etc/acdbdata/IDP/IDP_Speaker_cal.acdb
 vendor/etc/acdbdata/IDP/IDP_workspaceFile.qwsp
 
-# ACDB loader - from LA.UM.8.9.r1-08400-SM6xx.0
-vendor/lib64/libacdb-fts.so|3011859de4c2ca5f91a3b23f6e8e7b9bca76921a
-vendor/lib64/libacdbloader.so|f5440dad46f76c494cc054d52f42f161cd1f43a4
-vendor/lib64/libacdbrtac.so|97e84dbb4bc0c8f669e316a1965b4128142fa178
-vendor/lib/libacdb-fts.so|0d6caa1cb6afd5e7125fea8aa35fcb4daf12fd59
-vendor/lib/libacdbloader.so|951a4f458b419cbd17e10163d430bb6e088346a7
-vendor/lib/libacdbrtac.so|49de6627ac56d27051b3268acd6d292b10506bb7
+# ACDB loader - from davinci-user 11 RKQ1.200826.002 20.10.30 release-keys
+vendor/lib64/libacdb-fts.so|55c5fab311190ef54cb1c53911b929b5bd39ef86
+vendor/lib64/libacdbloader.so|9c1aef2b76b7b14ccc6b0c35c749d1167d21b7cf
+vendor/lib64/libacdbrtac.so|f6d302e4473becdd5edaada2667ba5a3af0198ef
+vendor/lib/libacdb-fts.so|3757a6e47bc8070178a3cb1ac3aa724e70a9f33f
+vendor/lib/libacdbloader.so|47145f035a294cfa83acd5ef3f3e443c556fc300
+vendor/lib/libacdbrtac.so|a618bad18309032d19ab5d5e992043d05a7fbb8c
 
-# ADSP - from LA.UM.8.9.r1-08400-SM6xx.0
-vendor/bin/adsprpcd|5b803e679ddbce4e59c2a67433ffefa6396d61f3
-vendor/etc/init/vendor.qti.adsprpc-sscrpc-service.rc|564490ec94e70e87dc13796dd72520cfea699e83
-vendor/lib/libadsp_default_listener.so|9d368444c806d344f4ea78ad4ec2b499d67f53d6
-vendor/lib/libadsprpc.so|52ac1909338614d803e4297a38ed344cf7a73412
-vendor/lib/libmdsprpc.so|7ea4371331eeb590b0ecfa27453c07ed030d7a3a
-vendor/lib/libsdsprpc.so|add6adc49845d3e1c761b762838313dcfd7aa8f9
-vendor/lib64/libadsp_default_listener.so|ec9a452e318db1ddc5d826dd7cc2b14dd5fb2a14
-vendor/lib64/libadsprpc.so|8a3ae7d000ff37253e227a28673f047ab271a839
-vendor/lib64/libmdsprpc.so|0d052d2f99f7c886eb8ddc2b3ab34245f4359c9e
-vendor/lib64/libsdsprpc.so|2fc1293089f834b8a594ae44465363556950b2cf
+# ADSP - from davinci-user 11 RKQ1.200826.002 20.10.30 release-keys
+vendor/bin/adsprpcd|c1b9fe936ffbcd5a875baa785f4b9629366083ec
+vendor/etc/init/vendor.qti.adsprpc-sscrpc-service.rc|96b08f4e97ef20e20a8d7f89212a5549abe66666
+vendor/lib/libadsp_default_listener.so|92ca2faf693eb488394440b94b6deb73fe9504e2
+vendor/lib/libadsprpc.so|437f6ab24e5a08de250529bf0adf5ecaed88817d
+vendor/lib/libmdsprpc.so|f9cabbd95f91e9fa90e21c48349adbdd825a05ff
+vendor/lib/libsdsprpc.so|091682459f41566a3909da301a06be2008efb493
+vendor/lib64/libadsp_default_listener.so|84ffb0536efd42fb0ebc67c194f88da3da6ca9de
+vendor/lib64/libadsprpc.so|5e677d9e7ecc56d8c9bf7bcc49f1e717b5669aad
+vendor/lib64/libmdsprpc.so|523f6501e39101a9d61baffccd20a0d2848e3524
+vendor/lib64/libsdsprpc.so|96ed968d5d79c3fe8c37f331082c16cf5212dc52
 
-# ADSP Modules
-vendor/lib/rfsa/adsp/capi_v2_aptX_Classic.so
-vendor/lib/rfsa/adsp/capi_v2_aptX_HD.so
-vendor/lib/rfsa/adsp/dirac_resource.dar
-vendor/lib/rfsa/adsp/libdirac-capiv2.so
-vendor/lib/rfsa/adsp/libVC1Dec.so
-vendor/lib/rfsa/adsp/libVC1DecDsp_skel.so
-vendor/lib/rfsa/adsp/libapps_mem_heap.so
-vendor/lib/rfsa/adsp/libcamera_nn_skel.so
-vendor/lib/rfsa/adsp/libcvpdsp_skel.so
-vendor/lib/rfsa/adsp/libdspCV_skel.so
-vendor/lib/rfsa/adsp/libdsp_streamer_add_constant.so
-vendor/lib/rfsa/adsp/libdsp_streamer_binning.so
-vendor/lib/rfsa/adsp/libdsp_streamer_skel.so
-vendor/lib/rfsa/adsp/libfastcvadsp.so
-vendor/lib/rfsa/adsp/libfastcvdsp_skel.so
-vendor/lib/rfsa/adsp/libhexagon_nn_skel.so
-vendor/lib/rfsa/adsp/libsns_device_mode_skel.so
-vendor/lib/rfsa/adsp/libsns_low_lat_stream_skel.so
+# ADSP Modules - from davinci-user 11 RKQ1.200826.002 20.10.30 release-keys
+vendor/lib/rfsa/adsp/capi_v2_aptX_Classic.so|59cbdf5d84ba2ff64014941f3ad9e6c2c35e2c06
+vendor/lib/rfsa/adsp/capi_v2_aptX_HD.so|e25f1087edc95d2ff76c1e37787ca37aae2cf175
+vendor/lib/rfsa/adsp/capi_v2_aptX_CLHDAD_Encoder.so|136ee309e7c9892d55b3e87e45cd0ab39120658e
+vendor/lib/rfsa/adsp/dirac_resource.dar|8697ff9e77a872b849cd2ce95afa45dac97cb01e
+vendor/lib/rfsa/adsp/libdirac-capiv2.so|c1432e70a935bc34b3787a4973fce4bab1faf4e2
+vendor/lib/rfsa/adsp/libVC1Dec.so|732ede3ede9e6e1b09c439156f62a07d8fa0ee3e
+vendor/lib/rfsa/adsp/libVC1DecDsp_skel.so|eff059c5a29a44d205bd60ad24aecc46416e939e
+vendor/lib/rfsa/adsp/libapps_mem_heap.so|1cdac354c585c0d236d77b0888ebd5894b333326
+vendor/lib/rfsa/adsp/libcamera_nn_skel.so|29d949909c9f115491b781ff93604be238e0f965
+vendor/lib/rfsa/adsp/libcvpdsp_skel.so|58cbb97212073cf7e4780c6d77a7628c3ee845bd
+vendor/lib/rfsa/adsp/libdspCV_skel.so|c6034c389845a94a4054dd0fe9a0381adbf086e5
+vendor/lib/rfsa/adsp/libdsp_streamer_add_constant.so|481cdec174e77e5cb555d715057170568892a18f
+vendor/lib/rfsa/adsp/libdsp_streamer_binning.so|00eb6acc7c864371b932f95ff98e98351c6508d8
+vendor/lib/rfsa/adsp/libdsp_streamer_skel.so|aee67209556f075cabdb55ddc70d7a76ffc74b3b
+vendor/lib/rfsa/adsp/libfastcvadsp.so|5c86de2533d60534ce5b07e6be13bcf988e4b03b
+vendor/lib/rfsa/adsp/libfastcvdsp_skel.so|50ac955393bfae796e5fcaccad0bd8c90bd5d16a
+vendor/lib/rfsa/adsp/libhexagon_nn_skel.so|55d2c71535acdcbbdd7b0a3fe475249c8d99eb08
+vendor/lib/rfsa/adsp/libsns_device_mode_skel.so|733a5b8861bb6eb1285bb8982992531c94800997
+vendor/lib/rfsa/adsp/libsns_low_lat_stream_skel.so|c30bb30eecf968e02f72c055d3cc13a7f769644f
 
-# Alarm
--product/app/PowerOffAlarm/PowerOffAlarm.apk
-vendor/bin/hw/vendor.qti.hardware.alarm@1.0-service
-vendor/bin/power_off_alarm
-vendor/etc/init/vendor.qti.hardware.alarm@1.0-service.rc
-vendor/lib64/hw/vendor.qti.hardware.alarm@1.0-impl.so
-vendor/lib64/vendor.qti.hardware.alarm@1.0.so
+# Alarm - from davinci-user 11 RKQ1.200826.002 20.10.30 release-keys
+-product/app/PowerOffAlarm/PowerOffAlarm.apk|5885c09b8446d8b0c1f665bd9522792d79201cd7
+vendor/bin/hw/vendor.qti.hardware.alarm@1.0-service|5f8bf423e3c4b56b5f8278eb5bae141d816c791c
+vendor/bin/power_off_alarm|6040b06f9bc850ef69156bed4367f1f8371449d7
+vendor/etc/init/vendor.qti.hardware.alarm@1.0-service.rc|c9877b6cae0353d5fdea5bc23dba77101b3d6980
+vendor/lib64/hw/vendor.qti.hardware.alarm@1.0-impl.so|80fd75eb9a44a1e7e62593855c06e6f219a3c4b3
+vendor/lib64/vendor.qti.hardware.alarm@1.0.so|66d8dc137c36ac32d0f71ceb433167753ffa108f
 
 # ANT+ - from davinci-user 11 RKQ1.200826.002 20.10.30 release-keys
 vendor/lib64/hw/com.dsi.ant@1.0-impl.so|8b19b9cb7cdf2c7635608c270bec1c6cb9281049
 
-# Audio
-vendor/lib64/libadiertac.so
-vendor/lib64/libaudcal.so
-vendor/lib64/libaudioparsers.so
-vendor/lib64/libqtigef.so
-vendor/lib/libadiertac.so
-vendor/lib/libaudcal.so
-vendor/lib/libaudioparsers.so
-vendor/lib/libdrc.so
-vendor/lib/libqtigef.so
-vendor/lib/libsurround_3mic_proc.so
+# Audio - from davinci-user 11 RKQ1.200826.002 20.10.30 release-keys
+vendor/lib64/libadiertac.so|c4ab6f4c095fd60a2366ecab0368903b58f00a71
+vendor/lib64/libaudcal.so|d6ddbf697904b83235318e8c2566ac34ec67b341
+vendor/lib64/libaudioparsers.so|326954ecd50e2b0a25ff0f076def93271a9bd554
+vendor/lib64/libqtigef.so|fdd1580c4dee20cd2863f432903dce5567ff6100
+vendor/lib/libadiertac.so|4fbcedc4e3258487e49e912838470f39c5e4e25a
+vendor/lib/libaudcal.so|827fbc6fb4cfd96de86c692ebcafe3ed8660249b
+vendor/lib/libaudioparsers.so|b786d5a2a8f94edb11b5334bbe981dbd2633325f
+vendor/lib/libdrc.so|e27974e53efe0456cba96f6910ad977c6351d0b7
+vendor/lib/libqtigef.so|5274b67a13e3211cc581385189560fd1e2572d44
+vendor/lib/libsurround_3mic_proc.so|1d425b4b0d89f68e0f0112e8f2f73b1cd5b6dea2
 
-# Audio FX modules
-etc/permissions/audiosphere.xml
-framework/audiosphere.jar
-vendor/lib64/soundfx/libasphere.so
-vendor/lib/soundfx/libasphere.so
+# Audio FX modules - from davinci-user 11 RKQ1.200826.002 20.10.30 release-keys
+system_ext/etc/permissions/audiosphere.xml|015ad7be4921039238bfa3d34d052d752453e49c
+system_ext/framework/audiosphere.jar|db76dab5f44013265df54ae41073184d9a0423e9
+vendor/lib64/soundfx/libasphere.so|7d01becf38d808b232aef88025e4dd69839b788f
+vendor/lib/soundfx/libasphere.so|44cd20e13920888b29d3b2e4bb0b2559a746bf8f
 
 # Audio (speaker amplifier) firmware
 vendor/firmware/tas2563_uCDSP.bin
@@ -318,18 +319,19 @@ vendor/lib64/mibokeh_660_opencl.bin
 # Camera Firmware
 vendor/firmware/CAMERA_ICP.elf
 
-# CDSP - from LA.UM.8.9.r1-08400-SM6xx.0
-vendor/bin/cdsprpcd|6fb2700151a6e6dd57a5d9a388cf3a95d3e8262b
-vendor/lib/libcdsp_default_listener.so|a92281e3c69e4498c25daa103cbffd129ac7fa3d
-vendor/lib/libcdsprpc.so|1383e3a8f313cc29e8732bb5aa3fe51839190ee9
-vendor/lib64/libcdsp_default_listener.so|886ba3921f81439cb1b4e520ad622e1089291fa7
-vendor/lib64/libcdsprpc.so|2268b924e33592542156db2a6f713867e044bf91
+# CDSP - from davinci-user 11 RKQ1.200826.002 20.10.30 release-keys
+vendor/bin/cdsprpcd|63f7be350d30b9d4181ded5b9cba956bff04439c
+vendor/etc/init/vendor.qti.cdsprpc-service.rc|36772b70216796e8ef19376d9c6a81ee9ffff549
+vendor/lib/libcdsp_default_listener.so|7949a156e2fced7a60cb4099cc4ab274c3504d7e
+vendor/lib/libcdsprpc.so|de676387b859280b4fe8004e999419a6bc8ddeab
+vendor/lib64/libcdsp_default_listener.so|74d24246b94fe48212f93e0693000489792dfb43
+vendor/lib64/libcdsprpc.so|5723a2985d7c85197952df08da1fc6e90d1d2b5d
 
-# Charger - from LA.UM.8.9.r1-08400-SM6xx.0
-vendor/bin/hvdcp_opti|38669051607022591d6f4520759f54affac854e4
-vendor/bin/init.qti.chg_policy.sh|132950e9cf9c1377d03766d126719e6912fc27c9
+# Charger - from davinci-user 11 RKQ1.200826.002 20.10.30 release-keys
+vendor/bin/hvdcp_opti|c29dc9035322d0734a616b55c5e35c4bcea2c3d5
+vendor/bin/init.qti.chg_policy.sh|b1301822b93f588c735fa86edc707c47340d0736
 vendor/etc/charger_fstab.qti|8464c139d93f05e86ff9c9d31b3e8617b8d9476e
-vendor/etc/init/vendor.qti.hardware.charger_monitor@1.0-service.rc|160f0c6ccbb8276cd491990d70ac8ad25f36be68
+vendor/etc/init/vendor.qti.hardware.charger_monitor@1.0-service.rc|29b23be4f604282abf715f86aec9697175a9aaad
 
 # CNE - from LA.UM.9.1.r1-06700-SMxxx0.0
 system_ext/framework/com.quicinc.cne.api-V1.1-java.jar|88da95df5925ab3c173f951cfe56c95699908359
@@ -418,28 +420,26 @@ vendor/lib/hw/vendor.qti.hardware.capabilityconfigstore@1.0-impl.so|3e517ec6b460
 # Consumer IR
 vendor/lib64/hw/consumerir.default.so:vendor/lib64/hw/consumerir.sm6150.so
 
-# DPM - from LA.UM.8.9.r1-07100-SM6xx.0
-framework/tcmclient.jar|6ef9ca98f67c144fc8ae941bb3a47f99cbd93098
-product/bin/dpmd|a70053cbaadbfdce93a85da4a9e55b096a75a83a
-product/etc/dpm/dpm.conf|95e27da8c989e96c6faea6f0697bce11955b62a5
-product/etc/init/dpmd.rc|7f95195a89fddce06b93006a737701270e91f669
-product/etc/permissions/com.qti.dpmframework.xml|4613f8b8629d0b823e6aaab45d399ac30da06c09
-product/etc/permissions/dpmapi.xml|0991b3069308620cfcad53873e9f09af181b981d
-product/framework/com.qti.dpmframework.jar|7adf5e0e96c155acfe66c7256e06e48c1ee35d13
-product/framework/dpmapi.jar|4696df9793ad676b305d53b5d7ce65ecf74771ad
-product/lib64/com.qualcomm.qti.dpm.api@1.0.so|a70cfc1be3e06cde6318d6969e114429fe1950bb
-product/lib64/libdiag_system.so|4579d722de2e071ef640dd7c572aa08773d5533a
-product/lib64/libdpmctmgr.so|30edca46d4d0f6ecdb86169bf9839375a77c6d27
-product/lib64/libdpmfdmgr.so|8c852ffa26dac26fd87eab57f4c2f46fff5163fa
-product/lib64/libdpmtcm.so|cd964bbad1930a8ccd5a878b5a2d8f414a6a75a8
--product/priv-app/dpmserviceapp/dpmserviceapp.apk|9fd873c5330c03c62dfdeb6540b5984588295319
-vendor/bin/dpmQmiMgr|ef031f1c58cd332c4e35a6be03393fee7bdb5181
-vendor/etc/init/dpmQmiMgr.rc|67569302d3a8828a9118c835e5b69c51b0c8ac68
-vendor/lib64/com.qualcomm.qti.dpm.api@1.0.so|ab5d46cbf14ce90ab44aaab4dc1520378c568033
-vendor/lib64/libdpmqmihal.so|d5b8330b56d7e0c036b00a817754748bf3137774
-
-# DPM - from oneplus8 - qssi-user-11-RP1A.201005.001-2009051300-release-keys
+# DPM - from davinci-user 11 RKQ1.200826.002 20.10.30 release-keys
+system_ext/bin/dpmd|bc22fa258f3975744e248dc7d9f26a00a9981ca7
+system_ext/etc/dpm/dpm.conf|95e27da8c989e96c6faea6f0697bce11955b62a5
+system_ext/etc/init/dpmd.rc|738b638ff04cda368e22c03e16baf90ba157a6fc
+system_ext/etc/permissions/com.qti.dpmframework.xml|c4b7ad0879d00c1eba4f3fe3a88ddb8aa153629a
+system_ext/etc/permissions/dpmapi.xml|9158c9789cc7135a685b3fb27f8cc27108b51fef
+system_ext/framework/com.qti.dpmframework.jar|6c2a814d2a1b175b5be47640d75ebf7d23435a5a
+system_ext/framework/dpmapi.jar|a2c04b0850b02dc5ec01e08f856b4facfd08b997
+system_ext/lib64/com.qualcomm.qti.dpm.api@1.0.so|f2d02195cca305fad78402c65d090bad72955262
+system_ext/lib64/libdiag_system.so|db6ac11e4cebc966a0eb8e86ff4b22d4cd83ed1f
+system_ext/lib64/vendor.qti.diaghal@1.0.so|7529a7fe144d995ec211455a4b72f28782470171
+system_ext/lib64/libdpmctmgr.so|df8427f799e6a8cc5ff2ff39fe0323d8b60e815a
+system_ext/lib64/libdpmfdmgr.so|bd1bbd376c2bdfac2f3a4c230ce65cd35cb1c6bd
 system_ext/lib64/libdpmframework.so|67ebd736333ae7158632735e3db06a4f9664f6a6
+system_ext/lib64/libdpmtcm.so|ddef98d55e3045ebac458b38165acd5d2f75cd7a
+-system_ext/priv-app/dpmserviceapp/dpmserviceapp.apk|d362432226861332b283f46b6ee8240267bf9dc9
+vendor/bin/dpmQmiMgr|d7b0b3aad408e4a492a2d79d37f55ecd78d15458
+vendor/etc/init/dpmQmiMgr.rc|1538743661a5c48c15cd105beaad20f72953885a
+vendor/lib64/com.qualcomm.qti.dpm.api@1.0.so|188222f7cda270cad18757cf59710978f8657105
+vendor/lib64/libdpmqmihal.so|84dad3cd086791473878b353ef5aef6b6d495137
 
 # DRM - from davinci-user 11 RKQ1.200826.002 20.10.30 release-keys
 vendor/bin/qseecomd|41d31b001430c9e707eb4fdec5f409468b9183b9
@@ -735,28 +735,25 @@ vendor/lib64/libmlipay.so
 vendor/lib64/vendor.xiaomi.hardware.mlipay@1.0.so
 vendor/lib64/vendor.xiaomi.hardware.mlipay@1.1.so
 
-# Perf - from LA.UM.8.9.r1-08400-SM6xx.0
-vendor/lib64/libqti-perfd-client.so|49d48e5a83b594ec0fe25fb4005b8f3dbb57111f
-vendor/lib64/vendor.qti.hardware.perf@2.0.so|bee863ea9b11830ebdfcc553715d3e59bbfd930a
+# Perf - from davinci-user 11 RKQ1.200826.002 20.10.30 release-keys
+vendor/lib64/libqti-perfd-client.so|b6881ca5b77335490bd91c6803feb5d31cbf8e92
+vendor/lib64/vendor.qti.hardware.perf@2.0.so|3aff8833686924a414212b2a4db331168933c324
 
-# Peripheral - from LA.UM.8.9.r1-08400-SM6xx.0
-vendor/bin/pm-proxy|4d26ef2c4dfde3715509c5d5f45075a0a5fc0274
-vendor/bin/pm-service|52d281741eb349cc9a93ae926eb6e9ea8d547210
-vendor/lib64/libperipheral_client.so|152c9fc185eff92973148fd257550948265d4107
+# Peripheral - from davinci-user 11 RKQ1.200826.002 20.10.30 release-keys
+vendor/bin/pm-proxy|73caf1b46a861e623ec7538cc254783b301a4dfd
+vendor/bin/pm-service|2775e6bddbdb3a184f35a0b94d6e8d3e0a4c233e
+vendor/lib64/libperipheral_client.so|6c7629912519840a72b6595d5add2ec6b0e6b8d9
 
-# Postprocessing
-vendor/bin/ppd
-vendor/etc/init/vendor.display.color@1.0-service.rc
-vendor/lib64/libdpps.so
-vendor/lib64/vendor.display.color@1.0.so
-vendor/lib64/vendor.display.color@1.1.so
-vendor/lib64/vendor.display.color@1.2.so
-vendor/lib64/vendor.display.color@1.3.so
-vendor/lib64/vendor.display.postproc@1.0.so
-
-# Postprocessing service - from LA.UM.8.9.r1-07100-SM6xx.0
-vendor/bin/hw/vendor.display.color@1.0-service|8646c74c5b19e6d5086d7a4f83e0757610d18f3f
-# Qualcomm removed android.hidl.base@1.0 dependency on this one
+# Postprocessing - from davinci-user 11 RKQ1.200826.002 20.10.30 release-keys
+vendor/bin/hw/vendor.display.color@1.0-service|1dfa3cef0b249895961b4ee51f239f1c63f4a83b
+vendor/bin/ppd|cbf0688e3b6006f9e7df5ead85e9c1370d0195da
+vendor/etc/init/vendor.display.color@1.0-service.rc|5ad673f879b3685a0e79b5633437e5499cb94f48
+vendor/lib64/libdpps.so|d1e28591c14091204633c19ac5593cb890f21009
+vendor/lib64/vendor.display.color@1.0.so|8fd218b6dd642779c6b5371510f6cfa43e542258
+vendor/lib64/vendor.display.color@1.1.so|4777148df3ccf2e9a55dfca495791e17c02b94e7
+vendor/lib64/vendor.display.color@1.2.so|e8deb02d0410136b73d22cb1dd5dfb19e48974bd
+vendor/lib64/vendor.display.color@1.3.so|ae5d8dcc90a40b7781f0c699fed0409954c21d4e
+vendor/lib64/vendor.display.postproc@1.0.so|142445701bbe83411d849854f31c1e8b85048ac4
 
 # Power-off charging daemon - from davinci-user 11 RKQ1.200826.002 20.10.30 release-keys
 bin/charger:bin/chargeonlymode|d169c12a51cd4c8475134c6bb964eae197d33a5e
@@ -974,25 +971,15 @@ vendor/lib64/vendor.qti.ims.rcsconfig@2.1.so|d6bf98233939a7516b4a6cfaebd079eddcc
 vendor/lib64/vendor.qti.imsrtpservice@3.0.so|653cd6cae81499a416d97b9fb920ddcb2816c8a9
 vendor/lib64/vendor.qti.imsrtpservice@3.0-service-Impl.so|c3be855f28ceb58ebf7c7055e7f068ed6f132b40
 
-# Snapdragon Computer Vision Engine - from LA.UM.8.9.r1-08400-SM6xx.0
-vendor/etc/scve/facereco/gModel.dat|447e5e3fefe8bcf36db0f7a8595c63fb326879ba
-vendor/lib/rfsa/adsp/libscveBlobDescriptor_skel.so|637e3c05ff05fb62ff9eede4ba394cd8f1874e18
-vendor/lib/rfsa/adsp/libscveObjectSegmentation_skel.so|44ee517f73908376a226f02a1ecd7ab22e5ae6ca
-vendor/lib/rfsa/adsp/libscveT2T_skel.so|b1c232b8fe7a11754a2f2148d4d2f12496a1dbe1
-vendor/lib64/libfastcvdsp_stub.so|5d3cdff13224080a34f333befebcab2cd8bf4338
-vendor/lib64/libfastcvopt.so|34c9e943888cbcb951b38e4288a95af39e157340
-vendor/lib64/libscveBlobDescriptor.so|72661600356de2ab68f8b3df42e6e667d7ba5365
-vendor/lib64/libscveBlobDescriptor_stub.so|8337c937d21774e2457cc8c13c2cd0a3928edf03
-vendor/lib64/libscveCommon.so|dedf662f61113fb4c74e03c4ee4ab8015549c533
-vendor/lib64/libscveCommon_stub.so|e75ea212436b1a2e58a3c472bbdbf13b328ef244
-vendor/lib64/libscveFaceLandmarks.so|89babca6a350911ebe1d7f33f58a024b0fc1e74b
-vendor/lib64/libscveFaceRecognition.so|238eaee9f66b67d56506160f6010e4577f0edf99
-vendor/lib64/libscveObjectSegmentation.so|da9b0c32d4421979a0adcdef28c23cac478e2ef9
-vendor/lib64/libscveObjectSegmentation_stub.so|9ea4913f2ea78405470cb2177ee071ec2a61f889
-vendor/lib64/libscveObjectTracker.so|2d38b8f15dc4c059d65688c5865ef8c92156bfec
-vendor/lib64/libscveObjectTracker_stub.so|680cf80a4bd97fd967790e5b9028aed28d7cb986
-vendor/lib64/libscvePanorama.so|ccf4d8b37eed8d0c886cc4b537cde84e40de8ad5
-vendor/lib64/libscvePanorama_lite.so|66a74d3b441bb2e8e5011187f0b2e40bcb77693c
+# Snapdragon Computer Vision Engine - from davinci-user 11 RKQ1.200826.002 20.10.30 release-keys
+vendor/lib64/libfastcvdsp_stub.so|4eaf9f6db96648f1b1a423fb86c0fcce8a220499
+vendor/lib64/libfastcvopt.so|b4a28cc952eed09b9c71717782019cbc3c1befd3
+vendor/lib64/libscveCommon.so|7ea574342277f12a3391a1e9b0b2414463e803fb
+vendor/lib64/libscveCommon_stub.so|37ebfab818cc16db2297b6f18b05c0cb835c6646
+vendor/lib64/libscveObjectSegmentation.so|dea438c1ab689e713dfab80d37dd5903f707dce4
+vendor/lib64/libscveObjectSegmentation_stub.so|155efc6a4a3af11d80c64bd6b8624b2ff6625def
+vendor/lib64/libscveObjectTracker.so|b7b012dd2ea459919358dc359fed0f6c1de31753
+vendor/lib64/libscveObjectTracker_stub.so|113db473a2708de0d0673cd977ae4fda7688151f
 
 # Sensors
 vendor/bin/hw/android.hardware.sensors@2.0-service
@@ -1075,12 +1062,12 @@ vendor/etc/sensors/config/tmd2725.json
 vendor/etc/sensors/config/tmx4903.json
 vendor/etc/sensors/sns_reg_config
 
-# Soter
--vendor/app/SoterService/SoterService.apk
-vendor/bin/hw/vendor.qti.hardware.soter@1.0-service
-vendor/etc/init/vendor.qti.hardware.soter@1.0-service.rc
-vendor/lib64/vendor.qti.hardware.soter@1.0.so
-vendor/lib64/hw/vendor.qti.hardware.soter@1.0-impl.so
+# Soter - from davinci-user 11 RKQ1.200826.002 20.10.30 release-keys
+-app/SoterService/SoterService.apk|829f94c8760b840b3442901a4aca5c98574e714f
+vendor/bin/hw/vendor.qti.hardware.soter@1.0-service|80ae6dfcb151cd0813b2d20442e540edede24772
+vendor/etc/init/vendor.qti.hardware.soter@1.0-service.rc|76447a61ad5529949365eeb7e8ca000e48bd28ae
+vendor/lib64/vendor.qti.hardware.soter@1.0.so|f98b5eef4e9851ee4ff9546685e9c2fc2ba9e35a
+vendor/lib64/hw/vendor.qti.hardware.soter@1.0-impl.so|64e17127e63d9e7c811eab805e518a0c572f7089
 
 # Thermal
 vendor/lib64/libthermalclient.so
@@ -1098,16 +1085,16 @@ vendor/lib64/libthermalfeature.so
 # Thermal (init script) - from LA.UM.8.9.r1-07100-SM6xx.0
 vendor/etc/init/init_thermal-engine.rc|f0d14aa4734b2e8afd61a4eed73238187b268f48
 
-# Time - from LA.UM.8.9.r1-08400-SM6xx.0
--vendor/app/TimeService/TimeService.apk|2a92ff670a09688bf2f56b63112a75c1f5e716b2
-vendor/bin/time_daemon|0212a141bf4ed8054986b0ca02987c05fb87cf36
+# Time - from davinci-user 11 RKQ1.200826.002 20.10.30 release-keys
+-vendor/app/TimeService/TimeService.apk|7d176a69b270006a511a3c30f544db98a0ccaa37
+vendor/bin/time_daemon|0def9165831d91241cd011abafc0a106f69bd06e
 vendor/etc/init/init.time_daemon.rc|b253ca2a498757e14e1d7a051bf504ae09218f51
-vendor/lib64/libtime_genoff.so|a3ff231b32d8878dff345b25027884dd8205c9a8
+vendor/lib64/libtime_genoff.so|c9070f25aa132707705523ddaab522b88c22923f
 
-# Trusted User Interface
-vendor/bin/hw/vendor.qti.hardware.tui_comm@1.0-service-qti
-vendor/etc/init/vendor.qti.hardware.tui_comm@1.0-service-qti.rc
-vendor/lib64/vendor.qti.hardware.tui_comm@1.0.so
+# Trusted User Interface - from davinci-user 11 RKQ1.200826.002 20.10.30 release-keys
+vendor/bin/hw/vendor.qti.hardware.tui_comm@1.0-service-qti|b72fc6b3ef9c96dc41cf5acf198b464a3cd69a1c
+vendor/etc/init/vendor.qti.hardware.tui_comm@1.0-service-qti.rc|2cfc563d7e1579374f001c94588fae7835a12ffc
+vendor/lib64/vendor.qti.hardware.tui_comm@1.0.so|b53b22c0be01b39eead6490f706e3db660150828
 
 # WiFi - from davinci-user 11 RKQ1.200826.002 20.10.30 release-keys
 vendor/bin/cnss-daemon|d9c7e416771c02f67457ad812fac8e9609712373
