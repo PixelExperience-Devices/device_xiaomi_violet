@@ -1063,7 +1063,7 @@ vendor/etc/sensors/config/tmx4903.json
 vendor/etc/sensors/sns_reg_config
 
 # Soter - from davinci-user 11 RKQ1.200826.002 20.10.30 release-keys
--app/SoterService/SoterService.apk|829f94c8760b840b3442901a4aca5c98574e714f
+-app/SoterService/SoterService.apk:vendor/app/SoterService/SoterService.apk|829f94c8760b840b3442901a4aca5c98574e714f
 vendor/bin/hw/vendor.qti.hardware.soter@1.0-service|80ae6dfcb151cd0813b2d20442e540edede24772
 vendor/etc/init/vendor.qti.hardware.soter@1.0-service.rc|76447a61ad5529949365eeb7e8ca000e48bd28ae
 vendor/lib64/vendor.qti.hardware.soter@1.0.so|f98b5eef4e9851ee4ff9546685e9c2fc2ba9e35a
