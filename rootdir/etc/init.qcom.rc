@@ -485,10 +485,8 @@ on property:sys.boot_completed=1
     chown media audio /sys/kernel/wcd_cpe0/fw_name
 
     # Runtime fs tuning
-    write /sys/block/sda/queue/read_ahead_kb 128
     write /sys/block/sda/queue/nr_requests 128
     write /sys/block/sda/queue/iostats 0
-    write /sys/block/sde/queue/read_ahead_kb 128
     write /sys/block/sde/queue/nr_requests 128
     write /sys/block/sde/queue/iostats 0
 
