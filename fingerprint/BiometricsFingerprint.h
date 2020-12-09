@@ -20,10 +20,9 @@
 
 #define LOG_TAG "android.hardware.biometrics.fingerprint@2.1-service.xiaomi_sm6150"
 
-#include "fingerprint.h"
-
 #include <android/log.h>
 #include <cutils/properties.h>
+#include <hardware/fingerprint.h>
 #include <hardware/hardware.h>
 #include <hardware/hw_auth_token.h>
 #include <hidl/HidlTransportSupport.h>
@@ -34,8 +33,6 @@
 #include <unistd.h>
 
 #include <android/hardware/biometrics/fingerprint/2.1/IBiometricsFingerprint.h>
-
-#include <vendor/xiaomi/hardware/fingerprintextension/1.0/IXiaomiFingerprint.h>
 
 namespace android {
 namespace hardware {
@@ -54,13 +51,10 @@ using ::android::hardware::hidl_string;
 using ::android::sp;
 using ::android::status_t;
 
-using ::vendor::xiaomi::hardware::fingerprintextension::V1_0::IXiaomiFingerprint;
-
-struct BiometricsFingerprint : public IBiometricsFingerprint, public IXiaomiFingerprint {
+struct BiometricsFingerprint : public IBiometricsFingerprint {
+public:
     BiometricsFingerprint();
     ~BiometricsFingerprint();
-
-    status_t registerAsSystemService();
 
     // Method to wrap legacy HAL with BiometricsFingerprint class
     static IBiometricsFingerprint* getInstance();
@@ -77,8 +71,7 @@ struct BiometricsFingerprint : public IBiometricsFingerprint, public IXiaomiFing
     Return<RequestStatus> setActiveGroup(uint32_t gid, const hidl_string& storePath) override;
     Return<RequestStatus> authenticate(uint64_t operationId, uint32_t gid) override;
 
-    Return<int32_t> extCmd(int32_t cmd, int32_t param) override;
-
+private:
     static fingerprint_device_t* openHal();
     static void notify(const fingerprint_msg_t *msg); /* Static callback for legacy HAL implementation */
     static Return<RequestStatus> ErrorFilter(int32_t error);

@@ -252,7 +252,7 @@ fingerprint_device_t* getDeviceForVendor(const char *class_name) {
 
 fingerprint_device_t* getFingerprintDevice() {
     fingerprint_device_t *fp_device;
-    std::string vendor_modules[] = { "fpc", "fpc_fod", "goodix", "goodix_fod", "syna" };
+    std::string vendor_modules[] = { "fpc", "goodix" };
 
     for (const auto& vendor : vendor_modules) {
         if ((fp_device = getDeviceForVendor(vendor.c_str())) == nullptr) {
@@ -378,10 +378,6 @@ void BiometricsFingerprint::notify(const fingerprint_msg_t *msg) {
             }
             break;
     }
-}
-
-Return<int32_t> BiometricsFingerprint::extCmd(int32_t cmd, int32_t param) {
-    return mDevice->extCmd(mDevice, cmd, param);
 }
 
 }  // namespace implementation
