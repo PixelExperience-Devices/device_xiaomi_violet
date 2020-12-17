@@ -529,10 +529,10 @@ system_ext/lib64/vendor.qti.hardware.fm@1.0.so|b9dc0797da5790a7d5f1c9a7a2fd9c4a7
 vendor/lib64/hw/vendor.qti.hardware.fm@1.0-impl.so|d4de618bbff16a9683c6c567084f6b5ef4b85246
 vendor/lib64/vendor.qti.hardware.fm@1.0.so|86e247473332ecb950164eb115d7fea6214c7a45
 
-# Gatekeeper
-vendor/bin/hw/android.hardware.gatekeeper@1.0-service-qti
-vendor/etc/init/android.hardware.gatekeeper@1.0-service-qti.rc
-vendor/lib64/hw/android.hardware.gatekeeper@1.0-impl-qti.so
+# Gatekeeper - from davinci-user 11 RKQ1.200826.002 20.12.8 release-keys
+vendor/bin/hw/android.hardware.gatekeeper@1.0-service-qti|75a185c5a16bd31c92b1caace8ee4a0f7e9f4ee9
+vendor/etc/init/android.hardware.gatekeeper@1.0-service-qti.rc|1b8d5f58fe0a57906acf72b862c16a2521daa97b
+vendor/lib64/hw/android.hardware.gatekeeper@1.0-impl-qti.so|1c66f61967932f584b599ab51644bf4563c86280
 
 # GPS - from davinci-user 11 RKQ1.200826.002 20.12.8 release-keys
 vendor/bin/garden_app|4d5d58b8d8ecbb82db31b6e7f26f9fb749f9393b
@@ -644,13 +644,14 @@ vendor/lib64/libtinyxml2_1.so|92101861d95cbdf9625d192d0b2295baa5960b68
 vendor/lib64/hw/vulkan.adreno.so|dbe08047ec51224d63645180673eb7db1db2a004
 vendor/lib/hw/vulkan.adreno.so|040b1bfaa025c0eae3a69df306f0567ea6fe1960
 
-# Keystore
-vendor/bin/hw/android.hardware.keymaster@4.0-service-qti
-vendor/etc/init/android.hardware.keymaster@4.0-service-qti.rc
-vendor/lib64/libkeymasterdeviceutils.so
-vendor/lib64/libkeymasterprovision.so
-vendor/lib64/libkeymasterutils.so
-vendor/lib64/libqtikeymaster4.so
+# Keystore - from davinci-user 11 RKQ1.200826.002 20.12.8 release-keys
+vendor/bin/hw/android.hardware.keymaster@4.0-service-qti|12777e1f7f44222c7afa1aa5ad9514a774175928
+vendor/etc/init/android.hardware.keymaster@4.0-service-qti.rc|c8999fb1bccbef81e6b362059e9a6ebd023de98f
+vendor/lib64/libkeymasterdeviceutils.so|342fec39fae05ad5c0946dfbe2ad39343ea556cb
+vendor/lib64/libkeymasterprovision.so|1efcae9b8a312632ce2fb71558e4fa75a89a6be0
+vendor/lib64/libkeymasterutils.so|b9c888d579c9cf7a1c8f463be4048eb9d935daf8
+vendor/lib64/libqcbor.so|67acd94f3c7110c9419f0fd064b6eb69c09a0738
+vendor/lib64/libqtikeymaster4.so|9c45da4b7daa40d44592d94061858813e35473d0
 
 # Listen - from davinci-user 11 RKQ1.200826.002 20.12.8 release-keys
 vendor/lib/hw/sound_trigger.primary.sm6150.so|8409338433e25198c0434047b0781d2eac9be094
