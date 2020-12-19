@@ -1,11 +1,5 @@
 [
   {
-    "repository": "LineageOS/android_hardware_xiaomi",
-    "target_path": "hardware/xiaomi",
-    "branch":"lineage-18.0",
-    "remote":"github"
-  },
-  {
     "repository" : "vendor_xiaomi_violet",
     "target_path": "vendor/xiaomi/violet",
     "branch": "eleven",
