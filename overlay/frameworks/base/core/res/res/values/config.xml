@@ -477,9 +477,6 @@
         <item>10</item>
     </integer-array>
 
-    <!-- Height of the status bar -->
-     <dimen name="status_bar_height_portrait">35.0dip</dimen>
-
     <!-- Regex of wired ethernet ifaces -->
     <string translatable="false" name="config_ethernet_iface_regex">eth0</string>
 
