@@ -654,7 +654,6 @@ vendor/lib64/libqcbor.so|67acd94f3c7110c9419f0fd064b6eb69c09a0738
 vendor/lib64/libqtikeymaster4.so|9c45da4b7daa40d44592d94061858813e35473d0
 
 # Listen - from davinci-user 11 RKQ1.200826.002 20.12.8 release-keys
-vendor/lib/hw/sound_trigger.primary.sm6150.so|8409338433e25198c0434047b0781d2eac9be094
 vendor/lib/libadpcmdec.so|5232c32b93a8653612cd8fcdde161a9d7fe39c7f
 vendor/lib/libgcs-calwrapper.so|3685273d2b59051021a0b8b88d155385f59db0db
 vendor/lib/libgcs-ipc.so|8d23827d23e84148f71bd90203d168bea239296e

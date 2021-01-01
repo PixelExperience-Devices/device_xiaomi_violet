@@ -53,15 +53,6 @@ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
             <instance>default</instance>
         </interface>
     </hal>
-    <hal format="hidl">
-        <name>android.hardware.soundtrigger</name>
-        <transport>hwbinder</transport>
-        <version>2.2</version>
-        <interface>
-            <name>ISoundTriggerHw</name>
-            <instance>default</instance>
-        </interface>
-    </hal>
     <!-- video omx hal -->
     <hal format="hidl">
         <name>android.hardware.media.omx</name>
