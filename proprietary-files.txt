@@ -1,3 +1,5 @@
+# All unpinned blobs were pulled from VIOLETINGlobal_V12.0.5.0.QFHINXM
+
 # ACDB
 vendor/etc/acdbdata/adsp_avs_config.acdb
 vendor/etc/acdbdata/IDP/IDP_Bluetooth_cal.acdb
