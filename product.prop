@@ -1,6 +1,8 @@
 # Bluetooth
 persist.bluetooth.bqr.event_mask=14
 persist.bluetooth.bqr.min_interval_ms=500
+persist.vendor.bt.a2dp.aac_whitelist=false
+ro.bluetooth.library_name=libbluetooth_qti.so
 
 # Charger
 ro.charger.enable_suspend=true

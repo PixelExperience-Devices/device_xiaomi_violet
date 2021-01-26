@@ -93,10 +93,6 @@ vendor/lib64/hw/android.hardware.bluetooth@1.0-impl-qti.so|01aa99f69a5fe7e6cbc8f
 vendor/lib64/libbtnv.so|b72a66ef2d0f7ce315e19f162db60db8891f3e61
 vendor/lib64/libbt-hidlclient.so|4e528c3c6bef6b7c6900d0343cbed115709ef742
 
-# Bluetooth Aptx - from sunfish-user 11 RQ1A.201205.008 6943376 release-keys
-system_ext/lib64/libaptX_encoder.so|df1c89d7af1bb35808d5fe3496b04ba066c10cbc
-system_ext/lib64/libaptXHD_encoder.so|e13fa70c97caaa24d061678bdee608eb8850a69e
-
 # Bluetooth Configstore - from davinci-user 11 RKQ1.200826.002 20.12.26 release-keys
 vendor/lib64/hw/vendor.qti.hardware.btconfigstore@1.0-impl.so|8e15d11bd1ffc3fb4debe1be9b0a0a0f3c510518
 vendor/lib64/hw/vendor.qti.hardware.btconfigstore@2.0-impl.so|34f9de6084224052b728837358340e9fff1d0e46
