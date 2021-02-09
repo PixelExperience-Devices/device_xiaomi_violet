@@ -739,7 +739,6 @@ vendor/lib64/vendor.xiaomi.hardware.mlipay@1.1.so
 
 # Perf - from davinci-user 11 RKQ1.200826.002 21.2.3 release-keys
 vendor/lib64/libqti-perfd-client.so|b6881ca5b77335490bd91c6803feb5d31cbf8e92
-vendor/lib64/vendor.qti.hardware.perf@2.0.so|3aff8833686924a414212b2a4db331168933c324
 
 # Peripheral - from davinci-user 11 RKQ1.200826.002 21.2.3 release-keys
 vendor/bin/pm-proxy|73caf1b46a861e623ec7538cc254783b301a4dfd
