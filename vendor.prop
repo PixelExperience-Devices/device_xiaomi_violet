@@ -131,6 +131,7 @@ debug.hwui.use_hint_manager=true
 debug.hwui.target_cpu_time_percent=30
 debug.sf.auto_latch_unsignaled=false
 persist.sys.sf.color_saturation=1.0
+ro.config.avoid_gfx_accel=true
 ro.surface_flinger.protected_contents=true
 ro.hardware.egl=adreno
 ro.hardware.vulkan=adreno
