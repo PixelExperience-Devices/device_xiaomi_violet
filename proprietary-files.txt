@@ -12,7 +12,7 @@ vendor/etc/acdbdata/IDP/IDP_Headset_cal.acdb
 vendor/etc/acdbdata/IDP/IDP_Speaker_cal.acdb
 vendor/etc/acdbdata/IDP/IDP_workspaceFile.qwsp
 
-# ACDB loader - from davinci-user 11 RKQ1.200826.002 21.2.3 release-keys
+# ACDB loader - from davinci-user 11 RKQ1.200826.002 21.6.11 release-keys
 vendor/lib64/libacdb-fts.so|55c5fab311190ef54cb1c53911b929b5bd39ef86
 vendor/lib64/libacdbloader.so|9c1aef2b76b7b14ccc6b0c35c749d1167d21b7cf
 vendor/lib64/libacdbrtac.so|f6d302e4473becdd5edaada2667ba5a3af0198ef
@@ -20,7 +20,7 @@ vendor/lib/libacdb-fts.so|3757a6e47bc8070178a3cb1ac3aa724e70a9f33f
 vendor/lib/libacdbloader.so|47145f035a294cfa83acd5ef3f3e443c556fc300
 vendor/lib/libacdbrtac.so|a618bad18309032d19ab5d5e992043d05a7fbb8c
 
-# ADSP - from davinci-user 11 RKQ1.200826.002 21.2.3 release-keys
+# ADSP - from davinci-user 11 RKQ1.200826.002 21.6.11 release-keys
 vendor/bin/adsprpcd|c1b9fe936ffbcd5a875baa785f4b9629366083ec
 vendor/etc/init/vendor.qti.adsprpc-sscrpc-service.rc|96b08f4e97ef20e20a8d7f89212a5549abe66666
 vendor/lib/libadsp_default_listener.so|92ca2faf693eb488394440b94b6deb73fe9504e2
@@ -32,7 +32,7 @@ vendor/lib64/libadsprpc.so|5e677d9e7ecc56d8c9bf7bcc49f1e717b5669aad
 vendor/lib64/libmdsprpc.so|523f6501e39101a9d61baffccd20a0d2848e3524
 vendor/lib64/libsdsprpc.so|96ed968d5d79c3fe8c37f331082c16cf5212dc52
 
-# ADSP Modules - from davinci-user 11 RKQ1.200826.002 21.2.3 release-keys
+# ADSP Modules - from davinci-user 11 RKQ1.200826.002 21.6.11 release-keys
 vendor/lib/rfsa/adsp/capi_v2_aptX_Classic.so|59cbdf5d84ba2ff64014941f3ad9e6c2c35e2c06
 vendor/lib/rfsa/adsp/capi_v2_aptX_HD.so|e25f1087edc95d2ff76c1e37787ca37aae2cf175
 vendor/lib/rfsa/adsp/capi_v2_aptX_CLHDAD_Encoder.so|136ee309e7c9892d55b3e87e45cd0ab39120658e
@@ -53,7 +53,7 @@ vendor/lib/rfsa/adsp/libhexagon_nn_skel.so|55d2c71535acdcbbdd7b0a3fe475249c8d99e
 vendor/lib/rfsa/adsp/libsns_device_mode_skel.so|733a5b8861bb6eb1285bb8982992531c94800997
 vendor/lib/rfsa/adsp/libsns_low_lat_stream_skel.so|c30bb30eecf968e02f72c055d3cc13a7f769644f
 
-# Alarm - from davinci-user 11 RKQ1.200826.002 21.2.3 release-keys
+# Alarm - from davinci-user 11 RKQ1.200826.002 21.6.11 release-keys
 -product/app/PowerOffAlarm/PowerOffAlarm.apk|5885c09b8446d8b0c1f665bd9522792d79201cd7
 vendor/bin/hw/vendor.qti.hardware.alarm@1.0-service|5f8bf423e3c4b56b5f8278eb5bae141d816c791c
 vendor/bin/power_off_alarm|6040b06f9bc850ef69156bed4367f1f8371449d7
@@ -61,22 +61,22 @@ vendor/etc/init/vendor.qti.hardware.alarm@1.0-service.rc|c9877b6cae0353d5fdea5bc
 vendor/lib64/hw/vendor.qti.hardware.alarm@1.0-impl.so|80fd75eb9a44a1e7e62593855c06e6f219a3c4b3
 vendor/lib64/vendor.qti.hardware.alarm@1.0.so|66d8dc137c36ac32d0f71ceb433167753ffa108f
 
-# ANT+ - from davinci-user 11 RKQ1.200826.002 21.2.3 release-keys
+# ANT+ - from davinci-user 11 RKQ1.200826.002 21.6.11 release-keys
 vendor/lib64/hw/com.dsi.ant@1.0-impl.so|8b19b9cb7cdf2c7635608c270bec1c6cb9281049
 
-# Audio - from davinci-user 11 RKQ1.200826.002 21.2.3 release-keys
+# Audio - from davinci-user 11 RKQ1.200826.002 21.6.11 release-keys
 vendor/lib64/libadiertac.so|c4ab6f4c095fd60a2366ecab0368903b58f00a71
 vendor/lib64/libaudcal.so|d6ddbf697904b83235318e8c2566ac34ec67b341
 vendor/lib64/libaudioparsers.so|326954ecd50e2b0a25ff0f076def93271a9bd554
-vendor/lib64/libqtigef.so|858f70d6b9467042018c18e282460a8ef3618a62
+vendor/lib64/libqtigef.so|2780e3498a690923d40afbf8014a4aa1ab058f6b
 vendor/lib/libadiertac.so|4fbcedc4e3258487e49e912838470f39c5e4e25a
 vendor/lib/libaudcal.so|827fbc6fb4cfd96de86c692ebcafe3ed8660249b
 vendor/lib/libaudioparsers.so|b786d5a2a8f94edb11b5334bbe981dbd2633325f
 vendor/lib/libdrc.so|e27974e53efe0456cba96f6910ad977c6351d0b7
-vendor/lib/libqtigef.so|23b7946e1b0910320b9776bec25d323d3e96d3df
+vendor/lib/libqtigef.so|c5ef533558ccc78e179f0a940eb4b8c2dd9377e3
 vendor/lib/libsurround_3mic_proc.so|1d425b4b0d89f68e0f0112e8f2f73b1cd5b6dea2
 
-# Audio FX modules - from davinci-user 11 RKQ1.200826.002 21.2.3 release-keys
+# Audio FX modules - from davinci-user 11 RKQ1.200826.002 21.6.11 release-keys
 system_ext/etc/permissions/audiosphere.xml|015ad7be4921039238bfa3d34d052d752453e49c
 system_ext/framework/audiosphere.jar|db76dab5f44013265df54ae41073184d9a0423e9
 vendor/lib64/soundfx/libasphere.so|7d01becf38d808b232aef88025e4dd69839b788f
@@ -85,7 +85,7 @@ vendor/lib/soundfx/libasphere.so|44cd20e13920888b29d3b2e4bb0b2559a746bf8f
 # Audio (speaker amplifier) firmware
 vendor/firmware/tas2563_uCDSP.bin
 
-# Bluetooth - from davinci-user 11 RKQ1.200826.002 21.2.3 release-keys
+# Bluetooth - from davinci-user 11 RKQ1.200826.002 21.6.11 release-keys
 vendor/bin/hw/android.hardware.bluetooth@1.0-service-qti|df208af5347e10667c48a5659e14fb2dbe691711
 vendor/etc/init/android.hardware.bluetooth@1.0-service-qti.rc|a979981c55f3dcaf6cf2212e71b901ca4d58b959
 vendor/lib/hw/android.hardware.bluetooth@1.0-impl-qti.so|a2db9d0b95d040c30107c340ed6843262a348f92
@@ -93,13 +93,13 @@ vendor/lib64/hw/android.hardware.bluetooth@1.0-impl-qti.so|8c5a3104594edd1d8bc9a
 vendor/lib64/libbtnv.so|b72a66ef2d0f7ce315e19f162db60db8891f3e61
 vendor/lib64/libbt-hidlclient.so|4e528c3c6bef6b7c6900d0343cbed115709ef742
 
-# Bluetooth Configstore - from davinci-user 11 RKQ1.200826.002 21.2.3 release-keys
+# Bluetooth Configstore - from davinci-user 11 RKQ1.200826.002 21.6.11 release-keys
 vendor/lib64/hw/vendor.qti.hardware.btconfigstore@1.0-impl.so|8e15d11bd1ffc3fb4debe1be9b0a0a0f3c510518
 vendor/lib64/hw/vendor.qti.hardware.btconfigstore@2.0-impl.so|34f9de6084224052b728837358340e9fff1d0e46
 vendor/lib/hw/vendor.qti.hardware.btconfigstore@1.0-impl.so|47f96b6c44dd46e2c9bf732f46866485f0875506
 vendor/lib/hw/vendor.qti.hardware.btconfigstore@2.0-impl.so|7a344ba27e4525784f63fd5067f92a66f15b5a57
 
-# Bluetooth Audio - from davinci-user 11 RKQ1.200826.002 21.2.3 release-keys
+# Bluetooth Audio - from davinci-user 11 RKQ1.200826.002 21.6.11 release-keys
 vendor/lib64/hw/audio.bluetooth_qti.default.so|6441b46bf6ec26fbb656e00d9fb310db98a5d316
 vendor/lib64/hw/vendor.qti.hardware.bluetooth_audio@2.0-impl.so|6cbf0c63e0122ec2fe0e63aa511d45680859f0d0
 vendor/lib64/btaudio_offload_if.so|259f2736e70c6576acf076a78ec2ba51d574681e
@@ -109,7 +109,7 @@ vendor/lib/hw/vendor.qti.hardware.bluetooth_audio@2.0-impl.so|a124e0d1d45f00b782
 vendor/lib/btaudio_offload_if.so|d02bff9f3c73f6d42773551fe8400851c2be2795
 vendor/lib/libbluetooth_audio_session_qti.so|0a92321c6778b098e5e89d65976663fcb5cb0a45
 
-# Bluetooth SAR - from davinci-user 11 RKQ1.200826.002 21.2.3 release-keys
+# Bluetooth SAR - from davinci-user 11 RKQ1.200826.002 21.6.11 release-keys
 vendor/lib64/hw/vendor.qti.hardware.bluetooth_sar@1.1-impl.so|837979d5ede013c5f421da19e9e0815ee8b61542
 vendor/lib64/vendor.qti.hardware.bluetooth_sar@1.0.so|302eca87415711253e0d47c3c12b031d4fa36714
 vendor/lib64/vendor.qti.hardware.bluetooth_sar@1.1.so|d239076c76d1e33b4a7160a3049b0e35e4886ae0
@@ -321,7 +321,7 @@ vendor/lib64/mibokeh_660_opencl.bin
 # Camera Firmware
 vendor/firmware/CAMERA_ICP.elf
 
-# CDSP - from davinci-user 11 RKQ1.200826.002 21.2.3 release-keys
+# CDSP - from davinci-user 11 RKQ1.200826.002 21.6.11 release-keys
 vendor/bin/cdsprpcd|63f7be350d30b9d4181ded5b9cba956bff04439c
 vendor/etc/init/vendor.qti.cdsprpc-service.rc|36772b70216796e8ef19376d9c6a81ee9ffff549
 vendor/lib/libcdsp_default_listener.so|7949a156e2fced7a60cb4099cc4ab274c3504d7e
@@ -329,7 +329,7 @@ vendor/lib/libcdsprpc.so|de676387b859280b4fe8004e999419a6bc8ddeab
 vendor/lib64/libcdsp_default_listener.so|74d24246b94fe48212f93e0693000489792dfb43
 vendor/lib64/libcdsprpc.so|5723a2985d7c85197952df08da1fc6e90d1d2b5d
 
-# Charger - from davinci-user 11 RKQ1.200826.002 21.2.3 release-keys
+# Charger - from davinci-user 11 RKQ1.200826.002 21.6.11 release-keys
 vendor/bin/hvdcp_opti|c29dc9035322d0734a616b55c5e35c4bcea2c3d5
 vendor/bin/init.qti.chg_policy.sh|b1301822b93f588c735fa86edc707c47340d0736
 vendor/etc/charger_fstab.qti|8464c139d93f05e86ff9c9d31b3e8617b8d9476e
@@ -422,7 +422,7 @@ vendor/lib/hw/vendor.qti.hardware.capabilityconfigstore@1.0-impl.so|3e517ec6b460
 # Consumer IR
 vendor/lib64/hw/consumerir.default.so:vendor/lib64/hw/consumerir.sm6150.so
 
-# DPM - from davinci-user 11 RKQ1.200826.002 21.2.3 release-keys
+# DPM - from davinci-user 11 RKQ1.200826.002 21.6.11 release-keys
 system_ext/bin/dpmd|bc22fa258f3975744e248dc7d9f26a00a9981ca7
 system_ext/etc/dpm/dpm.conf|95e27da8c989e96c6faea6f0697bce11955b62a5
 system_ext/etc/init/dpmd.rc|738b638ff04cda368e22c03e16baf90ba157a6fc
@@ -443,7 +443,7 @@ vendor/etc/init/dpmQmiMgr.rc|1538743661a5c48c15cd105beaad20f72953885a
 vendor/lib64/com.qualcomm.qti.dpm.api@1.0.so|188222f7cda270cad18757cf59710978f8657105
 vendor/lib64/libdpmqmihal.so|84dad3cd086791473878b353ef5aef6b6d495137
 
-# DRM - from davinci-user 11 RKQ1.200826.002 21.2.3 release-keys
+# DRM - from davinci-user 11 RKQ1.200826.002 21.6.11 release-keys
 vendor/bin/qseecomd|41d31b001430c9e707eb4fdec5f409468b9183b9
 vendor/etc/gpfspath_oem_config.xml|7aeade35b0bbe27530f6aca8c1ed5192a7acf59d
 vendor/etc/init/qseecomd.rc|3e596c60490756388a5bd56378a91d0db7c3779b
@@ -464,18 +464,18 @@ vendor/lib/libQSEEComAPI.so|dd3196f6739f1014b25a89fada46926d7818d7b4
 vendor/lib/libcpion.so|9149b9bf44d5b6fbada1a8340c87942861dd0b84
 vendor/lib/libdrmfs.so|0e3f6b49491fea4967435176b5e1227692c49612
 
-# DRM - Widevine - from davinci-user 11 RKQ1.200826.002 21.2.3 release-keys
+# DRM - Widevine - from davinci-user 11 RKQ1.200826.002 21.6.11 release-keys
 vendor/bin/hw/android.hardware.drm@1.3-service.widevine|07ac13a602f25788e54c1500c2957f561dd9f90a
 vendor/etc/init/android.hardware.drm@1.3-service.widevine.rc|c35e1a6f9a6faff19064a81e07c4be82ceaf4bb5
 -vendor/etc/vintf/manifest/manifest_android.hardware.drm@1.3-service.widevine.xml|ebebcf8f367641480cf7d512fc06e6ab777527be
 vendor/lib64/libbase64.so|7affa7459f91bec1a7f5aeab83c0cc6349354853
 vendor/lib64/libcpion.so|103e6756e87912b34d910d424f2658580fea025c
 vendor/lib64/librmp.so|2e84f3e665bbce083aefb5eaf9fcc4fbcd17ec31
-vendor/lib64/mediadrm/libwvdrmengine.so|df3dd313abe03b664ffbb91bf14c0a421c0747d3
+vendor/lib64/mediadrm/libwvdrmengine.so|9f38ba4fba439e9ecdb7b3a7f89d878825ae3529
 vendor/lib/libbase64.so|73d04f085db31cf16cd24be608f503b9d6ace1e1
 vendor/lib/libcppf.so|70d5c828d409ea0580d087cca937ae956715c821
 vendor/lib/librmp.so|329fdbba89b4cf2633809bd2b350aade192fb56e
-vendor/lib/mediadrm/libwvdrmengine.so|1f62a9852e5d211889136fc038bafe5a825622e3
+vendor/lib/mediadrm/libwvdrmengine.so|012a554cd7e1d593e90e55d6bad257808d6ee04d
 
 # DRM - Widevine -L1 - from DAVINCIGLOBAL
 vendor/lib64/liboemcrypto.so|2cee717b25559030a61709e826b4a5dae6043c20
@@ -507,23 +507,23 @@ vendor/firmware/goodixfp.b02
 vendor/firmware/goodixfp.b03
 vendor/firmware/goodixfp.b04
 
-# FM - from davinci-user 11 RKQ1.200826.002 21.2.3 release-keys
+# FM - from davinci-user 11 RKQ1.200826.002 21.6.11 release-keys
 system_ext/lib64/fm_helium.so|f5c9cc8de62340ab8b38cca2555eeac9ab18d84b
 system_ext/lib64/libfm-hci.so|6fd608b27c9caf5a055c7c29ae386f596f399bc1
 system_ext/lib64/vendor.qti.hardware.fm@1.0.so|b9dc0797da5790a7d5f1c9a7a2fd9c4a7b87d304
 vendor/lib64/hw/vendor.qti.hardware.fm@1.0-impl.so|d4de618bbff16a9683c6c567084f6b5ef4b85246
 vendor/lib64/vendor.qti.hardware.fm@1.0.so|86e247473332ecb950164eb115d7fea6214c7a45
 
-# Gatekeeper - from davinci-user 11 RKQ1.200826.002 21.2.3 release-keys
+# Gatekeeper - from davinci-user 11 RKQ1.200826.002 21.6.11 release-keys
 vendor/bin/hw/android.hardware.gatekeeper@1.0-service-qti|75a185c5a16bd31c92b1caace8ee4a0f7e9f4ee9
 vendor/etc/init/android.hardware.gatekeeper@1.0-service-qti.rc|1b8d5f58fe0a57906acf72b862c16a2521daa97b
 vendor/lib64/hw/android.hardware.gatekeeper@1.0-impl-qti.so|1c66f61967932f584b599ab51644bf4563c86280
 
-# GPS - from davinci-user 11 RKQ1.200826.002 21.2.3 release-keys
+# GPS - from davinci-user 11 RKQ1.200826.002 21.6.11 release-keys
 vendor/bin/garden_app|4d5d58b8d8ecbb82db31b6e7f26f9fb749f9393b
 vendor/bin/loc_launcher|515038f060e83db862cca5cc8b79a3eb07d689f4
 vendor/bin/lowi-server|61f082d6584e15d83f7172c0d861259e261f5877
-vendor/bin/slim_daemon|304c29df5fc1ff8ca1b336861cb4c192299b3e0f
+vendor/bin/slim_daemon|6c40c71d279a457c41ef7c735bacc6fb7bd25ec0
 vendor/bin/xtra-daemon|6ab4336b0ecc47499be4312f3ab7c7bc09281511
 vendor/etc/cacert_location.pem|0789bf799c7e45d352a83e2f79ddb0cea86db85b
 -vendor/etc/vintf/manifest/vendor.qti.gnss@4.0-service.xml|6514b13f55abc0acc28e004c35ff93fb972d61a9
@@ -570,13 +570,13 @@ vendor/firmware/a612_zap.b02
 vendor/firmware/a612_zap.elf
 vendor/firmware/a612_zap.mdt
 
-# GPU Firmware - from davinci-user 11 RKQ1.200826.002 21.2.3 release-keys
+# GPU Firmware - from davinci-user 11 RKQ1.200826.002 21.6.11 release-keys
 vendor/firmware/a615_zap.b00|1f966d9754aa6b971d39f5b3d9637480e67aa3fe
-vendor/firmware/a615_zap.b01|554596eee69ba9ea618ec0141221dfee108fe996
+vendor/firmware/a615_zap.b01|79dd6a9762ac0c4abe04389f34f7741acebcb7e1
 vendor/firmware/a615_zap.b02|4ae54047f9629f2470a5d58f3940c5eb51298b96
-vendor/firmware/a615_zap.elf|f0bc9a7aaf25e3cf3ac3c9bfe70949581bd2f6e1
-vendor/firmware/a615_zap.mdt|8c8df1bd8912ab2c6498c1e9e5da08844595bcc5
-vendor/firmware/a630_sqe.fw|e25094f97b44244775cc38a9d909fba6bd4cf76b
+vendor/firmware/a615_zap.elf|b44c2c5025d03d38f649bb5ea6a292c21ace1520
+vendor/firmware/a615_zap.mdt|ee2375888aaaa9bf704024c97b94f4ce20930d13
+vendor/firmware/a630_sqe.fw|6526cbb24d614dd67dc18e3c80d5c4374a0b3f63
 
 # Graphics (Adreno) - from LA.UM.9.1.r1-08600-SMxxx0.0
 vendor/lib64/egl/eglSubDriverAndroid.so|e61711cfb952e9abb9e64d4da2e62fa16879af13
@@ -646,7 +646,7 @@ vendor/firmware/ipa_fws.b04
 vendor/firmware/ipa_fws.elf
 vendor/firmware/ipa_fws.mdt
 
-# Keystore - from davinci-user 11 RKQ1.200826.002 21.2.3 release-keys
+# Keystore - from davinci-user 11 RKQ1.200826.002 21.6.11 release-keys
 vendor/bin/hw/android.hardware.keymaster@4.0-service-qti|12777e1f7f44222c7afa1aa5ad9514a774175928
 vendor/etc/init/android.hardware.keymaster@4.0-service-qti.rc|c8999fb1bccbef81e6b362059e9a6ebd023de98f
 vendor/lib64/libkeymasterdeviceutils.so|342fec39fae05ad5c0946dfbe2ad39343ea556cb
@@ -655,7 +655,7 @@ vendor/lib64/libkeymasterutils.so|b9c888d579c9cf7a1c8f463be4048eb9d935daf8
 vendor/lib64/libqcbor.so|67acd94f3c7110c9419f0fd064b6eb69c09a0738
 vendor/lib64/libqtikeymaster4.so|9c45da4b7daa40d44592d94061858813e35473d0
 
-# Listen - from davinci-user 11 RKQ1.200826.002 21.2.3 release-keys
+# Listen - from davinci-user 11 RKQ1.200826.002 21.6.11 release-keys
 vendor/lib/libadpcmdec.so|5232c32b93a8653612cd8fcdde161a9d7fe39c7f
 vendor/lib/libgcs-calwrapper.so|3685273d2b59051021a0b8b88d155385f59db0db
 vendor/lib/libgcs-ipc.so|8d23827d23e84148f71bd90203d168bea239296e
@@ -663,7 +663,7 @@ vendor/lib/libgcs-osal.so|c8055991809da427b5fdf0b18b67cefc7b17a399
 vendor/lib/libgcs.so|086bb26c55aff0228a9bdece77440a4b87b35e5e
 vendor/lib/liblistensoundmodel2.so|00dd3b7348229fb273216bf720d1ad512d358343
 vendor/lib/librice.so|30f281ca3307bee5072c7b1eeea743b466af95ac
-vendor/lib/libsmwrapper.so|a3a0301b270e7bbf832fa6b7d9929400c057ee41
+vendor/lib/libsmwrapper.so|2dac5988fc325dc990f33053dc2e289865c6ee65
 
 # Media - from LA.UM.9.1.r1-07300-SMxxx0.0
 vendor/etc/configstore/vpp.configstore.xml|ed961545186c66fd9523f25866c74f2e11ee63d7
@@ -737,12 +737,12 @@ vendor/lib64/libmlipay.so
 vendor/lib64/vendor.xiaomi.hardware.mlipay@1.0.so
 vendor/lib64/vendor.xiaomi.hardware.mlipay@1.1.so
 
-# Peripheral - from davinci-user 11 RKQ1.200826.002 21.2.3 release-keys
+# Peripheral - from davinci-user 11 RKQ1.200826.002 21.6.11 release-keys
 vendor/bin/pm-proxy|73caf1b46a861e623ec7538cc254783b301a4dfd
 vendor/bin/pm-service|2775e6bddbdb3a184f35a0b94d6e8d3e0a4c233e
 vendor/lib64/libperipheral_client.so|6c7629912519840a72b6595d5add2ec6b0e6b8d9
 
-# Postprocessing - from davinci-user 11 RKQ1.200826.002 21.2.3 release-keys
+# Postprocessing - from davinci-user 11 RKQ1.200826.002 21.6.11 release-keys
 vendor/bin/hw/vendor.display.color@1.0-service|1dfa3cef0b249895961b4ee51f239f1c63f4a83b
 vendor/bin/ppd|cbf0688e3b6006f9e7df5ead85e9c1370d0195da
 vendor/etc/init/vendor.display.color@1.0-service.rc|5ad673f879b3685a0e79b5633437e5499cb94f48
@@ -753,8 +753,8 @@ vendor/lib64/vendor.display.color@1.2.so|e8deb02d0410136b73d22cb1dd5dfb19e48974b
 vendor/lib64/vendor.display.color@1.3.so|ae5d8dcc90a40b7781f0c699fed0409954c21d4e
 vendor/lib64/vendor.display.postproc@1.0.so|142445701bbe83411d849854f31c1e8b85048ac4
 
-# Power-off charging daemon - from davinci-user 11 RKQ1.200826.002 21.2.3 release-keys
-bin/charger:bin/chargeonlymode|6c2525eef82ce1e29da6e69b6840186a948983b5
+# Power-off charging daemon - from davinci-user 11 RKQ1.200826.002 21.6.11 release-keys
+bin/charger:bin/chargeonlymode|39ca2230f8f33bedda9df15057d90a3e4aced954
 
 # Qualcomm MSM Interface - from LA.UM.9.1.r1-06700-SMxxx0.0
 system_ext/etc/permissions/qti_libpermissions.xml|593bcb72cce68ceb0a70f50bcae7d460114e7c62
@@ -881,7 +881,7 @@ vendor/radio/qcril_database/upgrade/5_version_update_ecc_table.sql|fcb2cba3bfd71
 vendor/radio/qcril_database/upgrade/6_version_update_ecc_table.sql|0fdf4b6ccb48906b37885e060429f79c9fd6bdbf
 vendor/radio/qcril_database/upgrade/7_version_update_ecc_table.sql|9a76d5747da2876b87b214579c9d74ae92d218d7
 
-# Radio - from davinci-user 11 RKQ1.200826.002 21.2.3 release-keys
+# Radio - from davinci-user 11 RKQ1.200826.002 21.6.11 release-keys
 system_ext/etc/permissions/telephony_system-ext_privapp-permissions-qti.xml|4f0056403f56928b8c75a617ba582f17061f89ae
 
 # Telephony - from smali edit: https://gist.github.com/PIPIPIG233666/72806386c8b93729ce7f2b2c263d8889
@@ -969,7 +969,7 @@ vendor/lib64/vendor.qti.ims.rcsconfig@2.1.so|d6bf98233939a7516b4a6cfaebd079eddcc
 vendor/lib64/vendor.qti.imsrtpservice@3.0.so|653cd6cae81499a416d97b9fb920ddcb2816c8a9
 vendor/lib64/vendor.qti.imsrtpservice@3.0-service-Impl.so|c3be855f28ceb58ebf7c7055e7f068ed6f132b40
 
-# Snapdragon Computer Vision Engine - from davinci-user 11 RKQ1.200826.002 21.2.3 release-keys
+# Snapdragon Computer Vision Engine - from davinci-user 11 RKQ1.200826.002 21.6.11 release-keys
 vendor/lib64/libfastcvdsp_stub.so|4eaf9f6db96648f1b1a423fb86c0fcce8a220499
 vendor/lib64/libfastcvopt.so|b4a28cc952eed09b9c71717782019cbc3c1befd3
 vendor/lib64/libscveCommon.so|7ea574342277f12a3391a1e9b0b2414463e803fb
@@ -1064,7 +1064,7 @@ vendor/etc/sensors/config/tmd2725.json
 vendor/etc/sensors/config/tmx4903.json
 vendor/etc/sensors/sns_reg_config
 
-# Soter - from davinci-user 11 RKQ1.200826.002 21.2.3 release-keys
+# Soter - from davinci-user 11 RKQ1.200826.002 21.6.11 release-keys
 -app/SoterService/SoterService.apk:vendor/app/SoterService/SoterService.apk|6a4eabf9ed7303da6a17eb9e3483758158b41842
 vendor/bin/hw/vendor.qti.hardware.soter@1.0-service|80ae6dfcb151cd0813b2d20442e540edede24772
 vendor/etc/init/vendor.qti.hardware.soter@1.0-service.rc|76447a61ad5529949365eeb7e8ca000e48bd28ae
@@ -1090,18 +1090,18 @@ vendor/lib64/libthermalfeature.so
 # Thermal (init script) - from LA.UM.8.9.r1-07100-SM6xx.0
 vendor/etc/init/init_thermal-engine.rc|f0d14aa4734b2e8afd61a4eed73238187b268f48
 
-# Time - from davinci-user 11 RKQ1.200826.002 21.2.3 release-keys
+# Time - from davinci-user 11 RKQ1.200826.002 21.6.11 release-keys
 -vendor/app/TimeService/TimeService.apk|7d176a69b270006a511a3c30f544db98a0ccaa37
 vendor/bin/time_daemon|0def9165831d91241cd011abafc0a106f69bd06e
 vendor/etc/init/init.time_daemon.rc|b253ca2a498757e14e1d7a051bf504ae09218f51
 vendor/lib64/libtime_genoff.so|c9070f25aa132707705523ddaab522b88c22923f
 
-# Trusted User Interface - from davinci-user 11 RKQ1.200826.002 21.2.3 release-keys
+# Trusted User Interface - from davinci-user 11 RKQ1.200826.002 21.6.11 release-keys
 vendor/bin/hw/vendor.qti.hardware.tui_comm@1.0-service-qti|b72fc6b3ef9c96dc41cf5acf198b464a3cd69a1c
 vendor/etc/init/vendor.qti.hardware.tui_comm@1.0-service-qti.rc|2cfc563d7e1579374f001c94588fae7835a12ffc
 vendor/lib64/vendor.qti.hardware.tui_comm@1.0.so|b53b22c0be01b39eead6490f706e3db660150828
 
-# WiFi - from davinci-user 11 RKQ1.200826.002 21.2.3 release-keys
+# WiFi - from davinci-user 11 RKQ1.200826.002 21.6.11 release-keys
 vendor/bin/cnss-daemon|49166ade5d73d8f4a79cd8cc2e5db5ebb16dba1a
 vendor/bin/nv_mac|292eab960355eae44a338b2011b0032bc7df422e
 
@@ -1110,7 +1110,7 @@ vendor/bin/nv_mac|292eab960355eae44a338b2011b0032bc7df422e
 system_ext/bin/wfdservice|91f6e2d58de9354a694d3b3da6e6d224dd7e47c1
 system_ext/etc/init/wfdservice.rc|aab7aecb01c359fd521c99957c4d5bfd16a8dfae
 system_ext/lib/libmmosal.so|14cc1f7a0c2c880e8c01f3716ab077dbc2556e22
-system_ext/lib/libmmparser_lite.so|3f087a66273a9700dbcdb683cddb446774b66e8a
+system_ext/lib/libmmparser_lite.so|1bba371140d6a53125408bcf9dda43b9151e32f5
 system_ext/lib/libmmrtpdecoder.so|e50c35366bd428ac29e8a828cfd6b22aa08a0a55
 system_ext/lib/libmmrtpencoder.so|5614934db1f7302b91abf5ed123132b346b24038
 system_ext/lib/libwfdclient.so|7bf903d0e977431e4f86cfcfe840999d10deefbe
@@ -1136,7 +1136,7 @@ system_ext/etc/wfdconfigsink.xml|fa7efddf7393cd8b146d0b9f9c8054fa75b03727
 system_ext/etc/permissions/wfd-system-ext-privapp-permissions-qti.xml|828999946f9dfef98f17f42a1c8daba47c2c442d
 system_ext/etc/seccomp_policy/wfdservice.policy|fcd493de8a282c3776740d389280dbe103b6be6d
 system_ext/lib64/libmmosal.so|12cb56a52237df625e083987a056baa768a4c889
-system_ext/lib64/libmmparser_lite.so|f8946a7e14c0ddf15f0ee812a259f2b773b360cf
+system_ext/lib64/libmmparser_lite.so|7b4d651d623d129f36de64638a87bb91f344237e
 system_ext/lib64/libmmrtpdecoder.so|5f468a1a97b28fa5212205e57b849605d5cb6b10
 system_ext/lib64/libmmrtpencoder.so|42b99f85469607c6c03d3701885e5f198305b971
 system_ext/lib64/libwfdclient.so|10a9765d53018a9dd95f1e2ed331fbe3cf1ab746
