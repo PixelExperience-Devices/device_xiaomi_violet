@@ -1,7 +1,7 @@
 genfscon sysfs /kernel/boot_cdsp/boot                                           u:object_r:sysfs_msm_boot:s0
-genfscon sysfs /devices/platform/soc/ae00000.qcom,mdss_mdp/idle_state           u:object_r:sysfs_graphics:s0
+genfscon sysfs /devices/platform/soc/ae00000.qcom,mdss_mdp/idle_state           u:object_r:vendor_sysfs_graphics:s0
 
-genfscon sysfs /devices/platform/soc/soc:qcom,dsi-display                       u:object_r:sysfs_graphics:s0
+genfscon sysfs /devices/platform/soc/soc:qcom,dsi-display                       u:object_r:vendor_sysfs_graphics:s0
 
 genfscon sysfs /devices/platform/soc/2c00000.qcom,kgsl-3d0                      u:object_r:sysfs_msm_subsys:s0
 genfscon sysfs /devices/platform/soc/soc:qcom,gpubw                             u:object_r:sysfs_msm_subsys:s0
@@ -11,11 +11,11 @@ genfscon sysfs /devices/platform/soc/soc:qcom,cpu-llcc-ddr-bw                   
 genfscon sysfs /devices/platform/soc/soc:qcom,cpu0-cpu-l3-lat                   u:object_r:sysfs_msm_subsys:s0
 genfscon sysfs /devices/platform/soc/soc:qcom,cpu6-cpu-l3-lat                   u:object_r:sysfs_msm_subsys:s0
 
-genfscon sysfs /devices/platform/soc/soc:fingerprint_fpc/device_prepare        u:object_r:sysfs_fingerprint:s0
-genfscon sysfs /devices/platform/soc/soc:fingerprint_fpc/fingerdown_wait       u:object_r:sysfs_fingerprint:s0
-genfscon sysfs /devices/platform/soc/soc:fingerprint_fpc/irq                   u:object_r:sysfs_fingerprint:s0
-genfscon sysfs /devices/platform/soc/soc:fingerprint_fpc/request_vreg          u:object_r:sysfs_fingerprint:s0
-genfscon sysfs /devices/platform/soc/soc:fingerprint_fpc/wakeup_enable         u:object_r:sysfs_fingerprint:s0
+genfscon sysfs /devices/platform/soc/soc:fingerprint_fpc/device_prepare        u:object_r:vendor_sysfs_fingerprint:s0
+genfscon sysfs /devices/platform/soc/soc:fingerprint_fpc/fingerdown_wait       u:object_r:vendor_sysfs_fingerprint:s0
+genfscon sysfs /devices/platform/soc/soc:fingerprint_fpc/irq                   u:object_r:vendor_sysfs_fingerprint:s0
+genfscon sysfs /devices/platform/soc/soc:fingerprint_fpc/request_vreg          u:object_r:vendor_sysfs_fingerprint:s0
+genfscon sysfs /devices/platform/soc/soc:fingerprint_fpc/wakeup_enable         u:object_r:vendor_sysfs_fingerprint:s0
 
 genfscon sysfs /devices/platform/soc/c440000.qcom,spmi/spmi-0/spmi0-05/c440000.qcom,spmi:qcom,pm6150l@5:qcom,leds@d300/leds/flashlight/brightness               u:object_r:sysfs_leds:s0
 genfscon sysfs /devices/platform/soc/c440000.qcom,spmi/spmi-0/spmi0-05/c440000.qcom,spmi:qcom,pm6150l@5:qcom,leds@d300/leds/led:torch_0/brightness              u:object_r:sysfs_leds:s0

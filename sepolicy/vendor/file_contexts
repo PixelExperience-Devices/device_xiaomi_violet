@@ -9,7 +9,7 @@
 /data/vendor/fpc(/.*)?          u:object_r:fingerprint_data_file:s0
 /data/vendor/fpdump(/.*)?       u:object_r:fingerprint_data_file:s0
 /data/vendor/thermal(/.*)?      u:object_r:thermal_data_file:s0
-/data/vendor/mac_addr(/.*)?     u:object_r:wifi_vendor_data_file:s0
+/data/vendor/mac_addr(/.*)?     u:object_r:vendor_wifi_vendor_data_file:s0
 
 # Executable
 /vendor/bin/init\.insmod\.sh    u:object_r:init-insmod-sh_exec:s0
@@ -23,7 +23,7 @@
 /dev/goodix_fp                  u:object_r:fingerprint_device:s0
 
 # Graphics nodes
-/sys/devices/platform/soc/[a-z0-9]+.qcom,mdss_mdp/drm/card([0-3])+/card([0-3])+-DSI-1/panel_info        u:object_r:sysfs_graphics:s0
+/sys/devices/platform/soc/[a-z0-9]+.qcom,mdss_mdp/drm/card([0-3])+/card([0-3])+-DSI-1/panel_info        u:object_r:vendor_sysfs_graphics:s0
 
 # HALs
 /vendor/bin/hw/android\.hardware\.biometrics\.fingerprint@2\.2-service\.xiaomi_sm6150                   u:object_r:hal_fingerprint_default_exec:s0
@@ -45,13 +45,13 @@
 /vendor/bin/mlipayd@1\.1 u:object_r:hal_mlipay_default_exec:s0
 
 # Mac
-/vendor/bin/nv_mac       u:object_r:wcnss_service_exec:s0
+/vendor/bin/nv_mac       u:object_r:vendor_wcnss_service_exec:s0
 
 # Sockets
 /dev/socket/audio_hw_socket                   u:object_r:audio_socket:s0
 
 # SSR
-/sys/devices(/platform)?/soc/[a-z0-9\.:]+,[a-z0-9\-\_]+/subsys[0-9]+/name         u:object_r:sysfs_ssr:s0
+/sys/devices(/platform)?/soc/[a-z0-9\.:]+,[a-z0-9\-\_]+/subsys[0-9]+/name         u:object_r:vendor_sysfs_ssr:s0
 
 # Thermal
 /vendor/bin/mi_thermald         u:object_r:mi_thermald_exec:s0

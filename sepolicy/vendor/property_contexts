@@ -22,10 +22,10 @@ ro.hardware.fp             u:object_r:vendor_fp_prop:s0
 vendor.fps_hal.            u:object_r:vendor_fp_prop:s0
 
 # Global
-ro.boot.factorybuild                u:object_r:public_vendor_default_prop:s0
-ro.boot.hwversion                   u:object_r:public_vendor_default_prop:s0
-ro.carrier.name                     u:object_r:public_vendor_default_prop:s0
-ro.miui.cust_variant                u:object_r:public_vendor_default_prop:s0
+ro.boot.factorybuild                u:object_r:vendor_public_vendor_default_prop:s0
+ro.boot.hwversion                   u:object_r:vendor_public_vendor_default_prop:s0
+ro.carrier.name                     u:object_r:vendor_public_vendor_default_prop:s0
+ro.miui.cust_variant                u:object_r:vendor_public_vendor_default_prop:s0
 
 # Init
 vendor.all.devices.ready        u:object_r:vendor_device_prop:s0
@@ -44,10 +44,10 @@ persist.vendor.sys.pay     u:object_r:vendor_tee_listener_prop:s0
 ro.build.expect.           u:object_r:exported_default_prop:s0
 
 # RIL
-ro.vendor.ril              u:object_r:public_vendor_default_prop:s0
+ro.vendor.ril              u:object_r:vendor_public_vendor_default_prop:s0
 
 # Sensor
-persist.sensor.sardisable u:object_r:sensors_prop:s0
+persist.sensor.sardisable u:object_r:vendor_sensors_prop:s0
 
 # Thermal
 sys.thermal.        u:object_r:thermal_normal_prop:s0

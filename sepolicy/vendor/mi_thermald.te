@@ -12,8 +12,8 @@ allow mi_thermald thermal_data_file:file create_file_perms;
 r_dir_file(mi_thermald, sysfs)
 r_dir_file(mi_thermald, sysfs_battery_supply)
 r_dir_file(mi_thermald, sysfs_devices_system_cpu)
-r_dir_file(mi_thermald, sysfs_graphics)
-r_dir_file(mi_thermald, sysfs_kgsl)
+r_dir_file(mi_thermald, vendor_sysfs_graphics)
+r_dir_file(mi_thermald, vendor_sysfs_kgsl)
 r_dir_file(mi_thermald, sysfs_leds)
 r_dir_file(mi_thermald, sysfs_thermal)
 
@@ -21,7 +21,7 @@ r_dir_file(mi_thermald, sysfs_thermal)
 allow mi_thermald {
   sysfs_battery_supply 
   sysfs_devices_system_cpu
-  sysfs_kgsl
+  vendor_sysfs_kgsl
   sysfs_thermal
 }:{
   file

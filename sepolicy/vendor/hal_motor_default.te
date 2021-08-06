@@ -19,14 +19,14 @@ allow hal_motor_default {
   motor_device
 }:chr_file rw_file_perms;
 
-# Allow hal_motor_default to read and write to { mnt_vendor_file persist_sensors_file }
+# Allow hal_motor_default to read and write to { mnt_vendor_file vendor_persist_sensors_file }
 allow hal_motor_default {
   mnt_vendor_file 
-  persist_sensors_file
+  vendor_persist_sensors_file
 }:dir rw_dir_perms;
 
 allow hal_motor_default {
   mnt_vendor_file
-  persist_sensors_file
+  vendor_persist_sensors_file
 }:file rw_file_perms;
 
