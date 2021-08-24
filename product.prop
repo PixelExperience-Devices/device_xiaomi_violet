@@ -1,3 +1,6 @@
+# App
+ro.launcher.blur.appLaunch=0
+
 # Audio
 ro.config.media_vol_default=10
 
