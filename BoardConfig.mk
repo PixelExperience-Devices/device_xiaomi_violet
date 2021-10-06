@@ -10,6 +10,7 @@ BOARD_VENDOR := xiaomi
 DEVICE_PATH := device/xiaomi/violet
 
 # Build
+BUILD_BROKEN_MISSING_REQUIRED_MODULES := true
 BUILD_BROKEN_ENFORCE_SYSPROP_OWNER := true
 
 # Architecture
