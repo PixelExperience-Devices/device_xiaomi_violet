@@ -48,7 +48,7 @@
         <activity
             android:name=".doze.DozeSettingsActivity"
             android:label="@string/ambient_display_title"
-            android:theme="@style/Theme.Main">
+            android:theme="@style/Theme.SubSettingsBase">
         </activity>
 
     </application>
