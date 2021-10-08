@@ -23,7 +23,7 @@ genfscon sysfs /devices/platform/soc/c440000.qcom,spmi/spmi-0/spmi0-05/c440000.q
 genfscon sysfs /devices/platform/soc/c440000.qcom,spmi/spmi-0/spmi0-05/c440000.qcom,spmi:qcom,pm6150l@5:qcom,leds@d300/leds/led:switch_0/brightness             u:object_r:sysfs_leds:s0
 genfscon sysfs /devices/platform/soc/c440000.qcom,spmi/spmi-0/spmi0-05/c440000.qcom,spmi:qcom,pm6150l@5:qcom,leds@d300/leds/led:switch_1/brightness             u:object_r:sysfs_leds:s0
 
-genfscon sysfs /class/power_supply/battery/capacity u:object_r:sysfs_battery_supply:s0
+genfscon sysfs /class/power_supply/battery/capacity u:object_r:vendor_sysfs_battery_supply:s0
 
 genfscon sysfs /devices/platform/goodix_ts.0/wakeup                                                                                                                                  u:object_r:sysfs_wakeup:s0
 genfscon sysfs /devices/platform/soc/18800000.qcom,icnss/wakeup                                                                                                                      u:object_r:sysfs_wakeup:s0
