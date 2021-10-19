@@ -814,7 +814,6 @@ vendor/lib/libqmiservices.so|9132cea9c29ef3898f7ce4c2f858729dbdbe439c
 # Radio - from LA.UM.9.1.r1-06700-SMxxx0.0
 -system_ext/app/DeviceInfo/DeviceInfo.apk|2935a77ef12655867d5b1e2e8af36ce31afc2d1e
 -system_ext/app/QtiTelephonyService/QtiTelephonyService.apk|cce98c4a86b38837f114b6c61e4b536cd06bf82c
--system_ext/app/datastatusnotification/datastatusnotification.apk|27cbbc2e54bb10d79b1610c299fbfb9c6edbf99d
 -system_ext/app/embms/embms.apk|76122573a366eb3e102610ab82203fa45c970979
 -system_ext/priv-app/qcrilmsgtunnel/qcrilmsgtunnel.apk|4f2e166f4094ae07e1bd75ec5e4bd74610ee8ebc
 product/etc/permissions/telephony_product_privapp-permissions-qti.xml|42f4553b61731e56d253766554d4479519cea3ff
@@ -902,6 +901,9 @@ vendor/radio/qcril_database/upgrade/7_version_update_ecc_table.sql|9a76d5747da28
 
 # Radio - from davinci-user 11 RKQ1.200826.002 21.6.11 release-keys
 system_ext/etc/permissions/telephony_system-ext_privapp-permissions-qti.xml|4f0056403f56928b8c75a617ba582f17061f89ae
+
+# Radio - Telephony - from coral - google/coral/coral:12/SPB5.210812.002/7671067:user/release-keys
+-system_ext/app/datastatusnotification/datastatusnotification.apk|f33ce45ec04a67b88e9f4da52378153c77d21e77
 
 # Telephony - from smali edit: https://gist.github.com/PIPIPIG233666/72806386c8b93729ce7f2b2c263d8889
 system_ext/framework/qti-telephony-common.jar|7a3f1fa141520e83e58d4afc6eebfc4f38dc9f27
