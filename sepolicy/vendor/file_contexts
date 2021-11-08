@@ -1,8 +1,6 @@
 # Camera
 /dev/akm09970                   u:object_r:hall_device:s0
-/dev/drv8846_dev                u:object_r:motor_device:s0
 /mnt/vendor/persist/camera(/.*)? u:object_r:camera_persist_file:s0
-/vendor/bin/remosaic_daemon     u:object_r:remosaic_daemon_exec:s0
 
 # Data files
 /data/vendor/goodix(/.*)?       u:object_r:fingerprint_data_file:s0
@@ -29,8 +27,6 @@
 /vendor/bin/hw/android\.hardware\.biometrics\.fingerprint@2\.2-service\.xiaomi_sm6150                   u:object_r:hal_fingerprint_default_exec:s0
 /vendor/bin/hw/android\.hardware\.lights-service\.xiaomi_sm6150                                         u:object_r:hal_light_default_exec:s0
 /vendor/bin/hw/android\.hardware\.power-service\.sm6150-libperfmgr                                      u:object_r:hal_power_default_exec:s0
-/vendor/bin/hw/vendor\.xiaomi\.hardware\.motor@1.0-service                                              u:object_r:hal_motor_default_exec:s0
-/vendor/bin/hw/vendor\.xiaomi\.hardware\.touchfeature@1\.0-service                                      u:object_r:hal_touchfeature_default_exec:s0
 
 # Health
 /sys/devices/platform/soc/soc:maxim_ds28e16/power_supply/batt_verify/(/.*)?                                                                         u:object_r:sysfs_battery_supply:s0
@@ -55,6 +51,3 @@
 
 # Thermal
 /vendor/bin/mi_thermald         u:object_r:mi_thermald_exec:s0
-
-# Touchfeature
-/dev/xiaomi-touch          u:object_r:touchfeature_device:s0

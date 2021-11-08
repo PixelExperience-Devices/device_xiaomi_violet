@@ -5,20 +5,12 @@ app_domain(settings)
 # Allow settings to find *_service
 allow settings { app_api_service audioserver_service drmserver_service mediaextractor_service mediametrics_service mediaserver_service }:service_manager find;
 
-# Allow settings to find hal_motor_hwservice
-allow settings hal_motor_hwservice:hwservice_manager find;
-
 # Allow settings read and write /data/data subdirectory
 allow settings system_app_data_file:dir create_dir_perms;
 allow settings system_app_data_file:{ file lnk_file } create_file_perms;
 
-# Allow binder communication with hal_motor
-binder_call(settings, hal_motor)
-
 # Allow binder communication with gpuservice
 binder_call(settings, gpuservice)
 
-# Allow settings to read and write to cgroup/{hall,motor}_device/vendor_sysfs_graphics/sysfs_leds
-allow settings { motor_device vendor_sysfs_graphics sysfs_leds }:dir search;
+# Allow settings to read and write to cgroup/vendor_sysfs_graphics/sysfs_leds
 allow settings { cgroup vendor_sysfs_graphics sysfs_leds }:file rw_file_perms;
-allow settings { motor_device vendor_sysfs_graphics hall_device }:chr_file rw_file_perms;
