@@ -21,11 +21,11 @@ ro.boot.hwversion                   u:object_r:vendor_public_vendor_default_prop
 vendor.all.devices.ready        u:object_r:vendor_device_prop:s0
 
 # Power
-vendor.powerhal.state      u:object_r:power_prop:s0
-vendor.powerhal.audio      u:object_r:power_prop:s0
-vendor.powerhal.lpm        u:object_r:power_prop:s0
-vendor.powerhal.init       u:object_r:power_prop:s0
-vendor.powerhal.rendering  u:object_r:power_prop:s0
+vendor.powerhal.state      u:object_r:vendor_power_prop:s0
+vendor.powerhal.audio      u:object_r:vendor_power_prop:s0
+vendor.powerhal.lpm        u:object_r:vendor_power_prop:s0
+vendor.powerhal.init       u:object_r:vendor_power_prop:s0
+vendor.powerhal.rendering  u:object_r:vendor_power_prop:s0
 
 # Mlipay
 persist.vendor.sys.pay     u:object_r:vendor_tee_listener_prop:s0
@@ -37,4 +37,4 @@ ro.vendor.ril              u:object_r:vendor_public_vendor_default_prop:s0
 persist.sensor.sardisable u:object_r:vendor_sensors_prop:s0
 
 # Thermal
-vendor.sys.thermal.        u:object_r:thermal_normal_prop:s0
+vendor.sys.thermal.        u:object_r:vendor_thermal_normal_prop:s0

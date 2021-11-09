@@ -27,4 +27,4 @@ allow hal_power_default vendor_latency_device:chr_file rw_file_perms;
 unix_socket_connect(hal_power_default, vendor_pps, hal_graphics_composer_default);
 
 # To get/set powerhal state property
-set_prop(hal_power_default, power_prop)
+set_prop(hal_power_default, vendor_power_prop)
