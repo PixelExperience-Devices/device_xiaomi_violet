@@ -1,1 +1,2 @@
 allow init hidl_base_hwservice:hwservice_manager { add };
+allow init property_type:file { append create getattr map open read relabelto rename setattr unlink write };
