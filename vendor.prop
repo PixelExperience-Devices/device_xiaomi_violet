@@ -1,7 +1,7 @@
 # Audio
 aaudio.hw_burst_min_usec=2000
 aaudio.mmap_exclusive_policy=2
-aaudio.mmap_policy=2
+aaudio.mmap_policy=1
 af.fast_track_multiplier=1
 audio.deep_buffer.media=true
 audio.offload.min.duration.secs=40
