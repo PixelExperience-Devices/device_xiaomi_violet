@@ -188,7 +188,6 @@ on late-fs
     start themed_bootanimation
     start bootanim
     start vendor.hwcomposer-2-4
-    start vendor.configstore-hal
     start vendor.qti.hardware.display.allocator
 
     wait_for_prop hwservicemanager.ready true
