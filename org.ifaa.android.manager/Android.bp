@@ -30,7 +30,6 @@ java_library {
     },
 }
 
-
 android_app {
     name: "IFAAService",
 
