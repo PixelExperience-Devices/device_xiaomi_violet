@@ -2,25 +2,25 @@
   {
     "repository" : "vendor_xiaomi_violet",
     "target_path": "vendor/xiaomi/violet",
-    "branch": "eleven",
+    "branch": "twelve",
     "remote": "pixel-devices-blobs"
   },
   {
     "repository": "kernel_xiaomi_violet",
     "target_path": "kernel/xiaomi/violet",
-    "branch":"eleven",
+    "branch":"twelve",
     "remote":"pixel-devices"
   },
   {
-   "repository"  : "device_xiaomi_sm6150-extras",
-   "target_path" : "device/xiaomi/sm6150-extras",
-   "remote"      : "pixel-devices",
-   "branch"      : "twelve"
+    "repository"  : "device_xiaomi_sm6150-extras",
+    "target_path" : "device/xiaomi/sm6150-extras",
+    "remote"      : "pixel-devices",
+    "branch"      : "twelve"
   },
   {
     "repository": "vendor_xiaomi-firmware",
     "target_path": "vendor/xiaomi-firmware",
-    "branch":"eleven",
+    "branch":"twelve",
     "remote":"pixel-devices-blobs"
   },
   {
