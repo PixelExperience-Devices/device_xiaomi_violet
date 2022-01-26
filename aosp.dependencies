@@ -12,6 +12,12 @@
     "remote":"pixel-devices"
   },
   {
+   "repository"  : "device_xiaomi_sm6150-extras",
+   "target_path" : "device/xiaomi/sm6150-extras",
+   "remote"      : "pixel-devices",
+   "branch"      : "twelve"
+  },
+  {
     "repository": "vendor_xiaomi-firmware",
     "target_path": "vendor/xiaomi-firmware",
     "branch":"eleven",
