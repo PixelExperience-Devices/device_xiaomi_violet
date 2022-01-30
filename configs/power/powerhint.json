@@ -5,7 +5,7 @@
       "Path": "/sys/devices/system/cpu/cpu0/cpufreq/scaling_max_freq",
       "Values": [
         "9999999",
-        "1363200"
+        "1209600"
       ],
       "DefaultIndex": 0,
       "ResetOnInit": true
@@ -15,7 +15,7 @@
       "Path": "/sys/devices/system/cpu/cpu0/cpufreq/scaling_min_freq",
       "Values": [
         "9999999",
-        "1363200",
+        "1209600",
         "576000"
       ],
       "ResetOnInit": true
@@ -37,7 +37,7 @@
       "Values": [
         "9999999",
         "1516800",
-        "1363200",
+        "1209600",
         "652800"
       ],
       "ResetOnInit": true
@@ -104,7 +104,7 @@
       "Name": "TASchedtuneBoost",
       "Path": "/dev/stune/top-app/schedtune.boost",
       "Values": [
-        "30",
+        "40",
         "10"
       ],
       "ResetOnInit": true
@@ -241,7 +241,7 @@
       "Name": "PMQoSCpuDmaLatency",
       "Path": "/dev/cpu_dma_latency",
       "Values": [
-        "67",
+        "44",
         "100"
       ],
       "HoldFd": true
@@ -381,7 +381,7 @@
       "PowerHint": "SUSTAINED_PERFORMANCE",
       "Node": "CPULittleClusterMaxFreq",
       "Duration": 0,
-      "Value": "1363200"
+      "Value": "1209600"
     },
     {
       "PowerHint": "SUSTAINED_PERFORMANCE",
@@ -392,14 +392,14 @@
     {
       "PowerHint": "INTERACTION",
       "Node": "CPULittleClusterMinFreq",
-      "Duration": 1,
-      "Value": "1363200"
+      "Duration": 0,
+      "Value": "1209600"
     },
     {
       "PowerHint": "INTERACTION",
       "Node": "TASchedtuneBoost",
       "Duration": 0,
-      "Value": "30"
+      "Value": "40"
     },
     {
       "PowerHint": "INTERACTION",
@@ -471,7 +471,7 @@
       "PowerHint": "LAUNCH",
       "Node": "PMQoSCpuDmaLatency",
       "Duration": 5000,
-      "Value": "67"
+      "Value": "44"
     },
     {
       "PowerHint": "LAUNCH",
@@ -531,7 +531,7 @@
       "PowerHint": "AUDIO_LAUNCH",
       "Node": "PMQoSCpuDmaLatency",
       "Duration": 2000,
-      "Value": "67"
+      "Value": "44"
     },
     {
       "PowerHint": "AUDIO_STREAMING_LOW_LATENCY",
@@ -543,7 +543,7 @@
       "PowerHint": "AUDIO_STREAMING_LOW_LATENCY",
       "Node": "PMQoSCpuDmaLatency",
       "Duration": 0,
-      "Value": "67"
+      "Value": "44"
     },
     {
       "PowerHint": "EXPENSIVE_RENDERING",
