@@ -20,13 +20,17 @@
     android:sharedUserId="android.uid.system">
 
     <uses-sdk
-        android:minSdkVersion="28"
-        android:targetSdkVersion="28" />
+        android:minSdkVersion="30"
+        android:targetSdkVersion="30" />
 
     <application
         android:label="IFAAService">
 
         <service android:name=".IFAAService"
-                 android:exported="true" />
+                 android:exported="true" >
+            <intent-filter>
+                <action android:name="org.ifaa.aidl.manager.IfaaManagerService"/>
+            </intent-filter>
+        </service>
     </application>
 </manifest>
