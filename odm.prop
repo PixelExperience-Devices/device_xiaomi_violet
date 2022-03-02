@@ -1,2 +1,5 @@
+# Audio
+persist.vendor.audio.voicecall.speaker.stereo=false
+
 # Fwk detect
 ro.vendor.qti.va_odm.support=1
