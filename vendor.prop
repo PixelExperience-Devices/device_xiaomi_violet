@@ -142,6 +142,7 @@ debug.sf.late.app.duration=20500000
 debug.sf.late.sf.duration=10500000
 debug.sf.use_phase_offsets_as_durations=1
 persist.sys.sf.color_saturation=1.0
+ro.surface_flinger.protected_contents=true
 ro.hardware.egl=adreno
 ro.hardware.vulkan=adreno
 ro.opengles.version=196610
