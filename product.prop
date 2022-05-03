@@ -53,6 +53,7 @@ debug.cpurend.vsync=false
 
 # Graphics
 debug.cpurend.vsync=false
+debug.hwui.renderer=skiagl
 persist.demo.hdmirotationlock=false
 persist.hwc.enable_vds=1
 ro.surface_flinger.force_hwc_copy_for_virtual_displays=true
