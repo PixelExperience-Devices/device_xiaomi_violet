@@ -2569,6 +2569,7 @@
     <path name="handset">
         <ctl name="RX_MACRO RX0 MUX" value="AIF1_PB" />
         <ctl name="RX_CDC_DMA_RX_0 Channels" value="One" />
+        <ctl name="RX_RX0 Digital Volume" value="90" />
         <ctl name="RX INT0_1 MIX1 INP0" value="RX0" />
         <ctl name="RX INT0 DEM MUX" value="CLSH_DSM_OUT" />
         <ctl name="EAR_RDAC Switch" value="1" />
