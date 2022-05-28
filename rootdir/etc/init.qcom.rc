@@ -469,6 +469,8 @@ on charger
     setprop vendor.usb.controller a600000.dwc3
     setprop sys.usb.configfs 1
     setprop vendor.setup.power 1
+    chown system system /sys/class/leds/red/brightness
+    write /sys/class/leds/red/brightness 255
 
     write /sys/devices/system/cpu/cpu1/online 0
     write /sys/devices/system/cpu/cpu2/online 0
