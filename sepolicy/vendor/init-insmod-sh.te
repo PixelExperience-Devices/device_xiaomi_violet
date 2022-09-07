@@ -17,5 +17,3 @@ allow init-insmod-sh {
   sysfs_msm_boot
   vendor_sysfs_boot_adsp
 }:file w_file_perms;
-
-r_dir_file(init-insmod-sh vendor_debugfs_ipc)
