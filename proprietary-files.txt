@@ -84,6 +84,9 @@ system_ext/framework/audiosphere.jar|3c42dff6da0571acd9ea466983c7f6354d588bb3
 
 # Audio FX modules (vendor) - from LA.UM.9.1.r1-12900-SMxxx0.0
 vendor/lib/soundfx/libasphere.so|b2daeb875914a33575c7d7a67429f25d09d35489
+vendor/lib/soundfx/libqcbassboost.so|daa9c9c572b42ce3d0a80ea49b6474d640b1e521
+vendor/lib/soundfx/libqcreverb.so|d2f89689ca7290a1a31e398164d8a42053b86259
+vendor/lib/soundfx/libqcvirt.so|f67792cc079bc0348e960343e803a5158e4a24b1
 vendor/lib64/soundfx/libasphere.so|b9296f601776e631be0f347f8f10d26689103d12
 
 # Audio (speaker amplifier) firmware
