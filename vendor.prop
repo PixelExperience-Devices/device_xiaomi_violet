@@ -130,6 +130,7 @@ ro.vendor.qti.va_aosp.support=1
 debug.egl.hw=0
 debug.mdpcomp.logs=0
 debug.sdm.support_writeback=0
+debug.sf.auto_latch_unsignaled=false
 debug.sf.disable_backpressure=1
 debug.sf.early.app.duration=16500000
 debug.sf.early.sf.duration=21000000
