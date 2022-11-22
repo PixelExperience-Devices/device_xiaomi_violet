@@ -22,11 +22,5 @@
     "target_path": "vendor/xiaomi-firmware",
     "branch":"twelve",
     "remote":"pixel-devices-blobs"
-  },
-  {
-    "repository": "dasshubham762/packages_apps_CameraGo",
-    "target_path": "packages/apps/CameraGo",
-    "branch":"eleven",
-    "remote":"github"
   }
 ]
