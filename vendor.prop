@@ -16,6 +16,7 @@ ro.af.client_heap_size_kbyte=7168
 ro.config.media_vol_steps=25
 ro.config.vc_call_vol_steps=6
 ro.vendor.audio.sdk.fluencetype=fluence
+use.dedicated.device.for.voip=true
 vendor.audio.hal.boot.timeout.ms=20000
 vendor.audio_hal.in_period_size=144
 vendor.audio_hal.period_multiplier=2
