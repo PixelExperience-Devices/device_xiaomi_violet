@@ -105,6 +105,10 @@ ro.crypto.volume.filenames_mode=aes-256-cts
 
 # Dalvik
 dalvik.vm.dex2oat64.enabled=true
+dalvik.vm.image-dex2oat-filter=speed
+dalvik.vm.image-dex2oat-threads=8
+dalvik.vm.dex2oat-filter=speed
+dalvik.vm.dex2oat-threads=8
 
 # Display post-processing
 ro.vendor.display.sensortype=2
