@@ -127,12 +127,7 @@ ro.frp.pst=/dev/block/bootdevice/by-name/frp
 ro.vendor.qti.va_aosp.support=1
 
 # Graphics
-debug.egl.hw=0
-debug.mdpcomp.logs=0
-debug.sdm.support_writeback=0
 debug.sf.auto_latch_unsignaled=false
-debug.sf.disable_backpressure=1
-debug.sf.hw=0
 persist.sys.sf.color_saturation=1.0
 ro.surface_flinger.protected_contents=true
 ro.hardware.egl=adreno
