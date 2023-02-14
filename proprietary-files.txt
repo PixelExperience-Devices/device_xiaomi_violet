@@ -547,11 +547,9 @@ vendor/firmware/goodixfp.b04
 # FM (system) - from LA.QSSI.13.0.r1-09400.01-qssi.0
 system_ext/lib64/fm_helium.so|623a78dfe8f73808158bc88116cd3204588aa126
 system_ext/lib64/libfm-hci.so|9f7f908e749dc9e41effaa3546eb0cac483ecbeb
-system_ext/lib64/vendor.qti.hardware.fm@1.0.so|0bfc9d9097698b7cc8cb74721cb971a80f862720
 
 # FM (vendor) - from LA.UM.9.1.r1-12900-SMxxx0.0
 vendor/lib64/hw/vendor.qti.hardware.fm@1.0-impl.so|f2e143c684cd9f31372df63b44c163744b2ca0b7
-vendor/lib64/vendor.qti.hardware.fm@1.0.so|f6e23f902b7e15232b20af55161a24da93ffe25f
 
 # Gatekeeper - from LA.UM.9.1.r1-11500.02-SMxxx0.QSSI12.0
 vendor/bin/hw/android.hardware.gatekeeper@1.0-service-qti|2e33e885b92e413440511049025497945d6b8484
