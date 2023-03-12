@@ -1,2 +1,5 @@
 # DPM
 persist.vendor.dpm.feature=11
+
+# Fastbootd
+ro.fastbootd.available=true
