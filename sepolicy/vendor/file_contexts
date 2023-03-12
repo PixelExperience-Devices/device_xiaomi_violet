@@ -1,3 +1,7 @@
+# Block devices
+/dev/block/platform/soc/7c4000\.sdhci/by-name/vendor     u:object_r:system_block_device:s0
+/dev/block/platform/soc/7c4000\.sdhci/by-name/system     u:object_r:system_block_device:s0
+
 # Camera
 /dev/akm09970                   u:object_r:hall_device:s0
 /mnt/vendor/persist/camera(/.*)? u:object_r:camera_persist_file:s0
