@@ -12,13 +12,13 @@ vendor/etc/acdbdata/IDP/IDP_Headset_cal.acdb
 vendor/etc/acdbdata/IDP/IDP_Speaker_cal.acdb
 vendor/etc/acdbdata/IDP/IDP_workspaceFile.qwsp
 
-# ACDB loader - from LA.UM.9.1.r1-11500.02-SMxxx0.QSSI12.0
-vendor/lib64/libacdb-fts.so|24fdd7f88649516f165b52fba3ac1de5065bcf0c
-vendor/lib64/libacdbloader.so|f2aa5b8658f451574f85db319ad5a48b2742a138
-vendor/lib64/libacdbrtac.so|be60a9373a488daae4187cf05419cbbd48f31170
-vendor/lib/libacdb-fts.so|0018570fcbbf69eafc2be93342a277fc9fa4b62d
-vendor/lib/libacdbloader.so|5ff34a6d43e4bc7529dc12822cece01e956b8537
-vendor/lib/libacdbrtac.so|668183e16a001e48362016f643929b2d39bcbb9e
+# ACDB loader
+vendor/lib64/libacdb-fts.so
+vendor/lib64/libacdbloader.so
+vendor/lib64/libacdbrtac.so
+vendor/lib/libacdb-fts.so
+vendor/lib/libacdbloader.so
+vendor/lib/libacdbrtac.so
 
 # ADSP - from LA.UM.9.1.r1-11500.02-SMxxx0.QSSI12.0
 vendor/bin/adsprpcd|12e09d8e87b260a8721c7938890186a0877a9e85
