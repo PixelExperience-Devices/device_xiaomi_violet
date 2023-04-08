@@ -327,10 +327,6 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     netutils-wrapper-1.0
 
-# Neural Networks
-PRODUCT_PACKAGES += \
-    android.hardware.neuralnetworks@1.3.vendor
-
 # Perf
 PRODUCT_PACKAGES += \
     libqti-perfd-client
