@@ -62,13 +62,11 @@
                              samplingRates="8000 16000 32000 48000" channelMasks="AUDIO_CHANNEL_OUT_MONO AUDIO_CHANNEL_OUT_STEREO"/>
                 </mixPort>
                 <mixPort name="primary output" role="source" flags="AUDIO_OUTPUT_FLAG_FAST AUDIO_OUTPUT_FLAG_PRIMARY">
-                    <profile name="" format="AUDIO_FORMAT_PCM_24_BIT_PACKED"
+                    <profile name="" format="AUDIO_FORMAT_PCM_16_BIT"
                              samplingRates="48000" channelMasks="AUDIO_CHANNEL_OUT_STEREO"/>
                 </mixPort>
                 <mixPort name="deep_buffer" role="source"
                         flags="AUDIO_OUTPUT_FLAG_DEEP_BUFFER">
-                    <profile name="" format="AUDIO_FORMAT_PCM_24_BIT_PACKED"
-                             samplingRates="48000" channelMasks="AUDIO_CHANNEL_OUT_STEREO"/>
 		    <profile name="" format="AUDIO_FORMAT_PCM_16_BIT"
                              samplingRates="48000" channelMasks="AUDIO_CHANNEL_OUT_STEREO"/>
                 </mixPort>
@@ -151,9 +149,6 @@
                 </mixPort>
 
                 <mixPort name="primary input" role="sink">
-		    <profile name="" format="AUDIO_FORMAT_PCM_8_24_BIT"
-                             samplingRates="8000 11025 12000 16000 22050 24000 32000 44100 48000"
-                             channelMasks="AUDIO_CHANNEL_IN_MONO AUDIO_CHANNEL_IN_STEREO AUDIO_CHANNEL_IN_FRONT_BACK"/>
                     <profile name="" format="AUDIO_FORMAT_PCM_16_BIT"
                              samplingRates="8000 11025 12000 16000 22050 24000 32000 44100 48000"
                              channelMasks="AUDIO_CHANNEL_IN_MONO AUDIO_CHANNEL_IN_STEREO AUDIO_CHANNEL_IN_FRONT_BACK"/>

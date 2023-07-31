@@ -1,5 +1,4 @@
 # Audio
-persist.vendor.audio_hal.dsp_bit_width_enforce_mode=24
 aaudio.hw_burst_min_usec=2000
 aaudio.mmap_exclusive_policy=2
 aaudio.mmap_policy=1
