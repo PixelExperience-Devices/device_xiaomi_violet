@@ -338,20 +338,20 @@
     <ctl name="TX SMIC MUX7" value="ZERO" />
 
     <!-- Volume controls -->
-    <ctl name="RX_RX0 Digital Volume" value="84" />
-    <ctl name="RX_RX1 Digital Volume" value="84" />
-    <ctl name="RX_RX2 Digital Volume" value="84" />
+    <ctl name="RX_RX0 Digital Volume" value="88" />
+    <ctl name="RX_RX1 Digital Volume" value="88" />
+    <ctl name="RX_RX2 Digital Volume" value="88" />
     <ctl name="HPHL Volume" value="20" />
     <ctl name="HPHR Volume" value="20" />
 
-    <ctl name="TX_DEC0 Volume" value="84" />
-    <ctl name="TX_DEC1 Volume" value="84" />
-    <ctl name="TX_DEC2 Volume" value="84" />
-    <ctl name="TX_DEC3 Volume" value="84" />
-    <ctl name="TX_DEC4 Volume" value="84" />
-    <ctl name="TX_DEC5 Volume" value="84" />
-    <ctl name="TX_DEC6 Volume" value="84" />
-    <ctl name="TX_DEC7 Volume" value="84" />
+    <ctl name="TX_DEC0 Volume" value="88" />
+    <ctl name="TX_DEC1 Volume" value="88" />
+    <ctl name="TX_DEC2 Volume" value="88" />
+    <ctl name="TX_DEC3 Volume" value="88" />
+    <ctl name="TX_DEC4 Volume" value="88" />
+    <ctl name="TX_DEC5 Volume" value="88" />
+    <ctl name="TX_DEC6 Volume" value="88" />
+    <ctl name="TX_DEC7 Volume" value="88" />
 
     <ctl name="ADC1 Volume" value="12" />
     <ctl name="ADC2 Volume" value="12" />
@@ -2602,14 +2602,14 @@
 
     <path name="headphones-ce">
         <path name="headphones" />
-        <ctl name="RX_RX0 Digital Volume" value="74" />
-        <ctl name="RX_RX1 Digital Volume" value="74" />
+        <ctl name="RX_RX0 Digital Volume" value="78" />
+        <ctl name="RX_RX1 Digital Volume" value="78" />
     </path>
 
     <path name="headphones-no-ce">
         <path name="headphones" />
-        <ctl name="RX_RX0 Digital Volume" value="84" />
-        <ctl name="RX_RX1 Digital Volume" value="84" />
+        <ctl name="RX_RX0 Digital Volume" value="88" />
+        <ctl name="RX_RX1 Digital Volume" value="88" />
     </path>
 
     <path name="headphones-44.1">
