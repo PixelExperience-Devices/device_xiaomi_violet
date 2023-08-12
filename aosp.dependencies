@@ -16,5 +16,11 @@
     "target_path": "vendor/xiaomi-firmware",
     "branch":"thirteen",
     "remote":"pixel-devices-blobs"
+  },
+  {
+    "repository": "vendor_xiaomi_violet-miuicamera",
+    "target_path": "vendor/MiuiCamera",
+    "branch":"thirteen",
+    "remote":"pixel-devices-blobs"
   }
 ]
