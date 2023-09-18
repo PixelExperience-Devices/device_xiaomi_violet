@@ -222,7 +222,7 @@ PRODUCT_COPY_FILES += \
     $(call find-copy-subdir-files,*,$(LOCAL_PATH)/gps/etc/,$(TARGET_COPY_OUT_VENDOR)/etc)
 
 # Google Recorder
-TARGET_SUPPORTS_GOOGLE_RECORDER := true
+TARGET_SUPPORTS_GOOGLE_RECORDER := false
 
 # Health
 PRODUCT_PACKAGES += \
