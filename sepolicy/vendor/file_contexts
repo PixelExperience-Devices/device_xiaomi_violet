@@ -1,4 +1,5 @@
 # Block devices
+/dev/block/platform/soc/7c4000\.sdhci/by-name/cust       u:object_r:system_block_device:s0
 /dev/block/platform/soc/7c4000\.sdhci/by-name/vendor     u:object_r:system_block_device:s0
 /dev/block/platform/soc/7c4000\.sdhci/by-name/system     u:object_r:system_block_device:s0
 
