@@ -1,5 +1,4 @@
 GNSS_CFLAGS = [
-    "-Werror",
     "-Wno-error=unused-parameter",
     "-Wno-error=macro-redefined",
     "-Wno-error=reorder",
