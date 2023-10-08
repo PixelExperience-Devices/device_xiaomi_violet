@@ -497,11 +497,11 @@ vendor/etc/init/android.hardware.drm@1.3-service.widevine.rc|c35e1a6f9a6faff1906
 vendor/lib/libbase64.so|73d04f085db31cf16cd24be608f503b9d6ace1e1
 vendor/lib/libcppf.so|70d5c828d409ea0580d087cca937ae956715c821
 vendor/lib/librmp.so|329fdbba89b4cf2633809bd2b350aade192fb56e
-vendor/lib/mediadrm/libwvdrmengine.so|012a554cd7e1d593e90e55d6bad257808d6ee04d
+vendor/lib/mediadrm/libwvdrmengine.so|85da601f5cac2929064631efceae035cbb513cc9
 vendor/lib64/libbase64.so|7affa7459f91bec1a7f5aeab83c0cc6349354853
 vendor/lib64/libcpion.so|103e6756e87912b34d910d424f2658580fea025c
 vendor/lib64/librmp.so|2e84f3e665bbce083aefb5eaf9fcc4fbcd17ec31
-vendor/lib64/mediadrm/libwvdrmengine.so|9f38ba4fba439e9ecdb7b3a7f89d878825ae3529
+vendor/lib64/mediadrm/libwvdrmengine.so|f9f168358f212ccac5a19908de2503f1bed42860
 
 # DRM - HDCP - from davinci-user 11 RKQ1.200826.002 21.6.11 release-keys
 vendor/lib/libhdcp1prov.so|60587bccb6b9625d15307ec9d7fd5549d59c7823
@@ -521,7 +521,7 @@ vendor/lib64/libspl.so|e2b3e2dd28b0eee567d72de696cd1e01288ae06f
 vendor/lib/liboemcrypto.so|b349d1d049709bbdff15a133698264dc8c01db14
 vendor/lib/libwvhidl.so|dd599b1055d1faf025d60bc4f702f9ae11123c30
 vendor/lib64/liboemcrypto.so|2cee717b25559030a61709e826b4a5dae6043c20
-vendor/lib64/libwvhidl.so|2abdbc8966795ed903062ec1a8ba2e79bb5883f8
+vendor/lib64/libwvhidl.so|dc6267b421a482b60b6eed47fc0ba55271f9e0dd
 
 # DSP HAL Service - from LA.UM.9.1.r1-12900-SMxxx0.0
 vendor/bin/dspservice|a7344fc3d27a49df30858ebc3f73ee5818e752d4
