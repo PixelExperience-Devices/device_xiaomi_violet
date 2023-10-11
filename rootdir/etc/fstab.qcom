@@ -33,7 +33,7 @@
 # Currently we dont have e2fsck compiled. So fs check would failed.
 
 #<src>                                                 <mnt_point>               <type>  <mnt_flags and options>                            <fs_mgr_flags>
-/dev/block/bootdevice/by-name/system                    /                        ext4    ro,barrier=1,discard,i_version                              wait,avb,readahead_size_kb=128
+/dev/block/bootdevice/by-name/system                    /                        ext4    ro,barrier=1,discard,i_version                              wait,readahead_size_kb=128
 /dev/block/bootdevice/by-name/vendor                    /vendor                  ext4    ro,barrier=1                                                                                      wait,recoveryonly,readahead_size_kb=128
 /dev/block/bootdevice/by-name/boot                      /boot                    emmc    defaults                                                                                          recoveryonly
 /dev/block/bootdevice/by-name/recovery                  /recovery                emmc    defaults                                                                                          recoveryonly
