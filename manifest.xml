@@ -359,10 +359,6 @@ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
             <instance>slot2</instance>
         </interface>
     </hal>
-    <hal format="hidl">
-        <name>android.hardware.drm</name>
-        <transport>hwbinder</transport>
-    </hal>
     <!--ANT-->
     <hal format="hidl">
         <name>com.dsi.ant</name>
