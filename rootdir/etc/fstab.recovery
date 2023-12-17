@@ -34,10 +34,10 @@
 
 #<src>                                                 <mnt_point>               <type>  <mnt_flags and options>                            <fs_mgr_flags>
 system                                                  /system                  ext4    ro,barrier=1,discard,i_version                       wait,logical,first_stage_mount,readahead_size_kb=128
-system_ext                                              /system_ext              ext4    ro,barrier=1                                         wait,logical,first_stage_mount,readahead_size_kb=128
-product                                                 /product                 ext4    ro,barrier=1                                         wait,logical,first_stage_mount,readahead_size_kb=128
-vendor                                                  /vendor                  ext4    ro,barrier=1                                         wait,logical,first_stage_mount,readahead_size_kb=128
-odm                                                     /odm                     ext4    ro,barrier=1                                         wait,logical,first_stage_mount,readahead_size_kb=128
+system_ext                                              /system_ext              ext4    ro,barrier=1,discard                                         wait,logical,first_stage_mount,readahead_size_kb=128
+product                                                 /product                 ext4    ro,barrier=1,discard                                        wait,logical,first_stage_mount,readahead_size_kb=128
+vendor                                                  /vendor                  ext4    ro,barrier=1,discard                                         wait,logical,first_stage_mount,readahead_size_kb=128
+odm                                                     /odm                     ext4    ro,barrier=1,discard                                         wait,logical,first_stage_mount,readahead_size_kb=128
 /dev/block/bootdevice/by-name/boot                      /boot                    emmc    defaults                                                                                          recoveryonly
 /dev/block/bootdevice/by-name/recovery                  /recovery                emmc    defaults                                                                                          recoveryonly
 /dev/block/bootdevice/by-name/cache                     /cache                   ext4    nosuid,noatime,nodev,barrier=1                       wait
